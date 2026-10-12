@@ -49,4 +49,11 @@ tasks.processResources {
     filesMatching("pack.mcmeta") {
         expand("resource_pack_format" to resourcePackFormat)
     }
+    if (minecraftVersion == "1.21.1") {
+        eachFile {
+            if (path.startsWith("data/craftdistrict/loot_tables/")) {
+                path = path.replace("data/craftdistrict/loot_tables/", "data/craftdistrict/loot_table/")
+            }
+        }
+    }
 }

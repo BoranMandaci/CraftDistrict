@@ -65,6 +65,8 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 tasks.processResources {
+    // Forge's development mod pack reads metadata from the platform output.
+    from(common.tasks.named("processResources")) { include("pack.mcmeta") }
     val modName = project.property("modName") as String
     val modDescription = project.property("modDescription") as String
     val modLicense = project.property("modLicense") as String
