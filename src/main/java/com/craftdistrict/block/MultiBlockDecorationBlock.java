@@ -21,6 +21,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
     public static final BooleanProperty PRIMARY = BooleanProperty.create("primary");
     private static final int LINKED_PART_UPDATE_FLAGS = Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE;
+    // Removal must notify supported decorations above associated parts as vanilla does.
+    private static final int LINKED_PART_REMOVAL_FLAGS = Block.UPDATE_ALL;
     private static final ThreadLocal<Boolean> REMOVING_LINKED_PART = ThreadLocal.withInitial(() -> false);
     //? if >=1.21 {
     public static final MapCodec<MultiBlockDecorationBlock> CODEC = simpleCodec(MultiBlockDecorationBlock::new);
@@ -28,15 +30,36 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
 
     public MultiBlockDecorationBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
-                .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
-                .setValue(PRIMARY, true));
+        registerDefaultState(stateForPart(defaultBlockState()
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH), 0));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
+        addPartProperties(builder);
+    }
+
+    // Existing two-part decorations retain their saved primary=true/false states.
+    protected void addPartProperties(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(PRIMARY);
+    }
+
+    protected int partCount() {
+        return 2;
+    }
+
+    protected int partIndex(BlockState state) {
+        return state.getValue(PRIMARY) ? 0 : 1;
+    }
+
+    protected BlockState stateForPart(BlockState state, int index) {
+        return state.setValue(PRIMARY, index == 0);
+    }
+
+    /** Offset from the structure's origin, transformed by its horizontal facing. */
+    protected BlockPos partOffset(BlockState state, int index) {
+        return BlockPos.ZERO.relative(getExtensionDirection(state), index);
     }
 
     @Override
@@ -44,21 +67,17 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
         Level level = context.getLevel();
         BlockPos primaryPos = context.getClickedPos();
         Direction facing = context.getHorizontalDirection().getOpposite();
-        BlockState placementState = defaultBlockState()
-                .setValue(BlockStateProperties.HORIZONTAL_FACING, facing)
-                .setValue(PRIMARY, true);
-        BlockPos extensionPos = primaryPos.relative(getExtensionDirection(placementState));
-
-        BlockState extensionState = placementState.setValue(PRIMARY, false);
+        BlockState placementState = stateForPart(defaultBlockState()
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, facing), 0);
         CollisionContext collisionContext = context.getPlayer() == null
                 ? CollisionContext.empty() : CollisionContext.of(context.getPlayer());
-        if (!isWithinPlacementBounds(level, primaryPos)
-                || !isWithinPlacementBounds(level, extensionPos)
-                || !level.getBlockState(primaryPos).canBeReplaced(context)
-                || !level.getBlockState(extensionPos).canBeReplaced(context)
-                || !level.isUnobstructed(placementState, primaryPos, collisionContext)
-                || !level.isUnobstructed(extensionState, extensionPos, collisionContext)) {
-            return null;
+        for (int index = 0; index < partCount(); index++) {
+            BlockPos partPos = primaryPos.offset(partOffset(placementState, index));
+            if (!isWithinPlacementBounds(level, partPos)
+                    || !level.getBlockState(partPos).canBeReplaced(context)
+                    || !level.isUnobstructed(stateForPart(placementState, index), partPos, collisionContext)) {
+                return null;
+            }
         }
 
         return placementState;
@@ -78,45 +97,87 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
-        if (level.isClientSide || !state.getValue(PRIMARY)) {
+        if (level.isClientSide || partIndex(state) != 0) {
             return;
         }
 
-        BlockPos extensionPos = pos.relative(getExtensionDirection(state));
         // A callback may have changed the primary; never remove an unrelated replacement.
         if (level.getBlockState(pos) != state) {
             return;
         }
-        BlockState extensionState = state.setValue(PRIMARY, false);
         CollisionContext collisionContext = placer == null
                 ? CollisionContext.empty() : CollisionContext.of(placer);
-        if (!isWithinPlacementBounds(level, extensionPos)
-                || !level.getBlockState(extensionPos).canBeReplaced()
-                || !level.isUnobstructed(extensionState, extensionPos, collisionContext)
-                || !level.setBlock(extensionPos, extensionState, LINKED_PART_UPDATE_FLAGS)) {
-            if (level.getBlockState(pos) == state) {
-                level.setBlock(pos, Blocks.AIR.defaultBlockState(), LINKED_PART_UPDATE_FLAGS);
+        // Check the complete footprint before writing any associated part.
+        for (int index = 1; index < partCount(); index++) {
+            if (!canPlacePart(level, pos, state, index, collisionContext)) {
+                rollbackPlacement(level, pos, state, 1);
+                return;
             }
+        }
+        int placed = 1;
+        for (int index = 1; index < partCount(); index++) {
+            BlockPos partPos = pos.offset(partOffset(state, index));
+            // Earlier writes can invoke other mods' callbacks: recheck each write.
+            if (!canPlacePart(level, pos, state, index, collisionContext)
+                    || !level.setBlock(partPos, stateForPart(state, index), LINKED_PART_UPDATE_FLAGS)) {
+                rollbackPlacement(level, pos, state, placed);
+                return;
+            }
+            placed++;
+            for (int written = 0; written < placed; written++) {
+                if (level.getBlockState(pos.offset(partOffset(state, written))) != stateForPart(state, written)) {
+                    rollbackPlacement(level, pos, state, placed);
+                    return;
+                }
+            }
+        }
+    }
+
+    private boolean canPlacePart(Level level, BlockPos origin, BlockState state, int index,
+                                 CollisionContext collisionContext) {
+        BlockPos partPos = origin.offset(partOffset(state, index));
+        return isWithinPlacementBounds(level, partPos)
+                && level.getBlockState(partPos).canBeReplaced()
+                && level.isUnobstructed(stateForPart(state, index), partPos, collisionContext);
+    }
+
+    private void rollbackPlacement(Level level, BlockPos origin, BlockState state, int placed) {
+        boolean wasRemoving = REMOVING_LINKED_PART.get();
+        REMOVING_LINKED_PART.set(true);
+        try {
+            for (int index = placed - 1; index >= 0; index--) {
+                BlockPos partPos = origin.offset(partOffset(state, index));
+                // Only roll back states written by this placement, never replacements.
+                if (level.getBlockState(partPos) == stateForPart(state, index)) {
+                    level.setBlock(partPos, Blocks.AIR.defaultBlockState(), LINKED_PART_REMOVAL_FLAGS);
+                }
+            }
+        } finally {
+            REMOVING_LINKED_PART.set(wasRemoving);
         }
     }
 
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!level.isClientSide && !newState.is(this) && !REMOVING_LINKED_PART.get()) {
-            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-            Direction extensionDirection = getExtensionDirection(state);
-            BlockPos partnerPos = state.getValue(PRIMARY)
-                    ? pos.relative(extensionDirection) : pos.relative(extensionDirection.getOpposite());
-            BlockState partnerState = level.getBlockState(partnerPos);
-            if (partnerState.is(this)
-                    && partnerState.getValue(BlockStateProperties.HORIZONTAL_FACING) == facing
-                    && partnerState.getValue(PRIMARY) != state.getValue(PRIMARY)) {
-                REMOVING_LINKED_PART.set(true);
-                try {
-                    level.setBlock(partnerPos, Blocks.AIR.defaultBlockState(), LINKED_PART_UPDATE_FLAGS);
-                } finally {
-                    REMOVING_LINKED_PART.set(false);
+            int removedIndex = partIndex(state);
+            BlockPos origin = pos.subtract(partOffset(state, removedIndex));
+            REMOVING_LINKED_PART.set(true);
+            try {
+                for (int index = 0; index < partCount(); index++) {
+                    if (index == removedIndex) {
+                        continue;
+                    }
+                    BlockPos partPos = origin.offset(partOffset(state, index));
+                    // A world border can shrink after placement; cleanup is still valid.
+                    if (!level.isOutsideBuildHeight(partPos)
+                            && level.getBlockState(partPos) == stateForPart(state, index)) {
+                        // setBlock removes the part without invoking loot a second time.
+                        level.setBlock(partPos, Blocks.AIR.defaultBlockState(), LINKED_PART_REMOVAL_FLAGS);
+                    }
                 }
+            } finally {
+                REMOVING_LINKED_PART.set(false);
             }
         }
         super.onRemove(state, level, pos, newState, isMoving);

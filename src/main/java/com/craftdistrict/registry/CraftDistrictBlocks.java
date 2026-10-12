@@ -3,6 +3,9 @@ package com.craftdistrict.registry;
 import com.craftdistrict.CraftDistrict;
 import com.craftdistrict.block.WideDecorationBlock;
 import com.craftdistrict.block.TallDecorationBlock;
+import com.craftdistrict.block.WideTallDecorationBlock;
+import com.craftdistrict.block.CashRegisterBlock;
+import com.craftdistrict.block.DoughPreparationTableBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -39,6 +42,15 @@ public final class CraftDistrictBlocks {
                         .strength(1.5F).sound(SoundType.WOOD).noOcclusion()));
         public static final RegistrySupplier<TallDecorationBlock> BREAD_SHELF = register("bakery_bread_shelf",
                 () -> new TallDecorationBlock(BlockBehaviour.Properties.of()
+                        .strength(1.5F).sound(SoundType.WOOD).noOcclusion()));
+        public static final RegistrySupplier<WideTallDecorationBlock> INDUSTRIAL_OVEN = register("industrial_bakery_oven",
+                () -> new WideTallDecorationBlock(BlockBehaviour.Properties.of()
+                        .strength(3.0F).sound(SoundType.METAL).noOcclusion()));
+        public static final RegistrySupplier<CashRegisterBlock> CASH_REGISTER = register("bakery_cash_register",
+                () -> new CashRegisterBlock(BlockBehaviour.Properties.of()
+                        .strength(1.0F).sound(SoundType.METAL).noOcclusion()));
+        public static final RegistrySupplier<DoughPreparationTableBlock> DOUGH_PREPARATION_TABLE = register("dough_preparation_table",
+                () -> new DoughPreparationTableBlock(BlockBehaviour.Properties.of()
                         .strength(1.5F).sound(SoundType.WOOD).noOcclusion()));
 
         private Bakery() {

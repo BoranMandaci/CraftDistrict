@@ -23,6 +23,9 @@ public final class CraftDistrictCreativeTabs {
                 .displayItems((parameters, output) -> {
                     output.accept(CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get());
                     output.accept(CraftDistrictBlocks.Bakery.BREAD_SHELF.get());
+                    output.accept(CraftDistrictBlocks.Bakery.INDUSTRIAL_OVEN.get());
+                    output.accept(CraftDistrictBlocks.Bakery.CASH_REGISTER.get());
+                    output.accept(CraftDistrictBlocks.Bakery.DOUGH_PREPARATION_TABLE.get());
                 })));
         TABS.register();
     }

@@ -11,6 +11,7 @@ public final class CraftDistrictClient {
 
     public static void init() {
         ClientLifecycleEvent.CLIENT_SETUP.register(client -> RenderTypeRegistry.register(
-                RenderType.cutout(), CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get()));
+                RenderType.cutout(), CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get(),
+                CraftDistrictBlocks.Bakery.INDUSTRIAL_OVEN.get()));
     }
 }

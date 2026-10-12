@@ -1,0 +1,1618 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "wood": "craftdistrict:block/bakery/dough_preparation_table_wood",
+    "edge": "craftdistrict:block/bakery/dough_preparation_table_edge",
+    "worktop": "craftdistrict:block/bakery/dough_preparation_table_worktop",
+    "dough": "craftdistrict:block/bakery/dough_preparation_table_dough",
+    "cloth": "craftdistrict:block/bakery/dough_preparation_table_cloth",
+    "bag_front": "craftdistrict:block/bakery/dough_preparation_table_bag_front",
+    "flour": "craftdistrict:block/bakery/dough_preparation_table_flour",
+    "bowl": "craftdistrict:block/bakery/dough_preparation_table_bowl",
+    "particle": "craftdistrict:block/bakery/dough_preparation_table_wood"
+  },
+  "elements": [
+    {
+      "name": "preparation_top",
+      "from": [
+        0,
+        11,
+        0.5
+      ],
+      "to": [
+        16,
+        12.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            8.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#worktop",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_apron",
+      "from": [
+        1.25,
+        9.5,
+        1.25
+      ],
+      "to": [
+        16,
+        11,
+        2.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            8.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_apron",
+      "from": [
+        1.25,
+        9.5,
+        13.75
+      ],
+      "to": [
+        16,
+        11,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            8.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "storage_shelf",
+      "from": [
+        1.5,
+        2.5,
+        2
+      ],
+      "to": [
+        16,
+        3.25,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            8.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_shelf_edge",
+      "from": [
+        3.25,
+        2,
+        2
+      ],
+      "to": [
+        16,
+        2.5,
+        2.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            8.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_shelf_edge",
+      "from": [
+        3.25,
+        2,
+        13.25
+      ],
+      "to": [
+        16,
+        2.5,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            8.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_front_leg",
+      "from": [
+        1.25,
+        0,
+        1.25
+      ],
+      "to": [
+        3.25,
+        11,
+        3.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ],
+          "rotation": 90
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ],
+          "rotation": 90
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "rotation": 90
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_rear_leg",
+      "from": [
+        1.25,
+        0,
+        12.75
+      ],
+      "to": [
+        3.25,
+        11,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ],
+          "rotation": 90
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ],
+          "rotation": 90
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "rotation": 90
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_upper_cross_support",
+      "from": [
+        1.25,
+        9.5,
+        3.25
+      ],
+      "to": [
+        3.25,
+        11,
+        12.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_lower_cross_support",
+      "from": [
+        1.25,
+        4,
+        3.25
+      ],
+      "to": [
+        3.25,
+        4.75,
+        12.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "dough_sheet_center",
+      "from": [
+        4,
+        12.5,
+        2.75
+      ],
+      "to": [
+        12,
+        12.875,
+        7.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dough",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dough",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#dough",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#dough",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dough",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "dough_sheet_left_lobe",
+      "from": [
+        3.5,
+        12.5,
+        3.5
+      ],
+      "to": [
+        4,
+        12.75,
+        6.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dough",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dough",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#dough",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dough",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "dough_sheet_right_lobe",
+      "from": [
+        12,
+        12.5,
+        3.5
+      ],
+      "to": [
+        12.5,
+        12.75,
+        6.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dough",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dough",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#dough",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dough",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "rolling_pin_barrel",
+      "from": [
+        5.5,
+        12.5,
+        9
+      ],
+      "to": [
+        12.5,
+        14.5,
+        10
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          9,
+          13.5,
+          9.5
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "rolling_pin_front_bevel",
+      "from": [
+        5.5,
+        13,
+        8.5
+      ],
+      "to": [
+        12.5,
+        14,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          9,
+          13.5,
+          9.5
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "rolling_pin_rear_bevel",
+      "from": [
+        5.5,
+        13,
+        10
+      ],
+      "to": [
+        12.5,
+        14,
+        10.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          9,
+          13.5,
+          9.5
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "rolling_pin_left_neck",
+      "from": [
+        5,
+        13,
+        9
+      ],
+      "to": [
+        5.5,
+        14,
+        10
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          9,
+          13.5,
+          9.5
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "rolling_pin_right_neck",
+      "from": [
+        12.5,
+        13,
+        9
+      ],
+      "to": [
+        13,
+        14,
+        10
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          9,
+          13.5,
+          9.5
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "rolling_pin_left_handle",
+      "from": [
+        3.5,
+        13.125,
+        9.125
+      ],
+      "to": [
+        5,
+        13.875,
+        9.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          9,
+          13.5,
+          9.5
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "rolling_pin_right_handle",
+      "from": [
+        13,
+        13.125,
+        9.125
+      ],
+      "to": [
+        14.5,
+        13.875,
+        9.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          9,
+          13.5,
+          9.5
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "storage_crate_floor",
+      "from": [
+        4,
+        3.25,
+        6
+      ],
+      "to": [
+        12,
+        3.75,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "storage_crate_front",
+      "from": [
+        4,
+        3.75,
+        6
+      ],
+      "to": [
+        12,
+        6.25,
+        6.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "storage_crate_back",
+      "from": [
+        4,
+        3.75,
+        11.375
+      ],
+      "to": [
+        12,
+        6.75,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "storage_crate_left",
+      "from": [
+        4,
+        3.75,
+        6.625
+      ],
+      "to": [
+        4.625,
+        6.75,
+        11.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "storage_crate_right",
+      "from": [
+        11.375,
+        3.75,
+        6.625
+      ],
+      "to": [
+        12,
+        6.75,
+        11.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#edge",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#edge",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "crate_inner_wooden_board",
+      "from": [
+        5.25,
+        3.75,
+        8
+      ],
+      "to": [
+        10.5,
+        4.375,
+        10.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    }
+  ]
+}

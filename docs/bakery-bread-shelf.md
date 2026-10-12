@@ -15,6 +15,8 @@ per occupied position; shelves and contents use normal baked block models.
   unrelated block substituted by another callback.
 - Server removal verifies block identity, facing and the opposite part marker.
   It removes the partner without drops and guards against recursive removal.
+  Linked-part removal sends normal neighbor updates so decorations supported
+  above an indirectly removed part can also respond to their loss of support.
 - Ordinary player breaking uses the broken part's loot table once in Survival;
   Creative breaking uses vanilla behavior with no drops. Both parts have the same
   item loot table so either can be the part that the player breaks.
