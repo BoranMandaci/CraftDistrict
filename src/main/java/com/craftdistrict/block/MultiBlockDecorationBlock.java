@@ -16,8 +16,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.phys.shapes.CollisionContext;
 
-public final class MultiBlockDecorationBlock extends RotatableDecorationBlock {
+public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
     public static final BooleanProperty PRIMARY = BooleanProperty.create("primary");
     private static final int LINKED_PART_UPDATE_FLAGS = Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE;
     private static final ThreadLocal<Boolean> REMOVING_LINKED_PART = ThreadLocal.withInitial(() -> false);
@@ -43,18 +44,35 @@ public final class MultiBlockDecorationBlock extends RotatableDecorationBlock {
         Level level = context.getLevel();
         BlockPos primaryPos = context.getClickedPos();
         Direction facing = context.getHorizontalDirection().getOpposite();
-        BlockPos extensionPos = primaryPos.relative(facing);
+        BlockState placementState = defaultBlockState()
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, facing)
+                .setValue(PRIMARY, true);
+        BlockPos extensionPos = primaryPos.relative(getExtensionDirection(placementState));
 
-        if (!level.getWorldBorder().isWithinBounds(primaryPos)
-                || !level.getWorldBorder().isWithinBounds(extensionPos)
+        BlockState extensionState = placementState.setValue(PRIMARY, false);
+        CollisionContext collisionContext = context.getPlayer() == null
+                ? CollisionContext.empty() : CollisionContext.of(context.getPlayer());
+        if (!isWithinPlacementBounds(level, primaryPos)
+                || !isWithinPlacementBounds(level, extensionPos)
                 || !level.getBlockState(primaryPos).canBeReplaced(context)
-                || !level.getBlockState(extensionPos).canBeReplaced(context)) {
+                || !level.getBlockState(extensionPos).canBeReplaced(context)
+                || !level.isUnobstructed(placementState, primaryPos, collisionContext)
+                || !level.isUnobstructed(extensionState, extensionPos, collisionContext)) {
             return null;
         }
 
-        return defaultBlockState()
-                .setValue(BlockStateProperties.HORIZONTAL_FACING, facing)
-                .setValue(PRIMARY, true);
+        return placementState;
+    }
+
+    /** Direction from the primary part to its partner, relative to the block's facing. */
+    protected Direction getExtensionDirection(BlockState state) {
+        return state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+    }
+
+    private static boolean isWithinPlacementBounds(Level level, BlockPos pos) {
+        return !level.isOutsideBuildHeight(pos)
+                && level.getWorldBorder().isWithinBounds(pos)
+                && level.hasChunkAt(pos);
     }
 
     @Override
@@ -64,20 +82,21 @@ public final class MultiBlockDecorationBlock extends RotatableDecorationBlock {
             return;
         }
 
-        Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-        BlockPos extensionPos = pos.relative(facing);
-        if (!level.getWorldBorder().isWithinBounds(extensionPos)
-                || !level.getBlockState(pos).is(this)
-                || !level.getBlockState(extensionPos).canBeReplaced()) {
-            level.setBlock(pos, Blocks.AIR.defaultBlockState(), LINKED_PART_UPDATE_FLAGS);
+        BlockPos extensionPos = pos.relative(getExtensionDirection(state));
+        // A callback may have changed the primary; never remove an unrelated replacement.
+        if (level.getBlockState(pos) != state) {
             return;
         }
-
-        BlockState extensionState = defaultBlockState()
-                .setValue(BlockStateProperties.HORIZONTAL_FACING, facing)
-                .setValue(PRIMARY, false);
-        if (!level.setBlock(extensionPos, extensionState, LINKED_PART_UPDATE_FLAGS)) {
-            level.setBlock(pos, Blocks.AIR.defaultBlockState(), LINKED_PART_UPDATE_FLAGS);
+        BlockState extensionState = state.setValue(PRIMARY, false);
+        CollisionContext collisionContext = placer == null
+                ? CollisionContext.empty() : CollisionContext.of(placer);
+        if (!isWithinPlacementBounds(level, extensionPos)
+                || !level.getBlockState(extensionPos).canBeReplaced()
+                || !level.isUnobstructed(extensionState, extensionPos, collisionContext)
+                || !level.setBlock(extensionPos, extensionState, LINKED_PART_UPDATE_FLAGS)) {
+            if (level.getBlockState(pos) == state) {
+                level.setBlock(pos, Blocks.AIR.defaultBlockState(), LINKED_PART_UPDATE_FLAGS);
+            }
         }
     }
 
@@ -85,7 +104,9 @@ public final class MultiBlockDecorationBlock extends RotatableDecorationBlock {
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!level.isClientSide && !newState.is(this) && !REMOVING_LINKED_PART.get()) {
             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-            BlockPos partnerPos = state.getValue(PRIMARY) ? pos.relative(facing) : pos.relative(facing.getOpposite());
+            Direction extensionDirection = getExtensionDirection(state);
+            BlockPos partnerPos = state.getValue(PRIMARY)
+                    ? pos.relative(extensionDirection) : pos.relative(extensionDirection.getOpposite());
             BlockState partnerState = level.getBlockState(partnerPos);
             if (partnerState.is(this)
                     && partnerState.getValue(BlockStateProperties.HORIZONTAL_FACING) == facing

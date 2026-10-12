@@ -1,0 +1,1399 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "wood": "craftdistrict:block/bakery/bakery_display_counter_wood",
+    "trim": "craftdistrict:block/bakery/bakery_display_counter_trim",
+    "bread": "craftdistrict:block/bakery/bakery_display_counter_bread",
+    "bread_top": "craftdistrict:block/bakery/bakery_display_counter_bread_top",
+    "pastry": "craftdistrict:block/bakery/bakery_display_counter_pastry",
+    "pastry_top": "craftdistrict:block/bakery/bakery_display_counter_pastry_top",
+    "tart_top": "craftdistrict:block/bakery/bakery_display_counter_tart_top",
+    "chocolate": "craftdistrict:block/bakery/bakery_display_counter_chocolate",
+    "glass": "craftdistrict:block/bakery/bakery_display_counter_glass",
+    "tray": "craftdistrict:block/bakery/bakery_display_counter_tray",
+    "particle": "craftdistrict:block/bakery/bakery_display_counter_wood"
+  },
+  "elements": [
+    {
+      "name": "wooden_base",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        5,
+        16
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#wood"
+        },
+        "north": {
+          "uv": [
+            0,
+            11,
+            16,
+            16
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            11,
+            16,
+            16
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            11,
+            16,
+            16
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "wooden_back",
+      "from": [
+        0,
+        5,
+        14
+      ],
+      "to": [
+        16,
+        15,
+        15.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            14,
+            16,
+            15.5
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            14,
+            16,
+            15.5
+          ],
+          "texture": "#wood"
+        },
+        "north": {
+          "uv": [
+            0,
+            1,
+            16,
+            11
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            1,
+            16,
+            11
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            14,
+            1,
+            15.5,
+            11
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "rear_handle_left_mount",
+      "from": [
+        6,
+        11.25,
+        15.5
+      ],
+      "to": [
+        6.5,
+        12,
+        16
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            15.5,
+            4,
+            16,
+            4.75
+          ],
+          "texture": "#trim"
+        },
+        "east": {
+          "uv": [
+            15.5,
+            4,
+            16,
+            4.75
+          ],
+          "texture": "#trim"
+        },
+        "up": {
+          "uv": [
+            6,
+            15.5,
+            6.5,
+            16
+          ],
+          "texture": "#trim"
+        },
+        "down": {
+          "uv": [
+            6,
+            15.5,
+            6.5,
+            16
+          ],
+          "texture": "#trim"
+        },
+        "south": {
+          "uv": [
+            6,
+            4,
+            6.5,
+            4.75
+          ],
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "rear_handle_right_mount",
+      "from": [
+        9.5,
+        11.25,
+        15.5
+      ],
+      "to": [
+        10,
+        12,
+        16
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            15.5,
+            4,
+            16,
+            4.75
+          ],
+          "texture": "#trim"
+        },
+        "east": {
+          "uv": [
+            15.5,
+            4,
+            16,
+            4.75
+          ],
+          "texture": "#trim"
+        },
+        "up": {
+          "uv": [
+            9.5,
+            15.5,
+            10,
+            16
+          ],
+          "texture": "#trim"
+        },
+        "down": {
+          "uv": [
+            9.5,
+            15.5,
+            10,
+            16
+          ],
+          "texture": "#trim"
+        },
+        "south": {
+          "uv": [
+            9.5,
+            4,
+            10,
+            4.75
+          ],
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "rear_handle_grip",
+      "from": [
+        6.5,
+        11.5,
+        15.75
+      ],
+      "to": [
+        9.5,
+        12,
+        16
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            6.5,
+            15.75,
+            9.5,
+            16
+          ],
+          "texture": "#trim"
+        },
+        "down": {
+          "uv": [
+            6.5,
+            15.75,
+            9.5,
+            16
+          ],
+          "texture": "#trim"
+        },
+        "north": {
+          "uv": [
+            6.5,
+            4,
+            9.5,
+            4.5
+          ],
+          "texture": "#trim"
+        },
+        "south": {
+          "uv": [
+            6.5,
+            4,
+            9.5,
+            4.5
+          ],
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "countertop",
+      "from": [
+        0,
+        15,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#trim"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#trim"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#trim"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#trim"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "lower_shelf",
+      "from": [
+        0,
+        5,
+        1
+      ],
+      "to": [
+        16,
+        6,
+        14
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            1,
+            16,
+            14
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            1,
+            16,
+            14
+          ],
+          "texture": "#wood"
+        },
+        "north": {
+          "uv": [
+            0,
+            10,
+            16,
+            11
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            10,
+            16,
+            11
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            1,
+            10,
+            14,
+            11
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "upper_shelf",
+      "from": [
+        0,
+        10,
+        1
+      ],
+      "to": [
+        16,
+        10.5,
+        14
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            1,
+            16,
+            14
+          ],
+          "texture": "#trim"
+        },
+        "up": {
+          "uv": [
+            0,
+            1,
+            16,
+            14
+          ],
+          "texture": "#trim"
+        },
+        "north": {
+          "uv": [
+            0,
+            5.5,
+            16,
+            6
+          ],
+          "texture": "#trim"
+        },
+        "south": {
+          "uv": [
+            0,
+            5.5,
+            16,
+            6
+          ],
+          "texture": "#trim"
+        },
+        "west": {
+          "uv": [
+            1,
+            5.5,
+            14,
+            6
+          ],
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "window_bottom_rail",
+      "from": [
+        0,
+        6,
+        0
+      ],
+      "to": [
+        16,
+        6.75,
+        1
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#trim"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#trim"
+        },
+        "north": {
+          "uv": [
+            0,
+            9.25,
+            16,
+            10
+          ],
+          "texture": "#trim"
+        },
+        "south": {
+          "uv": [
+            0,
+            9.25,
+            16,
+            10
+          ],
+          "texture": "#trim"
+        },
+        "west": {
+          "uv": [
+            0,
+            9.25,
+            1,
+            10
+          ],
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "window_top_rail",
+      "from": [
+        0,
+        14.25,
+        0
+      ],
+      "to": [
+        16,
+        15,
+        1
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#trim"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#trim"
+        },
+        "north": {
+          "uv": [
+            0,
+            1,
+            16,
+            1.75
+          ],
+          "texture": "#trim"
+        },
+        "south": {
+          "uv": [
+            0,
+            1,
+            16,
+            1.75
+          ],
+          "texture": "#trim"
+        },
+        "west": {
+          "uv": [
+            0,
+            1,
+            1,
+            1.75
+          ],
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "outer_front_post",
+      "from": [
+        0,
+        6.75,
+        0
+      ],
+      "to": [
+        1,
+        14.25,
+        1
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "texture": "#trim"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "texture": "#trim"
+        },
+        "north": {
+          "uv": [
+            0,
+            1.75,
+            1,
+            9.25
+          ],
+          "texture": "#trim"
+        },
+        "south": {
+          "uv": [
+            0,
+            1.75,
+            1,
+            9.25
+          ],
+          "texture": "#trim"
+        },
+        "west": {
+          "uv": [
+            0,
+            1.75,
+            1,
+            9.25
+          ],
+          "texture": "#trim"
+        },
+        "east": {
+          "uv": [
+            0,
+            1.75,
+            1,
+            9.25
+          ],
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "center_front_post",
+      "from": [
+        15.5,
+        6.75,
+        0
+      ],
+      "to": [
+        16,
+        14.25,
+        1
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            15.5,
+            0,
+            16,
+            1
+          ],
+          "texture": "#trim"
+        },
+        "up": {
+          "uv": [
+            15.5,
+            0,
+            16,
+            1
+          ],
+          "texture": "#trim"
+        },
+        "north": {
+          "uv": [
+            15.5,
+            1.75,
+            16,
+            9.25
+          ],
+          "texture": "#trim"
+        },
+        "south": {
+          "uv": [
+            15.5,
+            1.75,
+            16,
+            9.25
+          ],
+          "texture": "#trim"
+        },
+        "west": {
+          "uv": [
+            0,
+            1.75,
+            1,
+            9.25
+          ],
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "front_glass",
+      "from": [
+        1,
+        6.75,
+        0.5
+      ],
+      "to": [
+        15.5,
+        14.25,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#glass"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#glass"
+        }
+      }
+    },
+    {
+      "name": "end_glass",
+      "from": [
+        0.5,
+        6.75,
+        1
+      ],
+      "to": [
+        0.5,
+        14.25,
+        14
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#glass"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#glass"
+        }
+      }
+    },
+    {
+      "name": "bread_tray",
+      "from": [
+        2,
+        6,
+        3
+      ],
+      "to": [
+        14,
+        6.25,
+        12
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        }
+      }
+    },
+    {
+      "name": "pastry_tray",
+      "from": [
+        2,
+        10.5,
+        3
+      ],
+      "to": [
+        14,
+        10.75,
+        12
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tray"
+        }
+      }
+    },
+    {
+      "name": "baguette_base",
+      "from": [
+        3,
+        6.25,
+        3.5
+      ],
+      "to": [
+        6,
+        7.25,
+        11.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        }
+      }
+    },
+    {
+      "name": "baguette_crown",
+      "from": [
+        3.5,
+        7.25,
+        4
+      ],
+      "to": [
+        5.5,
+        7.75,
+        11
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread_top"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        }
+      }
+    },
+    {
+      "name": "round_loaf_base",
+      "from": [
+        8,
+        6.25,
+        5
+      ],
+      "to": [
+        13,
+        7.5,
+        10
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        }
+      }
+    },
+    {
+      "name": "round_loaf_crown",
+      "from": [
+        8.75,
+        7.5,
+        5.75
+      ],
+      "to": [
+        12.25,
+        8.75,
+        9.25
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread_top"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#bread"
+        }
+      }
+    },
+    {
+      "name": "cinnamon_roll_base",
+      "from": [
+        3,
+        10.75,
+        5
+      ],
+      "to": [
+        6.5,
+        11.75,
+        8.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        }
+      }
+    },
+    {
+      "name": "cinnamon_roll_crown",
+      "from": [
+        3.5,
+        11.75,
+        5.5
+      ],
+      "to": [
+        6,
+        12.5,
+        8
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry_top"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        }
+      }
+    },
+    {
+      "name": "berry_tart",
+      "from": [
+        9,
+        10.75,
+        5
+      ],
+      "to": [
+        13,
+        11.5,
+        9
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#tart_top"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        }
+      }
+    }
+  ]
+}

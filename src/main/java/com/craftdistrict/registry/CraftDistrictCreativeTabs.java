@@ -8,7 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
-/** Temporary access to the validation blocks until real collections are added. */
+/** Shared creative tab for CraftDistrict's decoration collections. */
 public final class CraftDistrictCreativeTabs {
     private static final DeferredRegister<CreativeModeTab> TABS =
             DeferredRegister.create(CraftDistrict.MOD_ID, Registries.CREATIVE_MODE_TAB);
@@ -17,13 +17,12 @@ public final class CraftDistrictCreativeTabs {
     }
 
     public static void register() {
-        TABS.register("test_decorations", () -> CreativeTabRegistry.create(builder -> builder
+        TABS.register("decorations", () -> CreativeTabRegistry.create(builder -> builder
                 .title(Component.translatable("itemGroup.craftdistrict"))
-                .icon(() -> new ItemStack(CraftDistrictBlocks.Workshop.TEST_COUNTER.get()))
+                .icon(() -> new ItemStack(CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get()))
                 .displayItems((parameters, output) -> {
-                    output.accept(CraftDistrictBlocks.Workshop.TEST_STATIC.get());
-                    output.accept(CraftDistrictBlocks.Workshop.TEST_ROTATABLE.get());
-                    output.accept(CraftDistrictBlocks.Workshop.TEST_COUNTER.get());
+                    output.accept(CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get());
+                    output.accept(CraftDistrictBlocks.Bakery.BREAD_SHELF.get());
                 })));
         TABS.register();
     }
