@@ -26,6 +26,9 @@ public final class CraftDistrictCreativeTabs {
                     output.accept(CraftDistrictBlocks.Bakery.INDUSTRIAL_OVEN.get());
                     output.accept(CraftDistrictBlocks.Bakery.CASH_REGISTER.get());
                     output.accept(CraftDistrictBlocks.Bakery.DOUGH_PREPARATION_TABLE.get());
+                    output.accept(CraftDistrictBlocks.Bakery.FLOUR_SACKS_SMALL.get());
+                    output.accept(CraftDistrictBlocks.Bakery.FLOUR_SACKS_STACKED.get());
+                    output.accept(CraftDistrictBlocks.Bakery.FLOUR_SACKS_PILE.get());
                 })));
         TABS.register();
     }

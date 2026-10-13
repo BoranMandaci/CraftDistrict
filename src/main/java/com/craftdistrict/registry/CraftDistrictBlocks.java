@@ -6,6 +6,7 @@ import com.craftdistrict.block.TallDecorationBlock;
 import com.craftdistrict.block.WideTallDecorationBlock;
 import com.craftdistrict.block.CashRegisterBlock;
 import com.craftdistrict.block.DoughPreparationTableBlock;
+import com.craftdistrict.block.FlourSacksBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -52,6 +53,16 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<DoughPreparationTableBlock> DOUGH_PREPARATION_TABLE = register("dough_preparation_table",
                 () -> new DoughPreparationTableBlock(BlockBehaviour.Properties.of()
                         .strength(1.5F).sound(SoundType.WOOD).noOcclusion()));
+        public static final RegistrySupplier<FlourSacksBlock> FLOUR_SACKS_SMALL = register("flour_sacks_small",
+                () -> new FlourSacksBlock(FlourSacksBlock.Arrangement.SMALL, flourSackProperties()));
+        public static final RegistrySupplier<FlourSacksBlock> FLOUR_SACKS_STACKED = register("flour_sacks_stacked",
+                () -> new FlourSacksBlock(FlourSacksBlock.Arrangement.STACKED, flourSackProperties()));
+        public static final RegistrySupplier<FlourSacksBlock> FLOUR_SACKS_PILE = register("flour_sacks_pile",
+                () -> new FlourSacksBlock(FlourSacksBlock.Arrangement.PILE, flourSackProperties()));
+
+        private static BlockBehaviour.Properties flourSackProperties() {
+            return BlockBehaviour.Properties.of().strength(0.8F).sound(SoundType.WOOL).noOcclusion();
+        }
 
         private Bakery() {
         }
