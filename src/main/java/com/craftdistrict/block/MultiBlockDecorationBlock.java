@@ -18,12 +18,20 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
     public static final BooleanProperty PRIMARY = BooleanProperty.create("primary");
     private static final int LINKED_PART_UPDATE_FLAGS = Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE;
     // Removal must notify supported decorations above associated parts as vanilla does.
     private static final int LINKED_PART_REMOVAL_FLAGS = Block.UPDATE_ALL;
-    private static final ThreadLocal<Boolean> REMOVING_LINKED_PART = ThreadLocal.withInitial(() -> false);
+    // A different supported structure may lose support during partner cleanup.
+    // Suppress recursion only for the structure currently being removed.
+    private record RemovalKey(Level level, Block block, BlockPos origin) {
+    }
+
+    private static final ThreadLocal<Set<RemovalKey>> REMOVING_LINKED_PART = ThreadLocal.withInitial(HashSet::new);
     //? if >=1.21 {
     public static final MapCodec<MultiBlockDecorationBlock> CODEC = simpleCodec(MultiBlockDecorationBlock::new);
     //?}
@@ -66,7 +74,10 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         Level level = context.getLevel();
         BlockPos primaryPos = context.getClickedPos();
-        Direction facing = context.getHorizontalDirection().getOpposite();
+        Direction facing = getPlacementFacing(context);
+        if (facing == null) {
+            return null;
+        }
         BlockState placementState = stateForPart(defaultBlockState()
                 .setValue(BlockStateProperties.HORIZONTAL_FACING, facing), 0);
         CollisionContext collisionContext = context.getPlayer() == null
@@ -75,12 +86,18 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
             BlockPos partPos = primaryPos.offset(partOffset(placementState, index));
             if (!isWithinPlacementBounds(level, partPos)
                     || !level.getBlockState(partPos).canBeReplaced(context)
+                    || !stateForPart(placementState, index).canSurvive(level, partPos)
                     || !level.isUnobstructed(stateForPart(placementState, index), partPos, collisionContext)) {
                 return null;
             }
         }
 
         return placementState;
+    }
+
+    /** Default furniture orientation; wall-mounted subclasses use the clicked face. */
+    protected Direction getPlacementFacing(BlockPlaceContext context) {
+        return context.getHorizontalDirection().getOpposite();
     }
 
     /** Direction from the primary part to its partner, relative to the block's facing. */
@@ -103,6 +120,10 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
 
         // A callback may have changed the primary; never remove an unrelated replacement.
         if (level.getBlockState(pos) != state) {
+            return;
+        }
+        if (!state.canSurvive(level, pos)) {
+            rollbackPlacement(level, pos, state, 1);
             return;
         }
         CollisionContext collisionContext = placer == null
@@ -138,12 +159,14 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
         BlockPos partPos = origin.offset(partOffset(state, index));
         return isWithinPlacementBounds(level, partPos)
                 && level.getBlockState(partPos).canBeReplaced()
+                && stateForPart(state, index).canSurvive(level, partPos)
                 && level.isUnobstructed(stateForPart(state, index), partPos, collisionContext);
     }
 
     private void rollbackPlacement(Level level, BlockPos origin, BlockState state, int placed) {
-        boolean wasRemoving = REMOVING_LINKED_PART.get();
-        REMOVING_LINKED_PART.set(true);
+        RemovalKey key = new RemovalKey(level, this, origin.immutable());
+        Set<RemovalKey> removing = REMOVING_LINKED_PART.get();
+        boolean added = removing.add(key);
         try {
             for (int index = placed - 1; index >= 0; index--) {
                 BlockPos partPos = origin.offset(partOffset(state, index));
@@ -153,31 +176,42 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
                 }
             }
         } finally {
-            REMOVING_LINKED_PART.set(wasRemoving);
+            if (added) {
+                removing.remove(key);
+            }
+            if (removing.isEmpty()) {
+                REMOVING_LINKED_PART.remove();
+            }
         }
     }
 
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!level.isClientSide && !newState.is(this) && !REMOVING_LINKED_PART.get()) {
+        if (!level.isClientSide && !newState.is(this)) {
             int removedIndex = partIndex(state);
             BlockPos origin = pos.subtract(partOffset(state, removedIndex));
-            REMOVING_LINKED_PART.set(true);
-            try {
-                for (int index = 0; index < partCount(); index++) {
-                    if (index == removedIndex) {
-                        continue;
+            RemovalKey key = new RemovalKey(level, this, origin.immutable());
+            Set<RemovalKey> removing = REMOVING_LINKED_PART.get();
+            if (removing.add(key)) {
+                try {
+                    for (int index = 0; index < partCount(); index++) {
+                        if (index == removedIndex) {
+                            continue;
+                        }
+                        BlockPos partPos = origin.offset(partOffset(state, index));
+                        // A world border can shrink after placement; cleanup is still valid.
+                        if (!level.isOutsideBuildHeight(partPos)
+                                && level.getBlockState(partPos) == stateForPart(state, index)) {
+                            // setBlock removes the part without invoking loot a second time.
+                            level.setBlock(partPos, Blocks.AIR.defaultBlockState(), LINKED_PART_REMOVAL_FLAGS);
+                        }
                     }
-                    BlockPos partPos = origin.offset(partOffset(state, index));
-                    // A world border can shrink after placement; cleanup is still valid.
-                    if (!level.isOutsideBuildHeight(partPos)
-                            && level.getBlockState(partPos) == stateForPart(state, index)) {
-                        // setBlock removes the part without invoking loot a second time.
-                        level.setBlock(partPos, Blocks.AIR.defaultBlockState(), LINKED_PART_REMOVAL_FLAGS);
+                } finally {
+                    removing.remove(key);
+                    if (removing.isEmpty()) {
+                        REMOVING_LINKED_PART.remove();
                     }
                 }
-            } finally {
-                REMOVING_LINKED_PART.set(false);
             }
         }
         super.onRemove(state, level, pos, newState, isMoving);

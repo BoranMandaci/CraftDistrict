@@ -20,7 +20,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Small static countertop decoration; all shape work is performed once at startup. */
-public final class CashRegisterBlock extends RotatableDecorationBlock {
+public class CashRegisterBlock extends RotatableDecorationBlock {
     private static final VoxelShape NORTH_SHAPE = Shapes.or(
             Block.box(2, 0, 2, 14, 2.25, 14),
             Block.box(2.75, 2.25, 6, 13.25, 3.25, 13.25),

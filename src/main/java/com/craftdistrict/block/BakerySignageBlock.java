@@ -19,7 +19,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Static single-cell signage: a wall behind the facing, or a floor below the A-frame. */
-public final class BakerySignageBlock extends RotatableDecorationBlock {
+public class BakerySignageBlock extends RotatableDecorationBlock {
     //? if >=1.21 {
     public static final MapCodec<BakerySignageBlock> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
             StringRepresentable.fromEnum(Variant::values).fieldOf("variant")

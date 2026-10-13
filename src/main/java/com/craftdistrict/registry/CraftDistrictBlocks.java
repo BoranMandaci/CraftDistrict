@@ -10,6 +10,11 @@ import com.craftdistrict.block.FlourSacksBlock;
 import com.craftdistrict.block.PastryTrayBlock;
 import com.craftdistrict.block.IndustrialDoughMixerBlock;
 import com.craftdistrict.block.BakerySignageBlock;
+import com.craftdistrict.block.BakeryTrayRackBlock;
+import com.craftdistrict.block.RefrigeratedDisplayBlock;
+import com.craftdistrict.block.BakeryWallToolBlock;
+import com.craftdistrict.block.BreadSlicerBlock;
+import com.craftdistrict.block.PoliceEntranceBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -30,6 +35,7 @@ public final class CraftDistrictBlocks {
 
     public static void register() {
         Bakery.initialize();
+        Police.initialize();
         BLOCKS.register();
         ITEMS.register();
     }
@@ -83,6 +89,35 @@ public final class CraftDistrictBlocks {
                 () -> new BakerySignageBlock(BakerySignageBlock.Variant.DAILY_SPECIAL, signageProperties()));
         public static final RegistrySupplier<BakerySignageBlock> SIDEWALK_MENU_BOARD = register("bakery_sidewalk_menu_board",
                 () -> new BakerySignageBlock(BakerySignageBlock.Variant.SIDEWALK_MENU, signageProperties()));
+        public static final RegistrySupplier<BakeryTrayRackBlock> TRAY_RACK_EMPTY = register("bakery_tray_rack_empty",
+                () -> new BakeryTrayRackBlock(BakeryTrayRackBlock.Variant.EMPTY, trayRackProperties()));
+        public static final RegistrySupplier<BakeryTrayRackBlock> TRAY_RACK_BAKED = register("bakery_tray_rack_baked",
+                () -> new BakeryTrayRackBlock(BakeryTrayRackBlock.Variant.BAKED, trayRackProperties()));
+        public static final RegistrySupplier<RefrigeratedDisplayBlock> REFRIGERATED_CAKE_DISPLAY = register("refrigerated_cake_display",
+                () -> new RefrigeratedDisplayBlock(RefrigeratedDisplayBlock.Variant.CAKE, refrigeratedDisplayProperties()));
+        public static final RegistrySupplier<RefrigeratedDisplayBlock> REFRIGERATED_PASTRY_DISPLAY = register("refrigerated_pastry_display",
+                () -> new RefrigeratedDisplayBlock(RefrigeratedDisplayBlock.Variant.PASTRY, refrigeratedDisplayProperties()));
+        public static final RegistrySupplier<BakeryWallToolBlock> BREAD_PEEL_RACK = register("bakery_bread_peel_rack",
+                () -> new BakeryWallToolBlock(BakeryWallToolBlock.Tool.BREAD_PEEL, wallToolProperties()));
+        public static final RegistrySupplier<BakeryWallToolBlock> UTENSIL_WALL_RACK = register("bakery_utensil_wall_rack",
+                () -> new BakeryWallToolBlock(BakeryWallToolBlock.Tool.UTENSIL, wallToolProperties()));
+        public static final RegistrySupplier<BakeryWallToolBlock> ROLLING_PIN_RACK = register("bakery_rolling_pin_rack",
+                () -> new BakeryWallToolBlock(BakeryWallToolBlock.Tool.ROLLING_PIN, wallToolProperties()));
+        public static final RegistrySupplier<BreadSlicerBlock> BREAD_SLICER = register("bakery_bread_slicer",
+                () -> new BreadSlicerBlock(BlockBehaviour.Properties.of()
+                        .strength(2.5F).sound(SoundType.METAL).noOcclusion()));
+
+        private static BlockBehaviour.Properties wallToolProperties() {
+            return BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.WOOD).noOcclusion();
+        }
+
+        private static BlockBehaviour.Properties refrigeratedDisplayProperties() {
+            return BlockBehaviour.Properties.of().strength(3.0F).sound(SoundType.METAL).noOcclusion();
+        }
+
+        private static BlockBehaviour.Properties trayRackProperties() {
+            return BlockBehaviour.Properties.of().strength(2.5F).sound(SoundType.METAL).noOcclusion();
+        }
 
         private static BlockBehaviour.Properties signageProperties() {
             return BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.WOOD).noOcclusion();
@@ -104,4 +139,22 @@ public final class CraftDistrictBlocks {
         }
     }
 
+    public static final class Police {
+        public static final RegistrySupplier<PoliceEntranceBlock> RECEPTION_DESK = register("police_reception_desk",
+                () -> new PoliceEntranceBlock(PoliceEntranceBlock.Variant.RECEPTION_DESK, entranceProperties()));
+        public static final RegistrySupplier<PoliceEntranceBlock> DEPARTMENT_SIGN = register("police_department_sign",
+                () -> new PoliceEntranceBlock(PoliceEntranceBlock.Variant.DEPARTMENT_SIGN, entranceProperties()));
+        public static final RegistrySupplier<PoliceEntranceBlock> WAITING_BENCH = register("police_waiting_area_bench",
+                () -> new PoliceEntranceBlock(PoliceEntranceBlock.Variant.WAITING_BENCH, entranceProperties()));
+
+        private static BlockBehaviour.Properties entranceProperties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
+        }
+
+        private Police() {
+        }
+
+        private static void initialize() {
+        }
+    }
 }

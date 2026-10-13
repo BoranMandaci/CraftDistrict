@@ -39,6 +39,17 @@ public final class CraftDistrictCreativeTabs {
                     output.accept(CraftDistrictBlocks.Bakery.WALL_MENU_BOARD.get());
                     output.accept(CraftDistrictBlocks.Bakery.DAILY_SPECIAL_BOARD.get());
                     output.accept(CraftDistrictBlocks.Bakery.SIDEWALK_MENU_BOARD.get());
+                    output.accept(CraftDistrictBlocks.Bakery.TRAY_RACK_EMPTY.get());
+                    output.accept(CraftDistrictBlocks.Bakery.TRAY_RACK_BAKED.get());
+                    output.accept(CraftDistrictBlocks.Bakery.REFRIGERATED_CAKE_DISPLAY.get());
+                    output.accept(CraftDistrictBlocks.Bakery.REFRIGERATED_PASTRY_DISPLAY.get());
+                    output.accept(CraftDistrictBlocks.Bakery.BREAD_PEEL_RACK.get());
+                    output.accept(CraftDistrictBlocks.Bakery.UTENSIL_WALL_RACK.get());
+                    output.accept(CraftDistrictBlocks.Bakery.ROLLING_PIN_RACK.get());
+                    output.accept(CraftDistrictBlocks.Bakery.BREAD_SLICER.get());
+                    output.accept(CraftDistrictBlocks.Police.RECEPTION_DESK.get());
+                    output.accept(CraftDistrictBlocks.Police.DEPARTMENT_SIGN.get());
+                    output.accept(CraftDistrictBlocks.Police.WAITING_BENCH.get());
                 })));
         TABS.register();
     }

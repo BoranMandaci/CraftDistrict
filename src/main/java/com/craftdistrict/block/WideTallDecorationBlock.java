@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 /** Two columns by two rows; origin is part 0, with width clockwise from facing. */
-public final class WideTallDecorationBlock extends MultiBlockDecorationBlock {
+public class WideTallDecorationBlock extends MultiBlockDecorationBlock {
     public static final IntegerProperty PART = IntegerProperty.create("part", 0, 3);
     //? if >=1.21 {
     public static final MapCodec<WideTallDecorationBlock> CODEC = simpleCodec(WideTallDecorationBlock::new);

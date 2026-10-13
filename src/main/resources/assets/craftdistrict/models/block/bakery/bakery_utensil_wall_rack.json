@@ -1,0 +1,2566 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "wood_light": "craftdistrict:block/bakery/bakery_wall_tools_wood_light",
+    "wood_mid": "craftdistrict:block/bakery/bakery_wall_tools_wood_mid",
+    "wood_dark": "craftdistrict:block/bakery/bakery_wall_tools_wood_dark",
+    "working_steel": "craftdistrict:block/bakery/bakery_wall_tools_working_steel",
+    "metal": "craftdistrict:block/bakery/industrial_bakery_oven_metal",
+    "steel": "craftdistrict:block/bakery/industrial_bakery_oven_steel",
+    "particle": "craftdistrict:block/bakery/bakery_display_counter_trim"
+  },
+  "elements": [
+    {
+      "name": "metal_hanging_bar",
+      "from": [
+        1.5,
+        13.75,
+        14.5
+      ],
+      "to": [
+        14.5,
+        14.75,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            1.5,
+            1.25,
+            14.5,
+            2.25
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            1.5,
+            1.25,
+            14.5,
+            2.25
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            14.5,
+            1.25,
+            15.5,
+            2.25
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            0.5,
+            1.25,
+            1.5,
+            2.25
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            1.5,
+            14.5,
+            14.5,
+            15.5
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            1.5,
+            0.5,
+            14.5,
+            1.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_wall_bracket",
+      "from": [
+        1.5,
+        12.75,
+        15.25
+      ],
+      "to": [
+        2.25,
+        15.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            13.75,
+            0.5,
+            14.5,
+            3.25
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            1.5,
+            0.5,
+            2.25,
+            3.25
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            15.25,
+            0.5,
+            16,
+            3.25
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0.5,
+            0.75,
+            3.25
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            1.5,
+            15.25,
+            2.25,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            1.5,
+            0,
+            2.25,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_wall_bracket",
+      "from": [
+        13.75,
+        12.75,
+        15.25
+      ],
+      "to": [
+        14.5,
+        15.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            1.5,
+            0.5,
+            2.25,
+            3.25
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            13.75,
+            0.5,
+            14.5,
+            3.25
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            15.25,
+            0.5,
+            16,
+            3.25
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0.5,
+            0.75,
+            3.25
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            13.75,
+            15.25,
+            14.5,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            13.75,
+            0,
+            14.5,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "hook_0_arm",
+      "from": [
+        3.3125,
+        13.875,
+        13.25
+      ],
+      "to": [
+        3.6875,
+        14.125,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            12.3125,
+            1.875,
+            12.6875,
+            2.125
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            13.25,
+            1.875,
+            15,
+            2.125
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            1,
+            1.875,
+            2.75,
+            2.125
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            3.3125,
+            13.25,
+            3.6875,
+            15
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            3.3125,
+            1,
+            3.6875,
+            2.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "hook_0_tip",
+      "from": [
+        3.3125,
+        12.75,
+        13.25
+      ],
+      "to": [
+        3.6875,
+        14.125,
+        13.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            12.3125,
+            1.875,
+            12.6875,
+            3.25
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            3.3125,
+            1.875,
+            3.6875,
+            3.25
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            13.25,
+            1.875,
+            13.625,
+            3.25
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            2.375,
+            1.875,
+            2.75,
+            3.25
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            3.3125,
+            13.25,
+            3.6875,
+            13.625
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            3.3125,
+            2.375,
+            3.6875,
+            2.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "hook_1_arm",
+      "from": [
+        6.5625,
+        13.875,
+        13.25
+      ],
+      "to": [
+        6.9375,
+        14.125,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            9.0625,
+            1.875,
+            9.4375,
+            2.125
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            13.25,
+            1.875,
+            15,
+            2.125
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            1,
+            1.875,
+            2.75,
+            2.125
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            6.5625,
+            13.25,
+            6.9375,
+            15
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            6.5625,
+            1,
+            6.9375,
+            2.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "hook_1_tip",
+      "from": [
+        6.5625,
+        12.75,
+        13.25
+      ],
+      "to": [
+        6.9375,
+        14.125,
+        13.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            9.0625,
+            1.875,
+            9.4375,
+            3.25
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            6.5625,
+            1.875,
+            6.9375,
+            3.25
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            13.25,
+            1.875,
+            13.625,
+            3.25
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            2.375,
+            1.875,
+            2.75,
+            3.25
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            6.5625,
+            13.25,
+            6.9375,
+            13.625
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            6.5625,
+            2.375,
+            6.9375,
+            2.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "hook_2_arm",
+      "from": [
+        9.8125,
+        13.875,
+        13.25
+      ],
+      "to": [
+        10.1875,
+        14.125,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            5.8125,
+            1.875,
+            6.1875,
+            2.125
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            13.25,
+            1.875,
+            15,
+            2.125
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            1,
+            1.875,
+            2.75,
+            2.125
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            9.8125,
+            13.25,
+            10.1875,
+            15
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            9.8125,
+            1,
+            10.1875,
+            2.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "hook_2_tip",
+      "from": [
+        9.8125,
+        12.75,
+        13.25
+      ],
+      "to": [
+        10.1875,
+        14.125,
+        13.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            5.8125,
+            1.875,
+            6.1875,
+            3.25
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            9.8125,
+            1.875,
+            10.1875,
+            3.25
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            13.25,
+            1.875,
+            13.625,
+            3.25
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            2.375,
+            1.875,
+            2.75,
+            3.25
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            9.8125,
+            13.25,
+            10.1875,
+            13.625
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            9.8125,
+            2.375,
+            10.1875,
+            2.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "hook_3_arm",
+      "from": [
+        12.8125,
+        13.875,
+        13.25
+      ],
+      "to": [
+        13.1875,
+        14.125,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            2.8125,
+            1.875,
+            3.1875,
+            2.125
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            13.25,
+            1.875,
+            15,
+            2.125
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            1,
+            1.875,
+            2.75,
+            2.125
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            12.8125,
+            13.25,
+            13.1875,
+            15
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            12.8125,
+            1,
+            13.1875,
+            2.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "hook_3_tip",
+      "from": [
+        12.8125,
+        12.75,
+        13.25
+      ],
+      "to": [
+        13.1875,
+        14.125,
+        13.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            2.8125,
+            1.875,
+            3.1875,
+            3.25
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            12.8125,
+            1.875,
+            13.1875,
+            3.25
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            13.25,
+            1.875,
+            13.625,
+            3.25
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            2.375,
+            1.875,
+            2.75,
+            3.25
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            12.8125,
+            13.25,
+            13.1875,
+            13.625
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            12.8125,
+            2.375,
+            13.1875,
+            2.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "scraper_blade_upper",
+      "from": [
+        2,
+        6.5,
+        12.75
+      ],
+      "to": [
+        5,
+        10,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            11,
+            6,
+            14,
+            9.5
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            2,
+            6,
+            5,
+            9.5
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            12.75,
+            6,
+            13.125,
+            9.5
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            2.875,
+            6,
+            3.25,
+            9.5
+          ]
+        },
+        "up": {
+          "texture": "#working_steel",
+          "uv": [
+            2,
+            12.75,
+            5,
+            13.125
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            2,
+            2.875,
+            5,
+            3.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "scraper_blade_lower",
+      "from": [
+        2.25,
+        6,
+        12.75
+      ],
+      "to": [
+        4.75,
+        6.5,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            11.25,
+            9.5,
+            13.75,
+            10
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            2.25,
+            9.5,
+            4.75,
+            10
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            12.75,
+            9.5,
+            13.125,
+            10
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            2.875,
+            9.5,
+            3.25,
+            10
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            2.25,
+            2.875,
+            4.75,
+            3.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "scraper_wood_grip_core_1",
+      "from": [
+        1.75,
+        10.1925,
+        12.375
+      ],
+      "to": [
+        5.25,
+        10.6825,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood_mid",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "south": {
+          "texture": "#wood_mid",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "west": {
+          "texture": "#wood_mid",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "east": {
+          "texture": "#wood_mid",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "up": {
+          "texture": "#wood_mid",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#wood_mid",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "scraper_wood_grip_core_2",
+      "from": [
+        1.7502,
+        10,
+        12.5675
+      ],
+      "to": [
+        5.2498,
+        10.875,
+        13.0575
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.000914,
+            0,
+            15.999086,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.000914,
+            0,
+            15.999086,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood_mid",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#wood_mid",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.000914,
+            3.52,
+            15.999086,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.000914,
+            3.52,
+            15.999086,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "scraper_wood_grip_soft_corner_00",
+      "from": [
+        1.7504,
+        10.056382,
+        12.431382
+      ],
+      "to": [
+        5.2496,
+        10.328618,
+        12.703618
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            9.990984,
+            15.998171,
+            14.969016
+          ]
+        },
+        "south": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            9.990984,
+            15.998171,
+            14.969016
+          ]
+        },
+        "west": {
+          "texture": "#wood_mid",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "east": {
+          "texture": "#wood_mid",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "up": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            1.030984,
+            15.998171,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            9.990984,
+            15.998171,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "x",
+        "angle": 45,
+        "origin": [
+          3.5,
+          10.1925,
+          12.5675
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "scraper_wood_grip_soft_corner_01",
+      "from": [
+        1.7504,
+        10.056382,
+        12.921382
+      ],
+      "to": [
+        5.2496,
+        10.328618,
+        13.193618
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            9.990984,
+            15.998171,
+            14.969016
+          ]
+        },
+        "south": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            9.990984,
+            15.998171,
+            14.969016
+          ]
+        },
+        "west": {
+          "texture": "#wood_mid",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "east": {
+          "texture": "#wood_mid",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "up": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            9.990984,
+            15.998171,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            1.030984,
+            15.998171,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "x",
+        "angle": 45,
+        "origin": [
+          3.5,
+          10.1925,
+          13.0575
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "scraper_wood_grip_soft_corner_10",
+      "from": [
+        1.7504,
+        10.546382,
+        12.431382
+      ],
+      "to": [
+        5.2496,
+        10.818618,
+        12.703618
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            1.030984,
+            15.998171,
+            6.009016
+          ]
+        },
+        "south": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            1.030984,
+            15.998171,
+            6.009016
+          ]
+        },
+        "west": {
+          "texture": "#wood_mid",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "east": {
+          "texture": "#wood_mid",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "up": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            1.030984,
+            15.998171,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            9.990984,
+            15.998171,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "x",
+        "angle": 45,
+        "origin": [
+          3.5,
+          10.6825,
+          12.5675
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "scraper_wood_grip_soft_corner_11",
+      "from": [
+        1.7504,
+        10.546382,
+        12.921382
+      ],
+      "to": [
+        5.2496,
+        10.818618,
+        13.193618
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            1.030984,
+            15.998171,
+            6.009016
+          ]
+        },
+        "south": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            1.030984,
+            15.998171,
+            6.009016
+          ]
+        },
+        "west": {
+          "texture": "#wood_mid",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "east": {
+          "texture": "#wood_mid",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "up": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            9.990984,
+            15.998171,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#wood_mid",
+          "uv": [
+            0.001829,
+            1.030984,
+            15.998171,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "x",
+        "angle": 45,
+        "origin": [
+          3.5,
+          10.6825,
+          13.0575
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "scraper_hanging_tab",
+      "from": [
+        3.25,
+        10.75,
+        12.75
+      ],
+      "to": [
+        3.75,
+        13.125,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            12.25,
+            2.875,
+            12.75,
+            5.25
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            3.25,
+            2.875,
+            3.75,
+            5.25
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            12.75,
+            2.875,
+            13.25,
+            5.25
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            2.75,
+            2.875,
+            3.25,
+            5.25
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            3.25,
+            12.75,
+            3.75,
+            13.25
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            3.25,
+            2.75,
+            3.75,
+            3.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "spatula_blade",
+      "from": [
+        6,
+        4,
+        12.5
+      ],
+      "to": [
+        7.5,
+        8.25,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            8.5,
+            7.75,
+            10,
+            12
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            6,
+            7.75,
+            7.5,
+            12
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            12.5,
+            7.75,
+            13,
+            12
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            3,
+            7.75,
+            3.5,
+            12
+          ]
+        },
+        "up": {
+          "texture": "#working_steel",
+          "uv": [
+            6,
+            12.5,
+            7.5,
+            13
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            6,
+            3,
+            7.5,
+            3.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "spatula_rounded_tip",
+      "from": [
+        6.25,
+        3.5,
+        12.5
+      ],
+      "to": [
+        7.25,
+        4,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            8.75,
+            12,
+            9.75,
+            12.5
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            6.25,
+            12,
+            7.25,
+            12.5
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            12.5,
+            12,
+            13,
+            12.5
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            3,
+            12,
+            3.5,
+            12.5
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            6.25,
+            3,
+            7.25,
+            3.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "spatula_neck",
+      "from": [
+        6.5,
+        8,
+        12.5
+      ],
+      "to": [
+        7,
+        9.5,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            9,
+            6.5,
+            9.5,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            6.5,
+            6.5,
+            7,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            12.5,
+            6.5,
+            13.25,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            2.75,
+            6.5,
+            3.5,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            6.5,
+            12.5,
+            7,
+            13.25
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            6.5,
+            2.75,
+            7,
+            3.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "spatula_handle",
+      "from": [
+        6.375,
+        9.25,
+        12.75
+      ],
+      "to": [
+        7.125,
+        13.125,
+        13.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood_dark",
+          "uv": [
+            8.875,
+            2.875,
+            9.625,
+            6.75
+          ]
+        },
+        "south": {
+          "texture": "#wood_dark",
+          "uv": [
+            6.375,
+            2.875,
+            7.125,
+            6.75
+          ]
+        },
+        "west": {
+          "texture": "#wood_dark",
+          "uv": [
+            12.75,
+            2.875,
+            13.5,
+            6.75
+          ]
+        },
+        "east": {
+          "texture": "#wood_dark",
+          "uv": [
+            2.5,
+            2.875,
+            3.25,
+            6.75
+          ]
+        },
+        "up": {
+          "texture": "#wood_dark",
+          "uv": [
+            6.375,
+            12.75,
+            7.125,
+            13.5
+          ]
+        },
+        "down": {
+          "texture": "#wood_dark",
+          "uv": [
+            6.375,
+            2.5,
+            7.125,
+            3.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "dough_cutter_wheel_core_0",
+      "from": [
+        9.3,
+        4.25,
+        12.375
+      ],
+      "to": [
+        10.7,
+        6.75,
+        13.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#working_steel",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "dough_cutter_wheel_core_1",
+      "from": [
+        8.75,
+        4.8,
+        12.3752
+      ],
+      "to": [
+        11.25,
+        6.2,
+        12.9998
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            0.00512,
+            3.52,
+            15.99488,
+            12.48
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            0.00512,
+            3.52,
+            15.99488,
+            12.48
+          ]
+        },
+        "up": {
+          "texture": "#working_steel",
+          "uv": [
+            0,
+            0.00512,
+            16,
+            15.99488
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            0,
+            0.00512,
+            16,
+            15.99488
+          ]
+        }
+      }
+    },
+    {
+      "name": "dough_cutter_wheel_soft_corner_00",
+      "from": [
+        8.911091,
+        4.411091,
+        12.3754
+      ],
+      "to": [
+        9.688909,
+        5.188909,
+        12.9996
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            0.01024,
+            9.990984,
+            15.98976,
+            14.969016
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            0.01024,
+            9.990984,
+            15.98976,
+            14.969016
+          ]
+        },
+        "up": {
+          "texture": "#working_steel",
+          "uv": [
+            1.030984,
+            0.01024,
+            6.009016,
+            15.98976
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            1.030984,
+            0.01024,
+            6.009016,
+            15.98976
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": 45,
+        "origin": [
+          9.3,
+          4.8,
+          12.6875
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "dough_cutter_wheel_soft_corner_01",
+      "from": [
+        8.911091,
+        5.811091,
+        12.3754
+      ],
+      "to": [
+        9.688909,
+        6.588909,
+        12.9996
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            0.01024,
+            1.030984,
+            15.98976,
+            6.009016
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            0.01024,
+            1.030984,
+            15.98976,
+            6.009016
+          ]
+        },
+        "up": {
+          "texture": "#working_steel",
+          "uv": [
+            1.030984,
+            0.01024,
+            6.009016,
+            15.98976
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            1.030984,
+            0.01024,
+            6.009016,
+            15.98976
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": 45,
+        "origin": [
+          9.3,
+          6.2,
+          12.6875
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "dough_cutter_wheel_soft_corner_10",
+      "from": [
+        10.311091,
+        4.411091,
+        12.3754
+      ],
+      "to": [
+        11.088909,
+        5.188909,
+        12.9996
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            0.01024,
+            9.990984,
+            15.98976,
+            14.969016
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            0.01024,
+            9.990984,
+            15.98976,
+            14.969016
+          ]
+        },
+        "up": {
+          "texture": "#working_steel",
+          "uv": [
+            9.990984,
+            0.01024,
+            14.969016,
+            15.98976
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            9.990984,
+            0.01024,
+            14.969016,
+            15.98976
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": 45,
+        "origin": [
+          10.7,
+          4.8,
+          12.6875
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "dough_cutter_wheel_soft_corner_11",
+      "from": [
+        10.311091,
+        5.811091,
+        12.3754
+      ],
+      "to": [
+        11.088909,
+        6.588909,
+        12.9996
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            0.01024,
+            1.030984,
+            15.98976,
+            6.009016
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            0.01024,
+            1.030984,
+            15.98976,
+            6.009016
+          ]
+        },
+        "up": {
+          "texture": "#working_steel",
+          "uv": [
+            9.990984,
+            0.01024,
+            14.969016,
+            15.98976
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            9.990984,
+            0.01024,
+            14.969016,
+            15.98976
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": 45,
+        "origin": [
+          10.7,
+          6.2,
+          12.6875
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "cutter_left_fork",
+      "from": [
+        9.375,
+        5.5,
+        12.75
+      ],
+      "to": [
+        9.75,
+        9.25,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            6.25,
+            6.75,
+            6.625,
+            10.5
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            9.375,
+            6.75,
+            9.75,
+            10.5
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            12.75,
+            6.75,
+            13.125,
+            10.5
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            2.875,
+            6.75,
+            3.25,
+            10.5
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            9.375,
+            12.75,
+            9.75,
+            13.125
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            9.375,
+            2.875,
+            9.75,
+            3.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "cutter_right_fork",
+      "from": [
+        10.25,
+        5.5,
+        12.75
+      ],
+      "to": [
+        10.625,
+        9.25,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            5.375,
+            6.75,
+            5.75,
+            10.5
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            10.25,
+            6.75,
+            10.625,
+            10.5
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            12.75,
+            6.75,
+            13.125,
+            10.5
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            2.875,
+            6.75,
+            3.25,
+            10.5
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            10.25,
+            12.75,
+            10.625,
+            13.125
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            10.25,
+            2.875,
+            10.625,
+            3.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "cutter_handle",
+      "from": [
+        9.625,
+        9,
+        12.75
+      ],
+      "to": [
+        10.375,
+        13.125,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood_light",
+          "uv": [
+            5.625,
+            2.875,
+            6.375,
+            7
+          ]
+        },
+        "south": {
+          "texture": "#wood_light",
+          "uv": [
+            9.625,
+            2.875,
+            10.375,
+            7
+          ]
+        },
+        "west": {
+          "texture": "#wood_light",
+          "uv": [
+            12.75,
+            2.875,
+            13.25,
+            7
+          ]
+        },
+        "east": {
+          "texture": "#wood_light",
+          "uv": [
+            2.75,
+            2.875,
+            3.25,
+            7
+          ]
+        },
+        "up": {
+          "texture": "#wood_light",
+          "uv": [
+            9.625,
+            12.75,
+            10.375,
+            13.25
+          ]
+        },
+        "down": {
+          "texture": "#wood_light",
+          "uv": [
+            9.625,
+            2.75,
+            10.375,
+            3.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "cutter_axle",
+      "from": [
+        9.75,
+        5.25,
+        12.25
+      ],
+      "to": [
+        10.25,
+        5.75,
+        12.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            5.75,
+            10.25,
+            6.25,
+            10.75
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            12.25,
+            10.25,
+            12.375,
+            10.75
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            3.625,
+            10.25,
+            3.75,
+            10.75
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            9.75,
+            12.25,
+            10.25,
+            12.375
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            9.75,
+            3.625,
+            10.25,
+            3.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "palette_knife_blade",
+      "from": [
+        12.625,
+        6.25,
+        12.75
+      ],
+      "to": [
+        13.375,
+        10.5,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            2.625,
+            5.5,
+            3.375,
+            9.75
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            12.625,
+            5.5,
+            13.375,
+            9.75
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            12.75,
+            5.5,
+            13.125,
+            9.75
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            2.875,
+            5.5,
+            3.25,
+            9.75
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            12.625,
+            2.875,
+            13.375,
+            3.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "palette_knife_tip",
+      "from": [
+        12.8125,
+        5.75,
+        12.75
+      ],
+      "to": [
+        13.1875,
+        6.25,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#working_steel",
+          "uv": [
+            2.8125,
+            9.75,
+            3.1875,
+            10.25
+          ]
+        },
+        "south": {
+          "texture": "#working_steel",
+          "uv": [
+            12.8125,
+            9.75,
+            13.1875,
+            10.25
+          ]
+        },
+        "west": {
+          "texture": "#working_steel",
+          "uv": [
+            12.75,
+            9.75,
+            13.125,
+            10.25
+          ]
+        },
+        "east": {
+          "texture": "#working_steel",
+          "uv": [
+            2.875,
+            9.75,
+            3.25,
+            10.25
+          ]
+        },
+        "down": {
+          "texture": "#working_steel",
+          "uv": [
+            12.8125,
+            2.875,
+            13.1875,
+            3.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "palette_knife_handle",
+      "from": [
+        12.625,
+        10.25,
+        12.75
+      ],
+      "to": [
+        13.375,
+        13.125,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#wood_mid",
+          "uv": [
+            2.625,
+            2.875,
+            3.375,
+            5.75
+          ]
+        },
+        "south": {
+          "texture": "#wood_mid",
+          "uv": [
+            12.625,
+            2.875,
+            13.375,
+            5.75
+          ]
+        },
+        "west": {
+          "texture": "#wood_mid",
+          "uv": [
+            12.75,
+            2.875,
+            13.25,
+            5.75
+          ]
+        },
+        "east": {
+          "texture": "#wood_mid",
+          "uv": [
+            2.75,
+            2.875,
+            3.25,
+            5.75
+          ]
+        },
+        "up": {
+          "texture": "#wood_mid",
+          "uv": [
+            12.625,
+            12.75,
+            13.375,
+            13.25
+          ]
+        },
+        "down": {
+          "texture": "#wood_mid",
+          "uv": [
+            12.625,
+            2.75,
+            13.375,
+            3.25
+          ]
+        }
+      }
+    }
+  ]
+}

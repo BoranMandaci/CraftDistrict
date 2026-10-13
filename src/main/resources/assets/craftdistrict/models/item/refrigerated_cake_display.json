@@ -1,0 +1,9449 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "glass": "craftdistrict:block/bakery/refrigerated_display_glass",
+    "shelf": "craftdistrict:block/bakery/refrigerated_display_shelf",
+    "vent": "craftdistrict:block/bakery/refrigerated_display_vent",
+    "light": "craftdistrict:block/bakery/refrigerated_display_light",
+    "chocolate_layers": "craftdistrict:block/bakery/refrigerated_display_chocolate_layers",
+    "vanilla_layers": "craftdistrict:block/bakery/refrigerated_display_vanilla_layers",
+    "pink_layers": "craftdistrict:block/bakery/refrigerated_display_pink_layers",
+    "cheese": "craftdistrict:block/bakery/refrigerated_display_cheese",
+    "frosting": "craftdistrict:block/bakery/refrigerated_display_frosting",
+    "chocolate": "craftdistrict:block/bakery/refrigerated_display_chocolate",
+    "strawberry": "craftdistrict:block/bakery/refrigerated_display_strawberry",
+    "metal": "craftdistrict:block/bakery/industrial_bakery_oven_metal",
+    "steel": "craftdistrict:block/bakery/industrial_bakery_oven_steel",
+    "black": "craftdistrict:block/bakery/industrial_bakery_oven_interior",
+    "service": "craftdistrict:block/bakery/industrial_bakery_oven_service",
+    "particle": "craftdistrict:block/bakery/industrial_bakery_oven_metal"
+  },
+  "elements": [
+    {
+      "name": "refrigeration_plinth",
+      "from": [
+        -7.25,
+        -7.5,
+        1
+      ],
+      "to": [
+        23.25,
+        -0.75,
+        15.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.375,
+            12.375,
+            15.625,
+            15.75
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0.375,
+            12.375,
+            15.625,
+            15.75
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.5,
+            12.375,
+            7.625,
+            15.75
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.375,
+            12.375,
+            7.5,
+            15.75
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0.375,
+            0.375,
+            15.625,
+            7.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_toe_strip",
+      "from": [
+        -7,
+        -7,
+        0.875
+      ],
+      "to": [
+        23,
+        -6.375,
+        15.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            0.5,
+            15.1875,
+            15.5,
+            15.5
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            0.5,
+            15.1875,
+            15.5,
+            15.5
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            0.4375,
+            15.1875,
+            7.6875,
+            15.5
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            0.3125,
+            15.1875,
+            7.5625,
+            15.5
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            0.5,
+            0.4375,
+            15.5,
+            7.6875
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            0.5,
+            0.3125,
+            15.5,
+            7.5625
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_vent_grille",
+      "from": [
+        -5,
+        -5.25,
+        0.875
+      ],
+      "to": [
+        21,
+        -2.25,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vent",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "plinth_upper_lip",
+      "from": [
+        -7.25,
+        -0.75,
+        0.75
+      ],
+      "to": [
+        23.25,
+        -0.25,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            12.125,
+            15.625,
+            12.375
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            12.125,
+            15.625,
+            12.375
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            12.125,
+            7.75,
+            12.375
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            0.25,
+            12.125,
+            7.625,
+            12.375
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            0.375,
+            15.625,
+            7.75
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            0.25,
+            15.625,
+            7.625
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_cap",
+      "from": [
+        -7.25,
+        22.75,
+        0.75
+      ],
+      "to": [
+        23.25,
+        23.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.375,
+            0.25,
+            15.625,
+            0.625
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0.375,
+            0.25,
+            15.625,
+            0.625
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.375,
+            0.25,
+            7.75,
+            0.625
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.25,
+            0.25,
+            7.625,
+            0.625
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0.375,
+            0.375,
+            15.625,
+            7.75
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0.375,
+            0.25,
+            15.625,
+            7.625
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_front_steel_edge",
+      "from": [
+        -7.125,
+        22.5,
+        0.75
+      ],
+      "to": [
+        23.125,
+        22.75,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            0.4375,
+            0.625,
+            15.5625,
+            0.75
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            0.4375,
+            0.625,
+            15.5625,
+            0.75
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            0.4375,
+            7.125,
+            15.5625,
+            7.625
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_center_door_seam",
+      "from": [
+        7.875,
+        -0.25,
+        14.5
+      ],
+      "to": [
+        8.125,
+        22.75,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            7.9375,
+            0.625,
+            8.0625,
+            12.125
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            7.9375,
+            0.625,
+            8.0625,
+            12.125
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            7.25,
+            0.625,
+            7.75,
+            12.125
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.25,
+            0.625,
+            0.75,
+            12.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_glass",
+      "from": [
+        -6.5,
+        -0.25,
+        1.375
+      ],
+      "to": [
+        22.5,
+        22.5,
+        1.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#glass",
+          "uv": [
+            0.75,
+            0.75,
+            15.25,
+            12.125
+          ]
+        },
+        "south": {
+          "texture": "#glass",
+          "uv": [
+            0.75,
+            0.75,
+            15.25,
+            12.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_glass",
+      "from": [
+        -6.875,
+        -0.25,
+        1.75
+      ],
+      "to": [
+        -6.875,
+        22.5,
+        14.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#glass",
+          "uv": [
+            0.875,
+            0.75,
+            7.25,
+            12.125
+          ]
+        },
+        "east": {
+          "texture": "#glass",
+          "uv": [
+            0.75,
+            0.75,
+            7.125,
+            12.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_glass",
+      "from": [
+        22.875,
+        -0.25,
+        1.75
+      ],
+      "to": [
+        22.875,
+        22.5,
+        14.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#glass",
+          "uv": [
+            0.875,
+            0.75,
+            7.25,
+            12.125
+          ]
+        },
+        "east": {
+          "texture": "#glass",
+          "uv": [
+            0.75,
+            0.75,
+            7.125,
+            12.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_front_post",
+      "from": [
+        -7.25,
+        -0.25,
+        0.75
+      ],
+      "to": [
+        -6.5,
+        22.75,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            15.25,
+            0.625,
+            15.625,
+            12.125
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            0.625,
+            0.75,
+            12.125
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            0.625,
+            0.875,
+            12.125
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            7.125,
+            0.625,
+            7.625,
+            12.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_rear_post",
+      "from": [
+        -7.25,
+        -0.25,
+        14.5
+      ],
+      "to": [
+        -6.5,
+        22.75,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            15.25,
+            0.625,
+            15.625,
+            12.125
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            0.625,
+            0.75,
+            12.125
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            7.25,
+            0.625,
+            7.75,
+            12.125
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            0.25,
+            0.625,
+            0.75,
+            12.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_plinth_vent",
+      "from": [
+        -7.375,
+        -5,
+        4
+      ],
+      "to": [
+        -7.25,
+        -2.5,
+        12
+      ],
+      "faces": {
+        "west": {
+          "texture": "#vent",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_front_post",
+      "from": [
+        22.5,
+        -0.25,
+        0.75
+      ],
+      "to": [
+        23.25,
+        22.75,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            0.625,
+            0.75,
+            12.125
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            15.25,
+            0.625,
+            15.625,
+            12.125
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            0.625,
+            0.875,
+            12.125
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            7.125,
+            0.625,
+            7.625,
+            12.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_rear_post",
+      "from": [
+        22.5,
+        -0.25,
+        14.5
+      ],
+      "to": [
+        23.25,
+        22.75,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            0.375,
+            0.625,
+            0.75,
+            12.125
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            15.25,
+            0.625,
+            15.625,
+            12.125
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            7.25,
+            0.625,
+            7.75,
+            12.125
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            0.25,
+            0.625,
+            0.75,
+            12.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_plinth_vent",
+      "from": [
+        23.25,
+        -5,
+        4
+      ],
+      "to": [
+        23.375,
+        -2.5,
+        12
+      ],
+      "faces": {
+        "east": {
+          "texture": "#vent",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_rear_service_door",
+      "from": [
+        -6.5,
+        -0.25,
+        14.875
+      ],
+      "to": [
+        7.875,
+        22.5,
+        15.125
+      ],
+      "faces": {
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_handle_lower_mount",
+      "from": [
+        4.5,
+        8.75,
+        15.125
+      ],
+      "to": [
+        5.125,
+        9.375,
+        15.875
+      ],
+      "faces": {
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            6.25,
+            7.3125,
+            6.5625,
+            7.625
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            7.5625,
+            7.3125,
+            7.9375,
+            7.625
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0625,
+            7.3125,
+            0.4375,
+            7.625
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            6.25,
+            7.5625,
+            6.5625,
+            7.9375
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            6.25,
+            0.0625,
+            6.5625,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_handle_upper_mount",
+      "from": [
+        4.5,
+        13.25,
+        15.125
+      ],
+      "to": [
+        5.125,
+        13.875,
+        15.875
+      ],
+      "faces": {
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            6.25,
+            5.0625,
+            6.5625,
+            5.375
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            7.5625,
+            5.0625,
+            7.9375,
+            5.375
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0625,
+            5.0625,
+            0.4375,
+            5.375
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            6.25,
+            7.5625,
+            6.5625,
+            7.9375
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            6.25,
+            0.0625,
+            6.5625,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_rear_handle",
+      "from": [
+        4.5,
+        9,
+        15.625
+      ],
+      "to": [
+        5.125,
+        13.625,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            9.4375,
+            5.1875,
+            9.75,
+            7.5
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            6.25,
+            5.1875,
+            6.5625,
+            7.5
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            7.8125,
+            5.1875,
+            8.0,
+            7.5
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            0.0,
+            5.1875,
+            0.1875,
+            7.5
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            6.25,
+            7.8125,
+            6.5625,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            6.25,
+            0.0,
+            6.5625,
+            0.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_rear_service_door",
+      "from": [
+        8.125,
+        -0.25,
+        14.875
+      ],
+      "to": [
+        22.5,
+        22.5,
+        15.125
+      ],
+      "faces": {
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_handle_lower_mount",
+      "from": [
+        10.75,
+        8.75,
+        15.125
+      ],
+      "to": [
+        11.375,
+        9.375,
+        15.875
+      ],
+      "faces": {
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            9.375,
+            7.3125,
+            9.6875,
+            7.625
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            7.5625,
+            7.3125,
+            7.9375,
+            7.625
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0625,
+            7.3125,
+            0.4375,
+            7.625
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            9.375,
+            7.5625,
+            9.6875,
+            7.9375
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            9.375,
+            0.0625,
+            9.6875,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_handle_upper_mount",
+      "from": [
+        10.75,
+        13.25,
+        15.125
+      ],
+      "to": [
+        11.375,
+        13.875,
+        15.875
+      ],
+      "faces": {
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            9.375,
+            5.0625,
+            9.6875,
+            5.375
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            7.5625,
+            5.0625,
+            7.9375,
+            5.375
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0625,
+            5.0625,
+            0.4375,
+            5.375
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            9.375,
+            7.5625,
+            9.6875,
+            7.9375
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            9.375,
+            0.0625,
+            9.6875,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_rear_handle",
+      "from": [
+        10.75,
+        9,
+        15.625
+      ],
+      "to": [
+        11.375,
+        13.625,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            6.3125,
+            5.1875,
+            6.625,
+            7.5
+          ]
+        },
+        "south": {
+          "texture": "#steel",
+          "uv": [
+            9.375,
+            5.1875,
+            9.6875,
+            7.5
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            7.8125,
+            5.1875,
+            8.0,
+            7.5
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            0.0,
+            5.1875,
+            0.1875,
+            7.5
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            9.375,
+            7.8125,
+            9.6875,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            9.375,
+            0.0,
+            9.6875,
+            0.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_front_foot",
+      "from": [
+        -6.5,
+        -8,
+        2
+      ],
+      "to": [
+        -4.0,
+        -7.5,
+        4.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#black",
+          "uv": [
+            14.0,
+            15.75,
+            15.25,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#black",
+          "uv": [
+            0.75,
+            15.75,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#black",
+          "uv": [
+            1.0,
+            15.75,
+            2.25,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#black",
+          "uv": [
+            5.75,
+            15.75,
+            7.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#black",
+          "uv": [
+            0.75,
+            5.75,
+            2.0,
+            7.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_rear_foot",
+      "from": [
+        -6.5,
+        -8,
+        12
+      ],
+      "to": [
+        -4.0,
+        -7.5,
+        14.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#black",
+          "uv": [
+            14.0,
+            15.75,
+            15.25,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#black",
+          "uv": [
+            0.75,
+            15.75,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#black",
+          "uv": [
+            6.0,
+            15.75,
+            7.25,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#black",
+          "uv": [
+            0.75,
+            15.75,
+            2.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#black",
+          "uv": [
+            0.75,
+            0.75,
+            2.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_front_foot",
+      "from": [
+        20,
+        -8,
+        2
+      ],
+      "to": [
+        22.5,
+        -7.5,
+        4.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#black",
+          "uv": [
+            0.75,
+            15.75,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#black",
+          "uv": [
+            14.0,
+            15.75,
+            15.25,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#black",
+          "uv": [
+            1.0,
+            15.75,
+            2.25,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#black",
+          "uv": [
+            5.75,
+            15.75,
+            7.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#black",
+          "uv": [
+            14.0,
+            5.75,
+            15.25,
+            7.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_rear_foot",
+      "from": [
+        20,
+        -8,
+        12
+      ],
+      "to": [
+        22.5,
+        -7.5,
+        14.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#black",
+          "uv": [
+            0.75,
+            15.75,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#black",
+          "uv": [
+            14.0,
+            15.75,
+            15.25,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#black",
+          "uv": [
+            6.0,
+            15.75,
+            7.25,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#black",
+          "uv": [
+            0.75,
+            15.75,
+            2.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#black",
+          "uv": [
+            14.0,
+            0.75,
+            15.25,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "shelf_0",
+      "from": [
+        -6.25,
+        0,
+        2
+      ],
+      "to": [
+        22.25,
+        0.375,
+        14.25
+      ],
+      "faces": {
+        "south": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            11.8125,
+            15.125,
+            12.0
+          ]
+        },
+        "west": {
+          "texture": "#shelf",
+          "uv": [
+            1.0,
+            11.8125,
+            7.125,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            11.8125,
+            7.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            1.0,
+            15.125,
+            7.125
+          ]
+        },
+        "down": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            0.875,
+            15.125,
+            7.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "shelf_0_front_bead",
+      "from": [
+        -6.25,
+        0,
+        1.875
+      ],
+      "to": [
+        22.25,
+        0.375,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            0.875,
+            11.8125,
+            15.125,
+            12.0
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            0.9375,
+            11.8125,
+            1.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            7.0,
+            11.8125,
+            7.0625,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            0.875,
+            0.9375,
+            15.125,
+            1.0
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            0.875,
+            7.0,
+            15.125,
+            7.0625
+          ]
+        }
+      }
+    },
+    {
+      "name": "shelf_1",
+      "from": [
+        -6.25,
+        7.5,
+        2
+      ],
+      "to": [
+        22.25,
+        7.875,
+        14.25
+      ],
+      "faces": {
+        "south": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            8.0625,
+            15.125,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#shelf",
+          "uv": [
+            1.0,
+            8.0625,
+            7.125,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            8.0625,
+            7.0,
+            8.25
+          ]
+        },
+        "up": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            1.0,
+            15.125,
+            7.125
+          ]
+        },
+        "down": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            0.875,
+            15.125,
+            7.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "shelf_1_front_bead",
+      "from": [
+        -6.25,
+        7.5,
+        1.875
+      ],
+      "to": [
+        22.25,
+        7.875,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            0.875,
+            8.0625,
+            15.125,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            0.9375,
+            8.0625,
+            1.0,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            7.0,
+            8.0625,
+            7.0625,
+            8.25
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            0.875,
+            0.9375,
+            15.125,
+            1.0
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            0.875,
+            7.0,
+            15.125,
+            7.0625
+          ]
+        }
+      }
+    },
+    {
+      "name": "shelf_2",
+      "from": [
+        -6.25,
+        15.5,
+        2
+      ],
+      "to": [
+        22.25,
+        15.875,
+        14.25
+      ],
+      "faces": {
+        "south": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            4.0625,
+            15.125,
+            4.25
+          ]
+        },
+        "west": {
+          "texture": "#shelf",
+          "uv": [
+            1.0,
+            4.0625,
+            7.125,
+            4.25
+          ]
+        },
+        "east": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            4.0625,
+            7.0,
+            4.25
+          ]
+        },
+        "up": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            1.0,
+            15.125,
+            7.125
+          ]
+        },
+        "down": {
+          "texture": "#shelf",
+          "uv": [
+            0.875,
+            0.875,
+            15.125,
+            7.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "shelf_2_front_bead",
+      "from": [
+        -6.25,
+        15.5,
+        1.875
+      ],
+      "to": [
+        22.25,
+        15.875,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#steel",
+          "uv": [
+            0.875,
+            4.0625,
+            15.125,
+            4.25
+          ]
+        },
+        "west": {
+          "texture": "#steel",
+          "uv": [
+            0.9375,
+            4.0625,
+            1.0,
+            4.25
+          ]
+        },
+        "east": {
+          "texture": "#steel",
+          "uv": [
+            7.0,
+            4.0625,
+            7.0625,
+            4.25
+          ]
+        },
+        "up": {
+          "texture": "#steel",
+          "uv": [
+            0.875,
+            0.9375,
+            15.125,
+            1.0
+          ]
+        },
+        "down": {
+          "texture": "#steel",
+          "uv": [
+            0.875,
+            7.0,
+            15.125,
+            7.0625
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_static_light_strip",
+      "from": [
+        -6,
+        22.375,
+        2.25
+      ],
+      "to": [
+        22,
+        22.5,
+        2.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#light",
+          "uv": [
+            1.0,
+            0.75,
+            15.0,
+            0.8125
+          ]
+        },
+        "south": {
+          "texture": "#light",
+          "uv": [
+            1.0,
+            0.75,
+            15.0,
+            0.8125
+          ]
+        },
+        "west": {
+          "texture": "#light",
+          "uv": [
+            1.125,
+            0.75,
+            1.3125,
+            0.8125
+          ]
+        },
+        "east": {
+          "texture": "#light",
+          "uv": [
+            6.6875,
+            0.75,
+            6.875,
+            0.8125
+          ]
+        },
+        "up": {
+          "texture": "#light",
+          "uv": [
+            1.0,
+            1.125,
+            15.0,
+            1.3125
+          ]
+        },
+        "down": {
+          "texture": "#light",
+          "uv": [
+            1.0,
+            6.6875,
+            15.0,
+            6.875
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "rear_static_light_strip",
+      "from": [
+        -6,
+        22.375,
+        13.5
+      ],
+      "to": [
+        22,
+        22.5,
+        13.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#light",
+          "uv": [
+            1.0,
+            0.75,
+            15.0,
+            0.8125
+          ]
+        },
+        "south": {
+          "texture": "#light",
+          "uv": [
+            1.0,
+            0.75,
+            15.0,
+            0.8125
+          ]
+        },
+        "west": {
+          "texture": "#light",
+          "uv": [
+            6.75,
+            0.75,
+            6.9375,
+            0.8125
+          ]
+        },
+        "east": {
+          "texture": "#light",
+          "uv": [
+            1.0625,
+            0.75,
+            1.25,
+            0.8125
+          ]
+        },
+        "up": {
+          "texture": "#light",
+          "uv": [
+            1.0,
+            6.75,
+            15.0,
+            6.9375
+          ]
+        },
+        "down": {
+          "texture": "#light",
+          "uv": [
+            1.0,
+            1.0625,
+            15.0,
+            1.25
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "chocolate_slice_slice_0",
+      "from": [
+        -3.7,
+        0.375,
+        4.0
+      ],
+      "to": [
+        -2.3,
+        2.875,
+        5.666667
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            5.2,
+            2.086957,
+            10.8,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            2.086957,
+            5.333333,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            10.666667,
+            2.086957,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            5.2,
+            10.666667,
+            10.8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "chocolate_slice_icing_0",
+      "from": [
+        -3.7,
+        2.875,
+        4.0
+      ],
+      "to": [
+        -2.3,
+        3.25,
+        5.666667
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate",
+          "uv": [
+            5.2,
+            0,
+            10.8,
+            2.086957
+          ]
+        },
+        "west": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            0,
+            5.333333,
+            2.086957
+          ]
+        },
+        "east": {
+          "texture": "#chocolate",
+          "uv": [
+            10.666667,
+            0,
+            16,
+            2.086957
+          ]
+        },
+        "up": {
+          "texture": "#chocolate",
+          "uv": [
+            5.2,
+            0,
+            10.8,
+            5.333333
+          ]
+        }
+      }
+    },
+    {
+      "name": "chocolate_slice_slice_1",
+      "from": [
+        -4.3,
+        0.375,
+        5.666667
+      ],
+      "to": [
+        -1.7000000000000002,
+        2.875,
+        7.333333
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            2.8,
+            2.086957,
+            13.2,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            5.333333,
+            2.086957,
+            10.666667,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            5.333333,
+            2.086957,
+            10.666667,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            2.8,
+            5.333333,
+            13.2,
+            10.666667
+          ]
+        }
+      }
+    },
+    {
+      "name": "chocolate_slice_icing_1",
+      "from": [
+        -4.3,
+        2.875,
+        5.666667
+      ],
+      "to": [
+        -1.7000000000000002,
+        3.25,
+        7.333333
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate",
+          "uv": [
+            2.8,
+            0,
+            13.2,
+            2.086957
+          ]
+        },
+        "west": {
+          "texture": "#chocolate",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            2.086957
+          ]
+        },
+        "east": {
+          "texture": "#chocolate",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            2.086957
+          ]
+        },
+        "up": {
+          "texture": "#chocolate",
+          "uv": [
+            2.8,
+            5.333333,
+            13.2,
+            10.666667
+          ]
+        }
+      }
+    },
+    {
+      "name": "chocolate_slice_slice_2",
+      "from": [
+        -5.0,
+        0.375,
+        7.333333
+      ],
+      "to": [
+        -1.0,
+        2.875,
+        9.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            2.086957,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            2.086957,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            10.666667,
+            2.086957,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            2.086957,
+            5.333333,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            0,
+            16,
+            5.333333
+          ]
+        }
+      }
+    },
+    {
+      "name": "chocolate_slice_icing_2",
+      "from": [
+        -5.0,
+        2.875,
+        7.333333
+      ],
+      "to": [
+        -1.0,
+        3.25,
+        9.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            0,
+            16,
+            2.086957
+          ]
+        },
+        "south": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            0,
+            16,
+            2.086957
+          ]
+        },
+        "west": {
+          "texture": "#chocolate",
+          "uv": [
+            10.666667,
+            0,
+            16,
+            2.086957
+          ]
+        },
+        "east": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            0,
+            5.333333,
+            2.086957
+          ]
+        },
+        "up": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            10.666667,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "cheesecake_slice_slice_0",
+      "from": [
+        3.1374999999999993,
+        0.375,
+        8.0
+      ],
+      "to": [
+        4.362500000000001,
+        2.625,
+        9.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#cheese",
+          "uv": [
+            5.2,
+            2.285714,
+            10.8,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#cheese",
+          "uv": [
+            0,
+            2.285714,
+            5.333333,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#cheese",
+          "uv": [
+            10.666667,
+            2.285714,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#cheese",
+          "uv": [
+            5.2,
+            10.666667,
+            10.8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "cheesecake_slice_icing_0",
+      "from": [
+        3.1374999999999993,
+        2.625,
+        8.0
+      ],
+      "to": [
+        4.362500000000001,
+        3.0,
+        9.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            5.2,
+            0,
+            10.8,
+            2.285714
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            0,
+            5.333333,
+            2.285714
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            10.666667,
+            0,
+            16,
+            2.285714
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            5.2,
+            0,
+            10.8,
+            5.333333
+          ]
+        }
+      }
+    },
+    {
+      "name": "cheesecake_slice_slice_1",
+      "from": [
+        2.6125000000000007,
+        0.375,
+        9.5
+      ],
+      "to": [
+        4.887499999999999,
+        2.625,
+        11.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#cheese",
+          "uv": [
+            2.8,
+            2.285714,
+            13.2,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#cheese",
+          "uv": [
+            5.333333,
+            2.285714,
+            10.666667,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#cheese",
+          "uv": [
+            5.333333,
+            2.285714,
+            10.666667,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#cheese",
+          "uv": [
+            2.8,
+            5.333333,
+            13.2,
+            10.666667
+          ]
+        }
+      }
+    },
+    {
+      "name": "cheesecake_slice_icing_1",
+      "from": [
+        2.6125000000000007,
+        2.625,
+        9.5
+      ],
+      "to": [
+        4.887499999999999,
+        3.0,
+        11.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            2.8,
+            0,
+            13.2,
+            2.285714
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            2.285714
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            2.285714
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            2.8,
+            5.333333,
+            13.2,
+            10.666667
+          ]
+        }
+      }
+    },
+    {
+      "name": "cheesecake_slice_slice_2",
+      "from": [
+        2.0,
+        0.375,
+        11.0
+      ],
+      "to": [
+        5.5,
+        2.625,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#cheese",
+          "uv": [
+            0,
+            2.285714,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#cheese",
+          "uv": [
+            0,
+            2.285714,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#cheese",
+          "uv": [
+            10.666667,
+            2.285714,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#cheese",
+          "uv": [
+            0,
+            2.285714,
+            5.333333,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#cheese",
+          "uv": [
+            0,
+            0,
+            16,
+            5.333333
+          ]
+        }
+      }
+    },
+    {
+      "name": "cheesecake_slice_icing_2",
+      "from": [
+        2.0,
+        2.625,
+        11.0
+      ],
+      "to": [
+        5.5,
+        3.0,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            0,
+            16,
+            2.285714
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            0,
+            16,
+            2.285714
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            10.666667,
+            0,
+            16,
+            2.285714
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            0,
+            5.333333,
+            2.285714
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            10.666667,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "strawberry_cake_layered_body_core_0",
+      "from": [
+        10.879999999999999,
+        0.375,
+        4
+      ],
+      "to": [
+        13.120000000000001,
+        2.625,
+        8
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            5.714286,
+            12.48,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            5.714286,
+            12.48,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            5.714286,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            5.714286,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "strawberry_cake_layered_body_core_2",
+      "from": [
+        10,
+        0.37519999999999953,
+        4.88
+      ],
+      "to": [
+        14,
+        2.6248000000000005,
+        7.12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            5.7152,
+            16,
+            15.999086
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            5.7152,
+            16,
+            15.999086
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            5.7152,
+            12.48,
+            15.999086
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            5.7152,
+            12.48,
+            15.999086
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "strawberry_cake_layered_body_soft_corner_00",
+      "from": [
+        10.257746000000001,
+        0.37540000000000084,
+        4.257746
+      ],
+      "to": [
+        11.502254,
+        2.624599999999999,
+        5.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            5.716114,
+            14.969016,
+            15.998171
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            5.716114,
+            6.009016,
+            15.998171
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            5.716114,
+            6.009016,
+            15.998171
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            5.716114,
+            14.969016,
+            15.998171
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          10.879999999999999,
+          1.5,
+          4.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "strawberry_cake_layered_body_soft_corner_01",
+      "from": [
+        10.257746000000001,
+        0.37540000000000084,
+        6.497746
+      ],
+      "to": [
+        11.502254,
+        2.624599999999999,
+        7.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            5.716114,
+            14.969016,
+            15.998171
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            5.716114,
+            6.009016,
+            15.998171
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            5.716114,
+            14.969016,
+            15.998171
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            5.716114,
+            6.009016,
+            15.998171
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          10.879999999999999,
+          1.5,
+          7.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "strawberry_cake_layered_body_soft_corner_10",
+      "from": [
+        12.497746,
+        0.37540000000000084,
+        4.257746
+      ],
+      "to": [
+        13.742253999999999,
+        2.624599999999999,
+        5.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            5.716114,
+            6.009016,
+            15.998171
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            5.716114,
+            14.969016,
+            15.998171
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            5.716114,
+            6.009016,
+            15.998171
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            5.716114,
+            14.969016,
+            15.998171
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          13.120000000000001,
+          1.5,
+          4.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "strawberry_cake_layered_body_soft_corner_11",
+      "from": [
+        12.497746,
+        0.37540000000000084,
+        6.497746
+      ],
+      "to": [
+        13.742253999999999,
+        2.624599999999999,
+        7.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            5.716114,
+            6.009016,
+            15.998171
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            5.716114,
+            14.969016,
+            15.998171
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            5.716114,
+            14.969016,
+            15.998171
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            5.716114,
+            6.009016,
+            15.998171
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          13.120000000000001,
+          1.5,
+          7.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "strawberry_cake_icing_core_0",
+      "from": [
+        10.879999999999999,
+        2.625,
+        4
+      ],
+      "to": [
+        13.120000000000001,
+        3.0,
+        8
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.0,
+            12.48,
+            5.714286
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.0,
+            12.48,
+            5.714286
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.0,
+            16,
+            5.714286
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.0,
+            16,
+            5.714286
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "strawberry_cake_icing_core_2",
+      "from": [
+        10,
+        2.6251999999999995,
+        4.88
+      ],
+      "to": [
+        14,
+        2.9998000000000005,
+        7.12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.000914,
+            16,
+            5.713371
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.000914,
+            16,
+            5.713371
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.000914,
+            12.48,
+            5.713371
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.000914,
+            12.48,
+            5.713371
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "strawberry_cake_icing_soft_corner_00",
+      "from": [
+        10.257746000000001,
+        2.625400000000001,
+        4.257746
+      ],
+      "to": [
+        11.502254,
+        2.999599999999999,
+        5.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.001829,
+            14.969016,
+            5.712457
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.001829,
+            6.009016,
+            5.712457
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.001829,
+            6.009016,
+            5.712457
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.001829,
+            14.969016,
+            5.712457
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          10.879999999999999,
+          2.8125,
+          4.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "strawberry_cake_icing_soft_corner_01",
+      "from": [
+        10.257746000000001,
+        2.625400000000001,
+        6.497746
+      ],
+      "to": [
+        11.502254,
+        2.999599999999999,
+        7.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.001829,
+            14.969016,
+            5.712457
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.001829,
+            6.009016,
+            5.712457
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.001829,
+            14.969016,
+            5.712457
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.001829,
+            6.009016,
+            5.712457
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          10.879999999999999,
+          2.8125,
+          7.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "strawberry_cake_icing_soft_corner_10",
+      "from": [
+        12.497746,
+        2.625400000000001,
+        4.257746
+      ],
+      "to": [
+        13.742253999999999,
+        2.999599999999999,
+        5.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.001829,
+            6.009016,
+            5.712457
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.001829,
+            14.969016,
+            5.712457
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.001829,
+            6.009016,
+            5.712457
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.001829,
+            14.969016,
+            5.712457
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          13.120000000000001,
+          2.8125,
+          4.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "strawberry_cake_icing_soft_corner_11",
+      "from": [
+        12.497746,
+        2.625400000000001,
+        6.497746
+      ],
+      "to": [
+        13.742253999999999,
+        2.999599999999999,
+        7.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.001829,
+            6.009016,
+            5.712457
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.001829,
+            14.969016,
+            5.712457
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.001829,
+            14.969016,
+            5.712457
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.001829,
+            6.009016,
+            5.712457
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          13.120000000000001,
+          2.8125,
+          7.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "strawberry_cake_fruit_0_base",
+      "from": [
+        11.2,
+        3.0,
+        5.4
+      ],
+      "to": [
+        11.95,
+        3.625,
+        6.15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            8.2,
+            1.142857,
+            11.2,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            1.142857,
+            7.8,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            5.6,
+            1.142857,
+            8.6,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            7.4,
+            1.142857,
+            10.4,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            5.6,
+            7.8,
+            8.6
+          ]
+        }
+      }
+    },
+    {
+      "name": "strawberry_cake_fruit_0_tip",
+      "from": [
+        11.325,
+        3.625,
+        5.525
+      ],
+      "to": [
+        11.825,
+        3.875,
+        6.025
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            8.7,
+            0,
+            10.7,
+            1.142857
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            5.3,
+            0,
+            7.3,
+            1.142857
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            6.1,
+            0,
+            8.1,
+            1.142857
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            7.9,
+            0,
+            9.9,
+            1.142857
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            5.3,
+            6.1,
+            7.3,
+            8.1
+          ]
+        }
+      }
+    },
+    {
+      "name": "strawberry_cake_fruit_1_base",
+      "from": [
+        12.0,
+        3.0,
+        6.05
+      ],
+      "to": [
+        12.75,
+        3.625,
+        6.8
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            5.0,
+            1.142857,
+            8.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            8.0,
+            1.142857,
+            11.0,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            8.2,
+            1.142857,
+            11.2,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            1.142857,
+            7.8,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            8.0,
+            8.2,
+            11.0,
+            11.2
+          ]
+        }
+      }
+    },
+    {
+      "name": "strawberry_cake_fruit_1_tip",
+      "from": [
+        12.125,
+        3.625,
+        6.175
+      ],
+      "to": [
+        12.625,
+        3.875,
+        6.675
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            5.5,
+            0,
+            7.5,
+            1.142857
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            8.5,
+            0,
+            10.5,
+            1.142857
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            8.7,
+            0,
+            10.7,
+            1.142857
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            5.3,
+            0,
+            7.3,
+            1.142857
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            8.5,
+            8.7,
+            10.5,
+            10.7
+          ]
+        }
+      }
+    },
+    {
+      "name": "fruit_mini_cake_layered_body_core_0",
+      "from": [
+        17.77,
+        0.375,
+        8
+      ],
+      "to": [
+        19.73,
+        2.375,
+        11.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            3.52,
+            6.153846,
+            12.48,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            3.52,
+            6.153846,
+            12.48,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            6.153846,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            6.153846,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "fruit_mini_cake_layered_body_core_2",
+      "from": [
+        17,
+        0.37519999999999953,
+        8.77
+      ],
+      "to": [
+        20.5,
+        2.3748000000000005,
+        10.73
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            6.154831,
+            16,
+            15.999015
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            6.154831,
+            16,
+            15.999015
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            3.52,
+            6.154831,
+            12.48,
+            15.999015
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            3.52,
+            6.154831,
+            12.48,
+            15.999015
+          ]
+        },
+        "up": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "fruit_mini_cake_layered_body_soft_corner_00",
+      "from": [
+        17.225528,
+        0.37540000000000084,
+        8.225528
+      ],
+      "to": [
+        18.314472,
+        2.374599999999999,
+        9.314472
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "up": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          17.77,
+          1.375,
+          8.77
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "fruit_mini_cake_layered_body_soft_corner_01",
+      "from": [
+        17.225528,
+        0.37540000000000084,
+        10.185528
+      ],
+      "to": [
+        18.314472,
+        2.374599999999999,
+        11.274472
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "up": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          17.77,
+          1.375,
+          10.73
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "fruit_mini_cake_layered_body_soft_corner_10",
+      "from": [
+        19.185528,
+        0.37540000000000084,
+        8.225528
+      ],
+      "to": [
+        20.274472,
+        2.374599999999999,
+        9.314472
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "up": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          19.73,
+          1.375,
+          8.77
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "fruit_mini_cake_layered_body_soft_corner_11",
+      "from": [
+        19.185528,
+        0.37540000000000084,
+        10.185528
+      ],
+      "to": [
+        20.274472,
+        2.374599999999999,
+        11.274472
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "up": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          19.73,
+          1.375,
+          10.73
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "fruit_mini_cake_icing_core_0",
+      "from": [
+        17.77,
+        2.375,
+        8
+      ],
+      "to": [
+        19.73,
+        2.75,
+        11.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.307692,
+            12.48,
+            6.153846
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.307692,
+            12.48,
+            6.153846
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.307692,
+            16,
+            6.153846
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.307692,
+            16,
+            6.153846
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "fruit_mini_cake_icing_core_2",
+      "from": [
+        17,
+        2.3751999999999995,
+        8.77
+      ],
+      "to": [
+        20.5,
+        2.7498000000000005,
+        10.73
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.308677,
+            16,
+            6.152862
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.308677,
+            16,
+            6.152862
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.308677,
+            12.48,
+            6.152862
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.308677,
+            12.48,
+            6.152862
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "fruit_mini_cake_icing_soft_corner_00",
+      "from": [
+        17.225528,
+        2.375400000000001,
+        8.225528
+      ],
+      "to": [
+        18.314472,
+        2.749599999999999,
+        9.314472
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          17.77,
+          2.5625,
+          8.77
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "fruit_mini_cake_icing_soft_corner_01",
+      "from": [
+        17.225528,
+        2.375400000000001,
+        10.185528
+      ],
+      "to": [
+        18.314472,
+        2.749599999999999,
+        11.274472
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          17.77,
+          2.5625,
+          10.73
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "fruit_mini_cake_icing_soft_corner_10",
+      "from": [
+        19.185528,
+        2.375400000000001,
+        8.225528
+      ],
+      "to": [
+        20.274472,
+        2.749599999999999,
+        9.314472
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          19.73,
+          2.5625,
+          8.77
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "fruit_mini_cake_icing_soft_corner_11",
+      "from": [
+        19.185528,
+        2.375400000000001,
+        10.185528
+      ],
+      "to": [
+        20.274472,
+        2.749599999999999,
+        11.274472
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          19.73,
+          2.5625,
+          10.73
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "fruit_mini_cake_fruit_0_base",
+      "from": [
+        18.05,
+        2.75,
+        9.225
+      ],
+      "to": [
+        18.8,
+        3.375,
+        9.975
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            7.771429,
+            1.230769,
+            11.2,
+            4.307692
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            1.230769,
+            8.228571,
+            4.307692
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            5.6,
+            1.230769,
+            9.028571,
+            4.307692
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            6.971429,
+            1.230769,
+            10.4,
+            4.307692
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            5.6,
+            8.228571,
+            9.028571
+          ]
+        }
+      }
+    },
+    {
+      "name": "fruit_mini_cake_fruit_0_tip",
+      "from": [
+        18.175,
+        3.375,
+        9.35
+      ],
+      "to": [
+        18.675,
+        3.625,
+        9.85
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            8.342857,
+            0,
+            10.628571,
+            1.230769
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            5.371429,
+            0,
+            7.657143,
+            1.230769
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            6.171429,
+            0,
+            8.457143,
+            1.230769
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            7.542857,
+            0,
+            9.828571,
+            1.230769
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            5.371429,
+            6.171429,
+            7.657143,
+            8.457143
+          ]
+        }
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_layered_body_core_0",
+      "from": [
+        -3.51,
+        7.875,
+        5
+      ],
+      "to": [
+        -0.9900000000000002,
+        10.625,
+        9.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            3.52,
+            1.92,
+            12.48,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            3.52,
+            1.92,
+            12.48,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            1.92,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            1.92,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_layered_body_core_2",
+      "from": [
+        -4.5,
+        7.8751999999999995,
+        5.99
+      ],
+      "to": [
+        0.0,
+        10.6248,
+        8.51
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            1.921024,
+            16,
+            15.998976
+          ]
+        },
+        "south": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            1.921024,
+            16,
+            15.998976
+          ]
+        },
+        "west": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            3.52,
+            1.921024,
+            12.48,
+            15.998976
+          ]
+        },
+        "east": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            3.52,
+            1.921024,
+            12.48,
+            15.998976
+          ]
+        },
+        "up": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_layered_body_soft_corner_00",
+      "from": [
+        -4.2100360000000006,
+        7.875400000000001,
+        5.289964
+      ],
+      "to": [
+        -2.809964,
+        10.624600000000001,
+        6.690036
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            1.922048,
+            14.969016,
+            15.997952
+          ]
+        },
+        "south": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            1.922048,
+            6.009016,
+            15.997952
+          ]
+        },
+        "west": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            1.922048,
+            6.009016,
+            15.997952
+          ]
+        },
+        "east": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            1.922048,
+            14.969016,
+            15.997952
+          ]
+        },
+        "up": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -3.51,
+          9.25,
+          5.99
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_layered_body_soft_corner_01",
+      "from": [
+        -4.2100360000000006,
+        7.875400000000001,
+        7.809964
+      ],
+      "to": [
+        -2.809964,
+        10.624600000000001,
+        9.210036
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            1.922048,
+            14.969016,
+            15.997952
+          ]
+        },
+        "south": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            1.922048,
+            6.009016,
+            15.997952
+          ]
+        },
+        "west": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            1.922048,
+            14.969016,
+            15.997952
+          ]
+        },
+        "east": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            1.922048,
+            6.009016,
+            15.997952
+          ]
+        },
+        "up": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -3.51,
+          9.25,
+          8.51
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_layered_body_soft_corner_10",
+      "from": [
+        -1.690036,
+        7.875400000000001,
+        5.289964
+      ],
+      "to": [
+        -0.28996400000000033,
+        10.624600000000001,
+        6.690036
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            1.922048,
+            6.009016,
+            15.997952
+          ]
+        },
+        "south": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            1.922048,
+            14.969016,
+            15.997952
+          ]
+        },
+        "west": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            1.922048,
+            6.009016,
+            15.997952
+          ]
+        },
+        "east": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            1.922048,
+            14.969016,
+            15.997952
+          ]
+        },
+        "up": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -0.9900000000000002,
+          9.25,
+          5.99
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_layered_body_soft_corner_11",
+      "from": [
+        -1.690036,
+        7.875400000000001,
+        7.809964
+      ],
+      "to": [
+        -0.28996400000000033,
+        10.624600000000001,
+        9.210036
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            1.922048,
+            6.009016,
+            15.997952
+          ]
+        },
+        "south": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            1.922048,
+            14.969016,
+            15.997952
+          ]
+        },
+        "west": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            1.922048,
+            14.969016,
+            15.997952
+          ]
+        },
+        "east": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            1.030984,
+            1.922048,
+            6.009016,
+            15.997952
+          ]
+        },
+        "up": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#chocolate_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -0.9900000000000002,
+          9.25,
+          8.51
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_icing_core_0",
+      "from": [
+        -3.51,
+        10.625,
+        5
+      ],
+      "to": [
+        -0.9900000000000002,
+        11.0,
+        9.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            1.92
+          ]
+        },
+        "south": {
+          "texture": "#chocolate",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            1.92
+          ]
+        },
+        "west": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            0,
+            16,
+            1.92
+          ]
+        },
+        "east": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            0,
+            16,
+            1.92
+          ]
+        },
+        "up": {
+          "texture": "#chocolate",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_icing_core_2",
+      "from": [
+        -4.5,
+        10.6252,
+        5.99
+      ],
+      "to": [
+        0.0,
+        10.9998,
+        8.51
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            0.001024,
+            16,
+            1.918976
+          ]
+        },
+        "south": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            0.001024,
+            16,
+            1.918976
+          ]
+        },
+        "west": {
+          "texture": "#chocolate",
+          "uv": [
+            3.52,
+            0.001024,
+            12.48,
+            1.918976
+          ]
+        },
+        "east": {
+          "texture": "#chocolate",
+          "uv": [
+            3.52,
+            0.001024,
+            12.48,
+            1.918976
+          ]
+        },
+        "up": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#chocolate",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_icing_soft_corner_00",
+      "from": [
+        -4.2100360000000006,
+        10.625399999999999,
+        5.289964
+      ],
+      "to": [
+        -2.809964,
+        10.999600000000001,
+        6.690036
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            0.002048,
+            14.969016,
+            1.917952
+          ]
+        },
+        "south": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            0.002048,
+            6.009016,
+            1.917952
+          ]
+        },
+        "west": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            0.002048,
+            6.009016,
+            1.917952
+          ]
+        },
+        "east": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            0.002048,
+            14.969016,
+            1.917952
+          ]
+        },
+        "up": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -3.51,
+          10.8125,
+          5.99
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_icing_soft_corner_01",
+      "from": [
+        -4.2100360000000006,
+        10.625399999999999,
+        7.809964
+      ],
+      "to": [
+        -2.809964,
+        10.999600000000001,
+        9.210036
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            0.002048,
+            14.969016,
+            1.917952
+          ]
+        },
+        "south": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            0.002048,
+            6.009016,
+            1.917952
+          ]
+        },
+        "west": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            0.002048,
+            14.969016,
+            1.917952
+          ]
+        },
+        "east": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            0.002048,
+            6.009016,
+            1.917952
+          ]
+        },
+        "up": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -3.51,
+          10.8125,
+          8.51
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_icing_soft_corner_10",
+      "from": [
+        -1.690036,
+        10.625399999999999,
+        5.289964
+      ],
+      "to": [
+        -0.28996400000000033,
+        10.999600000000001,
+        6.690036
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            0.002048,
+            6.009016,
+            1.917952
+          ]
+        },
+        "south": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            0.002048,
+            14.969016,
+            1.917952
+          ]
+        },
+        "west": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            0.002048,
+            6.009016,
+            1.917952
+          ]
+        },
+        "east": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            0.002048,
+            14.969016,
+            1.917952
+          ]
+        },
+        "up": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -0.9900000000000002,
+          10.8125,
+          5.99
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "chocolate_layer_cake_icing_soft_corner_11",
+      "from": [
+        -1.690036,
+        10.625399999999999,
+        7.809964
+      ],
+      "to": [
+        -0.28996400000000033,
+        10.999600000000001,
+        9.210036
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            0.002048,
+            6.009016,
+            1.917952
+          ]
+        },
+        "south": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            0.002048,
+            14.969016,
+            1.917952
+          ]
+        },
+        "west": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            0.002048,
+            14.969016,
+            1.917952
+          ]
+        },
+        "east": {
+          "texture": "#chocolate",
+          "uv": [
+            1.030984,
+            0.002048,
+            6.009016,
+            1.917952
+          ]
+        },
+        "up": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#chocolate",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -0.9900000000000002,
+          10.8125,
+          8.51
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_layered_body_core_0",
+      "from": [
+        2.880000000000001,
+        7.875,
+        4
+      ],
+      "to": [
+        5.119999999999999,
+        10.375,
+        8
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            3.52,
+            5.333333,
+            12.48,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            3.52,
+            5.333333,
+            12.48,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            5.333333,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            5.333333,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_layered_body_core_2",
+      "from": [
+        2,
+        7.8751999999999995,
+        4.88
+      ],
+      "to": [
+        6,
+        10.3748,
+        7.12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            5.334187,
+            16,
+            15.999147
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            5.334187,
+            16,
+            15.999147
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            3.52,
+            5.334187,
+            12.48,
+            15.999147
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            3.52,
+            5.334187,
+            12.48,
+            15.999147
+          ]
+        },
+        "up": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_layered_body_soft_corner_00",
+      "from": [
+        2.257745999999999,
+        7.875400000000001,
+        4.257746
+      ],
+      "to": [
+        3.5022540000000006,
+        10.374600000000001,
+        5.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            5.33504,
+            14.969016,
+            15.998293
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            5.33504,
+            6.009016,
+            15.998293
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            5.33504,
+            6.009016,
+            15.998293
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            5.33504,
+            14.969016,
+            15.998293
+          ]
+        },
+        "up": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          2.880000000000001,
+          9.125,
+          4.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_layered_body_soft_corner_01",
+      "from": [
+        2.257745999999999,
+        7.875400000000001,
+        6.497746
+      ],
+      "to": [
+        3.5022540000000006,
+        10.374600000000001,
+        7.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            5.33504,
+            14.969016,
+            15.998293
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            5.33504,
+            6.009016,
+            15.998293
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            5.33504,
+            14.969016,
+            15.998293
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            5.33504,
+            6.009016,
+            15.998293
+          ]
+        },
+        "up": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          2.880000000000001,
+          9.125,
+          7.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_layered_body_soft_corner_10",
+      "from": [
+        4.497745999999999,
+        7.875400000000001,
+        4.257746
+      ],
+      "to": [
+        5.742254000000001,
+        10.374600000000001,
+        5.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            5.33504,
+            6.009016,
+            15.998293
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            5.33504,
+            14.969016,
+            15.998293
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            5.33504,
+            6.009016,
+            15.998293
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            5.33504,
+            14.969016,
+            15.998293
+          ]
+        },
+        "up": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          5.119999999999999,
+          9.125,
+          4.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_layered_body_soft_corner_11",
+      "from": [
+        4.497745999999999,
+        7.875400000000001,
+        6.497746
+      ],
+      "to": [
+        5.742254000000001,
+        10.374600000000001,
+        7.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            5.33504,
+            6.009016,
+            15.998293
+          ]
+        },
+        "south": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            5.33504,
+            14.969016,
+            15.998293
+          ]
+        },
+        "west": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            5.33504,
+            14.969016,
+            15.998293
+          ]
+        },
+        "east": {
+          "texture": "#pink_layers",
+          "uv": [
+            1.030984,
+            5.33504,
+            6.009016,
+            15.998293
+          ]
+        },
+        "up": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#pink_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          5.119999999999999,
+          9.125,
+          7.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_icing_core_0",
+      "from": [
+        2.880000000000001,
+        10.375,
+        4
+      ],
+      "to": [
+        5.119999999999999,
+        10.75,
+        8
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            3.733333,
+            12.48,
+            5.333333
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            3.733333,
+            12.48,
+            5.333333
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.733333,
+            16,
+            5.333333
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.733333,
+            16,
+            5.333333
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_icing_core_2",
+      "from": [
+        2,
+        10.3752,
+        4.88
+      ],
+      "to": [
+        6,
+        10.7498,
+        7.12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.734187,
+            16,
+            5.33248
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.734187,
+            16,
+            5.33248
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            3.734187,
+            12.48,
+            5.33248
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            3.734187,
+            12.48,
+            5.33248
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_icing_soft_corner_00",
+      "from": [
+        2.257745999999999,
+        10.375399999999999,
+        4.257746
+      ],
+      "to": [
+        3.5022540000000006,
+        10.749600000000001,
+        5.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.73504,
+            14.969016,
+            5.331627
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.73504,
+            6.009016,
+            5.331627
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.73504,
+            6.009016,
+            5.331627
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.73504,
+            14.969016,
+            5.331627
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          2.880000000000001,
+          10.5625,
+          4.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_icing_soft_corner_01",
+      "from": [
+        2.257745999999999,
+        10.375399999999999,
+        6.497746
+      ],
+      "to": [
+        3.5022540000000006,
+        10.749600000000001,
+        7.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.73504,
+            14.969016,
+            5.331627
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.73504,
+            6.009016,
+            5.331627
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.73504,
+            14.969016,
+            5.331627
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.73504,
+            6.009016,
+            5.331627
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          2.880000000000001,
+          10.5625,
+          7.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_icing_soft_corner_10",
+      "from": [
+        4.497745999999999,
+        10.375399999999999,
+        4.257746
+      ],
+      "to": [
+        5.742254000000001,
+        10.749600000000001,
+        5.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.73504,
+            6.009016,
+            5.331627
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.73504,
+            14.969016,
+            5.331627
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.73504,
+            6.009016,
+            5.331627
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.73504,
+            14.969016,
+            5.331627
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          5.119999999999999,
+          10.5625,
+          4.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_icing_soft_corner_11",
+      "from": [
+        4.497745999999999,
+        10.375399999999999,
+        6.497746
+      ],
+      "to": [
+        5.742254000000001,
+        10.749600000000001,
+        7.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.73504,
+            6.009016,
+            5.331627
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.73504,
+            14.969016,
+            5.331627
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.73504,
+            14.969016,
+            5.331627
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.73504,
+            6.009016,
+            5.331627
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          5.119999999999999,
+          10.5625,
+          7.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_fruit_0_base",
+      "from": [
+        3.1999999999999993,
+        10.75,
+        5.4
+      ],
+      "to": [
+        3.9499999999999993,
+        11.375,
+        6.15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            8.2,
+            1.066667,
+            11.2,
+            3.733333
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            1.066667,
+            7.8,
+            3.733333
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            5.6,
+            1.066667,
+            8.6,
+            3.733333
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            7.4,
+            1.066667,
+            10.4,
+            3.733333
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            5.6,
+            7.8,
+            8.6
+          ]
+        }
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_fruit_0_tip",
+      "from": [
+        3.3249999999999993,
+        11.375,
+        5.525
+      ],
+      "to": [
+        3.8249999999999993,
+        11.625,
+        6.025
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            8.7,
+            0,
+            10.7,
+            1.066667
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            5.3,
+            0,
+            7.3,
+            1.066667
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            6.1,
+            0,
+            8.1,
+            1.066667
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            7.9,
+            0,
+            9.9,
+            1.066667
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            5.3,
+            6.1,
+            7.3,
+            8.1
+          ]
+        }
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_fruit_1_base",
+      "from": [
+        4.0,
+        10.75,
+        6.05
+      ],
+      "to": [
+        4.75,
+        11.375,
+        6.8
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            5.0,
+            1.066667,
+            8.0,
+            3.733333
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            8.0,
+            1.066667,
+            11.0,
+            3.733333
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            8.2,
+            1.066667,
+            11.2,
+            3.733333
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            1.066667,
+            7.8,
+            3.733333
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            8.0,
+            8.2,
+            11.0,
+            11.2
+          ]
+        }
+      }
+    },
+    {
+      "name": "pink_strawberry_cake_fruit_1_tip",
+      "from": [
+        4.125,
+        11.375,
+        6.175
+      ],
+      "to": [
+        4.625,
+        11.625,
+        6.675
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            5.5,
+            0,
+            7.5,
+            1.066667
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            8.5,
+            0,
+            10.5,
+            1.066667
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            8.7,
+            0,
+            10.7,
+            1.066667
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            5.3,
+            0,
+            7.3,
+            1.066667
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            8.5,
+            8.7,
+            10.5,
+            10.7
+          ]
+        }
+      }
+    },
+    {
+      "name": "cream_centerpiece_layered_body_core_0",
+      "from": [
+        15.21,
+        7.875,
+        5
+      ],
+      "to": [
+        18.29,
+        11.125,
+        10.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            4.444444,
+            12.48,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            4.444444,
+            12.48,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            4.444444,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            4.444444,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "cream_centerpiece_layered_body_core_2",
+      "from": [
+        14,
+        7.8751999999999995,
+        6.21
+      ],
+      "to": [
+        19.5,
+        11.1248,
+        9.29
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            4.445156,
+            16,
+            15.999289
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            4.445156,
+            16,
+            15.999289
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            4.445156,
+            12.48,
+            15.999289
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            4.445156,
+            12.48,
+            15.999289
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "cream_centerpiece_layered_body_soft_corner_00",
+      "from": [
+        14.354401,
+        7.875400000000001,
+        5.354401
+      ],
+      "to": [
+        16.065599,
+        11.124600000000001,
+        7.065599
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            4.445867,
+            14.969016,
+            15.998578
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            4.445867,
+            6.009016,
+            15.998578
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            4.445867,
+            6.009016,
+            15.998578
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            4.445867,
+            14.969016,
+            15.998578
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          15.21,
+          9.5,
+          6.21
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "cream_centerpiece_layered_body_soft_corner_01",
+      "from": [
+        14.354401,
+        7.875400000000001,
+        8.434401
+      ],
+      "to": [
+        16.065599,
+        11.124600000000001,
+        10.145599
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            4.445867,
+            14.969016,
+            15.998578
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            4.445867,
+            6.009016,
+            15.998578
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            4.445867,
+            14.969016,
+            15.998578
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            4.445867,
+            6.009016,
+            15.998578
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          15.21,
+          9.5,
+          9.29
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "cream_centerpiece_layered_body_soft_corner_10",
+      "from": [
+        17.434401,
+        7.875400000000001,
+        5.354401
+      ],
+      "to": [
+        19.145599,
+        11.124600000000001,
+        7.065599
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            4.445867,
+            6.009016,
+            15.998578
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            4.445867,
+            14.969016,
+            15.998578
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            4.445867,
+            6.009016,
+            15.998578
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            4.445867,
+            14.969016,
+            15.998578
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          18.29,
+          9.5,
+          6.21
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "cream_centerpiece_layered_body_soft_corner_11",
+      "from": [
+        17.434401,
+        7.875400000000001,
+        8.434401
+      ],
+      "to": [
+        19.145599,
+        11.124600000000001,
+        10.145599
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            4.445867,
+            6.009016,
+            15.998578
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            4.445867,
+            14.969016,
+            15.998578
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            4.445867,
+            14.969016,
+            15.998578
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            4.445867,
+            6.009016,
+            15.998578
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          18.29,
+          9.5,
+          9.29
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "cream_centerpiece_icing_core_0",
+      "from": [
+        15.21,
+        11.125,
+        5
+      ],
+      "to": [
+        18.29,
+        11.5,
+        10.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            3.111111,
+            12.48,
+            4.444444
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            3.111111,
+            12.48,
+            4.444444
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.111111,
+            16,
+            4.444444
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.111111,
+            16,
+            4.444444
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "cream_centerpiece_icing_core_2",
+      "from": [
+        14,
+        11.1252,
+        6.21
+      ],
+      "to": [
+        19.5,
+        11.4998,
+        9.29
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.111822,
+            16,
+            4.443733
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.111822,
+            16,
+            4.443733
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            3.111822,
+            12.48,
+            4.443733
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            3.111822,
+            12.48,
+            4.443733
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "cream_centerpiece_icing_soft_corner_00",
+      "from": [
+        14.354401,
+        11.125399999999999,
+        5.354401
+      ],
+      "to": [
+        16.065599,
+        11.499600000000001,
+        7.065599
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.112533,
+            14.969016,
+            4.443022
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.112533,
+            6.009016,
+            4.443022
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.112533,
+            6.009016,
+            4.443022
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.112533,
+            14.969016,
+            4.443022
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          15.21,
+          11.3125,
+          6.21
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "cream_centerpiece_icing_soft_corner_01",
+      "from": [
+        14.354401,
+        11.125399999999999,
+        8.434401
+      ],
+      "to": [
+        16.065599,
+        11.499600000000001,
+        10.145599
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.112533,
+            14.969016,
+            4.443022
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.112533,
+            6.009016,
+            4.443022
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.112533,
+            14.969016,
+            4.443022
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.112533,
+            6.009016,
+            4.443022
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          15.21,
+          11.3125,
+          9.29
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "cream_centerpiece_icing_soft_corner_10",
+      "from": [
+        17.434401,
+        11.125399999999999,
+        5.354401
+      ],
+      "to": [
+        19.145599,
+        11.499600000000001,
+        7.065599
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.112533,
+            6.009016,
+            4.443022
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.112533,
+            14.969016,
+            4.443022
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.112533,
+            6.009016,
+            4.443022
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.112533,
+            14.969016,
+            4.443022
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          18.29,
+          11.3125,
+          6.21
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "cream_centerpiece_icing_soft_corner_11",
+      "from": [
+        17.434401,
+        11.125399999999999,
+        8.434401
+      ],
+      "to": [
+        19.145599,
+        11.499600000000001,
+        10.145599
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.112533,
+            6.009016,
+            4.443022
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.112533,
+            14.969016,
+            4.443022
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            3.112533,
+            14.969016,
+            4.443022
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            3.112533,
+            6.009016,
+            4.443022
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          18.29,
+          11.3125,
+          9.29
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "cream_centerpiece_fruit_0_base",
+      "from": [
+        15.649999999999999,
+        11.5,
+        6.925
+      ],
+      "to": [
+        16.4,
+        12.125,
+        7.675
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            9.018182,
+            0.888889,
+            11.2,
+            3.111111
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            0.888889,
+            6.981818,
+            3.111111
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            5.6,
+            0.888889,
+            7.781818,
+            3.111111
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            8.218182,
+            0.888889,
+            10.4,
+            3.111111
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            5.6,
+            6.981818,
+            7.781818
+          ]
+        }
+      }
+    },
+    {
+      "name": "cream_centerpiece_fruit_0_tip",
+      "from": [
+        15.774999999999999,
+        12.125,
+        7.05
+      ],
+      "to": [
+        16.275,
+        12.375,
+        7.55
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            9.381818,
+            0,
+            10.836364,
+            0.888889
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            5.163636,
+            0,
+            6.618182,
+            0.888889
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            5.963636,
+            0,
+            7.418182,
+            0.888889
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            8.581818,
+            0,
+            10.036364,
+            0.888889
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            5.163636,
+            5.963636,
+            6.618182,
+            7.418182
+          ]
+        }
+      }
+    },
+    {
+      "name": "cream_centerpiece_fruit_1_base",
+      "from": [
+        16.45,
+        11.5,
+        7.575
+      ],
+      "to": [
+        17.2,
+        12.125,
+        8.325
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            6.690909,
+            0.888889,
+            8.872727,
+            3.111111
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            7.127273,
+            0.888889,
+            9.309091,
+            3.111111
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            7.490909,
+            0.888889,
+            9.672727,
+            3.111111
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            6.327273,
+            0.888889,
+            8.509091,
+            3.111111
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            7.127273,
+            7.490909,
+            9.309091,
+            9.672727
+          ]
+        }
+      }
+    },
+    {
+      "name": "cream_centerpiece_fruit_1_tip",
+      "from": [
+        16.575,
+        12.125,
+        7.7
+      ],
+      "to": [
+        17.075,
+        12.375,
+        8.2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            7.054545,
+            0,
+            8.509091,
+            0.888889
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            7.490909,
+            0,
+            8.945455,
+            0.888889
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            7.854545,
+            0,
+            9.309091,
+            0.888889
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            6.690909,
+            0,
+            8.145455,
+            0.888889
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            7.490909,
+            7.854545,
+            8.945455,
+            9.309091
+          ]
+        }
+      }
+    },
+    {
+      "name": "cream_centerpiece_fruit_2_base",
+      "from": [
+        17.25,
+        11.5,
+        6.925
+      ],
+      "to": [
+        18.0,
+        12.125,
+        7.675
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            4.363636,
+            0.888889,
+            6.545455,
+            3.111111
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            9.454545,
+            0.888889,
+            11.636364,
+            3.111111
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            5.6,
+            0.888889,
+            7.781818,
+            3.111111
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            8.218182,
+            0.888889,
+            10.4,
+            3.111111
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            9.454545,
+            5.6,
+            11.636364,
+            7.781818
+          ]
+        }
+      }
+    },
+    {
+      "name": "cream_centerpiece_fruit_2_tip",
+      "from": [
+        17.375,
+        12.125,
+        7.05
+      ],
+      "to": [
+        17.875,
+        12.375,
+        7.55
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            4.727273,
+            0,
+            6.181818,
+            0.888889
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            9.818182,
+            0,
+            11.272727,
+            0.888889
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            5.963636,
+            0,
+            7.418182,
+            0.888889
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            8.581818,
+            0,
+            10.036364,
+            0.888889
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            9.818182,
+            5.963636,
+            11.272727,
+            7.418182
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_fruit_cake_layered_body_core_0",
+      "from": [
+        -2.12,
+        15.875,
+        5
+      ],
+      "to": [
+        0.11999999999999922,
+        17.875,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            6.153846,
+            12.48,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            6.153846,
+            12.48,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            6.153846,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            6.153846,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_fruit_cake_layered_body_core_2",
+      "from": [
+        -3,
+        15.8752,
+        5.88
+      ],
+      "to": [
+        1,
+        17.8748,
+        8.12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            6.154831,
+            16,
+            15.999015
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            6.154831,
+            16,
+            15.999015
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            6.154831,
+            12.48,
+            15.999015
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            3.52,
+            6.154831,
+            12.48,
+            15.999015
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_fruit_cake_layered_body_soft_corner_00",
+      "from": [
+        -2.742254,
+        15.875399999999999,
+        5.257746
+      ],
+      "to": [
+        -1.4977460000000002,
+        17.8746,
+        6.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -2.12,
+          16.875,
+          5.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "top_fruit_cake_layered_body_soft_corner_01",
+      "from": [
+        -2.742254,
+        15.875399999999999,
+        7.497746
+      ],
+      "to": [
+        -1.4977460000000002,
+        17.8746,
+        8.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -2.12,
+          16.875,
+          8.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "top_fruit_cake_layered_body_soft_corner_10",
+      "from": [
+        -0.5022539999999998,
+        15.875399999999999,
+        5.257746
+      ],
+      "to": [
+        0.7422540000000009,
+        17.8746,
+        6.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          0.11999999999999922,
+          16.875,
+          5.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "top_fruit_cake_layered_body_soft_corner_11",
+      "from": [
+        -0.5022539999999998,
+        15.875399999999999,
+        7.497746
+      ],
+      "to": [
+        0.7422540000000009,
+        17.8746,
+        8.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "south": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "west": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            6.155815,
+            14.969016,
+            15.998031
+          ]
+        },
+        "east": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            1.030984,
+            6.155815,
+            6.009016,
+            15.998031
+          ]
+        },
+        "up": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#vanilla_layers",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          0.11999999999999922,
+          16.875,
+          8.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "top_fruit_cake_icing_core_0",
+      "from": [
+        -2.12,
+        17.875,
+        5
+      ],
+      "to": [
+        0.11999999999999922,
+        18.25,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.307692,
+            12.48,
+            6.153846
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.307692,
+            12.48,
+            6.153846
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.307692,
+            16,
+            6.153846
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.307692,
+            16,
+            6.153846
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            0,
+            12.48,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_fruit_cake_icing_core_2",
+      "from": [
+        -3,
+        17.8752,
+        5.88
+      ],
+      "to": [
+        1,
+        18.2498,
+        8.12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.308677,
+            16,
+            6.152862
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            4.308677,
+            16,
+            6.152862
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.308677,
+            12.48,
+            6.152862
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            3.52,
+            4.308677,
+            12.48,
+            6.152862
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            3.52,
+            16,
+            12.48
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_fruit_cake_icing_soft_corner_00",
+      "from": [
+        -2.742254,
+        17.8754,
+        5.257746
+      ],
+      "to": [
+        -1.4977460000000002,
+        18.2496,
+        6.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -2.12,
+          18.0625,
+          5.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "top_fruit_cake_icing_soft_corner_01",
+      "from": [
+        -2.742254,
+        17.8754,
+        7.497746
+      ],
+      "to": [
+        -1.4977460000000002,
+        18.2496,
+        8.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            9.990984,
+            6.009016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            1.030984,
+            6.009016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          -2.12,
+          18.0625,
+          8.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "top_fruit_cake_icing_soft_corner_10",
+      "from": [
+        -0.5022539999999998,
+        17.8754,
+        5.257746
+      ],
+      "to": [
+        0.7422540000000009,
+        18.2496,
+        6.502254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          0.11999999999999922,
+          18.0625,
+          5.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "top_fruit_cake_icing_soft_corner_11",
+      "from": [
+        -0.5022539999999998,
+        17.8754,
+        7.497746
+      ],
+      "to": [
+        0.7422540000000009,
+        18.2496,
+        8.742254
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            4.309662,
+            14.969016,
+            6.151877
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            1.030984,
+            4.309662,
+            6.009016,
+            6.151877
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            9.990984,
+            14.969016,
+            14.969016
+          ]
+        },
+        "down": {
+          "texture": "#frosting",
+          "uv": [
+            9.990984,
+            1.030984,
+            14.969016,
+            6.009016
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          0.11999999999999922,
+          18.0625,
+          8.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "top_fruit_cake_fruit_0_base",
+      "from": [
+        -1.7999999999999998,
+        18.25,
+        6.4
+      ],
+      "to": [
+        -1.0499999999999998,
+        18.875,
+        7.15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            8.2,
+            1.230769,
+            11.2,
+            4.307692
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            1.230769,
+            7.8,
+            4.307692
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            5.6,
+            1.230769,
+            8.6,
+            4.307692
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            7.4,
+            1.230769,
+            10.4,
+            4.307692
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            4.8,
+            5.6,
+            7.8,
+            8.6
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_fruit_cake_fruit_0_tip",
+      "from": [
+        -1.6749999999999998,
+        18.875,
+        6.525
+      ],
+      "to": [
+        -1.1749999999999998,
+        19.125,
+        7.025
+      ],
+      "faces": {
+        "north": {
+          "texture": "#strawberry",
+          "uv": [
+            8.7,
+            0,
+            10.7,
+            1.230769
+          ]
+        },
+        "south": {
+          "texture": "#strawberry",
+          "uv": [
+            5.3,
+            0,
+            7.3,
+            1.230769
+          ]
+        },
+        "west": {
+          "texture": "#strawberry",
+          "uv": [
+            6.1,
+            0,
+            8.1,
+            1.230769
+          ]
+        },
+        "east": {
+          "texture": "#strawberry",
+          "uv": [
+            7.9,
+            0,
+            9.9,
+            1.230769
+          ]
+        },
+        "up": {
+          "texture": "#strawberry",
+          "uv": [
+            5.3,
+            6.1,
+            7.3,
+            8.1
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_cheesecake_slice_0",
+      "from": [
+        16.4625,
+        15.875,
+        6.0
+      ],
+      "to": [
+        18.0375,
+        18.375,
+        7.666667
+      ],
+      "faces": {
+        "north": {
+          "texture": "#cheese",
+          "uv": [
+            5.2,
+            2.086957,
+            10.8,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#cheese",
+          "uv": [
+            0,
+            2.086957,
+            5.333333,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#cheese",
+          "uv": [
+            10.666667,
+            2.086957,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#cheese",
+          "uv": [
+            5.2,
+            10.666667,
+            10.8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_cheesecake_icing_0",
+      "from": [
+        16.4625,
+        18.375,
+        6.0
+      ],
+      "to": [
+        18.0375,
+        18.75,
+        7.666667
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            5.2,
+            0,
+            10.8,
+            2.086957
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            0,
+            5.333333,
+            2.086957
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            10.666667,
+            0,
+            16,
+            2.086957
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            5.2,
+            0,
+            10.8,
+            5.333333
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_cheesecake_slice_1",
+      "from": [
+        15.787500000000001,
+        15.875,
+        7.666667
+      ],
+      "to": [
+        18.7125,
+        18.375,
+        9.333333
+      ],
+      "faces": {
+        "north": {
+          "texture": "#cheese",
+          "uv": [
+            2.8,
+            2.086957,
+            13.2,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#cheese",
+          "uv": [
+            5.333333,
+            2.086957,
+            10.666667,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#cheese",
+          "uv": [
+            5.333333,
+            2.086957,
+            10.666667,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#cheese",
+          "uv": [
+            2.8,
+            5.333333,
+            13.2,
+            10.666667
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_cheesecake_icing_1",
+      "from": [
+        15.787500000000001,
+        18.375,
+        7.666667
+      ],
+      "to": [
+        18.7125,
+        18.75,
+        9.333333
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            2.8,
+            0,
+            13.2,
+            2.086957
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            2.086957
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            2.086957
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            2.8,
+            5.333333,
+            13.2,
+            10.666667
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_cheesecake_slice_2",
+      "from": [
+        15.0,
+        15.875,
+        9.333333
+      ],
+      "to": [
+        19.5,
+        18.375,
+        11.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#cheese",
+          "uv": [
+            0,
+            2.086957,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#cheese",
+          "uv": [
+            0,
+            2.086957,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#cheese",
+          "uv": [
+            10.666667,
+            2.086957,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#cheese",
+          "uv": [
+            0,
+            2.086957,
+            5.333333,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#cheese",
+          "uv": [
+            0,
+            0,
+            16,
+            5.333333
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_cheesecake_icing_2",
+      "from": [
+        15.0,
+        18.375,
+        9.333333
+      ],
+      "to": [
+        19.5,
+        18.75,
+        11.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            0,
+            16,
+            2.086957
+          ]
+        },
+        "south": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            0,
+            16,
+            2.086957
+          ]
+        },
+        "west": {
+          "texture": "#frosting",
+          "uv": [
+            10.666667,
+            0,
+            16,
+            2.086957
+          ]
+        },
+        "east": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            0,
+            5.333333,
+            2.086957
+          ]
+        },
+        "up": {
+          "texture": "#frosting",
+          "uv": [
+            0,
+            10.666667,
+            16,
+            16
+          ]
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        135,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    }
+  }
+}
