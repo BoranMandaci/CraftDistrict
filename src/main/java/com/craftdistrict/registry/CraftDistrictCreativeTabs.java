@@ -29,6 +29,16 @@ public final class CraftDistrictCreativeTabs {
                     output.accept(CraftDistrictBlocks.Bakery.FLOUR_SACKS_SMALL.get());
                     output.accept(CraftDistrictBlocks.Bakery.FLOUR_SACKS_STACKED.get());
                     output.accept(CraftDistrictBlocks.Bakery.FLOUR_SACKS_PILE.get());
+                    output.accept(CraftDistrictBlocks.Bakery.CROISSANT_TRAY.get());
+                    output.accept(CraftDistrictBlocks.Bakery.COOKIE_TRAY.get());
+                    output.accept(CraftDistrictBlocks.Bakery.BREAD_ROLLS_TRAY.get());
+                    output.accept(CraftDistrictBlocks.Bakery.EMPTY_BAKING_TRAY.get());
+                    output.accept(CraftDistrictBlocks.Bakery.INDUSTRIAL_DOUGH_MIXER.get());
+                    output.accept(CraftDistrictBlocks.Bakery.HANGING_SHOP_SIGN.get());
+                    output.accept(CraftDistrictBlocks.Bakery.WALL_SHOP_SIGN.get());
+                    output.accept(CraftDistrictBlocks.Bakery.WALL_MENU_BOARD.get());
+                    output.accept(CraftDistrictBlocks.Bakery.DAILY_SPECIAL_BOARD.get());
+                    output.accept(CraftDistrictBlocks.Bakery.SIDEWALK_MENU_BOARD.get());
                 })));
         TABS.register();
     }

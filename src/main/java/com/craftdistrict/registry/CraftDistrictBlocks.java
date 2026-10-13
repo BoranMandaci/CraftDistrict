@@ -7,6 +7,9 @@ import com.craftdistrict.block.WideTallDecorationBlock;
 import com.craftdistrict.block.CashRegisterBlock;
 import com.craftdistrict.block.DoughPreparationTableBlock;
 import com.craftdistrict.block.FlourSacksBlock;
+import com.craftdistrict.block.PastryTrayBlock;
+import com.craftdistrict.block.IndustrialDoughMixerBlock;
+import com.craftdistrict.block.BakerySignageBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -59,6 +62,35 @@ public final class CraftDistrictBlocks {
                 () -> new FlourSacksBlock(FlourSacksBlock.Arrangement.STACKED, flourSackProperties()));
         public static final RegistrySupplier<FlourSacksBlock> FLOUR_SACKS_PILE = register("flour_sacks_pile",
                 () -> new FlourSacksBlock(FlourSacksBlock.Arrangement.PILE, flourSackProperties()));
+        public static final RegistrySupplier<PastryTrayBlock> CROISSANT_TRAY = register("croissant_tray",
+                () -> new PastryTrayBlock(PastryTrayBlock.Variant.CROISSANT, pastryTrayProperties()));
+        public static final RegistrySupplier<PastryTrayBlock> COOKIE_TRAY = register("cookie_tray",
+                () -> new PastryTrayBlock(PastryTrayBlock.Variant.COOKIE, pastryTrayProperties()));
+        public static final RegistrySupplier<PastryTrayBlock> BREAD_ROLLS_TRAY = register("bread_rolls_tray",
+                () -> new PastryTrayBlock(PastryTrayBlock.Variant.BREAD_ROLLS, pastryTrayProperties()));
+        public static final RegistrySupplier<PastryTrayBlock> EMPTY_BAKING_TRAY = register("empty_baking_tray",
+                () -> new PastryTrayBlock(PastryTrayBlock.Variant.EMPTY, pastryTrayProperties()));
+        public static final RegistrySupplier<IndustrialDoughMixerBlock> INDUSTRIAL_DOUGH_MIXER = register("industrial_dough_mixer",
+                () -> new IndustrialDoughMixerBlock(BlockBehaviour.Properties.of()
+                        .strength(3.0F).sound(SoundType.METAL).noOcclusion()));
+        public static final RegistrySupplier<BakerySignageBlock> HANGING_SHOP_SIGN = register("bakery_hanging_shop_sign",
+                () -> new BakerySignageBlock(BakerySignageBlock.Variant.HANGING_SHOP, signageProperties()));
+        public static final RegistrySupplier<BakerySignageBlock> WALL_SHOP_SIGN = register("bakery_wall_shop_sign",
+                () -> new BakerySignageBlock(BakerySignageBlock.Variant.WALL_SHOP, signageProperties()));
+        public static final RegistrySupplier<BakerySignageBlock> WALL_MENU_BOARD = register("bakery_menu_board_wall",
+                () -> new BakerySignageBlock(BakerySignageBlock.Variant.WALL_MENU, signageProperties()));
+        public static final RegistrySupplier<BakerySignageBlock> DAILY_SPECIAL_BOARD = register("bakery_daily_special_board",
+                () -> new BakerySignageBlock(BakerySignageBlock.Variant.DAILY_SPECIAL, signageProperties()));
+        public static final RegistrySupplier<BakerySignageBlock> SIDEWALK_MENU_BOARD = register("bakery_sidewalk_menu_board",
+                () -> new BakerySignageBlock(BakerySignageBlock.Variant.SIDEWALK_MENU, signageProperties()));
+
+        private static BlockBehaviour.Properties signageProperties() {
+            return BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.WOOD).noOcclusion();
+        }
+
+        private static BlockBehaviour.Properties pastryTrayProperties() {
+            return BlockBehaviour.Properties.of().strength(0.6F).sound(SoundType.METAL).noOcclusion();
+        }
 
         private static BlockBehaviour.Properties flourSackProperties() {
             return BlockBehaviour.Properties.of().strength(0.8F).sound(SoundType.WOOL).noOcclusion();
