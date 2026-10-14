@@ -19,12 +19,21 @@ import com.craftdistrict.block.PoliceWaitingBenchBlock;
 import com.craftdistrict.block.PoliceWorkroomBlock;
 import com.craftdistrict.block.PoliceDispatchBlock;
 import com.craftdistrict.block.OfficeChairBlock;
+import com.craftdistrict.block.PoliceInvestigationBoardBlock;
+import com.craftdistrict.block.PoliceInterrogationBlock;
+import com.craftdistrict.block.PoliceFingerprintBlock;
+import com.craftdistrict.block.PoliceInterrogationChairBlock;
+import com.craftdistrict.block.PoliceSecurityPropBlock;
+import com.craftdistrict.block.PoliceSecurityCameraBlock;
+import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
@@ -46,7 +55,9 @@ public final class CraftDistrictBlocks {
 
     private static <T extends Block> RegistrySupplier<T> register(String id, Supplier<T> factory) {
         RegistrySupplier<T> block = BLOCKS.register(id, factory);
-        ITEMS.register(id, () -> new BlockItem(block.get(), new Item.Properties()));
+        ITEMS.register(id, () -> block.get() instanceof DoorBlock
+                ? new DoubleHighBlockItem(block.get(), new Item.Properties())
+                : new BlockItem(block.get(), new Item.Properties()));
         return block;
     }
 
@@ -156,6 +167,23 @@ public final class CraftDistrictBlocks {
                 () -> new PoliceWorkroomBlock(PoliceWorkroomBlock.Variant.EVIDENCE, entranceProperties()));
         public static final RegistrySupplier<OfficeChairBlock> OFFICE_CHAIR = register("office_chair",
                 () -> new OfficeChairBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceInvestigationBoardBlock> INVESTIGATION_BOARD = register("police_investigation_board",
+                () -> new PoliceInvestigationBoardBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceInterrogationBlock> INTERROGATION_TABLE = register("police_interrogation_table",
+                () -> new PoliceInterrogationBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceFingerprintBlock> FINGERPRINT_STATION = register("police_fingerprint_station",
+                () -> new PoliceFingerprintBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceInterrogationChairBlock> INTERROGATION_CHAIR = register("police_interrogation_chair",
+                () -> new PoliceInterrogationChairBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceSecurityPropBlock> HOLDING_CELL_BARS = register("police_holding_cell_bars",
+                () -> new PoliceSecurityPropBlock(PoliceSecurityPropBlock.Variant.BARS, entranceProperties()));
+        public static final RegistrySupplier<PoliceHoldingCellDoorBlock> HOLDING_CELL_DOOR = register("police_holding_cell_door",
+                () -> new PoliceHoldingCellDoorBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceSecurityCameraBlock> SECURITY_CAMERA = register("police_security_camera",
+                () -> new PoliceSecurityCameraBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceSecurityPropBlock> LOCKERS = register("police_lockers",
+                () -> new PoliceSecurityPropBlock(PoliceSecurityPropBlock.Variant.LOCKERS,
+                        BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL)));
 
         private static BlockBehaviour.Properties entranceProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();

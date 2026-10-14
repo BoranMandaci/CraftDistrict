@@ -53,6 +53,14 @@ public final class CraftDistrictCreativeTabs {
                     output.accept(CraftDistrictBlocks.Police.DISPATCH_CONSOLE.get());
                     output.accept(CraftDistrictBlocks.Police.EVIDENCE_STORAGE_SHELF.get());
                     output.accept(CraftDistrictBlocks.Police.OFFICE_CHAIR.get());
+                    output.accept(CraftDistrictBlocks.Police.INVESTIGATION_BOARD.get());
+                    output.accept(CraftDistrictBlocks.Police.INTERROGATION_TABLE.get());
+                    output.accept(CraftDistrictBlocks.Police.FINGERPRINT_STATION.get());
+                    output.accept(CraftDistrictBlocks.Police.INTERROGATION_CHAIR.get());
+                    output.accept(CraftDistrictBlocks.Police.HOLDING_CELL_BARS.get());
+                    output.accept(CraftDistrictBlocks.Police.HOLDING_CELL_DOOR.get());
+                    output.accept(CraftDistrictBlocks.Police.SECURITY_CAMERA.get());
+                    output.accept(CraftDistrictBlocks.Police.LOCKERS.get());
                 })));
         TABS.register();
     }
