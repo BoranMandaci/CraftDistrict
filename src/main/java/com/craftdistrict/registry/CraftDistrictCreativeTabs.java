@@ -61,6 +61,15 @@ public final class CraftDistrictCreativeTabs {
                     output.accept(CraftDistrictBlocks.Police.HOLDING_CELL_DOOR.get());
                     output.accept(CraftDistrictBlocks.Police.SECURITY_CAMERA.get());
                     output.accept(CraftDistrictBlocks.Police.LOCKERS.get());
+                    output.accept(CraftDistrictBlocks.Police.HOLDING_CELL_BED.get());
+                    output.accept(CraftDistrictBlocks.Police.HOLDING_CELL_TOILET_SINK.get());
+                    output.accept(CraftDistrictBlocks.Police.ONE_WAY_GLASS.get());
+                    output.accept(CraftDistrictBlocks.Police.MUGSHOT_HEIGHT_CHART.get());
+                    output.accept(CraftDistrictBlocks.Police.BOOKING_CAMERA.get());
+                    output.accept(CraftDistrictBlocks.Police.RADIO_CHARGING_STATION.get());
+                    output.accept(CraftDistrictBlocks.Police.EQUIPMENT_RACK.get());
+                    output.accept(CraftDistrictBlocks.Police.PISTOL_RACK.get());
+                    output.accept(CraftDistrictBlocks.Police.RIFLE_RACK.get());
                 })));
         TABS.register();
     }
