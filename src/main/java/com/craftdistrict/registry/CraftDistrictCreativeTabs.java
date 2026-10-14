@@ -50,6 +50,9 @@ public final class CraftDistrictCreativeTabs {
                     output.accept(CraftDistrictBlocks.Police.RECEPTION_DESK.get());
                     output.accept(CraftDistrictBlocks.Police.DEPARTMENT_SIGN.get());
                     output.accept(CraftDistrictBlocks.Police.WAITING_BENCH.get());
+                    output.accept(CraftDistrictBlocks.Police.DISPATCH_CONSOLE.get());
+                    output.accept(CraftDistrictBlocks.Police.EVIDENCE_STORAGE_SHELF.get());
+                    output.accept(CraftDistrictBlocks.Police.OFFICE_CHAIR.get());
                 })));
         TABS.register();
     }

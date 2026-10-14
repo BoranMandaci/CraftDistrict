@@ -1,6 +1,6 @@
-"""Police collection Stage 1: three editable two-cell static decorations.
+"""Police collection: two-cell desk/sign and three-cell waiting bench.
 
-North (-Z) is the public/front face; width is authored across X=0..32.
+North (-Z) is the public/front face; widths are authored across X=0..32/48.
 Only police/ assets and PoliceEntranceShapes.java are written. Existing JSON
 clipping/face-validation and the preview renderer are reused without regeneration
 of Bakery content. Pillow is used for deterministic pixel-art textures.
@@ -93,30 +93,30 @@ def reception_desk():
     add("recessed_dark_plinth",[1,0,2.5],[31,1,13.5],"dark")
     add("public_front_panel",[.5,1,2],[31.5,15,3],"navy")
     add("front_lower_metal_strip",[.5,1,1.875],[31.5,1.5,2],"metal")
-    add("left_end_panel",[.5,1,3],[1.5,11,14],"navy")
-    add("right_end_panel",[30.5,1,3],[31.5,11,14],"navy")
-    add("left_high_counter_return",[.5,11,3],[1.5,15,5.5],"navy")
-    add("right_high_counter_return",[30.5,11,3],[31.5,15,5.5],"navy")
-    add("left_pedestal",[1.5,1,3],[7.5,10.5,13],"navy")
-    add("right_pedestal",[25,1,3],[30.5,10.5,13],"navy")
-    add("staff_knee_space_crossbar",[7.5,2.5,3],[25,3.25,4],"metal")
-    add("light_staff_work_surface",[0,10.5,5.5],[32,11.5,15],"light")
+    add("left_end_panel",[.5,1,3],[1.5,13.5,14],"navy")
+    add("right_end_panel",[30.5,1,3],[31.5,13.5,14],"navy")
+    add("left_high_counter_return",[.5,13.5,3],[1.5,15,5.5],"navy")
+    add("right_high_counter_return",[30.5,13.5,3],[31.5,15,5.5],"navy")
+    add("right_storage_pedestal",[17.5,1,3],[30.5,13.5,13],"navy")
+    add("offset_knee_space_crossbar",[1.5,2.5,3],[17.5,3.25,4],"metal")
+    add("light_staff_work_surface",[0,13.5,5.5],[32,14.5,15],"light")
     add("light_public_counter_ledge",[0,15,1],[32,16,5.5],"light")
     add("front_counter_edge",[0,14.75,.875],[32,15.5,1],"metal")
     shield=add("generic_front_shield",[13,6.25,1.9375],[19,10.25,2],"navy")
     shield["faces"]["north"]["texture"]="#shield"
-    for side,x0,x1 in (("left",1.75,7.25),("right",25.25,30.25)):
-        for drawer,y0,y1 in (("upper",6.25,10),("lower",1.75,6)):
+    for side,x0,x1 in (("inner",18,23.75),("outer",24,30.25)):
+        for drawer,y0,y1 in (("upper",8,13),("lower",1.75,7.75)):
             add(f"{side}_{drawer}_drawer",[x0,y0,13],[x1,y1,13.125],"folder")
             add(f"{side}_{drawer}_handle",[x0+1,y1-.875,13.125],[x1-1,y1-.5,13.375],"metal")
-    add("monitor_foot",[6.75,11.5,7.75],[11.25,11.875,10.25],"dark")
-    add("monitor_foot_metal_inset",[7.25,11.875,8.125],[10.75,12,9.875],"metal")
-    add("monitor_stand",[8.25,12,8.4375],[9.75,13,9.25],"metal")
-    add("monitor_housing",[4.75,12.5,8],[13.25,16,9.125],"dark")
-    add("monitor_lower_bezel",[4.75,12.5,9.125],[13.25,13,9.25],"metal")
-    screen=add("monitor_staff_facing_screen",[5.125,13,9.125],[12.875,15.6875,9.1875],"dark")
+    props_start=len(e)
+    add("monitor_foot",[6.5,11.5,7.75],[11.5,11.875,10.25],"dark")
+    add("monitor_foot_metal_inset",[7,11.875,8.125],[11,12,9.875],"metal")
+    add("monitor_stand",[8.5,12,8.4375],[9.5,14.75,9.25],"metal")
+    add("monitor_housing",[3.5,14.25,8.25],[14.5,20.75,9.125],"dark")
+    add("monitor_lower_bezel",[3.5,14.25,9.125],[14.5,14.75,9.25],"metal")
+    screen=add("monitor_staff_facing_screen",[3.875,14.75,9.125],[14.125,20.375,9.1875],"dark")
     screen["faces"]["south"]["texture"]="#monitor"
-    keyboard=add("keyboard",[5.5,11.5,10.5],[12.5,11.875,13.375],"dark")
+    keyboard=add("keyboard",[11,11.5,10.5],[20,11.875,14],"dark")
     keyboard["faces"]["up"]["texture"]="#keyboard"
     add("telephone_base",[20,11.5,8.25],[25.75,12,13.75],"dark")
     add("telephone_control_body",[21.75,12,8.5],[25.5,12.25,13.5],"dark")
@@ -132,11 +132,17 @@ def reception_desk():
     add("document_folder",[14,11.5,10],[18.5,11.75,13.5],"folder")
     paper=add("paperwork",[14.5,11.75,10.25],[18,11.875,13.25],"light")
     paper["faces"]["up"]["texture"]="#paper"
-    add("secondary_file",[2.25,11.5,10],[4.75,11.875,13.5],"folder")
     add("pen_cup",[28,11.5,10],[29.5,13.125,11.5],"metal")
     add("pen_cup_dark_opening",[28.25,13.125,10.25],[29.25,13.1875,11.25],"dark")
     add("pen_one",[28.375,13.1875,10.4375],[28.625,14.5,10.6875],"dark")
     add("pen_two",[28.875,13.1875,10.8125],[29.125,14.125,11.0625],"navy")
+    for p in e[props_start:]:
+        dx=.5 if p['name'].startswith('monitor_') else -6 if p['name']=='keyboard' else 4 if p['name'] in ('document_folder','paperwork') or p['name'].startswith('telephone_') else -8 if p['name'].startswith('pen_') else 0
+        dz=-3 if p['name'].startswith('pen_') else 0
+        for key in ('from','to'):
+            p[key][0]+=dx
+            p[key][1]+=3
+            p[key][2]+=dz
     return e
 
 
@@ -158,19 +164,21 @@ def waiting_bench():
     e=[]
     def add(name,a,b,mat):
         p=box(name,a,b,mat); e.append(p); return p
-    add("connected_under_seat_beam",[1,4.5,7],[31,5.5,9],"metal")
-    add("back_support_crossbar",[1,7.5,11.5],[31,8.125,12.25],"metal")
-    for side,x in (("left",3),("right",27)):
+    add("connected_under_seat_beam",[1,4.5,7],[47,5.5,10.5],"metal")
+    add("back_support_crossbar",[1,7.5,11.5],[47,8.125,12.25],"metal")
+    for side,x in (("left",7),("right",39)):
         add(f"{side}_floor_foot",[x,0,3],[x+2,1,13],"dark")
-        add(f"{side}_metal_leg",[x+.25,1,7.5],[x+1.75,5.5,9.25],"metal")
+        add(f"{side}_metal_leg",[x+.25,1,7.25],[x+1.75,5.5,8.75],"metal")
         add(f"{side}_back_support",[x+.5,5.5,11.5],[x+1.5,8.125,12.25],"metal")
-    for index,x in enumerate((1.5,11.5,21.5)):
-        add(f"seat_{index}_shell",[x,5.5,4],[x+9,6.25,12],"metal")
-        add(f"seat_{index}_padded_surface",[x+.25,6.25,4.25],[x+8.75,7,11.75],"seat")
-        back=add(f"seat_{index}_backrest",[x,8,11.75],[x+9,14.75,12.75],"seat")
-        back["rotation"]={"origin":[x+4.5,7.75,12],"axis":"x","angle":22.5,"rescale":False}
-    for index,x in enumerate((.5,10.5,20.5,30.5)):
-        add(f"armrest_{index}_support",[x,6.25,9.75],[x+1,8.75,10.5],"metal")
+    add("center_floor_foot",[23,0,3],[25,1,13],"dark")
+    add("center_metal_leg",[23.25,1,7.25],[24.75,5.5,8.75],"metal")
+    for index,x in enumerate((1.5,17.5,33.5)):
+        add(f"seat_{index}_shell",[x,5.5,4],[x+13,6.25,12],"metal")
+        add(f"seat_{index}_padded_surface",[x+.25,6.25,4.25],[x+12.75,7,11.75],"seat")
+        back=add(f"seat_{index}_backrest",[x,8,11.75],[x+13,14.75,12.75],"seat")
+        back["rotation"]={"origin":[x+6.5,7.75,12],"axis":"x","angle":22.5,"rescale":False}
+    for index,x in enumerate((.5,15.5,31.5,46.5)):
+        add(f"armrest_{index}_support",[x,5.5,9.75],[x+1,8.75,10.5],"metal")
         add(f"armrest_{index}_rail",[x,8.75,4.5],[x+1,9.375,11],"metal")
         add(f"armrest_{index}_dark_pad",[x,9.375,4.5],[x+1,9.625,10.5],"dark")
     return e
@@ -203,8 +211,9 @@ def arrangement(model_id):
     collision=[]
     for e in elements:
         lo,hi=bounds(e)
-        assert -1e-6 <= lo[0] < hi[0] <= 32+1e-6
-        assert all(-1e-6 <= lo[i] < hi[i] <= 16+1e-6 for i in (1,2)),e["name"]
+        assert -1e-6 <= lo[0] < hi[0] <= (48 if model_id==IDS[2] else 32)+1e-6
+        assert -1e-6 <= lo[1] < hi[1] <= (24 if model_id==IDS[0] else 16)+1e-6,e["name"]
+        assert -1e-6 <= lo[2] < hi[2] <= 16+1e-6,e["name"]
         collision.append((lo,hi))
     omit_hidden_faces(elements)
     validate_model_elements(elements)
@@ -220,7 +229,7 @@ def write_shapes(all_shapes):
     rows=[]
     for model_id,collision in all_shapes.items():
         rows.extend([f"            // {model_id}","            {"])
-        for part in range(2):
+        for part in range(3 if model_id==IDS[2] else 2):
             pieces=[]
             for lo,hi in collision:
                 low,high=max(lo[0],part*16),min(hi[0],part*16+16)
@@ -268,19 +277,30 @@ def main():
     textures(); shapes={}
     for model_id in IDS:
         elements,collision=arrangement(model_id); states={}; counts=[]
-        for part,label in ((0,"primary"),(1,"extension")):
+        parts=((0,"primary"),(1,"extension"),(2,"end")) if model_id==IDS[2] else ((0,"primary"),(1,"extension"))
+        for part,label in parts:
             pieces=[p for e in elements if (p:=split_part(e,part)) is not None]
             validate_model_elements(pieces); counts.append(len(pieces))
             write_json(MODELS / f"{model_id}_{label}.json",{"parent":"minecraft:block/block","textures":used_textures(pieces),"elements":pieces})
             for face,angle in (("north",0),("east",90),("south",180),("west",270)):
-                states[f"facing={face},primary={str(part == 0).lower()}"]={"model":f"craftdistrict:block/police/{model_id}_{label}","y":angle}
+                key=f"facing={face},primary={str(part == 0).lower()}"
+                if model_id==IDS[2]: key=f"end={str(part == 2).lower()},"+key
+                states[key]={"model":f"craftdistrict:block/police/{model_id}_{label}","y":angle}
+                if model_id==IDS[2] and part==0:
+                    states[f"end=true,facing={face},primary=true"]=copy.deepcopy(states[key])
         write_json(ASSETS / f"blockstates/{model_id}.json",{"variants":states})
         item=copy.deepcopy(elements)
         for e in item:
-            for key in ("from","to"): e[key][0]-=8
-            if "rotation" in e: e["rotation"]["origin"][0]-=8
+            center_offset=16 if model_id==IDS[2] else 8
+            for key in ("from","to"): e[key][0]-=center_offset
+            if "rotation" in e: e["rotation"]["origin"][0]-=center_offset
+        validate_model_elements(item)
+        assert all(-16 <= v <= 32 for e in item for key in ('from','to') for v in e[key])
+        scale=.32 if model_id==IDS[2] else .43
+        gui={"rotation":[20,135,0],"translation":[0,.75,0],"scale":[scale,scale,scale]} if model_id==IDS[2] else {
+            "rotation":[25,135,0],"scale":[scale,scale,scale]}
         write_json(ASSETS / f"models/item/{model_id}.json",{"parent":"minecraft:block/block","textures":used_textures(item),"elements":item,"display":{
-            "gui":{"rotation":[25,135,0],"scale":[.43,.43,.43]},
+            "gui":gui,
             "ground":{"translation":[0,3,0],"scale":[.25,.25,.25]},
             "fixed":{"rotation":[0,180,0],"scale":[.4,.4,.4]},
             "thirdperson_righthand":{"rotation":[75,45,0],"scale":[.3,.3,.3]},
@@ -291,9 +311,9 @@ def main():
             "type":"minecraft:block","pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":f"craftdistrict:{model_id}"}],
             "conditions":[{"condition":"minecraft:survives_explosion"}]}]})
         shapes[model_id]=collision
-        print(f"{model_id}: {len(elements)} source cuboids; {counts} per half; 8 blockstates.")
+        print(f"{model_id}: {len(elements)} cuboids; {len(parts)} parts; {len(states)} states.")
     write_shapes(shapes)
-    print("Exactly three Stage 1 IDs; six block models; 24 cached part/facing shapes.")
+    print("Three existing IDs; seven block models; 28 cached part/facing shapes.")
 
 
 def previews():

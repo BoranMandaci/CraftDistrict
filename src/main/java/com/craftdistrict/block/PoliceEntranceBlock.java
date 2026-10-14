@@ -18,8 +18,8 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Two-cell public entrance furniture and wall plaque; no interactive behavior. */
-public final class PoliceEntranceBlock extends MultiBlockDecorationBlock {
+/** Public entrance furniture and wall plaque; no interactive behavior. */
+public class PoliceEntranceBlock extends MultiBlockDecorationBlock {
     //? if >=1.21 {
     public static final MapCodec<PoliceEntranceBlock> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
             StringRepresentable.fromEnum(Variant::values).fieldOf("variant")
@@ -92,7 +92,7 @@ public final class PoliceEntranceBlock extends MultiBlockDecorationBlock {
             case WEST -> 3;
             default -> 0;
         };
-        return PoliceEntranceShapes.SHAPES[variant.ordinal()][state.getValue(PRIMARY) ? 0 : 1][turn];
+        return PoliceEntranceShapes.SHAPES[variant.ordinal()][partIndex(state)][turn];
     }
 
     @Override

@@ -1,0 +1,585 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "map": "craftdistrict:block/police/workroom_map",
+    "navy": "craftdistrict:block/police/entrance_navy",
+    "dark": "craftdistrict:block/police/entrance_dark",
+    "metal": "craftdistrict:block/police/entrance_metal",
+    "light": "craftdistrict:block/police/entrance_light",
+    "keyboard": "craftdistrict:block/police/entrance_keyboard",
+    "particle": "craftdistrict:block/police/entrance_metal"
+  },
+  "elements": [
+    {
+      "name": "low_equipment_plinth",
+      "from": [
+        0,
+        0,
+        2
+      ],
+      "to": [
+        16,
+        1,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            5.217391,
+            0,
+            10.782609,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            5.217391,
+            0,
+            10.782609,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            5.217391,
+            0,
+            10.782609,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#dark",
+          "uv": [
+            5.217391,
+            0,
+            10.782609,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_equipment_crossbeam",
+      "from": [
+        0,
+        3,
+        12.75
+      ],
+      "to": [
+        16,
+        4,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            4.0,
+            0,
+            12.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            4.0,
+            0,
+            12.0,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            4.0,
+            0,
+            12.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            4.0,
+            0,
+            12.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "metal_work_surface",
+      "from": [
+        0,
+        13.5,
+        1
+      ],
+      "to": [
+        16,
+        14.5,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#light",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#light",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#light",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#light",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_work_surface_edge",
+      "from": [
+        0,
+        13.5,
+        0.875
+      ],
+      "to": [
+        16,
+        14,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            5.333333,
+            0,
+            10.666667,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "navy_front_apron",
+      "from": [
+        0,
+        12.75,
+        1.5
+      ],
+      "to": [
+        16,
+        13.5,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#navy",
+          "uv": [
+            5.276596,
+            0,
+            10.723404,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#navy",
+          "uv": [
+            5.276596,
+            0,
+            10.723404,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#navy",
+          "uv": [
+            5.276596,
+            0,
+            10.723404,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_cable_trough",
+      "from": [
+        0,
+        14.5,
+        12.75
+      ],
+      "to": [
+        16,
+        15.25,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            5.217391,
+            0,
+            10.782609,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            5.217391,
+            0,
+            10.782609,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            5.217391,
+            0,
+            10.782609,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "main_map_foot",
+      "from": [
+        6.25,
+        14.5,
+        11.0
+      ],
+      "to": [
+        9.75,
+        14.875,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "main_map_stand",
+      "from": [
+        7.5,
+        14.875,
+        11.75
+      ],
+      "to": [
+        8.5,
+        16.75,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "main_map_housing",
+      "from": [
+        2,
+        16.25,
+        11.5
+      ],
+      "to": [
+        14,
+        23.25,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "main_map_screen",
+      "from": [
+        2.375,
+        16.625,
+        11.4375
+      ],
+      "to": [
+        13.625,
+        22.875,
+        11.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#map",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "operator_keyboard",
+      "from": [
+        3,
+        14.5,
+        2.5
+      ],
+      "to": [
+        13,
+        14.875,
+        6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#keyboard",
+          "uv": [
+            0.0,
+            0,
+            16.0,
+            16
+          ],
+          "rotation": 180
+        }
+      }
+    }
+  ]
+}

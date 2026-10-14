@@ -15,6 +15,10 @@ import com.craftdistrict.block.RefrigeratedDisplayBlock;
 import com.craftdistrict.block.BakeryWallToolBlock;
 import com.craftdistrict.block.BreadSlicerBlock;
 import com.craftdistrict.block.PoliceEntranceBlock;
+import com.craftdistrict.block.PoliceWaitingBenchBlock;
+import com.craftdistrict.block.PoliceWorkroomBlock;
+import com.craftdistrict.block.PoliceDispatchBlock;
+import com.craftdistrict.block.OfficeChairBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -144,8 +148,14 @@ public final class CraftDistrictBlocks {
                 () -> new PoliceEntranceBlock(PoliceEntranceBlock.Variant.RECEPTION_DESK, entranceProperties()));
         public static final RegistrySupplier<PoliceEntranceBlock> DEPARTMENT_SIGN = register("police_department_sign",
                 () -> new PoliceEntranceBlock(PoliceEntranceBlock.Variant.DEPARTMENT_SIGN, entranceProperties()));
-        public static final RegistrySupplier<PoliceEntranceBlock> WAITING_BENCH = register("police_waiting_area_bench",
-                () -> new PoliceEntranceBlock(PoliceEntranceBlock.Variant.WAITING_BENCH, entranceProperties()));
+        public static final RegistrySupplier<PoliceWaitingBenchBlock> WAITING_BENCH = register("police_waiting_area_bench",
+                () -> new PoliceWaitingBenchBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceDispatchBlock> DISPATCH_CONSOLE = register("police_dispatch_console",
+                () -> new PoliceDispatchBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceWorkroomBlock> EVIDENCE_STORAGE_SHELF = register("police_evidence_storage_shelf",
+                () -> new PoliceWorkroomBlock(PoliceWorkroomBlock.Variant.EVIDENCE, entranceProperties()));
+        public static final RegistrySupplier<OfficeChairBlock> OFFICE_CHAIR = register("office_chair",
+                () -> new OfficeChairBlock(entranceProperties()));
 
         private static BlockBehaviour.Properties entranceProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
