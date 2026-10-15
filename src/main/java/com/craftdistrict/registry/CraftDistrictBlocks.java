@@ -49,6 +49,7 @@ import com.craftdistrict.block.SupermarketCheckoutBlock;
 import com.craftdistrict.block.SupermarketShoppingPropBlock;
 import com.craftdistrict.block.SupermarketShoppingCartBlock;
 import com.craftdistrict.block.SupermarketSelfCheckoutBlock;
+import com.craftdistrict.block.SupermarketStorePropBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -279,6 +280,12 @@ public final class CraftDistrictBlocks {
                         BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.WOOD).noOcclusion()));
         public static final RegistrySupplier<SupermarketSelfCheckoutBlock> SELF_CHECKOUT = register("supermarket_self_checkout",
                 () -> new SupermarketSelfCheckoutBlock(shelfProperties()));
+        public static final RegistrySupplier<SupermarketStorePropBlock> STOCK_PALLET = register("supermarket_stock_pallet",
+                () -> new SupermarketStorePropBlock(SupermarketStorePropBlock.Prop.STOCK_PALLET, produceProperties()));
+        public static final RegistrySupplier<SupermarketStorePropBlock> SECURITY_GATE = register("supermarket_security_gate",
+                () -> new SupermarketStorePropBlock(SupermarketStorePropBlock.Prop.SECURITY_GATE, shelfProperties()));
+        public static final RegistrySupplier<SupermarketStorePropBlock> CHECKOUT_CANDY_RACK = register("supermarket_checkout_candy_rack",
+                () -> new SupermarketStorePropBlock(SupermarketStorePropBlock.Prop.CANDY_RACK, shelfProperties()));
 
         private static BlockBehaviour.Properties shelfProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();

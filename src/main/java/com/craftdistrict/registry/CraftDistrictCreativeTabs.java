@@ -104,6 +104,9 @@ public final class CraftDistrictCreativeTabs {
                     output.accept(CraftDistrictBlocks.Supermarket.FILLED_SHOPPING_CART.get());
                     output.accept(CraftDistrictBlocks.Supermarket.BASKET_STACK.get());
                     output.accept(CraftDistrictBlocks.Supermarket.SELF_CHECKOUT.get());
+                    output.accept(CraftDistrictBlocks.Supermarket.STOCK_PALLET.get());
+                    output.accept(CraftDistrictBlocks.Supermarket.SECURITY_GATE.get());
+                    output.accept(CraftDistrictBlocks.Supermarket.CHECKOUT_CANDY_RACK.get());
                 })));
         TABS.register();
     }
