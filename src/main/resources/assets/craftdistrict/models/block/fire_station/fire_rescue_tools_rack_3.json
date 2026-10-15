@@ -1,0 +1,813 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "atlas": "craftdistrict:block/fire_station/rescue_equipment",
+    "particle": "craftdistrict:block/fire_station/rescue_equipment"
+  },
+  "elements": [
+    {
+      "name": "rescue_pegboard",
+      "from": [
+        0,
+        0,
+        15
+      ],
+      "to": [
+        15.25,
+        15.25,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            14.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            12.0,
+            4.0,
+            14.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            4.0,
+            14.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            12.0,
+            4.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "side_frame_30.5",
+      "from": [
+        14.5,
+        0,
+        14.5
+      ],
+      "to": [
+        15.25,
+        15.25,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_frame_30.5",
+      "from": [
+        0,
+        14.5,
+        14.5
+      ],
+      "to": [
+        14.5,
+        15.25,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tool_hook_return_2_19",
+      "from": [
+        3.875,
+        3,
+        12.875
+      ],
+      "to": [
+        4.25,
+        3.5,
+        15.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tool_hook_front_2_19",
+      "from": [
+        3.875,
+        3,
+        12.5
+      ],
+      "to": [
+        5.5,
+        3.5,
+        12.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tool_hook_return_3_19",
+      "from": [
+        11.25,
+        3,
+        12.875
+      ],
+      "to": [
+        11.625,
+        3.5,
+        15.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tool_hook_front_3_19",
+      "from": [
+        11.25,
+        3,
+        12.5
+      ],
+      "to": [
+        12.875,
+        3.5,
+        12.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "hammer_handle",
+      "from": [
+        4,
+        0,
+        12.875
+      ],
+      "to": [
+        5,
+        8,
+        13.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            16.0,
+            2.285714
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            16.0,
+            2.285714
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            16.0,
+            2.285714
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            16.0,
+            2.285714
+          ]
+        }
+      }
+    },
+    {
+      "name": "rescue_hammer_head",
+      "from": [
+        1.25,
+        7.5,
+        12.25
+      ],
+      "to": [
+        8,
+        10.75,
+        14.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "hammer_end_16.75",
+      "from": [
+        0.75,
+        7.25,
+        12.125
+      ],
+      "to": [
+        1.25,
+        11,
+        14.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "hammer_end_24",
+      "from": [
+        8,
+        7.25,
+        12.125
+      ],
+      "to": [
+        8.5,
+        11,
+        14.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "crowbar_shaft",
+      "from": [
+        11.5,
+        0,
+        12.875
+      ],
+      "to": [
+        12.25,
+        8.5,
+        13.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            1.74359
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            1.74359
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            1.74359
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            1.74359
+          ]
+        }
+      }
+    },
+    {
+      "name": "crowbar_curved_neck",
+      "from": [
+        11,
+        8.5,
+        12.75
+      ],
+      "to": [
+        12.25,
+        10.25,
+        13.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "crowbar_hook_tip",
+      "from": [
+        9.75,
+        9.5,
+        12.75
+      ],
+      "to": [
+        11,
+        10.25,
+        13.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            4.0,
+            4.0
+          ]
+        }
+      }
+    }
+  ]
+}

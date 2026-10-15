@@ -1,0 +1,2269 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "metal": "craftdistrict:block/police/entrance_metal",
+    "light": "craftdistrict:block/police/entrance_light",
+    "dark": "craftdistrict:block/police/entrance_dark",
+    "red": "craftdistrict:block/fire_station/red",
+    "tan": "craftdistrict:block/fire_station/tan",
+    "safety": "craftdistrict:block/fire_station/safety",
+    "particle": "craftdistrict:block/police/entrance_metal"
+  },
+  "elements": [
+    {
+      "name": "shared_locker_back",
+      "from": [
+        0,
+        0,
+        14
+      ],
+      "to": [
+        15,
+        16,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_side_30.5",
+      "from": [
+        14.5,
+        0,
+        3.5
+      ],
+      "to": [
+        15.5,
+        16,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_painted_edge_30.5",
+      "from": [
+        14.5,
+        0,
+        3.375
+      ],
+      "to": [
+        15.5,
+        16,
+        3.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        },
+        "west": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "continuous_top",
+      "from": [
+        0,
+        15.25,
+        3.5
+      ],
+      "to": [
+        14.5,
+        16,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "shared_red_header",
+      "from": [
+        0,
+        14.5,
+        3.5
+      ],
+      "to": [
+        14.5,
+        15.25,
+        4
+      ],
+      "faces": {
+        "north": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#red",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#red",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "shared_helmet_shelf",
+      "from": [
+        0,
+        10.5,
+        5
+      ],
+      "to": [
+        14.5,
+        11,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_1",
+      "from": [
+        0,
+        8.5,
+        5
+      ],
+      "to": [
+        0.25,
+        9,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "hanger_hook_1",
+      "from": [
+        0.0,
+        7.5,
+        8.25
+      ],
+      "to": [
+        0.5,
+        8.75,
+        8.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "hanger_shoulders_1",
+      "from": [
+        0,
+        7,
+        6.0
+      ],
+      "to": [
+        1.0,
+        7.5,
+        11.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "jacket_body_1",
+      "from": [
+        0,
+        0,
+        6.5
+      ],
+      "to": [
+        2.5,
+        6.5,
+        10.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            12.235294
+          ]
+        },
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            8.888889,
+            12.235294
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            7.111111,
+            0.0,
+            16.0,
+            12.235294
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            7.111111,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "jacket_shoulders_1",
+      "from": [
+        0,
+        5.5,
+        5.75
+      ],
+      "to": [
+        2.25,
+        7.5,
+        11.25
+      ],
+      "faces": {
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            9.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            7.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            7.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#safety",
+          "uv": [
+            7.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "compact_sleeve_1_-3.25",
+      "from": [
+        0,
+        0.25,
+        5.25
+      ],
+      "to": [
+        2.0,
+        6.25,
+        6.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            9.142857,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            6.857143,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#safety",
+          "uv": [
+            6.857143,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "compact_sleeve_1_2",
+      "from": [
+        0,
+        0.25,
+        10.5
+      ],
+      "to": [
+        2.0,
+        6.25,
+        11.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            6.857143,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            6.857143,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#safety",
+          "uv": [
+            6.857143,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "visible_side_reflector_1_15.5",
+      "from": [
+        0,
+        0,
+        6.375
+      ],
+      "to": [
+        2.5,
+        0.125,
+        6.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            8.888889,
+            3.2
+          ]
+        }
+      }
+    },
+    {
+      "name": "visible_side_reflector_1_20.25",
+      "from": [
+        0,
+        4.25,
+        6.375
+      ],
+      "to": [
+        2.5,
+        4.875,
+        6.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            8.888889,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_2",
+      "from": [
+        6.75,
+        8.5,
+        5
+      ],
+      "to": [
+        7.25,
+        9,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "hanger_hook_2",
+      "from": [
+        7.0,
+        7.5,
+        8.25
+      ],
+      "to": [
+        7.5,
+        8.75,
+        8.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "hanger_shoulders_2",
+      "from": [
+        6.0,
+        7,
+        6.0
+      ],
+      "to": [
+        8.0,
+        7.5,
+        11.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "jacket_body_2",
+      "from": [
+        5.0,
+        0,
+        6.5
+      ],
+      "to": [
+        9.5,
+        6.5,
+        10.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            12.235294
+          ]
+        },
+        "west": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            12.235294
+          ]
+        },
+        "north": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            12.235294
+          ]
+        },
+        "south": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            12.235294
+          ]
+        },
+        "up": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "jacket_shoulders_2",
+      "from": [
+        5.25,
+        5.5,
+        5.75
+      ],
+      "to": [
+        9.25,
+        7.5,
+        11.25
+      ],
+      "faces": {
+        "east": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "compact_sleeve_2_-3.25",
+      "from": [
+        5.5,
+        0.25,
+        5.25
+      ],
+      "to": [
+        9.0,
+        6.25,
+        6.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "compact_sleeve_2_2",
+      "from": [
+        5.5,
+        0.25,
+        10.5
+      ],
+      "to": [
+        9.0,
+        6.25,
+        11.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#tan",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "visible_side_reflector_2_15.5",
+      "from": [
+        5.0,
+        0,
+        6.375
+      ],
+      "to": [
+        9.5,
+        0.125,
+        6.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            3.2
+          ]
+        }
+      }
+    },
+    {
+      "name": "visible_side_reflector_2_20.25",
+      "from": [
+        5.0,
+        4.25,
+        6.375
+      ],
+      "to": [
+        9.5,
+        4.875,
+        6.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "helmet_2_core_0",
+      "from": [
+        2.379999999999999,
+        11.5,
+        7
+      ],
+      "to": [
+        4.620000000000001,
+        14.75,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "helmet_2_core_2",
+      "from": [
+        1.5,
+        11.5002,
+        7.88
+      ],
+      "to": [
+        5.5,
+        14.7498,
+        11.12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "helmet_2_soft_corner_00",
+      "from": [
+        1.7577460325558363,
+        11.500399999999999,
+        7.257746032555838
+      ],
+      "to": [
+        3.0022539674441617,
+        14.749600000000001,
+        8.502253967444162
+      ],
+      "faces": {
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          2.379999999999999,
+          13.125,
+          7.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "helmet_2_soft_corner_01",
+      "from": [
+        1.7577460325558363,
+        11.500399999999999,
+        10.497746032555838
+      ],
+      "to": [
+        3.0022539674441617,
+        14.749600000000001,
+        11.74225396744416
+      ],
+      "faces": {
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          2.379999999999999,
+          13.125,
+          11.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "helmet_2_soft_corner_10",
+      "from": [
+        3.9977460325558383,
+        11.500399999999999,
+        7.257746032555838
+      ],
+      "to": [
+        5.242253967444164,
+        14.749600000000001,
+        8.502253967444162
+      ],
+      "faces": {
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          4.620000000000001,
+          13.125,
+          7.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "helmet_2_soft_corner_11",
+      "from": [
+        3.9977460325558383,
+        11.500399999999999,
+        10.497746032555838
+      ],
+      "to": [
+        5.242253967444164,
+        14.749600000000001,
+        11.74225396744416
+      ],
+      "faces": {
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#safety",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          4.620000000000001,
+          13.125,
+          11.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "helmet_brim_2",
+      "from": [
+        1.0,
+        11,
+        6.5
+      ],
+      "to": [
+        6.0,
+        11.5,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "helmet_badge_2",
+      "from": [
+        3.0,
+        12.25,
+        6.9375
+      ],
+      "to": [
+        4.0,
+        13.25,
+        7
+      ],
+      "faces": {
+        "north": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "helmet_3_core_0",
+      "from": [
+        9.629999999999999,
+        11.5,
+        7
+      ],
+      "to": [
+        11.870000000000001,
+        14.75,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "helmet_3_core_2",
+      "from": [
+        8.75,
+        11.5002,
+        7.88
+      ],
+      "to": [
+        12.75,
+        14.7498,
+        11.12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#red",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "helmet_3_soft_corner_00",
+      "from": [
+        9.007746032555836,
+        11.500399999999999,
+        7.257746032555838
+      ],
+      "to": [
+        10.252253967444162,
+        14.749600000000001,
+        8.502253967444162
+      ],
+      "faces": {
+        "north": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          9.629999999999999,
+          13.125,
+          7.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "helmet_3_soft_corner_01",
+      "from": [
+        9.007746032555836,
+        11.500399999999999,
+        10.497746032555838
+      ],
+      "to": [
+        10.252253967444162,
+        14.749600000000001,
+        11.74225396744416
+      ],
+      "faces": {
+        "north": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          9.629999999999999,
+          13.125,
+          11.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "helmet_3_soft_corner_10",
+      "from": [
+        11.247746032555838,
+        11.500399999999999,
+        7.257746032555838
+      ],
+      "to": [
+        12.492253967444164,
+        14.749600000000001,
+        8.502253967444162
+      ],
+      "faces": {
+        "north": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          11.870000000000001,
+          13.125,
+          7.88
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "helmet_3_soft_corner_11",
+      "from": [
+        11.247746032555838,
+        11.500399999999999,
+        10.497746032555838
+      ],
+      "to": [
+        12.492253967444164,
+        14.749600000000001,
+        11.74225396744416
+      ],
+      "faces": {
+        "north": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#red",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 45,
+        "origin": [
+          11.870000000000001,
+          13.125,
+          11.12
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "helmet_brim_3",
+      "from": [
+        8.25,
+        11,
+        6.5
+      ],
+      "to": [
+        13.25,
+        11.5,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#safety",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "helmet_badge_3",
+      "from": [
+        10.25,
+        12.25,
+        6.9375
+      ],
+      "to": [
+        11.25,
+        13.25,
+        7
+      ],
+      "faces": {
+        "north": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#light",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    }
+  ]
+}

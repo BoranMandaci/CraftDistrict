@@ -30,6 +30,21 @@ import com.craftdistrict.block.PoliceDetentionStructureBlock;
 import com.craftdistrict.block.PoliceDetentionPropBlock;
 import com.craftdistrict.block.PoliceArmoryRackBlock;
 import com.craftdistrict.block.PoliceArmoryPropBlock;
+import com.craftdistrict.block.FireStationBlock;
+import com.craftdistrict.block.FireExtinguisherBlock;
+import com.craftdistrict.block.FireRescuePropBlock;
+import com.craftdistrict.block.FireRescueRackBlock;
+import com.craftdistrict.block.RescueStretcherBlock;
+import com.craftdistrict.block.FireDepartmentSignBlock;
+import com.craftdistrict.block.FireAlarmControlPanelBlock;
+import com.craftdistrict.block.FireStationPoleBlock;
+import com.craftdistrict.block.FireDispatchDeskBlock;
+import com.craftdistrict.block.FireWallFixtureBlock;
+import com.craftdistrict.block.FireIncidentBoardBlock;
+import com.craftdistrict.block.FireLockerBenchBlock;
+import com.craftdistrict.block.SupermarketDecorationBlock;
+import com.craftdistrict.block.SupermarketColdBlock;
+import com.craftdistrict.block.SupermarketDairyBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -53,6 +68,8 @@ public final class CraftDistrictBlocks {
     public static void register() {
         Bakery.initialize();
         Police.initialize();
+        FireStation.initialize();
+        Supermarket.initialize();
         BLOCKS.register();
         ITEMS.register();
     }
@@ -214,6 +231,92 @@ public final class CraftDistrictBlocks {
         }
 
         private Police() {
+        }
+
+        private static void initialize() {
+        }
+    }
+
+    public static final class Supermarket {
+        public static final RegistrySupplier<SupermarketDecorationBlock> GROCERY_SHELF = register("supermarket_grocery_shelf",
+                () -> new SupermarketDecorationBlock(SupermarketDecorationBlock.Layout.AISLE, shelfProperties()));
+        public static final RegistrySupplier<SupermarketDecorationBlock> CANNED_SHELF = register("supermarket_canned_shelf",
+                () -> new SupermarketDecorationBlock(SupermarketDecorationBlock.Layout.AISLE, shelfProperties()));
+        public static final RegistrySupplier<SupermarketDecorationBlock> SNACK_SHELF = register("supermarket_snack_shelf",
+                () -> new SupermarketDecorationBlock(SupermarketDecorationBlock.Layout.AISLE, shelfProperties()));
+        public static final RegistrySupplier<SupermarketDecorationBlock> CANDY_SHELF = register("supermarket_candy_shelf",
+                () -> new SupermarketDecorationBlock(SupermarketDecorationBlock.Layout.AISLE, shelfProperties()));
+        public static final RegistrySupplier<SupermarketDecorationBlock> FRUIT_STAND = register("supermarket_fruit_stand",
+                () -> new SupermarketDecorationBlock(SupermarketDecorationBlock.Layout.PRODUCE, produceProperties()));
+        public static final RegistrySupplier<SupermarketDecorationBlock> VEGETABLE_STAND = register("supermarket_vegetable_stand",
+                () -> new SupermarketDecorationBlock(SupermarketDecorationBlock.Layout.PRODUCE, produceProperties()));
+        public static final RegistrySupplier<SupermarketDecorationBlock> PROMOTIONAL_DISPLAY = register("supermarket_promotional_display",
+                () -> new SupermarketDecorationBlock(SupermarketDecorationBlock.Layout.PROMOTION, shelfProperties()));
+        public static final RegistrySupplier<SupermarketColdBlock> DRINKS_FRIDGE_A = register("drinks_fridge_a",
+                () -> new SupermarketColdBlock(SupermarketColdBlock.Layout.DRINKS, shelfProperties()));
+        public static final RegistrySupplier<SupermarketColdBlock> DRINKS_FRIDGE_B = register("drinks_fridge_b",
+                () -> new SupermarketColdBlock(SupermarketColdBlock.Layout.DRINKS, shelfProperties()));
+        public static final RegistrySupplier<SupermarketDairyBlock> DAIRY_REFRIGERATOR = register("dairy_refrigerator",
+                () -> new SupermarketDairyBlock(shelfProperties()));
+        public static final RegistrySupplier<SupermarketColdBlock> CHEST_FREEZER_FROZEN_FOOD = register("chest_freezer_frozen_food",
+                () -> new SupermarketColdBlock(SupermarketColdBlock.Layout.CHEST, shelfProperties()));
+        public static final RegistrySupplier<SupermarketColdBlock> CHEST_FREEZER_ICE_CREAM = register("chest_freezer_ice_cream",
+                () -> new SupermarketColdBlock(SupermarketColdBlock.Layout.CHEST, shelfProperties()));
+        public static final RegistrySupplier<SupermarketColdBlock> DELI_DISPLAY_COUNTER = register("deli_display_counter",
+                () -> new SupermarketColdBlock(SupermarketColdBlock.Layout.DELI, shelfProperties()));
+
+        private static BlockBehaviour.Properties shelfProperties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
+        }
+
+        private static BlockBehaviour.Properties produceProperties() {
+            return BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.WOOD).noOcclusion();
+        }
+
+        private Supermarket() { }
+
+        private static void initialize() { }
+    }
+
+    public static final class FireStation {
+        public static final RegistrySupplier<FireStationBlock> GEAR_LOCKER = register("firefighter_gear_locker",
+                () -> new FireStationBlock(FireStationBlock.Variant.GEAR_LOCKER, equipmentProperties()));
+        public static final RegistrySupplier<FireStationBlock> BREATHING_APPARATUS_RACK = register("breathing_apparatus_rack",
+                () -> new FireStationBlock(FireStationBlock.Variant.BREATHING_RACK, equipmentProperties()));
+        public static final RegistrySupplier<FireExtinguisherBlock> EXTINGUISHER = register("fire_extinguisher",
+                () -> new FireExtinguisherBlock(equipmentProperties()));
+        public static final RegistrySupplier<FireRescuePropBlock> HOSE_REEL = register("fire_hose_reel",
+                () -> new FireRescuePropBlock(FireRescuePropBlock.Prop.REEL, equipmentProperties()));
+        public static final RegistrySupplier<FireRescueRackBlock> HOSE_STORAGE_RACK = register("fire_hose_storage_rack",
+                () -> new FireRescueRackBlock(FireRescueRackBlock.Rack.HOSE, equipmentProperties()));
+        public static final RegistrySupplier<FireRescueRackBlock> RESCUE_TOOLS_RACK = register("fire_rescue_tools_rack",
+                () -> new FireRescueRackBlock(FireRescueRackBlock.Rack.TOOLS, equipmentProperties()));
+        public static final RegistrySupplier<FireRescuePropBlock> HYDRAULIC_RESCUE_TOOL = register("hydraulic_rescue_tool",
+                () -> new FireRescuePropBlock(FireRescuePropBlock.Prop.HYDRAULIC, equipmentProperties()));
+        public static final RegistrySupplier<RescueStretcherBlock> RESCUE_STRETCHER = register("rescue_stretcher",
+                () -> new RescueStretcherBlock(equipmentProperties()));
+        public static final RegistrySupplier<FireDepartmentSignBlock> DEPARTMENT_SIGN = register("fire_department_sign",
+                () -> new FireDepartmentSignBlock(equipmentProperties()));
+        public static final RegistrySupplier<FireAlarmControlPanelBlock> ALARM_CONTROL_PANEL = register("fire_alarm_control_panel",
+                () -> new FireAlarmControlPanelBlock(equipmentProperties()));
+        public static final RegistrySupplier<FireStationPoleBlock> STATION_POLE = register("fire_station_pole",
+                () -> new FireStationPoleBlock(equipmentProperties()));
+        public static final RegistrySupplier<FireDispatchDeskBlock> DISPATCH_DESK = register("fire_dispatch_desk",
+                () -> new FireDispatchDeskBlock(equipmentProperties()));
+        public static final RegistrySupplier<FireWallFixtureBlock> WALL_CLOCK = register("fire_station_wall_clock",
+                () -> new FireWallFixtureBlock(FireWallFixtureBlock.Fixture.CLOCK,equipmentProperties()));
+        public static final RegistrySupplier<FireIncidentBoardBlock> INCIDENT_BOARD = register("fire_station_incident_board",
+                () -> new FireIncidentBoardBlock(equipmentProperties()));
+        public static final RegistrySupplier<FireLockerBenchBlock> LOCKER_BENCH = register("fire_station_locker_bench",
+                () -> new FireLockerBenchBlock(equipmentProperties()));
+        public static final RegistrySupplier<FireWallFixtureBlock> FIRST_AID_CABINET = register("fire_station_first_aid_cabinet",
+                () -> new FireWallFixtureBlock(FireWallFixtureBlock.Fixture.FIRST_AID,equipmentProperties()));
+
+        private static BlockBehaviour.Properties equipmentProperties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
+        }
+
+        private FireStation() {
         }
 
         private static void initialize() {
