@@ -99,6 +99,11 @@ public final class CraftDistrictCreativeTabs {
                     output.accept(CraftDistrictBlocks.Supermarket.CHEST_FREEZER_FROZEN_FOOD.get());
                     output.accept(CraftDistrictBlocks.Supermarket.CHEST_FREEZER_ICE_CREAM.get());
                     output.accept(CraftDistrictBlocks.Supermarket.DELI_DISPLAY_COUNTER.get());
+                    output.accept(CraftDistrictBlocks.Supermarket.CHECKOUT.get());
+                    output.accept(CraftDistrictBlocks.Supermarket.SHOPPING_CART.get());
+                    output.accept(CraftDistrictBlocks.Supermarket.FILLED_SHOPPING_CART.get());
+                    output.accept(CraftDistrictBlocks.Supermarket.BASKET_STACK.get());
+                    output.accept(CraftDistrictBlocks.Supermarket.SELF_CHECKOUT.get());
                 })));
         TABS.register();
     }

@@ -21,7 +21,12 @@ public final class CraftDistrictClient {
                 CraftDistrictBlocks.Supermarket.DAIRY_REFRIGERATOR.get(),
                 CraftDistrictBlocks.Supermarket.CHEST_FREEZER_FROZEN_FOOD.get(),
                 CraftDistrictBlocks.Supermarket.CHEST_FREEZER_ICE_CREAM.get(),
-                CraftDistrictBlocks.Supermarket.DELI_DISPLAY_COUNTER.get());
+                CraftDistrictBlocks.Supermarket.DELI_DISPLAY_COUNTER.get(),
+                CraftDistrictBlocks.Supermarket.CHECKOUT.get(),
+                CraftDistrictBlocks.Supermarket.SHOPPING_CART.get(),
+                CraftDistrictBlocks.Supermarket.FILLED_SHOPPING_CART.get(),
+                CraftDistrictBlocks.Supermarket.BASKET_STACK.get(),
+                CraftDistrictBlocks.Supermarket.SELF_CHECKOUT.get());
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Police.ONE_WAY_GLASS.get());
         });
     }

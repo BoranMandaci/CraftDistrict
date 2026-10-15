@@ -45,6 +45,10 @@ import com.craftdistrict.block.FireLockerBenchBlock;
 import com.craftdistrict.block.SupermarketDecorationBlock;
 import com.craftdistrict.block.SupermarketColdBlock;
 import com.craftdistrict.block.SupermarketDairyBlock;
+import com.craftdistrict.block.SupermarketCheckoutBlock;
+import com.craftdistrict.block.SupermarketShoppingPropBlock;
+import com.craftdistrict.block.SupermarketShoppingCartBlock;
+import com.craftdistrict.block.SupermarketSelfCheckoutBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -264,6 +268,17 @@ public final class CraftDistrictBlocks {
                 () -> new SupermarketColdBlock(SupermarketColdBlock.Layout.CHEST, shelfProperties()));
         public static final RegistrySupplier<SupermarketColdBlock> DELI_DISPLAY_COUNTER = register("deli_display_counter",
                 () -> new SupermarketColdBlock(SupermarketColdBlock.Layout.DELI, shelfProperties()));
+        public static final RegistrySupplier<SupermarketCheckoutBlock> CHECKOUT = register("supermarket_checkout",
+                () -> new SupermarketCheckoutBlock(shelfProperties()));
+        public static final RegistrySupplier<SupermarketShoppingCartBlock> SHOPPING_CART = register("supermarket_shopping_cart",
+                () -> new SupermarketShoppingCartBlock(shelfProperties()));
+        public static final RegistrySupplier<SupermarketShoppingCartBlock> FILLED_SHOPPING_CART = register("supermarket_filled_shopping_cart",
+                () -> new SupermarketShoppingCartBlock(shelfProperties()));
+        public static final RegistrySupplier<SupermarketShoppingPropBlock> BASKET_STACK = register("supermarket_basket_stack",
+                () -> new SupermarketShoppingPropBlock(SupermarketShoppingPropBlock.Prop.BASKETS,
+                        BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.WOOD).noOcclusion()));
+        public static final RegistrySupplier<SupermarketSelfCheckoutBlock> SELF_CHECKOUT = register("supermarket_self_checkout",
+                () -> new SupermarketSelfCheckoutBlock(shelfProperties()));
 
         private static BlockBehaviour.Properties shelfProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
