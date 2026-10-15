@@ -50,6 +50,13 @@ import com.craftdistrict.block.SupermarketShoppingPropBlock;
 import com.craftdistrict.block.SupermarketShoppingCartBlock;
 import com.craftdistrict.block.SupermarketSelfCheckoutBlock;
 import com.craftdistrict.block.SupermarketStorePropBlock;
+import com.craftdistrict.block.CeilingLightBlock;
+import com.craftdistrict.block.WallLightBlock;
+import com.craftdistrict.block.FluorescentLightBlock;
+import com.craftdistrict.block.ExitSignBlock;
+import com.craftdistrict.block.TrackLightBlock;
+import com.craftdistrict.block.FloorLightBlock;
+import com.craftdistrict.block.OpenSignBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -75,6 +82,7 @@ public final class CraftDistrictBlocks {
         Police.initialize();
         FireStation.initialize();
         Supermarket.initialize();
+        Lighting.initialize();
         BLOCKS.register();
         ITEMS.register();
     }
@@ -296,6 +304,48 @@ public final class CraftDistrictBlocks {
         }
 
         private Supermarket() { }
+
+        private static void initialize() { }
+    }
+
+    public static final class Lighting {
+        public static final RegistrySupplier<CeilingLightBlock> LED_CEILING_PANEL = register("lighting_led_ceiling_panel",
+                () -> new CeilingLightBlock(CeilingLightBlock.Fixture.PANEL, lightProperties(15)));
+        public static final RegistrySupplier<FluorescentLightBlock> FLUORESCENT_TUBE = register("lighting_fluorescent_tube",
+                () -> new FluorescentLightBlock(lightProperties(15)));
+        public static final RegistrySupplier<CeilingLightBlock> INDUSTRIAL_PENDANT = register("lighting_industrial_pendant",
+                () -> new CeilingLightBlock(CeilingLightBlock.Fixture.PENDANT, lightProperties(13)));
+        public static final RegistrySupplier<WallLightBlock> MODERN_WALL_LIGHT = register("lighting_modern_wall_light",
+                () -> new WallLightBlock(WallLightBlock.Fixture.SCONCE, lightProperties(12)));
+        public static final RegistrySupplier<WallLightBlock> INDUSTRIAL_FLOODLIGHT = register("lighting_industrial_floodlight",
+                () -> new WallLightBlock(WallLightBlock.Fixture.FLOODLIGHT, lightProperties(15)));
+        public static final RegistrySupplier<ExitSignBlock> EXIT_SIGN = register("lighting_exit_sign",
+                () -> new ExitSignBlock(ExitSignBlock.Arrow.RIGHT, lightProperties(9)));
+        public static final RegistrySupplier<ExitSignBlock> EXIT_SIGN_LEFT = register("lighting_exit_sign_left",
+                () -> new ExitSignBlock(ExitSignBlock.Arrow.LEFT, lightProperties(9)));
+        public static final RegistrySupplier<CeilingLightBlock> RECESSED_SPOTLIGHT = register("lighting_recessed_spotlight",
+                () -> new CeilingLightBlock(CeilingLightBlock.Fixture.SPOTLIGHT, lightProperties(14)));
+        public static final RegistrySupplier<TrackLightBlock> TRACK_LIGHT = register("lighting_track_light",
+                () -> new TrackLightBlock(lightProperties(15)));
+        public static final RegistrySupplier<FloorLightBlock> DESK_LAMP = register("lighting_desk_lamp",
+                () -> new FloorLightBlock(FloorLightBlock.Fixture.DESK, lightProperties(12)));
+        public static final RegistrySupplier<CeilingLightBlock> EMERGENCY_CEILING_LIGHT = register("lighting_emergency_ceiling_light",
+                () -> new CeilingLightBlock(CeilingLightBlock.Fixture.EMERGENCY, lightProperties(15)));
+        public static final RegistrySupplier<OpenSignBlock> NEON_OPEN_SIGN = register("lighting_neon_open_sign",
+                () -> new OpenSignBlock(lightProperties(12)));
+        public static final RegistrySupplier<FloorLightBlock> OUTDOOR_BOLLARD = register("lighting_outdoor_bollard",
+                () -> new FloorLightBlock(FloorLightBlock.Fixture.BOLLARD, lightProperties(14)));
+        public static final RegistrySupplier<WallLightBlock> SECURITY_WALL_LIGHT = register("lighting_security_wall_light",
+                () -> new WallLightBlock(WallLightBlock.Fixture.SECURITY, lightProperties(15)));
+        public static final RegistrySupplier<CeilingLightBlock> UNDER_CABINET_STRIP = register("lighting_under_cabinet_strip",
+                () -> new CeilingLightBlock(CeilingLightBlock.Fixture.STRIP, lightProperties(13)));
+
+        private static BlockBehaviour.Properties lightProperties(int level) {
+            return BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.METAL)
+                    .noOcclusion().lightLevel(state -> level);
+        }
+
+        private Lighting() { }
 
         private static void initialize() { }
     }

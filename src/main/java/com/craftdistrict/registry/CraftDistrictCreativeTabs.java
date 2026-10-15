@@ -107,6 +107,21 @@ public final class CraftDistrictCreativeTabs {
                     output.accept(CraftDistrictBlocks.Supermarket.STOCK_PALLET.get());
                     output.accept(CraftDistrictBlocks.Supermarket.SECURITY_GATE.get());
                     output.accept(CraftDistrictBlocks.Supermarket.CHECKOUT_CANDY_RACK.get());
+                    output.accept(CraftDistrictBlocks.Lighting.LED_CEILING_PANEL.get());
+                    output.accept(CraftDistrictBlocks.Lighting.FLUORESCENT_TUBE.get());
+                    output.accept(CraftDistrictBlocks.Lighting.INDUSTRIAL_PENDANT.get());
+                    output.accept(CraftDistrictBlocks.Lighting.MODERN_WALL_LIGHT.get());
+                    output.accept(CraftDistrictBlocks.Lighting.INDUSTRIAL_FLOODLIGHT.get());
+                    output.accept(CraftDistrictBlocks.Lighting.EXIT_SIGN.get());
+                    output.accept(CraftDistrictBlocks.Lighting.EXIT_SIGN_LEFT.get());
+                    output.accept(CraftDistrictBlocks.Lighting.RECESSED_SPOTLIGHT.get());
+                    output.accept(CraftDistrictBlocks.Lighting.TRACK_LIGHT.get());
+                    output.accept(CraftDistrictBlocks.Lighting.DESK_LAMP.get());
+                    output.accept(CraftDistrictBlocks.Lighting.EMERGENCY_CEILING_LIGHT.get());
+                    output.accept(CraftDistrictBlocks.Lighting.NEON_OPEN_SIGN.get());
+                    output.accept(CraftDistrictBlocks.Lighting.OUTDOOR_BOLLARD.get());
+                    output.accept(CraftDistrictBlocks.Lighting.SECURITY_WALL_LIGHT.get());
+                    output.accept(CraftDistrictBlocks.Lighting.UNDER_CABINET_STRIP.get());
                 })));
         TABS.register();
     }

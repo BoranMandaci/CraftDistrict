@@ -1,0 +1,517 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:solid",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/lighting/fixtures",
+    "particle": "craftdistrict:block/lighting/fixtures"
+  },
+  "elements": [
+    {
+      "name": "flat_task_lamp_base",
+      "from": [
+        5,
+        0,
+        5.5
+      ],
+      "to": [
+        11,
+        0.75,
+        11.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            4.125,
+            3.9375,
+            7.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "base_pivot_joint",
+      "from": [
+        7.125,
+        0.75,
+        9
+      ],
+      "to": [
+        8.875,
+        2,
+        10.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_articulated_arm",
+      "from": [
+        7.5,
+        1,
+        9
+      ],
+      "to": [
+        8.5,
+        6,
+        10
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "x",
+        "angle": 22.5,
+        "origin": [
+          8,
+          1.5,
+          9.5
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "elbow_hinge",
+      "from": [
+        7.125,
+        5,
+        10.5
+      ],
+      "to": [
+        8.875,
+        6.75,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_articulated_arm",
+      "from": [
+        7.5,
+        5.5,
+        10.75
+      ],
+      "to": [
+        8.5,
+        10.5,
+        11.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "x",
+        "angle": -45,
+        "origin": [
+          8,
+          5.75,
+          11.25
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "angled_task_head",
+      "from": [
+        5.25,
+        9,
+        3.5
+      ],
+      "to": [
+        10.75,
+        10.5,
+        8.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            4.125,
+            1.9375,
+            7.875
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "x",
+        "angle": 22.5,
+        "origin": [
+          8,
+          9.5,
+          7.5
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "warm_task_diffuser",
+      "from": [
+        5.75,
+        8.75,
+        4
+      ],
+      "to": [
+        10.25,
+        9,
+        8
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0625,
+            0.125,
+            11.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0625,
+            0.125,
+            11.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0625,
+            0.125,
+            11.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0625,
+            0.125,
+            11.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            10.0625,
+            0.125,
+            11.9375,
+            3.875
+          ]
+        }
+      },
+      "shade": false,
+      "rotation": {
+        "axis": "x",
+        "angle": 22.5,
+        "origin": [
+          8,
+          9.5,
+          7.5
+        ],
+        "rescale": false
+      }
+    }
+  ]
+}

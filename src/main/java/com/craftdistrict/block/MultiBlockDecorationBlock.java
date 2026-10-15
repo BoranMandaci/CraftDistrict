@@ -74,12 +74,10 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         Level level = context.getLevel();
         BlockPos primaryPos = context.getClickedPos();
-        Direction facing = getPlacementFacing(context);
-        if (facing == null) {
+        BlockState placementState = getPlacementState(context);
+        if (placementState == null) {
             return null;
         }
-        BlockState placementState = stateForPart(defaultBlockState()
-                .setValue(BlockStateProperties.HORIZONTAL_FACING, facing), 0);
         CollisionContext collisionContext = context.getPlayer() == null
                 ? CollisionContext.empty() : CollisionContext.of(context.getPlayer());
         for (int index = 0; index < partCount(); index++) {
@@ -93,6 +91,13 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
         }
 
         return placementState;
+    }
+
+    /** Choose attachment properties before the shared footprint checks run. */
+    protected BlockState getPlacementState(BlockPlaceContext context) {
+        Direction facing = getPlacementFacing(context);
+        return facing == null ? null : stateForPart(defaultBlockState()
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, facing), 0);
     }
 
     /** Default furniture orientation; wall-mounted subclasses use the clicked face. */
