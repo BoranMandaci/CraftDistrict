@@ -23,6 +23,10 @@ architectury.common(stonecutter.tree.branches.mapNotNull { branch ->
 
 loom {
     silentMojangMappingsLicense()
+    mixin {
+        useLegacyMixinAp.set(true)
+        defaultRefmapName.set("craftdistrict.refmap.json")
+    }
 }
 
 dependencies {
@@ -46,8 +50,12 @@ tasks.withType<JavaCompile>().configureEach {
 
 tasks.processResources {
     inputs.property("resource_pack_format", resourcePackFormat)
+    inputs.property("mixin_java_version", "JAVA_$javaVersion")
     filesMatching("pack.mcmeta") {
         expand("resource_pack_format" to resourcePackFormat)
+    }
+    filesMatching("craftdistrict.mixins.json") {
+        expand("mixin_java_version" to "JAVA_$javaVersion")
     }
     if (minecraftVersion == "1.21.1") {
         eachFile {

@@ -12,6 +12,12 @@
       "com.craftdistrict.fabric.CraftDistrictFabric"
     ]
   },
+  "mixins": [
+    {
+      "config": "craftdistrict.mixins.json",
+      "environment": "client"
+    }
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric-api": "*",

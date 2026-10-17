@@ -21,6 +21,14 @@ architectury {
     forge()
 }
 
+loom {
+    runs {
+        named("client") {
+            programArgs("--mixin.config", "craftdistrict-forge-dev.mixins.json")
+        }
+    }
+}
+
 val commonBundle = configurations.create("commonBundle") {
     isCanBeConsumed = false
     isCanBeResolved = true
@@ -65,8 +73,12 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 tasks.processResources {
-    // Forge's development mod pack reads metadata from the platform output.
     from(common.tasks.named("processResources")) { include("pack.mcmeta") }
+    from(common.tasks.named("processResources")) {
+        include("craftdistrict.mixins.json")
+        rename("craftdistrict.mixins.json", "craftdistrict-forge-dev.mixins.json")
+        filter { line: String -> if (line.contains("\"refmap\"")) "" else line }
+    }
     val modName = project.property("modName") as String
     val modDescription = project.property("modDescription") as String
     val modLicense = project.property("modLicense") as String
@@ -86,11 +98,17 @@ tasks.shadowJar {
     configurations = listOf(shadowBundle)
     archiveClassifier.set("dev-shadow")
     exclude("fabric.mod.json", "architectury.common.json")
+    exclude("craftdistrict-forge-dev.mixins.json")
+    // Production uses the SRG refmap from transformProductionForge.
+    manifest.attributes("MixinConfigs" to "craftdistrict.mixins.json")
 }
 tasks.remapJar {
+    useMixinAP.set(true)
     input.set(tasks.shadowJar.flatMap { it.archiveFile })
     dependsOn(tasks.shadowJar)
 }
 tasks.jar {
     archiveClassifier.set("dev")
+    exclude("craftdistrict-forge-dev.mixins.json")
+    manifest.attributes("MixinConfigs" to "craftdistrict.mixins.json")
 }

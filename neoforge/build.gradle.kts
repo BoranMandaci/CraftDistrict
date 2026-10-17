@@ -65,6 +65,12 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 tasks.processResources {
+    // NeoForge uses Mojang names directly; its copy must not load the Fabric refmap.
+    from(common.tasks.named("processResources")) {
+        include("craftdistrict.mixins.json")
+        rename("craftdistrict.mixins.json", "craftdistrict-neoforge.mixins.json")
+        filter { line: String -> if (line.contains("\"refmap\"")) "" else line }
+    }
     val modName = project.property("modName") as String
     val modDescription = project.property("modDescription") as String
     val modLicense = project.property("modLicense") as String
@@ -83,7 +89,8 @@ tasks.processResources {
 tasks.shadowJar {
     configurations = listOf(shadowBundle)
     archiveClassifier.set("dev-shadow")
-    exclude("fabric.mod.json", "architectury.common.json")
+    exclude("fabric.mod.json", "architectury.common.json",
+            "craftdistrict.mixins.json", "craftdistrict.refmap.json")
 }
 tasks.remapJar {
     input.set(tasks.shadowJar.flatMap { it.archiveFile })
