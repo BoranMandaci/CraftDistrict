@@ -16,31 +16,27 @@ final class FireStationShapes {
                 Block.box(0.5, 0, 3.375, 1.5, 16, 15),
                 Block.box(1.5, 0, 3.5, 16, 1.25, 14),
                 Block.box(2, 1, 5, 16, 5.25, 9.625),
-                Block.box(6.5, 8, 5.25, 11.5, 16, 11.75),
-                Block.box(13.5, 8, 5.25, 16, 16, 11.75)).optimize()),
+                Block.box(4.625, 8, 5.375, 16, 16, 11.625)).optimize()),
             rotations(Shapes.or(
                 Block.box(0, 0, 14, 15, 16, 15),
                 Block.box(14.5, 0, 3.375, 15.5, 16, 15),
                 Block.box(0, 0, 3.5, 14.5, 1.25, 14),
                 Block.box(0, 1, 5, 13.25, 5.25, 9.625),
-                Block.box(0, 8, 5.25, 2.5, 16, 11.75),
-                Block.box(4.5, 8, 5.25, 9.5, 16, 11.75)).optimize()),
+                Block.box(0, 8, 5.375, 11.375, 16, 11.625)).optimize()),
             rotations(Shapes.or(
                 Block.box(1, 0, 14, 16, 16, 15),
                 Block.box(0.5, 0, 3.375, 1.5, 16, 15),
                 Block.box(1.5, 15.25, 3.5, 16, 16, 14),
                 Block.box(1.5, 10.5, 5, 16, 11, 14),
                 Block.box(2.5, 11, 6.5, 16, 14.75, 12.5),
-                Block.box(6.5, 0, 5.25, 11.5, 7.5, 11.75),
-                Block.box(13.5, 0, 5.25, 16, 7.5, 11.75)).optimize()),
+                Block.box(4.625, 0, 5.375, 16, 7.5, 11.625)).optimize()),
             rotations(Shapes.or(
                 Block.box(0, 0, 14, 15, 16, 15),
                 Block.box(14.5, 0, 3.375, 15.5, 16, 15),
                 Block.box(0, 15.25, 3.5, 14.5, 16, 14),
                 Block.box(0, 10.5, 5, 14.5, 11, 14),
                 Block.box(0, 11, 6.5, 13.25, 14.75, 12.5),
-                Block.box(0, 0, 5.25, 2.5, 7.5, 11.75),
-                Block.box(4.5, 0, 5.25, 9.5, 7.5, 11.75)).optimize())
+                Block.box(0, 0, 5.375, 11.375, 7.5, 11.625)).optimize())
         },
         {
             rotations(Shapes.or(

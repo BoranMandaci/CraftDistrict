@@ -1,0 +1,3775 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "metal": "craftdistrict:block/police/entrance_metal",
+    "dark": "craftdistrict:block/police/entrance_dark",
+    "folder": "craftdistrict:block/police/entrance_folder",
+    "panel": "craftdistrict:block/police/armory_panel",
+    "particle": "craftdistrict:block/police/entrance_metal",
+    "weapon_details": "craftdistrict:block/police/armory_weapon_details"
+  },
+  "elements": [
+    {
+      "name": "perforated_secure_backboard",
+      "from": [
+        1,
+        1,
+        14.75
+      ],
+      "to": [
+        15,
+        15,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#panel",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#panel",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#panel",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "mounting_frame_0.75",
+      "from": [
+        0.75,
+        0.75,
+        14.25
+      ],
+      "to": [
+        1.5,
+        15.25,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "mounting_frame_14.5",
+      "from": [
+        14.5,
+        0.75,
+        14.25
+      ],
+      "to": [
+        15.25,
+        15.25,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "frame_crossbar_0.75",
+      "from": [
+        1.5,
+        0.75,
+        14.25
+      ],
+      "to": [
+        14.5,
+        1.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "frame_crossbar_14.5",
+      "from": [
+        1.5,
+        14.5,
+        14.25
+      ],
+      "to": [
+        14.5,
+        15.25,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "slide_inner_body_0",
+      "from": [
+        4.25,
+        5.75,
+        12.125
+      ],
+      "to": [
+        11.875,
+        6.75,
+        13.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "slide_rear_skin_0",
+      "from": [
+        4.25,
+        5.75,
+        11.875
+      ],
+      "to": [
+        8.0,
+        6.75,
+        12.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            12,
+            0,
+            16,
+            8
+          ],
+          "rotation": 90
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "slide_front_skin_0",
+      "from": [
+        10.125,
+        5.75,
+        11.875
+      ],
+      "to": [
+        11.875,
+        6.75,
+        12.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "ejection_lower_lip_0",
+      "from": [
+        8.0,
+        5.75,
+        11.875
+      ],
+      "to": [
+        10.125,
+        6.125,
+        12.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "ejection_upper_lip_0",
+      "from": [
+        8.0,
+        6.5625,
+        11.875
+      ],
+      "to": [
+        10.125,
+        6.75,
+        12.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "bevelled_slide_crown_0",
+      "from": [
+        4.5,
+        6.75,
+        12.125
+      ],
+      "to": [
+        11.625,
+        7.125,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_notched_sight_near_0",
+      "from": [
+        4.625,
+        7.125,
+        12.0625
+      ],
+      "to": [
+        5.25,
+        7.5,
+        12.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_notched_sight_far_0",
+      "from": [
+        4.625,
+        7.125,
+        12.875
+      ],
+      "to": [
+        5.25,
+        7.5,
+        13.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_sight_blade_0",
+      "from": [
+        11.0,
+        7.125,
+        12.4375
+      ],
+      "to": [
+        11.625,
+        7.5,
+        12.8125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "barrel_shroud_0",
+      "from": [
+        11.875,
+        5.75,
+        11.875
+      ],
+      "to": [
+        12.75,
+        6.75,
+        13.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            8,
+            4,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "muzzle_rim_lower_0",
+      "from": [
+        12.75,
+        5.75,
+        12
+      ],
+      "to": [
+        13.0,
+        6.0,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "muzzle_rim_upper_0",
+      "from": [
+        12.75,
+        6.5,
+        12
+      ],
+      "to": [
+        13.0,
+        6.75,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "muzzle_rim_near_0",
+      "from": [
+        12.75,
+        6.0,
+        12
+      ],
+      "to": [
+        13.0,
+        6.5,
+        12.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "muzzle_rim_far_0",
+      "from": [
+        12.75,
+        6.0,
+        12.875
+      ],
+      "to": [
+        13.0,
+        6.5,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "pistol_lower_frame_0",
+      "from": [
+        4.625,
+        5.0,
+        12.1875
+      ],
+      "to": [
+        9.375,
+        5.75,
+        13.0625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "stepped_dust_cover_0",
+      "from": [
+        9.375,
+        5.25,
+        12.0625
+      ],
+      "to": [
+        11.875,
+        5.75,
+        13.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_frame_tang_0",
+      "from": [
+        4.25,
+        5.375,
+        12.125
+      ],
+      "to": [
+        4.625,
+        5.75,
+        13.125
+      ],
+      "faces": {
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "grip_upper_neck_0",
+      "from": [
+        4.625,
+        5.375,
+        12.25
+      ],
+      "to": [
+        6.125,
+        5.75,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          5.5,
+          12.75
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "textured_grip_body_0",
+      "from": [
+        4.5,
+        2.875,
+        12.125
+      ],
+      "to": [
+        6.25,
+        5.375,
+        13.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          5.5,
+          12.75
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "tapered_grip_heel_0",
+      "from": [
+        4.75,
+        2.5,
+        12.25
+      ],
+      "to": [
+        6.0,
+        2.875,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          5.5,
+          12.75
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "magazine_baseplate_0",
+      "from": [
+        4.5625,
+        2.25,
+        12.0625
+      ],
+      "to": [
+        6.1875,
+        2.5,
+        13.4375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          5.5,
+          12.75
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "trigger_guard_0_lower",
+      "from": [
+        6.75,
+        3.75,
+        12.375
+      ],
+      "to": [
+        9.25,
+        4.125,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "trigger_guard_0_front",
+      "from": [
+        8.875,
+        4.125,
+        12.375
+      ],
+      "to": [
+        9.25,
+        5.0,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "trigger_guard_0_rear",
+      "from": [
+        6.75,
+        4.125,
+        12.375
+      ],
+      "to": [
+        7.125,
+        5.0,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "small_trigger_0",
+      "from": [
+        7.8125,
+        4.4375,
+        12.5
+      ],
+      "to": [
+        8.1875,
+        5.0,
+        12.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_slide_mount_0",
+      "from": [
+        4.375,
+        5.625,
+        13.375
+      ],
+      "to": [
+        5.375,
+        6.5,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "barrel_support_0",
+      "from": [
+        11.125,
+        5.375,
+        13.375
+      ],
+      "to": [
+        12.125,
+        6.125,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "grip_lower_rest_0",
+      "from": [
+        3.0,
+        2.125,
+        13.4375
+      ],
+      "to": [
+        5.375,
+        2.875,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "slide_inner_body_1",
+      "from": [
+        4.25,
+        12.125,
+        12.125
+      ],
+      "to": [
+        11.875,
+        13.125,
+        13.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "slide_rear_skin_1",
+      "from": [
+        4.25,
+        12.125,
+        11.875
+      ],
+      "to": [
+        8.0,
+        13.125,
+        12.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            12,
+            0,
+            16,
+            8
+          ],
+          "rotation": 90
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "slide_front_skin_1",
+      "from": [
+        10.125,
+        12.125,
+        11.875
+      ],
+      "to": [
+        11.875,
+        13.125,
+        12.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "ejection_lower_lip_1",
+      "from": [
+        8.0,
+        12.125,
+        11.875
+      ],
+      "to": [
+        10.125,
+        12.5,
+        12.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "ejection_upper_lip_1",
+      "from": [
+        8.0,
+        12.9375,
+        11.875
+      ],
+      "to": [
+        10.125,
+        13.125,
+        12.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "bevelled_slide_crown_1",
+      "from": [
+        4.5,
+        13.125,
+        12.125
+      ],
+      "to": [
+        11.625,
+        13.5,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_notched_sight_near_1",
+      "from": [
+        4.625,
+        13.5,
+        12.0625
+      ],
+      "to": [
+        5.25,
+        13.875,
+        12.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_notched_sight_far_1",
+      "from": [
+        4.625,
+        13.5,
+        12.875
+      ],
+      "to": [
+        5.25,
+        13.875,
+        13.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_sight_blade_1",
+      "from": [
+        11.0,
+        13.5,
+        12.4375
+      ],
+      "to": [
+        11.625,
+        13.875,
+        12.8125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "barrel_shroud_1",
+      "from": [
+        11.875,
+        12.125,
+        11.875
+      ],
+      "to": [
+        12.75,
+        13.125,
+        13.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            8,
+            4,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "muzzle_rim_lower_1",
+      "from": [
+        12.75,
+        12.125,
+        12
+      ],
+      "to": [
+        13.0,
+        12.375,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "muzzle_rim_upper_1",
+      "from": [
+        12.75,
+        12.875,
+        12
+      ],
+      "to": [
+        13.0,
+        13.125,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "muzzle_rim_near_1",
+      "from": [
+        12.75,
+        12.375,
+        12
+      ],
+      "to": [
+        13.0,
+        12.875,
+        12.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "muzzle_rim_far_1",
+      "from": [
+        12.75,
+        12.375,
+        12.875
+      ],
+      "to": [
+        13.0,
+        12.875,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "pistol_lower_frame_1",
+      "from": [
+        4.625,
+        11.375,
+        12.1875
+      ],
+      "to": [
+        9.375,
+        12.125,
+        13.0625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "stepped_dust_cover_1",
+      "from": [
+        9.375,
+        11.625,
+        12.0625
+      ],
+      "to": [
+        11.875,
+        12.125,
+        13.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_frame_tang_1",
+      "from": [
+        4.25,
+        11.75,
+        12.125
+      ],
+      "to": [
+        4.625,
+        12.125,
+        13.125
+      ],
+      "faces": {
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "grip_upper_neck_1",
+      "from": [
+        4.625,
+        11.75,
+        12.25
+      ],
+      "to": [
+        6.125,
+        12.125,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          11.875,
+          12.75
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "textured_grip_body_1",
+      "from": [
+        4.5,
+        9.25,
+        12.125
+      ],
+      "to": [
+        6.25,
+        11.75,
+        13.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          11.875,
+          12.75
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "tapered_grip_heel_1",
+      "from": [
+        4.75,
+        8.875,
+        12.25
+      ],
+      "to": [
+        6.0,
+        9.25,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            8,
+            0,
+            12,
+            8
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          11.875,
+          12.75
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "magazine_baseplate_1",
+      "from": [
+        4.5625,
+        8.625,
+        12.0625
+      ],
+      "to": [
+        6.1875,
+        8.875,
+        13.4375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          11.875,
+          12.75
+        ],
+        "rescale": false
+      }
+    },
+    {
+      "name": "trigger_guard_1_lower",
+      "from": [
+        6.75,
+        10.125,
+        12.375
+      ],
+      "to": [
+        9.25,
+        10.5,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "trigger_guard_1_front",
+      "from": [
+        8.875,
+        10.5,
+        12.375
+      ],
+      "to": [
+        9.25,
+        11.375,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "trigger_guard_1_rear",
+      "from": [
+        6.75,
+        10.5,
+        12.375
+      ],
+      "to": [
+        7.125,
+        11.375,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        },
+        "up": {
+          "texture": "#weapon_details",
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "small_trigger_1",
+      "from": [
+        7.8125,
+        10.8125,
+        12.5
+      ],
+      "to": [
+        8.1875,
+        11.375,
+        12.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#weapon_details",
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_slide_mount_1",
+      "from": [
+        4.375,
+        12,
+        13.375
+      ],
+      "to": [
+        5.375,
+        12.875,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "barrel_support_1",
+      "from": [
+        11.125,
+        11.75,
+        13.375
+      ],
+      "to": [
+        12.125,
+        12.5,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "grip_lower_rest_1",
+      "from": [
+        3.0,
+        8.5,
+        13.4375
+      ],
+      "to": [
+        5.375,
+        9.25,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "perforated_secure_backboard_surface_south",
+      "from": [
+        1.5,
+        1.5,
+        16
+      ],
+      "to": [
+        14.5,
+        14.5,
+        16
+      ],
+      "faces": {
+        "south": {
+          "texture": "#panel",
+          "uv": [
+            0.5714286,
+            0.5714286,
+            15.4285714,
+            15.4285714
+          ]
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        25,
+        135,
+        0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  }
+}

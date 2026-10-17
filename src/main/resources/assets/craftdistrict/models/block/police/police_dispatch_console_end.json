@@ -7,7 +7,7 @@
     "dark": "craftdistrict:block/police/entrance_dark",
     "metal": "craftdistrict:block/police/entrance_metal",
     "light": "craftdistrict:block/police/entrance_light",
-    "particle": "craftdistrict:block/police/entrance_metal"
+    "particle": "craftdistrict:block/particles/particle_dark_gray"
   },
   "elements": [
     {
@@ -862,15 +862,6 @@
             16,
             16
           ]
-        },
-        "down": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
         }
       },
       "rotation": {
@@ -898,15 +889,6 @@
       ],
       "faces": {
         "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
           "texture": "#metal",
           "uv": [
             0,
@@ -1450,6 +1432,40 @@
             0,
             16.0,
             16
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_comms_stand_surface_south",
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          8.0,
+          19.75,
+          10.0
+        ],
+        "rescale": false
+      },
+      "from": [
+        7.5,
+        14.875,
+        10.5
+      ],
+      "to": [
+        8.5,
+        16.25,
+        10.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            4.2666667,
+            16.0,
+            16.0
           ]
         }
       }

@@ -18,15 +18,15 @@ final class PolicePackage2Shapes {
         },
         {
             rotations(Shapes.or(
-                Block.box(1.5, 12.5, 1, 14.5, 13.5, 16),
-                Block.box(2.5, 0, 2.5, 3.75, 12.5, 4),
-                Block.box(12.25, 0, 2.5, 13.5, 12.5, 4)).optimize()),
+                Block.box(1.5, 13.5, 1, 14.5, 14.5, 16),
+                Block.box(2.5, 0, 2.5, 3.75, 13.5, 4),
+                Block.box(12.25, 0, 2.5, 13.5, 13.5, 4)).optimize()),
             rotations(Shapes.or(
-                Block.box(1.5, 12.5, 0, 14.5, 13.5, 16)).optimize()),
+                Block.box(1.5, 13.5, 0, 14.5, 14.5, 16)).optimize()),
             rotations(Shapes.or(
-                Block.box(1.5, 12.5, 0, 14.5, 13.5, 15),
-                Block.box(2.5, 0, 11.5, 3.75, 12.5, 13),
-                Block.box(12.25, 0, 11.5, 13.5, 12.5, 13)).optimize())
+                Block.box(1.5, 13.5, 0, 14.5, 14.5, 15),
+                Block.box(2.5, 0, 11.5, 3.75, 13.5, 13),
+                Block.box(12.25, 0, 11.5, 13.5, 13.5, 13)).optimize())
         },
         {
             rotations(Shapes.or(
@@ -36,7 +36,7 @@ final class PolicePackage2Shapes {
         {
             rotations(Shapes.or(
                 Block.box(3, 7.375, 2.75, 13, 8.5, 12.25),
-                Block.box(3, 8.5, 11.25, 13, 15, 12.625),
+                Block.box(3, 8.5, 11.25, 13, 15.75, 12.625),
                 Block.box(3.25, 0, 3.25, 4.25, 7.375, 4.25),
                 Block.box(3.25, 0, 11, 4.25, 7.375, 12),
                 Block.box(11.75, 0, 3.25, 12.75, 7.375, 4.25),

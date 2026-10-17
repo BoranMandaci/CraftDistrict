@@ -38,6 +38,15 @@ final class SupermarketShapes {
                 Block.box(0, 0, 3, 15.5, 6, 13.5),
                 Block.box(0, 6, 2.5, 15.5, 10, 14),
                 Block.box(0, 10, 8, 15.5, 14, 14)).optimize())
+        },
+        {
+            rotations(Shapes.or(
+                Block.box(0, 0, 5, 16, 1.5, 16),
+                Block.box(0, 1.5, 13.5, 16, 16, 16),
+                Block.box(1, 3, 9, 15, 16, 13.5)).optimize()),
+            rotations(Shapes.or(
+                Block.box(0, 0, 13.5, 16, 15.25, 16),
+                Block.box(1, 0, 9, 15, 14, 13.5)).optimize())
         }
     };
     private SupermarketShapes() { }

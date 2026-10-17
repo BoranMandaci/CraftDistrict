@@ -7,7 +7,8 @@
     "red": "craftdistrict:block/fire_station/red",
     "tan": "craftdistrict:block/fire_station/tan",
     "safety": "craftdistrict:block/fire_station/safety",
-    "particle": "craftdistrict:block/police/entrance_metal"
+    "particle": "craftdistrict:block/police/entrance_metal",
+    "locker_cloth": "craftdistrict:block/fire_station/locker_cloth"
   },
   "elements": [
     {
@@ -29,24 +30,6 @@
             0.0,
             8.0,
             8.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#dark",
-          "uv": [
-            8.0,
-            8.0,
-            16.0,
-            16.0
-          ]
-        },
-        "down": {
-          "texture": "#dark",
-          "uv": [
-            8.0,
-            0.0,
-            16.0,
             16.0
           ]
         }
@@ -257,502 +240,434 @@
       }
     },
     {
-      "name": "jacket_body_1",
-      "from": [
-        0,
-        14,
-        6.5
-      ],
-      "to": [
-        2.5,
-        16,
-        10.5
-      ],
-      "faces": {
-        "east": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            12.235294,
-            16.0,
-            16.0
-          ]
-        },
-        "north": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            12.235294,
-            8.888889,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#safety",
-          "uv": [
-            7.111111,
-            12.235294,
-            16.0,
-            16.0
-          ]
-        },
-        "down": {
-          "texture": "#safety",
-          "uv": [
-            7.111111,
-            0.0,
-            16.0,
-            16.0
-          ],
-          "rotation": 270
-        }
-      }
-    },
-    {
-      "name": "visible_side_reflector_1_15.5",
-      "from": [
-        0,
-        15.5,
-        6.375
-      ],
-      "to": [
-        2.5,
-        16,
-        6.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#light",
-          "uv": [
-            0.0,
-            3.2,
-            8.888889,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "pants_waist_1",
-      "from": [
-        0,
-        13.5,
-        6.5
-      ],
-      "to": [
-        2.0,
-        14.5,
-        10.5
-      ],
-      "faces": {
-        "east": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "north": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            8.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#safety",
-          "uv": [
-            8.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "down": {
-          "texture": "#safety",
-          "uv": [
-            8.0,
-            0.0,
-            16.0,
-            16.0
-          ],
-          "rotation": 270
-        }
-      }
-    },
-    {
-      "name": "compact_pants_leg_1_-2",
-      "from": [
-        0,
-        8,
-        6.5
-      ],
-      "to": [
-        2.0,
-        13.5,
-        8.25
-      ],
-      "faces": {
-        "east": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "north": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            8.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#safety",
-          "uv": [
-            8.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "down": {
-          "texture": "#safety",
-          "uv": [
-            8.0,
-            0.0,
-            16.0,
-            16.0
-          ],
-          "rotation": 270
-        }
-      }
-    },
-    {
-      "name": "compact_pants_leg_1_0.25",
-      "from": [
-        0,
-        8,
-        8.75
-      ],
-      "to": [
-        2.0,
-        13.5,
-        10.5
-      ],
-      "faces": {
-        "east": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "north": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            8.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#safety",
-          "uv": [
-            8.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "down": {
-          "texture": "#safety",
-          "uv": [
-            8.0,
-            0.0,
-            16.0,
-            16.0
-          ],
-          "rotation": 270
-        }
-      }
-    },
-    {
       "name": "jacket_body_2",
       "from": [
-        5.0,
-        14,
+        0,
+        14.5,
         6.5
       ],
       "to": [
-        9.5,
+        1.125,
         16,
         10.5
       ],
       "faces": {
-        "east": {
-          "texture": "#tan",
-          "uv": [
-            0.0,
-            12.235294,
-            16.0,
-            16.0
-          ]
-        },
-        "west": {
-          "texture": "#tan",
-          "uv": [
-            0.0,
-            12.235294,
-            16.0,
-            16.0
-          ]
-        },
         "north": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            12.235294,
+            8.0,
+            8.0,
+            9.5
+          ]
+        },
+        "east": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            8.0,
             16.0,
+            9.5
+          ]
+        },
+        "down": {
+          "texture": "#locker_cloth",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "compact_pants_front_leg_2",
+      "from": [
+        0,
+        8,
+        6.75
+      ],
+      "to": [
+        1.125,
+        14.5,
+        8.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            9.5,
+            8.0,
             16.0
           ]
         },
-        "south": {
-          "texture": "#tan",
+        "east": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            12.235294,
+            9.5,
             16.0,
             16.0
           ]
         },
         "down": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
-            0.0,
+            8.0,
             0.0,
             16.0,
-            16.0
-          ],
-          "rotation": 270
-        }
-      }
-    },
-    {
-      "name": "visible_side_reflector_2_15.5",
-      "from": [
-        5.0,
-        15.5,
-        6.375
-      ],
-      "to": [
-        9.5,
-        16,
-        6.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            3.2,
-            16.0,
-            16.0
+            2.0
           ]
         }
       }
     },
     {
-      "name": "pants_waist_2",
+      "name": "compact_pants_rear_leg_2",
       "from": [
-        5.0,
-        13.5,
-        6.5
+        0,
+        8,
+        8.625
       ],
       "to": [
-        9.0,
+        1.125,
+        14.5,
+        10.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            9.5,
+            8.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            9.5,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#locker_cloth",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "jacket_body_3",
+      "from": [
+        3.875,
+        14.5,
+        6.75
+      ],
+      "to": [
+        6.125,
+        16,
+        10.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            9.5
+          ]
+        },
+        "west": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            9.5
+          ]
+        },
+        "east": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            9.5
+          ]
+        },
+        "down": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "compact_pants_front_leg_3",
+      "from": [
+        3.875,
+        8,
+        7.0
+      ],
+      "to": [
+        6.125,
+        14.5,
+        8.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            9.5,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            9.5,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            9.5,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "compact_pants_rear_leg_3",
+      "from": [
+        3.875,
+        8,
+        8.875
+      ],
+      "to": [
+        6.125,
         14.5,
         10.5
       ],
       "faces": {
-        "east": {
-          "texture": "#tan",
+        "north": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            9.5,
             16.0,
             16.0
           ]
         },
         "west": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            9.5,
             16.0,
             16.0
           ]
         },
-        "north": {
-          "texture": "#tan",
+        "east": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#tan",
-          "uv": [
-            0.0,
-            0.0,
+            9.5,
             16.0,
             16.0
           ]
         },
         "down": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
             16.0,
-            16.0
-          ],
-          "rotation": 270
+            2.0
+          ]
         }
       }
     },
     {
-      "name": "compact_pants_leg_2_-2",
+      "name": "jacket_body_4",
       "from": [
-        5.0,
-        8,
-        6.5
+        8.875,
+        14.5,
+        6.375
       ],
       "to": [
-        9.0,
-        13.5,
+        11.125,
+        16,
+        10.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            9.5
+          ]
+        },
+        "west": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            9.5
+          ]
+        },
+        "east": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            9.5
+          ]
+        },
+        "down": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "compact_pants_front_leg_4",
+      "from": [
+        8.875,
+        8,
+        6.625
+      ],
+      "to": [
+        11.125,
+        14.5,
         8.25
       ],
       "faces": {
-        "east": {
-          "texture": "#tan",
+        "north": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            9.5,
             16.0,
             16.0
           ]
         },
         "west": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            9.5,
             16.0,
             16.0
           ]
         },
-        "north": {
-          "texture": "#tan",
+        "east": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#tan",
-          "uv": [
-            0.0,
-            0.0,
+            9.5,
             16.0,
             16.0
           ]
         },
         "down": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
             16.0,
-            16.0
-          ],
-          "rotation": 270
+            2.0
+          ]
         }
       }
     },
     {
-      "name": "compact_pants_leg_2_0.25",
+      "name": "compact_pants_rear_leg_4",
       "from": [
-        5.0,
+        8.875,
         8,
-        8.75
+        8.5
       ],
       "to": [
-        9.0,
-        13.5,
-        10.5
+        11.125,
+        14.5,
+        10.125
       ],
       "faces": {
-        "east": {
-          "texture": "#tan",
+        "north": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            9.5,
             16.0,
             16.0
           ]
         },
         "west": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            9.5,
             16.0,
             16.0
           ]
         },
-        "north": {
-          "texture": "#tan",
+        "east": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#tan",
-          "uv": [
-            0.0,
-            0.0,
+            9.5,
             16.0,
             16.0
           ]
         },
         "down": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
             16.0,
-            16.0
-          ],
-          "rotation": 270
+            2.0
+          ]
         }
       }
     },
@@ -1471,6 +1386,54 @@
             0.0,
             0.0,
             16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "shared_locker_back_surface_south",
+      "from": [
+        0,
+        0,
+        15
+      ],
+      "to": [
+        14.5,
+        16,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            8.0,
+            8.0,
+            15.7333333,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "shared_locker_back_surface_down",
+      "from": [
+        0,
+        0,
+        14
+      ],
+      "to": [
+        14.5,
+        0,
+        15
+      ],
+      "faces": {
+        "down": {
+          "texture": "#dark",
+          "uv": [
+            8.0,
+            0.0,
+            15.7333333,
             16.0
           ]
         }

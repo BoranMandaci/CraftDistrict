@@ -3,7 +3,7 @@
   "render_type": "minecraft:cutout",
   "textures": {
     "atlas": "craftdistrict:block/supermarket/refrigeration",
-    "particle": "craftdistrict:block/supermarket/refrigeration"
+    "particle": "craftdistrict:block/particles/particle_metal"
   },
   "elements": [
     {
@@ -27,33 +27,6 @@
             1.9375,
             1.108173
           ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            10.0625,
-            6.0625,
-            11.9375,
-            7.108173
-          ]
-        },
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0625,
-            0.0625,
-            1.9375,
-            1.108173
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            0.0625,
-            0.0625,
-            1.9375,
-            1.108173
-          ]
         }
       }
     },
@@ -70,33 +43,6 @@
         15.5
       ],
       "faces": {
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            0.0625,
-            0.0625,
-            1.9375,
-            1.123821
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            0.0625,
-            0.0625,
-            1.9375,
-            1.123821
-          ]
-        },
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0625,
-            0.0625,
-            1.9375,
-            1.123821
-          ]
-        },
         "east": {
           "texture": "#atlas",
           "uv": [
@@ -121,34 +67,7 @@
         15.5
       ],
       "faces": {
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            0.0625,
-            0.0625,
-            1.9375,
-            1.123821
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            0.0625,
-            0.0625,
-            1.9375,
-            1.123821
-          ]
-        },
         "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0625,
-            0.0625,
-            1.9375,
-            1.123821
-          ]
-        },
-        "east": {
           "texture": "#atlas",
           "uv": [
             0.0625,
@@ -504,15 +423,6 @@
       ],
       "faces": {
         "north": {
-          "texture": "#atlas",
-          "uv": [
-            6.0625,
-            6.0625,
-            7.9375,
-            7.048325
-          ]
-        },
-        "south": {
           "texture": "#atlas",
           "uv": [
             6.0625,
@@ -2533,6 +2443,274 @@
             10.0625,
             7.9375,
             11.9375
+          ]
+        }
+      }
+    },
+    {
+      "name": "finished_side_15_surface_south",
+      "from": [
+        15,
+        0,
+        15.5
+      ],
+      "to": [
+        16,
+        14.5,
+        15.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0978774,
+            1.9375,
+            1.123821
+          ]
+        }
+      }
+    },
+    {
+      "name": "finished_side_0_surface_south",
+      "from": [
+        0,
+        0,
+        15.5
+      ],
+      "to": [
+        1,
+        14.5,
+        15.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0978774,
+            1.9375,
+            1.123821
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_insulated_service_panel_surface_south",
+      "from": [
+        1,
+        0,
+        15.5
+      ],
+      "to": [
+        15,
+        14.5,
+        15.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.1796875,
+            6.0625,
+            11.8203125,
+            7.108173
+          ]
+        }
+      }
+    },
+    {
+      "name": "finished_side_0_surface_west",
+      "from": [
+        0,
+        0,
+        1
+      ],
+      "to": [
+        0,
+        14.5,
+        15.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0978774,
+            1.9375,
+            1.123821
+          ]
+        }
+      }
+    },
+    {
+      "name": "finished_side_15_surface_east",
+      "from": [
+        16,
+        0,
+        1
+      ],
+      "to": [
+        16,
+        14.5,
+        15.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0978774,
+            1.9375,
+            1.123821
+          ]
+        }
+      }
+    },
+    {
+      "name": "finished_side_15_surface_north",
+      "from": [
+        15,
+        0,
+        1
+      ],
+      "to": [
+        16,
+        14.5,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0978774,
+            1.9375,
+            1.123821
+          ]
+        }
+      }
+    },
+    {
+      "name": "finished_side_0_surface_north",
+      "from": [
+        0,
+        0,
+        1
+      ],
+      "to": [
+        1,
+        14.5,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0978774,
+            1.9375,
+            1.123821
+          ]
+        }
+      }
+    },
+    {
+      "name": "door_0_glass_surface_south",
+      "shade": false,
+      "from": [
+        1,
+        0,
+        1.625
+      ],
+      "to": [
+        13.5,
+        12.75,
+        1.625
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0625,
+            6.0625,
+            7.7366071,
+            7.048325
+          ]
+        }
+      }
+    },
+    {
+      "name": "door_0_glass_surface_south",
+      "shade": false,
+      "from": [
+        14.125,
+        0,
+        1.625
+      ],
+      "to": [
+        15,
+        12.75,
+        1.625
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            7.8203125,
+            6.0625,
+            7.9375,
+            7.048325
+          ]
+        }
+      }
+    },
+    {
+      "name": "door_0_glass_surface_south",
+      "shade": false,
+      "from": [
+        13.5,
+        0,
+        1.625
+      ],
+      "to": [
+        14.125,
+        4.125,
+        1.625
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            7.7366071,
+            6.7293816,
+            7.8203125,
+            7.048325
+          ]
+        }
+      }
+    },
+    {
+      "name": "door_0_glass_surface_south",
+      "shade": false,
+      "from": [
+        13.5,
+        4.75,
+        1.625
+      ],
+      "to": [
+        14.125,
+        12.75,
+        1.625
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            7.7366071,
+            6.0625,
+            7.8203125,
+            6.6810569
           ]
         }
       }

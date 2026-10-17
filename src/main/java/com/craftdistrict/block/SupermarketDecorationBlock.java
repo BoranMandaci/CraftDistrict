@@ -23,7 +23,7 @@ public final class SupermarketDecorationBlock extends MultiBlockDecorationBlock 
     //?}
 
     public enum Layout implements StringRepresentable {
-        AISLE, PROMOTION, PRODUCE;
+        AISLE, PROMOTION, PRODUCE, HANGING;
 
         @Override
         public String getSerializedName() {

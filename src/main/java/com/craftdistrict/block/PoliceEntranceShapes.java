@@ -32,26 +32,26 @@ final class PoliceEntranceShapes {
                 rotations(Shapes.or(
                     Block.box(0, 3, 14.625, 16, 13.5, 16)).optimize()),
             },
-            // police_waiting_area_bench
+            // waiting_area_bench
             {
                 rotations(Shapes.or(
-                    Block.box(1, 4.5, 7, 16, 5.5, 10.5),
-                    Block.box(1.5, 5.5, 4, 14.5, 7, 12),
-                    Block.box(1.5, 7.5, 11.75, 14.5, 14.375, 15.375),
+                    Block.box(1, 5.5, 7, 16, 6.5, 10.5),
+                    Block.box(1.5, 6.5, 4, 14.5, 8, 12),
+                    Block.box(1.5, 8.5, 11.75, 14.5, 15.375, 15.375),
                     Block.box(7, 0, 3, 9, 1, 13),
-                    Block.box(7.25, 1, 7.25, 8.75, 5.5, 8.75)).optimize()),
+                    Block.box(7.25, 1, 7.25, 8.75, 6.5, 8.75)).optimize()),
                 rotations(Shapes.or(
-                    Block.box(0, 4.5, 7, 16, 5.5, 10.5),
-                    Block.box(1.5, 5.5, 4, 14.5, 7, 12),
-                    Block.box(1.5, 7.5, 11.75, 14.5, 14.375, 15.375),
+                    Block.box(0, 5.5, 7, 16, 6.5, 10.5),
+                    Block.box(1.5, 6.5, 4, 14.5, 8, 12),
+                    Block.box(1.5, 8.5, 11.75, 14.5, 15.375, 15.375),
                     Block.box(7, 0, 3, 9, 1, 13),
-                    Block.box(7.25, 1, 7.25, 8.75, 5.5, 8.75)).optimize()),
+                    Block.box(7.25, 1, 7.25, 8.75, 6.5, 8.75)).optimize()),
                 rotations(Shapes.or(
-                    Block.box(0, 4.5, 7, 15, 5.5, 10.5),
-                    Block.box(1.5, 5.5, 4, 14.5, 7, 12),
-                    Block.box(1.5, 7.5, 11.75, 14.5, 14.375, 15.375),
+                    Block.box(0, 5.5, 7, 15, 6.5, 10.5),
+                    Block.box(1.5, 6.5, 4, 14.5, 8, 12),
+                    Block.box(1.5, 8.5, 11.75, 14.5, 15.375, 15.375),
                     Block.box(7, 0, 3, 9, 1, 13),
-                    Block.box(7.25, 1, 7.25, 8.75, 5.5, 8.75)).optimize()),
+                    Block.box(7.25, 1, 7.25, 8.75, 6.5, 8.75)).optimize()),
             },
     };
 

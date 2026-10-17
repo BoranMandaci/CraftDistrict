@@ -2,7 +2,7 @@
   "parent": "minecraft:block/block",
   "textures": {
     "atlas": "craftdistrict:block/supermarket/grocery_displays",
-    "particle": "craftdistrict:block/supermarket/grocery_displays"
+    "particle": "craftdistrict:block/particles/particle_red"
   },
   "elements": [
     {
@@ -146,33 +146,6 @@
             13.9375,
             1.9375
           ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            12.0625,
-            0.0625,
-            13.9375,
-            1.9375
-          ]
-        },
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            12.0625,
-            0.0625,
-            13.9375,
-            1.9375
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            12.0625,
-            0.0625,
-            13.9375,
-            1.9375
-          ]
         }
       }
     },
@@ -190,15 +163,6 @@
       ],
       "faces": {
         "north": {
-          "texture": "#atlas",
-          "uv": [
-            12.0625,
-            0.765625,
-            13.9375,
-            1.9375
-          ]
-        },
-        "south": {
           "texture": "#atlas",
           "uv": [
             12.0625,
@@ -258,15 +222,6 @@
             1.9375
           ]
         },
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            2.0625,
-            1.01589,
-            3.9375,
-            1.9375
-          ]
-        },
         "east": {
           "texture": "#atlas",
           "uv": [
@@ -310,15 +265,6 @@
           ]
         },
         "west": {
-          "texture": "#atlas",
-          "uv": [
-            2.0625,
-            1.01589,
-            3.9375,
-            1.9375
-          ]
-        },
-        "east": {
           "texture": "#atlas",
           "uv": [
             2.0625,
@@ -2154,6 +2100,246 @@
             12.0625,
             0.0625,
             13.9375,
+            1.9375
+          ]
+        }
+      }
+    },
+    {
+      "name": "stepped_red_pedestal_upper_surface_south",
+      "from": [
+        2,
+        11.25,
+        13.5
+      ],
+      "to": [
+        14,
+        16,
+        13.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12.0625,
+            0.765625,
+            13.9375,
+            1.8789062
+          ]
+        }
+      }
+    },
+    {
+      "name": "stepped_red_pedestal_middle_surface_south",
+      "from": [
+        1.5,
+        3.25,
+        13.5
+      ],
+      "to": [
+        14.5,
+        11,
+        13.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12.0625,
+            0.0625,
+            13.9375,
+            1.8789062
+          ]
+        }
+      }
+    },
+    {
+      "name": "promotional_upright_1.5_surface_west",
+      "from": [
+        1.5,
+        1.5,
+        11.75
+      ],
+      "to": [
+        1.5,
+        11,
+        12.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            1.3336866,
+            3.9375,
+            1.9375
+          ]
+        }
+      }
+    },
+    {
+      "name": "promotional_upright_1.5_surface_west",
+      "from": [
+        1.5,
+        12.25,
+        11.75
+      ],
+      "to": [
+        1.5,
+        16,
+        12.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            1.01589,
+            3.9375,
+            1.2542374
+          ]
+        }
+      }
+    },
+    {
+      "name": "stepped_red_pedestal_middle_surface_west",
+      "from": [
+        1.5,
+        3,
+        5
+      ],
+      "to": [
+        1.5,
+        11,
+        11.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0625,
+            0.0625,
+            13.5514706,
+            1.9375
+          ]
+        }
+      }
+    },
+    {
+      "name": "stepped_red_pedestal_middle_surface_west",
+      "from": [
+        1.5,
+        3,
+        12.75
+      ],
+      "to": [
+        1.5,
+        11,
+        13.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            13.7720588,
+            0.0625,
+            13.9375,
+            1.9375
+          ]
+        }
+      }
+    },
+    {
+      "name": "promotional_upright_13.75_surface_east",
+      "from": [
+        14.5,
+        1.5,
+        11.75
+      ],
+      "to": [
+        14.5,
+        11,
+        12.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            1.3336866,
+            3.9375,
+            1.9375
+          ]
+        }
+      }
+    },
+    {
+      "name": "promotional_upright_13.75_surface_east",
+      "from": [
+        14.5,
+        12.25,
+        11.75
+      ],
+      "to": [
+        14.5,
+        16,
+        12.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            1.01589,
+            3.9375,
+            1.2542374
+          ]
+        }
+      }
+    },
+    {
+      "name": "stepped_red_pedestal_middle_surface_east",
+      "from": [
+        14.5,
+        3,
+        5
+      ],
+      "to": [
+        14.5,
+        11,
+        11.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.4485294,
+            0.0625,
+            13.9375,
+            1.9375
+          ]
+        }
+      }
+    },
+    {
+      "name": "stepped_red_pedestal_middle_surface_east",
+      "from": [
+        14.5,
+        3,
+        12.75
+      ],
+      "to": [
+        14.5,
+        11,
+        13.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0625,
+            0.0625,
+            12.2279412,
             1.9375
           ]
         }

@@ -9,27 +9,27 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** One or two conservative boxes per fixture, rotated only at class initialization. */
 final class LightingShapes {
-    static final int SPOTLIGHT = 8, EMERGENCY = 9, STRIP = 10, NEON = 11,
-            SECURITY = 12, DESK = 13, BOLLARD = 14, TRACK = 15, TRACK_WALL = 17, OPEN_HANGING = 19;
+    static final int SPOTLIGHT = 8, STRIP = 9, NEON = 10,
+            SECURITY = 11, DESK = 12, BOLLARD = 13, TRACK = 14, TRACK_WALL = 16, OPEN_HANGING = 18,
+            PANEL_WALL = 19, STRIP_WALL = 20, STRIP_WALL_VERTICAL = 21;
 
     private static final VoxelShape[][] SHAPES = {
             rotations(Block.box(.5, 14.5, .5, 15.5, 16, 15.5)),
             rotations(Shapes.or(Block.box(3.5, 2.75, 3.5, 12.5, 7.5, 12.5),
                     Block.box(6.5, 7.5, 6.5, 9.5, 16, 9.5)).optimize()),
             rotations(Block.box(5.69, 5, 12.94, 10.31, 12, 16)),
-            rotations(Shapes.or(Block.box(2.5, 5, 7, 13.5, 14, 12.5),
-                    Block.box(6, 6, 12.5, 10, 12.5, 16)).optimize()),
-            rotations(Block.box(1.5, 8.5, 13.875, 14.5, 14.5, 16)),
+            rotations(Shapes.or(Block.box(2.5, 5, 6, 13.5, 14, 11.5),
+                    Block.box(6, 6, 11.5, 10, 12.5, 16)).optimize()),
+            rotations(Block.box(1.5, 5, 13.875, 14.5, 11, 16)),
             rotations(Block.box(.75, 13, 4.5, 16, 16, 11.5)),
             rotations(Block.box(0, 13, 4.5, 15.25, 16, 11.5)),
-            rotations(Shapes.or(Block.box(1.5, 6.5, 6.875, 14.5, 12.5, 9.125),
-                    Block.box(3, 12.5, 7.75, 13, 16, 8.25)).optimize()),
+            rotations(Shapes.or(Block.box(1.5, 5, 6.875, 14.5, 11, 9.125),
+                    Block.box(3, 11, 7.75, 13, 16, 8.25)).optimize()),
             rotations(Block.box(4, 14.5, 4, 12, 16, 12)),
-            rotations(Block.box(2, 12.25, 5, 14, 16, 11)),
             rotations(Block.box(0, 15, 6.5, 16, 16, 9.5)),
-            rotations(Block.box(1.5, 5, 14.375, 14.5, 12, 16)),
+            rotations(Block.box(1.5, 4.5, 14.375, 14.5, 11.5, 16)),
             rotations(Shapes.or(Block.box(4.75, 8, 8.5, 11.25, 13.5, 13.5),
-                    Block.box(6.25, 4.75, 13.5, 9.75, 11.5, 16)).optimize()),
+                    Block.box(6.25, 5, 13.5, 9.75, 11.5, 16)).optimize()),
             rotations(Shapes.or(Block.box(5, 0, 5.5, 11, .75, 11.5),
                     Block.box(5.25, .75, 3.5, 10.75, 12, 12)).optimize()),
             rotations(Shapes.or(Block.box(5.3, 0, 5.3, 10.7, .9, 10.7),
@@ -42,8 +42,11 @@ final class LightingShapes {
                     Block.box(3, 6, 8.25, 16, 11, 15.5)).optimize()),
             rotations(Shapes.or(Block.box(0, 10.75, 15, 15.5, 12.75, 16),
                     Block.box(0, 6, 8.25, 13, 11, 15.5)).optimize()),
-            rotations(Shapes.or(Block.box(1.5, 6, 7.125, 14.5, 13, 8.875),
-                    Block.box(3, 13, 7.75, 13, 16, 8.25)).optimize())
+            rotations(Shapes.or(Block.box(1.5, 4.5, 7.125, 14.5, 11.5, 8.875),
+                    Block.box(3, 11.5, 7.75, 13, 16, 8.25)).optimize()),
+            rotations(Block.box(.5, .5, 14.5, 15.5, 15.5, 16)),
+            rotations(Block.box(0, 6.5, 15, 16, 9.5, 16)),
+            rotations(Block.box(6.5, 0, 15, 9.5, 16, 16))
     };
 
     private LightingShapes() { }

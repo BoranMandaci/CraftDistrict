@@ -10,8 +10,8 @@ final class BakeryWallToolShapes {
     static final VoxelShape[][] SHAPES = {
             // bakery_bread_peel_rack
             rotations(Shapes.or(
-                    Block.box(1.5, 1.25, 14.5, 14.5, 15.5, 16),
-                    Block.box(2, 1.25, 12.875, 14, 12, 14.5)).optimize()),
+                    Block.box(1.5, 0.75, 14.5, 14.5, 15.875, 16),
+                    Block.box(2, 0.75, 12.875, 14, 12, 14.5)).optimize()),
             // bakery_utensil_wall_rack
             rotations(Shapes.or(
                     Block.box(1.5, 13, 14.5, 14.5, 15.5, 16),

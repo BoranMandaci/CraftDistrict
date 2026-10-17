@@ -7,7 +7,8 @@
     "red": "craftdistrict:block/fire_station/red",
     "tan": "craftdistrict:block/fire_station/tan",
     "safety": "craftdistrict:block/fire_station/safety",
-    "particle": "craftdistrict:block/police/entrance_metal"
+    "particle": "craftdistrict:block/police/entrance_metal",
+    "locker_cloth": "craftdistrict:block/fire_station/locker_cloth"
   },
   "elements": [
     {
@@ -30,24 +31,6 @@
             0.0,
             16.0,
             8.0
-          ]
-        },
-        "south": {
-          "texture": "#dark",
-          "uv": [
-            0.0,
-            0.0,
-            8.0,
-            8.0
-          ]
-        },
-        "up": {
-          "texture": "#dark",
-          "uv": [
-            0.0,
-            0.0,
-            8.0,
-            16.0
           ]
         }
       }
@@ -283,35 +266,17 @@
     {
       "name": "coat_support_rail_0",
       "from": [
-        8.75,
+        5.75,
         8.5,
         5
       ],
       "to": [
-        9.25,
+        6.25,
         9,
         14
       ],
       "faces": {
         "north": {
-          "texture": "#metal",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "east": {
           "texture": "#metal",
           "uv": [
             0.0,
@@ -343,34 +308,16 @@
     {
       "name": "hanger_hook_0",
       "from": [
-        9.0,
-        7.5,
+        5.75,
+        7.625,
         8.25
       ],
       "to": [
-        9.5,
+        6.25,
         8.75,
         8.75
       ],
       "faces": {
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
         "north": {
           "texture": "#metal",
           "uv": [
@@ -389,31 +336,75 @@
             16.0
           ]
         },
-        "up": {
+        "west": {
           "texture": "#metal",
           "uv": [
             0.0,
             0.0,
             16.0,
             16.0
-          ],
-          "rotation": 90
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
         }
       }
     },
     {
       "name": "hanger_shoulders_0",
       "from": [
-        8.0,
-        7,
-        6.0
+        5.25,
+        7.25,
+        6.25
       ],
       "to": [
-        10.0,
-        7.5,
-        11.0
+        6.75,
+        7.625,
+        10.25
       ],
       "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
         "up": {
           "texture": "#dark",
           "uv": [
@@ -421,317 +412,591 @@
             0.0,
             16.0,
             16.0
-          ],
-          "rotation": 90
+          ]
         }
       }
     },
     {
       "name": "jacket_body_0",
       "from": [
-        7.0,
+        4.875,
         0,
-        6.5
+        6.25
       ],
       "to": [
-        11.5,
-        6.5,
-        10.5
+        7.125,
+        6.25,
+        10.25
       ],
       "faces": {
-        "east": {
-          "texture": "#tan",
+        "north": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            1.75,
             16.0,
-            12.235294
+            8.0
           ]
         },
         "west": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            1.75,
             16.0,
-            12.235294
+            8.0
           ]
         },
-        "north": {
-          "texture": "#tan",
+        "east": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            1.75,
             16.0,
-            12.235294
+            8.0
           ]
-        },
-        "south": {
-          "texture": "#tan",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            12.235294
-          ]
-        },
-        "up": {
-          "texture": "#tan",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ],
-          "rotation": 90
         }
       }
     },
     {
       "name": "jacket_shoulders_0",
       "from": [
+        4.625,
+        6.25,
+        5.875
+      ],
+      "to": [
+        7.375,
         7.25,
-        5.5,
-        5.75
-      ],
-      "to": [
-        11.25,
-        7.5,
-        11.25
+        10.625
       ],
       "faces": {
-        "east": {
-          "texture": "#tan",
+        "north": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            0.75,
             16.0,
-            16.0
+            1.75
           ]
         },
         "west": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            0.75,
             16.0,
-            16.0
+            1.75
           ]
         },
-        "north": {
-          "texture": "#tan",
+        "east": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            0.75,
             16.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#tan",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
+            1.75
           ]
         },
         "up": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
             16.0,
-            16.0
-          ],
-          "rotation": 90
+            2.0
+          ]
         },
         "down": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
             16.0,
-            16.0
-          ],
-          "rotation": 270
+            2.0
+          ]
         }
       }
     },
     {
-      "name": "compact_sleeve_0_-3.25",
+      "name": "compact_front_sleeve_0",
       "from": [
-        7.5,
-        0.25,
-        5.25
+        5.125,
+        1,
+        5.375
       ],
       "to": [
-        11.0,
+        6.875,
         6.25,
-        6.5
+        6.25
       ],
       "faces": {
-        "east": {
-          "texture": "#tan",
+        "north": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            1.75,
             16.0,
-            16.0
+            7.0
           ]
         },
         "west": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            1.75,
             16.0,
-            16.0
+            7.0
           ]
         },
-        "north": {
-          "texture": "#tan",
+        "east": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            1.75,
             16.0,
-            16.0
+            7.0
           ]
         },
         "up": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
             16.0,
-            16.0
-          ],
-          "rotation": 90
+            2.0
+          ]
         },
         "down": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
             16.0,
-            16.0
-          ],
-          "rotation": 270
+            2.0
+          ]
         }
       }
     },
     {
-      "name": "compact_sleeve_0_2",
+      "name": "compact_rear_sleeve_0",
       "from": [
-        7.5,
-        0.25,
-        10.5
+        5.125,
+        1,
+        10.25
       ],
       "to": [
-        11.0,
+        6.875,
         6.25,
-        11.75
+        11.125
       ],
       "faces": {
-        "east": {
-          "texture": "#tan",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
         "west": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            1.75,
             16.0,
-            16.0
+            7.0
           ]
         },
-        "south": {
-          "texture": "#tan",
+        "east": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            1.75,
             16.0,
-            16.0
+            7.0
           ]
         },
         "up": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
             16.0,
-            16.0
-          ],
-          "rotation": 90
+            2.0
+          ]
         },
         "down": {
-          "texture": "#tan",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
             16.0,
-            16.0
-          ],
-          "rotation": 270
-        }
-      }
-    },
-    {
-      "name": "visible_side_reflector_0_15.5",
-      "from": [
-        7.0,
-        0,
-        6.375
-      ],
-      "to": [
-        11.5,
-        0.125,
-        6.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            3.2
-          ]
-        }
-      }
-    },
-    {
-      "name": "visible_side_reflector_0_20.25",
-      "from": [
-        7.0,
-        4.25,
-        6.375
-      ],
-      "to": [
-        11.5,
-        4.875,
-        6.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
+            2.0
           ]
         }
       }
     },
     {
       "name": "coat_support_rail_1",
+      "from": [
+        10.75,
+        8.5,
+        5
+      ],
+      "to": [
+        11.25,
+        9,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "hanger_hook_1",
+      "from": [
+        10.75,
+        7.625,
+        8.625
+      ],
+      "to": [
+        11.25,
+        8.75,
+        9.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "hanger_shoulders_1",
+      "from": [
+        10.25,
+        7.25,
+        6.625
+      ],
+      "to": [
+        11.75,
+        7.625,
+        10.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "jacket_body_1",
+      "from": [
+        9.875,
+        0,
+        6.625
+      ],
+      "to": [
+        12.125,
+        6.25,
+        10.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            1.75,
+            16.0,
+            8.0
+          ]
+        },
+        "west": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            1.75,
+            16.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            1.75,
+            16.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "jacket_shoulders_1",
+      "from": [
+        9.625,
+        6.25,
+        6.25
+      ],
+      "to": [
+        12.375,
+        7.25,
+        11.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.75,
+            16.0,
+            1.75
+          ]
+        },
+        "west": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.75,
+            16.0,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.75,
+            16.0,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "compact_front_sleeve_1",
+      "from": [
+        10.125,
+        1,
+        5.75
+      ],
+      "to": [
+        11.875,
+        6.25,
+        6.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            1.75,
+            16.0,
+            7.0
+          ]
+        },
+        "west": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            1.75,
+            16.0,
+            7.0
+          ]
+        },
+        "east": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            1.75,
+            16.0,
+            7.0
+          ]
+        },
+        "up": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "compact_rear_sleeve_1",
+      "from": [
+        10.125,
+        1,
+        10.625
+      ],
+      "to": [
+        11.875,
+        6.25,
+        11.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            1.75,
+            16.0,
+            7.0
+          ]
+        },
+        "east": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            1.75,
+            16.0,
+            7.0
+          ]
+        },
+        "up": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#locker_cloth",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_2",
       "from": [
         15.75,
         8.5,
@@ -752,15 +1017,6 @@
             16.0
           ]
         },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
         "up": {
           "texture": "#metal",
           "uv": [
@@ -782,18 +1038,87 @@
       }
     },
     {
-      "name": "hanger_shoulders_1",
+      "name": "hanger_hook_2",
       "from": [
-        15.0,
-        7,
-        6.0
+        15.75,
+        7.625,
+        8.5
       ],
       "to": [
         16,
-        7.5,
-        11.0
+        8.75,
+        9
       ],
       "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "hanger_shoulders_2",
+      "from": [
+        15.25,
+        7.25,
+        6.5
+      ],
+      "to": [
+        16,
+        7.625,
+        10.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#dark",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
         "up": {
           "texture": "#dark",
           "uv": [
@@ -801,131 +1126,100 @@
             0.0,
             8.0,
             16.0
-          ],
-          "rotation": 90
+          ]
         }
       }
     },
     {
-      "name": "jacket_body_1",
+      "name": "jacket_body_2",
       "from": [
-        14.0,
+        14.875,
         0,
         6.5
       ],
       "to": [
         16,
-        6.5,
+        6.25,
         10.5
       ],
       "faces": {
-        "west": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            12.235294
-          ]
-        },
         "north": {
-          "texture": "#safety",
+          "texture": "#locker_cloth",
           "uv": [
-            8.888889,
-            0.0,
+            8.0,
+            1.75,
             16.0,
-            12.235294
+            8.0
           ]
         },
-        "south": {
-          "texture": "#safety",
+        "west": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
-            7.111111,
-            12.235294
+            1.75,
+            16.0,
+            8.0
           ]
-        },
-        "up": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            7.111111,
-            16.0
-          ],
-          "rotation": 90
         }
       }
     },
     {
-      "name": "jacket_shoulders_1",
+      "name": "jacket_shoulders_2",
       "from": [
-        14.25,
-        5.5,
-        5.75
+        14.625,
+        6.25,
+        6.125
       ],
       "to": [
         16,
-        7.5,
-        11.25
+        7.25,
+        10.875
       ],
       "faces": {
-        "west": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
         "north": {
-          "texture": "#safety",
+          "texture": "#locker_cloth",
           "uv": [
-            9.0,
-            0.0,
+            8.0,
+            0.75,
             16.0,
-            16.0
+            1.75
           ]
         },
-        "south": {
-          "texture": "#safety",
+        "west": {
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
-            7.0,
-            16.0
+            0.75,
+            16.0,
+            1.75
           ]
         },
         "up": {
-          "texture": "#safety",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
-            7.0,
-            16.0
-          ],
-          "rotation": 90
+            8.0,
+            2.0
+          ]
         },
         "down": {
-          "texture": "#safety",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
-            7.0,
-            16.0
-          ],
-          "rotation": 270
+            8.0,
+            2.0
+          ]
         }
       }
     },
     {
-      "name": "compact_sleeve_1_-3.25",
+      "name": "compact_front_sleeve_2",
       "from": [
-        14.5,
-        0.25,
-        5.25
+        15.125,
+        1,
+        5.625
       ],
       "to": [
         16,
@@ -933,143 +1227,82 @@
         6.5
       ],
       "faces": {
-        "west": {
-          "texture": "#safety",
+        "north": {
+          "texture": "#locker_cloth",
           "uv": [
-            0.0,
-            0.0,
+            8.0,
+            1.75,
             16.0,
-            16.0
+            7.0
           ]
         },
-        "north": {
-          "texture": "#safety",
+        "west": {
+          "texture": "#locker_cloth",
           "uv": [
-            9.142857,
             0.0,
+            1.75,
             16.0,
-            16.0
+            7.0
           ]
         },
         "up": {
-          "texture": "#safety",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
-            6.857143,
-            16.0
-          ],
-          "rotation": 90
+            8.0,
+            2.0
+          ]
         },
         "down": {
-          "texture": "#safety",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
-            6.857143,
-            16.0
-          ],
-          "rotation": 270
+            8.0,
+            2.0
+          ]
         }
       }
     },
     {
-      "name": "compact_sleeve_1_2",
+      "name": "compact_rear_sleeve_2",
       "from": [
-        14.5,
-        0.25,
+        15.125,
+        1,
         10.5
       ],
       "to": [
         16,
         6.25,
-        11.75
+        11.375
       ],
       "faces": {
         "west": {
-          "texture": "#safety",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
-            0.0,
+            1.75,
             16.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#safety",
-          "uv": [
-            0.0,
-            0.0,
-            6.857143,
-            16.0
+            7.0
           ]
         },
         "up": {
-          "texture": "#safety",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
-            6.857143,
-            16.0
-          ],
-          "rotation": 90
+            8.0,
+            2.0
+          ]
         },
         "down": {
-          "texture": "#safety",
+          "texture": "#locker_cloth",
           "uv": [
             0.0,
             0.0,
-            6.857143,
-            16.0
-          ],
-          "rotation": 270
-        }
-      }
-    },
-    {
-      "name": "visible_side_reflector_1_15.5",
-      "from": [
-        14.0,
-        0,
-        6.375
-      ],
-      "to": [
-        16,
-        0.125,
-        6.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#light",
-          "uv": [
-            8.888889,
-            0.0,
-            16.0,
-            3.2
-          ]
-        }
-      }
-    },
-    {
-      "name": "visible_side_reflector_1_20.25",
-      "from": [
-        14.0,
-        4.25,
-        6.375
-      ],
-      "to": [
-        16,
-        4.875,
-        6.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#light",
-          "uv": [
-            8.888889,
-            0.0,
-            16.0,
-            16.0
+            8.0,
+            2.0
           ]
         }
       }
@@ -1225,15 +1458,6 @@
             16
           ]
         },
-        "south": {
-          "texture": "#safety",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
         "west": {
           "texture": "#safety",
           "uv": [
@@ -1322,15 +1546,6 @@
             16
           ]
         },
-        "east": {
-          "texture": "#safety",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
         "up": {
           "texture": "#safety",
           "uv": [
@@ -1392,15 +1607,6 @@
             16
           ]
         },
-        "west": {
-          "texture": "#safety",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
         "east": {
           "texture": "#safety",
           "uv": [
@@ -1453,15 +1659,6 @@
         11.74225396744416
       ],
       "faces": {
-        "north": {
-          "texture": "#safety",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
         "south": {
           "texture": "#safety",
           "uv": [
@@ -1790,15 +1987,6 @@
             16
           ]
         },
-        "south": {
-          "texture": "#red",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
         "west": {
           "texture": "#red",
           "uv": [
@@ -1887,15 +2075,6 @@
             16
           ]
         },
-        "east": {
-          "texture": "#red",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
         "up": {
           "texture": "#red",
           "uv": [
@@ -1957,15 +2136,6 @@
             16
           ]
         },
-        "west": {
-          "texture": "#red",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
         "east": {
           "texture": "#red",
           "uv": [
@@ -2018,15 +2188,6 @@
         11.74225396744416
       ],
       "faces": {
-        "north": {
-          "texture": "#red",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
         "south": {
           "texture": "#red",
           "uv": [
@@ -2198,6 +2359,414 @@
           "uv": [
             0.0,
             0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "shared_locker_back_surface_south",
+      "from": [
+        1.5,
+        0,
+        15
+      ],
+      "to": [
+        16,
+        16,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            0.2666667,
+            0.0,
+            8.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "shared_locker_back_surface_up",
+      "from": [
+        1.5,
+        16,
+        14
+      ],
+      "to": [
+        16,
+        16,
+        15
+      ],
+      "faces": {
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            0.2666667,
+            0.0,
+            8.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_0_surface_west",
+      "from": [
+        5.75,
+        8.75,
+        5
+      ],
+      "to": [
+        5.75,
+        9,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_0_surface_west",
+      "from": [
+        5.75,
+        8.5,
+        5
+      ],
+      "to": [
+        5.75,
+        8.75,
+        8.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            8.0,
+            5.7777778,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_0_surface_west",
+      "from": [
+        5.75,
+        8.5,
+        8.75
+      ],
+      "to": [
+        5.75,
+        8.75,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            6.6666667,
+            8.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_0_surface_east",
+      "from": [
+        6.25,
+        8.75,
+        5
+      ],
+      "to": [
+        6.25,
+        9,
+        14
+      ],
+      "faces": {
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_0_surface_east",
+      "from": [
+        6.25,
+        8.5,
+        5
+      ],
+      "to": [
+        6.25,
+        8.75,
+        8.25
+      ],
+      "faces": {
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            10.2222222,
+            8.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_0_surface_east",
+      "from": [
+        6.25,
+        8.5,
+        8.75
+      ],
+      "to": [
+        6.25,
+        8.75,
+        14
+      ],
+      "faces": {
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            8.0,
+            9.3333333,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_1_surface_west",
+      "from": [
+        10.75,
+        8.75,
+        5
+      ],
+      "to": [
+        10.75,
+        9,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_1_surface_west",
+      "from": [
+        10.75,
+        8.5,
+        5
+      ],
+      "to": [
+        10.75,
+        8.75,
+        8.625
+      ],
+      "faces": {
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            8.0,
+            6.4444444,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_1_surface_west",
+      "from": [
+        10.75,
+        8.5,
+        9.125
+      ],
+      "to": [
+        10.75,
+        8.75,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            7.3333333,
+            8.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_1_surface_east",
+      "from": [
+        11.25,
+        8.75,
+        5
+      ],
+      "to": [
+        11.25,
+        9,
+        14
+      ],
+      "faces": {
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_1_surface_east",
+      "from": [
+        11.25,
+        8.5,
+        5
+      ],
+      "to": [
+        11.25,
+        8.75,
+        8.625
+      ],
+      "faces": {
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            9.5555556,
+            8.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_1_surface_east",
+      "from": [
+        11.25,
+        8.5,
+        9.125
+      ],
+      "to": [
+        11.25,
+        8.75,
+        14
+      ],
+      "faces": {
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            8.0,
+            8.6666667,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_2_surface_west",
+      "from": [
+        15.75,
+        8.75,
+        5
+      ],
+      "to": [
+        15.75,
+        9,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_2_surface_west",
+      "from": [
+        15.75,
+        8.5,
+        5
+      ],
+      "to": [
+        15.75,
+        8.75,
+        8.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0.0,
+            8.0,
+            6.2222222,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "coat_support_rail_2_surface_west",
+      "from": [
+        15.75,
+        8.5,
+        9
+      ],
+      "to": [
+        15.75,
+        8.75,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            7.1111111,
+            8.0,
             16.0,
             16.0
           ]

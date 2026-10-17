@@ -12,19 +12,19 @@ final class PoliceDetentionShapes {
     private static final VoxelShape[][][] SHAPES = {
         {
             rotations(Shapes.or(
-                Block.box(0.75, 5.75, 1.5, 16, 8, 14.5),
-                Block.box(0.75, 8, 2, 1.5, 9, 14),
-                Block.box(2, 0, 2, 3.25, 5.75, 3.25),
-                Block.box(2, 0, 12.75, 3.25, 5.75, 14)).optimize()),
+                Block.box(0.75, 6.5, 1.5, 16, 8.75, 14.5),
+                Block.box(0.75, 8.75, 2, 1.75, 12.25, 14),
+                Block.box(2, 0, 2, 3.25, 6.5, 3.25),
+                Block.box(2, 0, 12.75, 3.25, 6.5, 14)).optimize()),
             rotations(Shapes.or(
-                Block.box(0, 5.75, 1.5, 15.25, 8, 14.5),
-                Block.box(12.75, 0, 2, 14, 5.75, 3.25),
-                Block.box(12.75, 0, 12.75, 14, 5.75, 14)).optimize())
+                Block.box(0, 6.5, 1.5, 15.25, 8.75, 14.5),
+                Block.box(12.75, 0, 2, 14, 6.5, 3.25),
+                Block.box(12.75, 0, 12.75, 14, 6.5, 14)).optimize())
         },
         {
             rotations(Shapes.or(
-                Block.box(4.5, 0, 3, 11.5, 2, 10.5),
-                Block.box(3, 2, 1.5, 13, 4.75, 10.5),
+                Block.box(4.5, 0, 3, 11.5, 4, 10.5),
+                Block.box(3, 4, 1.5, 13, 8.25, 10.5),
                 Block.box(3, 0, 10.5, 13, 13, 15.5),
                 Block.box(7.5, 13, 12.5, 8.5, 15.625, 15.25)).optimize())
         },
@@ -40,13 +40,13 @@ final class PoliceDetentionShapes {
         },
         {
             rotations(Shapes.or(
-                Block.box(2, 0, 7.25, 8.5, 14.75, 8.75),
-                Block.box(7.5, 0, 7.25, 14.25, 14.75, 8.75),
-                Block.box(7.25, 0, 7.5, 8.75, 14.75, 14.25),
-                Block.box(7.375, 14.75, 7.375, 8.625, 16, 8.625)).optimize()),
+                Block.box(2.84, 0, 7.355, 8.43, 12.685, 8.645),
+                Block.box(7.57, 0, 7.355, 13.375, 12.685, 8.645),
+                Block.box(7.355, 0, 7.57, 8.645, 12.685, 13.375),
+                Block.box(7.4625, 12.685, 7.4625, 8.5375, 16, 8.5375)).optimize()),
             rotations(Shapes.or(
-                Block.box(7.375, 0, 7.375, 8.625, 8.5, 8.625),
-                Block.box(3.5, 8.5, 3.25, 13.25, 14.25, 10)).optimize())
+                Block.box(7.4625, 0, 7.4625, 8.5375, 5.07, 8.5375),
+                Block.box(4.13, 5.07, 3.915, 12.515, 10.015, 9.72)).optimize())
         }
     };
 

@@ -12,7 +12,8 @@
     "chocolate": "craftdistrict:block/bakery/bakery_display_counter_chocolate",
     "glass": "craftdistrict:block/bakery/bakery_display_counter_glass",
     "tray": "craftdistrict:block/bakery/bakery_display_counter_tray",
-    "particle": "craftdistrict:block/bakery/bakery_display_counter_wood"
+    "particle": "craftdistrict:block/bakery/bakery_display_counter_wood",
+    "product_atlas": "craftdistrict:block/bakery/bakery_bread_shelf_seeded_top"
   },
   "elements": [
     {
@@ -88,24 +89,6 @@
         15.5
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            14,
-            16,
-            15.5
-          ],
-          "texture": "#wood"
-        },
-        "up": {
-          "uv": [
-            0,
-            14,
-            16,
-            15.5
-          ],
-          "texture": "#wood"
-        },
         "north": {
           "uv": [
             0,
@@ -379,15 +362,6 @@
         14
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            1,
-            16,
-            14
-          ],
-          "texture": "#wood"
-        },
         "up": {
           "uv": [
             0,
@@ -398,15 +372,6 @@
           "texture": "#wood"
         },
         "north": {
-          "uv": [
-            0,
-            10,
-            16,
-            11
-          ],
-          "texture": "#wood"
-        },
-        "south": {
           "uv": [
             0,
             10,
@@ -458,15 +423,6 @@
           "texture": "#trim"
         },
         "north": {
-          "uv": [
-            0,
-            5.5,
-            16,
-            6
-          ],
-          "texture": "#trim"
-        },
-        "south": {
           "uv": [
             0,
             5.5,
@@ -568,15 +524,6 @@
           ],
           "texture": "#trim"
         },
-        "up": {
-          "uv": [
-            0,
-            0,
-            16,
-            1
-          ],
-          "texture": "#trim"
-        },
         "north": {
           "uv": [
             0,
@@ -619,24 +566,6 @@
         1
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            1,
-            1
-          ],
-          "texture": "#trim"
-        },
-        "up": {
-          "uv": [
-            0,
-            0,
-            1,
-            1
-          ],
-          "texture": "#trim"
-        },
         "north": {
           "uv": [
             0,
@@ -688,24 +617,6 @@
         1
       ],
       "faces": {
-        "down": {
-          "uv": [
-            15.5,
-            0,
-            16,
-            1
-          ],
-          "texture": "#trim"
-        },
-        "up": {
-          "uv": [
-            15.5,
-            0,
-            16,
-            1
-          ],
-          "texture": "#trim"
-        },
         "north": {
           "uv": [
             15.5,
@@ -814,15 +725,6 @@
         12
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#tray"
-        },
         "up": {
           "uv": [
             0,
@@ -883,15 +785,6 @@
         12
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#tray"
-        },
         "up": {
           "uv": [
             0,
@@ -944,67 +837,160 @@
       "from": [
         -5,
         6.25,
-        3.5
+        4.25
       ],
       "to": [
         -2,
         7.25,
-        11.5
+        10.75
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#bread"
-        },
         "up": {
           "uv": [
-            0,
+            8,
             0,
             16,
-            16
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "north": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "south": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "west": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "east": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
+        }
+      }
+    },
+    {
+      "name": "baguette_front_taper",
+      "from": [
+        -4.375,
+        6.25,
+        3.5
+      ],
+      "to": [
+        -2.625,
+        7,
+        4.25
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            8,
+            0,
+            16,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        }
+      }
+    },
+    {
+      "name": "baguette_rear_taper",
+      "from": [
+        -4.375,
+        6.25,
+        10.75
+      ],
+      "to": [
+        -2.625,
+        7,
+        11.5
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            8,
+            0,
+            16,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
         }
       }
     },
@@ -1013,127 +999,220 @@
       "from": [
         -4.5,
         7.25,
-        4
+        4.75
       ],
       "to": [
         -2.5,
-        7.75,
-        11
+        7.875,
+        10.25
       ],
       "faces": {
         "up": {
           "uv": [
-            0,
+            8,
             0,
             16,
-            16
+            8
           ],
-          "texture": "#bread_top"
+          "texture": "#product_atlas"
         },
         "north": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "south": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "west": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "east": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         }
       }
     },
     {
       "name": "round_loaf_base",
       "from": [
-        0,
+        0.5,
         6.25,
         5
       ],
       "to": [
-        5,
+        4.5,
         7.5,
         10
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#bread"
-        },
         "up": {
           "uv": [
             0,
-            0,
-            16,
+            8,
+            8,
             16
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "north": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "south": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "west": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "east": {
           "uv": [
             0,
             0,
-            16,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        }
+      }
+    },
+    {
+      "name": "round_loaf_left_heel",
+      "from": [
+        0,
+        6.25,
+        5.5
+      ],
+      "to": [
+        0.5,
+        7.5,
+        9.5
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            8,
+            8,
             16
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        }
+      }
+    },
+    {
+      "name": "round_loaf_right_heel",
+      "from": [
+        4.5,
+        6.25,
+        5.5
+      ],
+      "to": [
+        5,
+        7.5,
+        9.5
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            8,
+            8,
+            16
+          ],
+          "texture": "#product_atlas"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
         }
       }
     },
@@ -1153,72 +1232,63 @@
         "up": {
           "uv": [
             0,
-            0,
-            16,
+            8,
+            8,
             16
           ],
-          "texture": "#bread_top"
+          "texture": "#product_atlas"
         },
         "north": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "south": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "west": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "east": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         }
       }
     },
     {
       "name": "cinnamon_roll_base",
       "from": [
-        -5,
+        -4.5,
         10.75,
         5
       ],
       "to": [
-        -1.5,
+        -2,
         11.75,
         8.5
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
         "up": {
           "uv": [
             0,
@@ -1247,6 +1317,108 @@
           "texture": "#pastry"
         },
         "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        }
+      }
+    },
+    {
+      "name": "cinnamon_roll_left_heel",
+      "from": [
+        -5,
+        10.75,
+        5.5
+      ],
+      "to": [
+        -4.5,
+        11.75,
+        8
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        }
+      }
+    },
+    {
+      "name": "cinnamon_roll_right_heel",
+      "from": [
+        -2,
+        10.75,
+        5.5
+      ],
+      "to": [
+        -1.5,
+        11.75,
+        8
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "south": {
           "uv": [
             0,
             0,
@@ -1339,15 +1511,6 @@
         9
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
         "up": {
           "uv": [
             0,
@@ -1468,24 +1631,6 @@
         15.5
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            14,
-            16,
-            15.5
-          ],
-          "texture": "#wood"
-        },
-        "up": {
-          "uv": [
-            0,
-            14,
-            16,
-            15.5
-          ],
-          "texture": "#wood"
-        },
         "north": {
           "uv": [
             0,
@@ -1759,15 +1904,6 @@
         14
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            1,
-            16,
-            14
-          ],
-          "texture": "#wood"
-        },
         "up": {
           "uv": [
             0,
@@ -1778,15 +1914,6 @@
           "texture": "#wood"
         },
         "north": {
-          "uv": [
-            0,
-            10,
-            16,
-            11
-          ],
-          "texture": "#wood"
-        },
-        "south": {
           "uv": [
             0,
             10,
@@ -1838,15 +1965,6 @@
           "texture": "#trim"
         },
         "north": {
-          "uv": [
-            0,
-            5.5,
-            16,
-            6
-          ],
-          "texture": "#trim"
-        },
-        "south": {
           "uv": [
             0,
             5.5,
@@ -1948,15 +2066,6 @@
           ],
           "texture": "#trim"
         },
-        "up": {
-          "uv": [
-            0,
-            0,
-            16,
-            1
-          ],
-          "texture": "#trim"
-        },
         "north": {
           "uv": [
             0,
@@ -1999,24 +2108,6 @@
         1
       ],
       "faces": {
-        "down": {
-          "uv": [
-            15,
-            0,
-            16,
-            1
-          ],
-          "texture": "#trim"
-        },
-        "up": {
-          "uv": [
-            15,
-            0,
-            16,
-            1
-          ],
-          "texture": "#trim"
-        },
         "north": {
           "uv": [
             15,
@@ -2068,24 +2159,6 @@
         1
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            0.5,
-            1
-          ],
-          "texture": "#trim"
-        },
-        "up": {
-          "uv": [
-            0,
-            0,
-            0.5,
-            1
-          ],
-          "texture": "#trim"
-        },
         "north": {
           "uv": [
             0,
@@ -2194,15 +2267,6 @@
         12
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#tray"
-        },
         "up": {
           "uv": [
             0,
@@ -2263,15 +2327,6 @@
         12
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#tray"
-        },
         "up": {
           "uv": [
             0,
@@ -2324,67 +2379,160 @@
       "from": [
         11,
         6.25,
-        4
+        4.75
       ],
       "to": [
         15.5,
         7.75,
-        11
+        10.25
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#bread"
-        },
         "up": {
           "uv": [
-            0,
+            8,
             0,
             16,
-            16
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "north": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "south": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "west": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "east": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
+        }
+      }
+    },
+    {
+      "name": "sandwich_loaf_front_heel",
+      "from": [
+        11.5,
+        6.25,
+        4
+      ],
+      "to": [
+        15,
+        7.5,
+        4.75
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            8,
+            0,
+            16,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        }
+      }
+    },
+    {
+      "name": "sandwich_loaf_rear_heel",
+      "from": [
+        11.5,
+        6.25,
+        10.25
+      ],
+      "to": [
+        15,
+        7.5,
+        11
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            8,
+            0,
+            16,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
         }
       }
     },
@@ -2403,73 +2551,64 @@
       "faces": {
         "up": {
           "uv": [
-            0,
+            8,
             0,
             16,
-            16
+            8
           ],
-          "texture": "#bread_top"
+          "texture": "#product_atlas"
         },
         "north": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "south": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "west": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         },
         "east": {
           "uv": [
             0,
             0,
-            16,
-            16
+            8,
+            8
           ],
-          "texture": "#bread"
+          "texture": "#product_atlas"
         }
       }
     },
     {
       "name": "small_roll_base",
       "from": [
-        18,
+        18.375,
         6.25,
         6
       ],
       "to": [
-        21,
+        20.625,
         7,
         9
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
         "up": {
           "uv": [
             0,
@@ -2498,6 +2637,108 @@
           "texture": "#pastry"
         },
         "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        }
+      }
+    },
+    {
+      "name": "small_roll_left_heel",
+      "from": [
+        18,
+        6.25,
+        6.375
+      ],
+      "to": [
+        18.375,
+        7,
+        8.625
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        }
+      }
+    },
+    {
+      "name": "small_roll_right_heel",
+      "from": [
+        20.625,
+        6.25,
+        6.375
+      ],
+      "to": [
+        21,
+        7,
+        8.625
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#pastry"
+        },
+        "south": {
           "uv": [
             0,
             0,
@@ -2533,218 +2774,11 @@
         "up": {
           "uv": [
             0,
-            0,
-            16,
+            8,
+            8,
             16
           ],
-          "texture": "#bread_top"
-        },
-        "north": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "south": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "west": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "east": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        }
-      }
-    },
-    {
-      "name": "croissant_center",
-      "from": [
-        12.5,
-        10.75,
-        6.5
-      ],
-      "to": [
-        15.5,
-        12.25,
-        8.5
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "up": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#bread_top"
-        },
-        "north": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "south": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "west": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "east": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        }
-      }
-    },
-    {
-      "name": "croissant_left_tip",
-      "from": [
-        11,
-        10.75,
-        4.5
-      ],
-      "to": [
-        12.5,
-        11.75,
-        7.5
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "up": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#bread_top"
-        },
-        "north": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "south": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "west": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "east": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        }
-      }
-    },
-    {
-      "name": "croissant_right_tip",
-      "from": [
-        15.5,
-        10.75,
-        4.5
-      ],
-      "to": [
-        17,
-        11.75,
-        7.5
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
-        "up": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#bread_top"
+          "texture": "#product_atlas"
         },
         "north": {
           "uv": [
@@ -2789,23 +2823,14 @@
       "from": [
         19,
         10.75,
-        3.5
+        3.75
       ],
       "to": [
         21,
-        12,
-        10.5
+        11.5,
+        10.25
       ],
       "faces": {
-        "down": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#pastry"
-        },
         "up": {
           "uv": [
             0,
@@ -2813,7 +2838,7 @@
             16,
             16
           ],
-          "texture": "#chocolate"
+          "texture": "#pastry"
         },
         "north": {
           "uv": [
@@ -2850,6 +2875,366 @@
             16
           ],
           "texture": "#pastry"
+        }
+      }
+    },
+    {
+      "name": "eclair_icing",
+      "from": [
+        19.25,
+        11.5,
+        4.25
+      ],
+      "to": [
+        20.75,
+        12,
+        9.75
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            11.25,
+            4.25,
+            12.75,
+            9.75
+          ],
+          "texture": "#chocolate"
+        },
+        "north": {
+          "uv": [
+            11.25,
+            4,
+            12.75,
+            4.5
+          ],
+          "texture": "#chocolate"
+        },
+        "south": {
+          "uv": [
+            11.25,
+            4,
+            12.75,
+            4.5
+          ],
+          "texture": "#chocolate"
+        },
+        "west": {
+          "uv": [
+            4.25,
+            4,
+            9.75,
+            4.5
+          ],
+          "texture": "#chocolate"
+        },
+        "east": {
+          "uv": [
+            4.25,
+            4,
+            9.75,
+            4.5
+          ],
+          "texture": "#chocolate"
+        }
+      }
+    },
+    {
+      "name": "croissant_center",
+      "from": [
+        12.79,
+        10.75,
+        6.575
+      ],
+      "to": [
+        15.21,
+        12.375,
+        8.5
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            8,
+            8,
+            16,
+            16
+          ],
+          "texture": "#product_atlas"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        }
+      }
+    },
+    {
+      "name": "croissant_left_fold",
+      "from": [
+        11.91,
+        10.75,
+        5.875
+      ],
+      "to": [
+        12.79,
+        11.96875,
+        7.975
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            8,
+            8,
+            16,
+            16
+          ],
+          "texture": "#product_atlas"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        }
+      }
+    },
+    {
+      "name": "croissant_right_fold",
+      "from": [
+        15.21,
+        10.75,
+        5.875
+      ],
+      "to": [
+        16.09,
+        11.96875,
+        7.975
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            8,
+            8,
+            16,
+            16
+          ],
+          "texture": "#product_atlas"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        }
+      }
+    },
+    {
+      "name": "croissant_left_tip",
+      "from": [
+        11.25,
+        10.75,
+        5.0
+      ],
+      "to": [
+        11.91,
+        11.4,
+        6.925000000000001
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            8,
+            8,
+            16,
+            16
+          ],
+          "texture": "#product_atlas"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        }
+      }
+    },
+    {
+      "name": "croissant_right_tip",
+      "from": [
+        16.09,
+        10.75,
+        5.0
+      ],
+      "to": [
+        16.75,
+        11.4,
+        6.925000000000001
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            8,
+            8,
+            16,
+            16
+          ],
+          "texture": "#product_atlas"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#product_atlas"
         }
       }
     }

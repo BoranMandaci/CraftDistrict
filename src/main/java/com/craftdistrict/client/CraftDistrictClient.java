@@ -18,6 +18,10 @@ public final class CraftDistrictClient {
                 CraftDistrictBlocks.Bakery.REFRIGERATED_PASTRY_DISPLAY.get(),
                 CraftDistrictBlocks.Supermarket.DRINKS_FRIDGE_A.get(),
                 CraftDistrictBlocks.Supermarket.DRINKS_FRIDGE_B.get(),
+                CraftDistrictBlocks.Supermarket.COLA_FRIDGE.get(),
+                CraftDistrictBlocks.Supermarket.BEER_FRIDGE.get(),
+                CraftDistrictBlocks.Supermarket.WINE_FRIDGE.get(),
+                CraftDistrictBlocks.Supermarket.WHISKEY_DISPLAY_CABINET.get(),
                 CraftDistrictBlocks.Supermarket.DAIRY_REFRIGERATOR.get(),
                 CraftDistrictBlocks.Supermarket.CHEST_FREEZER_FROZEN_FOOD.get(),
                 CraftDistrictBlocks.Supermarket.CHEST_FREEZER_ICE_CREAM.get(),
@@ -27,7 +31,7 @@ public final class CraftDistrictClient {
                 CraftDistrictBlocks.Supermarket.FILLED_SHOPPING_CART.get(),
                 CraftDistrictBlocks.Supermarket.BASKET_STACK.get(),
                 CraftDistrictBlocks.Supermarket.SELF_CHECKOUT.get());
-            RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Police.ONE_WAY_GLASS.get());
+            RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Police.ONE_WAY_OBSERVATION_GLASS.get());
         });
     }
 }

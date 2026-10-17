@@ -18,10 +18,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Single-cell lights attached to a sturdy downward-facing ceiling surface. */
-public final class CeilingLightBlock extends RotatableDecorationBlock {
+public class CeilingLightBlock extends RotatableDecorationBlock {
     public enum Fixture implements StringRepresentable {
         PANEL(0), PENDANT(1), SPOTLIGHT(LightingShapes.SPOTLIGHT),
-        EMERGENCY(LightingShapes.EMERGENCY), STRIP(LightingShapes.STRIP);
+        STRIP(LightingShapes.STRIP);
 
         private final int shape;
 

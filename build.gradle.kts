@@ -54,6 +54,9 @@ tasks.processResources {
             if (path.startsWith("data/craftdistrict/loot_tables/")) {
                 path = path.replace("data/craftdistrict/loot_tables/", "data/craftdistrict/loot_table/")
             }
+            if (path.startsWith("data/minecraft/tags/blocks/")) {
+                path = path.replace("data/minecraft/tags/blocks/", "data/minecraft/tags/block/")
+            }
         }
     }
 }
