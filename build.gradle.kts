@@ -49,6 +49,8 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 tasks.processResources {
+    // Carry the unmodified project license into every platform's common bundle.
+    from(rootProject.file("LICENSE"))
     inputs.property("resource_pack_format", resourcePackFormat)
     inputs.property("mixin_java_version", "JAVA_$javaVersion")
     filesMatching("pack.mcmeta") {

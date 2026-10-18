@@ -129,4 +129,8 @@ Use this repository's Issues section when it is available. Include:
 
 ## License
 
-The current mod metadata declares **All Rights Reserved**. This repository does not currently include a standalone license file.
+Copyright (c) 2026 Boran Mandacı
+
+CraftDistrict's original source code, 3D models, textures, and other original project assets are distributed under the **MIT License (`MIT`)**, except where otherwise noted. See [LICENSE](LICENSE) for the complete license text.
+
+Third-party components retain their own licenses and notices.

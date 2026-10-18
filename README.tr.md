@@ -129,4 +129,8 @@ Kullanıma açıldığında bu deponun Issues bölümünden hata bildirebilirsin
 
 ## Lisans
 
-Mevcut mod üst verisinde **All Rights Reserved (Tüm Hakları Saklıdır)** belirtilmiştir. Depoda şu anda ayrı bir lisans dosyası bulunmamaktadır.
+Copyright (c) 2026 Boran Mandacı
+
+CraftDistrict'in özgün kaynak kodu, 3B modelleri, dokuları ve projeye ait diğer özgün varlıkları, aksi belirtilmedikçe **MIT Lisansı (`MIT`)** kapsamında dağıtılır. Lisansın tam metni için [LICENSE](LICENSE) dosyasına bakın.
+
+Üçüncü taraf bileşenler kendi lisanslarına ve bildirimlerine tabi olmaya devam eder.
