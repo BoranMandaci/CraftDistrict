@@ -12,6 +12,26 @@
       "conditions": [
         {
           "condition": "minecraft:survives_explosion"
+        },
+        {
+          "condition": "minecraft:any_of",
+          "terms": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "craftdistrict:holding_cell_bed",
+              "properties": {
+                "legacy_layout": "true"
+              }
+            },
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "craftdistrict:holding_cell_bed",
+              "properties": {
+                "legacy_layout": "false",
+                "part": "head"
+              }
+            }
+          ]
         }
       ]
     }

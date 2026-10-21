@@ -31,7 +31,8 @@ public final class CraftDistrictClient {
                 CraftDistrictBlocks.Supermarket.FILLED_SHOPPING_CART.get(),
                 CraftDistrictBlocks.Supermarket.BASKET_STACK.get(),
                 CraftDistrictBlocks.Supermarket.SELF_CHECKOUT.get());
-            RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Police.ONE_WAY_OBSERVATION_GLASS.get());
+            RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Police.ONE_WAY_OBSERVATION_GLASS.get(),
+                    CraftDistrictBlocks.Police.ONE_WAY_GLASS_BLOCK.get());
         });
     }
 }

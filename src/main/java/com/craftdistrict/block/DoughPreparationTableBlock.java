@@ -38,29 +38,14 @@ public final class DoughPreparationTableBlock extends MultiBlockDecorationBlock 
             double outerEnd = part == 0 ? 3.25 : 14.75;
             double shelfStart = part == 0 ? 1.5 : 0;
             double shelfEnd = part == 0 ? 16 : 14.5;
+            // Broad structural envelopes preserve the open legs and tabletop height.
             VoxelShape shape = Shapes.or(
-                    Block.box(0, 11, 0.5, 16, 12.5, 15.5),
-                    Block.box(outerStart, 0, 1.25, outerEnd, 11, 3.25),
-                    Block.box(outerStart, 0, 12.75, outerEnd, 11, 14.75),
-                    Block.box(0, 9.5, 1.25, 16, 11, 2.25),
-                    Block.box(0, 9.5, 13.75, 16, 11, 14.75),
-                    Block.box(shelfStart, 2.5, 2, shelfEnd, 3.25, 14),
-                    Block.box(outerStart, 9.5, 3.25, outerEnd, 11, 12.75),
-                    Block.box(outerStart, 4, 3.25, outerEnd, 4.75, 12.75));
-            // Conservative object envelopes: no collision work during queries.
-            if (part == 0) {
-                shape = Shapes.or(shape,
-                        Block.box(3.5, 12.5, 2.75, 12.5, 12.875, 7.5),
-                        Block.box(3.5, 12.5, 6.5, 14.5, 14.5, 12.5),
-                        Block.box(4, 3.25, 6, 12, 6.75, 12));
-            } else {
-                shape = Shapes.or(shape,
-                        Block.box(2, 12.5, 3.5, 6, 15.5, 7.5),
-                        Block.box(8.375, 12.5, 3.125, 13.625, 15, 7.875),
-                        Block.box(6.5, 12.5, 9, 10.5, 16, 13.5),
-                        Block.box(2, 3.25, 6, 6.5, 8.25, 11),
-                        Block.box(8.5, 3.25, 7, 12, 7, 11.5));
-            }
+                    Block.box(0, 9.5, 0.5, 16, 12.5, 15.5),
+                    Block.box(outerStart, 0, 1.25, outerEnd, 9.5, 3.25),
+                    Block.box(outerStart, 0, 12.75, outerEnd, 9.5, 14.75),
+                    Block.box(shelfStart, 2.5, 2, shelfEnd, part == 0 ? 6.75 : 8.25, 14),
+                    part == 0 ? Block.box(3.5, 12.5, 2.75, 14.5, 14.5, 12.5)
+                            : Block.box(2, 12.5, 3.125, 13.625, 16, 13.5));
             shapes[part][0] = shape.optimize();
             for (int turn = 1; turn < 4; turn++) {
                 VoxelShape rotated = Shapes.empty();

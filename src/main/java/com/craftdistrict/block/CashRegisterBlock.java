@@ -23,12 +23,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class CashRegisterBlock extends RotatableDecorationBlock {
     private static final VoxelShape NORTH_SHAPE = Shapes.or(
             Block.box(2, 0, 2, 14, 2.25, 14),
-            Block.box(2.75, 2.25, 6, 13.25, 3.25, 13.25),
-            Block.box(2.75, 3.25, 10, 13.25, 4.5, 13.25),
-            Block.box(3, 2.25, 3.25, 11, 4.25, 6.5),
-            Block.box(3, 3.25, 6.5, 11, 5.5, 10.75),
-            Block.box(11, 2.25, 6, 13.25, 6.5, 13.25),
-            Block.box(5.75, 4.5, 10.75, 7.25, 7.25, 12.25),
+            Block.box(2.75, 2.25, 3.25, 13.25, 6.5, 13.25),
+            Block.box(5.75, 6.5, 10.75, 7.25, 7.25, 12.25),
             Block.box(3.25, 7, 10.5, 11.25, 10, 12.75)).optimize();
     private static final VoxelShape EAST_SHAPE = turnClockwise(NORTH_SHAPE);
     private static final VoxelShape SOUTH_SHAPE = turnClockwise(EAST_SHAPE);

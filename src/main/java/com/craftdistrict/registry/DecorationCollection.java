@@ -59,6 +59,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Police.RIFLE_RACK,
             CraftDistrictBlocks.Police.INTERROGATION_TABLE,
             CraftDistrictBlocks.Police.ONE_WAY_OBSERVATION_GLASS,
+            CraftDistrictBlocks.Police.ONE_WAY_GLASS_BLOCK,
             CraftDistrictBlocks.Police.MUGSHOT_HEIGHT_CHART,
             CraftDistrictBlocks.Police.BOOKING_CAMERA,
             CraftDistrictBlocks.Police.DEPARTMENT_SIGN,

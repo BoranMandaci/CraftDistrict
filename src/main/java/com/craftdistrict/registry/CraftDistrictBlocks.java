@@ -26,8 +26,10 @@ import com.craftdistrict.block.PoliceInterrogationChairBlock;
 import com.craftdistrict.block.PoliceSecurityPropBlock;
 import com.craftdistrict.block.PoliceSecurityCameraBlock;
 import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
+import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.PoliceDetentionStructureBlock;
 import com.craftdistrict.block.PoliceDetentionPropBlock;
+import com.craftdistrict.block.OneWayGlassBlock;
 import com.craftdistrict.block.PoliceArmoryRackBlock;
 import com.craftdistrict.block.PoliceArmoryPropBlock;
 import com.craftdistrict.block.FireStationBlock;
@@ -64,6 +66,7 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.BedItem;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -94,6 +97,8 @@ public final class CraftDistrictBlocks {
         RegistrySupplier<T> block = BLOCKS.register(id, factory);
         ITEMS.register(id, () -> block.get() instanceof DoorBlock
                 ? new DoubleHighBlockItem(block.get(), new Item.Properties())
+                : block.get() instanceof HoldingCellBedBlock
+                ? new BedItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
     }
@@ -221,13 +226,19 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<PoliceSecurityPropBlock> LOCKERS = register("lockers",
                 () -> new PoliceSecurityPropBlock(PoliceSecurityPropBlock.Variant.LOCKERS,
                         BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL)));
-        public static final RegistrySupplier<PoliceDetentionStructureBlock> HOLDING_CELL_BED = register("holding_cell_bed",
-                () -> new PoliceDetentionStructureBlock(PoliceDetentionStructureBlock.Structure.BED, entranceProperties()));
+        public static final RegistrySupplier<HoldingCellBedBlock> HOLDING_CELL_BED = register("holding_cell_bed",
+                () -> new HoldingCellBedBlock(entranceProperties()));
         public static final RegistrySupplier<PoliceDetentionPropBlock> HOLDING_CELL_TOILET = register("holding_cell_toilet",
                 () -> new PoliceDetentionPropBlock(PoliceDetentionPropBlock.Prop.TOILET_SINK, entranceProperties()));
         public static final RegistrySupplier<PoliceDetentionPropBlock> ONE_WAY_OBSERVATION_GLASS = register("one_way_observation_glass",
                 () -> new PoliceDetentionPropBlock(PoliceDetentionPropBlock.Prop.GLASS,
                         BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.GLASS).noOcclusion()));
+        public static final RegistrySupplier<OneWayGlassBlock> ONE_WAY_GLASS_BLOCK = register("one_way_glass_block",
+                () -> new OneWayGlassBlock(BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.GLASS)
+                        .noOcclusion().isViewBlocking((state, level, pos) -> false)
+                        .isSuffocating((state, level, pos) -> false)
+                        .isRedstoneConductor((state, level, pos) -> false)
+                        .isValidSpawn((state, level, pos, type) -> false)));
         public static final RegistrySupplier<PoliceDetentionStructureBlock> MUGSHOT_HEIGHT_CHART = register("police_mugshot_height_chart",
                 () -> new PoliceDetentionStructureBlock(PoliceDetentionStructureBlock.Structure.CHART,
                         BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.METAL).noOcclusion()));

@@ -1,0 +1,87 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "mirror_front": "craftdistrict:block/police/detention_mirror_front",
+    "mirror_rear": "craftdistrict:block/police/detention_mirror_rear",
+    "particle": "craftdistrict:block/particles/particle_glass"
+  },
+  "elements": [
+    {
+      "name": "full_asymmetric_observation_glass",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#mirror_front",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#mirror_rear",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#mirror_front",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#mirror_front",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "cullface": "east"
+        },
+        "up": {
+          "texture": "#mirror_front",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#mirror_front",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "cullface": "down"
+        }
+      }
+    }
+  ],
+  "render_type": "minecraft:translucent",
+  "ambientocclusion": false
+}
