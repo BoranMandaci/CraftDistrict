@@ -4,6 +4,8 @@
 
 **Detailed decorations for the places that make a Minecraft city.**
 
+**[Download on CurseForge](https://www.curseforge.com/minecraft/mc-mods/craftdistrict)**
+
 ![Minecraft 1.20.1 and 1.21.1](https://img.shields.io/badge/Minecraft-1.20.1%20%7C%201.21.1-4d7b31?style=flat-square)
 ![Fabric](https://img.shields.io/badge/Loader-Fabric-dbd0b4?style=flat-square)
 ![Forge](https://img.shields.io/badge/Loader-Forge-34495e?style=flat-square)
@@ -11,13 +13,15 @@
 
 [Collections](#decoration-collections) · [Installation](#installation) · [Compatibility](#supported-versions-and-dependencies) · [Languages](#supported-languages)
 
-**Preparing for the first public release.** Official download links will be added after publication.
+**CraftDistrict 1.0 is now publicly available on CurseForge.**
 
 ## About CraftDistrict
 
 CraftDistrict is a Minecraft decoration mod focused on professions, businesses, and everyday workplaces. Build a welcoming bakery, a busy supermarket, or a fully furnished police or fire station with detailed furniture, equipment, machinery, signs, and architectural props.
 
 The collections share a Minecraft-friendly voxel style, while a reusable lighting collection helps tie different buildings together.
+
+More decorations and new themed collections are planned for future updates.
 
 ## Features
 
@@ -84,7 +88,7 @@ Forge 1.21.1 and NeoForge 1.20.1 are not supported targets. Architectury's build
 1. Choose a supported Minecraft version and install its matching loader from the table above.
 2. Make sure the profile uses Java 17 for Minecraft 1.20.1 or Java 21 for Minecraft 1.21.1.
 3. Download the matching Architectury API file, plus Fabric API if using Fabric.
-4. Once published, download the CraftDistrict release JAR for that exact Minecraft version and loader.
+4. Download the CraftDistrict release JAR for your exact Minecraft version and loader from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/craftdistrict).
 5. Put CraftDistrict and its required dependency JARs into that Minecraft instance's `mods` folder. Install only one CraftDistrict target JAR per instance.
 6. Launch Minecraft with the matching loader profile. In Creative mode, look for the **CraftDistrict** tab.
 
@@ -114,7 +118,7 @@ Turkish translations have received manual review and corrections. Minecraft's se
 
 ## Downloads
 
-CraftDistrict is preparing for its first public release. Official download links will be added here after publication; no Modrinth or CurseForge release page is currently linked.
+Download **CraftDistrict 1.0**, the first public release, from the official [CurseForge project page](https://www.curseforge.com/minecraft/mc-mods/craftdistrict).
 
 Choose files using the compatibility table above. A Fabric, Forge, or NeoForge JAR is specific to its target and is not interchangeable with the others.
 

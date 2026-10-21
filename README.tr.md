@@ -4,6 +4,8 @@
 
 **Minecraft şehrinizi tamamlayan mekânlar için ayrıntılı dekorasyonlar.**
 
+**[CurseForge'dan İndir](https://www.curseforge.com/minecraft/mc-mods/craftdistrict)**
+
 ![Minecraft 1.20.1 ve 1.21.1](https://img.shields.io/badge/Minecraft-1.20.1%20%7C%201.21.1-4d7b31?style=flat-square)
 ![Fabric](https://img.shields.io/badge/Loader-Fabric-dbd0b4?style=flat-square)
 ![Forge](https://img.shields.io/badge/Loader-Forge-34495e?style=flat-square)
@@ -11,13 +13,15 @@
 
 [Koleksiyonlar](#dekorasyon-koleksiyonları) · [Kurulum](#kurulum) · [Uyumluluk](#desteklenen-sürümler-ve-bağımlılıklar) · [Diller](#desteklenen-diller)
 
-**İlk herkese açık sürüm için hazırlanıyor.** Resmî indirme bağlantıları yayımlandıktan sonra eklenecek.
+**CraftDistrict 1.0, CurseForge'da yayımlandı.**
 
 ## CraftDistrict hakkında
 
 CraftDistrict; mesleklere, işletmelere ve gündelik çalışma alanlarına odaklanan bir Minecraft dekorasyon modudur. Ayrıntılı mobilyalar, ekipmanlar, makineler, tabelalar ve mimari dekorlarla sıcak bir fırın, hareketli bir süpermarket ya da tüm bölümleriyle bir polis merkezi veya itfaiye istasyonu kurabilirsiniz.
 
 Koleksiyonlar Minecraft'a uyumlu bir voksel tarzını paylaşır. Farklı yapılarda kullanılabilen aydınlatma koleksiyonu da bu mekânları tamamlar.
+
+Gelecek güncellemelerde yeni dekorasyonlar ve yeni temalı koleksiyonlar eklenmesi planlanıyor.
 
 ## Öne çıkan özellikler
 
@@ -84,7 +88,7 @@ Forge 1.21.1 ve NeoForge 1.20.1 desteklenmez. Architectury'nin derleme araçlar�
 1. Desteklenen bir Minecraft sürümü seçin ve yukarıdaki tablodan ona uygun mod yükleyicisini kurun.
 2. Profilin Minecraft 1.20.1 için Java 17, Minecraft 1.21.1 için Java 21 kullandığından emin olun.
 3. Uygun Architectury API dosyasını; Fabric kullanıyorsanız ayrıca Fabric API'yi indirin.
-4. Yayımlandığında, tam olarak bu Minecraft sürümü ve mod yükleyicisi için hazırlanmış CraftDistrict sürüm JAR'ını indirin.
+4. Minecraft sürümünüze ve mod yükleyicinize uygun CraftDistrict sürüm JAR'ını [CurseForge](https://www.curseforge.com/minecraft/mc-mods/craftdistrict) üzerinden indirin.
 5. CraftDistrict ve gerekli bağımlılık JAR'larını o Minecraft kurulumunun `mods` klasörüne koyun. Her kuruluma yalnızca bir CraftDistrict hedef JAR'ı ekleyin.
 6. Minecraft'ı uygun mod yükleyicisi profiliyle başlatın. Yaratıcı modda **CraftDistrict** sekmesini açın.
 
@@ -114,7 +118,7 @@ Türkçe çeviriler elle incelenmiş ve düzeltilmiştir. Oyun içindeki metinle
 
 ## İndirmeler
 
-CraftDistrict ilk herkese açık sürümü için hazırlanıyor. Resmî indirme bağlantıları yayımdan sonra buraya eklenecek; şu anda Modrinth veya CurseForge sürüm sayfasına bağlantı verilmemektedir.
+İlk herkese açık sürüm **CraftDistrict 1.0**, resmî [CurseForge proje sayfasından](https://www.curseforge.com/minecraft/mc-mods/craftdistrict) indirilebilir.
 
 Dosya seçerken yukarıdaki uyumluluk tablosunu kullanın. Fabric, Forge ve NeoForge JAR'ları kendi hedeflerine özeldir; birbirlerinin yerine kullanılamaz.
 
