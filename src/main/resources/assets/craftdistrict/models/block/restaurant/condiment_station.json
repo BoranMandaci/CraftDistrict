@@ -1,0 +1,1757 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "service": "craftdistrict:block/restaurant/service",
+    "kitchen": "craftdistrict:block/restaurant/kitchen",
+    "particle": "craftdistrict:block/particles/particle_wood",
+    "details": "craftdistrict:block/restaurant/service_details"
+  },
+  "elements": [
+    {
+      "name": "organizer_base",
+      "from": [
+        1,
+        0,
+        1.5
+      ],
+      "to": [
+        15,
+        1,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "organizer_rear",
+      "from": [
+        1,
+        1,
+        13.5
+      ],
+      "to": [
+        15,
+        3,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "sauce_row_separator",
+      "from": [
+        1,
+        1,
+        8
+      ],
+      "to": [
+        15,
+        2,
+        8.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "sauce_bottle_body",
+      "from": [
+        2.15,
+        1,
+        3.25
+      ],
+      "to": [
+        4.35,
+        5.5,
+        6.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#details",
+          "uv": [
+            8.0625,
+            8.0625,
+            11.9375,
+            11.9375
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "soft_bottle_shoulder",
+      "from": [
+        2.45,
+        5.5,
+        3.6
+      ],
+      "to": [
+        4.05,
+        6.25,
+        5.9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "squeeze_nozzle",
+      "from": [
+        2.95,
+        6.25,
+        4.45
+      ],
+      "to": [
+        3.55,
+        8,
+        5.05
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "sauce_bottle_body",
+      "from": [
+        5.4,
+        1,
+        3.25
+      ],
+      "to": [
+        7.6,
+        5.0,
+        6.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#details",
+          "uv": [
+            8.0625,
+            8.0625,
+            11.9375,
+            11.9375
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            8.125,
+            3.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            8.125,
+            3.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            8.125,
+            3.875,
+            11.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            8.125,
+            3.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "soft_bottle_shoulder",
+      "from": [
+        5.7,
+        5.0,
+        3.6
+      ],
+      "to": [
+        7.3,
+        5.75,
+        5.9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            8.125,
+            3.875,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            8.125,
+            3.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            8.125,
+            3.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            8.125,
+            3.875,
+            11.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            8.125,
+            3.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "squeeze_nozzle",
+      "from": [
+        6.2,
+        5.75,
+        4.45
+      ],
+      "to": [
+        6.8,
+        7.5,
+        5.05
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "sauce_bottle_body",
+      "from": [
+        8.65,
+        1,
+        3.25
+      ],
+      "to": [
+        10.85,
+        4.5,
+        6.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#details",
+          "uv": [
+            8.0625,
+            8.0625,
+            11.9375,
+            11.9375
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "soft_bottle_shoulder",
+      "from": [
+        8.95,
+        4.5,
+        3.6
+      ],
+      "to": [
+        10.55,
+        5.25,
+        5.9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "squeeze_nozzle",
+      "from": [
+        9.45,
+        5.25,
+        4.45
+      ],
+      "to": [
+        10.05,
+        7,
+        5.05
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "pepper_sauce_bottle",
+      "from": [
+        12.25,
+        1,
+        3.75
+      ],
+      "to": [
+        13.75,
+        6.25,
+        5.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            4.125,
+            11.875,
+            7.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            4.125,
+            11.875,
+            7.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            4.125,
+            11.875,
+            7.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            4.125,
+            11.875,
+            7.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            4.125,
+            11.875,
+            7.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "pepper_sauce_neck",
+      "from": [
+        12.625,
+        6.25,
+        4.125
+      ],
+      "to": [
+        13.375,
+        7.5,
+        5.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "pepper_sauce_cap",
+      "from": [
+        12.5,
+        7.5,
+        4
+      ],
+      "to": [
+        13.5,
+        8,
+        5.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "napkin_dispenser_floor",
+      "from": [
+        2,
+        1,
+        9
+      ],
+      "to": [
+        8,
+        1.5,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "napkin_dispenser_rear",
+      "from": [
+        2,
+        1.5,
+        12.75
+      ],
+      "to": [
+        8,
+        6.25,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "napkin_dispenser_left",
+      "from": [
+        2,
+        1.5,
+        9
+      ],
+      "to": [
+        2.5,
+        6.25,
+        12.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "napkin_dispenser_right",
+      "from": [
+        7.5,
+        1.5,
+        9
+      ],
+      "to": [
+        8,
+        6.25,
+        12.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "napkin_dispenser_lid",
+      "from": [
+        2.5,
+        5.5,
+        9
+      ],
+      "to": [
+        7.5,
+        6.25,
+        12.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "napkin_dispenser_front",
+      "from": [
+        2.5,
+        1.5,
+        9
+      ],
+      "to": [
+        7.5,
+        4.5,
+        9.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#details",
+          "uv": [
+            0.0625,
+            6.0625,
+            7.9375,
+            7.9375
+          ]
+        },
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "napkin_slot_lintel",
+      "from": [
+        2.5,
+        5.25,
+        9
+      ],
+      "to": [
+        7.5,
+        5.5,
+        9.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#kitchen",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "internal_napkin_stack",
+      "from": [
+        2.6,
+        1.5,
+        9.6
+      ],
+      "to": [
+        7.4,
+        4.6,
+        12.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "paper_in_dispensing_slot",
+      "from": [
+        3.3,
+        4.6,
+        8.5
+      ],
+      "to": [
+        6.7,
+        5,
+        10
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "pulled_napkin_flap",
+      "from": [
+        3.3,
+        4.1,
+        8.5
+      ],
+      "to": [
+        6.7,
+        4.6,
+        8.7
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "seasoning_caddy",
+      "from": [
+        9,
+        1,
+        9
+      ],
+      "to": [
+        14,
+        1.5,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "seasoning_shaker",
+      "from": [
+        9.65,
+        1.5,
+        10
+      ],
+      "to": [
+        10.85,
+        3.75,
+        11.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            8.125,
+            7.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "perforated_shaker_cap",
+      "from": [
+        9.6,
+        3.75,
+        9.95
+      ],
+      "to": [
+        10.9,
+        4.25,
+        11.8
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            4.125,
+            11.875,
+            7.875
+          ]
+        },
+        "down": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "seasoning_shaker",
+      "from": [
+        12.15,
+        1.5,
+        10
+      ],
+      "to": [
+        13.35,
+        3.75,
+        11.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            12.125,
+            8.125,
+            15.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "perforated_shaker_cap",
+      "from": [
+        12.1,
+        3.75,
+        9.95
+      ],
+      "to": [
+        13.4,
+        4.25,
+        11.8
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            4.125,
+            11.875,
+            7.875
+          ]
+        },
+        "down": {
+          "texture": "#kitchen",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    }
+  ]
+}

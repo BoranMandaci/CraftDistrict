@@ -69,6 +69,11 @@ import com.craftdistrict.block.ConnectedRestaurantSeatBlock;
 import com.craftdistrict.block.RestaurantKitchenBlock;
 import com.craftdistrict.block.KitchenExhaustHoodBlock;
 import com.craftdistrict.block.KitchenExhaustDuctBlock;
+import com.craftdistrict.block.RestaurantServiceCounterBlock;
+import com.craftdistrict.block.RestaurantServicePropBlock;
+import com.craftdistrict.block.RestaurantServiceWallBlock;
+import com.craftdistrict.block.RestaurantServingCartBlock;
+import com.craftdistrict.block.KitchenOrderDisplayBlock;
 import com.craftdistrict.block.StainlessSteelPrepTableBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -159,6 +164,26 @@ public final class CraftDistrictBlocks {
                 () -> new StainlessSteelPrepTableBlock(metalProperties()));
         public static final RegistrySupplier<RestaurantKitchenBlock> KITCHEN_SINK_STATION = register("kitchen_sink_station",
                 () -> new RestaurantKitchenBlock(RestaurantKitchenBlock.Equipment.SINK, metalProperties()));
+        public static final RegistrySupplier<RestaurantServiceCounterBlock> RESTAURANT_SERVICE_COUNTER = register("restaurant_service_counter",
+                () -> new RestaurantServiceCounterBlock(woodProperties()));
+        public static final RegistrySupplier<RestaurantServicePropBlock> FOOD_PICKUP_COUNTER = register("food_pickup_counter",
+                () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.PICKUP_COUNTER, metalProperties()));
+        public static final RegistrySupplier<RestaurantServicePropBlock> RESTAURANT_POS_TERMINAL = register("restaurant_pos_terminal",
+                () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.POS_TERMINAL, metalProperties()));
+        public static final RegistrySupplier<RestaurantServingCartBlock> RESTAURANT_SERVING_CART = register("restaurant_serving_cart",
+                () -> new RestaurantServingCartBlock(metalProperties()));
+        public static final RegistrySupplier<RestaurantServiceWallBlock> PLATE_CUTLERY_RACK = register("plate_cutlery_rack",
+                () -> new RestaurantServiceWallBlock(RestaurantServiceWallBlock.Design.PLATE_CUTLERY_RACK, metalProperties()));
+        public static final RegistrySupplier<RestaurantServicePropBlock> BEVERAGE_DISPENSER = register("beverage_dispenser",
+                () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.BEVERAGE_DISPENSER, metalProperties()));
+        public static final RegistrySupplier<RestaurantServicePropBlock> CONDIMENT_STATION = register("condiment_station",
+                () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.CONDIMENT_STATION, woodProperties()));
+        public static final RegistrySupplier<RestaurantServicePropBlock> COMMERCIAL_COFFEE_MACHINE = register("commercial_coffee_machine",
+                () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.COFFEE_MACHINE, metalProperties()));
+        public static final RegistrySupplier<KitchenOrderDisplayBlock> KITCHEN_ORDER_DISPLAY = register("kitchen_order_display",
+                () -> new KitchenOrderDisplayBlock(metalProperties()));
+        public static final RegistrySupplier<RestaurantServicePropBlock> RESTAURANT_MENU_BOARD = register("restaurant_menu_board",
+                () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.MENU_BOARD, woodProperties()));
 
         private static BlockBehaviour.Properties woodProperties() {
             return BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.WOOD).noOcclusion();

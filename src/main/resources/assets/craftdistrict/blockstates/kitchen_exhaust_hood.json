@@ -1,20 +1,80 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood",
-      "y": 0
+  "multipart": [
+    {
+      "when": {
+        "facing": "north"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood_body",
+        "y": 0
+      }
     },
-    "facing=east": {
-      "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood",
-      "y": 90
+    {
+      "when": {
+        "facing": "north",
+        "duct_above": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood_outlet_cap",
+        "y": 0
+      }
     },
-    "facing=south": {
-      "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood",
-      "y": 180
+    {
+      "when": {
+        "facing": "east"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood_body",
+        "y": 90
+      }
     },
-    "facing=west": {
-      "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood",
-      "y": 270
+    {
+      "when": {
+        "facing": "east",
+        "duct_above": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood_outlet_cap",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "south"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood_body",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "duct_above": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood_outlet_cap",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood_body",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "duct_above": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_hood_outlet_cap",
+        "y": 270
+      }
     }
-  }
+  ]
 }

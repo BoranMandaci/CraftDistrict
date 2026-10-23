@@ -1,0 +1,909 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "service": "craftdistrict:block/restaurant/service",
+    "kitchen": "craftdistrict:block/restaurant/kitchen",
+    "particle": "craftdistrict:block/particles/particle_wood"
+  },
+  "elements": [
+    {
+      "name": "shared_recessed_plinth",
+      "from": [
+        -7,
+        0,
+        1
+      ],
+      "to": [
+        23,
+        1.25,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "shared_cabinet_floor",
+      "from": [
+        -7,
+        1.25,
+        1
+      ],
+      "to": [
+        23,
+        2,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "customer_front_panel",
+      "from": [
+        -7,
+        2,
+        1
+      ],
+      "to": [
+        23,
+        14.75,
+        3
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_outer_cheek",
+      "from": [
+        -7.5,
+        1.25,
+        1
+      ],
+      "to": [
+        -7,
+        14.75,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_outer_cheek",
+      "from": [
+        23,
+        1.25,
+        1
+      ],
+      "to": [
+        23.5,
+        14.75,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_inset_header",
+      "from": [
+        -7,
+        12.75,
+        0.75
+      ],
+      "to": [
+        23,
+        14.75,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_front_stile",
+      "from": [
+        -7,
+        2,
+        0.75
+      ],
+      "to": [
+        -6,
+        12.75,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_front_stile",
+      "from": [
+        22,
+        2,
+        0.75
+      ],
+      "to": [
+        23,
+        12.75,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "continuous_stone_service_top",
+      "from": [
+        -8,
+        15,
+        0
+      ],
+      "to": [
+        24,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            8.125,
+            0.125,
+            11.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "warm_top_edging",
+      "from": [
+        -7.5,
+        14.75,
+        0.5
+      ],
+      "to": [
+        23.5,
+        15,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "staff_cubby_shelf",
+      "from": [
+        -7,
+        7,
+        3
+      ],
+      "to": [
+        9,
+        7.75,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "storage_partition",
+      "from": [
+        9,
+        2,
+        3
+      ],
+      "to": [
+        10,
+        14.75,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#service",
+          "uv": [
+            0.125,
+            0.125,
+            3.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_storage_cabinet",
+      "from": [
+        10,
+        2,
+        3
+      ],
+      "to": [
+        23,
+        14.75,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "staff_cash_drawer",
+      "from": [
+        -7,
+        10.5,
+        11
+      ],
+      "to": [
+        9,
+        14.75,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#service",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "drawer_pull",
+      "from": [
+        -1,
+        12.5,
+        15
+      ],
+      "to": [
+        3,
+        13,
+        15.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "down": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "cabinet_pull",
+      "from": [
+        11,
+        8,
+        15
+      ],
+      "to": [
+        11.5,
+        11,
+        15.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "east": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "west": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "up": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        },
+        "down": {
+          "texture": "#kitchen",
+          "uv": [
+            8.125,
+            12.125,
+            11.875,
+            15.875
+          ]
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        135,
+        0
+      ],
+      "translation": [
+        0,
+        -1,
+        0
+      ],
+      "scale": [
+        0.432,
+        0.432,
+        0.432
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.216,
+        0.216,
+        0.216
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        0.324,
+        0.324,
+        0.324
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.216,
+        0.216,
+        0.216
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.216,
+        0.216,
+        0.216
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "scale": [
+        0.252,
+        0.252,
+        0.252
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "scale": [
+        0.252,
+        0.252,
+        0.252
+      ]
+    }
+  }
+}

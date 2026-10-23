@@ -6,87 +6,304 @@
   },
   "elements": [
     {
-      "name": "duct_left_wall",
+      "name": "junction_edge_down",
       "from": [
         5,
-        0,
-        12
+        9,
+        5
       ],
       "to": [
-        5.5,
-        16,
-        16
+        11,
+        9.125,
+        6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "junction_edge_down",
+      "from": [
+        5,
+        9,
+        10
+      ],
+      "to": [
+        11,
+        9.125,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "junction_edge_up",
+      "from": [
+        5,
+        14.875,
+        5
+      ],
+      "to": [
+        11,
+        15,
+        6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "junction_edge_up",
+      "from": [
+        5,
+        14.875,
+        10
+      ],
+      "to": [
+        11,
+        15,
+        11
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "junction_edge_north",
+      "from": [
+        5,
+        9,
+        5
+      ],
+      "to": [
+        11,
+        10,
+        5.125
       ],
       "faces": {
         "north": {
           "texture": "#atlas",
           "uv": [
+            4.125,
             0.125,
-            0.125,
-            3.875,
+            7.875,
             3.875
           ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
-          ]
-        },
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
-          ],
-          "cullface": "up"
-        },
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
-          ],
-          "cullface": "down"
         }
       }
     },
     {
-      "name": "duct_right_wall",
+      "name": "junction_edge_north",
       "from": [
-        10.5,
-        0,
-        12
+        5,
+        14,
+        5
+      ],
+      "to": [
+        11,
+        15,
+        5.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "junction_edge_south",
+      "from": [
+        5,
+        9,
+        10.875
+      ],
+      "to": [
+        11,
+        10,
+        11
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "junction_edge_south",
+      "from": [
+        5,
+        14,
+        10.875
+      ],
+      "to": [
+        11,
+        15,
+        11
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "junction_edge_west",
+      "from": [
+        5,
+        9,
+        5
+      ],
+      "to": [
+        5.125,
+        10,
+        11
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "junction_edge_west",
+      "from": [
+        5,
+        14,
+        5
+      ],
+      "to": [
+        5.125,
+        15,
+        11
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "junction_edge_east",
+      "from": [
+        10.875,
+        9,
+        5
+      ],
+      "to": [
+        11,
+        10,
+        11
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "junction_edge_east",
+      "from": [
+        10.875,
+        14,
+        5
+      ],
+      "to": [
+        11,
+        15,
+        11
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            7.875,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "rectangular_duct_arm_up",
+      "from": [
+        5,
+        15,
+        6
       ],
       "to": [
         11,
         16,
-        16
+        10
       ],
       "faces": {
         "north": {
@@ -124,40 +341,20 @@
             3.875,
             3.875
           ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
-          ],
-          "cullface": "up"
-        },
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
-          ],
-          "cullface": "down"
         }
       }
     },
     {
-      "name": "duct_front_wall",
+      "name": "rectangular_duct_arm_down",
       "from": [
-        5.5,
+        5,
         0,
-        12
+        6
       ],
       "to": [
-        10.5,
-        16,
-        12.5
+        11,
+        9,
+        10
       ],
       "faces": {
         "north": {
@@ -178,78 +375,167 @@
             3.875
           ]
         },
-        "up": {
+        "west": {
           "texture": "#atlas",
           "uv": [
             0.125,
             0.125,
             3.875,
             3.875
-          ],
-          "cullface": "up"
+          ]
         },
-        "down": {
+        "east": {
           "texture": "#atlas",
           "uv": [
             0.125,
             0.125,
             3.875,
             3.875
-          ],
-          "cullface": "down"
+          ]
         }
       }
     },
     {
-      "name": "duct_rear_wall",
+      "name": "closed_end_up",
       "from": [
-        5.5,
-        0,
-        15.5
+        5,
+        15.875,
+        6
       ],
       "to": [
-        10.5,
+        11,
         16,
-        16
+        10
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "closed_end_down",
+      "from": [
+        5,
+        0,
+        6
+      ],
+      "to": [
+        11,
+        0.125,
+        10
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "closed_end_north",
+      "from": [
+        5,
+        10,
+        5
+      ],
+      "to": [
+        11,
+        14,
+        5.125
       ],
       "faces": {
         "north": {
           "texture": "#atlas",
           "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
+            12.125,
+            4.125,
+            15.875,
+            7.875
           ]
-        },
+        }
+      }
+    },
+    {
+      "name": "closed_end_south",
+      "from": [
+        5,
+        10,
+        10.875
+      ],
+      "to": [
+        11,
+        14,
+        11
+      ],
+      "faces": {
         "south": {
           "texture": "#atlas",
           "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
+            12.125,
+            4.125,
+            15.875,
+            7.875
           ]
-        },
-        "up": {
+        }
+      }
+    },
+    {
+      "name": "closed_end_west",
+      "from": [
+        5,
+        10,
+        5
+      ],
+      "to": [
+        5.125,
+        14,
+        11
+      ],
+      "faces": {
+        "west": {
           "texture": "#atlas",
           "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
-          ],
-          "cullface": "up"
-        },
-        "down": {
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "closed_end_east",
+      "from": [
+        10.875,
+        10,
+        5
+      ],
+      "to": [
+        11,
+        14,
+        11
+      ],
+      "faces": {
+        "east": {
           "texture": "#atlas",
           "uv": [
-            0.125,
-            0.125,
-            3.875,
-            3.875
-          ],
-          "cullface": "down"
+            12.125,
+            4.125,
+            15.875,
+            7.875
+          ]
         }
       }
     }

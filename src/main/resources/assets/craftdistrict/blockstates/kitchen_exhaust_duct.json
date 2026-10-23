@@ -1,20 +1,1746 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct",
-      "y": 0
+  "multipart": [
+    {
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_core"
+      }
     },
-    "facing=east": {
-      "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct",
-      "y": 90
+    {
+      "when": {
+        "OR": [
+          {
+            "down": "true",
+            "placement": "vertical|wall|ceiling"
+          },
+          {
+            "down": "false",
+            "up": "true",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_arm_down"
+      }
     },
-    "facing=south": {
-      "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct",
-      "y": 180
+    {
+      "when": {
+        "OR": [
+          {
+            "down": "false",
+            "up": "true",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_end_down"
+      }
     },
-    "facing=west": {
-      "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct",
-      "y": 270
+    {
+      "when": {
+        "OR": [
+          {
+            "down": "false",
+            "north": "true"
+          },
+          {
+            "down": "false",
+            "south": "true"
+          },
+          {
+            "down": "false",
+            "west": "true"
+          },
+          {
+            "down": "false",
+            "east": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_closed_down"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "up": "true"
+          },
+          {
+            "down": "true",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_arm_up"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "down": "true",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_end_up"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "up": "false",
+            "north": "true"
+          },
+          {
+            "up": "false",
+            "south": "true"
+          },
+          {
+            "up": "false",
+            "west": "true"
+          },
+          {
+            "up": "false",
+            "east": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_closed_up"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "true",
+            "west": "false",
+            "east": "false"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "south"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_arm_north"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "true",
+            "west": "false",
+            "east": "false"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "south"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_end_north"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "false",
+            "down": "true"
+          },
+          {
+            "north": "false",
+            "up": "true"
+          },
+          {
+            "north": "false",
+            "west": "true"
+          },
+          {
+            "north": "false",
+            "east": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_closed_north"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "south": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "true",
+            "south": "false",
+            "west": "false",
+            "east": "false"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "south"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_arm_south"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "down": "false",
+            "up": "false",
+            "north": "true",
+            "south": "false",
+            "west": "false",
+            "east": "false"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "south"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_end_south"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "south": "false",
+            "down": "true"
+          },
+          {
+            "south": "false",
+            "up": "true"
+          },
+          {
+            "south": "false",
+            "west": "true"
+          },
+          {
+            "south": "false",
+            "east": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_closed_south"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "west": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_arm_west"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_end_west"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "west": "false",
+            "down": "true"
+          },
+          {
+            "west": "false",
+            "up": "true"
+          },
+          {
+            "west": "false",
+            "north": "true"
+          },
+          {
+            "west": "false",
+            "south": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "south"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_closed_west"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "east": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "true",
+            "east": "false"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_arm_east"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "true",
+            "east": "false"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "west"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_end_east"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "east": "false",
+            "down": "true"
+          },
+          {
+            "east": "false",
+            "up": "true"
+          },
+          {
+            "east": "false",
+            "north": "true"
+          },
+          {
+            "east": "false",
+            "south": "true"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "vertical",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "south"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "hood",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "east"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "wall",
+            "facing": "west"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "north"
+          },
+          {
+            "down": "false",
+            "up": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false",
+            "placement": "ceiling",
+            "facing": "south"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_closed_east"
+      }
+    },
+    {
+      "when": {
+        "placement": "hood",
+        "down": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_hood_north"
+      }
+    },
+    {
+      "when": {
+        "placement": "wall",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_wall_north"
+      }
+    },
+    {
+      "when": {
+        "placement": "hood",
+        "down": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_hood_east"
+      }
+    },
+    {
+      "when": {
+        "placement": "wall",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_wall_east"
+      }
+    },
+    {
+      "when": {
+        "placement": "hood",
+        "down": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_hood_south"
+      }
+    },
+    {
+      "when": {
+        "placement": "wall",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_wall_south"
+      }
+    },
+    {
+      "when": {
+        "placement": "hood",
+        "down": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_hood_west"
+      }
+    },
+    {
+      "when": {
+        "placement": "wall",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_wall_west"
+      }
+    },
+    {
+      "when": {
+        "placement": "ceiling"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/kitchen_exhaust_duct_ceiling"
+      }
     }
-  }
+  ]
 }
