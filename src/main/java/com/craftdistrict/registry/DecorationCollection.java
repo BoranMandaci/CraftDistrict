@@ -139,7 +139,31 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Lighting.EXIT_SIGN_LEFT,
             CraftDistrictBlocks.Lighting.NEON_OPEN_SIGN,
             CraftDistrictBlocks.Lighting.DESK_LAMP,
-            CraftDistrictBlocks.Lighting.OUTDOOR_BOLLARD);
+            CraftDistrictBlocks.Lighting.OUTDOOR_BOLLARD),
+    RESTAURANT("restaurant", CraftDistrictBlocks.Restaurant.SQUARE_DINING_TABLE,
+            CraftDistrictBlocks.Restaurant.SQUARE_DINING_TABLE,
+            CraftDistrictBlocks.Restaurant.ROUND_CAFE_TABLE,
+            CraftDistrictBlocks.Restaurant.HIGH_BAR_TABLE,
+            CraftDistrictBlocks.Restaurant.WOODEN_MODULAR_TABLE,
+            CraftDistrictBlocks.Restaurant.INDUSTRIAL_MODULAR_TABLE,
+            CraftDistrictBlocks.Restaurant.DINER_MODULAR_TABLE,
+            CraftDistrictBlocks.Restaurant.TABLECLOTH_MODULAR_TABLE,
+            CraftDistrictBlocks.Restaurant.WOODEN_DINING_CHAIR,
+            CraftDistrictBlocks.Restaurant.MODERN_DINING_CHAIR,
+            CraftDistrictBlocks.Restaurant.CUSHIONED_DINING_CHAIR,
+            CraftDistrictBlocks.Restaurant.DINER_CHAIR,
+            CraftDistrictBlocks.Restaurant.INDUSTRIAL_BAR_STOOL,
+            CraftDistrictBlocks.Restaurant.CUSHIONED_BAR_CHAIR,
+            CraftDistrictBlocks.Restaurant.DINER_BOOTH_SEAT,
+            CraftDistrictBlocks.Restaurant.MODERN_BOOTH_SEAT,
+            CraftDistrictBlocks.Restaurant.WOODEN_DINING_BENCH,
+            CraftDistrictBlocks.Restaurant.COMMERCIAL_COOKING_RANGE,
+            CraftDistrictBlocks.Restaurant.KITCHEN_EXHAUST_HOOD,
+            CraftDistrictBlocks.Restaurant.KITCHEN_EXHAUST_DUCT,
+            CraftDistrictBlocks.Restaurant.COMMERCIAL_DEEP_FRYER,
+            CraftDistrictBlocks.Restaurant.COMMERCIAL_GRIDDLE,
+            CraftDistrictBlocks.Restaurant.STAINLESS_STEEL_PREP_TABLE,
+            CraftDistrictBlocks.Restaurant.KITCHEN_SINK_STATION);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

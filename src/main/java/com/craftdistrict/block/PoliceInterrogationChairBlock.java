@@ -10,15 +10,17 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Fixed institutional chair on the existing solid-surface lifecycle; no seating. */
-public final class PoliceInterrogationChairBlock extends CashRegisterBlock {
+/** Fixed institutional chair on the existing solid-surface lifecycle; shared sitting behavior. */
+public final class PoliceInterrogationChairBlock extends RestaurantSeatBlock {
     //? if >=1.21 {
     public static final MapCodec<PoliceInterrogationChairBlock> CODEC = simpleCodec(PoliceInterrogationChairBlock::new);
     //?}
 
     public PoliceInterrogationChairBlock(Properties properties) {
-        super(properties);
+        super(Design.DINER, properties);
     }
+
+    @Override public double seatHeight() { return 8.5/16; }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {

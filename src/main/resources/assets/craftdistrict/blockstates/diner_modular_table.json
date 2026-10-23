@@ -1,0 +1,145 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_top"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_edge",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "false"
+          },
+          {
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_corner",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "leg_nw": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_leg",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_edge",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "east": "false"
+          },
+          {
+            "north": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_corner",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "leg_ne": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_leg",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_edge",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "south": "false"
+          },
+          {
+            "east": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_corner",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "leg_se": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_leg",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_edge",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "west": "false"
+          },
+          {
+            "south": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_corner",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "leg_sw": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/restaurant/diner_modular_table_leg",
+        "y": 270
+      }
+    }
+  ]
+}

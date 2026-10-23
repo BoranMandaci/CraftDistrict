@@ -1,0 +1,660 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "atlas": "craftdistrict:block/restaurant/seating",
+    "particle": "craftdistrict:block/particles/particle_wood"
+  },
+  "elements": [
+    {
+      "name": "seat_frame",
+      "from": [
+        2.75,
+        7,
+        2.75
+      ],
+      "to": [
+        13.25,
+        8,
+        13.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6.625,
+            0.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6.625,
+            0.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6.6875,
+            0.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6.6875,
+            0.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6.625,
+            5.375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6.625,
+            5.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "support_leg",
+      "from": [
+        3,
+        0,
+        3
+      ],
+      "to": [
+        4.5,
+        7,
+        4.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "support_leg",
+      "from": [
+        3,
+        0,
+        11.5
+      ],
+      "to": [
+        4.5,
+        7,
+        13.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "support_leg",
+      "from": [
+        11.5,
+        0,
+        3
+      ],
+      "to": [
+        13.0,
+        7,
+        4.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "support_leg",
+      "from": [
+        11.5,
+        0,
+        11.5
+      ],
+      "to": [
+        13.0,
+        7,
+        13.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            3.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "cushioned_seat",
+      "from": [
+        3,
+        8,
+        3
+      ],
+      "to": [
+        13,
+        9.25,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.5,
+            8.625
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.5,
+            8.625
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.375,
+            8.625
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.375,
+            8.625
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.5,
+            12.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.5,
+            12.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "soft_seat_crown",
+      "from": [
+        3.5,
+        9.25,
+        3.5
+      ],
+      "to": [
+        12.5,
+        9.5,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.25,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.25,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.125,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.125,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            2.25,
+            12.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "back_post",
+      "from": [
+        2.75,
+        8,
+        12
+      ],
+      "to": [
+        4.25,
+        19.5,
+        13.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            5.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            5.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            5.75
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            5.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "back_post",
+      "from": [
+        11.75,
+        8,
+        12
+      ],
+      "to": [
+        13.25,
+        19.5,
+        13.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            5.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            5.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            5.75
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            5.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            4.375,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_back_rail",
+      "from": [
+        4.25,
+        18.75,
+        12
+      ],
+      "to": [
+        11.75,
+        19.5,
+        13.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            5.875,
+            0.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            5.875,
+            0.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            5.875,
+            0.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            5.875,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "upholstered_back",
+      "from": [
+        4.25,
+        10,
+        12
+      ],
+      "to": [
+        11.75,
+        18.75,
+        13.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.875,
+            12.375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.875,
+            12.375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.875,
+            8.75
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -14,8 +14,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Simple cached chair envelopes; solid-floor placement, no seating. */
-public final class OfficeChairBlock extends CashRegisterBlock {
+/** Simple cached chair envelopes; solid-floor placement, shared sitting behavior. */
+public final class OfficeChairBlock extends RestaurantSeatBlock {
     private static final VoxelShape[] SHAPES = rotations(Shapes.or(
             Block.box(1.5, 0, 1.5, 14.5, 2, 14.5),
             Block.box(7.125, 2, 7.125, 8.875, 7.25, 8.875),
@@ -28,7 +28,7 @@ public final class OfficeChairBlock extends CashRegisterBlock {
     //?}
 
     public OfficeChairBlock(Properties properties) {
-        super(properties);
+        super(Design.MODERN, properties);
     }
 
     private static VoxelShape[] rotations(VoxelShape north) {
@@ -44,6 +44,8 @@ public final class OfficeChairBlock extends CashRegisterBlock {
         }
         return result;
     }
+
+    @Override public double seatHeight() { return 8.75/16; }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {

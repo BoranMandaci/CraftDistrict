@@ -1,0 +1,876 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "atlas": "craftdistrict:block/restaurant/dining_tables",
+    "particle": "craftdistrict:block/particles/particle_wood"
+  },
+  "elements": [
+    {
+      "name": "dark_bar_top",
+      "from": [
+        1.5,
+        17.75,
+        1.5
+      ],
+      "to": [
+        14.5,
+        19,
+        14.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            7.25,
+            0.625
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            7.25,
+            0.625
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            7.25,
+            0.625
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            7.25,
+            0.625
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            7.25,
+            6.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            7.25,
+            6.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "metal_under_top",
+      "from": [
+        2,
+        17.25,
+        2
+      ],
+      "to": [
+        14,
+        17.75,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            3.0,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            3.0,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            3.0,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            3.0,
+            8.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            3.0,
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "steel_column",
+      "from": [
+        6.5,
+        1,
+        6.5
+      ],
+      "to": [
+        9.5,
+        17.25,
+        9.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            0.75,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            0.75,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            0.75,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            0.75,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "base_hub",
+      "from": [
+        6,
+        0,
+        6
+      ],
+      "to": [
+        10,
+        1,
+        10
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            10.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "stable_steel_foot_0",
+      "from": [
+        6,
+        0,
+        2
+      ],
+      "to": [
+        10,
+        1,
+        6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            10.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "stable_steel_foot_1",
+      "from": [
+        10,
+        0,
+        6
+      ],
+      "to": [
+        14,
+        1,
+        10
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            10.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "stable_steel_foot_2",
+      "from": [
+        6,
+        0,
+        10
+      ],
+      "to": [
+        10,
+        1,
+        14
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            10.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "stable_steel_foot_3",
+      "from": [
+        2,
+        0,
+        6
+      ],
+      "to": [
+        6,
+        1,
+        10
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            10.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            8,
+            1.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "supported_footrest",
+      "from": [
+        4,
+        4,
+        4
+      ],
+      "to": [
+        12,
+        4.75,
+        5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            6.0,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            6.0,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            6.0,
+            8.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            6.0,
+            8.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "supported_footrest",
+      "from": [
+        4,
+        4,
+        11
+      ],
+      "to": [
+        12,
+        4.75,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            6.0,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            6.0,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            6.0,
+            8.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            6.0,
+            8.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "supported_footrest",
+      "from": [
+        4,
+        4,
+        5
+      ],
+      "to": [
+        5,
+        4.75,
+        11
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            5.5,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            5.5,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            11.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            11.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "supported_footrest",
+      "from": [
+        11,
+        4,
+        5
+      ],
+      "to": [
+        12,
+        4.75,
+        11
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            5.5,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            5.5,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            11.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            11.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "supported_footrest",
+      "from": [
+        7.5,
+        4,
+        5
+      ],
+      "to": [
+        8.5,
+        4.75,
+        6.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.375,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.375,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "supported_footrest",
+      "from": [
+        7.5,
+        4,
+        9.5
+      ],
+      "to": [
+        8.5,
+        4.75,
+        11
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.375,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.375,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            8,
+            4.25,
+            8.75
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,6 +1,9 @@
 package com.craftdistrict.client;
 
 import com.craftdistrict.registry.CraftDistrictBlocks;
+import com.craftdistrict.registry.CraftDistrictEntities;
+import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
+import net.minecraft.client.renderer.entity.NoopRenderer;
 import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
 import net.minecraft.client.renderer.RenderType;
@@ -10,6 +13,7 @@ public final class CraftDistrictClient {
     }
 
     public static void init() {
+        EntityRendererRegistry.register(CraftDistrictEntities.SEAT, NoopRenderer::new);
         ClientLifecycleEvent.CLIENT_SETUP.register(client -> {
             RenderTypeRegistry.register(
                 RenderType.cutout(), CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get(),

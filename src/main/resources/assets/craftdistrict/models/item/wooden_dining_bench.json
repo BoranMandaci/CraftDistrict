@@ -1,0 +1,736 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "atlas": "craftdistrict:block/restaurant/seating",
+    "particle": "craftdistrict:block/particles/particle_wood"
+  },
+  "elements": [
+    {
+      "name": "bench_seat_slat",
+      "from": [
+        0,
+        7.75,
+        3
+      ],
+      "to": [
+        16,
+        9,
+        6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            0.625
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            0.625
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.75,
+            0.625
+          ],
+          "cullface": "east"
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.75,
+            0.625
+          ],
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            1.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            1.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "bench_seat_slat",
+      "from": [
+        0,
+        7.75,
+        6.25
+      ],
+      "to": [
+        16,
+        9,
+        9.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            0.625
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            0.625
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.875,
+            0.625
+          ],
+          "cullface": "east"
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.875,
+            0.625
+          ],
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "bench_seat_slat",
+      "from": [
+        0,
+        7.75,
+        10
+      ],
+      "to": [
+        16,
+        9,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            0.625
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            0.625
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.75,
+            0.625
+          ],
+          "cullface": "east"
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.75,
+            0.625
+          ],
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            1.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            4,
+            1.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "continuous_under_beam",
+      "from": [
+        0,
+        5.75,
+        7.25
+      ],
+      "to": [
+        16,
+        6.75,
+        8.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            16,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            16,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            12.375,
+            8.5
+          ],
+          "cullface": "east"
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            12.375,
+            8.5
+          ],
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            16,
+            8.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            16,
+            8.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "trestle_leg",
+      "from": [
+        1.25,
+        0,
+        4
+      ],
+      "to": [
+        3.25,
+        7.75,
+        5.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "trestle_leg",
+      "from": [
+        1.25,
+        0,
+        10.5
+      ],
+      "to": [
+        3.25,
+        7.75,
+        12.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "trestle_crossbar",
+      "from": [
+        1.25,
+        5,
+        5.5
+      ],
+      "to": [
+        3.25,
+        5.75,
+        10.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            13.25,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            13.25,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            12.5,
+            10.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            12.5,
+            10.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "trestle_leg",
+      "from": [
+        12.75,
+        0,
+        4
+      ],
+      "to": [
+        14.75,
+        7.75,
+        5.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "trestle_leg",
+      "from": [
+        12.75,
+        0,
+        10.5
+      ],
+      "to": [
+        14.75,
+        7.75,
+        12.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0,
+            0,
+            0.5,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "trestle_crossbar",
+      "from": [
+        12.75,
+        5,
+        5.5
+      ],
+      "to": [
+        14.75,
+        5.75,
+        10.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            13.25,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            13.25,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            12.5,
+            10.5
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            8,
+            12.5,
+            10.5
+          ]
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        135,
+        0
+      ],
+      "translation": [
+        0,
+        -1,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  }
+}

@@ -62,6 +62,14 @@ import com.craftdistrict.block.ExitSignBlock;
 import com.craftdistrict.block.TrackLightBlock;
 import com.craftdistrict.block.FloorLightBlock;
 import com.craftdistrict.block.OpenSignBlock;
+import com.craftdistrict.block.DiningTableBlock;
+import com.craftdistrict.block.ModularDiningTableBlock;
+import com.craftdistrict.block.RestaurantSeatBlock;
+import com.craftdistrict.block.ConnectedRestaurantSeatBlock;
+import com.craftdistrict.block.RestaurantKitchenBlock;
+import com.craftdistrict.block.KitchenExhaustHoodBlock;
+import com.craftdistrict.block.KitchenExhaustDuctBlock;
+import com.craftdistrict.block.StainlessSteelPrepTableBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -89,6 +97,7 @@ public final class CraftDistrictBlocks {
         FireStation.initialize();
         Supermarket.initialize();
         Lighting.initialize();
+        Restaurant.initialize();
         BLOCKS.register();
         ITEMS.register();
     }
@@ -101,6 +110,67 @@ public final class CraftDistrictBlocks {
                 ? new BedItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
+    }
+
+    public static final class Restaurant {
+        public static final RegistrySupplier<DiningTableBlock> SQUARE_DINING_TABLE = register("square_dining_table",
+                () -> new DiningTableBlock(DiningTableBlock.Design.SQUARE, woodProperties()));
+        public static final RegistrySupplier<DiningTableBlock> ROUND_CAFE_TABLE = register("round_cafe_table",
+                () -> new DiningTableBlock(DiningTableBlock.Design.CAFE, woodProperties()));
+        public static final RegistrySupplier<DiningTableBlock> HIGH_BAR_TABLE = register("high_bar_table",
+                () -> new DiningTableBlock(DiningTableBlock.Design.BAR, metalProperties()));
+        public static final RegistrySupplier<ModularDiningTableBlock> WOODEN_MODULAR_TABLE = register("wooden_modular_table",
+                () -> new ModularDiningTableBlock(woodProperties()));
+        public static final RegistrySupplier<ModularDiningTableBlock> INDUSTRIAL_MODULAR_TABLE = register("industrial_modular_table",
+                () -> new ModularDiningTableBlock(metalProperties()));
+        public static final RegistrySupplier<ModularDiningTableBlock> DINER_MODULAR_TABLE = register("diner_modular_table",
+                () -> new ModularDiningTableBlock(metalProperties()));
+        public static final RegistrySupplier<ModularDiningTableBlock> TABLECLOTH_MODULAR_TABLE = register("tablecloth_modular_table",
+                () -> new ModularDiningTableBlock(woodProperties()));
+        public static final RegistrySupplier<RestaurantSeatBlock> WOODEN_DINING_CHAIR = register("wooden_dining_chair",
+                () -> new RestaurantSeatBlock(RestaurantSeatBlock.Design.WOODEN, woodProperties()));
+        public static final RegistrySupplier<RestaurantSeatBlock> MODERN_DINING_CHAIR = register("modern_dining_chair",
+                () -> new RestaurantSeatBlock(RestaurantSeatBlock.Design.MODERN, metalProperties()));
+        public static final RegistrySupplier<RestaurantSeatBlock> CUSHIONED_DINING_CHAIR = register("cushioned_dining_chair",
+                () -> new RestaurantSeatBlock(RestaurantSeatBlock.Design.CUSHIONED, woodProperties()));
+        public static final RegistrySupplier<RestaurantSeatBlock> DINER_CHAIR = register("diner_chair",
+                () -> new RestaurantSeatBlock(RestaurantSeatBlock.Design.DINER, metalProperties()));
+        public static final RegistrySupplier<RestaurantSeatBlock> INDUSTRIAL_BAR_STOOL = register("industrial_bar_stool",
+                () -> new RestaurantSeatBlock(RestaurantSeatBlock.Design.BAR_STOOL, metalProperties()));
+        public static final RegistrySupplier<RestaurantSeatBlock> CUSHIONED_BAR_CHAIR = register("cushioned_bar_chair",
+                () -> new RestaurantSeatBlock(RestaurantSeatBlock.Design.BAR_CHAIR, woodProperties()));
+        public static final RegistrySupplier<ConnectedRestaurantSeatBlock> DINER_BOOTH_SEAT = register("diner_booth_seat",
+                () -> new ConnectedRestaurantSeatBlock(RestaurantSeatBlock.Design.DINER_BOOTH, metalProperties()));
+        public static final RegistrySupplier<ConnectedRestaurantSeatBlock> MODERN_BOOTH_SEAT = register("modern_booth_seat",
+                () -> new ConnectedRestaurantSeatBlock(RestaurantSeatBlock.Design.MODERN_BOOTH, woodProperties()));
+        public static final RegistrySupplier<ConnectedRestaurantSeatBlock> WOODEN_DINING_BENCH = register("wooden_dining_bench",
+                () -> new ConnectedRestaurantSeatBlock(RestaurantSeatBlock.Design.BENCH, woodProperties()));
+        public static final RegistrySupplier<RestaurantKitchenBlock> COMMERCIAL_COOKING_RANGE = register("commercial_cooking_range",
+                () -> new RestaurantKitchenBlock(RestaurantKitchenBlock.Equipment.RANGE, metalProperties()));
+        public static final RegistrySupplier<KitchenExhaustHoodBlock> KITCHEN_EXHAUST_HOOD = register("kitchen_exhaust_hood",
+                () -> new KitchenExhaustHoodBlock(metalProperties()));
+        public static final RegistrySupplier<KitchenExhaustDuctBlock> KITCHEN_EXHAUST_DUCT = register("kitchen_exhaust_duct",
+                () -> new KitchenExhaustDuctBlock(metalProperties()));
+        public static final RegistrySupplier<RestaurantKitchenBlock> COMMERCIAL_DEEP_FRYER = register("commercial_deep_fryer",
+                () -> new RestaurantKitchenBlock(RestaurantKitchenBlock.Equipment.FRYER, metalProperties()));
+        public static final RegistrySupplier<RestaurantKitchenBlock> COMMERCIAL_GRIDDLE = register("commercial_griddle",
+                () -> new RestaurantKitchenBlock(RestaurantKitchenBlock.Equipment.GRIDDLE, metalProperties()));
+        public static final RegistrySupplier<RestaurantKitchenBlock> STAINLESS_STEEL_PREP_TABLE = register("stainless_steel_prep_table",
+                () -> new StainlessSteelPrepTableBlock(metalProperties()));
+        public static final RegistrySupplier<RestaurantKitchenBlock> KITCHEN_SINK_STATION = register("kitchen_sink_station",
+                () -> new RestaurantKitchenBlock(RestaurantKitchenBlock.Equipment.SINK, metalProperties()));
+
+        private static BlockBehaviour.Properties woodProperties() {
+            return BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.WOOD).noOcclusion();
+        }
+
+        private static BlockBehaviour.Properties metalProperties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
+        }
+
+        private Restaurant() { }
+
+        private static void initialize() { }
     }
 
     public static final class Bakery {
