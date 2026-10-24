@@ -9,6 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -188,6 +189,12 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
                 REMOVING_LINKED_PART.remove();
             }
         }
+    }
+
+    /** Ignore temporary missing partners while the shared removal loop owns this structure. */
+    protected final boolean isRemovingLinkedStructure(BlockState state, LevelAccessor level, BlockPos pos) {
+        return level instanceof Level world && REMOVING_LINKED_PART.get().contains(
+                new RemovalKey(world, this, pos.subtract(partOffset(state, partIndex(state)))));
     }
 
     @Override

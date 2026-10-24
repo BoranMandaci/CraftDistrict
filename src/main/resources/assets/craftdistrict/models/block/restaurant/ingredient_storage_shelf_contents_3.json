@@ -1,0 +1,472 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "kitchen": "craftdistrict:block/restaurant/kitchen",
+    "storage": "craftdistrict:block/restaurant/storage",
+    "particle": "craftdistrict:block/particles/particle_metal"
+  },
+  "elements": [
+    {
+      "name": "interior_shelf",
+      "from": [
+        0,
+        5.75,
+        3
+      ],
+      "to": [
+        14.75,
+        6.5,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            8.125,
+            1.0,
+            11.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            1.0,
+            8.125,
+            1.9375,
+            11.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            8.125,
+            1.9375,
+            11.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            1.0,
+            8.125,
+            1.9375,
+            11.875
+          ]
+        },
+        "down": {
+          "texture": "#storage",
+          "uv": [
+            1.0,
+            8.125,
+            1.9375,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "shelf_front_edge",
+      "from": [
+        0,
+        0,
+        3
+      ],
+      "to": [
+        14.75,
+        0.25,
+        3.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            12.125,
+            14.5,
+            13.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            14.5,
+            12.125,
+            14.9375,
+            13.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            12.125,
+            14.9375,
+            13.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            14.5,
+            12.125,
+            14.9375,
+            13.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "shelf_front_edge",
+      "from": [
+        0,
+        6.5,
+        3
+      ],
+      "to": [
+        14.75,
+        6.75,
+        3.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            12.125,
+            14.5,
+            13.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            14.5,
+            12.125,
+            14.9375,
+            13.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            12.125,
+            14.9375,
+            13.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            14.5,
+            12.125,
+            14.9375,
+            13.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "sealed_ingredient_container",
+      "from": [
+        1.5,
+        0,
+        5.0
+      ],
+      "to": [
+        11.5,
+        3.25,
+        13.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            2.0625,
+            0.125,
+            3.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "container_lid",
+      "from": [
+        1.375,
+        3.25,
+        4.875
+      ],
+      "to": [
+        11.625,
+        3.625,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "sealed_ingredient_container",
+      "from": [
+        2.5,
+        6.5,
+        5.0
+      ],
+      "to": [
+        11.5,
+        11.25,
+        13.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            6.0625,
+            0.125,
+            7.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            6.0625,
+            0.125,
+            7.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            6.0625,
+            0.125,
+            7.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            6.0625,
+            0.125,
+            7.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "container_lid",
+      "from": [
+        2.375,
+        11.25,
+        4.875
+      ],
+      "to": [
+        11.625,
+        11.625,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#storage",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "dry_storage_shelf_label",
+      "from": [
+        4,
+        10,
+        4.875
+      ],
+      "to": [
+        10,
+        10.75,
+        5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            4.125,
+            15.9375,
+            7.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            4.125,
+            15.9375,
+            7.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            4.125,
+            15.9375,
+            7.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            4.125,
+            15.9375,
+            7.875
+          ]
+        },
+        "down": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            4.125,
+            15.9375,
+            7.875
+          ]
+        }
+      }
+    }
+  ]
+}

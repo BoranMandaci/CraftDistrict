@@ -73,6 +73,11 @@ import com.craftdistrict.block.RestaurantServiceCounterBlock;
 import com.craftdistrict.block.RestaurantServicePropBlock;
 import com.craftdistrict.block.RestaurantServiceWallBlock;
 import com.craftdistrict.block.RestaurantServingCartBlock;
+import com.craftdistrict.block.RestaurantStorageCabinetBlock;
+import com.craftdistrict.block.RestaurantStoragePropBlock;
+import com.craftdistrict.block.RestaurantStorageWallBlock;
+import com.craftdistrict.block.CommercialPizzaOvenBlock;
+import com.craftdistrict.block.KitchenTrashBinBlock;
 import com.craftdistrict.block.KitchenOrderDisplayBlock;
 import com.craftdistrict.block.StainlessSteelPrepTableBlock;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -184,6 +189,28 @@ public final class CraftDistrictBlocks {
                 () -> new KitchenOrderDisplayBlock(metalProperties()));
         public static final RegistrySupplier<RestaurantServicePropBlock> RESTAURANT_MENU_BOARD = register("restaurant_menu_board",
                 () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.MENU_BOARD, woodProperties()));
+        public static final RegistrySupplier<RestaurantStorageCabinetBlock> COMMERCIAL_REFRIGERATOR = register("commercial_refrigerator",
+                () -> new RestaurantStorageCabinetBlock(RestaurantStorageCabinetBlock.Design.REFRIGERATOR, metalProperties()));
+        public static final RegistrySupplier<RestaurantStorageCabinetBlock> INGREDIENT_STORAGE_SHELF = register("ingredient_storage_shelf",
+                () -> new RestaurantStorageCabinetBlock(RestaurantStorageCabinetBlock.Design.PANTRY, metalProperties()));
+        public static final RegistrySupplier<RestaurantStorageWallBlock> POT_PAN_RACK = register("pot_pan_rack",
+                () -> new RestaurantStorageWallBlock(RestaurantStorageWallBlock.Design.COOKWARE, metalProperties()));
+        public static final RegistrySupplier<RestaurantStorageWallBlock> KITCHEN_KNIFE_RACK = register("kitchen_knife_rack",
+                () -> new RestaurantStorageWallBlock(RestaurantStorageWallBlock.Design.KNIVES, metalProperties()));
+        public static final RegistrySupplier<RestaurantStoragePropBlock> COMMERCIAL_DISHWASHER = register("commercial_dishwasher",
+                () -> new RestaurantStoragePropBlock(RestaurantStoragePropBlock.Design.DISHWASHER, metalProperties()));
+        public static final RegistrySupplier<RestaurantStoragePropBlock> COMMERCIAL_MICROWAVE = register("commercial_microwave",
+                () -> new RestaurantStoragePropBlock(RestaurantStoragePropBlock.Design.MICROWAVE, metalProperties()));
+        public static final RegistrySupplier<CommercialPizzaOvenBlock> COMMERCIAL_PIZZA_OVEN = register("commercial_pizza_oven",
+                () -> new CommercialPizzaOvenBlock(metalProperties()));
+        public static final RegistrySupplier<RestaurantStoragePropBlock> CUTTING_BOARD_STATION = register("cutting_board_station",
+                () -> new RestaurantStoragePropBlock(RestaurantStoragePropBlock.Design.CUTTING_BOARD, woodProperties()));
+        public static final RegistrySupplier<RestaurantStorageWallBlock> SPICE_RACK = register("spice_rack",
+                () -> new RestaurantStorageWallBlock(RestaurantStorageWallBlock.Design.SPICES, metalProperties()));
+        public static final RegistrySupplier<KitchenTrashBinBlock> KITCHEN_TRASH_BIN = register("kitchen_trash_bin",
+                () -> new KitchenTrashBinBlock(metalProperties()));
+        public static final RegistrySupplier<RestaurantStoragePropBlock> DISH_DRYING_RACK = register("dish_drying_rack",
+                () -> new RestaurantStoragePropBlock(RestaurantStoragePropBlock.Design.DRYING_RACK, metalProperties()));
 
         private static BlockBehaviour.Properties woodProperties() {
             return BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.WOOD).noOcclusion();

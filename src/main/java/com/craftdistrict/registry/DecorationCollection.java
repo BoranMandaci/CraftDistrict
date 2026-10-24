@@ -173,7 +173,18 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Restaurant.CONDIMENT_STATION,
             CraftDistrictBlocks.Restaurant.COMMERCIAL_COFFEE_MACHINE,
             CraftDistrictBlocks.Restaurant.KITCHEN_ORDER_DISPLAY,
-            CraftDistrictBlocks.Restaurant.RESTAURANT_MENU_BOARD);
+            CraftDistrictBlocks.Restaurant.RESTAURANT_MENU_BOARD,
+            CraftDistrictBlocks.Restaurant.COMMERCIAL_REFRIGERATOR,
+            CraftDistrictBlocks.Restaurant.INGREDIENT_STORAGE_SHELF,
+            CraftDistrictBlocks.Restaurant.POT_PAN_RACK,
+            CraftDistrictBlocks.Restaurant.KITCHEN_KNIFE_RACK,
+            CraftDistrictBlocks.Restaurant.COMMERCIAL_DISHWASHER,
+            CraftDistrictBlocks.Restaurant.COMMERCIAL_MICROWAVE,
+            CraftDistrictBlocks.Restaurant.COMMERCIAL_PIZZA_OVEN,
+            CraftDistrictBlocks.Restaurant.CUTTING_BOARD_STATION,
+            CraftDistrictBlocks.Restaurant.SPICE_RACK,
+            CraftDistrictBlocks.Restaurant.KITCHEN_TRASH_BIN,
+            CraftDistrictBlocks.Restaurant.DISH_DRYING_RACK);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;
