@@ -33,6 +33,7 @@ public final class KitchenExhaustDuctBlock extends RotatableDecorationBlock {
             NORTH = BooleanProperty.create("north"), SOUTH = BooleanProperty.create("south"),
             WEST = BooleanProperty.create("west"), EAST = BooleanProperty.create("east");
     private static final BooleanProperty[] PORTS = {DOWN, UP, NORTH, SOUTH, WEST, EAST};
+    private static final Direction[] DIRECTIONS = Direction.values();
     private static final VoxelShape CORE = Block.box(5, 9, 5, 11, 15, 11);
     private static final VoxelShape[] ARMS = {
             Block.box(5, 0, 6, 11, 9, 10), Block.box(5, 15, 6, 11, 16, 10),
@@ -64,7 +65,7 @@ public final class KitchenExhaustDuctBlock extends RotatableDecorationBlock {
     public static BooleanProperty port(Direction direction) { return PORTS[direction.get3DDataValue()]; }
     static int connectionsMask(BlockState state) {
         int mask = 0;
-        for (Direction direction : Direction.values()) if (state.getValue(port(direction))) mask |= 1 << direction.get3DDataValue();
+        for (Direction direction : DIRECTIONS) if (state.getValue(port(direction))) mask |= 1 << direction.get3DDataValue();
         return mask;
     }
     static int visiblePorts(int actual, Placement placement, Direction facing) {
@@ -89,7 +90,7 @@ public final class KitchenExhaustDuctBlock extends RotatableDecorationBlock {
         boolean hood = below.getBlock() instanceof KitchenExhaustHoodBlock;
         if (hood) state = state.setValue(PLACEMENT, Placement.HOOD).setValue(FACING, below.getValue(FACING));
         else if (state.getValue(PLACEMENT) == Placement.HOOD) state = state.setValue(PLACEMENT, Placement.VERTICAL);
-        for (Direction direction : Direction.values()) {
+        for (Direction direction : DIRECTIONS) {
             BlockPos neighborPos = pos.relative(direction);
             boolean connected = level.hasChunkAt(neighborPos) && (level.getBlockState(neighborPos).is(this) || direction == Direction.DOWN && hood);
             state = state.setValue(port(direction), connected);
@@ -119,33 +120,45 @@ public final class KitchenExhaustDuctBlock extends RotatableDecorationBlock {
     }
     @Override public BlockState updateShape(BlockState state, Direction direction, BlockState neighbor,
                                             LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
-        return connections(state, level, pos);
+        // Below can change the hood adapter and facing; other updates affect one port.
+        if (direction == Direction.DOWN) return connections(state, level, pos);
+        return state.setValue(port(direction), level.hasChunkAt(neighborPos) && neighbor.is(this));
     }
     @Override public BlockState rotate(BlockState state, Rotation rotation) {
         BlockState result = super.rotate(state, rotation);
-        for (Direction direction : Direction.values()) result = result.setValue(port(rotation.rotate(direction)), state.getValue(port(direction)));
+        for (Direction direction : DIRECTIONS) result = result.setValue(port(rotation.rotate(direction)), state.getValue(port(direction)));
         return result;
     }
     @Override public BlockState mirror(BlockState state, Mirror mirror) {
         BlockState result = state.setValue(FACING, mirror.mirror(state.getValue(FACING)));
-        for (Direction direction : Direction.values()) result = result.setValue(port(mirror.mirror(direction)), state.getValue(port(direction)));
+        for (Direction direction : DIRECTIONS) result = result.setValue(port(mirror.mirror(direction)), state.getValue(port(direction)));
         return result;
     }
     private static VoxelShape[][][] buildShapes() {
         VoxelShape[][][] result = new VoxelShape[4][4][64];
         VoxelShape[] base = new VoxelShape[64];
+        VoxelShape[][] walls = new VoxelShape[4][64], adapters = new VoxelShape[4][64];
+        VoxelShape[] ceilings = new VoxelShape[64];
         for (int visible = 0; visible < 64; visible++) {
             VoxelShape shape = CORE;
-            for (Direction direction : Direction.values()) if ((visible & 1 << direction.get3DDataValue()) != 0) shape = Shapes.or(shape, ARMS[direction.get3DDataValue()]);
+            for (Direction direction : DIRECTIONS) if ((visible & 1 << direction.get3DDataValue()) != 0) shape = Shapes.or(shape, ARMS[direction.get3DDataValue()]);
             base[visible] = shape.optimize();
         }
         for (Placement placement : Placement.values()) for (int turn = 0; turn < 4; turn++) for (int actual = 0; actual < 64; actual++) {
             Direction facing = switch (turn) { case 1 -> Direction.EAST; case 2 -> Direction.SOUTH; case 3 -> Direction.WEST; default -> Direction.NORTH; };
             int visible = visiblePorts(actual, placement, facing);
             VoxelShape shape = base[visible];
-            if (placement == Placement.WALL) shape = Shapes.or(shape, WALL_MOUNTS[turn]).optimize();
-            else if (placement == Placement.CEILING) shape = Shapes.or(shape, CEILING_MOUNT).optimize();
-            else if (placement == Placement.HOOD && (actual & 1) != 0) shape = Shapes.or(base[visible & ~1], HOOD_ADAPTERS[turn]).optimize();
+            if (placement == Placement.WALL) {
+                if (walls[turn][visible] == null) walls[turn][visible] = Shapes.or(shape, WALL_MOUNTS[turn]).optimize();
+                shape = walls[turn][visible];
+            } else if (placement == Placement.CEILING) {
+                if (ceilings[visible] == null) ceilings[visible] = Shapes.or(shape, CEILING_MOUNT).optimize();
+                shape = ceilings[visible];
+            } else if (placement == Placement.HOOD && (actual & 1) != 0) {
+                int arms = visible & ~1;
+                if (adapters[turn][arms] == null) adapters[turn][arms] = Shapes.or(base[arms], HOOD_ADAPTERS[turn]).optimize();
+                shape = adapters[turn][arms];
+            }
             result[placement.ordinal()][turn][actual] = shape;
         }
         return result;

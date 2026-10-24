@@ -63,8 +63,12 @@ public final class StainlessSteelPrepTableBlock extends RestaurantKitchenBlock {
     @Override public BlockState updateShape(BlockState state, Direction direction, BlockState neighbor,
                                             LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
         BlockState supported = super.updateShape(state, direction, neighbor, level, pos, neighborPos);
-        return supported.isAir() || !direction.getAxis().isHorizontal()
-                ? supported : connections(state, level, pos);
+        if (supported.isAir() || !direction.getAxis().isHorizontal()) return supported;
+        Direction facing = state.getValue(FACING);
+        BooleanProperty join = direction == facing ? FRONT : direction == facing.getOpposite() ? BACK
+                : direction == facing.getCounterClockWise() ? LEFT : RIGHT;
+        // A neighbor notification changes only this edge; placement initializes all four.
+        return supported.setValue(join, level.hasChunkAt(neighborPos) && neighbor.is(this));
     }
 
     @Override public boolean skipRendering(BlockState state, BlockState neighbor, Direction direction) {

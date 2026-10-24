@@ -1,7 +1,18 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+import java.io.FilterReader
+import java.io.Reader
+import java.io.StringReader
+
 plugins {
     id("dev.architectury.loom")
     id("architectury-plugin")
 }
+
+// Compact distribution copies only; keep editable source assets formatted.
+class CompactJsonReader(reader: Reader) : FilterReader(
+    StringReader(JsonOutput.toJson(JsonSlurper().parse(reader)))
+)
 
 val minecraftVersion = stonecutter.current.version
 val modId = project.property("modId") as String
@@ -49,6 +60,7 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 tasks.processResources {
+    filteringCharset = "UTF-8"
     // Carry the unmodified project license into every platform's common bundle.
     from(rootProject.file("LICENSE"))
     inputs.property("resource_pack_format", resourcePackFormat)
@@ -58,6 +70,9 @@ tasks.processResources {
     }
     filesMatching("craftdistrict.mixins.json") {
         expand("mixin_java_version" to "JAVA_$javaVersion")
+    }
+    filesMatching(listOf("assets/**/*.json", "data/**/*.json")) {
+        filter(CompactJsonReader::class.java)
     }
     if (minecraftVersion == "1.21.1") {
         eachFile {

@@ -45,6 +45,7 @@ public final class ConnectedRestaurantSeatBlock extends RestaurantSeatBlock {
         OUTER_RIGHT_MIDDLE(true,true,false,Corner.OUTER_RIGHT);
         public final boolean left, right, support;
         public final Corner corner;
+        private static final Connection[][] BY_CORNER = indexConnections();
         Connection(boolean left, boolean right, boolean support, Corner corner) {
             this.left=left; this.right=right; this.support=support; this.corner=corner;
         }
@@ -64,8 +65,13 @@ public final class ConnectedRestaurantSeatBlock extends RestaurantSeatBlock {
             };
         }
         static Connection of(Corner corner, boolean left, boolean right) {
-            for(Connection c:values()) if(c.corner==corner && c.left==left && c.right==right && !c.support) return c;
-            throw new IllegalArgumentException("Invalid seat connection");
+            return BY_CORNER[corner.ordinal()][(left ? 1 : 0) | (right ? 2 : 0)];
+        }
+        private static Connection[][] indexConnections() {
+            Connection[][] result = new Connection[Corner.values().length][4];
+            for (Connection c : values()) if (!c.support)
+                result[c.corner.ordinal()][(c.left ? 1 : 0) | (c.right ? 2 : 0)] = c;
+            return result;
         }
     }
     public static final EnumProperty<Connection> CONNECTION = EnumProperty.create("connection", Connection.class);
