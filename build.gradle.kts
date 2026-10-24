@@ -14,6 +14,16 @@ class CompactJsonReader(reader: Reader) : FilterReader(
     StringReader(JsonOutput.toJson(JsonSlurper().parse(reader)))
 )
 
+// Vanilla 1.21 renamed the ItemStack recipe-result key from item to id.
+@Suppress("UNCHECKED_CAST")
+class ModernRecipeJsonReader(reader: Reader) : FilterReader(StringReader(
+    JsonOutput.toJson((JsonSlurper().parse(reader) as MutableMap<String, Any?>).apply {
+        (get("result") as? MutableMap<String, Any?>)?.let { result ->
+            result.remove("item")?.let { result["id"] = it }
+        }
+    })
+))
+
 val minecraftVersion = stonecutter.current.version
 val modId = project.property("modId") as String
 val modVersion = project.property("modVersion") as String
@@ -72,12 +82,22 @@ tasks.processResources {
         expand("mixin_java_version" to "JAVA_$javaVersion")
     }
     filesMatching(listOf("assets/**/*.json", "data/**/*.json")) {
-        filter(CompactJsonReader::class.java)
+        if (minecraftVersion == "1.21.1" && path.startsWith("data/craftdistrict/recipes/")) {
+            filter(ModernRecipeJsonReader::class.java)
+        } else {
+            filter(CompactJsonReader::class.java)
+        }
     }
     if (minecraftVersion == "1.21.1") {
         eachFile {
             if (path.startsWith("data/craftdistrict/loot_tables/")) {
                 path = path.replace("data/craftdistrict/loot_tables/", "data/craftdistrict/loot_table/")
+            }
+            if (path.startsWith("data/craftdistrict/recipes/")) {
+                path = path.replace("data/craftdistrict/recipes/", "data/craftdistrict/recipe/")
+            }
+            if (path.startsWith("data/craftdistrict/advancements/")) {
+                path = path.replace("data/craftdistrict/advancements/", "data/craftdistrict/advancement/")
             }
             if (path.startsWith("data/minecraft/tags/blocks/")) {
                 path = path.replace("data/minecraft/tags/blocks/", "data/minecraft/tags/block/")

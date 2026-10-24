@@ -80,6 +80,7 @@ import com.craftdistrict.block.CommercialPizzaOvenBlock;
 import com.craftdistrict.block.KitchenTrashBinBlock;
 import com.craftdistrict.block.KitchenOrderDisplayBlock;
 import com.craftdistrict.block.StainlessSteelPrepTableBlock;
+import com.craftdistrict.block.AssemblyStationBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -96,7 +97,6 @@ import java.util.function.Supplier;
 
 public final class CraftDistrictBlocks {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(CraftDistrict.MOD_ID, Registries.BLOCK);
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(CraftDistrict.MOD_ID, Registries.ITEM);
 
     private CraftDistrictBlocks() {
     }
@@ -108,18 +108,28 @@ public final class CraftDistrictBlocks {
         Supermarket.initialize();
         Lighting.initialize();
         Restaurant.initialize();
+        Survival.initialize();
         BLOCKS.register();
-        ITEMS.register();
     }
 
     private static <T extends Block> RegistrySupplier<T> register(String id, Supplier<T> factory) {
         RegistrySupplier<T> block = BLOCKS.register(id, factory);
-        ITEMS.register(id, () -> block.get() instanceof DoorBlock
+        CraftDistrictItems.registerBlockItem(id, () -> block.get() instanceof DoorBlock
                 ? new DoubleHighBlockItem(block.get(), new Item.Properties())
                 : block.get() instanceof HoldingCellBedBlock
                 ? new BedItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
+    }
+
+    public static final class Survival {
+        public static final RegistrySupplier<AssemblyStationBlock> ASSEMBLY_STATION = register("assembly_station",
+                () -> new AssemblyStationBlock(BlockBehaviour.Properties.of()
+                        .strength(2.5F).sound(SoundType.WOOD).noOcclusion()));
+
+        private Survival() { }
+
+        private static void initialize() { }
     }
 
     public static final class Restaurant {

@@ -222,7 +222,12 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Restaurant.KITCHEN_EXHAUST_HOOD,
             CraftDistrictBlocks.Restaurant.KITCHEN_EXHAUST_DUCT,
             CraftDistrictBlocks.Restaurant.KITCHEN_ORDER_DISPLAY,
-            CraftDistrictBlocks.FireStation.WALL_CLOCK);
+            CraftDistrictBlocks.FireStation.WALL_CLOCK),
+    SURVIVAL_CRAFTING("survival_crafting", CraftDistrictBlocks.Survival.ASSEMBLY_STATION,
+            CraftDistrictItems.FURNITURE_PARTS,
+            CraftDistrictItems.METAL_PARTS,
+            CraftDistrictItems.ELECTRONIC_PARTS,
+            CraftDistrictBlocks.Survival.ASSEMBLY_STATION);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

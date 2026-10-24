@@ -4,6 +4,7 @@ import com.craftdistrict.client.CraftDistrictClient;
 import com.craftdistrict.registry.CraftDistrictBlocks;
 import com.craftdistrict.registry.CraftDistrictCreativeTabs;
 import com.craftdistrict.registry.CraftDistrictEntities;
+import com.craftdistrict.registry.CraftDistrictItems;
 import com.craftdistrict.entity.Seating;
 import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
@@ -19,6 +20,7 @@ public final class CraftDistrict {
 
     public static void init() {
         CraftDistrictBlocks.register();
+        CraftDistrictItems.register();
         CraftDistrictEntities.register();
         Seating.init();
         CraftDistrictCreativeTabs.register();
