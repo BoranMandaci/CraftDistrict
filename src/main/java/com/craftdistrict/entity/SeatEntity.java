@@ -1,6 +1,6 @@
 package com.craftdistrict.entity;
 
-import com.craftdistrict.block.RestaurantSeatBlock;
+import com.craftdistrict.block.SittableBlock;
 import dev.architectury.networking.NetworkManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -19,20 +19,21 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.DismountHelper;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
 
 /** One transient, stationary passenger anchor per occupied segment; no AI or saved data. */
 public final class SeatEntity extends Entity {
     private static final EntityDataAccessor<BlockPos> ANCHOR=SynchedEntityData.defineId(SeatEntity.class,EntityDataSerializers.BLOCK_POS);
-    private RestaurantSeatBlock anchorBlock;
+    private Block anchorBlock;
     private Direction facing=Direction.NORTH;
 
     public SeatEntity(EntityType<? extends SeatEntity> type, Level level) {
         super(type,level); noPhysics=true; setNoGravity(true); setInvulnerable(true); setInvisible(true);
     }
 
-    public void configure(BlockPos anchor, RestaurantSeatBlock block, Direction facing, double x, double y, double z) {
+    public void configure(BlockPos anchor, Block block, Direction facing, double x, double y, double z) {
         entityData.set(ANCHOR,anchor.immutable()); anchorBlock=block; this.facing=facing;
         setPos(x,y,z); setYRot(facing.toYRot());
     }
@@ -65,7 +66,8 @@ public final class SeatEntity extends Entity {
         if(level().isClientSide) return;
         var state=level().getBlockState(anchor());
         Entity passenger=getFirstPassenger();
-        if(anchorBlock==null || !state.is(anchorBlock) || state.getValue(BlockStateProperties.HORIZONTAL_FACING)!=facing
+        if(anchorBlock==null || !state.is(anchorBlock) || !(anchorBlock instanceof SittableBlock block) || !block.isSittable(state)
+                || state.getValue(BlockStateProperties.HORIZONTAL_FACING)!=facing
                 || !(passenger instanceof Player player) || !player.isAlive() || player.isSpectator() || player.isRemoved()) {
             ejectPassengers(); discard();
         }

@@ -1,6 +1,6 @@
 package com.craftdistrict.entity;
 
-import com.craftdistrict.block.RestaurantSeatBlock;
+import com.craftdistrict.block.SittableBlock;
 import com.craftdistrict.registry.CraftDistrictEntities;
 import dev.architectury.event.events.common.LifecycleEvent;
 import dev.architectury.event.events.common.PlayerEvent;
@@ -27,7 +27,8 @@ public final class Seating {
             // Recover only players intersecting our seating; no persistent marker/world map is needed.
             for(BlockPos pos:new BlockPos[]{player.blockPosition(),player.blockPosition().above()}) {
                 BlockState state=player.level().getBlockState(pos);
-                if(!(state.getBlock() instanceof RestaurantSeatBlock) || player.level().noCollision(player,player.getBoundingBox())) continue;
+                if(!(state.getBlock() instanceof SittableBlock block) || !block.isSittable(state)
+                        || player.level().noCollision(player,player.getBoundingBox())) continue;
                 Vec3 exit=SeatEntity.safeExit(player.level(),pos,state.getValue(BlockStateProperties.HORIZONTAL_FACING),player);
                 if(exit!=null) {
                     player.setPos(exit.x,exit.y,exit.z);
@@ -44,11 +45,11 @@ public final class Seating {
     private static AABB bounds(BlockPos pos) { return new AABB(pos).inflate(.1,1,.1); }
 
     public static InteractionResult sit(BlockState state, Level level, BlockPos pos, Player player) {
-        if(!(state.getBlock() instanceof RestaurantSeatBlock block) || !player.isAlive() || player.isSpectator()
+        if(!(state.getBlock() instanceof SittableBlock block) || !block.isSittable(state) || !player.isAlive() || player.isSpectator()
                 || player.isShiftKeyDown() || player.isPassenger() || player.isSleeping() || player.isFallFlying() || !player.getMainHandItem().isEmpty()
                 || player.distanceToSqr(Vec3.atCenterOf(pos))>16) return InteractionResult.PASS;
         if(level.isClientSide) return InteractionResult.SUCCESS;
-        if(!(level instanceof ServerLevel server) || !level.getBlockState(pos).is(block)) return InteractionResult.PASS;
+        if(!(level instanceof ServerLevel server) || !level.getBlockState(pos).is(state.getBlock())) return InteractionResult.PASS;
         for(SeatEntity seat:server.getEntitiesOfClass(SeatEntity.class,bounds(pos),e->e.anchor().equals(pos))) {
             if(seat.isVehicle()) return InteractionResult.CONSUME;
             seat.discard();
@@ -61,7 +62,7 @@ public final class Seating {
         if(!level.noCollision(player,headroom) || SeatEntity.safeExit(level,pos,facing,player)==null) return InteractionResult.FAIL;
         SeatEntity seat=CraftDistrictEntities.SEAT.get().create(server);
         if(seat==null) return InteractionResult.FAIL;
-        seat.configure(pos,block,facing,x,top-.75,z);
+        seat.configure(pos,state.getBlock(),facing,x,top-.75,z);
         if(!server.addFreshEntity(seat)) return InteractionResult.FAIL;
         float oldYaw=player.getYRot(),oldHead=player.getYHeadRot(),oldBody=player.yBodyRot;
         player.setYRot(facing.toYRot()); player.setYHeadRot(facing.toYRot()); player.setYBodyRot(facing.toYRot());

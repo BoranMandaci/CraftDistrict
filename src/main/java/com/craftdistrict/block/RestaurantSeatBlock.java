@@ -24,7 +24,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** All Restaurant seating shares the same interaction and cached-shape path. */
-public class RestaurantSeatBlock extends RotatableDecorationBlock {
+public class RestaurantSeatBlock extends RotatableDecorationBlock implements SittableBlock {
     public enum Design implements StringRepresentable {
         WOODEN(9), MODERN(9), CUSHIONED(9.5), DINER(9.25), BAR_STOOL(14), BAR_CHAIR(14.5),
         DINER_BOOTH(9.25), MODERN_BOOTH(9.5), BENCH(9);
