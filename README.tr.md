@@ -13,11 +13,11 @@
 
 [Koleksiyonlar](#dekorasyon-koleksiyonları) · [Kurulum](#kurulum) · [Uyumluluk](#desteklenen-sürümler-ve-bağımlılıklar) · [Diller](#desteklenen-diller)
 
-**CraftDistrict 1.0, CurseForge'da yayımlandı.**
+**CraftDistrict 1.1 — Restoran Güncellemesi, CurseForge'da yayımlandı.**
 
 ## CraftDistrict hakkında
 
-CraftDistrict; mesleklere, işletmelere ve gündelik çalışma alanlarına odaklanan bir Minecraft dekorasyon modudur. Ayrıntılı mobilyalar, ekipmanlar, makineler, tabelalar ve mimari dekorlarla sıcak bir fırın, hareketli bir süpermarket ya da tüm bölümleriyle bir polis merkezi veya itfaiye istasyonu kurabilirsiniz.
+CraftDistrict; gündelik yaşam alanları, mağazalar, iş yerleri, kamu binaları ve restoranlar için geliştirilmiş, dekorasyon odaklı bir Minecraft modudur. Ayrıntılı mobilyalar, ekipmanlar, cihazlar, tabelalar ve mimari dekorlarla sıcak bir fırın, hareketli bir süpermarket, tüm bölümleriyle bir polis merkezi veya itfaiye istasyonu ya da eksiksiz bir restoran kurabilirsiniz.
 
 Koleksiyonlar Minecraft'a uyumlu bir voksel tarzını paylaşır. Farklı yapılarda kullanılabilen aydınlatma koleksiyonu da bu mekânları tamamlar.
 
@@ -25,16 +25,20 @@ Gelecek güncellemelerde yeni dekorasyonlar ve yeni temalı koleksiyonlar eklenm
 
 ## Öne çıkan özellikler
 
-- **Mekâna uygun koleksiyonlar:** fırınlar, polis merkezleri, itfaiye istasyonları, süpermarketler ve diğer şehir içi mekânlar için temalı dekorlar.
+- **Altı temalı koleksiyon:** Fırın, Polis Merkezi, İtfaiye İstasyonu, Süpermarket, Aydınlatma ve Restoran.
 - **Mobilyadan fazlası:** endüstriyel ekipmanlar, depolama üniteleri, teşhir rafları, aletler, tabelalar ve küçük tezgâh üstü aksesuarlar.
 - **Esnek yerleştirme:** yatay döndürme, çok bloklu yapılar ve destekleyen dekorlarda duvar veya tavan montajı.
+- **Modüler düzenler:** birbirine bağlanan yemek masaları, loca koltukları, banklar, hazırlık tezgâhları ve mutfak havalandırma kanalları.
+- **Mobilya etkileşimleri:** desteklenen oturma mobilyalarına oturun; belirli kapıları, dolapları ve kapakları açıp kapatın.
 - **Gerçek blok ışığı:** duvar ve tavan armatürleri ile ışıklı tabelalar dâhil aydınlatma blokları Minecraft dünyasında ışık yayar.
-- **Hafif dekorasyon yapısı:** statik blok modelleri ve sade çarpışma şekilleri; sürekli güncellenen dekoratif makineler veya Block Entity kullanımı yoktur.
+- **Performans gözetilerek tasarlanan dekorasyonlar:** statik dekoratif modeller, sade çarpışma şekilleri ve hafif etkileşimler.
 - **Hayatta Kalma uyumu:** malzemeye uygun madencilik etiketleri sayesinde ilgili bloklar uygun balta veya kazmayla daha hızlı kırılır.
-- **Düzenli gezinme:** beş seçilebilir koleksiyonu ve uygun koleksiyonlarda ortak sunulan eşyaları içeren tek bir Yaratıcı envanter sekmesi.
-- **İstemci ve sunucu desteği:** dört Minecraft/mod yükleyicisi birleşimi ve dokuz dilde yerelleştirme.
+- **Düzenli gezinme:** altı koleksiyon filtresi ve uygun koleksiyonlarda ortak sunulan eşyalarla tek bir özel Yaratıcı envanter sekmesi.
+- **Dokuz dil:** yerelleştirilmiş eşya adları ve arayüz metinleri; tüm diller aşağıda listelenmiştir.
 
-**Öncelik dekorasyondur.** Kasalar, buzdolapları, aletler, silah teşhirleri, alışveriş arabaları ve makineler dekoratiftir; envanter, kullanım arayüzü, oturma, pişirme veya animasyon özellikleri sunmaz. Nezarethane Kapısı normal bir kapı gibi açılıp kapanır; aydınlatma blokları ise ışık yayar.
+**Öncelik dekorasyondur.** Makinelerin, cihazların ve teşhir dekorlarının çoğu envanter, eşya depolama, pişirme veya üretim sistemi sunmaz. Desteklenen mobilyalara oturabilir, işlevsel Nezarethane Yatağı'nda uyuyabilirsiniz. Belirli kapı ve dolaplar ile mutfak çöp kutusunun kapağı açılıp kapanabilir. Aydınlatma blokları ise ışık yayar.
+
+v1.1 ayrıca dekoratif geometri, blok şekilleri ve paketlenen kaynaklarda iyileştirmeler içerir. Dağıtım JAR'ları, optimizasyon öncesi v1.1 derlemelerine göre yaklaşık **%13–14 daha küçüktür**.
 
 ## Dekorasyon koleksiyonları
 
@@ -62,11 +66,15 @@ Mağazalar, iş yerleri, koridorlar ve dış mekânlarda kullanılabilen bir ayd
 - Modern duvar lambaları, endüstriyel projektörler, güvenlik lambaları, masa lambaları, dış mekân aydınlatma direkleri ve dolap altı ışık şeritleri.
 - Desteklenen asma montaj seçenekleriyle, sağ/sol oklu ışıklı EXIT tabelaları ve neon OPEN tabelaları.
 
+### Restoran
+
+Yemek alanlarını standart ve birbirine bağlanan modüler masalar, oturulabilen sandalyeler, bar tabureleri, loca koltukları ve banklarla döşeyin. Servis bankoları, POS terminalleri ve servis ekipmanları müşteri alanını tamamlar. Dekoratif profesyonel mutfak cihazları, yiyecek dekorları, hazırlık istasyonları, depolama mobilyaları, pişirme gereçleri ve aksesuarlarla bir restoran mutfağı kurun. Modüler havalandırma kanalları mutfak hattını tamamlar; buzdolabı ve erzak dolabının açılabilen kapıları, içlerindeki rafları ve ürünleri görmenizi sağlar.
+
 ## Yaratıcı envanter
 
-**CraftDistrict** Yaratıcı envanter sekmesini açın. Envanterin çevresindeki koleksiyon düğmeleriyle **Fırın**, **Polis Merkezi**, **İtfaiye İstasyonu**, **Süpermarket** veya **Aydınlatma** koleksiyonunu seçin.
+**CraftDistrict** Yaratıcı envanter sekmesini açın. Envanterin çevresindeki koleksiyon düğmeleriyle **Fırın**, **Polis Merkezi**, **İtfaiye İstasyonu**, **Süpermarket**, **Aydınlatma** veya **Restoran** koleksiyonunu seçin.
 
-Beş koleksiyon da Minecraft'ta tek bir Yaratıcı sekmede yer alır. Koleksiyon değiştirdiğinizde gösterilen dekorlar filtrelenir. Ofis sandalyesi, saat ve yangın söndürücü gibi genel amaçlı eşyalar, uygun olan birden fazla koleksiyonda bulunur.
+Altı koleksiyon da Minecraft'ta tek bir Yaratıcı sekmede yer alır. Koleksiyon değiştirdiğinizde gösterilen dekorlar filtrelenir. Ofis sandalyesi, saat ve yangın söndürücü gibi genel amaçlı eşyalar, uygun olan birden fazla koleksiyonda bulunur. Mevcut Kasa ve Duvar Saati, Restoran koleksiyonunda da yer alır.
 
 ## Desteklenen sürümler ve bağımlılıklar
 
@@ -79,7 +87,7 @@ Aşağıdaki Minecraft sürümü **ve** mod yükleyicisi birleşimlerinden birin
 | 1.21.1 | NeoForge 21.1.219 | 21 | Architectury API 13.0.8 |
 | 1.21.1 | Fabric Loader 0.19.3 | 21 | Architectury API 13.0.8 + Fabric API 0.116.6+1.21.1 |
 
-**Architectury API tüm hedeflerde gereklidir. Fabric kullanırken ayrıca Fabric API gerekir.** Bağımlılık dosyalarını Minecraft sürümünüze ve mod yükleyicinize uygun seçin.
+**Architectury API, tüm hedeflerde hem istemciler hem de bağımsız sunucular için zorunludur. Fabric kullanırken ayrıca Fabric API gerekir.** Architectury API'yi ve diğer bağımlılıkları Minecraft sürümünüze ve mod yükleyicinize uygun seçin.
 
 Forge 1.21.1 ve NeoForge 1.20.1 desteklenmez. Architectury'nin derleme araçları, Stonecutter ve Gradle geliştirme içindir; oyuncular bunları mod olarak kurmaz.
 
@@ -118,7 +126,7 @@ Türkçe çeviriler elle incelenmiş ve düzeltilmiştir. Oyun içindeki metinle
 
 ## İndirmeler
 
-İlk herkese açık sürüm **CraftDistrict 1.0**, resmî [CurseForge proje sayfasından](https://www.curseforge.com/minecraft/mc-mods/craftdistrict) indirilebilir.
+**CraftDistrict 1.1 — Restoran Güncellemesi**, resmî [CurseForge proje sayfasından](https://www.curseforge.com/minecraft/mc-mods/craftdistrict) indirilebilir.
 
 Dosya seçerken yukarıdaki uyumluluk tablosunu kullanın. Fabric, Forge ve NeoForge JAR'ları kendi hedeflerine özeldir; birbirlerinin yerine kullanılamaz.
 

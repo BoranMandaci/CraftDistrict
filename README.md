@@ -13,11 +13,11 @@
 
 [Collections](#decoration-collections) · [Installation](#installation) · [Compatibility](#supported-versions-and-dependencies) · [Languages](#supported-languages)
 
-**CraftDistrict 1.0 is now publicly available on CurseForge.**
+**CraftDistrict 1.1 — Restaurant Update is now available on CurseForge.**
 
 ## About CraftDistrict
 
-CraftDistrict is a Minecraft decoration mod focused on professions, businesses, and everyday workplaces. Build a welcoming bakery, a busy supermarket, or a fully furnished police or fire station with detailed furniture, equipment, machinery, signs, and architectural props.
+CraftDistrict is a decoration-focused Minecraft mod for everyday spaces, shops, workplaces, public buildings, and restaurants. Build a welcoming bakery, a busy supermarket, a fully furnished police or fire station, or a complete restaurant with detailed furniture, equipment, appliances, signs, and architectural props.
 
 The collections share a Minecraft-friendly voxel style, while a reusable lighting collection helps tie different buildings together.
 
@@ -25,16 +25,20 @@ More decorations and new themed collections are planned for future updates.
 
 ## Features
 
-- **Places with purpose:** themed decorations for bakeries, police stations, fire stations, supermarkets, and other city interiors.
+- **Six themed collections:** Bakery, Police Station, Fire Station, Supermarket, Lighting, and Restaurant.
 - **Details beyond furniture:** industrial equipment, storage, display racks, tools, signage, and small countertop props.
 - **Flexible placement:** horizontal rotation, multi-block structures, and wall or ceiling mounts on supported decorations.
+- **Connected layouts:** modular dining tables, booths, benches, prep tables, and connectable kitchen ventilation ducts.
+- **Furniture interactions:** sit on supported seating and open selected doors, cabinets, and lids.
 - **Real block lighting:** lighting fixtures emit Minecraft light, including wall lights, ceiling fixtures, and illuminated signs.
-- **Lightweight decoration:** static block models and simplified collision shapes, without ticking decorative machinery or Block Entities.
+- **Performance-conscious design:** static decorative models, simplified collision shapes, and lightweight interactions.
 - **Survival support:** material-appropriate mining tags let suitable axes and pickaxes speed up mining on tagged blocks.
-- **Organized browsing:** one Creative tab with five selectable collections and shared items where they make sense.
-- **Client and server support:** four supported Minecraft/loader combinations and localization in nine languages.
+- **Organized browsing:** one custom Creative tab with six collection filters and shared items where they make sense.
+- **Nine languages:** localized names and interface text, with the full language list below.
 
-**Decoration comes first.** Cash registers, refrigerators, tools, weapon displays, shopping carts, and machinery are decorative: they do not provide inventories, GUIs, seating, cooking, or animations. The Holding Cell Door opens and closes as a door, and lighting fixtures emit block light.
+**Decoration comes first.** Most machinery, appliances, and display props do not provide inventories, storage, cooking, or production systems. Players can sit on supported furniture and sleep in the functional Holding Cell Bed. Selected doors and cabinets open and close, as does the kitchen trash bin lid. Lighting fixtures emit block light.
+
+Version 1.1 also improves decorative geometry, block shapes, and packaged resources. Release JARs are approximately **13–14% smaller** than the pre-optimization v1.1 builds.
 
 ## Decoration collections
 
@@ -62,11 +66,15 @@ A general-purpose lighting family for shops, workplaces, hallways, and outdoor s
 - Modern wall lights, industrial floodlights, security lights, desk lamps, outdoor bollards, and under-cabinet strips.
 - Illuminated EXIT signs with left/right arrows and neon OPEN signs, including supported hanging mounts.
 
+### Restaurant
+
+Furnish dining rooms with regular and modular connecting tables, sittable chairs, bar stools, booths, and benches. Service counters, POS terminals, and serving equipment complete the customer area. Build a professional kitchen with decorative commercial appliances, food decorations, prep stations, storage furniture, cookware, and accessories. Modular ventilation ducts complete the kitchen line; refrigerator and pantry cabinet doors open to reveal stocked interiors.
+
 ## Creative inventory
 
-Open the **CraftDistrict** Creative tab and use the collection buttons around the inventory to choose **Bakery**, **Police Station**, **Fire Station**, **Supermarket**, or **Lighting**.
+Open the **CraftDistrict** Creative tab and use the collection buttons around the inventory to choose **Bakery**, **Police Station**, **Fire Station**, **Supermarket**, **Lighting**, or **Restaurant**.
 
-All five collections live inside one Minecraft Creative tab. Switching collections filters the displayed decorations; general-purpose items such as office chairs, clocks, and fire extinguishers appear in multiple relevant collections.
+All six collections live inside one Minecraft Creative tab. Switching collections filters the displayed decorations; general-purpose items such as office chairs, clocks, and fire extinguishers appear in multiple relevant collections. Restaurant also shares the existing Cash Register and Wall Clock.
 
 ## Supported versions and dependencies
 
@@ -79,7 +87,7 @@ Choose the exact Minecraft version **and** loader combination below. The version
 | 1.21.1 | NeoForge 21.1.219 | 21 | Architectury API 13.0.8 |
 | 1.21.1 | Fabric Loader 0.19.3 | 21 | Architectury API 13.0.8 + Fabric API 0.116.6+1.21.1 |
 
-**Architectury API is required on every target. Fabric API is additionally required on Fabric.** Use dependency files made for your Minecraft version and loader.
+**Architectury API is required on every target, on both clients and dedicated servers. Fabric API is additionally required on Fabric.** Install the Architectury API build and other dependencies matching your Minecraft version and loader.
 
 Forge 1.21.1 and NeoForge 1.20.1 are not supported targets. Architectury's build tooling, Stonecutter, and Gradle are development tools; players do not install them as mods.
 
@@ -118,7 +126,7 @@ Turkish translations have received manual review and corrections. Minecraft's se
 
 ## Downloads
 
-Download **CraftDistrict 1.0**, the first public release, from the official [CurseForge project page](https://www.curseforge.com/minecraft/mc-mods/craftdistrict).
+Download **CraftDistrict 1.1 — Restaurant Update** from the official [CurseForge project page](https://www.curseforge.com/minecraft/mc-mods/craftdistrict).
 
 Choose files using the compatibility table above. A Fabric, Forge, or NeoForge JAR is specific to its target and is not interchangeable with the others.
 
