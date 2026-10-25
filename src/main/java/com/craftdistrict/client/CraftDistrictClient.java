@@ -2,6 +2,8 @@ package com.craftdistrict.client;
 
 import com.craftdistrict.registry.CraftDistrictBlocks;
 import com.craftdistrict.registry.CraftDistrictEntities;
+import com.craftdistrict.registry.CraftDistrictAssembly;
+import dev.architectury.registry.menu.MenuRegistry;
 import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import dev.architectury.event.events.client.ClientLifecycleEvent;
@@ -15,6 +17,7 @@ public final class CraftDistrictClient {
     public static void init() {
         EntityRendererRegistry.register(CraftDistrictEntities.SEAT, NoopRenderer::new);
         ClientLifecycleEvent.CLIENT_SETUP.register(client -> {
+            MenuRegistry.registerScreenFactory(CraftDistrictAssembly.MENU.get(), AssemblyStationScreen::new);
             RenderTypeRegistry.register(
                 RenderType.cutout(), CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get(),
                 CraftDistrictBlocks.Bakery.INDUSTRIAL_OVEN.get(),
