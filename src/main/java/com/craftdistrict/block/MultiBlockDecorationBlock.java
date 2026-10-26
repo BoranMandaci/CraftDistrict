@@ -76,6 +76,11 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
         return BlockPos.ZERO.relative(getExtensionDirection(state), index);
     }
 
+    /** Stable identity for client effects emitted by different sections of one structure. */
+    public final BlockPos structureOrigin(BlockState state, BlockPos pos) {
+        return pos.subtract(partOffset(state, partIndex(state)));
+    }
+
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         Level level = context.getLevel();
