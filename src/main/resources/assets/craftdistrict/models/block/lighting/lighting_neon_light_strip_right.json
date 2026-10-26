@@ -1,0 +1,115 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:solid",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/lighting/fixtures_expansion",
+    "particle": "craftdistrict:block/particles/particle_metal"
+  },
+  "elements": [
+    {
+      "name": "linear_channel",
+      "from": [
+        8.75,
+        15,
+        7.25
+      ],
+      "to": [
+        16,
+        16,
+        8.75
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            5.9375,
+            0.5
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            5.9375,
+            0.5
+          ],
+          "cullface": "up"
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            5.9375,
+            0.375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            5.9375,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "linear_diffuser",
+      "from": [
+        8.5,
+        14.875,
+        7.5
+      ],
+      "to": [
+        16,
+        15,
+        8.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.125,
+            8.125,
+            2.0,
+            8.375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            6.0,
+            0.375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            6.0,
+            0.375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            0.125,
+            6.0,
+            0.375
+          ]
+        }
+      },
+      "shade": false
+    }
+  ]
+}

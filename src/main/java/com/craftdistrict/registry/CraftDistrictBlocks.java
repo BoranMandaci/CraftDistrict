@@ -55,6 +55,11 @@ import com.craftdistrict.block.SupermarketSelfCheckoutBlock;
 import com.craftdistrict.block.SupermarketStorePropBlock;
 import com.craftdistrict.block.CeilingLightBlock;
 import com.craftdistrict.block.SurfaceLightBlock;
+import com.craftdistrict.block.ExpansionLightBlock;
+import com.craftdistrict.block.MultiMountLightBlock;
+import com.craftdistrict.block.TallLightBlock;
+import com.craftdistrict.block.ConnectedLightBlock;
+import com.craftdistrict.block.HangingStringLightsBlock;
 import com.craftdistrict.block.UnderCabinetLightBlock;
 import com.craftdistrict.block.WallLightBlock;
 import com.craftdistrict.block.FluorescentLightBlock;
@@ -507,6 +512,26 @@ public final class CraftDistrictBlocks {
                 () -> new WallLightBlock(WallLightBlock.Fixture.SECURITY, lightProperties(15)));
         public static final RegistrySupplier<CeilingLightBlock> UNDER_CABINET_STRIP = register("lighting_under_cabinet_strip",
                 () -> new UnderCabinetLightBlock(lightProperties(13)));
+        public static final RegistrySupplier<TallLightBlock> MODERN_FLOOR_LAMP = register("lighting_modern_floor_lamp",
+                () -> new TallLightBlock(TallLightBlock.Fixture.FLOOR, lightProperties(13)));
+        public static final RegistrySupplier<TallLightBlock> MODERN_CHANDELIER = register("lighting_modern_chandelier",
+                () -> new TallLightBlock(TallLightBlock.Fixture.CHANDELIER, lightProperties(15)));
+        public static final RegistrySupplier<ExpansionLightBlock> EMERGENCY_BEACON = register("lighting_emergency_beacon",
+                () -> new MultiMountLightBlock(ExpansionLightBlock.Fixture.BEACON, lightProperties(11)));
+        public static final RegistrySupplier<ExpansionLightBlock> CEILING_FAN_WITH_LIGHT = register("lighting_ceiling_fan_with_light",
+                () -> new ExpansionLightBlock(ExpansionLightBlock.Fixture.FAN, lightProperties(12)));
+        public static final RegistrySupplier<TallLightBlock> VINTAGE_STREET_LAMP = register("lighting_vintage_street_lamp",
+                () -> new TallLightBlock(TallLightBlock.Fixture.STREET, lightProperties(14)));
+        public static final RegistrySupplier<ExpansionLightBlock> DECORATIVE_WALL_SCONCE = register("lighting_decorative_wall_sconce",
+                () -> new ExpansionLightBlock(ExpansionLightBlock.Fixture.SCONCE, lightProperties(11)));
+        public static final RegistrySupplier<ConnectedLightBlock> NEON_LIGHT_STRIP = register("lighting_neon_light_strip",
+                () -> new ConnectedLightBlock(ConnectedLightBlock.Kind.NEON, lightProperties(11)));
+        public static final RegistrySupplier<ConnectedLightBlock> HANGING_STRING_LIGHTS = register("lighting_hanging_string_lights",
+                () -> new HangingStringLightsBlock(lightProperties(8)));
+        public static final RegistrySupplier<ExpansionLightBlock> GARDEN_PATH_LIGHT = register("lighting_garden_path_light",
+                () -> new ExpansionLightBlock(ExpansionLightBlock.Fixture.GARDEN, lightProperties(9)));
+        public static final RegistrySupplier<ExpansionLightBlock> INDUSTRIAL_WARNING_LIGHT = register("lighting_industrial_warning_light",
+                () -> new MultiMountLightBlock(ExpansionLightBlock.Fixture.WARNING, lightProperties(11)));
 
         private static BlockBehaviour.Properties lightProperties(int level) {
             return BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.METAL)

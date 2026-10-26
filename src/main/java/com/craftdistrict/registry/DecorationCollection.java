@@ -154,19 +154,30 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Lighting.RECESSED_SPOTLIGHT,
             CraftDistrictBlocks.Lighting.TRACK_LIGHT,
             CraftDistrictBlocks.Lighting.INDUSTRIAL_PENDANT,
+            CraftDistrictBlocks.Lighting.MODERN_CHANDELIER,
+            CraftDistrictBlocks.Lighting.CEILING_FAN_WITH_LIGHT,
             // Wall lights.
             CraftDistrictBlocks.Lighting.MODERN_WALL_LIGHT,
             CraftDistrictBlocks.Lighting.INDUSTRIAL_FLOODLIGHT,
             CraftDistrictBlocks.Lighting.SECURITY_WALL_LIGHT,
+            CraftDistrictBlocks.Lighting.DECORATIVE_WALL_SCONCE,
             // Desk and task lights.
             CraftDistrictBlocks.Lighting.DESK_LAMP,
             CraftDistrictBlocks.Lighting.UNDER_CABINET_STRIP,
+            CraftDistrictBlocks.Lighting.MODERN_FLOOR_LAMP,
             // Outdoor lighting.
             CraftDistrictBlocks.Lighting.OUTDOOR_BOLLARD,
+            CraftDistrictBlocks.Lighting.VINTAGE_STREET_LAMP,
+            CraftDistrictBlocks.Lighting.GARDEN_PATH_LIGHT,
             // Signs and indicators.
             CraftDistrictBlocks.Lighting.EXIT_SIGN,
             CraftDistrictBlocks.Lighting.EXIT_SIGN_LEFT,
-            CraftDistrictBlocks.Lighting.NEON_OPEN_SIGN),
+            CraftDistrictBlocks.Lighting.NEON_OPEN_SIGN,
+            CraftDistrictBlocks.Lighting.EMERGENCY_BEACON,
+            CraftDistrictBlocks.Lighting.INDUSTRIAL_WARNING_LIGHT,
+            // Connected decorative lighting.
+            CraftDistrictBlocks.Lighting.NEON_LIGHT_STRIP,
+            CraftDistrictBlocks.Lighting.HANGING_STRING_LIGHTS),
     RESTAURANT("restaurant", CraftDistrictBlocks.Restaurant.SQUARE_DINING_TABLE,
             // Dining tables.
             CraftDistrictBlocks.Restaurant.SQUARE_DINING_TABLE,
