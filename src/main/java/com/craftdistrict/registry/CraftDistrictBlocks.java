@@ -28,6 +28,9 @@ import com.craftdistrict.block.PoliceSecurityPropBlock;
 import com.craftdistrict.block.PoliceSecurityCameraBlock;
 import com.craftdistrict.block.PoliceOfficeSecurityBlock;
 import com.craftdistrict.block.SecurityScannerBlock;
+import com.craftdistrict.block.CommercialExpansionBlock;
+import com.craftdistrict.block.QueueBarrierBlock;
+import com.craftdistrict.block.RestaurantHostStandBlock;
 import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
 import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.PoliceDetentionStructureBlock;
@@ -189,6 +192,12 @@ public final class CraftDistrictBlocks {
                 () -> new RestaurantKitchenBlock(RestaurantKitchenBlock.Equipment.SINK, metalProperties()));
         public static final RegistrySupplier<RestaurantServiceCounterBlock> RESTAURANT_SERVICE_COUNTER = register("restaurant_service_counter",
                 () -> new RestaurantServiceCounterBlock(woodProperties()));
+        public static final RegistrySupplier<RestaurantHostStandBlock> RESTAURANT_HOST_STAND = register("restaurant_host_stand",
+                () -> new RestaurantHostStandBlock(woodProperties()));
+        public static final RegistrySupplier<CommercialExpansionBlock> SALAD_BAR_COUNTER = register("salad_bar_counter",
+                () -> new CommercialExpansionBlock(CommercialExpansionBlock.Design.SALAD_BAR, metalProperties()));
+        public static final RegistrySupplier<CommercialExpansionBlock> HOT_BUFFET_SERVING_STATION = register("hot_buffet_serving_station",
+                () -> new CommercialExpansionBlock(CommercialExpansionBlock.Design.HOT_BUFFET, metalProperties()));
         public static final RegistrySupplier<RestaurantServicePropBlock> FOOD_PICKUP_COUNTER = register("food_pickup_counter",
                 () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.PICKUP_COUNTER, metalProperties()));
         public static final RegistrySupplier<RestaurantServicePropBlock> RESTAURANT_POS_TERMINAL = register("restaurant_pos_terminal",
@@ -414,6 +423,10 @@ public final class CraftDistrictBlocks {
     }
 
     public static final class Supermarket {
+        public static final RegistrySupplier<CommercialExpansionBlock> BOTTLE_RETURN_MACHINE = register("bottle_return_machine",
+                () -> new CommercialExpansionBlock(CommercialExpansionBlock.Design.BOTTLE_RETURN, shelfProperties()));
+        public static final RegistrySupplier<QueueBarrierBlock> QUEUE_BARRIER = register("queue_barrier",
+                () -> new QueueBarrierBlock(shelfProperties()));
         public static final RegistrySupplier<SupermarketDecorationBlock> GROCERY_SHELF = register("grocery_shelf",
                 () -> new SupermarketDecorationBlock(SupermarketDecorationBlock.Layout.AISLE, shelfProperties()));
         public static final RegistrySupplier<SupermarketDecorationBlock> CANNED_SHELF = register("canned_shelf",

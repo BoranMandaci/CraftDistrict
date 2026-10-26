@@ -140,6 +140,8 @@ public enum DecorationCollection {
             // Checkout equipment.
             CraftDistrictBlocks.Supermarket.CHECKOUT,
             CraftDistrictBlocks.Supermarket.SELF_CHECKOUT,
+            CraftDistrictBlocks.Supermarket.BOTTLE_RETURN_MACHINE,
+            CraftDistrictBlocks.Supermarket.QUEUE_BARRIER,
             CraftDistrictBlocks.Police.OFFICE_CHAIR,
             CraftDistrictBlocks.Supermarket.CHECKOUT_CANDY_RACK,
             // Shopping equipment.
@@ -202,8 +204,11 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Restaurant.MODERN_BOOTH_SEAT,
             CraftDistrictBlocks.Restaurant.WOODEN_DINING_BENCH,
             // Service counters and payment.
+            CraftDistrictBlocks.Restaurant.RESTAURANT_HOST_STAND,
             CraftDistrictBlocks.Restaurant.RESTAURANT_SERVICE_COUNTER,
             CraftDistrictBlocks.Restaurant.FOOD_PICKUP_COUNTER,
+            CraftDistrictBlocks.Restaurant.SALAD_BAR_COUNTER,
+            CraftDistrictBlocks.Restaurant.HOT_BUFFET_SERVING_STATION,
             CraftDistrictBlocks.Restaurant.RESTAURANT_POS_TERMINAL,
             CraftDistrictBlocks.Bakery.CASH_REGISTER,
             // Service accessories.

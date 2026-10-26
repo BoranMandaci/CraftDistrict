@@ -1,0 +1,45 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "craftdistrict:block/expansion/queue_barrier"
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/expansion/queue_barrier_belt",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/expansion/queue_barrier_belt",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/expansion/queue_barrier_belt",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/expansion/queue_barrier_belt",
+        "y": 270
+      }
+    }
+  ]
+}

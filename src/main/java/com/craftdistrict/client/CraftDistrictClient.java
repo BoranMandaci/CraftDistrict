@@ -23,6 +23,7 @@ public final class CraftDistrictClient {
                 CraftDistrictBlocks.Bakery.INDUSTRIAL_OVEN.get(),
                 CraftDistrictBlocks.Bakery.REFRIGERATED_CAKE_DISPLAY.get(),
                 CraftDistrictBlocks.Bakery.REFRIGERATED_PASTRY_DISPLAY.get(),
+                CraftDistrictBlocks.Restaurant.SALAD_BAR_COUNTER.get(),
                 CraftDistrictBlocks.Supermarket.DRINKS_FRIDGE_A.get(),
                 CraftDistrictBlocks.Supermarket.DRINKS_FRIDGE_B.get(),
                 CraftDistrictBlocks.Supermarket.COLA_FRIDGE.get(),
