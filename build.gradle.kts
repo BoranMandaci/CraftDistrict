@@ -14,6 +14,16 @@ class CompactJsonReader(reader: Reader) : FilterReader(
     StringReader(JsonOutput.toJson(JsonSlurper().parse(reader)))
 )
 
+// Element names are editor metadata ignored by Minecraft; retain them in source.
+@Suppress("UNCHECKED_CAST")
+class CompactModelJsonReader(reader: Reader) : FilterReader(StringReader(
+    JsonOutput.toJson((JsonSlurper().parse(reader) as MutableMap<String, Any?>).apply {
+        (get("elements") as? List<*>)?.forEach { element ->
+            (element as? MutableMap<String, Any?>)?.remove("name")
+        }
+    })
+))
+
 // Vanilla 1.21 renamed the ItemStack recipe-result key from item to id.
 @Suppress("UNCHECKED_CAST")
 class ModernRecipeJsonReader(reader: Reader) : FilterReader(StringReader(
@@ -82,7 +92,9 @@ tasks.processResources {
         expand("mixin_java_version" to "JAVA_$javaVersion")
     }
     filesMatching(listOf("assets/**/*.json", "data/**/*.json")) {
-        if (minecraftVersion == "1.21.1" && path.startsWith("data/craftdistrict/recipes/")) {
+        if (path.startsWith("assets/craftdistrict/models/")) {
+            filter(CompactModelJsonReader::class.java)
+        } else if (minecraftVersion == "1.21.1" && path.startsWith("data/craftdistrict/recipes/")) {
             filter(ModernRecipeJsonReader::class.java)
         } else {
             filter(CompactJsonReader::class.java)
