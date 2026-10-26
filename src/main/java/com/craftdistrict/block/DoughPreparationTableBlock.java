@@ -38,14 +38,14 @@ public final class DoughPreparationTableBlock extends MultiBlockDecorationBlock 
             double outerEnd = part == 0 ? 3.25 : 14.75;
             double shelfStart = part == 0 ? 1.5 : 0;
             double shelfEnd = part == 0 ? 16 : 14.5;
-            // Broad structural envelopes preserve the open legs and tabletop height.
+            // Match the counter's Y=16 worktop; tools remain above the surface.
             VoxelShape shape = Shapes.or(
-                    Block.box(0, 9.5, 0.5, 16, 12.5, 15.5),
-                    Block.box(outerStart, 0, 1.25, outerEnd, 9.5, 3.25),
-                    Block.box(outerStart, 0, 12.75, outerEnd, 9.5, 14.75),
+                    Block.box(0, 13, 0.5, 16, 16, 15.5),
+                    Block.box(outerStart, 0, 1.25, outerEnd, 13, 3.25),
+                    Block.box(outerStart, 0, 12.75, outerEnd, 13, 14.75),
                     Block.box(shelfStart, 2.5, 2, shelfEnd, part == 0 ? 6.75 : 8.25, 14),
-                    part == 0 ? Block.box(3.5, 12.5, 2.75, 14.5, 14.5, 12.5)
-                            : Block.box(2, 12.5, 3.125, 13.625, 16, 13.5));
+                    part == 0 ? Block.box(3.5, 16, 2.75, 14.5, 18, 12.5)
+                            : Block.box(2, 16, 3.125, 13.625, 19.5, 13.5));
             shapes[part][0] = shape.optimize();
             for (int turn = 1; turn < 4; turn++) {
                 VoxelShape rotated = Shapes.empty();

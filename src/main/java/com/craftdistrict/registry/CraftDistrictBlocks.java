@@ -6,6 +6,7 @@ import com.craftdistrict.block.TallDecorationBlock;
 import com.craftdistrict.block.WideTallDecorationBlock;
 import com.craftdistrict.block.CashRegisterBlock;
 import com.craftdistrict.block.DoughPreparationTableBlock;
+import com.craftdistrict.block.DoughSheeterBlock;
 import com.craftdistrict.block.FlourSacksBlock;
 import com.craftdistrict.block.PastryTrayBlock;
 import com.craftdistrict.block.IndustrialDoughMixerBlock;
@@ -25,6 +26,8 @@ import com.craftdistrict.block.PoliceFingerprintBlock;
 import com.craftdistrict.block.PoliceInterrogationChairBlock;
 import com.craftdistrict.block.PoliceSecurityPropBlock;
 import com.craftdistrict.block.PoliceSecurityCameraBlock;
+import com.craftdistrict.block.PoliceOfficeSecurityBlock;
+import com.craftdistrict.block.SecurityScannerBlock;
 import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
 import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.PoliceDetentionStructureBlock;
@@ -273,6 +276,9 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<IndustrialDoughMixerBlock> INDUSTRIAL_DOUGH_MIXER = register("industrial_dough_mixer",
                 () -> new IndustrialDoughMixerBlock(BlockBehaviour.Properties.of()
                         .strength(3.0F).sound(SoundType.METAL).noOcclusion()));
+        public static final RegistrySupplier<DoughSheeterBlock> DOUGH_SHEETER = register("dough_sheeter",
+                () -> new DoughSheeterBlock(BlockBehaviour.Properties.of()
+                        .strength(2.5F).sound(SoundType.METAL).noOcclusion()));
         public static final RegistrySupplier<BakerySignageBlock> HANGING_SHOP_SIGN = register("bakery_hanging_shop_sign",
                 () -> new BakerySignageBlock(BakerySignageBlock.Variant.HANGING_SHOP, signageProperties()));
         public static final RegistrySupplier<BakerySignageBlock> WALL_SHOP_SIGN = register("bakery_wall_shop_sign",
@@ -346,6 +352,8 @@ public final class CraftDistrictBlocks {
                 () -> new PoliceWorkroomBlock(PoliceWorkroomBlock.Variant.EVIDENCE, entranceProperties()));
         public static final RegistrySupplier<OfficeChairBlock> OFFICE_CHAIR = register("office_chair",
                 () -> new OfficeChairBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceOfficeSecurityBlock> CASE_FILE_CABINET = register("case_file_cabinet",
+                () -> new PoliceOfficeSecurityBlock(PoliceOfficeSecurityBlock.Design.FILE_CABINET, entranceProperties()));
         public static final RegistrySupplier<PoliceInvestigationBoardBlock> INVESTIGATION_BOARD = register("police_investigation_board",
                 () -> new PoliceInvestigationBoardBlock(entranceProperties()));
         public static final RegistrySupplier<PoliceInterrogationBlock> INTERROGATION_TABLE = register("police_interrogation_table",
@@ -360,6 +368,10 @@ public final class CraftDistrictBlocks {
                 () -> new PoliceHoldingCellDoorBlock(entranceProperties()));
         public static final RegistrySupplier<PoliceSecurityCameraBlock> SECURITY_CAMERA = register("security_camera",
                 () -> new PoliceSecurityCameraBlock(entranceProperties()));
+        public static final RegistrySupplier<PoliceOfficeSecurityBlock> SECURITY_MONITOR_WALL_UNIT = register("security_monitor_wall_unit",
+                () -> new PoliceOfficeSecurityBlock(PoliceOfficeSecurityBlock.Design.MONITOR_WALL, entranceProperties()));
+        public static final RegistrySupplier<SecurityScannerBlock> VISITOR_SECURITY_SCANNER = register("visitor_security_scanner",
+                () -> new SecurityScannerBlock(entranceProperties()));
         public static final RegistrySupplier<PoliceSecurityPropBlock> LOCKERS = register("lockers",
                 () -> new PoliceSecurityPropBlock(PoliceSecurityPropBlock.Variant.LOCKERS,
                         BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL)));

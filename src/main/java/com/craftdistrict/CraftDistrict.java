@@ -8,6 +8,7 @@ import com.craftdistrict.registry.CraftDistrictItems;
 import com.craftdistrict.registry.CraftDistrictAssembly;
 import com.craftdistrict.network.AssemblyNetworking;
 import com.craftdistrict.entity.Seating;
+import com.craftdistrict.block.PoliceOfficeSecurityBlock;
 import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
 import dev.architectury.utils.Env;
@@ -23,6 +24,7 @@ public final class CraftDistrict {
     public static void init() {
         CraftDistrictBlocks.register();
         CraftDistrictItems.register();
+        PoliceOfficeSecurityBlock.registerLegacyCleanup();
         CraftDistrictAssembly.register();
         AssemblyNetworking.register();
         CraftDistrictEntities.register();

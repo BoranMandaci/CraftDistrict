@@ -1,0 +1,330 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "render_type": "minecraft:solid",
+  "texture_size": [
+    128,
+    32
+  ],
+  "textures": {
+    "atlas": "craftdistrict:block/police/office_security",
+    "particle": "craftdistrict:block/particles/particle_metal"
+  },
+  "elements": [
+    {
+      "name": "left_column",
+      "from": [
+        4.5,
+        0,
+        5
+      ],
+      "to": [
+        6.75,
+        1,
+        11
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.25,
+            0.8125,
+            0.48255813953488413
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.25,
+            0.8125,
+            0.48255813953488413
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.25,
+            0.34375,
+            0.48255813953488413
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.25,
+            0.34375,
+            0.48255813953488413
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_inner_sensor_strip",
+      "from": [
+        6.75,
+        0,
+        5.25
+      ],
+      "to": [
+        7,
+        1,
+        10.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.25,
+            2.75,
+            0.484375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.25,
+            2.1875,
+            0.484375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.25,
+            2.1875,
+            0.484375
+          ]
+        }
+      }
+    },
+    {
+      "name": "top_header",
+      "from": [
+        4.5,
+        1,
+        5
+      ],
+      "to": [
+        16,
+        4,
+        11
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.25,
+            2.8125,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            3.0,
+            0.25,
+            3.9375,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.25,
+            3.0,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.25,
+            3.0,
+            3.25
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0625,
+            0.25,
+            3.0,
+            3.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_status_panel",
+      "from": [
+        11.5,
+        2,
+        4.75
+      ],
+      "to": [
+        16,
+        3.25,
+        5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0625,
+            0.25,
+            6.1875,
+            0.875
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.625,
+            0.25,
+            7.1875,
+            0.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0625,
+            0.25,
+            6.625,
+            0.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.0625,
+            0.25,
+            6.625,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "ready_indicator",
+      "from": [
+        13,
+        2.375,
+        4.625
+      ],
+      "to": [
+        13.75,
+        2.875,
+        4.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0625,
+            0.25,
+            12.1875,
+            0.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0625,
+            0.25,
+            12.1875,
+            0.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12.0625,
+            0.25,
+            12.1875,
+            0.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.0625,
+            0.25,
+            12.1875,
+            0.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12.0625,
+            0.25,
+            12.1875,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_status_panel",
+      "from": [
+        11.5,
+        2,
+        11
+      ],
+      "to": [
+        16,
+        3.25,
+        11.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14.0625,
+            0.25,
+            14.1875,
+            0.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14.0625,
+            0.25,
+            14.625,
+            0.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14.0625,
+            0.25,
+            14.625,
+            0.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14.0625,
+            0.25,
+            14.625,
+            0.75
+          ]
+        }
+      }
+    }
+  ]
+}

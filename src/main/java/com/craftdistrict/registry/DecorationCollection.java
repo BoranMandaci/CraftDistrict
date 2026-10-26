@@ -28,6 +28,7 @@ public enum DecorationCollection {
             // Baking machines.
             CraftDistrictBlocks.Bakery.INDUSTRIAL_OVEN,
             CraftDistrictBlocks.Bakery.INDUSTRIAL_DOUGH_MIXER,
+            CraftDistrictBlocks.Bakery.DOUGH_SHEETER,
             CraftDistrictBlocks.Bakery.BREAD_SLICER,
             // Preparation, ingredients and tools.
             CraftDistrictBlocks.Bakery.DOUGH_PREPARATION_TABLE,
@@ -51,6 +52,7 @@ public enum DecorationCollection {
             // Office and dispatch.
             CraftDistrictBlocks.Police.DISPATCH_CONSOLE,
             CraftDistrictBlocks.Police.OFFICE_CHAIR,
+            CraftDistrictBlocks.Police.CASE_FILE_CABINET,
             // Investigation and interrogation.
             CraftDistrictBlocks.Police.INVESTIGATION_BOARD,
             CraftDistrictBlocks.Police.EVIDENCE_STORAGE_SHELF,
@@ -76,6 +78,8 @@ public enum DecorationCollection {
             // Signs, security and safety.
             CraftDistrictBlocks.Police.DEPARTMENT_SIGN,
             CraftDistrictBlocks.Police.SECURITY_CAMERA,
+            CraftDistrictBlocks.Police.SECURITY_MONITOR_WALL_UNIT,
+            CraftDistrictBlocks.Police.VISITOR_SECURITY_SCANNER,
             CraftDistrictBlocks.FireStation.EXTINGUISHER,
             CraftDistrictBlocks.FireStation.FIRST_AID_CABINET,
             CraftDistrictBlocks.FireStation.WALL_CLOCK),

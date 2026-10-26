@@ -58,6 +58,11 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
         return 2;
     }
 
+    /** Resized decorations can retain a smaller footprint for states saved by older versions. */
+    protected int partCount(BlockState state) {
+        return partCount();
+    }
+
     protected int partIndex(BlockState state) {
         return state.getValue(PRIMARY) ? 0 : 1;
     }
@@ -81,7 +86,7 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
         }
         CollisionContext collisionContext = context.getPlayer() == null
                 ? CollisionContext.empty() : CollisionContext.of(context.getPlayer());
-        for (int index = 0; index < partCount(); index++) {
+        for (int index = 0; index < partCount(placementState); index++) {
             BlockPos partPos = primaryPos.offset(partOffset(placementState, index));
             if (!isWithinPlacementBounds(level, partPos)
                     || !level.getBlockState(partPos).canBeReplaced(context)
@@ -135,14 +140,14 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
         CollisionContext collisionContext = placer == null
                 ? CollisionContext.empty() : CollisionContext.of(placer);
         // Check the complete footprint before writing any associated part.
-        for (int index = 1; index < partCount(); index++) {
+        for (int index = 1; index < partCount(state); index++) {
             if (!canPlacePart(level, pos, state, index, collisionContext)) {
                 rollbackPlacement(level, pos, state, 1);
                 return;
             }
         }
         int placed = 1;
-        for (int index = 1; index < partCount(); index++) {
+        for (int index = 1; index < partCount(state); index++) {
             BlockPos partPos = pos.offset(partOffset(state, index));
             // Earlier writes can invoke other mods' callbacks: recheck each write.
             if (!canPlacePart(level, pos, state, index, collisionContext)
@@ -206,7 +211,7 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
             Set<RemovalKey> removing = REMOVING_LINKED_PART.get();
             if (removing.add(key)) {
                 try {
-                    for (int index = 0; index < partCount(); index++) {
+                    for (int index = 0; index < partCount(state); index++) {
                         if (index == removedIndex) {
                             continue;
                         }
