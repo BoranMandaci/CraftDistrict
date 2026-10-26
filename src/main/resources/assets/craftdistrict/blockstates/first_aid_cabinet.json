@@ -1,19 +1,35 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,open=false": {
       "model": "craftdistrict:block/fire_station/first_aid_cabinet",
       "y": 0
     },
-    "facing=east": {
+    "facing=north,open=true": {
+      "model": "craftdistrict:block/fire_station/first_aid_cabinet_open",
+      "y": 0
+    },
+    "facing=east,open=false": {
       "model": "craftdistrict:block/fire_station/first_aid_cabinet",
       "y": 90
     },
-    "facing=south": {
+    "facing=east,open=true": {
+      "model": "craftdistrict:block/fire_station/first_aid_cabinet_open",
+      "y": 90
+    },
+    "facing=south,open=false": {
       "model": "craftdistrict:block/fire_station/first_aid_cabinet",
       "y": 180
     },
-    "facing=west": {
+    "facing=south,open=true": {
+      "model": "craftdistrict:block/fire_station/first_aid_cabinet_open",
+      "y": 180
+    },
+    "facing=west,open=false": {
       "model": "craftdistrict:block/fire_station/first_aid_cabinet",
+      "y": 270
+    },
+    "facing=west,open=true": {
+      "model": "craftdistrict:block/fire_station/first_aid_cabinet_open",
       "y": 270
     }
   }

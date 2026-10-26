@@ -5,6 +5,8 @@ import com.craftdistrict.block.WideDecorationBlock;
 import com.craftdistrict.block.TallDecorationBlock;
 import com.craftdistrict.block.WideTallDecorationBlock;
 import com.craftdistrict.block.CashRegisterBlock;
+import com.craftdistrict.block.DishwasherBlock;
+import com.craftdistrict.block.FirstAidCabinetBlock;
 import com.craftdistrict.block.DoughPreparationTableBlock;
 import com.craftdistrict.block.DoughSheeterBlock;
 import com.craftdistrict.block.FlourSacksBlock;
@@ -225,7 +227,7 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<RestaurantStorageWallBlock> KITCHEN_KNIFE_RACK = register("kitchen_knife_rack",
                 () -> new RestaurantStorageWallBlock(RestaurantStorageWallBlock.Design.KNIVES, metalProperties()));
         public static final RegistrySupplier<RestaurantStoragePropBlock> COMMERCIAL_DISHWASHER = register("commercial_dishwasher",
-                () -> new RestaurantStoragePropBlock(RestaurantStoragePropBlock.Design.DISHWASHER, metalProperties()));
+                () -> new DishwasherBlock(metalProperties()));
         public static final RegistrySupplier<RestaurantStoragePropBlock> COMMERCIAL_MICROWAVE = register("commercial_microwave",
                 () -> new RestaurantStoragePropBlock(RestaurantStoragePropBlock.Design.MICROWAVE, metalProperties()));
         public static final RegistrySupplier<CommercialPizzaOvenBlock> COMMERCIAL_PIZZA_OVEN = register("commercial_pizza_oven",
@@ -600,7 +602,7 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<FireLockerBenchBlock> LOCKER_BENCH = register("locker_bench",
                 () -> new FireLockerBenchBlock(equipmentProperties()));
         public static final RegistrySupplier<FireWallFixtureBlock> FIRST_AID_CABINET = register("first_aid_cabinet",
-                () -> new FireWallFixtureBlock(FireWallFixtureBlock.Fixture.FIRST_AID,equipmentProperties()));
+                () -> new FirstAidCabinetBlock(equipmentProperties()));
 
         private static BlockBehaviour.Properties equipmentProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();

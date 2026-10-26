@@ -13,7 +13,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Simple clicked-wall placement and support-loss rules; no clock or cabinet logic. */
-public final class FireWallFixtureBlock extends BakerySignageBlock {
+public class FireWallFixtureBlock extends BakerySignageBlock {
     public enum Fixture implements StringRepresentable {
         CLOCK("clock",0), FIRST_AID("first_aid",3);
 

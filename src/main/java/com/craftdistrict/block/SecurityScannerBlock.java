@@ -3,10 +3,19 @@ package com.craftdistrict.block;
 //? if >=1.21 {
 import com.mojang.serialization.MapCodec;
 //?}
+import dev.architectury.event.events.common.LifecycleEvent;
+import dev.architectury.event.events.common.PlayerEvent;
+import dev.architectury.event.events.common.TickEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -20,8 +29,54 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import java.util.Map;
+import java.util.WeakHashMap;
+
 /** Six reserved cells around a walkable arch; segment=0 retains the old two-cell scanner. */
 public final class SecurityScannerBlock extends MultiBlockDecorationBlock {
+    // Only players currently passing through a scanner are retained, without owning
+    // player/world lifetimes. No block ticking or nearby-entity/world scans.
+    private static final Map<Player, Passage> PASSAGES = new WeakHashMap<>();
+    private static boolean trackingRegistered;
+    private record Passage(SecurityScannerBlock scanner, ResourceKey<Level> dimension,
+                           BlockPos origin, Direction facing, boolean legacy) {
+        boolean contains(Player player) {
+            if (!dimension.equals(player.level().dimension())) return false;
+            double x = player.getX() - origin.getX() - .5;
+            double z = player.getZ() - origin.getZ() - .5;
+            Direction right = facing.getClockWise();
+            double across = .5 + x * right.getStepX() + z * right.getStepZ();
+            double depth = .5 - x * facing.getStepX() - z * facing.getStepZ();
+            double height = player.getY() - origin.getY();
+            return across > (legacy ? 2.5 : 7) / 16 && across < (legacy ? 13.5 : 25) / 16
+                    && depth > 4.5 / 16 && depth < 11.5 / 16
+                    && height >= 0 && height < (legacy ? 29.25 : 33) / 16;
+        }
+
+        boolean intact(Level level) {
+            if (!level.hasChunkAt(origin)) return false;
+            BlockState primary = level.getBlockState(origin);
+            return primary.is(scanner) && primary.getValue(PRIMARY) && primary.getValue(FACING) == facing
+                    && primary.getValue(SEGMENT) == (legacy ? 0 : 1);
+        }
+    }
+
+    public static void registerPassageTracking() {
+        if (trackingRegistered) return;
+        trackingRegistered = true;
+        TickEvent.PLAYER_POST.register(SecurityScannerBlock::clearExitedPassage);
+        PlayerEvent.PLAYER_QUIT.register(PASSAGES::remove);
+        LifecycleEvent.SERVER_STOPPING.register(server -> PASSAGES.clear());
+    }
+
+    static void clearExitedPassage(Player player) {
+        Level level = player.level();
+        if (level.isClientSide) return;
+        Passage passage = PASSAGES.get(player);
+        if (passage != null && (player.isRemoved() || !player.isAlive() || player.isSpectator()
+                || !passage.contains(player) || !passage.intact(level))) PASSAGES.remove(player);
+    }
+
     public static final IntegerProperty SEGMENT = IntegerProperty.create("segment", 0, 6);
     private static final VoxelShape[][] SHAPES = createShapes();
     private static final VoxelShape[][] LEGACY_SHAPES = {
@@ -101,6 +156,22 @@ public final class SecurityScannerBlock extends MultiBlockDecorationBlock {
     }
     @Override public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return getShape(state, level, pos, context);
+    }
+
+    @Override public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
+        if (level.isClientSide || !(entity instanceof Player player) || !player.isAlive() || player.isSpectator()) return;
+        Passage passage = new Passage(this, level.dimension(), structureOrigin(state, pos), state.getValue(FACING), isLegacy(state));
+        if (!passage.contains(player)) {
+            clearExitedPassage(player);
+            return;
+        }
+        if (passage.equals(PASSAGES.get(player)) || !passage.intact(level)) return;
+        PASSAGES.put(player, passage);
+        double offset = passage.legacy ? 0 : .5;
+        Direction right = passage.facing.getClockWise();
+        level.playSound(null, passage.origin.getX() + .5 + right.getStepX() * offset,
+                passage.origin.getY() + 1, passage.origin.getZ() + .5 + right.getStepZ() * offset,
+                SoundEvents.NOTE_BLOCK_BIT.value(), SoundSource.BLOCKS, .35F, 1.65F);
     }
     //? if >=1.21 {
     @Override protected MapCodec<? extends HorizontalDirectionalBlock> codec() { return CODEC; }

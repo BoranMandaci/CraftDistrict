@@ -1,0 +1,2329 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "atlas": "craftdistrict:block/fire_station/station_fixtures",
+    "particle": "craftdistrict:block/particles/particle_white",
+    "kitchen": "craftdistrict:block/restaurant/kitchen",
+    "storage": "craftdistrict:block/restaurant/storage",
+    "medical_blue": "craftdistrict:block/police/entrance_seat"
+  },
+  "elements": [
+    {
+      "name": "cabinet_back",
+      "from": [
+        2,
+        2,
+        15.5
+      ],
+      "to": [
+        14,
+        14,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cabinet_left",
+      "from": [
+        2,
+        2,
+        12.75
+      ],
+      "to": [
+        2.75,
+        14,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cabinet_right",
+      "from": [
+        13.25,
+        2,
+        12.75
+      ],
+      "to": [
+        14,
+        14,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cabinet_bottom",
+      "from": [
+        2.75,
+        2,
+        12.75
+      ],
+      "to": [
+        13.25,
+        2.75,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cabinet_top",
+      "from": [
+        2.75,
+        13.25,
+        12.75
+      ],
+      "to": [
+        13.25,
+        14,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_medical_door",
+      "from": [
+        2.5,
+        2.75,
+        2.25
+      ],
+      "to": [
+        2.75,
+        13.25,
+        12.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ],
+          "rotation": 270
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ],
+          "rotation": 90
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "metal_cabinet_handle",
+      "from": [
+        2.0,
+        6,
+        3.0
+      ],
+      "to": [
+        2.5,
+        9,
+        3.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ],
+          "rotation": 270
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ],
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "door_hinge_4",
+      "from": [
+        2.375,
+        4,
+        12.5
+      ],
+      "to": [
+        2.875,
+        5,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "door_hinge_11",
+      "from": [
+        2.375,
+        11,
+        12.5
+      ],
+      "to": [
+        2.875,
+        12,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_shelf_lower",
+      "from": [
+        2.75,
+        6,
+        13
+      ],
+      "to": [
+        13.25,
+        6.375,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_shelf_upper",
+      "from": [
+        2.75,
+        9.75,
+        13
+      ],
+      "to": [
+        13.25,
+        10.125,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "supply_container_floor",
+      "from": [
+        3,
+        2.75,
+        13
+      ],
+      "to": [
+        7,
+        3,
+        15.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "supply_container_front",
+      "from": [
+        3,
+        3,
+        13
+      ],
+      "to": [
+        7,
+        3.75,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "supply_container_back",
+      "from": [
+        3,
+        3,
+        15
+      ],
+      "to": [
+        7,
+        3.75,
+        15.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "supply_container_left",
+      "from": [
+        3,
+        3,
+        13.25
+      ],
+      "to": [
+        3.25,
+        3.75,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "supply_container_right",
+      "from": [
+        6.75,
+        3,
+        13.25
+      ],
+      "to": [
+        7,
+        3.75,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "blue_gauze_package",
+      "from": [
+        3.5,
+        3,
+        13.5
+      ],
+      "to": [
+        4.75,
+        5.5,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        },
+        "south": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        },
+        "west": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        },
+        "east": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        },
+        "up": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        }
+      }
+    },
+    {
+      "name": "white_gauze_package",
+      "from": [
+        5,
+        3,
+        13.5
+      ],
+      "to": [
+        6.25,
+        5.25,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rolled_bandage",
+      "from": [
+        8.51,
+        2.75,
+        13.125
+      ],
+      "to": [
+        9.49,
+        4.5,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "rolled_bandage",
+      "from": [
+        8.125,
+        3.135,
+        13.125
+      ],
+      "to": [
+        8.51,
+        4.115,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "rolled_bandage",
+      "from": [
+        9.49,
+        3.135,
+        13.125
+      ],
+      "to": [
+        9.875,
+        4.115,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "bandage_roll_core",
+      "from": [
+        8.75,
+        3.375,
+        13.09375
+      ],
+      "to": [
+        9.25,
+        3.875,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rolled_bandage",
+      "from": [
+        11.01,
+        2.75,
+        13.125
+      ],
+      "to": [
+        11.99,
+        4.5,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "rolled_bandage",
+      "from": [
+        10.625,
+        3.135,
+        13.125
+      ],
+      "to": [
+        11.01,
+        4.115,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "rolled_bandage",
+      "from": [
+        11.99,
+        3.135,
+        13.125
+      ],
+      "to": [
+        12.375,
+        4.115,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "bandage_roll_core",
+      "from": [
+        11.25,
+        3.375,
+        13.09375
+      ],
+      "to": [
+        11.75,
+        3.875,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            2.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_bottle",
+      "from": [
+        3.25,
+        6.375,
+        13.5
+      ],
+      "to": [
+        4.75,
+        8.375,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            0.125,
+            15.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            0.125,
+            15.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            0.125,
+            15.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            0.125,
+            15.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            0.125,
+            15.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_neck",
+      "from": [
+        3.4375,
+        8.375,
+        13.6875
+      ],
+      "to": [
+        4.5625,
+        8.75,
+        14.8125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            0.125,
+            15.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            0.125,
+            15.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            0.125,
+            15.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            14.0625,
+            0.125,
+            15.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_cap",
+      "from": [
+        3.3125,
+        8.75,
+        13.5625
+      ],
+      "to": [
+        4.6875,
+        9.125,
+        14.9375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_label",
+      "from": [
+        3.4375,
+        6.875,
+        13.46875
+      ],
+      "to": [
+        4.5625,
+        7.875,
+        13.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_bottle",
+      "from": [
+        5.75,
+        6.375,
+        13.5
+      ],
+      "to": [
+        7.25,
+        8.375,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_neck",
+      "from": [
+        5.9375,
+        8.375,
+        13.6875
+      ],
+      "to": [
+        7.0625,
+        8.75,
+        14.8125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_cap",
+      "from": [
+        5.8125,
+        8.75,
+        13.5625
+      ],
+      "to": [
+        7.1875,
+        9.125,
+        14.9375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.875,
+            3.875,
+            6.125,
+            4.125
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            5.875,
+            3.875,
+            6.125,
+            4.125
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.875,
+            3.875,
+            6.125,
+            4.125
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.875,
+            3.875,
+            6.125,
+            4.125
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.875,
+            3.875,
+            6.125,
+            4.125
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.875,
+            3.875,
+            6.125,
+            4.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_label",
+      "from": [
+        5.9375,
+        6.875,
+        13.46875
+      ],
+      "to": [
+        7.0625,
+        7.875,
+        13.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        }
+      }
+    },
+    {
+      "name": "upright_gauze_packet",
+      "from": [
+        8.5,
+        6.375,
+        13.25
+      ],
+      "to": [
+        10,
+        9.125,
+        14.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "adhesive_bandage_box",
+      "from": [
+        10.5,
+        6.375,
+        13.125
+      ],
+      "to": [
+        12.75,
+        8.875,
+        15.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "red_medical_box_band",
+      "from": [
+        10.5,
+        7.125,
+        13.09375
+      ],
+      "to": [
+        12.75,
+        7.625,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            8.125,
+            5.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "folded_dressing_lower",
+      "from": [
+        3.25,
+        10.125,
+        13.125
+      ],
+      "to": [
+        8.25,
+        10.625,
+        15.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "folded_dressing_upper",
+      "from": [
+        3.5,
+        10.625,
+        13.25
+      ],
+      "to": [
+        8,
+        11.125,
+        15.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "standing_bandage_packet",
+      "from": [
+        9.0,
+        10.125,
+        13.375
+      ],
+      "to": [
+        9.875,
+        12.5,
+        14.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        },
+        "south": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        },
+        "west": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        },
+        "east": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        },
+        "up": {
+          "texture": "#medical_blue",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        }
+      }
+    },
+    {
+      "name": "packet_identification_band",
+      "from": [
+        9.125,
+        11.375,
+        13.34375
+      ],
+      "to": [
+        9.75,
+        11.75,
+        13.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "standing_bandage_packet",
+      "from": [
+        10.125,
+        10.125,
+        13.625
+      ],
+      "to": [
+        11.0,
+        12.5,
+        14.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "packet_identification_band",
+      "from": [
+        10.25,
+        11.375,
+        13.59375
+      ],
+      "to": [
+        10.875,
+        11.75,
+        13.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.125,
+            8.125,
+            5.875,
+            11.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "standing_bandage_packet",
+      "from": [
+        11.25,
+        10.125,
+        13.375
+      ],
+      "to": [
+        12.125,
+        12.5,
+        14.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "west": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            4.0625,
+            0.125,
+            5.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "packet_identification_band",
+      "from": [
+        11.375,
+        11.375,
+        13.34375
+      ],
+      "to": [
+        12.0,
+        11.75,
+        13.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            12.0,
+            2.0,
+            16.0
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -38,7 +38,7 @@ public final class RestaurantServicePropBlock extends CashRegisterBlock {
             RestaurantKitchenBlock.rotations(Shapes.or(Block.box(1, 0, 2, 15, 1.75, 14), Block.box(1.5, 1.75, 10.5, 14.5, 11.75, 14),
                     Block.box(1, 7.5, 5, 15, 13, 14), Block.box(3, 4.5, 2.75, 11.75, 7.5, 8.5))),
             RestaurantKitchenBlock.rotations(Shapes.or(Block.box(2, 0, 2, 14, 1.5, 14),
-                    Block.box(6.75, 1.5, 9, 9.25, 6, 11), Block.box(1, 5, 8, 15, 19, 10.5)))
+                    Block.box(6.75, 1.5, 7, 9.25, 5, 9), Block.box(1, 5, 6.75, 15, 19, 9.25)))
     };
     private final Design design;
 
