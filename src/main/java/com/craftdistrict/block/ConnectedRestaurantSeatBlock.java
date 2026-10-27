@@ -19,7 +19,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 
 /** Local, reciprocal edge connections; no ticking, traversal, or additional block properties. */
-public final class ConnectedRestaurantSeatBlock extends RestaurantSeatBlock {
+public class ConnectedRestaurantSeatBlock extends RestaurantSeatBlock {
     public enum Corner { STRAIGHT, INNER_LEFT, INNER_RIGHT, OUTER_LEFT, OUTER_RIGHT }
     public enum Connection implements StringRepresentable {
         SINGLE(false,false,false,Corner.STRAIGHT),

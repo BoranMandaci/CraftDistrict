@@ -1,0 +1,1323 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "atlas": "craftdistrict:block/office/office",
+    "particle": "craftdistrict:block/particles/particle_black"
+  },
+  "elements": [
+    {
+      "name": "rack_floor_plinth",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        1.25,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rack_left_side",
+      "from": [
+        0,
+        1.25,
+        0
+      ],
+      "to": [
+        1.5,
+        16,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            1.008403,
+            8.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            1.008403,
+            8.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            1.008403,
+            8.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            1.008403,
+            8.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rack_right_side",
+      "from": [
+        14.5,
+        1.25,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            1.008403,
+            8.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            1.008403,
+            8.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            1.008403,
+            8.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            1.008403,
+            8.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_vent_panel",
+      "from": [
+        1.5,
+        1.25,
+        14.5
+      ],
+      "to": [
+        14.5,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            5.008403,
+            4.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            5.008403,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_equipment",
+      "from": [
+        1.5,
+        2,
+        1.5
+      ],
+      "to": [
+        14.5,
+        5,
+        14.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_front",
+      "from": [
+        1.75,
+        2.25,
+        1.25
+      ],
+      "to": [
+        14.25,
+        4.75,
+        1.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_drive_strip",
+      "from": [
+        2.5,
+        2.75,
+        1.125
+      ],
+      "to": [
+        10.5,
+        3.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "green_status_led",
+      "from": [
+        12,
+        2.75,
+        1.125
+      ],
+      "to": [
+        12.5,
+        3.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "amber_status_led",
+      "from": [
+        13,
+        2.75,
+        1.125
+      ],
+      "to": [
+        13.5,
+        3.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_equipment",
+      "from": [
+        1.5,
+        6,
+        1.5
+      ],
+      "to": [
+        14.5,
+        9,
+        14.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_front",
+      "from": [
+        1.75,
+        6.25,
+        1.25
+      ],
+      "to": [
+        14.25,
+        8.75,
+        1.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_drive_strip",
+      "from": [
+        2.5,
+        6.75,
+        1.125
+      ],
+      "to": [
+        10.5,
+        7.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "green_status_led",
+      "from": [
+        12,
+        6.75,
+        1.125
+      ],
+      "to": [
+        12.5,
+        7.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "amber_status_led",
+      "from": [
+        13,
+        6.75,
+        1.125
+      ],
+      "to": [
+        13.5,
+        7.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_equipment",
+      "from": [
+        1.5,
+        10,
+        1.5
+      ],
+      "to": [
+        14.5,
+        13,
+        14.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_front",
+      "from": [
+        1.75,
+        10.25,
+        1.25
+      ],
+      "to": [
+        14.25,
+        12.75,
+        1.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_drive_strip",
+      "from": [
+        2.5,
+        10.75,
+        1.125
+      ],
+      "to": [
+        10.5,
+        11.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "green_status_led",
+      "from": [
+        12,
+        10.75,
+        1.125
+      ],
+      "to": [
+        12.5,
+        11.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "amber_status_led",
+      "from": [
+        13,
+        10.75,
+        1.125
+      ],
+      "to": [
+        13.5,
+        11.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_equipment",
+      "from": [
+        1.5,
+        14,
+        1.5
+      ],
+      "to": [
+        14.5,
+        16,
+        14.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.666667,
+            10.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_front",
+      "from": [
+        1.75,
+        14.25,
+        1.25
+      ],
+      "to": [
+        14.25,
+        16,
+        1.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.6,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.6,
+            4.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.6,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "server_drive_strip",
+      "from": [
+        2.5,
+        14.75,
+        1.125
+      ],
+      "to": [
+        10.5,
+        15.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "green_status_led",
+      "from": [
+        12,
+        14.75,
+        1.125
+      ],
+      "to": [
+        12.5,
+        15.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            2.0,
+            6.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "amber_status_led",
+      "from": [
+        13,
+        14.75,
+        1.125
+      ],
+      "to": [
+        13.5,
+        15.25,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            2.0,
+            14.0,
+            4.0
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -47,6 +47,14 @@ public final class DecorationBreakParticles {
         return block instanceof DiningTableBlock || block instanceof ModularDiningTableBlock
                 || (block instanceof RestaurantSeatBlock && !(block instanceof OfficeChairBlock))
                 || block instanceof RestaurantServingCartBlock
+                || block instanceof com.craftdistrict.block.OfficeFurnitureBlock
+                || block instanceof com.craftdistrict.block.OfficePropBlock
+                || block instanceof com.craftdistrict.block.OfficeSpeakerBlock
+                || block instanceof com.craftdistrict.block.OfficePlanterBlock
+                || block instanceof com.craftdistrict.block.OfficeConnectedBlock
+                || block instanceof com.craftdistrict.block.AcousticDividerBlock
+                || block instanceof com.craftdistrict.block.OfficeBoardBlock
+                || block instanceof com.craftdistrict.block.OfficeMagazineRackBlock
                 || block instanceof AssemblyStationBlock || block instanceof HoldingCellBedBlock
                 || block instanceof FireDispatchDeskBlock || block instanceof SupermarketSelfCheckoutBlock
                 || state.is(CraftDistrictBlocks.Police.BLUE_CHAIR.get())

@@ -94,6 +94,15 @@ import com.craftdistrict.block.KitchenTrashBinBlock;
 import com.craftdistrict.block.KitchenOrderDisplayBlock;
 import com.craftdistrict.block.StainlessSteelPrepTableBlock;
 import com.craftdistrict.block.AssemblyStationBlock;
+import com.craftdistrict.block.OfficeFurnitureBlock;
+import com.craftdistrict.block.OfficePropBlock;
+import com.craftdistrict.block.OfficeConnectedBlock;
+import com.craftdistrict.block.AcousticDividerBlock;
+import com.craftdistrict.block.OfficeBoardBlock;
+import com.craftdistrict.block.OfficeMagazineRackBlock;
+import com.craftdistrict.block.OfficeLoungeSofaBlock;
+import com.craftdistrict.block.OfficeSpeakerBlock;
+import com.craftdistrict.block.OfficePlanterBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -121,6 +130,7 @@ public final class CraftDistrictBlocks {
         Supermarket.initialize();
         Lighting.initialize();
         Restaurant.initialize();
+        Office.initialize();
         Survival.initialize();
         BLOCKS.register();
     }
@@ -133,6 +143,50 @@ public final class CraftDistrictBlocks {
                 ? new BedItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
+    }
+
+    public static final class Office {
+        public static final RegistrySupplier<OfficeFurnitureBlock> WORKSTATION = register("office_workstation",
+                () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.WORKSTATION, metalProperties()));
+        public static final RegistrySupplier<OfficePropBlock> CUBICLE = register("office_cubicle",
+                () -> new OfficePropBlock(OfficePropBlock.Design.CUBICLE, metalProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> EXECUTIVE_DESK = register("executive_desk",
+                () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.EXECUTIVE, woodProperties()));
+        public static final RegistrySupplier<OfficeConnectedBlock> CONFERENCE_TABLE = register("conference_table",
+                () -> new OfficeConnectedBlock(OfficeConnectedBlock.Design.CONFERENCE, woodProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> RECEPTION_DESK = register("office_reception_desk",
+                () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.RECEPTION, woodProperties()));
+        public static final RegistrySupplier<OfficeBoardBlock> PRESENTATION_SCREEN = register("presentation_screen",
+                () -> new OfficeBoardBlock(OfficeBoardBlock.Design.SCREEN, metalProperties()));
+        public static final RegistrySupplier<OfficeBoardBlock> MOBILE_WHITEBOARD = register("mobile_whiteboard",
+                () -> new OfficeBoardBlock(OfficeBoardBlock.Design.WHITEBOARD, metalProperties()));
+        public static final RegistrySupplier<OfficeSpeakerBlock> CONFERENCE_SPEAKER = register("conference_speaker",
+                () -> new OfficeSpeakerBlock(metalProperties()));
+        public static final RegistrySupplier<AcousticDividerBlock> ACOUSTIC_DIVIDER = register("acoustic_divider",
+                () -> new AcousticDividerBlock(metalProperties()));
+        public static final RegistrySupplier<OfficeLoungeSofaBlock> LOUNGE_SOFA = register("office_lounge_sofa",
+                () -> new OfficeLoungeSofaBlock(woodProperties()));
+        public static final RegistrySupplier<OfficePropBlock> COFFEE_TABLE = register("coffee_table",
+                () -> new OfficePropBlock(OfficePropBlock.Design.COFFEE_TABLE, woodProperties()));
+        public static final RegistrySupplier<OfficeMagazineRackBlock> MAGAZINE_RACK = register("magazine_rack",
+                () -> new OfficeMagazineRackBlock(metalProperties()));
+        public static final RegistrySupplier<OfficePlanterBlock> PLANTER = register("office_planter",
+                () -> new OfficePlanterBlock(woodProperties()));
+        public static final RegistrySupplier<OfficePropBlock> PRINTER = register("office_printer",
+                () -> new OfficePropBlock(OfficePropBlock.Design.PRINTER, metalProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> WATER_COOLER = register("water_cooler",
+                () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.WATER_COOLER, metalProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> SERVER_RACK = register("server_rack",
+                () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.SERVER_RACK, metalProperties()));
+
+        private static BlockBehaviour.Properties metalProperties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
+        }
+        private static BlockBehaviour.Properties woodProperties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD).noOcclusion();
+        }
+        private Office() { }
+        private static void initialize() { }
     }
 
     public static final class Survival {

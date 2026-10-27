@@ -1,0 +1,735 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "atlas": "craftdistrict:block/office/office",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "continuous_desktop",
+      "from": [
+        0,
+        13.5,
+        1
+      ],
+      "to": [
+        16,
+        14.5,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            1.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            1.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            1.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "underdesk_cable_spine",
+      "from": [
+        2,
+        11.25,
+        11
+      ],
+      "to": [
+        16,
+        12.15,
+        12.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            7.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            7.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            7.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            7.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "slim_end_frame",
+      "from": [
+        1,
+        0.45,
+        3
+      ],
+      "to": [
+        3,
+        13.5,
+        13
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_floor_glide",
+      "from": [
+        1,
+        0.0,
+        3
+      ],
+      "to": [
+        3,
+        0.45,
+        13
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "monitor_foot",
+      "from": [
+        7,
+        14.5,
+        9
+      ],
+      "to": [
+        11,
+        14.875,
+        12
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "slim_monitor_stand",
+      "from": [
+        8.5,
+        14.875,
+        10.5
+      ],
+      "to": [
+        9.5,
+        18.25,
+        11.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "monitor_frame",
+      "from": [
+        4.0,
+        18.0,
+        10
+      ],
+      "to": [
+        14.0,
+        24.0,
+        11.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "monitor_screen",
+      "from": [
+        4.5,
+        18.5,
+        9.9375
+      ],
+      "to": [
+        13.5,
+        23.5,
+        10
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            8.0,
+            4.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "keyboard_lower_chassis",
+      "from": [
+        10,
+        14.5,
+        4
+      ],
+      "to": [
+        16,
+        14.75,
+        7
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            7.6,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.4,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            7.6,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "individual_key_rows",
+      "from": [
+        10.25,
+        14.75,
+        4.375
+      ],
+      "to": [
+        16,
+        15.125,
+        6.625
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            2.0,
+            1.642857,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.357143,
+            0.0,
+            8.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "keyboard_raised_rear_edge",
+      "from": [
+        10.25,
+        14.75,
+        6.625
+      ],
+      "to": [
+        16,
+        15.25,
+        6.875
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            3.642857,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.357143,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            3.642857,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "aligned_notepad",
+      "from": [
+        2,
+        14.5,
+        3
+      ],
+      "to": [
+        5,
+        14.75,
+        7
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            6.0,
+            16.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "resting_pen",
+      "from": [
+        5.5,
+        14.5,
+        3.5
+      ],
+      "to": [
+        5.75,
+        14.75,
+        6.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    }
+  ]
+}
