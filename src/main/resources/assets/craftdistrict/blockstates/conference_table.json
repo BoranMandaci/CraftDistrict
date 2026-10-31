@@ -1,68 +1,1929 @@
 {
-  "variants": {
-    "facing=north,left=false,right=false": {
-      "model": "craftdistrict:block/office/conference_table_00",
-      "y": 0
+  "multipart": [
+    {
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_core"
+      }
     },
-    "facing=north,left=false,right=true": {
-      "model": "craftdistrict:block/office/conference_table_01",
-      "y": 0
+    {
+      "when": {
+        "support": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_column"
+      }
     },
-    "facing=north,left=true,right=false": {
-      "model": "craftdistrict:block/office/conference_table_10",
-      "y": 0
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_end_edge",
+        "y": 0
+      }
     },
-    "facing=north,left=true,right=true": {
-      "model": "craftdistrict:block/office/conference_table_11",
-      "y": 0
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_end_edge",
+        "y": 90
+      }
     },
-    "facing=east,left=false,right=false": {
-      "model": "craftdistrict:block/office/conference_table_00",
-      "y": 90
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_end_edge",
+        "y": 180
+      }
     },
-    "facing=east,left=false,right=true": {
-      "model": "craftdistrict:block/office/conference_table_01",
-      "y": 90
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_end_edge",
+        "y": 270
+      }
     },
-    "facing=east,left=true,right=false": {
-      "model": "craftdistrict:block/office/conference_table_10",
-      "y": 90
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_center_edge",
+        "y": 0
+      }
     },
-    "facing=east,left=true,right=true": {
-      "model": "craftdistrict:block/office/conference_table_11",
-      "y": 90
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_center_edge",
+        "y": 180
+      }
     },
-    "facing=south,left=false,right=false": {
-      "model": "craftdistrict:block/office/conference_table_00",
-      "y": 180
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_join",
+        "y": 270
+      }
     },
-    "facing=south,left=false,right=true": {
-      "model": "craftdistrict:block/office/conference_table_01",
-      "y": 180
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_join",
+        "y": 90
+      }
     },
-    "facing=south,left=true,right=false": {
-      "model": "craftdistrict:block/office/conference_table_10",
-      "y": 180
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_join",
+        "y": 0
+      }
     },
-    "facing=south,left=true,right=true": {
-      "model": "craftdistrict:block/office/conference_table_11",
-      "y": 180
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_center_edge",
+        "y": 90
+      }
     },
-    "facing=west,left=false,right=false": {
-      "model": "craftdistrict:block/office/conference_table_00",
-      "y": 270
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_center_edge",
+        "y": 270
+      }
     },
-    "facing=west,left=false,right=true": {
-      "model": "craftdistrict:block/office/conference_table_01",
-      "y": 270
-    },
-    "facing=west,left=true,right=false": {
-      "model": "craftdistrict:block/office/conference_table_10",
-      "y": 270
-    },
-    "facing=west,left=true,right=true": {
-      "model": "craftdistrict:block/office/conference_table_11",
-      "y": 270
+    {
+      "when": {
+        "OR": [
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "north",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "east",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "false",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "south",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "false"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "false",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "false",
+            "front": "true",
+            "back": "true"
+          },
+          {
+            "facing": "west",
+            "left": "true",
+            "right": "true",
+            "front": "true",
+            "back": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/office/conference_table_join",
+        "y": 180
+      }
     }
-  }
+  ]
 }

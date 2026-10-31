@@ -99,8 +99,7 @@ public final class OfficeFurnitureBlock extends MultiBlockDecorationBlock {
                     case EXECUTIVE -> Shapes.or(box(0, 13.5, 1, 16, 14.5, 15),
                             box(0, 4.5, 13.5, 16, 13.05, 14.5), p == 1 ? Shapes.empty()
                                     : box(p == 0 ? 1 : 8, 0, 4, p == 0 ? 10 : 15, 13.5, 14));
-                    case RECEPTION -> Shapes.or(box(0, 1, 1, 16, 19, 4), box(0, 15, 4, 16, 16, 15),
-                            p == 0 ? box(1, 0, 4, 8, 15, 14) : p == 2 ? box(13, 0, 4, 15, 15, 14) : Shapes.empty());
+                    case RECEPTION -> receptionShape(p);
                     case SCREEN -> box(p == 0 ? .5 : 0, 2, 14, p == 0 ? 16 : 15.5, 15, 16);
                     case WHITEBOARD -> p == 0 ? Shapes.or(box(2, 0, 3, 14, 2, 13), box(1, 7, 7, 15, 16, 9))
                             : box(1, 0, 7, 15, 14, 9);
@@ -113,6 +112,16 @@ public final class OfficeFurnitureBlock extends MultiBlockDecorationBlock {
             }
         }
         return shapes;
+    }
+
+    private static VoxelShape receptionShape(int part) {
+        VoxelShape shape = Shapes.or(box(0, 1, 1, 16, 18, 3.5), box(0, 18, 1, 16, 19, 6),
+                box(0, 15, 3.5, 16, 16, 15), box(0, 16, 3.5, 16, 18, 4.125),
+                box(part == 0 ? 13 : 0, 3, 4, part == 2 ? 13 : 16, 13.75, 4.75),
+                box(part == 0 ? 13 : 0, 13.75, 4, part == 2 ? 13 : 16, 15, 6));
+        if (part == 0) shape = Shapes.or(shape, box(1, 1, 3.5, 13, 15, 14), box(0, 1, 3.5, 1, 15, 15));
+        if (part == 2) shape = Shapes.or(shape, box(13, 0, 3.5, 15, 15, 14), box(15, .75, 3.5, 16, 15, 15));
+        return shape.optimize();
     }
     //? if >=1.21 {
     @Override protected MapCodec<? extends HorizontalDirectionalBlock> codec() { return CODEC; }

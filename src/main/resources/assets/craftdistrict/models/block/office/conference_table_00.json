@@ -6,138 +6,303 @@
   },
   "elements": [
     {
-      "name": "continuous_oak_surface",
+      "name": "pedestal_floor_plate",
       "from": [
+        4,
         0,
-        13.5,
-        0
+        4
       ],
       "to": [
-        16,
-        14.5,
-        16
+        12,
+        0.75,
+        12
       ],
       "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            10.0,
-            0.0,
-            12.0,
-            2.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            10.0,
-            0.0,
-            12.0,
-            2.0
-          ]
-        },
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            10.0,
-            0.0,
-            12.0,
-            2.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            6.0,
-            6.0,
-            8.0
-          ]
-        },
         "north": {
           "texture": "#atlas",
           "uv": [
-            10.0,
-            0.0,
-            12.0,
-            2.0
+            6,
+            0,
+            8,
+            2
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
-            10.0,
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_floor_plate_up_0",
+      "from": [
+        4,
+        0.75,
+        4
+      ],
+      "to": [
+        5,
+        0.75,
+        12
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
             0.0,
-            12.0,
+            6.25,
             2.0
           ]
         }
       }
     },
     {
-      "name": "cable_support_spine",
+      "name": "pedestal_floor_plate_up_1",
       "from": [
-        0,
-        10.5,
-        7
+        11,
+        0.75,
+        4
       ],
       "to": [
-        16,
-        11.5,
-        9
+        12,
+        0.75,
+        12
       ],
       "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            0.0,
-            8.0,
-            2.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            0.0,
-            8.0,
-            2.0
-          ]
-        },
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            0.0,
-            8.0,
-            2.0
-          ]
-        },
         "up": {
           "texture": "#atlas",
           "uv": [
-            6.0,
+            7.75,
             0.0,
             8.0,
             2.0
           ]
-        },
+        }
+      }
+    },
+    {
+      "name": "pedestal_floor_plate_up_2",
+      "from": [
+        5,
+        0.75,
+        4
+      ],
+      "to": [
+        11,
+        0.75,
+        5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.0,
+            7.75,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_floor_plate_up_3",
+      "from": [
+        5,
+        0.75,
+        11
+      ],
+      "to": [
+        11,
+        0.75,
+        12
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            1.75,
+            7.75,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_lower_collar",
+      "from": [
+        5,
+        0.75,
+        5
+      ],
+      "to": [
+        11,
+        1.25,
+        11
+      ],
+      "faces": {
         "north": {
           "texture": "#atlas",
           "uv": [
-            6.0,
-            0.0,
-            8.0,
-            2.0
+            6,
+            0,
+            8,
+            2
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_lower_collar_up_0",
+      "from": [
+        5,
+        1.25,
+        5
+      ],
+      "to": [
+        6.5,
+        1.25,
+        11
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
             6.0,
             0.0,
+            6.5,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_lower_collar_up_1",
+      "from": [
+        9.5,
+        1.25,
+        5
+      ],
+      "to": [
+        11,
+        1.25,
+        11
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            7.5,
+            0.0,
             8.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_lower_collar_up_2",
+      "from": [
+        6.5,
+        1.25,
+        5
+      ],
+      "to": [
+        9.5,
+        1.25,
+        6.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.5,
+            0.0,
+            7.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_lower_collar_up_3",
+      "from": [
+        6.5,
+        1.25,
+        9.5
+      ],
+      "to": [
+        9.5,
+        1.25,
+        11
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.5,
+            1.5,
+            7.5,
             2.0
           ]
         }
@@ -147,115 +312,145 @@
       "name": "central_pedestal",
       "from": [
         6.5,
-        1,
+        1.25,
         6.5
       ],
       "to": [
         9.5,
-        13.5,
+        12,
         9.5
       ],
       "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            0.0,
-            4.0,
-            2.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            0.0,
-            4.0,
-            2.0
-          ]
-        },
         "north": {
           "texture": "#atlas",
           "uv": [
-            2.0,
-            0.0,
-            4.0,
-            2.0
+            2,
+            0,
+            4,
+            2
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
-            2.0,
-            0.0,
-            4.0,
-            2.0
+            2,
+            0,
+            4,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2,
+            0,
+            4,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2,
+            0,
+            4,
+            2
           ]
         }
       }
     },
     {
-      "name": "broad_floor_foot",
+      "name": "pedestal_top_mount",
       "from": [
-        4,
-        0,
-        4
-      ],
-      "to": [
+        5.75,
         12,
-        1,
-        12
+        5.75
+      ],
+      "to": [
+        10.25,
+        13.25,
+        10.25
       ],
       "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            0.0,
-            8.0,
-            2.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            0.0,
-            8.0,
-            2.0
-          ]
-        },
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            0.0,
-            8.0,
-            2.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            0.0,
-            8.0,
-            2.0
-          ]
-        },
         "north": {
           "texture": "#atlas",
           "uv": [
-            6.0,
-            0.0,
-            8.0,
-            2.0
+            6,
+            0,
+            8,
+            2
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_top_mount_down_0",
+      "from": [
+        5.75,
+        12,
+        5.75
+      ],
+      "to": [
+        6.5,
+        12,
+        10.25
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
             6.0,
+            0.0,
+            6.333333,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_top_mount_down_1",
+      "from": [
+        9.5,
+        12,
+        5.75
+      ],
+      "to": [
+        10.25,
+        12,
+        10.25
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            7.666667,
             0.0,
             8.0,
             2.0
@@ -264,121 +459,49 @@
       }
     },
     {
-      "name": "finished_outer_end",
+      "name": "pedestal_top_mount_down_2",
       "from": [
-        0,
-        12.5,
-        0.5
+        6.5,
+        12,
+        5.75
       ],
       "to": [
-        0.5,
-        13.5,
-        15.5
+        9.5,
+        12,
+        6.5
       ],
       "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            6.0,
-            8.0,
-            8.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            6.0,
-            8.0,
-            8.0
-          ]
-        },
         "down": {
           "texture": "#atlas",
           "uv": [
-            6.0,
-            6.0,
-            8.0,
-            8.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            6.0,
-            8.0,
-            8.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            6.0,
-            8.0,
-            8.0
+            6.333333,
+            1.666667,
+            7.666667,
+            2.0
           ]
         }
       }
     },
     {
-      "name": "finished_outer_end",
+      "name": "pedestal_top_mount_down_3",
       "from": [
-        15.5,
-        12.5,
-        0.5
+        6.5,
+        12,
+        9.5
       ],
       "to": [
-        16.0,
-        13.5,
-        15.5
+        9.5,
+        12,
+        10.25
       ],
       "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            6.0,
-            8.0,
-            8.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            6.0,
-            8.0,
-            8.0
-          ]
-        },
         "down": {
           "texture": "#atlas",
           "uv": [
-            6.0,
-            6.0,
-            8.0,
-            8.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            6.0,
-            8.0,
-            8.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            6.0,
-            8.0,
-            8.0
+            6.333333,
+            0.0,
+            7.666667,
+            0.333333
           ]
         }
       }

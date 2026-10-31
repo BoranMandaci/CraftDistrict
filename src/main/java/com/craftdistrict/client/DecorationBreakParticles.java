@@ -48,6 +48,7 @@ public final class DecorationBreakParticles {
                 || (block instanceof RestaurantSeatBlock && !(block instanceof OfficeChairBlock))
                 || block instanceof RestaurantServingCartBlock
                 || block instanceof com.craftdistrict.block.OfficeFurnitureBlock
+                || block instanceof com.craftdistrict.block.OfficeCubicleBlock
                 || block instanceof com.craftdistrict.block.OfficePropBlock
                 || block instanceof com.craftdistrict.block.OfficeSpeakerBlock
                 || block instanceof com.craftdistrict.block.OfficePlanterBlock

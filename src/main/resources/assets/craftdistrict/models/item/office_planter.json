@@ -2,19 +2,21 @@
   "parent": "minecraft:block/block",
   "textures": {
     "atlas": "craftdistrict:block/office/office",
-    "particle": "craftdistrict:block/particles/particle_white"
+    "particle": "craftdistrict:block/particles/particle_black",
+    "foliage": "minecraft:block/azalea_leaves",
+    "dense_foliage": "minecraft:block/azalea_top"
   },
   "elements": [
     {
       "name": "square_black_floor_base",
       "from": [
         0.0,
-        -8.0,
+        -5.75,
         0.0
       ],
       "to": [
         16.0,
-        -7.0,
+        -4.75,
         16.0
       ],
       "faces": {
@@ -78,12 +80,12 @@
       "name": "front_black_planter_wall",
       "from": [
         0.0,
-        -7.0,
+        -4.75,
         0.0
       ],
       "to": [
         16.0,
-        6.5,
+        8.75,
         1.25
       ],
       "faces": {
@@ -138,12 +140,12 @@
       "name": "rear_black_planter_wall",
       "from": [
         0.0,
-        -7.0,
+        -4.75,
         14.75
       ],
       "to": [
         16.0,
-        6.5,
+        8.75,
         16.0
       ],
       "faces": {
@@ -198,12 +200,12 @@
       "name": "left_black_planter_wall",
       "from": [
         0.0,
-        -7.0,
+        -4.75,
         1.25
       ],
       "to": [
         1.25,
-        6.5,
+        8.75,
         14.75
       ],
       "faces": {
@@ -240,12 +242,12 @@
       "name": "right_black_planter_wall",
       "from": [
         14.75,
-        -7.0,
+        -4.75,
         1.25
       ],
       "to": [
         16.0,
-        6.5,
+        8.75,
         14.75
       ],
       "faces": {
@@ -282,12 +284,12 @@
       "name": "recessed_soil",
       "from": [
         1.25,
-        5.0,
+        7.25,
         1.25
       ],
       "to": [
         14.75,
-        5.25,
+        7.5,
         14.75
       ],
       "faces": {
@@ -312,1458 +314,5257 @@
       }
     },
     {
-      "name": "branching_ficus_stem",
+      "name": "low_fork_limb_0",
       "from": [
+        5.1875,
+        7.5,
+        6.6875
+      ],
+      "to": [
         5.8125,
-        5.25,
-        7.8125
-      ],
-      "to": [
-        6.1875,
-        17.25,
-        8.1875
+        12.25,
+        7.3125
       ],
       "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
         "north": {
           "texture": "#atlas",
           "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
+            12,
+            0,
+            14,
+            2
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
+            12,
+            0,
+            14,
+            2
           ]
-        }
-      }
-    },
-    {
-      "name": "branching_ficus_stem",
-      "from": [
-        9.8125,
-        5.25,
-        7.8125
-      ],
-      "to": [
-        10.1875,
-        18.0,
-        8.1875
-      ],
-      "faces": {
+        },
         "west": {
           "texture": "#atlas",
           "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
+            12,
+            0,
+            14,
+            2
           ]
         },
         "east": {
           "texture": "#atlas",
           "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
+            12,
+            0,
+            14,
+            2
           ]
         },
         "up": {
           "texture": "#atlas",
           "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
+            12,
+            0,
+            14,
+            2
           ]
         },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": 45,
+        "origin": [
+          5.5,
+          7.5,
+          7.0
+        ]
+      }
+    },
+    {
+      "name": "low_fork_limb_1",
+      "from": [
+        5.25,
+        7.5,
+        6.75
+      ],
+      "to": [
+        5.75,
+        11.75,
+        7.25
+      ],
+      "faces": {
         "north": {
           "texture": "#atlas",
           "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
+            12,
+            0,
+            14,
+            2
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
           ]
         }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": -45,
+        "origin": [
+          5.5,
+          7.5,
+          7.0
+        ]
       }
     },
     {
-      "name": "branching_ficus_stem",
+      "name": "low_fork_limb_2",
       "from": [
-        7.8125,
-        5.25,
-        6.8125
+        5.28125,
+        7.5,
+        6.78125
       ],
       "to": [
-        8.1875,
-        19.5,
+        5.71875,
+        12.0,
+        7.21875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "x",
+        "angle": -45,
+        "origin": [
+          5.5,
+          7.5,
+          7.0
+        ]
+      }
+    },
+    {
+      "name": "low_fork_limb_3",
+      "from": [
+        9.9375,
+        7.5,
+        8.6875
+      ],
+      "to": [
+        10.5625,
+        12.125,
+        9.3125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "z",
+        "angle": -45,
+        "origin": [
+          10.25,
+          7.5,
+          9.0
+        ]
+      }
+    },
+    {
+      "name": "low_fork_limb_4",
+      "from": [
+        9.9375,
+        7.5,
+        8.6875
+      ],
+      "to": [
+        10.5625,
+        12.5,
+        9.3125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "x",
+        "angle": 45,
+        "origin": [
+          10.25,
+          7.5,
+          9.0
+        ]
+      }
+    },
+    {
+      "name": "low_fork_limb_5",
+      "from": [
+        10.0,
+        7.5,
+        8.75
+      ],
+      "to": [
+        10.5,
+        11.875,
+        9.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "x",
+        "angle": -45,
+        "origin": [
+          10.25,
+          7.5,
+          9.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_skirt",
+      "from": [
+        2.73,
+        9.0,
+        2.94
+      ],
+      "to": [
+        7.77,
+        10.08,
+        7.56
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_body",
+      "from": [
+        2.25,
+        10.08,
+        2.5
+      ],
+      "to": [
+        8.25,
+        13.8,
+        8.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_body_up_0",
+      "from": [
+        2.25,
+        13.8,
+        2.5
+      ],
+      "to": [
+        2.605,
+        13.8,
+        8.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            0.946667,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_body_up_1",
+      "from": [
+        7.645,
+        13.8,
+        2.5
+      ],
+      "to": [
+        8.25,
+        13.8,
+        8.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            14.386667,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_body_up_2",
+      "from": [
+        2.605,
+        13.8,
+        2.5
+      ],
+      "to": [
+        7.645,
+        13.8,
+        2.885
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.946667,
+            0.0,
+            14.386667,
+            1.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_body_up_3",
+      "from": [
+        2.605,
+        13.8,
+        7.615
+      ],
+      "to": [
+        7.645,
+        13.8,
+        8.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.946667,
+            14.88,
+            14.386667,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_body_down_0",
+      "from": [
+        2.25,
+        10.08,
+        2.5
+      ],
+      "to": [
+        2.73,
+        10.08,
+        8.0
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_body_down_1",
+      "from": [
+        7.77,
+        10.08,
+        2.5
+      ],
+      "to": [
+        8.25,
+        10.08,
+        8.0
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_body_down_2",
+      "from": [
+        2.73,
+        10.08,
+        2.5
+      ],
+      "to": [
+        7.77,
+        10.08,
+        2.94
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            14.72,
+            14.72,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_body_down_3",
+      "from": [
+        2.73,
+        10.08,
+        7.56
+      ],
+      "to": [
+        7.77,
+        10.08,
+        8.0
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_0_crown",
+      "from": [
+        2.605,
+        13.8,
+        2.885
+      ],
+      "to": [
+        7.645,
+        15.0,
+        7.615
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.613333,
+            0.0,
+            15.053333,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            0.946667,
+            0.0,
+            14.386667,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.12,
+            0.0,
+            14.88,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.12,
+            0.0,
+            14.88,
+            3.2
+          ]
+        },
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.946667,
+            1.12,
+            14.386667,
+            14.88
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          5.25,
+          12.0,
+          5.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_skirt",
+      "from": [
+        7.625,
+        9.0625,
+        2.795
+      ],
+      "to": [
+        12.875,
+        10.21,
+        7.205
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_body",
+      "from": [
+        7.125,
+        10.21,
+        2.375
+      ],
+      "to": [
+        13.375,
+        14.1625,
+        7.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_body_up_0",
+      "from": [
+        7.125,
+        14.1625,
+        2.375
+      ],
+      "to": [
+        7.625,
+        14.1625,
+        7.625
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_body_up_1",
+      "from": [
+        12.875,
+        14.1625,
+        2.375
+      ],
+      "to": [
+        13.375,
+        14.1625,
+        7.625
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_body_up_2",
+      "from": [
+        7.625,
+        14.1625,
+        2.375
+      ],
+      "to": [
+        12.875,
+        14.1625,
+        2.8675
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.500952
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_body_up_3",
+      "from": [
+        7.625,
+        14.1625,
+        7.3825
+      ],
+      "to": [
+        12.875,
+        14.1625,
+        7.625
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            15.260952,
+            14.72,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_body_down_0",
+      "from": [
+        7.125,
+        10.21,
+        2.375
+      ],
+      "to": [
+        7.625,
+        10.21,
+        7.625
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_body_down_1",
+      "from": [
+        12.875,
+        10.21,
+        2.375
+      ],
+      "to": [
+        13.375,
+        10.21,
+        7.625
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_body_down_2",
+      "from": [
+        7.625,
+        10.21,
+        2.375
+      ],
+      "to": [
+        12.875,
+        10.21,
+        2.795
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            14.72,
+            14.72,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_body_down_3",
+      "from": [
+        7.625,
+        10.21,
+        7.205
+      ],
+      "to": [
+        12.875,
+        10.21,
+        7.625
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_1_crown",
+      "from": [
+        7.625,
+        14.1625,
+        2.8675
+      ],
+      "to": [
+        12.875,
+        15.4375,
+        7.3825
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.500952,
+            0.0,
+            15.260952,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.739048,
+            0.0,
+            14.499048,
+            3.2
+          ]
+        },
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.500952,
+            14.72,
+            15.260952
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          10.25,
+          12.25,
+          5.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_2_skirt",
+      "from": [
+        8.585,
+        9.6875,
+        7.375
+      ],
+      "to": [
+        13.415,
+        10.8575,
+        12.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          11.0,
+          12.9375,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_2_body",
+      "from": [
+        8.125,
+        10.8575,
+        6.875
+      ],
+      "to": [
+        13.875,
+        14.8875,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          11.0,
+          12.9375,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_2_body_up_0",
+      "from": [
+        8.125,
+        14.8875,
+        6.875
+      ],
+      "to": [
+        8.71,
+        14.8875,
+        13.125
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.627826,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          11.0,
+          12.9375,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_2_body_up_1",
+      "from": [
+        13.54,
+        14.8875,
+        6.875
+      ],
+      "to": [
+        13.875,
+        14.8875,
+        13.125
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            15.067826,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          11.0,
+          12.9375,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_2_body_up_2",
+      "from": [
+        8.71,
+        14.8875,
+        6.875
+      ],
+      "to": [
+        13.54,
+        14.8875,
         7.1875
       ],
       "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
         "up": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "branching_ficus_stem",
-      "from": [
-        7.8125,
-        5.25,
-        8.8125
-      ],
-      "to": [
-        8.1875,
-        18.75,
-        9.1875
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "branching_ficus_stem",
-      "from": [
-        7.8125,
-        5.25,
-        7.8125
-      ],
-      "to": [
-        8.1875,
-        23.9375,
-        8.1875
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            2.0,
-            6.0,
-            4.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "broad_ficus_leaf_0",
-      "from": [
-        1.0,
-        8.25,
-        6.25
-      ],
-      "to": [
-        6.0,
-        8.3125,
-        9.75
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 180
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 180
-        }
-      },
-      "rotation": {
-        "axis": "z",
-        "angle": -22.5,
-        "origin": [
-          6.0,
-          8.25,
-          8.0
-        ]
-      },
-      "shade": false
-    },
-    {
-      "name": "broad_ficus_leaf_1",
-      "from": [
-        10.0,
-        9.0,
-        6.25
-      ],
-      "to": [
-        14.75,
-        9.0625,
-        9.75
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
+            1.627826,
+            0.0,
+            15.067826,
+            0.8
           ]
         }
       },
       "rotation": {
-        "axis": "z",
+        "axis": "y",
         "angle": 22.5,
         "origin": [
-          10.0,
-          9.0,
-          8.0
+          11.0,
+          12.9375,
+          10.0
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_2",
+      "name": "canopy_lobe_2_body_up_3",
       "from": [
-        6.125,
-        9.75,
-        1.5
+        8.71,
+        14.8875,
+        12.5625
       ],
       "to": [
-        9.875,
-        9.8125,
-        7.0
+        13.54,
+        14.8875,
+        13.125
       ],
       "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 90
-        },
         "up": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            1.627826,
+            14.56,
+            15.067826,
             16.0
-          ],
-          "rotation": 270
+          ]
         }
       },
       "rotation": {
-        "axis": "x",
+        "axis": "y",
         "angle": 22.5,
         "origin": [
-          8.0,
-          9.75,
-          7.0
+          11.0,
+          12.9375,
+          10.0
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_3",
+      "name": "canopy_lobe_2_body_down_0",
       "from": [
-        6.25,
-        10.5,
-        9.0
+        8.125,
+        10.8575,
+        6.875
       ],
       "to": [
-        9.75,
-        10.5625,
-        14.25
+        8.585,
+        10.8575,
+        13.125
       ],
       "faces": {
         "down": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            0.0,
+            0.0,
+            1.28,
             16.0
-          ],
-          "rotation": 270
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 90
+          ]
         }
       },
       "rotation": {
-        "axis": "x",
-        "angle": -22.5,
+        "axis": "y",
+        "angle": 22.5,
         "origin": [
-          8.0,
-          10.5,
-          9.0
+          11.0,
+          12.9375,
+          10.0
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_4",
+      "name": "canopy_lobe_2_body_down_1",
       "from": [
-        6.0,
+        13.415,
+        10.8575,
+        6.875
+      ],
+      "to": [
+        13.875,
+        10.8575,
+        13.125
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          11.0,
+          12.9375,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_2_body_down_2",
+      "from": [
+        8.585,
+        10.8575,
+        6.875
+      ],
+      "to": [
+        13.415,
+        10.8575,
+        7.375
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            14.72,
+            14.72,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          11.0,
+          12.9375,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_2_body_down_3",
+      "from": [
+        8.585,
+        10.8575,
+        12.625
+      ],
+      "to": [
+        13.415,
+        10.8575,
+        13.125
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          11.0,
+          12.9375,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_2_crown",
+      "from": [
+        8.71,
+        14.8875,
+        7.1875
+      ],
+      "to": [
+        13.54,
+        16.1875,
+        12.5625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            0.932174,
+            0.0,
+            14.372174,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.627826,
+            0.0,
+            15.067826,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.8,
+            0.0,
+            14.56,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.44,
+            0.0,
+            15.2,
+            3.2
+          ]
+        },
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.627826,
+            0.8,
+            15.067826,
+            14.56
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          11.0,
+          12.9375,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_skirt",
+      "from": [
+        2.645,
+        9.125,
+        8.315
+      ],
+      "to": [
+        8.105,
+        10.385,
+        12.935
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_body",
+      "from": [
+        2.125,
+        10.385,
+        7.875
+      ],
+      "to": [
+        8.625,
+        14.725,
+        13.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_body_up_0",
+      "from": [
+        2.125,
+        14.725,
+        7.875
+      ],
+      "to": [
+        2.52,
+        14.725,
+        13.375
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            0.972308,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_body_up_1",
+      "from": [
+        7.98,
+        14.725,
+        7.875
+      ],
+      "to": [
+        8.625,
+        14.725,
+        13.375
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            14.412308,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_body_up_2",
+      "from": [
+        2.52,
+        14.725,
+        7.875
+      ],
+      "to": [
+        7.98,
+        14.725,
+        8.26
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.972308,
+            0.0,
+            14.412308,
+            1.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_body_up_3",
+      "from": [
+        2.52,
+        14.725,
+        12.99
+      ],
+      "to": [
+        7.98,
+        14.725,
+        13.375
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.972308,
+            14.88,
+            14.412308,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_body_down_0",
+      "from": [
+        2.125,
+        10.385,
+        7.875
+      ],
+      "to": [
+        2.645,
+        10.385,
+        13.375
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_body_down_1",
+      "from": [
+        8.105,
+        10.385,
+        7.875
+      ],
+      "to": [
+        8.625,
+        10.385,
+        13.375
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_body_down_2",
+      "from": [
+        2.645,
+        10.385,
+        7.875
+      ],
+      "to": [
+        8.105,
+        10.385,
+        8.315
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            14.72,
+            14.72,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_body_down_3",
+      "from": [
+        2.645,
+        10.385,
+        12.935
+      ],
+      "to": [
+        8.105,
+        10.385,
+        13.375
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_3_crown",
+      "from": [
+        2.52,
+        14.725,
+        8.26
+      ],
+      "to": [
+        7.98,
+        16.125,
+        12.99
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.587692,
+            0.0,
+            15.027692,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            0.972308,
+            0.0,
+            14.412308,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.12,
+            0.0,
+            14.88,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.12,
+            0.0,
+            14.88,
+            3.2
+          ]
+        },
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.972308,
+            1.12,
+            14.412308,
+            14.88
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          5.375,
+          12.625,
+          10.625
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_4_skirt",
+      "from": [
+        5.27,
+        9.9375,
+        5.48
+      ],
+      "to": [
+        10.73,
+        11.1525,
+        10.52
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_4_body",
+      "from": [
+        4.75,
+        11.1525,
+        5.0
+      ],
+      "to": [
         11.25,
-        6.125
+        15.3375,
+        11.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dense_foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "south": {
+          "texture": "#dense_foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#dense_foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#dense_foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_4_body_up_0",
+      "from": [
+        4.75,
+        15.3375,
+        5.0
       ],
       "to": [
-        11.0,
-        11.3125,
-        9.875
+        5.27,
+        15.3375,
+        11.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#dense_foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_4_body_up_1",
+      "from": [
+        10.73,
+        15.3375,
+        5.0
+      ],
+      "to": [
+        11.25,
+        15.3375,
+        11.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#dense_foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_4_body_up_2",
+      "from": [
+        5.27,
+        15.3375,
+        5.0
+      ],
+      "to": [
+        10.73,
+        15.3375,
+        5.545
+      ],
+      "faces": {
+        "up": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.453333
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_4_body_up_3",
+      "from": [
+        5.27,
+        15.3375,
+        10.705
+      ],
+      "to": [
+        10.73,
+        15.3375,
+        11.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            15.213333,
+            14.72,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_4_body_down_0",
+      "from": [
+        4.75,
+        11.1525,
+        5.0
+      ],
+      "to": [
+        5.27,
+        11.1525,
+        11.0
       ],
       "faces": {
         "down": {
-          "texture": "#atlas",
+          "texture": "#dense_foliage",
           "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_4_body_down_1",
+      "from": [
+        10.73,
+        11.1525,
+        5.0
+      ],
+      "to": [
+        11.25,
+        11.1525,
+        11.0
+      ],
+      "faces": {
+        "down": {
+          "texture": "#dense_foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_4_body_down_2",
+      "from": [
+        5.27,
+        11.1525,
+        5.0
+      ],
+      "to": [
+        10.73,
+        11.1525,
+        5.48
+      ],
+      "faces": {
+        "down": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            14.72,
+            14.72,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_4_body_down_3",
+      "from": [
+        5.27,
+        11.1525,
+        10.52
+      ],
+      "to": [
+        10.73,
+        11.1525,
+        11.0
+      ],
+      "faces": {
+        "down": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_4_crown",
+      "from": [
+        5.27,
+        15.3375,
+        5.545
+      ],
+      "to": [
+        10.73,
+        16.6875,
+        10.705
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#dense_foliage",
+          "uv": [
+            1.453333,
+            0.0,
+            15.213333,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#dense_foliage",
+          "uv": [
+            0.786667,
+            0.0,
+            14.546667,
+            3.2
           ]
         },
         "up": {
-          "texture": "#atlas",
+          "texture": "#dense_foliage",
           "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
+            1.28,
+            1.453333,
+            14.72,
+            15.213333
           ]
         }
-      },
-      "rotation": {
-        "axis": "z",
-        "angle": -22.5,
-        "origin": [
-          6.0,
-          11.25,
-          8.0
-        ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_5",
+      "name": "canopy_lobe_5_skirt",
       "from": [
-        4.5,
-        12.0,
-        6.25
+        1.65,
+        12.5,
+        5.105
       ],
       "to": [
-        10.0,
-        12.0625,
-        9.75
+        5.85,
+        13.49,
+        10.145
       ],
       "faces": {
-        "down": {
-          "texture": "#atlas",
+        "north": {
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            1.28,
+            13.12,
+            14.72,
             16.0
-          ],
-          "rotation": 180
+          ]
         },
-        "up": {
-          "texture": "#atlas",
+        "south": {
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            1.28,
+            13.12,
+            14.72,
             16.0
-          ],
-          "rotation": 180
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
         }
-      },
-      "rotation": {
-        "axis": "z",
-        "angle": 22.5,
-        "origin": [
-          10.0,
-          12.0,
-          8.0
-        ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_6",
-      "from": [
-        6.0,
-        12.75,
-        4.0
-      ],
-      "to": [
-        10.0,
-        12.8125,
-        9.0
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 90
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 270
-        }
-      },
-      "rotation": {
-        "axis": "x",
-        "angle": 22.5,
-        "origin": [
-          8.0,
-          12.75,
-          9.0
-        ]
-      },
-      "shade": false
-    },
-    {
-      "name": "broad_ficus_leaf_7",
-      "from": [
-        6.125,
-        13.5,
-        7.0
-      ],
-      "to": [
-        9.875,
-        13.5625,
-        12.25
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ],
-          "rotation": 270
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ],
-          "rotation": 90
-        }
-      },
-      "rotation": {
-        "axis": "x",
-        "angle": -22.5,
-        "origin": [
-          8.0,
-          13.5,
-          7.0
-        ]
-      },
-      "shade": false
-    },
-    {
-      "name": "broad_ficus_leaf_8",
+      "name": "canopy_lobe_5_body",
       "from": [
         1.25,
-        14.25,
-        6.125
+        13.49,
+        4.625
       ],
       "to": [
-        6.0,
-        14.3125,
-        9.875
+        6.25,
+        16.9,
+        10.625
       ],
       "faces": {
-        "down": {
-          "texture": "#atlas",
+        "north": {
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 180
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 180
-        }
-      },
-      "rotation": {
-        "axis": "z",
-        "angle": -22.5,
-        "origin": [
-          6.0,
-          14.25,
-          8.0
-        ]
-      },
-      "shade": false
-    },
-    {
-      "name": "broad_ficus_leaf_9",
-      "from": [
-        10.0,
-        15.0,
-        6.125
-      ],
-      "to": [
-        14.75,
-        15.0625,
-        9.875
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
+            0.0,
+            3.2,
+            16.0,
+            13.12
           ]
         },
-        "up": {
-          "texture": "#atlas",
+        "south": {
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_5_body_up_0",
+      "from": [
+        1.25,
+        16.9,
+        4.625
+      ],
+      "to": [
+        1.775,
+        16.9,
+        10.625
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.68,
             16.0
           ]
         }
-      },
-      "rotation": {
-        "axis": "z",
-        "angle": 22.5,
-        "origin": [
-          10.0,
-          15.0,
-          8.0
-        ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_10",
+      "name": "canopy_lobe_5_body_up_1",
       "from": [
-        6.125,
-        15.75,
-        2.0
+        5.975,
+        16.9,
+        4.625
       ],
       "to": [
-        9.875,
-        15.8125,
-        7.0
+        6.25,
+        16.9,
+        10.625
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            15.12,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_5_body_up_2",
+      "from": [
+        1.775,
+        16.9,
+        4.625
+      ],
+      "to": [
+        5.975,
+        16.9,
+        4.92
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.68,
+            0.0,
+            15.12,
+            0.786667
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_5_body_up_3",
+      "from": [
+        1.775,
+        16.9,
+        10.08
+      ],
+      "to": [
+        5.975,
+        16.9,
+        10.625
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.68,
+            14.546667,
+            15.12,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_5_body_down_0",
+      "from": [
+        1.25,
+        13.49,
+        4.625
+      ],
+      "to": [
+        1.65,
+        13.49,
+        10.625
       ],
       "faces": {
         "down": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ],
-          "rotation": 90
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ],
-          "rotation": 270
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
         }
-      },
-      "rotation": {
-        "axis": "x",
-        "angle": 22.5,
-        "origin": [
-          8.0,
-          15.75,
-          7.0
-        ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_11",
+      "name": "canopy_lobe_5_body_down_1",
       "from": [
-        6.125,
-        16.5,
-        9.0
+        5.85,
+        13.49,
+        4.625
       ],
       "to": [
-        9.875,
-        16.5625,
-        14.0
+        6.25,
+        13.49,
+        10.625
       ],
       "faces": {
         "down": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            14.72,
+            0.0,
+            16.0,
             16.0
-          ],
-          "rotation": 270
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_5_body_down_2",
+      "from": [
+        1.65,
+        13.49,
+        4.625
+      ],
+      "to": [
+        5.85,
+        13.49,
+        5.105
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            14.72,
+            14.72,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_5_body_down_3",
+      "from": [
+        1.65,
+        13.49,
+        10.145
+      ],
+      "to": [
+        5.85,
+        13.49,
+        10.625
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_5_crown",
+      "from": [
+        1.775,
+        16.9,
+        4.92
+      ],
+      "to": [
+        5.975,
+        18.0,
+        10.08
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            0.88,
+            0.0,
+            14.32,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.68,
+            0.0,
+            15.12,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.786667,
+            0.0,
+            14.546667,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.453333,
+            0.0,
+            15.213333,
+            3.2
+          ]
         },
         "up": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            1.68,
+            0.786667,
+            15.12,
+            14.546667
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_6_skirt",
+      "from": [
+        5.06,
+        13.4375,
+        2.19
+      ],
+      "to": [
+        10.94,
+        14.4725,
+        6.81
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
             16.0
-          ],
-          "rotation": 90
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
         }
       },
       "rotation": {
-        "axis": "x",
+        "axis": "y",
         "angle": -22.5,
         "origin": [
           8.0,
-          16.5,
-          9.0
+          16.3125,
+          4.5
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_12",
+      "name": "canopy_lobe_6_body",
       "from": [
-        6.0,
-        17.25,
-        6.0
+        4.5,
+        14.4725,
+        1.75
       ],
       "to": [
         11.5,
-        17.3125,
-        10.0
+        18.0375,
+        7.25
       ],
       "faces": {
-        "down": {
-          "texture": "#atlas",
+        "north": {
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
+            0.0,
+            3.2,
+            16.0,
+            13.12
           ]
         },
-        "up": {
-          "texture": "#atlas",
+        "south": {
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          8.0,
+          16.3125,
+          4.5
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_6_body_up_0",
+      "from": [
+        4.5,
+        18.0375,
+        1.75
+      ],
+      "to": [
+        4.935,
+        18.0375,
+        7.25
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            0.994286,
             16.0
           ]
         }
       },
       "rotation": {
-        "axis": "z",
-        "angle": 22.5,
+        "axis": "y",
+        "angle": -22.5,
         "origin": [
-          6.0,
-          17.25,
-          8.0
+          8.0,
+          16.3125,
+          4.5
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_13",
+      "name": "canopy_lobe_6_body_up_1",
+      "from": [
+        10.815,
+        18.0375,
+        1.75
+      ],
+      "to": [
+        11.5,
+        18.0375,
+        7.25
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            14.434286,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          8.0,
+          16.3125,
+          4.5
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_6_body_up_2",
+      "from": [
+        4.935,
+        18.0375,
+        1.75
+      ],
+      "to": [
+        10.815,
+        18.0375,
+        2.135
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.994286,
+            0.0,
+            14.434286,
+            1.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          8.0,
+          16.3125,
+          4.5
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_6_body_up_3",
+      "from": [
+        4.935,
+        18.0375,
+        6.865
+      ],
+      "to": [
+        10.815,
+        18.0375,
+        7.25
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.994286,
+            14.88,
+            14.434286,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          8.0,
+          16.3125,
+          4.5
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_6_body_down_0",
       "from": [
         4.5,
-        18.0,
+        14.4725,
+        1.75
+      ],
+      "to": [
+        5.06,
+        14.4725,
+        7.25
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          8.0,
+          16.3125,
+          4.5
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_6_body_down_1",
+      "from": [
+        10.94,
+        14.4725,
+        1.75
+      ],
+      "to": [
+        11.5,
+        14.4725,
+        7.25
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          8.0,
+          16.3125,
+          4.5
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_6_body_down_2",
+      "from": [
+        5.06,
+        14.4725,
+        1.75
+      ],
+      "to": [
+        10.94,
+        14.4725,
+        2.19
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            14.72,
+            14.72,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          8.0,
+          16.3125,
+          4.5
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_6_body_down_3",
+      "from": [
+        5.06,
+        14.4725,
+        6.81
+      ],
+      "to": [
+        10.94,
+        14.4725,
+        7.25
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          8.0,
+          16.3125,
+          4.5
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_6_crown",
+      "from": [
+        4.935,
+        18.0375,
+        2.135
+      ],
+      "to": [
+        10.815,
+        19.1875,
+        6.865
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.565714,
+            0.0,
+            15.005714,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            0.994286,
+            0.0,
+            14.434286,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.12,
+            0.0,
+            14.88,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.12,
+            0.0,
+            14.88,
+            3.2
+          ]
+        },
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.994286,
+            1.12,
+            14.434286,
+            14.88
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          8.0,
+          16.3125,
+          4.5
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_7_skirt",
+      "from": [
+        9.8475,
+        13.375,
+        6.23
+      ],
+      "to": [
+        14.1525,
+        14.455,
+        11.27
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_7_body",
+      "from": [
+        9.4375,
+        14.455,
+        5.75
+      ],
+      "to": [
+        14.5625,
+        18.175,
+        11.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_7_body_up_0",
+      "from": [
+        9.4375,
+        18.175,
+        5.75
+      ],
+      "to": [
+        9.8475,
+        18.175,
+        11.75
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_7_body_up_1",
+      "from": [
+        14.1525,
+        18.175,
+        5.75
+      ],
+      "to": [
+        14.5625,
+        18.175,
+        11.75
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_7_body_up_2",
+      "from": [
+        9.8475,
+        18.175,
+        5.75
+      ],
+      "to": [
+        14.1525,
+        18.175,
+        6.295
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.453333
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_7_body_up_3",
+      "from": [
+        9.8475,
+        18.175,
+        11.455
+      ],
+      "to": [
+        14.1525,
+        18.175,
+        11.75
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            15.213333,
+            14.72,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_7_body_down_0",
+      "from": [
+        9.4375,
+        14.455,
+        5.75
+      ],
+      "to": [
+        9.8475,
+        14.455,
+        11.75
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_7_body_down_1",
+      "from": [
+        14.1525,
+        14.455,
+        5.75
+      ],
+      "to": [
+        14.5625,
+        14.455,
+        11.75
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_7_body_down_2",
+      "from": [
+        9.8475,
+        14.455,
+        5.75
+      ],
+      "to": [
+        14.1525,
+        14.455,
+        6.23
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            14.72,
+            14.72,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_7_body_down_3",
+      "from": [
+        9.8475,
+        14.455,
+        11.27
+      ],
+      "to": [
+        14.1525,
+        14.455,
+        11.75
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_7_crown",
+      "from": [
+        9.8475,
+        18.175,
+        6.295
+      ],
+      "to": [
+        14.1525,
+        19.375,
+        11.455
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.453333,
+            0.0,
+            15.213333,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.786667,
+            0.0,
+            14.546667,
+            3.2
+          ]
+        },
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.453333,
+            14.72,
+            15.213333
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_lobe_8_skirt",
+      "from": [
+        4.52,
+        13.0625,
+        9.9
+      ],
+      "to": [
+        9.98,
+        14.0525,
+        14.1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_8_body",
+      "from": [
+        4.0,
+        14.0525,
+        9.5
+      ],
+      "to": [
+        10.5,
+        17.4625,
+        14.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_8_body_up_0",
+      "from": [
+        4.0,
+        17.4625,
+        9.5
+      ],
+      "to": [
+        4.645,
+        17.4625,
+        14.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.587692,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_8_body_up_1",
+      "from": [
+        10.105,
+        17.4625,
+        9.5
+      ],
+      "to": [
+        10.5,
+        17.4625,
+        14.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            15.027692,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_8_body_up_2",
+      "from": [
+        4.645,
+        17.4625,
+        9.5
+      ],
+      "to": [
+        10.105,
+        17.4625,
+        9.725
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.587692,
+            0.0,
+            15.027692,
+            0.72
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_8_body_up_3",
+      "from": [
+        4.645,
+        17.4625,
+        14.025
+      ],
+      "to": [
+        10.105,
+        17.4625,
+        14.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.587692,
+            14.48,
+            15.027692,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_8_body_down_0",
+      "from": [
+        4.0,
+        14.0525,
+        9.5
+      ],
+      "to": [
+        4.52,
+        14.0525,
+        14.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_8_body_down_1",
+      "from": [
+        9.98,
+        14.0525,
+        9.5
+      ],
+      "to": [
+        10.5,
+        14.0525,
+        14.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_8_body_down_2",
+      "from": [
+        4.52,
+        14.0525,
+        9.5
+      ],
+      "to": [
+        9.98,
+        14.0525,
+        9.9
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            14.72,
+            14.72,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_8_body_down_3",
+      "from": [
+        4.52,
+        14.0525,
+        14.1
+      ],
+      "to": [
+        9.98,
+        14.0525,
+        14.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_8_crown",
+      "from": [
+        4.645,
+        17.4625,
+        9.725
+      ],
+      "to": [
+        10.105,
+        18.5625,
+        14.025
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            0.972308,
+            0.0,
+            14.412308,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.587692,
+            0.0,
+            15.027692,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.72,
+            0.0,
+            14.48,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.52,
+            0.0,
+            15.28,
+            3.2
+          ]
+        },
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.587692,
+            0.72,
+            15.027692,
+            14.48
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          7.25,
+          15.8125,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_skirt",
+      "from": [
+        3.64,
+        15.75,
+        4.705
+      ],
+      "to": [
+        10.36,
+        16.83,
+        10.795
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_body",
+      "from": [
+        3.0,
+        16.83,
+        4.125
+      ],
+      "to": [
+        11.0,
+        20.55,
+        11.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_body_up_0",
+      "from": [
+        3.0,
+        20.55,
+        4.125
+      ],
+      "to": [
+        3.515,
+        20.55,
+        11.375
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.03,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_body_up_1",
+      "from": [
+        10.235,
+        20.55,
+        4.125
+      ],
+      "to": [
+        11.0,
+        20.55,
+        11.375
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            14.47,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_body_up_2",
+      "from": [
+        3.515,
+        20.55,
+        4.125
+      ],
+      "to": [
+        10.235,
+        20.55,
+        4.6325
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.03,
+            0.0,
+            14.47,
+            1.12
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_body_up_3",
+      "from": [
+        3.515,
+        20.55,
+        10.8675
+      ],
+      "to": [
+        10.235,
+        20.55,
+        11.375
+      ],
+      "faces": {
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.03,
+            14.88,
+            14.47,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_body_down_0",
+      "from": [
+        3.0,
+        16.83,
+        4.125
+      ],
+      "to": [
+        3.64,
+        16.83,
+        11.375
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            0.0,
+            1.28,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_body_down_1",
+      "from": [
+        10.36,
+        16.83,
+        4.125
+      ],
+      "to": [
+        11.0,
+        16.83,
+        11.375
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            14.72,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_body_down_2",
+      "from": [
+        3.64,
+        16.83,
+        4.125
+      ],
+      "to": [
+        10.36,
+        16.83,
+        4.705
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            14.72,
+            14.72,
+            16.0
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_body_down_3",
+      "from": [
+        3.64,
+        16.83,
+        10.795
+      ],
+      "to": [
+        10.36,
+        16.83,
+        11.375
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_9_crown",
+      "from": [
+        3.515,
+        20.55,
+        4.6325
+      ],
+      "to": [
+        10.235,
+        21.75,
+        10.8675
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.53,
+            0.0,
+            14.97,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.03,
+            0.0,
+            14.47,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.12,
+            0.0,
+            14.88,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.12,
+            0.0,
+            14.88,
+            3.2
+          ]
+        },
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.03,
+            1.12,
+            14.47,
+            14.88
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": -22.5,
+        "origin": [
+          7.0,
+          18.75,
+          7.75
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_10_skirt",
+      "from": [
+        7.96,
+        15.6875,
+        6.52
+      ],
+      "to": [
+        12.79,
+        16.565,
+        11.98
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            13.12,
+            14.72,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.28,
+            14.72,
+            14.72
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          10.375,
+          18.125,
+          9.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_10_body",
+      "from": [
+        7.5,
+        16.565,
         6.0
       ],
       "to": [
-        10.0,
-        18.0625,
-        10.0
+        13.25,
+        19.5875,
+        12.5
       ],
       "faces": {
-        "down": {
-          "texture": "#atlas",
+        "north": {
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ],
-          "rotation": 180
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
         },
-        "up": {
-          "texture": "#atlas",
+        "south": {
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ],
-          "rotation": 180
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.0,
+            3.2,
+            16.0,
+            13.12
+          ]
         }
       },
       "rotation": {
-        "axis": "z",
-        "angle": -22.5,
-        "origin": [
-          10.0,
-          18.0,
-          8.0
-        ]
-      },
-      "shade": false
-    },
-    {
-      "name": "broad_ficus_leaf_14",
-      "from": [
-        6.25,
-        18.75,
-        3.5
-      ],
-      "to": [
-        9.75,
-        18.8125,
-        9.0
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 90
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 270
-        }
-      },
-      "rotation": {
-        "axis": "x",
+        "axis": "y",
         "angle": 22.5,
         "origin": [
-          8.0,
-          18.75,
-          9.0
+          10.375,
+          18.125,
+          9.25
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_15",
+      "name": "canopy_lobe_10_body_up_0",
       "from": [
-        6.125,
-        19.5,
-        7.0
+        7.5,
+        19.5875,
+        6.0
       ],
       "to": [
-        9.875,
-        19.5625,
-        12.25
+        7.96,
+        19.5875,
+        12.5
       ],
       "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 270
-        },
         "up": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 90
-        }
-      },
-      "rotation": {
-        "axis": "x",
-        "angle": -22.5,
-        "origin": [
-          8.0,
-          19.5,
-          7.0
-        ]
-      },
-      "shade": false
-    },
-    {
-      "name": "broad_ficus_leaf_16",
-      "from": [
-        2.25,
-        20.25,
-        6.25
-      ],
-      "to": [
-        8.0,
-        20.3125,
-        9.75
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ],
-          "rotation": 180
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ],
-          "rotation": 180
-        }
-      },
-      "rotation": {
-        "axis": "z",
-        "angle": -22.5,
-        "origin": [
-          8.0,
-          20.25,
-          8.0
-        ]
-      },
-      "shade": false
-    },
-    {
-      "name": "broad_ficus_leaf_17",
-      "from": [
-        8.0,
-        21.0,
-        6.25
-      ],
-      "to": [
-        13.5,
-        21.0625,
-        9.75
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
+            0.0,
+            0.0,
+            1.28,
             16.0
           ]
         }
       },
       "rotation": {
-        "axis": "z",
+        "axis": "y",
         "angle": 22.5,
         "origin": [
-          8.0,
-          21.0,
-          8.0
+          10.375,
+          18.125,
+          9.25
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_18",
+      "name": "canopy_lobe_10_body_up_1",
       "from": [
-        6.25,
-        21.75,
-        3.5
+        12.79,
+        19.5875,
+        6.0
       ],
       "to": [
-        9.75,
-        21.8125,
-        8.0
+        13.25,
+        19.5875,
+        12.5
       ],
       "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 90
-        },
         "up": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            14.72,
+            0.0,
+            16.0,
             16.0
-          ],
-          "rotation": 270
+          ]
         }
       },
       "rotation": {
-        "axis": "x",
+        "axis": "y",
         "angle": 22.5,
         "origin": [
-          8.0,
-          21.75,
-          8.0
+          10.375,
+          18.125,
+          9.25
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "broad_ficus_leaf_19",
+      "name": "canopy_lobe_10_body_up_2",
       "from": [
-        6.5,
-        22.5,
-        8.0
+        7.96,
+        19.5875,
+        6.0
       ],
       "to": [
-        9.5,
-        22.5625,
-        11.25
+        12.79,
+        19.5875,
+        6.58
       ],
       "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ],
-          "rotation": 270
-        },
         "up": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            2.0,
-            8.0,
-            4.0
-          ],
-          "rotation": 90
-        }
-      },
-      "rotation": {
-        "axis": "x",
-        "angle": -22.5,
-        "origin": [
-          8.0,
-          22.5,
-          8.0
-        ]
-      },
-      "shade": false
-    },
-    {
-      "name": "broad_ficus_leaf_20",
-      "from": [
-        5.25,
-        23.25,
-        6.625
-      ],
-      "to": [
-        8.0,
-        23.3125,
-        9.375
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 180
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 180
-        }
-      },
-      "rotation": {
-        "axis": "z",
-        "angle": 0,
-        "origin": [
-          8.0,
-          23.25,
-          8.0
-        ]
-      },
-      "shade": false
-    },
-    {
-      "name": "broad_ficus_leaf_21",
-      "from": [
-        8.0,
-        23.9375,
-        6.625
-      ],
-      "to": [
-        10.75,
-        24.0,
-        9.375
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
+            1.28,
+            0.0,
+            14.72,
+            1.427692
           ]
         }
       },
       "rotation": {
-        "axis": "z",
-        "angle": 0,
+        "axis": "y",
+        "angle": 22.5,
         "origin": [
-          8.0,
-          23.9375,
-          8.0
+          10.375,
+          18.125,
+          9.25
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "diagonal_canopy_leaf_0",
+      "name": "canopy_lobe_10_body_up_3",
       "from": [
-        8.0,
-        13.875,
-        6.25
+        7.96,
+        19.5875,
+        12.17
       ],
       "to": [
-        13.0,
-        13.9375,
-        9.75
+        12.79,
+        19.5875,
+        12.5
       ],
       "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ]
-        },
         "up": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            1.28,
+            15.187692,
+            14.72,
             16.0
           ]
         }
       },
       "rotation": {
         "axis": "y",
-        "angle": 45,
+        "angle": 22.5,
         "origin": [
-          8.0,
-          13.875,
-          8.0
+          10.375,
+          18.125,
+          9.25
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "diagonal_canopy_leaf_1",
+      "name": "canopy_lobe_10_body_down_0",
       "from": [
-        8.0,
-        16.875,
-        6.25
+        7.5,
+        16.565,
+        6.0
       ],
       "to": [
-        13.0,
-        16.9375,
-        9.75
+        7.96,
+        16.565,
+        12.5
       ],
       "faces": {
         "down": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
+            0.0,
+            0.0,
+            1.28,
             16.0
           ]
         }
       },
       "rotation": {
         "axis": "y",
-        "angle": -45,
+        "angle": 22.5,
         "origin": [
-          8.0,
-          16.875,
-          8.0
+          10.375,
+          18.125,
+          9.25
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "diagonal_canopy_leaf_2",
+      "name": "canopy_lobe_10_body_down_1",
       "from": [
-        3.0,
-        17.875,
-        6.25
+        12.79,
+        16.565,
+        6.0
       ],
       "to": [
-        8.0,
-        17.9375,
-        9.75
+        13.25,
+        16.565,
+        12.5
       ],
       "faces": {
         "down": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            14.72,
+            0.0,
+            16.0,
             16.0
-          ],
-          "rotation": 180
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 180
+          ]
         }
       },
       "rotation": {
         "axis": "y",
-        "angle": 45,
+        "angle": 22.5,
         "origin": [
-          8.0,
-          17.875,
-          8.0
+          10.375,
+          18.125,
+          9.25
         ]
-      },
-      "shade": false
+      }
     },
     {
-      "name": "diagonal_canopy_leaf_3",
+      "name": "canopy_lobe_10_body_down_2",
       "from": [
-        3.0,
-        20.875,
-        6.25
+        7.96,
+        16.565,
+        6.0
       ],
       "to": [
-        8.0,
-        20.9375,
-        9.75
+        12.79,
+        16.565,
+        6.52
       ],
       "faces": {
         "down": {
-          "texture": "#atlas",
+          "texture": "#foliage",
           "uv": [
-            6.0,
-            14.0,
-            8.0,
+            1.28,
+            14.72,
+            14.72,
             16.0
-          ],
-          "rotation": 180
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            14.0,
-            8.0,
-            16.0
-          ],
-          "rotation": 180
+          ]
         }
       },
       "rotation": {
         "axis": "y",
-        "angle": -45,
+        "angle": 22.5,
         "origin": [
-          8.0,
-          20.875,
-          8.0
+          10.375,
+          18.125,
+          9.25
         ]
+      }
+    },
+    {
+      "name": "canopy_lobe_10_body_down_3",
+      "from": [
+        7.96,
+        16.565,
+        11.98
+      ],
+      "to": [
+        12.79,
+        16.565,
+        12.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            1.28
+          ]
+        }
       },
-      "shade": false
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          10.375,
+          18.125,
+          9.25
+        ]
+      }
+    },
+    {
+      "name": "canopy_lobe_10_crown",
+      "from": [
+        7.96,
+        19.5875,
+        6.58
+      ],
+      "to": [
+        12.79,
+        20.5625,
+        12.17
+      ],
+      "faces": {
+        "north": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            3.2
+          ]
+        },
+        "south": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            0.0,
+            14.72,
+            3.2
+          ]
+        },
+        "west": {
+          "texture": "#foliage",
+          "uv": [
+            1.427692,
+            0.0,
+            15.187692,
+            3.2
+          ]
+        },
+        "east": {
+          "texture": "#foliage",
+          "uv": [
+            0.812308,
+            0.0,
+            14.572308,
+            3.2
+          ]
+        },
+        "up": {
+          "texture": "#foliage",
+          "uv": [
+            1.28,
+            1.427692,
+            14.72,
+            15.187692
+          ]
+        }
+      },
+      "rotation": {
+        "axis": "y",
+        "angle": 22.5,
+        "origin": [
+          10.375,
+          18.125,
+          9.25
+        ]
+      }
     }
   ],
   "display": {

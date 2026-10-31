@@ -10,7 +10,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
@@ -102,7 +101,9 @@ public final class AcousticDividerBlock extends RotatableDecorationBlock {
 
     @Override public BlockState updateShape(BlockState state, Direction direction, BlockState neighbor,
                                            LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
-        if (!canSurvive(state, level, pos)) return Blocks.AIR.defaultBlockState();
+        // Support is required for placement, not continued existence. Each panel is an
+        // independent decorative block: removing its support must not turn neighboring
+        // panels into air (which also spawns their loot during Creative neighbor updates).
         // No writes, scans, scheduled ticks, or recursive neighbor notification here.
         return layout(state, level, pos);
     }

@@ -31,7 +31,7 @@ public final class OfficePropBlock extends CashRegisterBlock {
             RestaurantKitchenBlock.rotations(Shapes.or(box(2, 0, 3, 14, 1, 13), box(2, 1, 8, 14, 16, 12))),
             RestaurantKitchenBlock.rotations(Shapes.or(box(1, 8.5, 1, 15, 9.5, 15),
                     box(2.5, 0, 3, 4.25, 8.5, 13), box(12, 0, 3, 13.75, 8.5, 13))),
-            RestaurantKitchenBlock.rotations(Shapes.or(box(.75, 0, 1.5, 15.125, 11, 14.5), box(1, 11, .5, 15, 15.5, 14.5))),
+            RestaurantKitchenBlock.rotations(box(0, 0, 0, 16, 16, 16)),
             RestaurantKitchenBlock.rotations(Shapes.or(box(3, 0, 3, 13, 9.25, 13), box(1, 9.25, 1, 15, 28, 15)))
     };
     private final Design design;

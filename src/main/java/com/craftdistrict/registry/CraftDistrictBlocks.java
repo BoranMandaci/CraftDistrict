@@ -95,6 +95,7 @@ import com.craftdistrict.block.KitchenOrderDisplayBlock;
 import com.craftdistrict.block.StainlessSteelPrepTableBlock;
 import com.craftdistrict.block.AssemblyStationBlock;
 import com.craftdistrict.block.OfficeFurnitureBlock;
+import com.craftdistrict.block.OfficeCubicleBlock;
 import com.craftdistrict.block.OfficePropBlock;
 import com.craftdistrict.block.OfficeConnectedBlock;
 import com.craftdistrict.block.AcousticDividerBlock;
@@ -148,12 +149,14 @@ public final class CraftDistrictBlocks {
     public static final class Office {
         public static final RegistrySupplier<OfficeFurnitureBlock> WORKSTATION = register("office_workstation",
                 () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.WORKSTATION, metalProperties()));
-        public static final RegistrySupplier<OfficePropBlock> CUBICLE = register("office_cubicle",
-                () -> new OfficePropBlock(OfficePropBlock.Design.CUBICLE, metalProperties()));
+        public static final RegistrySupplier<OfficeCubicleBlock> CUBICLE = register("office_cubicle",
+                () -> new OfficeCubicleBlock(metalProperties()));
         public static final RegistrySupplier<OfficeFurnitureBlock> EXECUTIVE_DESK = register("executive_desk",
                 () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.EXECUTIVE, woodProperties()));
         public static final RegistrySupplier<OfficeConnectedBlock> CONFERENCE_TABLE = register("conference_table",
                 () -> new OfficeConnectedBlock(OfficeConnectedBlock.Design.CONFERENCE, woodProperties()));
+        public static final RegistrySupplier<OfficeConnectedBlock> CONFERENCE_TABLE_CENTER = register("conference_table_center",
+                () -> new OfficeConnectedBlock(OfficeConnectedBlock.Design.CONFERENCE_CENTER, woodProperties()));
         public static final RegistrySupplier<OfficeFurnitureBlock> RECEPTION_DESK = register("office_reception_desk",
                 () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.RECEPTION, woodProperties()));
         public static final RegistrySupplier<OfficeBoardBlock> PRESENTATION_SCREEN = register("presentation_screen",

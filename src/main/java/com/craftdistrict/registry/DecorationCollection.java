@@ -248,6 +248,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Office.CUBICLE,
             CraftDistrictBlocks.Office.EXECUTIVE_DESK,
             CraftDistrictBlocks.Office.CONFERENCE_TABLE,
+            CraftDistrictBlocks.Office.CONFERENCE_TABLE_CENTER,
             CraftDistrictBlocks.Office.RECEPTION_DESK,
             CraftDistrictBlocks.Police.OFFICE_CHAIR,
             CraftDistrictBlocks.Office.PRESENTATION_SCREEN,
