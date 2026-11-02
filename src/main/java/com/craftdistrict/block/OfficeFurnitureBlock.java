@@ -63,6 +63,7 @@ public class OfficeFurnitureBlock extends MultiBlockDecorationBlock {
     }
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         if (state.getValue(PART) >= design.parts) return false;
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         if (design == Design.SCREEN) {
             Direction facing = state.getValue(FACING);
             BlockPos wall = pos.relative(facing.getOpposite());
@@ -115,7 +116,7 @@ public class OfficeFurnitureBlock extends MultiBlockDecorationBlock {
                     case VENDING -> box(.125, 0, 0, 15.875, 16, 15.875);
                     case COAT_RACK -> p == 0 ? Shapes.or(box(3, 0, 3, 13, 1, 13), box(2.5, 1, 4.5, 10.875, 16, 9.25))
                             : box(.25, 0, 3, 15.5, 16, 13);
-                    case RECYCLING -> box(.5, 0, 2, 15.5, 15, 16);
+                    case RECYCLING -> box(.5, 0, 3.875, 15.5, 15, 16);
                     case SUPPLY_CABINET -> box(0, 0, 0, 16, 16, 16);
                 };
                 shapes[d.ordinal()][p] = RestaurantKitchenBlock.rotations(shape);

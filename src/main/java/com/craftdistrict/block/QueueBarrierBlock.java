@@ -65,6 +65,7 @@ public final class QueueBarrierBlock extends Block {
         return shapes;
     }
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos floor = pos.below();
         return level.getBlockState(floor).isFaceSturdy(level, floor, Direction.UP);
     }

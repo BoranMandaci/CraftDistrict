@@ -63,6 +63,7 @@ public final class TallLightBlock extends MultiBlockDecorationBlock {
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         if (partIndex(state) >= partCount()) return false;
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         Direction support = getExtensionDirection(state).getOpposite();
         BlockPos anchor = pos.relative(support, partIndex(state) + 1);
         return level.getBlockState(anchor).isFaceSturdy(level, anchor, support.getOpposite());

@@ -1,0 +1,712 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "atlas": "craftdistrict:block/office/office_expansion",
+    "particle": "craftdistrict:block/particles/particle_glass",
+    "glazing": "craftdistrict:block/office/office_glass"
+  },
+  "elements": [
+    {
+      "name": "left_leaf_stile",
+      "from": [
+        14.5,
+        0,
+        0
+      ],
+      "to": [
+        16.0,
+        15.375,
+        0.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            12.0,
+            12.0,
+            13.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            12.0,
+            12.0,
+            13.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_leaf_stile",
+      "from": [
+        14.5,
+        0,
+        15.375
+      ],
+      "to": [
+        16.0,
+        15.375,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            12.0,
+            12.0,
+            13.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            12.0,
+            12.0,
+            13.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "leaf_top_rail",
+      "from": [
+        14.5,
+        15.375,
+        0
+      ],
+      "to": [
+        16.0,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            12.0,
+            12.0,
+            14.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            12.0,
+            12.0,
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "door_glass_privacy_band_4",
+      "from": [
+        15.125,
+        7.5,
+        0.625
+      ],
+      "to": [
+        15.375,
+        7.875,
+        15.375
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            12.0,
+            14.0,
+            14.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            12.0,
+            14.0,
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_pull_handle",
+      "from": [
+        16.625,
+        0,
+        1.75
+      ],
+      "to": [
+        17.0,
+        2.25,
+        2.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_handle_pad",
+      "from": [
+        15.375,
+        1.5,
+        1.375
+      ],
+      "to": [
+        16.0,
+        2.375,
+        2.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_handle_anchor",
+      "from": [
+        16.0,
+        1.75,
+        1.75
+      ],
+      "to": [
+        16.625,
+        2.125,
+        2.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_front_pull_handle",
+      "from": [
+        13.5,
+        0,
+        1.75
+      ],
+      "to": [
+        13.875,
+        2.25,
+        2.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_upper_handle_pad",
+      "from": [
+        14.5,
+        1.5,
+        1.375
+      ],
+      "to": [
+        15.125,
+        2.375,
+        2.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_upper_handle_anchor",
+      "from": [
+        13.875,
+        1.75,
+        1.75
+      ],
+      "to": [
+        14.5,
+        2.125,
+        2.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "compact_pivot_hinge",
+      "from": [
+        14.75,
+        9.75,
+        14.875
+      ],
+      "to": [
+        16.25,
+        11.0,
+        15.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "door_glass_3_clear_glass",
+      "from": [
+        15.125,
+        0,
+        0.625
+      ],
+      "to": [
+        15.375,
+        7.5,
+        15.375
+      ],
+      "faces": {
+        "east": {
+          "texture": "#glazing",
+          "uv": [
+            0.625,
+            8.5,
+            15.375,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#glazing",
+          "uv": [
+            0.625,
+            8.5,
+            15.375,
+            16.0
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "door_glass_5_clear_glass",
+      "from": [
+        15.125,
+        7.875,
+        0.625
+      ],
+      "to": [
+        15.375,
+        15.375,
+        15.375
+      ],
+      "faces": {
+        "east": {
+          "texture": "#glazing",
+          "uv": [
+            0.625,
+            0.625,
+            15.375,
+            8.125
+          ]
+        },
+        "west": {
+          "texture": "#glazing",
+          "uv": [
+            0.625,
+            0.625,
+            15.375,
+            8.125
+          ]
+        }
+      },
+      "shade": false
+    }
+  ],
+  "ambientocclusion": false
+}

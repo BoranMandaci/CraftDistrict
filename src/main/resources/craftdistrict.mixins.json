@@ -1,13 +1,16 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.craftdistrict.mixin.client",
+  "package": "com.craftdistrict.mixin",
   "compatibilityLevel": "${mixin_java_version}",
   "refmap": "craftdistrict.refmap.json",
+  "mixins": [
+    "ServerGamePacketListenerMixin"
+  ],
   "client": [
-    "CreativeModeInventoryScreenMixin",
-    "ParticleEngineMixin",
-    "GuiItemRendererMixin"
+    "client.CreativeModeInventoryScreenMixin",
+    "client.ParticleEngineMixin",
+    "client.GuiItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

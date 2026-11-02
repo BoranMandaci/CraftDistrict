@@ -47,6 +47,7 @@ public class RestaurantSeatBlock extends RotatableDecorationBlock implements Sit
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         return level.getBlockState(pos.below()).isFaceSturdy(level, pos.below(), Direction.UP);
     }
 

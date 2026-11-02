@@ -27,6 +27,7 @@ public final class CommercialPizzaOvenBlock extends MultiBlockDecorationBlock {
     @Override protected Direction getExtensionDirection(BlockState state) { return Direction.UP; }
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos floor = pos.below(partIndex(state) + 1);
         return level.getBlockState(floor).isFaceSturdy(level, floor, Direction.UP);
     }

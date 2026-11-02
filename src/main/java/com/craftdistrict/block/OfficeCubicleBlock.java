@@ -59,6 +59,7 @@ public final class OfficeCubicleBlock extends MultiBlockDecorationBlock {
     }
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         if (!state.getValue(EXPANDED) && !state.getValue(PRIMARY)) return false;
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos floor = pos.below();
         return level.getBlockState(floor).isFaceSturdy(level, floor, Direction.UP);
     }

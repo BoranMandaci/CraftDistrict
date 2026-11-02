@@ -6,10 +6,12 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -33,6 +35,12 @@ public final class PoliceHoldingCellDoorBlock extends DoorBlock {
         //?} else {
         /*super(properties, TYPE);
         *///?}
+    }
+
+    @Override
+    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        return state.getValue(HALF) == DoubleBlockHalf.LOWER && DecorationSupport.isPlaced(state, level, pos)
+                || super.canSurvive(state, level, pos);
     }
 
     @Override

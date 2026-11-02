@@ -114,12 +114,13 @@ public final class PoliceOfficeSecurityBlock extends MultiBlockDecorationBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (design != Design.MONITOR_WALL && !state.getValue(PRIMARY)) return false;
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         if (design == Design.MONITOR_WALL) {
             Direction facing = state.getValue(FACING);
             BlockPos wall = pos.relative(facing.getOpposite());
             return level.getBlockState(wall).isFaceSturdy(level, wall, facing);
         }
-        if (!state.getValue(PRIMARY)) return false;
         BlockPos floor = pos.below();
         return level.getBlockState(floor).isFaceSturdy(level, floor, Direction.UP);
     }

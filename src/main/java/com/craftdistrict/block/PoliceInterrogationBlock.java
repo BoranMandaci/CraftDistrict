@@ -57,6 +57,7 @@ public final class PoliceInterrogationBlock extends MultiBlockDecorationBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos support = pos.below();
         return level.getBlockState(support).isFaceSturdy(level, support, Direction.UP);
     }

@@ -145,6 +145,7 @@ public final class ModularDiningTableBlock extends Block {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos below = pos.below();
         return level.getBlockState(below).isFaceSturdy(level, below, Direction.UP);
     }

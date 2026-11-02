@@ -44,6 +44,8 @@ public final class CraftDistrictClient {
                 CraftDistrictBlocks.Office.SNACK_VENDING_MACHINE.get(),
                 CraftDistrictBlocks.Office.DRINK_VENDING_MACHINE.get(),
                 CraftDistrictBlocks.Office.MIXED_VENDING_MACHINE.get());
+            RenderTypeRegistry.register(RenderType.cutout(), CraftDistrictBlocks.Office.GLASS_PARTITION.get(),
+                    CraftDistrictBlocks.Office.GLASS_PARTITION_DOOR.get());
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Police.ONE_WAY_OBSERVATION_GLASS.get(),
                     CraftDistrictBlocks.Police.ONE_WAY_GLASS_BLOCK.get());
         });

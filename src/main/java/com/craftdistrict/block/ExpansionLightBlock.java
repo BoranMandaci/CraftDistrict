@@ -76,6 +76,7 @@ public class ExpansionLightBlock extends RotatableDecorationBlock {
     }
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         Direction direction = support(state);
         BlockPos anchor = pos.relative(direction);
         return level.getBlockState(anchor).isFaceSturdy(level, anchor, direction.getOpposite());

@@ -42,6 +42,7 @@ public final class DoughSheeterBlock extends MultiBlockDecorationBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos origin = pos.subtract(partOffset(state, partIndex(state)));
         for (int part = 0; part < partCount(); part++) {
             BlockPos floor = origin.offset(partOffset(state, part)).below();

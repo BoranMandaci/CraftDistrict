@@ -52,8 +52,10 @@ public final class OfficeSpeakerBlock extends CashRegisterBlock {
     @Override public BlockState updateShape(BlockState state, Direction side, BlockState neighbor,
                                             LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
         BlockState supported = super.updateShape(state, side, neighbor, level, pos, neighborPos);
-        return supported.isAir() || side != Direction.DOWN ? supported
-                : supported.setValue(LOWERED, lowTable(level, pos));
+        if (supported.isAir() || side != Direction.DOWN) return supported;
+        boolean lowered = lowTable(level, pos);
+        if (!lowered && !neighbor.isFaceSturdy(level, neighborPos, Direction.UP)) return supported;
+        return supported.setValue(LOWERED, lowered);
     }
 
     @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {

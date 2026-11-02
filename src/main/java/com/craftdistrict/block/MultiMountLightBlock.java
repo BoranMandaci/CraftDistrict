@@ -58,6 +58,7 @@ public final class MultiMountLightBlock extends ExpansionLightBlock {
     }
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         if (!state.getValue(FLOOR_MOUNTED)) return super.canSurvive(state, level, pos);
         BlockPos floor = pos.below();
         return level.getBlockState(floor).isFaceSturdy(level, floor, Direction.UP);

@@ -41,6 +41,7 @@ public final class FireStationBlock extends WideTallDecorationBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos support = pos.below();
         return partIndex(state) >= 2 || level.getBlockState(support).isFaceSturdy(level, support, Direction.UP);
     }

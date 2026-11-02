@@ -63,7 +63,8 @@ public final class DiningTableBlock extends Block {
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos below = pos.below();
-        if (!level.getBlockState(below).isFaceSturdy(level, below, Direction.UP)) return false;
+        if (!DecorationSupport.isPlaced(state, level, pos)
+                && !level.getBlockState(below).isFaceSturdy(level, below, Direction.UP)) return false;
         if (design != Design.BAR) return true;
         // The bar top extends three units above its cell; leave that space clear.
         VoxelShape above = level.getBlockState(pos.above()).getCollisionShape(level, pos.above());

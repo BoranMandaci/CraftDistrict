@@ -10,7 +10,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.state.BlockState;
@@ -126,6 +125,7 @@ public final class HangingStringLightsBlock extends ConnectedLightBlock {
     }
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         return state.getValue(WALL_MOUNTED) ? supportDistance(state, level, pos) < UNSUPPORTED
                 : super.canSurvive(state, level, pos);
     }
@@ -135,7 +135,6 @@ public final class HangingStringLightsBlock extends ConnectedLightBlock {
         if (!state.getValue(WALL_MOUNTED)) return super.updateShape(state, side, neighbor, level, pos, neighborPos);
         if (side.getAxis() != state.getValue(FACING).getAxis()) return state;
         int distance = supportDistance(state, level, pos);
-        if (distance >= UNSUPPORTED) return Blocks.AIR.defaultBlockState();
         Direction anchor = directAnchor(state, level, pos);
         if (anchor != null) state = state.setValue(FACING, anchor.getOpposite());
         else state = state.setValue(FACING, runFacing(state.getValue(FACING).getAxis()));

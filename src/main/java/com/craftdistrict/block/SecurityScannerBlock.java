@@ -125,6 +125,7 @@ public final class SecurityScannerBlock extends MultiBlockDecorationBlock {
     }
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos origin = pos.subtract(partOffset(state, partIndex(state)));
         for (int column = 0; column < (isLegacy(state) ? 1 : 2); column++) {
             BlockPos floor = origin.offset(partOffset(state, column)).below();

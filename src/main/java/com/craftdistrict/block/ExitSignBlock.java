@@ -61,6 +61,7 @@ public final class ExitSignBlock extends RotatableDecorationBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         Direction support = supportDirection(state);
         BlockPos supportPos = pos.relative(support);
         return level.getBlockState(supportPos).isFaceSturdy(level, supportPos, support.getOpposite());

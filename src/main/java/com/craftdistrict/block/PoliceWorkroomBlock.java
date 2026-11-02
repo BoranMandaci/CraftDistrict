@@ -56,6 +56,7 @@ public class PoliceWorkroomBlock extends MultiBlockDecorationBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         // Upper shelf placement is checked before its lower partner is written;
         // the shared lifecycle handles matching-part removal after placement.
         if (variant == Variant.EVIDENCE && !state.getValue(PRIMARY)) {

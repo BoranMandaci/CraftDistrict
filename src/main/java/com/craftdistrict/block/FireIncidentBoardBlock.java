@@ -36,6 +36,7 @@ public final class FireIncidentBoardBlock extends WideTallDecorationBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         Direction direction=supportDirection(state);
         BlockPos support=pos.relative(direction);
         return level.getBlockState(support).isFaceSturdy(level,support,direction.getOpposite());

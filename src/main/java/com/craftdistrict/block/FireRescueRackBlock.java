@@ -63,6 +63,7 @@ public final class FireRescueRackBlock extends WideTallDecorationBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         // Every wall cell needs backing; only the lower row of the floor rack needs a floor.
         if (rack == Rack.HOSE && partIndex(state) >= 2) { return true; }
         Direction direction = supportDirection(state);

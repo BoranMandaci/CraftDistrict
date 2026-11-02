@@ -36,6 +36,7 @@ public class FluorescentLightBlock extends MultiBlockDecorationBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos ceiling = pos.above();
         return level.getBlockState(ceiling).isFaceSturdy(level, ceiling, Direction.DOWN);
     }

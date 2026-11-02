@@ -48,6 +48,7 @@ public final class OpenSignBlock extends BakerySignageBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         if (!state.getValue(HANGING)) return super.canSurvive(state, level, pos);
         BlockPos support = pos.above();
         return level.getBlockState(support).isFaceSturdy(level, support, Direction.DOWN);

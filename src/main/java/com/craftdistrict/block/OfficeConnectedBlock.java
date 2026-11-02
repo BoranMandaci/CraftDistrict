@@ -23,7 +23,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Finished table Ends join at their rear edge; Centers extend the meeting surface. */
+/** Finished table edges join compatible End/Center sections with sparse shared supports. */
 public final class OfficeConnectedBlock extends CashRegisterBlock {
     public enum Design implements StringRepresentable {
         CONFERENCE, DIVIDER, CONFERENCE_CENTER;
@@ -61,9 +61,9 @@ public final class OfficeConnectedBlock extends CashRegisterBlock {
     private boolean joins(BlockState state, BlockState other, Direction side) {
         if (design == Design.DIVIDER) return other.is(this) && state.getValue(FACING) == other.getValue(FACING);
         if (!isConference(other)) return false;
-        if (design == Design.CONFERENCE && side != state.getValue(FACING).getOpposite()) return false;
+        if (design == Design.CONFERENCE && side == state.getValue(FACING)) return false;
         OfficeConnectedBlock neighbor = (OfficeConnectedBlock) other.getBlock();
-        return neighbor.design != Design.CONFERENCE || side == other.getValue(FACING);
+        return neighbor.design != Design.CONFERENCE || side.getOpposite() != other.getValue(FACING);
     }
     private static boolean isConference(BlockState state) {
         return state.getBlock() instanceof OfficeConnectedBlock table && table.design != Design.DIVIDER;
@@ -108,7 +108,7 @@ public final class OfficeConnectedBlock extends CashRegisterBlock {
             // Broad conference layouts also need sparse supports inside the surface.
             boolean interior = joined[0] && joined[1] && joined[2] && joined[3];
             support |= interior && Math.floorMod(pos.getX(), 3) == 0 && Math.floorMod(pos.getZ(), 3) == 0;
-            state = state.setValue(SUPPORT, design == Design.CONFERENCE || support);
+            state = state.setValue(SUPPORT, support);
         }
         return state;
     }

@@ -9,6 +9,7 @@ import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.ModularDiningTableBlock;
 import com.craftdistrict.block.MultiBlockDecorationBlock;
 import com.craftdistrict.block.OfficeChairBlock;
+import com.craftdistrict.block.OfficeGlassDoorBlock;
 import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
 import com.craftdistrict.block.RestaurantSeatBlock;
 import com.craftdistrict.block.RestaurantServingCartBlock;
@@ -60,6 +61,10 @@ public final class DecorationBreakParticles {
                 || block instanceof com.craftdistrict.block.AcousticDividerBlock
                 || block instanceof com.craftdistrict.block.OfficeBoardBlock
                 || block instanceof com.craftdistrict.block.OfficeMagazineRackBlock
+                || block instanceof com.craftdistrict.block.OfficeKitchenetteCounterBlock
+                || block instanceof com.craftdistrict.block.OfficeWallUnitBlock
+                || block instanceof com.craftdistrict.block.OfficeGlassPartitionBlock
+                || block instanceof OfficeGlassDoorBlock
                 || block instanceof AssemblyStationBlock || block instanceof HoldingCellBedBlock
                 || block instanceof FireDispatchDeskBlock || block instanceof SupermarketSelfCheckoutBlock
                 || state.is(CraftDistrictBlocks.Police.BLUE_CHAIR.get())
@@ -93,7 +98,7 @@ public final class DecorationBreakParticles {
             return state.getValue(BedBlock.PART) == BedPart.HEAD
                     ? pos.relative(state.getValue(BedBlock.FACING).getOpposite()) : pos;
         }
-        if (state.getBlock() instanceof PoliceHoldingCellDoorBlock
+        if ((state.getBlock() instanceof PoliceHoldingCellDoorBlock || state.getBlock() instanceof OfficeGlassDoorBlock)
                 && state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER) return pos.below();
         return pos;
     }

@@ -52,6 +52,7 @@ public final class CommercialExpansionBlock extends MultiBlockDecorationBlock {
     }
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos origin = pos.subtract(partOffset(state, partIndex(state)));
         int supports = design == Design.BOTTLE_RETURN ? 1 : 2;
         for (int part = 0; part < supports; part++) {

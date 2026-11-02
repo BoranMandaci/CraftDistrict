@@ -102,6 +102,7 @@ public class ConnectedLightBlock extends RotatableDecorationBlock {
         return state;
     }
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         Direction side = support(state);
         BlockPos anchor = pos.relative(side);
         return level.getBlockState(anchor).isFaceSturdy(level, anchor, side.getOpposite());

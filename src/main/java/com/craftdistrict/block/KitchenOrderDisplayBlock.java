@@ -37,6 +37,7 @@ public final class KitchenOrderDisplayBlock extends MultiBlockDecorationBlock {
     }
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         Direction facing = state.getValue(FACING);
         BlockPos behind = pos.relative(facing.getOpposite());
         return level.getBlockState(behind).isFaceSturdy(level, behind, facing);

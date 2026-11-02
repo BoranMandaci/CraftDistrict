@@ -95,6 +95,10 @@ import com.craftdistrict.block.KitchenOrderDisplayBlock;
 import com.craftdistrict.block.StainlessSteelPrepTableBlock;
 import com.craftdistrict.block.AssemblyStationBlock;
 import com.craftdistrict.block.OfficeFurnitureBlock;
+import com.craftdistrict.block.OfficeKitchenetteCounterBlock;
+import com.craftdistrict.block.OfficeWallUnitBlock;
+import com.craftdistrict.block.OfficeGlassPartitionBlock;
+import com.craftdistrict.block.OfficeGlassDoorBlock;
 import com.craftdistrict.block.OfficeModularFurnitureBlock;
 import com.craftdistrict.block.OfficeTurnstileBlock;
 import com.craftdistrict.block.OfficeBookshelfBlock;
@@ -205,12 +209,25 @@ public final class CraftDistrictBlocks {
                 () -> new OfficeBadgeReaderBlock(metalProperties()));
         public static final RegistrySupplier<OfficeFurnitureBlock> SUPPLY_CABINET = register("office_supply_cabinet",
                 () -> new OfficeModularFurnitureBlock(OfficeFurnitureBlock.Design.SUPPLY_CABINET, woodProperties()));
+        public static final RegistrySupplier<OfficeKitchenetteCounterBlock> KITCHENETTE_BASE_COUNTER = register("office_kitchenette_base_counter",
+                () -> new OfficeKitchenetteCounterBlock(metalProperties()));
+        public static final RegistrySupplier<OfficeWallUnitBlock> KITCHENETTE_WALL_COUNTER = register("office_kitchenette_wall_counter",
+                () -> new OfficeWallUnitBlock(OfficeWallUnitBlock.Kind.CABINET, metalProperties()));
+        public static final RegistrySupplier<OfficeWallUnitBlock> WINDOW_BLINDS = register("office_window_blinds",
+                () -> new OfficeWallUnitBlock(OfficeWallUnitBlock.Kind.BLINDS, metalProperties()));
+        public static final RegistrySupplier<OfficeGlassPartitionBlock> GLASS_PARTITION = register("glass_office_partition",
+                () -> new OfficeGlassPartitionBlock(glassProperties()));
+        public static final RegistrySupplier<OfficeGlassDoorBlock> GLASS_PARTITION_DOOR = register("glass_office_partition_door",
+                () -> new OfficeGlassDoorBlock(glassProperties()));
 
         private static BlockBehaviour.Properties metalProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
         }
         private static BlockBehaviour.Properties woodProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD).noOcclusion();
+        }
+        private static BlockBehaviour.Properties glassProperties() {
+            return BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.GLASS).noOcclusion();
         }
         private Office() { }
         private static void initialize() { }

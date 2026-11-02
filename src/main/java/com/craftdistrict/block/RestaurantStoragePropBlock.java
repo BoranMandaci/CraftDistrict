@@ -75,6 +75,7 @@ public class RestaurantStoragePropBlock extends CashRegisterBlock {
     }
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         return state.getValue(LOW_COUNTER) ? lowCounter(level, pos) : super.canSurvive(state, level, pos);
     }
 
@@ -87,7 +88,10 @@ public class RestaurantStoragePropBlock extends CashRegisterBlock {
     @Override public BlockState updateShape(BlockState state, Direction side, BlockState neighbor,
                                             LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
         if (side != Direction.DOWN) return state;
-        BlockState mounted = state.setValue(LOW_COUNTER, lowCounter(level, pos));
+        boolean low = lowCounter(level, pos);
+        // Keep the installed height if the supporting counter is removed.
+        if (!low && !neighbor.isFaceSturdy(level, neighborPos, Direction.UP)) return state;
+        BlockState mounted = state.setValue(LOW_COUNTER, low);
         return mounted.canSurvive(level, pos) ? mounted : Blocks.AIR.defaultBlockState();
     }
 

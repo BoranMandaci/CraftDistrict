@@ -54,6 +54,7 @@ public class SurfaceLightBlock extends CeilingLightBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         if (!state.getValue(WALL_MOUNTED)) return super.canSurvive(state, level, pos);
         Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
         BlockPos support = pos.relative(facing.getOpposite());

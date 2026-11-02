@@ -64,6 +64,7 @@ public final class OfficeBoardBlock extends WideTallDecorationBlock {
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         int part = partIndex(state);
         if (part >= partCount(state)) return false;
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         if (design == Design.SCREEN) {
             Direction facing = state.getValue(FACING);
             BlockPos wall = pos.relative(facing.getOpposite());

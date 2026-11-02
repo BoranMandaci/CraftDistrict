@@ -88,6 +88,7 @@ public final class AcousticDividerBlock extends RotatableDecorationBlock {
     }
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos support = pos.below();
         BlockState below = level.getBlockState(support);
         return below.is(this) || below.isFaceSturdy(level, support, Direction.UP);

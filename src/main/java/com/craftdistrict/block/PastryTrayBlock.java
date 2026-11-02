@@ -67,6 +67,7 @@ public final class PastryTrayBlock extends RotatableDecorationBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos supportPos = pos.below();
         return level.getBlockState(supportPos).isFaceSturdy(level, supportPos, Direction.UP);
     }
