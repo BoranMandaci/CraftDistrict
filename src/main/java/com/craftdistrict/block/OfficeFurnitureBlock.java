@@ -22,10 +22,12 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Office furniture uses the existing atomic placement/removal and one-drop lifecycle. */
-public final class OfficeFurnitureBlock extends MultiBlockDecorationBlock {
+public class OfficeFurnitureBlock extends MultiBlockDecorationBlock {
     public enum Design implements StringRepresentable {
         WORKSTATION(2, false), EXECUTIVE(3, false), RECEPTION(3, false),
-        SCREEN(2, false), WHITEBOARD(2, true), SERVER_RACK(2, true), WATER_COOLER(2, true);
+        SCREEN(2, false), WHITEBOARD(2, true), SERVER_RACK(2, true), WATER_COOLER(2, true),
+        TURNSTILE(2, false), MAIL_SORTER(2, true), VENDING(2, true), COAT_RACK(2, true),
+        RECYCLING(2, false), SUPPLY_CABINET(2, true);
         final int parts;
         final boolean vertical;
         Design(int parts, boolean vertical) { this.parts = parts; this.vertical = vertical; }
@@ -39,7 +41,7 @@ public final class OfficeFurnitureBlock extends MultiBlockDecorationBlock {
             propertiesCodec()).apply(instance, OfficeFurnitureBlock::new));
     //?}
     private static final VoxelShape[][][] SHAPES = buildShapes();
-    private final Design design;
+    protected final Design design;
 
     public OfficeFurnitureBlock(Design design, Properties properties) { super(properties); this.design = design; }
 
@@ -107,6 +109,14 @@ public final class OfficeFurnitureBlock extends MultiBlockDecorationBlock {
                     case WATER_COOLER -> p == 0 ? box(3, 0, 2, 13, 16, 14)
                             : Shapes.or(box(3.25, 0, 2.5, 12.75, 4.5, 13.5),
                                     box(4.25, 4.5, 3.75, 11.75, 15.25, 11.25));
+                    case TURNSTILE -> p == 0 ? Shapes.or(box(0, 0, 2.5, 4, 16, 13.5), box(4, 3, 3, 16, 11, 9))
+                            : Shapes.or(box(12, 0, 2.5, 16, 16, 13.5), box(0, 9, 7.5, 10, 10.5, 8.5));
+                    case MAIL_SORTER -> box(0, 0, 0, 16, 16, 16);
+                    case VENDING -> box(.125, 0, 0, 15.875, 16, 15.875);
+                    case COAT_RACK -> p == 0 ? Shapes.or(box(3, 0, 3, 13, 1, 13), box(2.5, 1, 4.5, 10.875, 16, 9.25))
+                            : box(.25, 0, 3, 15.5, 16, 13);
+                    case RECYCLING -> box(.5, 0, 2, 15.5, 15, 16);
+                    case SUPPLY_CABINET -> box(0, 0, 0, 16, 16, 16);
                 };
                 shapes[d.ordinal()][p] = RestaurantKitchenBlock.rotations(shape);
             }

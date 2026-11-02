@@ -30,6 +30,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 /** Event-only debris sampling; no particle ticking, world scans, or server changes. */
 public final class DecorationBreakParticles {
     private static final int MAX_TARGETED_FRAGMENTS = 12;
+    private static final int MAX_OFFICE_CHAIR_FRAGMENTS = 6;
     private Level lastLevel;
     private Block lastBlock;
     private long lastOrigin;
@@ -45,9 +46,12 @@ public final class DecorationBreakParticles {
     public static boolean strongReduction(BlockState state) {
         Block block = state.getBlock();
         return block instanceof DiningTableBlock || block instanceof ModularDiningTableBlock
-                || (block instanceof RestaurantSeatBlock && !(block instanceof OfficeChairBlock))
+                || block instanceof RestaurantSeatBlock
                 || block instanceof RestaurantServingCartBlock
                 || block instanceof com.craftdistrict.block.OfficeFurnitureBlock
+                || block instanceof com.craftdistrict.block.OfficeBookshelfBlock
+                || block instanceof com.craftdistrict.block.OfficeTurnstileBlock
+                || block instanceof com.craftdistrict.block.OfficeBadgeReaderBlock
                 || block instanceof com.craftdistrict.block.OfficeCubicleBlock
                 || block instanceof com.craftdistrict.block.OfficePropBlock
                 || block instanceof com.craftdistrict.block.OfficeSpeakerBlock
@@ -115,7 +119,8 @@ public final class DecorationBreakParticles {
         // Assembly Station previously used the full vanilla burst. Other targets
         // already used the one-in-three sampler; reduce that count by about 80%.
         int previous = state.getBlock() instanceof AssemblyStationBlock ? grid.vanillaCandidates : grid.candidates;
-        grid.limit = Math.min(grid.candidates, Math.min(MAX_TARGETED_FRAGMENTS, Math.max(3, (previous + 4) / 5)));
+        int maximum = state.getBlock() instanceof OfficeChairBlock ? MAX_OFFICE_CHAIR_FRAGMENTS : MAX_TARGETED_FRAGMENTS;
+        grid.limit = Math.min(grid.candidates, Math.min(maximum, Math.max(3, (previous + 4) / 5)));
         grid.accumulator = grid.candidates / 2;
         grid.countOnly = false;
         grid.rowPhase = 0;

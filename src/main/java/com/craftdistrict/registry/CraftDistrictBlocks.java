@@ -95,6 +95,10 @@ import com.craftdistrict.block.KitchenOrderDisplayBlock;
 import com.craftdistrict.block.StainlessSteelPrepTableBlock;
 import com.craftdistrict.block.AssemblyStationBlock;
 import com.craftdistrict.block.OfficeFurnitureBlock;
+import com.craftdistrict.block.OfficeModularFurnitureBlock;
+import com.craftdistrict.block.OfficeTurnstileBlock;
+import com.craftdistrict.block.OfficeBookshelfBlock;
+import com.craftdistrict.block.OfficeBadgeReaderBlock;
 import com.craftdistrict.block.OfficeCubicleBlock;
 import com.craftdistrict.block.OfficePropBlock;
 import com.craftdistrict.block.OfficeConnectedBlock;
@@ -181,6 +185,26 @@ public final class CraftDistrictBlocks {
                 () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.WATER_COOLER, metalProperties()));
         public static final RegistrySupplier<OfficeFurnitureBlock> SERVER_RACK = register("server_rack",
                 () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.SERVER_RACK, metalProperties()));
+        public static final RegistrySupplier<OfficeTurnstileBlock> SECURITY_TURNSTILE = register("office_security_turnstile",
+                () -> new OfficeTurnstileBlock(metalProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> MAIL_SORTING_CABINET = register("mail_sorting_cabinet",
+                () -> new OfficeModularFurnitureBlock(OfficeFurnitureBlock.Design.MAIL_SORTER, woodProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> SNACK_VENDING_MACHINE = register("snack_vending_machine",
+                () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.VENDING, metalProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> DRINK_VENDING_MACHINE = register("drink_vending_machine",
+                () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.VENDING, metalProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> MIXED_VENDING_MACHINE = register("mixed_vending_machine",
+                () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.VENDING, metalProperties()));
+        public static final RegistrySupplier<OfficeBookshelfBlock> BOOKSHELF = register("office_bookshelf",
+                () -> new OfficeBookshelfBlock(woodProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> COAT_RACK = register("coat_rack",
+                () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.COAT_RACK, woodProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> RECYCLING_STATION = register("office_recycling_station",
+                () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.RECYCLING, metalProperties()));
+        public static final RegistrySupplier<OfficeBadgeReaderBlock> EMPLOYEE_BADGE_READER = register("employee_badge_reader",
+                () -> new OfficeBadgeReaderBlock(metalProperties()));
+        public static final RegistrySupplier<OfficeFurnitureBlock> SUPPLY_CABINET = register("office_supply_cabinet",
+                () -> new OfficeModularFurnitureBlock(OfficeFurnitureBlock.Design.SUPPLY_CABINET, woodProperties()));
 
         private static BlockBehaviour.Properties metalProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
