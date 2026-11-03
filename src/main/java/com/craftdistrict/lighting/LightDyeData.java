@@ -1,6 +1,8 @@
 package com.craftdistrict.lighting;
 
 import it.unimi.dsi.fastutil.longs.Long2ByteOpenHashMap;
+import it.unimi.dsi.fastutil.longs.Long2ByteMap;
+import it.unimi.dsi.fastutil.longs.Long2ByteMaps;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import net.minecraft.core.BlockPos;
 //? if >=1.21 {
@@ -17,12 +19,15 @@ import net.minecraft.world.level.saveddata.SavedData;
 /** Sparse, per-dimension dye palette. No ticking, block entities or per-color block states. */
 public final class LightDyeData extends SavedData {
     private static final String NAME = "craftdistrict_light_dyes";
+    //? if >=1.21 {
+    private static final Factory<LightDyeData> FACTORY = new Factory<>(LightDyeData::new,
+            (tag, registries) -> load(tag), DataFixTypes.SAVED_DATA_COMMAND_STORAGE);
+    //?}
     private final Long2ObjectOpenHashMap<Long2ByteOpenHashMap> chunks = new Long2ObjectOpenHashMap<>();
 
     public static LightDyeData get(ServerLevel level) {
         //? if >=1.21 {
-        return level.getDataStorage().computeIfAbsent(new Factory<>(LightDyeData::new,
-                (tag, registries) -> load(tag), DataFixTypes.SAVED_DATA_COMMAND_STORAGE), NAME);
+        return level.getDataStorage().computeIfAbsent(FACTORY, NAME);
         //?} else {
         /*return level.getDataStorage().computeIfAbsent(LightDyeData::load, LightDyeData::new, NAME);
         *///?}
@@ -57,9 +62,9 @@ public final class LightDyeData extends SavedData {
         return true;
     }
 
-    public Long2ByteOpenHashMap snapshot(ChunkPos pos) {
+    public Long2ByteMap snapshot(ChunkPos pos) {
         Long2ByteOpenHashMap values = chunks.get(pos.toLong());
-        return values == null ? new Long2ByteOpenHashMap() : values.clone();
+        return values == null ? Long2ByteMaps.EMPTY_MAP : values.clone();
     }
 
     public static LightDyeData load(CompoundTag tag) {

@@ -77,11 +77,10 @@ public final class OfficeConnectedBlock extends CashRegisterBlock {
     }
     BlockState layout(BlockState state, LevelReader level, BlockPos pos, BlockPos removed) {
         Direction facing = state.getValue(FACING);
-        BlockPos a = pos.relative(facing.getCounterClockWise()), b = pos.relative(facing.getClockWise());
         state = state.setValue(LEFT, connected(state, level, pos, facing.getCounterClockWise(), removed))
                 .setValue(RIGHT, connected(state, level, pos, facing.getClockWise(), removed));
         if (design != Design.DIVIDER) {
-            BlockPos front = pos.relative(facing), back = pos.relative(facing.getOpposite());
+            BlockPos back = pos.relative(facing.getOpposite());
             state = state.setValue(FRONT, connected(state, level, pos, facing, removed))
                     .setValue(BACK, connected(state, level, pos, facing.getOpposite(), removed));
             boolean centerJoin = state.getValue(BACK) && level.getBlockState(back).getBlock() instanceof OfficeConnectedBlock neighbor
@@ -89,7 +88,10 @@ public final class OfficeConnectedBlock extends CashRegisterBlock {
             state = state.setValue(CENTER_JOIN, design == Design.CONFERENCE && centerJoin);
             boolean[] joined = new boolean[4], extra = new boolean[4];
             for (int edge = 0; edge < 4; edge++) {
-                joined[edge] = connected(state, level, pos, EDGES[edge], removed);
+                Direction side = EDGES[edge];
+                BooleanProperty property = side == facing ? FRONT : side == facing.getOpposite() ? BACK
+                        : side == facing.getCounterClockWise() ? LEFT : RIGHT;
+                joined[edge] = state.getValue(property);
                 if (!joined[edge]) extra[edge] = intermediate(state, level, pos, EDGES[edge], removed);
             }
             boolean support = false;

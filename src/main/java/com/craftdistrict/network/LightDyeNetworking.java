@@ -13,6 +13,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.ChunkPos;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.LinkedHashMap;
 import java.util.function.Consumer;
 //? if >=1.21 {
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -118,10 +119,19 @@ public final class LightDyeNetworking {
 
     public static void changed(ServerLevel level, List<BlockPos> positions) {
         LightDyeData data = LightDyeData.get(level);
-        for (BlockPos pos : positions) {
+        if (positions.size() == 1) {
+            BlockPos pos = positions.get(0);
             ChunkPos chunk = new ChunkPos(pos);
             send(level.getChunkSource().chunkMap.getPlayers(chunk, false), new Palette(level.dimension().location(),
                     chunk.x, chunk.z, false, List.of(new Color(pos.asLong(), data.color(pos)))));
+            return;
         }
+        var updates = new LinkedHashMap<ChunkPos, List<Color>>();
+        for (BlockPos pos : positions) {
+            ChunkPos chunk = new ChunkPos(pos);
+            updates.computeIfAbsent(chunk, ignored -> new ArrayList<>(3)).add(new Color(pos.asLong(), data.color(pos)));
+        }
+        updates.forEach((chunk, colors) -> send(level.getChunkSource().chunkMap.getPlayers(chunk, false),
+                new Palette(level.dimension().location(), chunk.x, chunk.z, false, List.copyOf(colors))));
     }
 }

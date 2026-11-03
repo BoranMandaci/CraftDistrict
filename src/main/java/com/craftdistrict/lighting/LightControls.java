@@ -79,7 +79,12 @@ public final class LightControls {
         List<BlockPos> parts = parts(current, pos);
         if (!complete(level, current, parts)) return;
         boolean lit = powered(level, parts);
-        if (parts.stream().anyMatch(p -> level.getBlockState(p).getValue(LIT) != lit)) apply(level, parts, true, lit);
+        for (BlockPos part : parts) {
+            if (level.getBlockState(part).getValue(LIT) != lit) {
+                apply(level, parts, true, lit);
+                break;
+            }
+        }
     }
 
     public static InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand) {

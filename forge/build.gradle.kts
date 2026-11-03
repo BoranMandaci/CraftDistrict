@@ -23,7 +23,8 @@ architectury {
 
 loom {
     runs {
-        named("client") {
+        // Both dev environments use Mojang names, not the common Fabric refmap.
+        configureEach {
             programArgs("--mixin.config", "craftdistrict-forge-dev.mixins.json")
         }
     }

@@ -1,8 +1,41 @@
 import groovy.json.JsonOutput
+import groovy.json.JsonGenerator
 import groovy.json.JsonSlurper
 import java.io.FilterReader
 import java.io.Reader
 import java.io.StringReader
+import java.math.BigDecimal
+
+object DistributionJson {
+    val writer: JsonGenerator = JsonGenerator.Options().disableUnicodeEscaping().build()
+    private val vectors = setOf("from", "to", "origin", "uv", "translation", "rotation", "scale")
+
+    private fun modelFloat(number: Number): Number {
+        val value = number.toFloat()
+        require(value.isFinite()) { "Non-finite model coordinate" }
+        // Preserve signed zero; every other spelling round-trips to the same Minecraft float.
+        if (value.toRawBits() == Int.MIN_VALUE) return value
+        val decimal = BigDecimal(value.toString()).stripTrailingZeros()
+        return if (decimal.scale() < 0) decimal.setScale(0) else decimal
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    fun model(value: Any?, key: String = ""): Any? = when (value) {
+        is MutableMap<*, *> -> (value as MutableMap<String, Any?>).apply {
+            keys.toList().forEach { name -> this[name] = model(this[name], name) }
+            if (containsKey("from") && containsKey("to")) {
+                remove("name") // Editor-only labels remain in the editable source models.
+                if (get("shade") == true) remove("shade") // Vanilla's element default.
+            }
+            if (key == "rotation" && get("rescale") == false) remove("rescale")
+            if (containsKey("texture") && (get("rotation") as? Number)?.toDouble() == 0.0) remove("rotation")
+        }
+        is List<*> -> if (key in vectors && value.all { it is Number }) {
+            value.map { modelFloat(it as Number) }
+        } else value.map { model(it, key) }
+        else -> value
+    }
+}
 
 plugins {
     id("dev.architectury.loom")
@@ -11,17 +44,13 @@ plugins {
 
 // Compact distribution copies only; keep editable source assets formatted.
 class CompactJsonReader(reader: Reader) : FilterReader(
-    StringReader(JsonOutput.toJson(JsonSlurper().parse(reader)))
+    StringReader(DistributionJson.writer.toJson(JsonSlurper().parse(reader)))
 )
 
 // Element names are editor metadata ignored by Minecraft; retain them in source.
 @Suppress("UNCHECKED_CAST")
 class CompactModelJsonReader(reader: Reader) : FilterReader(StringReader(
-    JsonOutput.toJson((JsonSlurper().parse(reader) as MutableMap<String, Any?>).apply {
-        (get("elements") as? List<*>)?.forEach { element ->
-            (element as? MutableMap<String, Any?>)?.remove("name")
-        }
-    })
+    DistributionJson.writer.toJson(DistributionJson.model(JsonSlurper().parse(reader)))
 ))
 
 // Vanilla 1.21 renamed the ItemStack recipe-result key from item to id.
@@ -85,6 +114,7 @@ tasks.processResources {
     from(rootProject.file("LICENSE"))
     inputs.property("resource_pack_format", resourcePackFormat)
     inputs.property("mixin_java_version", "JAVA_$javaVersion")
+    inputs.property("distribution_json_format", "minecraft-float32-utf8")
     filesMatching("pack.mcmeta") {
         expand("resource_pack_format" to resourcePackFormat)
     }
