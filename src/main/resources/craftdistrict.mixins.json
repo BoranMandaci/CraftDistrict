@@ -5,12 +5,14 @@
   "compatibilityLevel": "${mixin_java_version}",
   "refmap": "craftdistrict.refmap.json",
   "mixins": [
-    "ServerGamePacketListenerMixin"
+    "ServerGamePacketListenerMixin",
+    "LightChunkSyncMixin"
   ],
   "client": [
     "client.CreativeModeInventoryScreenMixin",
     "client.ParticleEngineMixin",
-    "client.GuiItemRendererMixin"
+    "client.GuiItemRendererMixin",
+    "client.LightChunkCacheMixin"
   ],
   "injectors": {
     "defaultRequire": 1

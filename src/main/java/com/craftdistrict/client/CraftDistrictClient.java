@@ -17,6 +17,7 @@ public final class CraftDistrictClient {
     public static void init() {
         EntityRendererRegistry.register(CraftDistrictEntities.SEAT, NoopRenderer::new);
         ClientLifecycleEvent.CLIENT_SETUP.register(client -> {
+            LightingColors.init();
             MenuRegistry.registerScreenFactory(CraftDistrictAssembly.MENU.get(), AssemblyStationScreen::new);
             RenderTypeRegistry.register(
                 RenderType.cutout(), CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get(),

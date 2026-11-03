@@ -7,6 +7,7 @@ import com.craftdistrict.registry.CraftDistrictEntities;
 import com.craftdistrict.registry.CraftDistrictItems;
 import com.craftdistrict.registry.CraftDistrictAssembly;
 import com.craftdistrict.network.AssemblyNetworking;
+import com.craftdistrict.network.LightDyeNetworking;
 import com.craftdistrict.entity.Seating;
 import com.craftdistrict.block.PoliceOfficeSecurityBlock;
 import com.craftdistrict.block.SecurityScannerBlock;
@@ -29,6 +30,7 @@ public final class CraftDistrict {
         SecurityScannerBlock.registerPassageTracking();
         CraftDistrictAssembly.register();
         AssemblyNetworking.register();
+        LightDyeNetworking.register();
         CraftDistrictEntities.register();
         Seating.init();
         CraftDistrictCreativeTabs.register();

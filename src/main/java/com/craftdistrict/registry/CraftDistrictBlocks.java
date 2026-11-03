@@ -660,7 +660,7 @@ public final class CraftDistrictBlocks {
 
         private static BlockBehaviour.Properties lightProperties(int level) {
             return BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.METAL)
-                    .noOcclusion().lightLevel(state -> level);
+                    .noOcclusion().lightLevel(state -> state.getValue(com.craftdistrict.lighting.LightControls.LIT) ? level : 0);
         }
 
         private Lighting() { }

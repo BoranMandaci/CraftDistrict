@@ -1,49 +1,406 @@
 {
-  "variants": {
-    "facing=north,segment=0": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0"
+  "multipart": [
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "segment": "0"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0"
+      }
     },
-    "facing=north,segment=1": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1"
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "segment": "0"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0_off"
+      }
     },
-    "facing=north,segment=2": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1"
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "segment": "1"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1"
+      }
     },
-    "facing=east,segment=0": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "segment": "1"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1_off"
+      }
     },
-    "facing=east,segment=1": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "segment": "2"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1"
+      }
     },
-    "facing=east,segment=2": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "segment": "2"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1_off"
+      }
     },
-    "facing=south,segment=0": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "segment": "0"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0",
+        "y": 90
+      }
     },
-    "facing=south,segment=1": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "segment": "0"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0_off",
+        "y": 90
+      }
     },
-    "facing=south,segment=2": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "segment": "1"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
+        "y": 90
+      }
     },
-    "facing=west,segment=0": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "segment": "1"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1_off",
+        "y": 90
+      }
     },
-    "facing=west,segment=1": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "segment": "2"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
+        "y": 90
+      }
     },
-    "facing=west,segment=2": {
-      "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "segment": "2"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "segment": "0"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "segment": "0"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "segment": "1"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "segment": "1"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "segment": "2"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "segment": "2"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "segment": "0"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "segment": "0"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_0_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "segment": "1"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "segment": "1"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "segment": "2"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "segment": "2"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_modern_floor_lamp_1_off",
+        "y": 270
+      }
     }
-  }
+  ]
 }

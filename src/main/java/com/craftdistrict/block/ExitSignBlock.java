@@ -22,7 +22,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** One item per arrow direction; the clicked surface chooses the mounting style. */
-public final class ExitSignBlock extends RotatableDecorationBlock {
+public final class ExitSignBlock extends RotatableDecorationBlock implements ControlledLight {
     public static final BooleanProperty HANGING = BooleanProperty.create("hanging");
 
     public enum Arrow implements StringRepresentable {

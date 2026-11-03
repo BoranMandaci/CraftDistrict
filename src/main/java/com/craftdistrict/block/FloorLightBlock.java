@@ -13,7 +13,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Uses the existing solid-top support, support-loss, collision and rotation rules. */
-public final class FloorLightBlock extends CashRegisterBlock {
+public final class FloorLightBlock extends CashRegisterBlock implements ControlledLight {
     public enum Fixture implements StringRepresentable {
         DESK(LightingShapes.DESK), BOLLARD(LightingShapes.BOLLARD);
 

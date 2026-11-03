@@ -22,7 +22,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Passive fixtures: mount selection only, with ordinary support-loss loot. */
-public class ExpansionLightBlock extends RotatableDecorationBlock {
+public class ExpansionLightBlock extends RotatableDecorationBlock implements ControlledLight {
     public static final BooleanProperty WALL_MOUNTED = SurfaceLightBlock.WALL_MOUNTED;
 
     public enum Fixture implements StringRepresentable {

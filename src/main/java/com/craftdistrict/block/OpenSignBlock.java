@@ -20,7 +20,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Existing clicked-wall mounting, plus a suspended model when clicking a ceiling. */
-public final class OpenSignBlock extends BakerySignageBlock {
+public final class OpenSignBlock extends BakerySignageBlock implements ControlledLight {
     public static final BooleanProperty HANGING = BooleanProperty.create("hanging");
     //? if >=1.21 {
     public static final MapCodec<OpenSignBlock> CODEC = simpleCodec(OpenSignBlock::new);

@@ -22,7 +22,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** The shared linked lifecycle owns placement, rollback, removal and single-item loot. */
-public final class TallLightBlock extends MultiBlockDecorationBlock {
+public final class TallLightBlock extends MultiBlockDecorationBlock implements ControlledLight {
     public static final IntegerProperty SEGMENT = IntegerProperty.create("segment", 0, 2);
     public enum Fixture implements StringRepresentable {
         FLOOR(false, new VoxelShape[]{

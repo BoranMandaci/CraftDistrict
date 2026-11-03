@@ -2,12 +2,19 @@
   "multipart": [
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "false",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_single"
@@ -18,23 +25,50 @@
         "AND": [
           {
             "facing": "north",
-            "wall_mounted": "false"
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_single_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -44,9 +78,52 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "false",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_hub_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_left"
@@ -54,9 +131,33 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "false",
-        "right": "true"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_left_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_right"
@@ -64,9 +165,33 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "false",
-        "up": "true"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_right_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_up"
@@ -74,9 +199,33 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "false",
-        "down": "true"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_up_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_down"
@@ -84,12 +233,36 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "false",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_down_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_single",
@@ -101,23 +274,51 @@
         "AND": [
           {
             "facing": "east",
-            "wall_mounted": "false"
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_single_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -128,9 +329,53 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "false",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_hub_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_left",
@@ -139,9 +384,34 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "false",
-        "right": "true"
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_left_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_right",
@@ -150,9 +420,34 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "false",
-        "up": "true"
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_right_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_up",
@@ -161,9 +456,34 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "false",
-        "down": "true"
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_up_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_down",
@@ -172,12 +492,37 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "false",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_down_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_single",
@@ -189,23 +534,51 @@
         "AND": [
           {
             "facing": "south",
-            "wall_mounted": "false"
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_single_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -216,9 +589,53 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "false",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_hub_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_left",
@@ -227,9 +644,34 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "false",
-        "right": "true"
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_left_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_right",
@@ -238,9 +680,34 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "false",
-        "up": "true"
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_right_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_up",
@@ -249,9 +716,34 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "false",
-        "down": "true"
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_up_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_down",
@@ -260,12 +752,37 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "false",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_down_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_single",
@@ -277,23 +794,51 @@
         "AND": [
           {
             "facing": "west",
-            "wall_mounted": "false"
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_single_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -304,9 +849,53 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "false",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_hub_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_left",
@@ -315,9 +904,34 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "false",
-        "right": "true"
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_left_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_right",
@@ -326,9 +940,34 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "false",
-        "up": "true"
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_right_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_up",
@@ -337,9 +976,34 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "false",
-        "down": "true"
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_up_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_down",
@@ -348,8 +1012,33 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "true"
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_down_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_hub"
@@ -357,9 +1046,32 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "true",
-        "distance": "0"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_hub_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "distance": "0"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor"
@@ -367,10 +1079,34 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "true",
-        "up": "true",
-        "right": "false"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "distance": "0"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "up": "true",
+            "right": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_forward"
@@ -378,10 +1114,35 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "true",
-        "down": "true",
-        "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "up": "true",
+            "right": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_forward_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "down": "true",
+            "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_backward"
@@ -389,9 +1150,34 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "true",
-        "right": "true"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "down": "true",
+            "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_backward_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor",
@@ -400,8 +1186,33 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "true"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_hub",
@@ -410,9 +1221,33 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "true",
-        "distance": "0"
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_hub_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "distance": "0"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor",
@@ -421,10 +1256,35 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "true",
-        "up": "true",
-        "right": "false"
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "distance": "0"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "up": "true",
+            "right": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_forward",
@@ -433,10 +1293,36 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "true",
-        "down": "true",
-        "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "up": "true",
+            "right": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_forward_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "down": "true",
+            "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_backward",
@@ -445,9 +1331,35 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "true",
-        "right": "true"
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "down": "true",
+            "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_backward_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor",
@@ -456,8 +1368,33 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "true"
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_hub",
@@ -466,9 +1403,33 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "true",
-        "distance": "0"
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_hub_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "distance": "0"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor",
@@ -477,10 +1438,35 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "true",
-        "up": "true",
-        "right": "false"
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "distance": "0"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "up": "true",
+            "right": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_forward",
@@ -489,10 +1475,36 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "true",
-        "down": "true",
-        "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "up": "true",
+            "right": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_forward_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "down": "true",
+            "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_backward",
@@ -501,9 +1513,35 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "true",
-        "right": "true"
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "down": "true",
+            "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_backward_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor"
@@ -511,8 +1549,32 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "true"
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_hub",
@@ -521,9 +1583,33 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "true",
-        "distance": "0"
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_hub_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "distance": "0"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor",
@@ -532,10 +1618,35 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "true",
-        "up": "true",
-        "right": "false"
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "distance": "0"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "up": "true",
+            "right": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_forward",
@@ -544,10 +1655,36 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "true",
-        "down": "true",
-        "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "up": "true",
+            "right": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_forward_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "down": "true",
+            "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_backward",
@@ -556,12 +1693,56 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "true",
-        "right": "true"
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "down": "true",
+            "distance": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_backward_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_hanging_string_lights_suspended_anchor_off",
         "y": 90
       }
     }

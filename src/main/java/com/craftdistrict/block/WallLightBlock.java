@@ -13,7 +13,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Reuses clicked-wall orientation, sturdy-wall checks, and support-loss drops. */
-public final class WallLightBlock extends BakerySignageBlock {
+public final class WallLightBlock extends BakerySignageBlock implements ControlledLight {
     public enum Fixture implements StringRepresentable {
         SCONCE(2), FLOODLIGHT(3), EXIT(4), NEON(LightingShapes.NEON), SECURITY(LightingShapes.SECURITY);
 

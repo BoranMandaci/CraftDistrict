@@ -1,68 +1,580 @@
 {
-  "variants": {
-    "facing=north,primary=true,wall_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_0",
-      "y": 0
+  "multipart": [
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "true",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_0",
+        "y": 0
+      }
     },
-    "facing=east,primary=true,wall_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_0",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "true",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_0_off",
+        "y": 0
+      }
     },
-    "facing=south,primary=true,wall_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_0",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "true",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_0",
+        "y": 90
+      }
     },
-    "facing=west,primary=true,wall_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_0",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "true",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_0_off",
+        "y": 90
+      }
     },
-    "facing=north,primary=false,wall_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_1",
-      "y": 0
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "true",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_0",
+        "y": 180
+      }
     },
-    "facing=east,primary=false,wall_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_1",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "true",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_0_off",
+        "y": 180
+      }
     },
-    "facing=south,primary=false,wall_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_1",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "true",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_0",
+        "y": 270
+      }
     },
-    "facing=west,primary=false,wall_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_1",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "true",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_0_off",
+        "y": 270
+      }
     },
-    "facing=north,primary=true,wall_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_wall_0",
-      "y": 0
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "false",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_1",
+        "y": 0
+      }
     },
-    "facing=east,primary=true,wall_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_wall_0",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "false",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_1_off",
+        "y": 0
+      }
     },
-    "facing=south,primary=true,wall_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_wall_0",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "false",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_1",
+        "y": 90
+      }
     },
-    "facing=west,primary=true,wall_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_wall_0",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "false",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_1_off",
+        "y": 90
+      }
     },
-    "facing=north,primary=false,wall_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_wall_1",
-      "y": 0
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "false",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_1",
+        "y": 180
+      }
     },
-    "facing=east,primary=false,wall_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_wall_1",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "false",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_1_off",
+        "y": 180
+      }
     },
-    "facing=south,primary=false,wall_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_wall_1",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "false",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_1",
+        "y": 270
+      }
     },
-    "facing=west,primary=false,wall_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_track_light_wall_1",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "false",
+            "wall_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_1_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "true",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "true",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_0_off",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "true",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "true",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_0_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "true",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "true",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_0_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "true",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "true",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_0_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "false",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "false",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_1_off",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "false",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "false",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_1_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "false",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "false",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_1_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "false",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "false",
+            "wall_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_track_light_wall_1_off",
+        "y": 270
+      }
     }
-  }
+  ]
 }

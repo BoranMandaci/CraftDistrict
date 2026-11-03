@@ -4,7 +4,8 @@
   "ambientocclusion": false,
   "textures": {
     "atlas": "craftdistrict:block/lighting/fixtures",
-    "particle": "craftdistrict:block/particles/particle_dark_gray"
+    "particle": "craftdistrict:block/particles/particle_dark_gray",
+    "light_tint": "craftdistrict:block/lighting/fixtures_tint"
   },
   "elements": [
     {
@@ -220,49 +221,54 @@
       ],
       "faces": {
         "north": {
-          "texture": "#atlas",
+          "texture": "#light_tint",
           "uv": [
             8.0625,
             0.125,
             9.9375,
             3.875
-          ]
+          ],
+          "tintindex": 32896743
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#light_tint",
           "uv": [
             8.0625,
             0.125,
             9.9375,
             3.875
-          ]
+          ],
+          "tintindex": 32896743
         },
         "west": {
-          "texture": "#atlas",
+          "texture": "#light_tint",
           "uv": [
             8.0625,
             0.125,
             9.9375,
             3.875
-          ]
+          ],
+          "tintindex": 32896743
         },
         "up": {
-          "texture": "#atlas",
+          "texture": "#light_tint",
           "uv": [
             8.0625,
             0.125,
             9.9375,
             3.875
-          ]
+          ],
+          "tintindex": 32896743
         },
         "down": {
-          "texture": "#atlas",
+          "texture": "#light_tint",
           "uv": [
             8.0625,
             0.125,
             9.9375,
             3.875
-          ]
+          ],
+          "tintindex": 32896743
         }
       },
       "shade": false,

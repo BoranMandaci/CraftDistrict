@@ -4,7 +4,8 @@
   "ambientocclusion": false,
   "textures": {
     "atlas": "craftdistrict:block/lighting/fixtures_expansion",
-    "particle": "craftdistrict:block/particles/particle_lighting_cyan"
+    "particle": "craftdistrict:block/particles/particle_lighting_cyan",
+    "light_tint": "craftdistrict:block/lighting/fixtures_expansion_tint"
   },
   "elements": [
     {
@@ -109,13 +110,14 @@
           ]
         },
         "down": {
-          "texture": "#atlas",
+          "texture": "#light_tint",
           "uv": [
             0.125,
             8.125,
             2.0,
             8.375
-          ]
+          ],
+          "tintindex": 25423353
         },
         "north": {
           "texture": "#atlas",

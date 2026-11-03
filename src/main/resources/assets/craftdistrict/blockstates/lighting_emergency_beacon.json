@@ -1,64 +1,572 @@
 {
-  "variants": {
-    "facing=north,wall_mounted=false,floor_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon"
+  "multipart": [
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon"
+      }
     },
-    "facing=east,wall_mounted=false,floor_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_off"
+      }
     },
-    "facing=south,wall_mounted=false,floor_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon",
+        "y": 90
+      }
     },
-    "facing=west,wall_mounted=false,floor_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_off",
+        "y": 90
+      }
     },
-    "facing=north,wall_mounted=true,floor_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall"
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon",
+        "y": 180
+      }
     },
-    "facing=east,wall_mounted=true,floor_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_off",
+        "y": 180
+      }
     },
-    "facing=south,wall_mounted=true,floor_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon",
+        "y": 270
+      }
     },
-    "facing=west,wall_mounted=true,floor_mounted=false": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_off",
+        "y": 270
+      }
     },
-    "facing=north,wall_mounted=false,floor_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor"
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall"
+      }
     },
-    "facing=east,wall_mounted=false,floor_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall_off"
+      }
     },
-    "facing=south,wall_mounted=false,floor_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall",
+        "y": 90
+      }
     },
-    "facing=west,wall_mounted=false,floor_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall_off",
+        "y": 90
+      }
     },
-    "facing=north,wall_mounted=true,floor_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor"
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall",
+        "y": 180
+      }
     },
-    "facing=east,wall_mounted=true,floor_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall_off",
+        "y": 180
+      }
     },
-    "facing=south,wall_mounted=true,floor_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall",
+        "y": 270
+      }
     },
-    "facing=west,wall_mounted=true,floor_mounted=true": {
-      "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "floor_mounted": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_wall_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "floor_mounted": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_emergency_beacon_floor_off",
+        "y": 270
+      }
     }
-  }
+  ]
 }

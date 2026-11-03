@@ -1,36 +1,276 @@
 {
-  "variants": {
-    "facing=north,primary=true": {
-      "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0",
-      "y": 0
+  "multipart": [
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0",
+        "y": 0
+      }
     },
-    "facing=east,primary=true": {
-      "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0_off",
+        "y": 0
+      }
     },
-    "facing=south,primary=true": {
-      "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0",
+        "y": 90
+      }
     },
-    "facing=west,primary=true": {
-      "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0_off",
+        "y": 90
+      }
     },
-    "facing=north,primary=false": {
-      "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1",
-      "y": 0
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0",
+        "y": 180
+      }
     },
-    "facing=east,primary=false": {
-      "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1",
-      "y": 90
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0_off",
+        "y": 180
+      }
     },
-    "facing=south,primary=false": {
-      "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1",
-      "y": 180
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0",
+        "y": 270
+      }
     },
-    "facing=west,primary=false": {
-      "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1",
-      "y": 270
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "true"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_0_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1_off",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "false"
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_fluorescent_tube_1_off",
+        "y": 270
+      }
     }
-  }
+  ]
 }

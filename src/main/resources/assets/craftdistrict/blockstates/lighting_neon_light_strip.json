@@ -2,12 +2,19 @@
   "multipart": [
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "false",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_single"
@@ -18,23 +25,50 @@
         "AND": [
           {
             "facing": "north",
-            "wall_mounted": "false"
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_single_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -44,9 +78,52 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "false",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_hub_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_left"
@@ -58,23 +135,47 @@
           {
             "facing": "north",
             "wall_mounted": "false",
-            "left": "false"
+            "left": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_left_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "false",
+                "left": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -84,9 +185,53 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "false",
-        "right": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "false",
+                "left": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_left_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_right"
@@ -98,23 +243,47 @@
           {
             "facing": "north",
             "wall_mounted": "false",
-            "right": "false"
+            "right": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_right_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "false",
+                "right": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -124,9 +293,53 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "false",
-        "up": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "false",
+                "right": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_right_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_up"
@@ -138,23 +351,47 @@
           {
             "facing": "north",
             "wall_mounted": "false",
-            "up": "false"
+            "up": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_up_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "false",
+                "up": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -164,9 +401,53 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "false",
-        "down": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "false",
+                "up": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_up_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_down"
@@ -178,23 +459,47 @@
           {
             "facing": "north",
             "wall_mounted": "false",
-            "down": "false"
+            "down": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_down_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "false",
+                "down": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -204,12 +509,56 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "false",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "false",
+                "down": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_down_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_single",
@@ -221,23 +570,51 @@
         "AND": [
           {
             "facing": "east",
-            "wall_mounted": "false"
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_single_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -248,9 +625,53 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "false",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_hub_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_left",
@@ -263,23 +684,48 @@
           {
             "facing": "east",
             "wall_mounted": "false",
-            "left": "false"
+            "left": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_left_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "false",
+                "left": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -290,9 +736,54 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "false",
-        "right": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "false",
+                "left": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_left_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_right",
@@ -305,23 +796,48 @@
           {
             "facing": "east",
             "wall_mounted": "false",
-            "right": "false"
+            "right": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_right_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "false",
+                "right": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -332,9 +848,54 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "false",
-        "up": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "false",
+                "right": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_right_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_up",
@@ -347,23 +908,48 @@
           {
             "facing": "east",
             "wall_mounted": "false",
-            "up": "false"
+            "up": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_up_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "false",
+                "up": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -374,9 +960,54 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "false",
-        "down": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "false",
+                "up": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_up_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_down",
@@ -389,23 +1020,48 @@
           {
             "facing": "east",
             "wall_mounted": "false",
-            "down": "false"
+            "down": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_down_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "false",
+                "down": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -416,12 +1072,57 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "false",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "false",
+                "down": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_down_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_single",
@@ -433,23 +1134,51 @@
         "AND": [
           {
             "facing": "south",
-            "wall_mounted": "false"
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_single_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -460,9 +1189,53 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "false",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_hub_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_left",
@@ -475,23 +1248,48 @@
           {
             "facing": "south",
             "wall_mounted": "false",
-            "left": "false"
+            "left": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_left_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "false",
+                "left": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -502,9 +1300,54 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "false",
-        "right": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "false",
+                "left": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_left_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_right",
@@ -517,23 +1360,48 @@
           {
             "facing": "south",
             "wall_mounted": "false",
-            "right": "false"
+            "right": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_right_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "false",
+                "right": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -544,9 +1412,54 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "false",
-        "up": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "false",
+                "right": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_right_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_up",
@@ -559,23 +1472,48 @@
           {
             "facing": "south",
             "wall_mounted": "false",
-            "up": "false"
+            "up": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_up_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "false",
+                "up": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -586,9 +1524,54 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "false",
-        "down": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "false",
+                "up": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_up_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_down",
@@ -601,23 +1584,48 @@
           {
             "facing": "south",
             "wall_mounted": "false",
-            "down": "false"
+            "down": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_down_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "false",
+                "down": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -628,12 +1636,57 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "false",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "false",
+                "down": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_down_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_single",
@@ -645,23 +1698,51 @@
         "AND": [
           {
             "facing": "west",
-            "wall_mounted": "false"
+            "wall_mounted": "false",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_single_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -672,9 +1753,53 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "false",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_hub_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_left",
@@ -687,23 +1812,48 @@
           {
             "facing": "west",
             "wall_mounted": "false",
-            "left": "false"
+            "left": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_left_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "false",
+                "left": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -714,9 +1864,54 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "false",
-        "right": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "false",
+                "left": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_left_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_right",
@@ -729,23 +1924,48 @@
           {
             "facing": "west",
             "wall_mounted": "false",
-            "right": "false"
+            "right": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_right_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "false",
+                "right": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -756,9 +1976,54 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "false",
-        "up": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "false",
+                "right": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_right_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_up",
@@ -771,23 +2036,48 @@
           {
             "facing": "west",
             "wall_mounted": "false",
-            "up": "false"
+            "up": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_up_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "false",
+                "up": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -798,9 +2088,54 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "false",
-        "down": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "false",
+                "up": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_up_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "false",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_down",
@@ -813,23 +2148,48 @@
           {
             "facing": "west",
             "wall_mounted": "false",
-            "down": "false"
+            "down": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_down_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "false",
+                "down": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -840,12 +2200,57 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "true",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "false",
+                "down": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_cap_down_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_single"
@@ -856,23 +2261,50 @@
         "AND": [
           {
             "facing": "north",
-            "wall_mounted": "true"
+            "wall_mounted": "true",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_single_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "true"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -882,9 +2314,52 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "true",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "true"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_hub_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_left"
@@ -896,23 +2371,47 @@
           {
             "facing": "north",
             "wall_mounted": "true",
-            "left": "false"
+            "left": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_left_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "true",
+                "left": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -922,9 +2421,53 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "true",
-        "right": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "true",
+                "left": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_left_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_right"
@@ -936,23 +2479,47 @@
           {
             "facing": "north",
             "wall_mounted": "true",
-            "right": "false"
+            "right": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_right_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "true",
+                "right": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -962,9 +2529,53 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "true",
-        "up": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "true",
+                "right": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_right_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_up"
@@ -976,23 +2587,47 @@
           {
             "facing": "north",
             "wall_mounted": "true",
-            "up": "false"
+            "up": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_up_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "true",
+                "up": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1002,9 +2637,53 @@
     },
     {
       "when": {
-        "facing": "north",
-        "wall_mounted": "true",
-        "down": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "true",
+                "up": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_up_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "wall_mounted": "true",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_down"
@@ -1016,23 +2695,47 @@
           {
             "facing": "north",
             "wall_mounted": "true",
-            "down": "false"
+            "down": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_down_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "north",
+                "wall_mounted": "true",
+                "down": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1042,12 +2745,56 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "true",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "north",
+                "wall_mounted": "true",
+                "down": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_down_off"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_single",
@@ -1059,23 +2806,51 @@
         "AND": [
           {
             "facing": "east",
-            "wall_mounted": "true"
+            "wall_mounted": "true",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_single_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "true"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1086,9 +2861,53 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "true",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "true"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_hub_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_left",
@@ -1101,23 +2920,48 @@
           {
             "facing": "east",
             "wall_mounted": "true",
-            "left": "false"
+            "left": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_left_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "true",
+                "left": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1128,9 +2972,54 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "true",
-        "right": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "true",
+                "left": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_left_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_right",
@@ -1143,23 +3032,48 @@
           {
             "facing": "east",
             "wall_mounted": "true",
-            "right": "false"
+            "right": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_right_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "true",
+                "right": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1170,9 +3084,54 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "true",
-        "up": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "true",
+                "right": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_right_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_up",
@@ -1185,23 +3144,48 @@
           {
             "facing": "east",
             "wall_mounted": "true",
-            "up": "false"
+            "up": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_up_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "true",
+                "up": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1212,9 +3196,54 @@
     },
     {
       "when": {
-        "facing": "east",
-        "wall_mounted": "true",
-        "down": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "true",
+                "up": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_up_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "wall_mounted": "true",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_down",
@@ -1227,23 +3256,48 @@
           {
             "facing": "east",
             "wall_mounted": "true",
-            "down": "false"
+            "down": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_down_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "east",
+                "wall_mounted": "true",
+                "down": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1254,12 +3308,57 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "true",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "east",
+                "wall_mounted": "true",
+                "down": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_down_off",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_single",
@@ -1271,23 +3370,51 @@
         "AND": [
           {
             "facing": "south",
-            "wall_mounted": "true"
+            "wall_mounted": "true",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_single_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "true"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1298,9 +3425,53 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "true",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "true"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_hub_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_left",
@@ -1313,23 +3484,48 @@
           {
             "facing": "south",
             "wall_mounted": "true",
-            "left": "false"
+            "left": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_left_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "true",
+                "left": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1340,9 +3536,54 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "true",
-        "right": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "true",
+                "left": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_left_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_right",
@@ -1355,23 +3596,48 @@
           {
             "facing": "south",
             "wall_mounted": "true",
-            "right": "false"
+            "right": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_right_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "true",
+                "right": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1382,9 +3648,54 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "true",
-        "up": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "true",
+                "right": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_right_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_up",
@@ -1397,23 +3708,48 @@
           {
             "facing": "south",
             "wall_mounted": "true",
-            "up": "false"
+            "up": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_up_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "true",
+                "up": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1424,9 +3760,54 @@
     },
     {
       "when": {
-        "facing": "south",
-        "wall_mounted": "true",
-        "down": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "true",
+                "up": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_up_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "wall_mounted": "true",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_down",
@@ -1439,23 +3820,48 @@
           {
             "facing": "south",
             "wall_mounted": "true",
-            "down": "false"
+            "down": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_down_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "south",
+                "wall_mounted": "true",
+                "down": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1466,12 +3872,57 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "true",
-        "left": "false",
-        "right": "false",
-        "up": "false",
-        "down": "false"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "south",
+                "wall_mounted": "true",
+                "down": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_down_off",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_single",
@@ -1483,23 +3934,51 @@
         "AND": [
           {
             "facing": "west",
-            "wall_mounted": "true"
+            "wall_mounted": "true",
+            "left": "false",
+            "right": "false",
+            "up": "false",
+            "down": "false"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_single_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "true"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1510,9 +3989,53 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "true",
-        "left": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "true"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_hub_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "left": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_left",
@@ -1525,23 +4048,48 @@
           {
             "facing": "west",
             "wall_mounted": "true",
-            "left": "false"
+            "left": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_left_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "true",
+                "left": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1552,9 +4100,54 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "true",
-        "right": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "true",
+                "left": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_left_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "right": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_right",
@@ -1567,23 +4160,48 @@
           {
             "facing": "west",
             "wall_mounted": "true",
-            "right": "false"
+            "right": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_right_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "true",
+                "right": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1594,9 +4212,54 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "true",
-        "up": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "true",
+                "right": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_right_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "up": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_up",
@@ -1609,23 +4272,48 @@
           {
             "facing": "west",
             "wall_mounted": "true",
-            "up": "false"
+            "up": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_up_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "true",
+                "up": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
@@ -1636,9 +4324,54 @@
     },
     {
       "when": {
-        "facing": "west",
-        "wall_mounted": "true",
-        "down": "true"
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "true",
+                "up": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_up_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "wall_mounted": "true",
+            "down": "true"
+          },
+          {
+            "lit": "true"
+          }
+        ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_down",
@@ -1651,28 +4384,91 @@
           {
             "facing": "west",
             "wall_mounted": "true",
-            "down": "false"
+            "down": "true"
           },
           {
-            "OR": [
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_down_off",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
               {
-                "left": "true"
+                "facing": "west",
+                "wall_mounted": "true",
+                "down": "false"
               },
               {
-                "right": "true"
-              },
-              {
-                "up": "true"
-              },
-              {
-                "down": "true"
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "lit": "true"
           }
         ]
       },
       "apply": {
         "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_down",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "AND": [
+              {
+                "facing": "west",
+                "wall_mounted": "true",
+                "down": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "left": "true"
+                  },
+                  {
+                    "right": "true"
+                  },
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "lit": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/lighting/lighting_neon_light_strip_wall_cap_down_off",
         "y": 270
       }
     }

@@ -20,6 +20,8 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 
 import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
@@ -79,6 +81,18 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
     /** Stable identity for client effects emitted by different sections of one structure. */
     public final BlockPos structureOrigin(BlockState state, BlockPos pos) {
         return pos.subtract(partOffset(state, partIndex(state)));
+    }
+
+    /** Shared read-only layout for interactions that must update one complete fixture. */
+    public final List<BlockPos> structureParts(BlockState state, BlockPos pos) {
+        BlockPos origin = structureOrigin(state, pos);
+        List<BlockPos> result = new ArrayList<>(partCount(state));
+        for (int index = 0; index < partCount(state); index++) result.add(origin.offset(partOffset(state, index)));
+        return result;
+    }
+
+    public final BlockState structurePartState(BlockState state, int index) {
+        return stateForPart(state, index);
     }
 
     @Override

@@ -24,7 +24,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Four in-plane arms; one-hop neighbor checks only, with no tick or plane bridging. */
-public class ConnectedLightBlock extends RotatableDecorationBlock {
+public class ConnectedLightBlock extends RotatableDecorationBlock implements ControlledLight {
     public static final BooleanProperty WALL_MOUNTED = SurfaceLightBlock.WALL_MOUNTED;
     public static final BooleanProperty LEFT = BooleanProperty.create("left"), RIGHT = BooleanProperty.create("right"),
             UP = BooleanProperty.create("up"), DOWN = BooleanProperty.create("down");

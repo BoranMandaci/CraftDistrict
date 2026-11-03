@@ -17,7 +17,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** One continuous two-cell ceiling fixture with the existing linked removal rules. */
-public class FluorescentLightBlock extends MultiBlockDecorationBlock {
+public class FluorescentLightBlock extends MultiBlockDecorationBlock implements ControlledLight {
     //? if >=1.21 {
     public static final MapCodec<FluorescentLightBlock> CODEC = simpleCodec(FluorescentLightBlock::new);
     //?}
