@@ -18,8 +18,8 @@ public final class HospitalWheelchairBlock extends RestaurantSeatBlock {
     //?}
     private static final VoxelShape[] SHAPES = RestaurantKitchenBlock.rotations(Shapes.or(
             box(1, 0, 2, 3.5, 11, 14.5), box(12.5, 0, 2, 15, 11, 14.5),
-            box(3.5, 7, 4, 12.5, 9, 12), box(3.5, 9, 11, 12.5, 15, 13),
-            box(4, 2, .5, 12, 3, 4)).optimize());
+            box(3.5, 7, 4, 12.5, 9, 12), box(3.5, 9, 11, 12.5, 16, 15),
+            box(4, 1, .5, 12, 3.125, 4.25)).optimize());
     public HospitalWheelchairBlock(Properties properties) { super(Design.MODERN, properties); }
     @Override public double seatHeight() { return 8.5 / 16; }
     @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {

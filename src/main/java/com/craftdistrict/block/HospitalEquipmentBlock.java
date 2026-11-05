@@ -18,7 +18,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Floor-standing clinical equipment, using the shared two-part lifecycle. */
-public final class HospitalEquipmentBlock extends MultiBlockDecorationBlock {
+public class HospitalEquipmentBlock extends MultiBlockDecorationBlock {
     public enum Design implements StringRepresentable {
         MONITOR, IV, SUPPLY_CABINET, STERILE_CABINET;
         @Override public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }

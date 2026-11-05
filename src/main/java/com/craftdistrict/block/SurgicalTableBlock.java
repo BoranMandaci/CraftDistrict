@@ -5,6 +5,7 @@ import com.mojang.serialization.MapCodec;
 //?}
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
@@ -25,12 +26,16 @@ public final class SurgicalTableBlock extends MultiBlockDecorationBlock {
     public static final MapCodec<SurgicalTableBlock> CODEC = simpleCodec(SurgicalTableBlock::new);
     //?}
     private static final VoxelShape[][] SHAPES = {
-            RestaurantKitchenBlock.rotations(box(2, 9, 1, 14, 12.5, 16)),
-            RestaurantKitchenBlock.rotations(Shapes.or(box(2.5, 0, 1, 13.5, 1.5, 15),
-                    box(5, 1.5, 4, 11, 9, 12), box(.5, 9, 0, 15.5, 12, 16)).optimize()),
-            RestaurantKitchenBlock.rotations(box(2, 9, 0, 14, 11.75, 15))};
+            RestaurantKitchenBlock.rotations(box(1.5, 9.75, 2, 14.5, 12.25, 16)),
+            RestaurantKitchenBlock.rotations(Shapes.or(box(2.75, 0, 1, 13.25, 2, 16),
+                    box(5, 2, 4, 11, 9.75, 12), box(1.5, 9.75, 0, 14.5, 12.25, 16)).optimize()),
+            RestaurantKitchenBlock.rotations(box(1.5, 9.75, 0, 14.5, 12.25, 14))};
 
     public SurgicalTableBlock(Properties properties) { super(properties); }
+    @Override protected Direction getPlacementFacing(BlockPlaceContext context) {
+        // Reverse new placement without changing the offsets of existing saved parts.
+        return context.getHorizontalDirection();
+    }
     @Override protected void addPartProperties(StateDefinition.Builder<Block, BlockState> builder) { builder.add(PART); }
     @Override protected int partCount() { return 3; }
     @Override protected int partIndex(BlockState state) { return state.getValue(PART); }

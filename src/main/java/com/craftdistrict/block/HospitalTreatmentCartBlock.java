@@ -27,10 +27,10 @@ public final class HospitalTreatmentCartBlock extends CashRegisterBlock {
     //?}
     private static final VoxelShape[][] SHAPES = {
             RestaurantKitchenBlock.rotations(Shapes.or(box(2, 0, 2, 14, 12, 14), box(3, 12, 5, 13, 15.5, 12)).optimize()),
-            RestaurantKitchenBlock.rotations(Shapes.or(box(1.5, 0, 1.5, 14.5, 10, 14.5), box(2, 10, 4, 14, 16, 14)).optimize()),
+            RestaurantKitchenBlock.rotations(Shapes.or(box(1.5, 0, 1.5, 14.5, 11.25, 14.5), box(2, 11.25, 2.5, 14, 19, 14)).optimize()),
             RestaurantKitchenBlock.rotations(Shapes.or(box(.75, 0, .75, 15.25, 10, 15), box(3, 10, 7, 12, 16, 12)).optimize()),
-            RestaurantKitchenBlock.rotations(Shapes.or(box(2, 0, 2, 14, 1.5, 14), box(7.25, 1.5, 7.25, 8.75, 11.5, 8.75),
-                    box(2, 11.5, 3, 14, 13.25, 13)).optimize())};
+            RestaurantKitchenBlock.rotations(Shapes.or(box(2, 0, 2, 14, 1.75, 14), box(7.25, 1.75, 7.25, 8.75, 11.5, 8.75),
+                    box(2, 11.5, 3, 14, 14.5, 13)).optimize())};
     public HospitalTreatmentCartBlock(Design design, Properties properties) { super(properties); this.design = design; }
     @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPES[design.ordinal()][RestaurantKitchenBlock.turn(state)];

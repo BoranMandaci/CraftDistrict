@@ -2,7 +2,8 @@
   "multipart": [
     {
       "when": {
-        "facing": "north"
+        "facing": "north",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_core",
@@ -12,7 +13,8 @@
     {
       "when": {
         "facing": "north",
-        "left": "false"
+        "left": "false",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_left",
@@ -22,7 +24,8 @@
     {
       "when": {
         "facing": "north",
-        "right": "false"
+        "right": "false",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_right",
@@ -31,7 +34,8 @@
     },
     {
       "when": {
-        "facing": "east"
+        "facing": "east",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_core",
@@ -41,7 +45,8 @@
     {
       "when": {
         "facing": "east",
-        "left": "false"
+        "left": "false",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_left",
@@ -51,7 +56,8 @@
     {
       "when": {
         "facing": "east",
-        "right": "false"
+        "right": "false",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_right",
@@ -60,7 +66,8 @@
     },
     {
       "when": {
-        "facing": "south"
+        "facing": "south",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_core",
@@ -70,7 +77,8 @@
     {
       "when": {
         "facing": "south",
-        "left": "false"
+        "left": "false",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_left",
@@ -80,7 +88,8 @@
     {
       "when": {
         "facing": "south",
-        "right": "false"
+        "right": "false",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_right",
@@ -89,7 +98,8 @@
     },
     {
       "when": {
-        "facing": "west"
+        "facing": "west",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_core",
@@ -99,7 +109,8 @@
     {
       "when": {
         "facing": "west",
-        "left": "false"
+        "left": "false",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_left",
@@ -109,10 +120,195 @@
     {
       "when": {
         "facing": "west",
-        "right": "false"
+        "right": "false",
+        "expanded": "false"
       },
       "apply": {
         "model": "craftdistrict:block/hospital/nurse_station_counter_right",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_primary",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_secondary",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "expanded": "true",
+        "primary": "true",
+        "left": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_left",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "expanded": "true",
+        "primary": "false",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_right",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_primary",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_secondary",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "expanded": "true",
+        "primary": "true",
+        "left": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_left",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "expanded": "true",
+        "primary": "false",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_right",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_primary",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_secondary",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "expanded": "true",
+        "primary": "true",
+        "left": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_left",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "expanded": "true",
+        "primary": "false",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_right",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_primary",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_secondary",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "expanded": "true",
+        "primary": "true",
+        "left": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_left",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "expanded": "true",
+        "primary": "false",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/nurse_station_counter_expanded_right",
         "y": 270
       }
     }

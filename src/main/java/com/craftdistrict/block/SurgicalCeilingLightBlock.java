@@ -16,14 +16,15 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Static, continuously lit surgical heads using the established ceiling-support rules. */
-public final class SurgicalCeilingLightBlock extends RotatableDecorationBlock {
+/** Three static heads sharing the Lighting collection's controls and dye palette. */
+public final class SurgicalCeilingLightBlock extends RotatableDecorationBlock implements ControlledLight {
     //? if >=1.21 {
     public static final MapCodec<SurgicalCeilingLightBlock> CODEC = simpleCodec(SurgicalCeilingLightBlock::new);
     //?}
     private static final VoxelShape[] SHAPES = RestaurantKitchenBlock.rotations(Shapes.or(
-            box(1, 4.25, 5, 9, 7.25, 13), box(9, 6.25, 2, 15, 9.25, 8),
-            box(5, 7.25, 5, 12.5, 16, 11)).optimize());
+            box(-7.5, 3.5, 1.5, 5.5, 10.75, 14.5), box(10.5, 3.5, 1.5, 23.5, 10.75, 14.5),
+            box(2, 3.25, -10, 14, 10, 2), box(-2.25, 7.5, -5.25, 18.25, 12, 9.25),
+            box(5, 12, 5, 11, 16, 11)).optimize());
     public SurgicalCeilingLightBlock(Properties properties) { super(properties); }
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         if (DecorationSupport.isPlaced(state, level, pos)) return true;

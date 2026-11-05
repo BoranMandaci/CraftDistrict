@@ -10,6 +10,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -38,13 +39,18 @@ public final class HospitalTreatmentTableBlock extends MultiBlockDecorationBlock
     private static final VoxelShape[][][] SHAPES = {
             {RestaurantKitchenBlock.rotations(Shapes.or(box(1.5, 6, 0, 14.5, 11.25, 16), box(4, 0, 2, 12, 6, 13)).optimize()),
                     RestaurantKitchenBlock.rotations(Shapes.or(box(1.5, 6, 0, 14.5, 11.25, 16),
-                            box(2, 11.25, 1, 14, 14, 8), box(4, 0, 3, 12, 6, 13)).optimize())},
+                            box(2, 11.25, 1, 14, 16, 12), box(4, 0, 3, 12, 6, 13)).optimize())},
             {RestaurantKitchenBlock.rotations(Shapes.or(box(1, 4, 0, 15, 10.75, 16), box(2, 0, 9, 14, 4, 15),
                             box(.5, 10.75, 0, 1.5, 13, 7), box(14.5, 10.75, 0, 15.5, 13, 7)).optimize()),
                     RestaurantKitchenBlock.rotations(Shapes.or(box(1, 4, 0, 15, 10.75, 16), box(2, 0, 2, 14, 4, 8),
                             box(.5, 10.75, 7, 1.5, 13, 16), box(14.5, 10.75, 7, 15.5, 13, 16)).optimize())}};
 
     public HospitalTreatmentTableBlock(Design design, Properties properties) { super(properties); this.design = design; }
+    @Override protected Direction getPlacementFacing(BlockPlaceContext context) {
+        // The stretcher head extends away from its placer, as with a vanilla bed.
+        // Existing saved facings and linked-part offsets retain their meaning.
+        return design == Design.STRETCHER ? context.getHorizontalDirection() : super.getPlacementFacing(context);
+    }
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         if (DecorationSupport.isPlaced(state, level, pos)) return true;
         BlockPos origin = structureOrigin(state, pos), end = origin.relative(state.getValue(FACING));

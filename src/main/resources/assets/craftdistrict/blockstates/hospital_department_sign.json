@@ -1,20 +1,132 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "craftdistrict:block/hospital/hospital_department_sign",
-      "y": 0
+  "multipart": [
+    {
+      "when": {
+        "facing": "north",
+        "expanded": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign",
+        "y": 0
+      }
     },
-    "facing=east": {
-      "model": "craftdistrict:block/hospital/hospital_department_sign",
-      "y": 90
+    {
+      "when": {
+        "facing": "north",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign_left",
+        "y": 0
+      }
     },
-    "facing=south": {
-      "model": "craftdistrict:block/hospital/hospital_department_sign",
-      "y": 180
+    {
+      "when": {
+        "facing": "north",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign_right",
+        "y": 0
+      }
     },
-    "facing=west": {
-      "model": "craftdistrict:block/hospital/hospital_department_sign",
-      "y": 270
+    {
+      "when": {
+        "facing": "east",
+        "expanded": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign_left",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign_right",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "expanded": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign_left",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign_right",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "expanded": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign_left",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hospital/hospital_department_sign_right",
+        "y": 270
+      }
     }
-  }
+  ]
 }

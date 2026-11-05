@@ -2,6 +2,7 @@ package com.craftdistrict.client;
 
 import com.craftdistrict.network.LightDyeNetworking;
 import com.craftdistrict.registry.DecorationCollection;
+import com.craftdistrict.registry.CraftDistrictBlocks;
 import dev.architectury.event.events.client.ClientPlayerEvent;
 import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import it.unimi.dsi.fastutil.longs.Long2ByteOpenHashMap;
@@ -14,6 +15,7 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Block;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Stream;
 
 /** Vanilla quad tinting only; the ordinary Minecraft light engine is unchanged. */
 public final class LightingColors {
@@ -22,8 +24,9 @@ public final class LightingColors {
     private LightingColors() { }
 
     public static void init() {
-        Block[] lights = DecorationCollection.LIGHTING.items().stream()
-                .map(item -> ((BlockItem)item).getBlock()).toArray(Block[]::new);
+        Block[] lights = Stream.concat(DecorationCollection.LIGHTING.items().stream()
+                .map(item -> ((BlockItem)item).getBlock()),
+                Stream.of(CraftDistrictBlocks.Hospital.SURGICAL_LIGHT.get())).toArray(Block[]::new);
         ColorHandlerRegistry.registerBlockColors((state, level, pos, tint) -> color(tint,
                 level == null || pos == null ? -1 : dye(pos)), lights);
         ColorHandlerRegistry.registerItemColors((stack, tint) -> color(tint, -1), lights);

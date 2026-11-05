@@ -37,6 +37,8 @@ import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
 import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.HospitalBedBlock;
 import com.craftdistrict.block.HospitalEquipmentBlock;
+import com.craftdistrict.block.MedicalSupplyCabinetBlock;
+import com.craftdistrict.block.SterileEquipmentCabinetBlock;
 import com.craftdistrict.block.HospitalBedsideCabinetBlock;
 import com.craftdistrict.block.MedicalPrivacyCurtainBlock;
 import com.craftdistrict.block.HospitalWheelchairBlock;
@@ -189,7 +191,7 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<HospitalTreatmentCartBlock> DEFIBRILLATOR_CART = register("defibrillator_cart",
                 () -> new HospitalTreatmentCartBlock(HospitalTreatmentCartBlock.Design.DEFIBRILLATOR, metalProperties()));
         public static final RegistrySupplier<HospitalEquipmentBlock> SUPPLY_CABINET = register("medical_supply_cabinet",
-                () -> new HospitalEquipmentBlock(HospitalEquipmentBlock.Design.SUPPLY_CABINET, metalProperties()));
+                () -> new MedicalSupplyCabinetBlock(metalProperties()));
         public static final RegistrySupplier<NurseStationCounterBlock> NURSE_COUNTER = register("nurse_station_counter",
                 () -> new NurseStationCounterBlock(metalProperties()));
         public static final RegistrySupplier<HospitalDepartmentSignBlock> DEPARTMENT_SIGN = register("hospital_department_sign",
@@ -197,13 +199,14 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<SurgicalTableBlock> SURGICAL_TABLE = register("surgical_table",
                 () -> new SurgicalTableBlock(metalProperties()));
         public static final RegistrySupplier<SurgicalCeilingLightBlock> SURGICAL_LIGHT = register("surgical_ceiling_light",
-                () -> new SurgicalCeilingLightBlock(metalProperties().lightLevel(state -> 15)));
+                () -> new SurgicalCeilingLightBlock(metalProperties().lightLevel(
+                        state -> state.getValue(com.craftdistrict.lighting.LightControls.LIT) ? 15 : 0)));
         public static final RegistrySupplier<HospitalTreatmentCartBlock> ANESTHESIA_MACHINE = register("anesthesia_machine",
                 () -> new HospitalTreatmentCartBlock(HospitalTreatmentCartBlock.Design.ANESTHESIA, metalProperties()));
         public static final RegistrySupplier<MedicalImagingDisplayBlock> IMAGING_DISPLAY = register("medical_imaging_display",
                 () -> new MedicalImagingDisplayBlock(metalProperties()));
         public static final RegistrySupplier<HospitalEquipmentBlock> STERILE_CABINET = register("sterile_equipment_cabinet",
-                () -> new HospitalEquipmentBlock(HospitalEquipmentBlock.Design.STERILE_CABINET, metalProperties()));
+                () -> new SterileEquipmentCabinetBlock(metalProperties()));
         public static final RegistrySupplier<HospitalTreatmentCartBlock> INSTRUMENT_TRAY = register("instrument_tray_table",
                 () -> new HospitalTreatmentCartBlock(HospitalTreatmentCartBlock.Design.TRAY, metalProperties()));
 

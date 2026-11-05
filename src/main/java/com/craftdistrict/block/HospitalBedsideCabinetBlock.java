@@ -16,7 +16,7 @@ public final class HospitalBedsideCabinetBlock extends CashRegisterBlock {
     public static final MapCodec<HospitalBedsideCabinetBlock> CODEC = simpleCodec(HospitalBedsideCabinetBlock::new);
     //?}
     private static final VoxelShape[] SHAPES = RestaurantKitchenBlock.rotations(Shapes.or(
-            box(1, 0, 1, 15, 12, 15), box(3, 12, 5, 13, 15, 12)).optimize());
+            box(1, 0, 1, 15, 12, 16), box(3, 12, 4.5, 13, 15.625, 12.5)).optimize());
     public HospitalBedsideCabinetBlock(Properties properties) { super(properties); }
     @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPES[RestaurantKitchenBlock.turn(state)];
