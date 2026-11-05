@@ -6,6 +6,17 @@ import com.craftdistrict.block.AssemblyStationBlock;
 import com.craftdistrict.block.DiningTableBlock;
 import com.craftdistrict.block.FireDispatchDeskBlock;
 import com.craftdistrict.block.HoldingCellBedBlock;
+import com.craftdistrict.block.HospitalBedBlock;
+import com.craftdistrict.block.HospitalEquipmentBlock;
+import com.craftdistrict.block.HospitalBedsideCabinetBlock;
+import com.craftdistrict.block.MedicalPrivacyCurtainBlock;
+import com.craftdistrict.block.HospitalTreatmentTableBlock;
+import com.craftdistrict.block.HospitalTreatmentCartBlock;
+import com.craftdistrict.block.NurseStationCounterBlock;
+import com.craftdistrict.block.HospitalDepartmentSignBlock;
+import com.craftdistrict.block.SurgicalTableBlock;
+import com.craftdistrict.block.SurgicalCeilingLightBlock;
+import com.craftdistrict.block.MedicalImagingDisplayBlock;
 import com.craftdistrict.block.ModularDiningTableBlock;
 import com.craftdistrict.block.MultiBlockDecorationBlock;
 import com.craftdistrict.block.OfficeChairBlock;
@@ -66,6 +77,12 @@ public final class DecorationBreakParticles {
                 || block instanceof com.craftdistrict.block.OfficeGlassPartitionBlock
                 || block instanceof OfficeGlassDoorBlock
                 || block instanceof AssemblyStationBlock || block instanceof HoldingCellBedBlock
+                || block instanceof HospitalBedBlock || block instanceof HospitalEquipmentBlock
+                || block instanceof HospitalBedsideCabinetBlock || block instanceof MedicalPrivacyCurtainBlock
+                || block instanceof HospitalTreatmentTableBlock || block instanceof HospitalTreatmentCartBlock
+                || block instanceof NurseStationCounterBlock || block instanceof HospitalDepartmentSignBlock
+                || block instanceof SurgicalTableBlock || block instanceof SurgicalCeilingLightBlock
+                || block instanceof MedicalImagingDisplayBlock
                 || block instanceof FireDispatchDeskBlock || block instanceof SupermarketSelfCheckoutBlock
                 || state.is(CraftDistrictBlocks.Police.BLUE_CHAIR.get())
                 || state.is(CraftDistrictBlocks.Restaurant.STAINLESS_STEEL_PREP_TABLE.get())
@@ -98,6 +115,8 @@ public final class DecorationBreakParticles {
             return state.getValue(BedBlock.PART) == BedPart.HEAD
                     ? pos.relative(state.getValue(BedBlock.FACING).getOpposite()) : pos;
         }
+        if (state.getBlock() instanceof HospitalBedBlock) return state.getValue(BedBlock.PART) == BedPart.HEAD
+                ? pos.relative(state.getValue(BedBlock.FACING).getOpposite()) : pos;
         if ((state.getBlock() instanceof PoliceHoldingCellDoorBlock || state.getBlock() instanceof OfficeGlassDoorBlock)
                 && state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER) return pos.below();
         return pos;

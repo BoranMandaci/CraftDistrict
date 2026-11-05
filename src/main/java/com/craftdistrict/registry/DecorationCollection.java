@@ -295,7 +295,27 @@ public enum DecorationCollection {
             CraftDistrictItems.FURNITURE_PARTS,
             CraftDistrictItems.METAL_PARTS,
             CraftDistrictItems.ELECTRONIC_PARTS,
-            CraftDistrictBlocks.Survival.ASSEMBLY_STATION);
+            CraftDistrictBlocks.Survival.ASSEMBLY_STATION),
+    HOSPITAL("hospital", CraftDistrictBlocks.Hospital.BED,
+            CraftDistrictBlocks.Hospital.BED,
+            CraftDistrictBlocks.Hospital.PATIENT_MONITOR,
+            CraftDistrictBlocks.Hospital.IV_STAND,
+            CraftDistrictBlocks.Hospital.BEDSIDE_CABINET,
+            CraftDistrictBlocks.Hospital.PRIVACY_CURTAIN,
+            CraftDistrictBlocks.Hospital.WHEELCHAIR,
+            CraftDistrictBlocks.Hospital.EXAMINATION_TABLE,
+            CraftDistrictBlocks.Hospital.INSTRUMENT_TROLLEY,
+            CraftDistrictBlocks.Hospital.STRETCHER,
+            CraftDistrictBlocks.Hospital.DEFIBRILLATOR_CART,
+            CraftDistrictBlocks.Hospital.SUPPLY_CABINET,
+            CraftDistrictBlocks.Hospital.NURSE_COUNTER,
+            CraftDistrictBlocks.Hospital.DEPARTMENT_SIGN,
+            CraftDistrictBlocks.Hospital.SURGICAL_TABLE,
+            CraftDistrictBlocks.Hospital.SURGICAL_LIGHT,
+            CraftDistrictBlocks.Hospital.ANESTHESIA_MACHINE,
+            CraftDistrictBlocks.Hospital.IMAGING_DISPLAY,
+            CraftDistrictBlocks.Hospital.STERILE_CABINET,
+            CraftDistrictBlocks.Hospital.INSTRUMENT_TRAY);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

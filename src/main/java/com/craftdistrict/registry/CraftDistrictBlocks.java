@@ -35,6 +35,18 @@ import com.craftdistrict.block.QueueBarrierBlock;
 import com.craftdistrict.block.RestaurantHostStandBlock;
 import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
 import com.craftdistrict.block.HoldingCellBedBlock;
+import com.craftdistrict.block.HospitalBedBlock;
+import com.craftdistrict.block.HospitalEquipmentBlock;
+import com.craftdistrict.block.HospitalBedsideCabinetBlock;
+import com.craftdistrict.block.MedicalPrivacyCurtainBlock;
+import com.craftdistrict.block.HospitalWheelchairBlock;
+import com.craftdistrict.block.HospitalTreatmentTableBlock;
+import com.craftdistrict.block.HospitalTreatmentCartBlock;
+import com.craftdistrict.block.NurseStationCounterBlock;
+import com.craftdistrict.block.HospitalDepartmentSignBlock;
+import com.craftdistrict.block.SurgicalTableBlock;
+import com.craftdistrict.block.SurgicalCeilingLightBlock;
+import com.craftdistrict.block.MedicalImagingDisplayBlock;
 import com.craftdistrict.block.PoliceDetentionStructureBlock;
 import com.craftdistrict.block.PoliceDetentionPropBlock;
 import com.craftdistrict.block.OneWayGlassBlock;
@@ -140,6 +152,7 @@ public final class CraftDistrictBlocks {
         Lighting.initialize();
         Restaurant.initialize();
         Office.initialize();
+        Hospital.initialize();
         Survival.initialize();
         BLOCKS.register();
     }
@@ -148,10 +161,57 @@ public final class CraftDistrictBlocks {
         RegistrySupplier<T> block = BLOCKS.register(id, factory);
         CraftDistrictItems.registerBlockItem(id, () -> block.get() instanceof DoorBlock
                 ? new DoubleHighBlockItem(block.get(), new Item.Properties())
-                : block.get() instanceof HoldingCellBedBlock
+                : block.get() instanceof HoldingCellBedBlock || block.get() instanceof HospitalBedBlock
                 ? new BedItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
+    }
+
+    public static final class Hospital {
+        public static final RegistrySupplier<HospitalBedBlock> BED = register("hospital_bed",
+                () -> new HospitalBedBlock(metalProperties()));
+        public static final RegistrySupplier<HospitalEquipmentBlock> PATIENT_MONITOR = register("patient_monitor",
+                () -> new HospitalEquipmentBlock(HospitalEquipmentBlock.Design.MONITOR, metalProperties()));
+        public static final RegistrySupplier<HospitalEquipmentBlock> IV_STAND = register("iv_stand",
+                () -> new HospitalEquipmentBlock(HospitalEquipmentBlock.Design.IV, metalProperties()));
+        public static final RegistrySupplier<HospitalBedsideCabinetBlock> BEDSIDE_CABINET = register("hospital_bedside_cabinet",
+                () -> new HospitalBedsideCabinetBlock(metalProperties()));
+        public static final RegistrySupplier<MedicalPrivacyCurtainBlock> PRIVACY_CURTAIN = register("medical_privacy_curtain",
+                () -> new MedicalPrivacyCurtainBlock(BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.WOOL).noOcclusion()));
+        public static final RegistrySupplier<HospitalWheelchairBlock> WHEELCHAIR = register("wheelchair",
+                () -> new HospitalWheelchairBlock(metalProperties()));
+        public static final RegistrySupplier<HospitalTreatmentTableBlock> EXAMINATION_TABLE = register("examination_table",
+                () -> new HospitalTreatmentTableBlock(HospitalTreatmentTableBlock.Design.EXAMINATION, metalProperties()));
+        public static final RegistrySupplier<HospitalTreatmentCartBlock> INSTRUMENT_TROLLEY = register("medical_instrument_trolley",
+                () -> new HospitalTreatmentCartBlock(HospitalTreatmentCartBlock.Design.INSTRUMENTS, metalProperties()));
+        public static final RegistrySupplier<HospitalTreatmentTableBlock> STRETCHER = register("hospital_stretcher",
+                () -> new HospitalTreatmentTableBlock(HospitalTreatmentTableBlock.Design.STRETCHER, metalProperties()));
+        public static final RegistrySupplier<HospitalTreatmentCartBlock> DEFIBRILLATOR_CART = register("defibrillator_cart",
+                () -> new HospitalTreatmentCartBlock(HospitalTreatmentCartBlock.Design.DEFIBRILLATOR, metalProperties()));
+        public static final RegistrySupplier<HospitalEquipmentBlock> SUPPLY_CABINET = register("medical_supply_cabinet",
+                () -> new HospitalEquipmentBlock(HospitalEquipmentBlock.Design.SUPPLY_CABINET, metalProperties()));
+        public static final RegistrySupplier<NurseStationCounterBlock> NURSE_COUNTER = register("nurse_station_counter",
+                () -> new NurseStationCounterBlock(metalProperties()));
+        public static final RegistrySupplier<HospitalDepartmentSignBlock> DEPARTMENT_SIGN = register("hospital_department_sign",
+                () -> new HospitalDepartmentSignBlock(metalProperties()));
+        public static final RegistrySupplier<SurgicalTableBlock> SURGICAL_TABLE = register("surgical_table",
+                () -> new SurgicalTableBlock(metalProperties()));
+        public static final RegistrySupplier<SurgicalCeilingLightBlock> SURGICAL_LIGHT = register("surgical_ceiling_light",
+                () -> new SurgicalCeilingLightBlock(metalProperties().lightLevel(state -> 15)));
+        public static final RegistrySupplier<HospitalTreatmentCartBlock> ANESTHESIA_MACHINE = register("anesthesia_machine",
+                () -> new HospitalTreatmentCartBlock(HospitalTreatmentCartBlock.Design.ANESTHESIA, metalProperties()));
+        public static final RegistrySupplier<MedicalImagingDisplayBlock> IMAGING_DISPLAY = register("medical_imaging_display",
+                () -> new MedicalImagingDisplayBlock(metalProperties()));
+        public static final RegistrySupplier<HospitalEquipmentBlock> STERILE_CABINET = register("sterile_equipment_cabinet",
+                () -> new HospitalEquipmentBlock(HospitalEquipmentBlock.Design.STERILE_CABINET, metalProperties()));
+        public static final RegistrySupplier<HospitalTreatmentCartBlock> INSTRUMENT_TRAY = register("instrument_tray_table",
+                () -> new HospitalTreatmentCartBlock(HospitalTreatmentCartBlock.Design.TRAY, metalProperties()));
+
+        private static BlockBehaviour.Properties metalProperties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
+        }
+        private Hospital() { }
+        private static void initialize() { }
     }
 
     public static final class Office {
