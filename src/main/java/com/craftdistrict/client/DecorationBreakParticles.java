@@ -12,6 +12,8 @@ import com.craftdistrict.block.HospitalBedsideCabinetBlock;
 import com.craftdistrict.block.MedicalPrivacyCurtainBlock;
 import com.craftdistrict.block.HospitalTreatmentTableBlock;
 import com.craftdistrict.block.HospitalTreatmentCartBlock;
+import com.craftdistrict.block.HospitalWideBlock;
+import com.craftdistrict.block.HospitalUtilityBlock;
 import com.craftdistrict.block.NurseStationCounterBlock;
 import com.craftdistrict.block.HospitalDepartmentSignBlock;
 import com.craftdistrict.block.SurgicalTableBlock;
@@ -80,6 +82,7 @@ public final class DecorationBreakParticles {
                 || block instanceof HospitalBedBlock || block instanceof HospitalEquipmentBlock
                 || block instanceof HospitalBedsideCabinetBlock || block instanceof MedicalPrivacyCurtainBlock
                 || block instanceof HospitalTreatmentTableBlock || block instanceof HospitalTreatmentCartBlock
+                || block instanceof HospitalWideBlock || block instanceof HospitalUtilityBlock
                 || block instanceof NurseStationCounterBlock || block instanceof HospitalDepartmentSignBlock
                 || block instanceof SurgicalTableBlock || block instanceof SurgicalCeilingLightBlock
                 || block instanceof MedicalImagingDisplayBlock

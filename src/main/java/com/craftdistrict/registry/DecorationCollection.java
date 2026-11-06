@@ -295,19 +295,24 @@ public enum DecorationCollection {
             CraftDistrictItems.FURNITURE_PARTS,
             CraftDistrictItems.METAL_PARTS,
             CraftDistrictItems.ELECTRONIC_PARTS,
+            CraftDistrictItems.WRENCH,
             CraftDistrictBlocks.Survival.ASSEMBLY_STATION),
     HOSPITAL("hospital", CraftDistrictBlocks.Hospital.BED,
             CraftDistrictBlocks.Hospital.BED,
+            CraftDistrictBlocks.Hospital.BED_HEAD_PANEL,
             CraftDistrictBlocks.Hospital.PATIENT_MONITOR,
             CraftDistrictBlocks.Hospital.IV_STAND,
             CraftDistrictBlocks.Hospital.BEDSIDE_CABINET,
+            CraftDistrictBlocks.Hospital.OVERBED_TABLE,
             CraftDistrictBlocks.Hospital.PRIVACY_CURTAIN,
             CraftDistrictBlocks.Hospital.WHEELCHAIR,
             CraftDistrictBlocks.Hospital.EXAMINATION_TABLE,
             CraftDistrictBlocks.Hospital.INSTRUMENT_TROLLEY,
             CraftDistrictBlocks.Hospital.STRETCHER,
             CraftDistrictBlocks.Hospital.DEFIBRILLATOR_CART,
+            CraftDistrictBlocks.Hospital.CRASH_CART,
             CraftDistrictBlocks.Hospital.SUPPLY_CABINET,
+            CraftDistrictBlocks.Hospital.RECEPTION_DESK,
             CraftDistrictBlocks.Hospital.NURSE_COUNTER,
             CraftDistrictBlocks.Hospital.DEPARTMENT_SIGN,
             CraftDistrictBlocks.Hospital.SURGICAL_TABLE,
@@ -315,7 +320,9 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hospital.ANESTHESIA_MACHINE,
             CraftDistrictBlocks.Hospital.IMAGING_DISPLAY,
             CraftDistrictBlocks.Hospital.STERILE_CABINET,
-            CraftDistrictBlocks.Hospital.INSTRUMENT_TRAY);
+            CraftDistrictBlocks.Hospital.INSTRUMENT_TRAY,
+            CraftDistrictBlocks.Hospital.HANDWASH_STATION,
+            CraftDistrictBlocks.Hospital.SANITIZER_DISPENSER);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

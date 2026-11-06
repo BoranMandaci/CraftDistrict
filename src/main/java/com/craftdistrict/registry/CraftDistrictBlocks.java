@@ -36,6 +36,9 @@ import com.craftdistrict.block.RestaurantHostStandBlock;
 import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
 import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.HospitalBedBlock;
+import com.craftdistrict.block.HospitalWideBlock;
+import com.craftdistrict.block.HospitalUtilityBlock;
+import com.craftdistrict.block.OverbedTableBlock;
 import com.craftdistrict.block.HospitalEquipmentBlock;
 import com.craftdistrict.block.MedicalSupplyCabinetBlock;
 import com.craftdistrict.block.SterileEquipmentCabinetBlock;
@@ -209,6 +212,18 @@ public final class CraftDistrictBlocks {
                 () -> new SterileEquipmentCabinetBlock(metalProperties()));
         public static final RegistrySupplier<HospitalTreatmentCartBlock> INSTRUMENT_TRAY = register("instrument_tray_table",
                 () -> new HospitalTreatmentCartBlock(HospitalTreatmentCartBlock.Design.TRAY, metalProperties()));
+        public static final RegistrySupplier<HospitalWideBlock> BED_HEAD_PANEL = register("medical_bed_head_panel",
+                () -> new HospitalWideBlock(HospitalWideBlock.Design.HEAD_PANEL, metalProperties()));
+        public static final RegistrySupplier<HospitalWideBlock> RECEPTION_DESK = register("hospital_reception_desk",
+                () -> new HospitalWideBlock(HospitalWideBlock.Design.RECEPTION, metalProperties()));
+        public static final RegistrySupplier<HospitalUtilityBlock> CRASH_CART = register("emergency_crash_cart",
+                () -> new HospitalUtilityBlock(HospitalUtilityBlock.Design.CRASH_CART, metalProperties()));
+        public static final RegistrySupplier<HospitalUtilityBlock> HANDWASH_STATION = register("hospital_handwash_station",
+                () -> new HospitalUtilityBlock(HospitalUtilityBlock.Design.HANDWASH, metalProperties()));
+        public static final RegistrySupplier<OverbedTableBlock> OVERBED_TABLE = register("overbed_table",
+                () -> new OverbedTableBlock(metalProperties()));
+        public static final RegistrySupplier<HospitalUtilityBlock> SANITIZER_DISPENSER = register("sanitizer_dispenser",
+                () -> new HospitalUtilityBlock(HospitalUtilityBlock.Design.SANITIZER, metalProperties()));
 
         private static BlockBehaviour.Properties metalProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();

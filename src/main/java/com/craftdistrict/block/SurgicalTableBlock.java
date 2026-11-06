@@ -5,8 +5,13 @@ import com.mojang.serialization.MapCodec;
 //?}
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import com.craftdistrict.entity.MedicalResting;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -16,11 +21,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** A three-cell operating table, sharing validated placement and single-drop removal. */
-public final class SurgicalTableBlock extends MultiBlockDecorationBlock {
+public final class SurgicalTableBlock extends MultiBlockDecorationBlock implements LyingBlock {
     public static final IntegerProperty PART = IntegerProperty.create("part", 0, 2);
     //? if >=1.21 {
     public static final MapCodec<SurgicalTableBlock> CODEC = simpleCodec(SurgicalTableBlock::new);
@@ -32,6 +38,22 @@ public final class SurgicalTableBlock extends MultiBlockDecorationBlock {
             RestaurantKitchenBlock.rotations(box(1.5, 9.75, 0, 14.5, 12.25, 14))};
 
     public SurgicalTableBlock(Properties properties) { super(properties); }
+    @Override public BlockPos lyingHead(BlockState state, BlockPos pos) { return structureOrigin(state, pos); }
+    @Override public double lyingHeight() { return 13.5 / 16; }
+    //? if >=1.21 {
+    @Override public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        return MedicalResting.lie(state, level, pos, player);
+    }
+    //?} else {
+    /*@Override public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        return hand == InteractionHand.MAIN_HAND ? MedicalResting.lie(state, level, pos, player) : InteractionResult.PASS;
+    }
+    *///?}
+    @Override public void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moving) {
+        if (!replacement.is(this) || replacement.getValue(FACING) != state.getValue(FACING))
+            MedicalResting.removeAt(level, lyingHead(state, pos));
+        super.onRemove(state, level, pos, replacement, moving);
+    }
     @Override protected Direction getPlacementFacing(BlockPlaceContext context) {
         // Reverse new placement without changing the offsets of existing saved parts.
         return context.getHorizontalDirection();

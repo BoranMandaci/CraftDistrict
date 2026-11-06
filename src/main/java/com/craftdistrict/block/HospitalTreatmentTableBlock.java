@@ -4,7 +4,7 @@ package com.craftdistrict.block;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 //?}
-import com.craftdistrict.entity.Seating;
+import com.craftdistrict.entity.MedicalResting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
@@ -24,8 +24,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Two-cell treatment furniture; the examination table reuses the shared sitting system. */
-public final class HospitalTreatmentTableBlock extends MultiBlockDecorationBlock implements SittableBlock {
+/** Two-cell treatment furniture sharing lightweight, synchronized lying interaction. */
+public final class HospitalTreatmentTableBlock extends MultiBlockDecorationBlock implements LyingBlock {
     public enum Design implements StringRepresentable {
         EXAMINATION, STRETCHER;
         @Override public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
@@ -47,9 +47,9 @@ public final class HospitalTreatmentTableBlock extends MultiBlockDecorationBlock
 
     public HospitalTreatmentTableBlock(Design design, Properties properties) { super(properties); this.design = design; }
     @Override protected Direction getPlacementFacing(BlockPlaceContext context) {
-        // The stretcher head extends away from its placer, as with a vanilla bed.
+        // Both medical table heads extend away from their placer, as with a vanilla bed.
         // Existing saved facings and linked-part offsets retain their meaning.
-        return design == Design.STRETCHER ? context.getHorizontalDirection() : super.getPlacementFacing(context);
+        return context.getHorizontalDirection();
     }
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         if (DecorationSupport.isPlaced(state, level, pos)) return true;
@@ -66,26 +66,22 @@ public final class HospitalTreatmentTableBlock extends MultiBlockDecorationBlock
                 || neighbor.getValue(FACING) != state.getValue(FACING))) return Blocks.AIR.defaultBlockState();
         return state;
     }
-    @Override public double seatHeight() { return 11.25 / 16; }
-    @Override public boolean isSittable(BlockState state) { return design == Design.EXAMINATION && state.getValue(PRIMARY); }
-    private InteractionResult sit(BlockState state, Level level, BlockPos pos, Player player) {
-        if (design != Design.EXAMINATION) return InteractionResult.PASS;
-        BlockPos origin = structureOrigin(state, pos);
-        BlockState seat = level.getBlockState(origin);
-        return seat.is(this) ? Seating.sit(seat, level, origin, player) : InteractionResult.PASS;
+    @Override public BlockPos lyingHead(BlockState state, BlockPos pos) {
+        return structureOrigin(state, pos).relative(state.getValue(FACING));
     }
+    @Override public double lyingHeight() { return (design == Design.EXAMINATION ? 13 : 12) / 16.0; }
     //? if >=1.21 {
     @Override public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
-        return sit(state, level, pos, player);
+        return MedicalResting.lie(state, level, pos, player);
     }
     //?} else {
     /*@Override public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        return hand == InteractionHand.MAIN_HAND ? sit(state, level, pos, player) : InteractionResult.PASS;
+        return hand == InteractionHand.MAIN_HAND ? MedicalResting.lie(state, level, pos, player) : InteractionResult.PASS;
     }
     *///?}
     @Override public void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moving) {
-        if (design == Design.EXAMINATION && (!replacement.is(this) || replacement.getValue(FACING) != state.getValue(FACING)))
-            Seating.removeAt(level, structureOrigin(state, pos));
+        if (!replacement.is(this) || replacement.getValue(FACING) != state.getValue(FACING))
+            MedicalResting.removeAt(level, lyingHead(state, pos));
         super.onRemove(state, level, pos, replacement, moving);
     }
     @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {

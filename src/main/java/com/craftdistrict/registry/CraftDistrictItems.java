@@ -1,6 +1,7 @@
 package com.craftdistrict.registry;
 
 import com.craftdistrict.CraftDistrict;
+import com.craftdistrict.item.WrenchItem;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -15,6 +16,7 @@ public final class CraftDistrictItems {
     public static final RegistrySupplier<Item> FURNITURE_PARTS = ITEMS.register("furniture_parts", () -> new Item(new Item.Properties()));
     public static final RegistrySupplier<Item> METAL_PARTS = ITEMS.register("metal_parts", () -> new Item(new Item.Properties()));
     public static final RegistrySupplier<Item> ELECTRONIC_PARTS = ITEMS.register("electronic_parts", () -> new Item(new Item.Properties()));
+    public static final RegistrySupplier<Item> WRENCH = ITEMS.register("wrench", () -> new WrenchItem(new Item.Properties().stacksTo(1)));
 
     private CraftDistrictItems() { }
 

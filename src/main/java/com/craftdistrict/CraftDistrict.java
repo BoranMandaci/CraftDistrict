@@ -9,6 +9,7 @@ import com.craftdistrict.registry.CraftDistrictAssembly;
 import com.craftdistrict.network.AssemblyNetworking;
 import com.craftdistrict.network.LightDyeNetworking;
 import com.craftdistrict.entity.Seating;
+import com.craftdistrict.entity.MedicalResting;
 import com.craftdistrict.block.PoliceOfficeSecurityBlock;
 import com.craftdistrict.block.SecurityScannerBlock;
 import com.mojang.logging.LogUtils;
@@ -33,6 +34,7 @@ public final class CraftDistrict {
         LightDyeNetworking.register();
         CraftDistrictEntities.register();
         Seating.init();
+        MedicalResting.init();
         CraftDistrictCreativeTabs.register();
         EnvExecutor.runInEnv(Env.CLIENT, () -> CraftDistrictClient::init);
         LOGGER.info("CraftDistrict initialized");
