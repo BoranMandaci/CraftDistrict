@@ -20,7 +20,9 @@ public final class CollectionNavigation {
     private static final int BUTTON_HEIGHT = 16;
     private static final int ICON_SIZE = 12;
     private static final int GAP = 2;
-    private static final List<DecorationCollection> COLLECTIONS = List.of(DecorationCollection.values());
+    private static final List<DecorationCollection> FIXED_COLLECTIONS = List.of(
+            DecorationCollection.SURVIVAL_CRAFTING, DecorationCollection.LIGHTING);
+    private static final List<DecorationCollection> COLLECTIONS = orderedCollections();
     private static DecorationCollection selected = DecorationCollection.BAKERY;
 
     private final List<CollectionButton> buttons = new ArrayList<>();
@@ -36,6 +38,18 @@ public final class CollectionNavigation {
     private int page;
     private boolean visible;
     private boolean overflow;
+
+    private static List<DecorationCollection> orderedCollections() {
+        List<DecorationCollection> collections = new ArrayList<>(FIXED_COLLECTIONS);
+        collections.addAll(List.of(DecorationCollection.BAKERY, DecorationCollection.POLICE_STATION,
+                DecorationCollection.FIRE_STATION, DecorationCollection.SUPERMARKET,
+                DecorationCollection.RESTAURANT, DecorationCollection.OFFICE, DecorationCollection.HOSPITAL));
+        // Keep future collections accessible after the explicitly ordered sidebar entries.
+        for (DecorationCollection collection : DecorationCollection.values()) {
+            if (!collections.contains(collection)) collections.add(collection);
+        }
+        return List.copyOf(collections);
+    }
 
     public CollectionNavigation(Consumer<AbstractWidget> addWidget, Runnable onSelectionChanged) {
         for (DecorationCollection collection : COLLECTIONS) {
@@ -77,16 +91,17 @@ public final class CollectionNavigation {
             //?}
             headerRight = Math.min(headerRight, left + paginationLeft - GAP);
         }
-        // Fit categories between the title and this version's pagination controls.
-        int available = headerRight - (left + 8 + font.width(title) + 6);
-        topCount = Math.min(2, Math.max(0, (available + GAP) / (BUTTON_WIDTH + GAP)));
+        // Crafting and Lighting stay in the header, independently of the sidebar page.
+        topCount = FIXED_COLLECTIONS.size();
         int leftCount = Math.max(1, (height - gridTop + GAP) / (BUTTON_HEIGHT + GAP));
-        overflow = COLLECTIONS.size() > topCount + leftCount;
+        overflow = COLLECTIONS.size() - topCount > leftCount;
         if (overflow) {
             leftCount = Math.max(1, leftCount - 1);
         }
-        capacity = topCount + leftCount;
-        page = selected.ordinal() / capacity;
+        capacity = leftCount;
+        int selectedSideIndex = COLLECTIONS.indexOf(selected) - topCount;
+        if (selectedSideIndex >= 0) page = selectedSideIndex / capacity;
+        page = Math.max(0, Math.min((COLLECTIONS.size() - topCount - 1) / capacity, page));
         visible = true;
         updateButtons();
     }
@@ -104,7 +119,7 @@ public final class CollectionNavigation {
     }
 
     private void changePage(int direction) {
-        int lastPage = (COLLECTIONS.size() - 1) / capacity;
+        int lastPage = (COLLECTIONS.size() - topCount - 1) / capacity;
         page = Math.max(0, Math.min(lastPage, page + direction));
         updateButtons();
     }
@@ -114,20 +129,21 @@ public final class CollectionNavigation {
         int topStart = headerRight - topCount * (BUTTON_WIDTH + GAP) + GAP;
         for (int index = 0; index < buttons.size(); index++) {
             CollectionButton button = buttons.get(index);
-            int slot = index - first;
-            button.visible = visible && slot >= 0 && slot < capacity;
+            boolean fixed = index < topCount;
+            int slot = index - topCount - first;
+            button.visible = visible && (fixed || slot >= 0 && slot < capacity);
             button.active = button.visible;
             if (!button.visible) {
                 continue;
             }
-            button.topEdge = slot < topCount;
-            if (slot < topCount) {
-                button.setX(topStart + slot * (BUTTON_WIDTH + GAP));
+            button.topEdge = fixed;
+            if (fixed) {
+                button.setX(topStart + index * (BUTTON_WIDTH + GAP));
                 button.setY(top + gridTop - BUTTON_HEIGHT - 1);
             } else {
                 // Meet the frame's outer border rather than floating beside it.
                 button.setX(left - BUTTON_WIDTH + 1);
-                button.setY(top + gridTop + (slot - topCount) * (BUTTON_HEIGHT + GAP));
+                button.setY(top + gridTop + slot * (BUTTON_HEIGHT + GAP));
             }
         }
         previous.setX(left - 2 * (BUTTON_WIDTH + GAP));
@@ -137,7 +153,7 @@ public final class CollectionNavigation {
         previous.visible = visible && overflow;
         next.visible = visible && overflow;
         previous.active = previous.visible && page > 0;
-        next.active = next.visible && (page + 1) * capacity < COLLECTIONS.size();
+        next.active = next.visible && (page + 1) * capacity < COLLECTIONS.size() - topCount;
     }
 
     private static final class CollectionButton extends Button {
