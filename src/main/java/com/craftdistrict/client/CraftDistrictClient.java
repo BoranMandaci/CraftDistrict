@@ -49,7 +49,7 @@ public final class CraftDistrictClient {
                     CraftDistrictBlocks.Office.GLASS_PARTITION_DOOR.get());
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Police.ONE_WAY_OBSERVATION_GLASS.get(),
                     CraftDistrictBlocks.Police.ONE_WAY_GLASS_BLOCK.get(), CraftDistrictBlocks.Hospital.IV_STAND.get(),
-                    CraftDistrictBlocks.Hospital.MAMMOGRAPHY_MACHINE.get());
+                    CraftDistrictBlocks.Hospital.MAMMOGRAPHY_MACHINE.get(), CraftDistrictBlocks.Hospital.INCUBATOR.get());
         });
     }
 }

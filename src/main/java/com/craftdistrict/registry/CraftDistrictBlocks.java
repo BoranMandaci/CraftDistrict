@@ -38,6 +38,7 @@ import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.HospitalBedBlock;
 import com.craftdistrict.block.HospitalWideBlock;
 import com.craftdistrict.block.HospitalRadiologyBlock;
+import com.craftdistrict.block.HospitalClinicalBlock;
 import com.craftdistrict.block.HospitalUtilityBlock;
 import com.craftdistrict.block.OverbedTableBlock;
 import com.craftdistrict.block.HospitalEquipmentBlock;
@@ -241,6 +242,18 @@ public final class CraftDistrictBlocks {
                 () -> new HospitalRadiologyBlock.Ultrasound(metalProperties()));
         public static final RegistrySupplier<HospitalRadiologyBlock.Mammography> MAMMOGRAPHY_MACHINE = register("mammography_machine",
                 () -> new HospitalRadiologyBlock.Mammography(metalProperties()));
+        public static final RegistrySupplier<HospitalClinicalBlock.Autoclave> AUTOCLAVE = register("autoclave",
+                () -> new HospitalClinicalBlock.Autoclave(metalProperties()));
+        public static final RegistrySupplier<HospitalClinicalBlock.Endoscopy> ENDOSCOPY_UNIT = register("endoscopy_unit",
+                () -> new HospitalClinicalBlock.Endoscopy(metalProperties()));
+        public static final RegistrySupplier<HospitalClinicalBlock.Electrosurgical> ELECTROSURGICAL_UNIT = register("electrosurgical_unit",
+                () -> new HospitalClinicalBlock.Electrosurgical(metalProperties()));
+        public static final RegistrySupplier<HospitalClinicalBlock.Ekg> EKG_MACHINE = register("ekg_machine",
+                () -> new HospitalClinicalBlock.Ekg(metalProperties()));
+        public static final RegistrySupplier<HospitalClinicalBlock.Incubator> INCUBATOR = register("incubator",
+                () -> new HospitalClinicalBlock.Incubator(metalProperties()));
+        public static final RegistrySupplier<HospitalClinicalBlock.DentalChair> DENTAL_CHAIR = register("dental_chair",
+                () -> new HospitalClinicalBlock.DentalChair(metalProperties()));
 
         private static BlockBehaviour.Properties metalProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
