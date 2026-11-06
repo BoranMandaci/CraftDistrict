@@ -4,6 +4,7 @@ import com.craftdistrict.CraftDistrict;
 import com.craftdistrict.assembly.AssemblyRecipe;
 import com.craftdistrict.assembly.AssemblyRecipeSerializer;
 import com.craftdistrict.menu.AssemblyStationMenu;
+import com.craftdistrict.menu.LightColorMenu;
 import dev.architectury.registry.menu.MenuRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -21,6 +22,7 @@ public final class CraftDistrictAssembly {
     });
     public static final RegistrySupplier<RecipeSerializer<AssemblyRecipe>> SERIALIZER = SERIALIZERS.register("assembly", AssemblyRecipeSerializer::new);
     public static final RegistrySupplier<MenuType<AssemblyStationMenu>> MENU = MENUS.register("assembly_station", () -> MenuRegistry.ofExtended(AssemblyStationMenu::new));
+    public static final RegistrySupplier<MenuType<LightColorMenu>> LIGHT_COLOR_MENU = MENUS.register("light_color", () -> MenuRegistry.ofExtended(LightColorMenu::new));
 
     private CraftDistrictAssembly() { }
     public static void register() { TYPES.register(); SERIALIZERS.register(); MENUS.register(); }

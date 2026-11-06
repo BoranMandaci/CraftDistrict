@@ -1,5 +1,7 @@
 package com.craftdistrict.entity;
 
+import com.craftdistrict.item.WrenchItem;
+
 import com.craftdistrict.block.LyingBlock;
 import com.craftdistrict.block.MultiBlockDecorationBlock;
 import dev.architectury.event.events.common.PlayerEvent;
@@ -59,7 +61,8 @@ public final class MedicalResting {
     public static InteractionResult lie(BlockState state, Level level, BlockPos pos, Player player) {
         if (!(state.getBlock() instanceof LyingBlock lying) || !player.isAlive() || player.isSpectator()
                 || player.isShiftKeyDown() || player.isPassenger() || player.isSleeping() || player.isFallFlying()
-                || !player.getMainHandItem().isEmpty() || player.distanceToSqr(Vec3.atCenterOf(pos)) > 16) return InteractionResult.PASS;
+                || !player.getMainHandItem().isEmpty() || WrenchItem.isHeldBy(player)
+                || player.distanceToSqr(Vec3.atCenterOf(pos)) > 16) return InteractionResult.PASS;
         BlockPos head = lying.lyingHead(state, pos);
         if (!valid(level, head)) return InteractionResult.FAIL;
         if (level.isClientSide) return InteractionResult.SUCCESS;

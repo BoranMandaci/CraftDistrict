@@ -24,7 +24,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Finished table edges join compatible End/Center sections with sparse shared supports. */
-public final class OfficeConnectedBlock extends CashRegisterBlock {
+public class OfficeConnectedBlock extends CashRegisterBlock {
     public enum Design implements StringRepresentable {
         CONFERENCE, DIVIDER, CONFERENCE_CENTER;
         @Override public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
@@ -45,7 +45,7 @@ public final class OfficeConnectedBlock extends CashRegisterBlock {
     //?}
     private static final VoxelShape[] DIVIDER_SHAPES = RestaurantKitchenBlock.rotations(
             Shapes.or(box(0, 2, 7, 16, 16, 9), box(7, 0, 3, 9, 2, 13)));
-    private final Design design;
+    protected final Design design;
     private static final VoxelShape[][] CONFERENCE_SHAPES = conferenceShapes();
     public OfficeConnectedBlock(Design design, Properties properties) {
         super(properties); this.design = design;

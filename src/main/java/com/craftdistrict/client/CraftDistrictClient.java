@@ -19,6 +19,7 @@ public final class CraftDistrictClient {
         ClientLifecycleEvent.CLIENT_SETUP.register(client -> {
             LightingColors.init();
             MenuRegistry.registerScreenFactory(CraftDistrictAssembly.MENU.get(), AssemblyStationScreen::new);
+            MenuRegistry.registerScreenFactory(CraftDistrictAssembly.LIGHT_COLOR_MENU.get(), LightColorScreen::new);
             RenderTypeRegistry.register(
                 RenderType.cutout(), CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get(),
                 CraftDistrictBlocks.Bakery.INDUSTRIAL_OVEN.get(),

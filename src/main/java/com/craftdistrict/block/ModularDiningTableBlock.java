@@ -5,6 +5,8 @@ import com.mojang.serialization.MapCodec;
 //?}
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -32,6 +34,8 @@ public final class ModularDiningTableBlock extends Block {
     public static final BooleanProperty LEG_NE = BooleanProperty.create("leg_ne");
     public static final BooleanProperty LEG_SE = BooleanProperty.create("leg_se");
     public static final BooleanProperty LEG_SW = BooleanProperty.create("leg_sw");
+    // Existing leg flags encode the selected 0/1/2/4-leg configuration when overridden.
+    public static final BooleanProperty MANUAL_SUPPORT = BooleanProperty.create("manual_support");
     private static final Direction[] EDGES = {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
     private static final BooleanProperty[] JOINS = {NORTH, EAST, SOUTH, WEST};
     private static final BooleanProperty[] LEGS = {LEG_NW, LEG_NE, LEG_SE, LEG_SW};
@@ -46,7 +50,7 @@ public final class ModularDiningTableBlock extends Block {
         BlockState state = defaultBlockState();
         for (BooleanProperty property : JOINS) state = state.setValue(property, false);
         for (BooleanProperty property : LEGS) state = state.setValue(property, true);
-        registerDefaultState(state);
+        registerDefaultState(state.setValue(MANUAL_SUPPORT, false));
     }
 
     private static VoxelShape[] makeShapes() {
@@ -66,7 +70,7 @@ public final class ModularDiningTableBlock extends Block {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(NORTH, EAST, SOUTH, WEST, LEG_NW, LEG_NE, LEG_SE, LEG_SW);
+        builder.add(NORTH, EAST, SOUTH, WEST, LEG_NW, LEG_NE, LEG_SE, LEG_SW, MANUAL_SUPPORT);
     }
 
     private boolean same(BlockGetter level, BlockPos pos, BlockPos removed) {
@@ -100,6 +104,41 @@ public final class ModularDiningTableBlock extends Block {
     }
 
     BlockState layout(BlockState state, BlockGetter level, BlockPos pos, BlockPos removed) {
+        BlockState result = automaticLayout(state, level, pos, removed);
+        if (state.getValue(MANUAL_SUPPORT)) {
+            result = manualLayout(result, Integer.bitCount(supportMask(state)));
+        }
+        return result;
+    }
+
+    private static int supportMask(BlockState state) {
+        int mask = 0;
+        for (int i = 0; i < LEGS.length; i++) if (state.getValue(LEGS[i])) mask |= 1 << i;
+        return mask;
+    }
+
+    /** Reuse corner posts, preferring the section's automatic anchors and balanced pairs. */
+    private static BlockState manualLayout(BlockState automatic, int count) {
+        int preferred = supportMask(automatic);
+        int first = preferred != 0 ? Integer.lowestOneBit(preferred)
+                : !automatic.getValue(NORTH) || !automatic.getValue(WEST) ? 1
+                : !automatic.getValue(EAST) ? 2 : !automatic.getValue(SOUTH) ? 8 : 1;
+        int pair;
+        if (Integer.bitCount(preferred) == 2) pair = preferred;
+        else if (preferred != 0) pair = first | (first << 2 | first >> 2) & 15;
+        else if (automatic.getValue(EAST) && automatic.getValue(WEST)
+                && !automatic.getValue(NORTH) && !automatic.getValue(SOUTH)) pair = 9;
+        else if (!automatic.getValue(NORTH)) pair = 3;
+        else if (!automatic.getValue(EAST)) pair = 6;
+        else if (!automatic.getValue(SOUTH)) pair = 12;
+        else if (!automatic.getValue(WEST)) pair = 9;
+        else pair = 5;
+        int mask = count == 0 ? 0 : count == 1 ? first : count == 2 ? pair : 15;
+        for (int i = 0; i < LEGS.length; i++) automatic = automatic.setValue(LEGS[i], (mask & 1 << i) != 0);
+        return automatic;
+    }
+
+    private BlockState automaticLayout(BlockState state, BlockGetter level, BlockPos pos, BlockPos removed) {
         boolean[] joined = new boolean[4];
         boolean[] extra = new boolean[4];
         for (int edge = 0; edge < 4; edge++) {
@@ -119,6 +158,25 @@ public final class ModularDiningTableBlock extends Block {
             state = state.setValue(LEGS[corner], leg);
         }
         return state;
+    }
+
+    public InteractionResult toggleSupport(BlockState state, Level level, BlockPos pos, Player player) {
+        if (player == null || !player.mayBuild() || !level.mayInteract(player, pos) || level.getBlockState(pos) != state)
+            return InteractionResult.PASS;
+        BlockState next;
+        if (player.isShiftKeyDown()) {
+            next = layout(state.setValue(MANUAL_SUPPORT, false), level, pos, null);
+        } else {
+            BlockState automatic = automaticLayout(state, level, pos, null);
+            int count = Integer.bitCount(supportMask(state));
+            int nextCount = count == 0 ? 1 : count == 1 ? 2 : count == 2 || count == 3 ? 4 : 0;
+            next = manualLayout(automatic, nextCount).setValue(MANUAL_SUPPORT, true);
+        }
+        if (level.isClientSide) return InteractionResult.SUCCESS;
+        if (next == state) return InteractionResult.CONSUME;
+        if (!level.isUnobstructed(next, pos, CollisionContext.of(player))) return InteractionResult.FAIL;
+        return level.setBlock(pos, next, Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE)
+                ? InteractionResult.CONSUME : InteractionResult.FAIL;
     }
 
     private void refresh(Level level, BlockPos changed, BlockPos removed) {

@@ -1,6 +1,7 @@
 package com.craftdistrict.entity;
 
 import com.craftdistrict.block.SittableBlock;
+import com.craftdistrict.item.WrenchItem;
 import com.craftdistrict.registry.CraftDistrictEntities;
 import dev.architectury.event.events.common.LifecycleEvent;
 import dev.architectury.event.events.common.PlayerEvent;
@@ -47,7 +48,7 @@ public final class Seating {
     public static InteractionResult sit(BlockState state, Level level, BlockPos pos, Player player) {
         if(!(state.getBlock() instanceof SittableBlock block) || !block.isSittable(state) || !player.isAlive() || player.isSpectator()
                 || player.isShiftKeyDown() || player.isPassenger() || player.isSleeping() || player.isFallFlying() || !player.getMainHandItem().isEmpty()
-                || player.distanceToSqr(Vec3.atCenterOf(pos))>16) return InteractionResult.PASS;
+                || WrenchItem.isHeldBy(player) || player.distanceToSqr(Vec3.atCenterOf(pos))>16) return InteractionResult.PASS;
         if(level.isClientSide) return InteractionResult.SUCCESS;
         if(!(level instanceof ServerLevel server) || !level.getBlockState(pos).is(state.getBlock())) return InteractionResult.PASS;
         for(SeatEntity seat:server.getEntitiesOfClass(SeatEntity.class,bounds(pos),e->e.anchor().equals(pos))) {

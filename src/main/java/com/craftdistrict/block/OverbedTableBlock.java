@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -18,6 +19,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.BlockHitResult;
 
 public final class OverbedTableBlock extends HospitalUtilityBlock {
     // False is the saved-world/default extended design; no additional block/item is registered.
@@ -36,7 +38,7 @@ public final class OverbedTableBlock extends HospitalUtilityBlock {
     @Override protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder); builder.add(NORMAL);
     }
-    /** Only the wrench item calls this: ordinary use remains the existing decoration interaction. */
+    /** Empty-hand use and the wrench share one persistent design toggle. */
     public InteractionResult cycleDesign(BlockState state, Level level, BlockPos pos, Player player) {
         if (player == null || !player.mayBuild() || !level.mayInteract(player, pos)) return InteractionResult.PASS;
         if (level.getBlockState(pos) != state) return InteractionResult.PASS;
@@ -47,6 +49,15 @@ public final class OverbedTableBlock extends HospitalUtilityBlock {
         level.playSound(null, pos, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundSource.BLOCKS, .35F, 1.2F);
         return InteractionResult.CONSUME;
     }
+    //? if >=1.21 {
+    @Override public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        return player.getMainHandItem().isEmpty() ? cycleDesign(state, level, pos, player) : InteractionResult.PASS;
+    }
+    //?} else {
+    /*@Override public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        return player.getItemInHand(hand).isEmpty() ? cycleDesign(state, level, pos, player) : InteractionResult.PASS;
+    }
+    *///?}
     @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return state.getValue(NORMAL) ? NORMAL_SHAPES[RestaurantKitchenBlock.turn(state)] : super.getShape(state, level, pos, context);
     }

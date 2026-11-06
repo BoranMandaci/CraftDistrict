@@ -6,6 +6,8 @@ import com.craftdistrict.block.OpenSignBlock;
 import com.craftdistrict.block.MultiMountLightBlock;
 import com.craftdistrict.block.MultiBlockDecorationBlock;
 import com.craftdistrict.network.LightDyeNetworking;
+import com.craftdistrict.item.WrenchItem;
+import com.craftdistrict.menu.LightColorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -41,7 +43,7 @@ public final class LightControls {
                 ? light.structureParts(state, pos) : List.of(pos);
     }
 
-    private static boolean complete(Level level, BlockState state, List<BlockPos> parts) {
+    public static boolean complete(Level level, BlockState state, List<BlockPos> parts) {
         for (int i = 0; i < parts.size(); i++) {
             BlockState other = level.getBlockState(parts.get(i));
             if (!other.is(state.getBlock())) return false;
@@ -94,8 +96,10 @@ public final class LightControls {
         // Dye has priority, including a dye in the other hand when the active hand is empty.
         if (held.isEmpty()) {
             ItemStack other = player.getItemInHand(hand == InteractionHand.MAIN_HAND ? InteractionHand.OFF_HAND : InteractionHand.MAIN_HAND);
-            if (other.getItem() instanceof DyeItem) held = other;
+            if (other.getItem() instanceof DyeItem || other.getItem() instanceof WrenchItem) held = other;
         }
+        if (held.getItem() instanceof WrenchItem && !player.isShiftKeyDown() && dyeable(current))
+            return LightColorMenu.open(current, level, pos, player);
         if (held.getItem() instanceof DyeItem dye) {
             if (!dyeable(current)) return InteractionResult.PASS;
             List<BlockPos> parts = parts(current, pos);
@@ -112,7 +116,7 @@ public final class LightControls {
             }
             return InteractionResult.CONSUME;
         }
-        if (!held.isEmpty()) return InteractionResult.PASS;
+        if (!held.isEmpty() && !(held.getItem() instanceof WrenchItem)) return InteractionResult.PASS;
         List<BlockPos> parts = parts(current, pos);
         if (!complete(level, current, parts)) return InteractionResult.PASS;
         if (level.isClientSide) return InteractionResult.SUCCESS;

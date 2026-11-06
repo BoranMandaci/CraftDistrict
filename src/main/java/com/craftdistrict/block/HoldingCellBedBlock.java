@@ -1,5 +1,7 @@
 package com.craftdistrict.block;
 
+import com.craftdistrict.item.WrenchItem;
+
 //? if >=1.21 {
 import com.mojang.serialization.MapCodec;
 //?}
@@ -132,6 +134,7 @@ public final class HoldingCellBedBlock extends BedBlock {
     //? if >=1.21 {
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (WrenchItem.isHeldBy(player)) return InteractionResult.PASS;
         state = upgradeLegacy(level, pos, state);
         return state.is(this) && !state.getValue(LEGACY_LAYOUT)
                 ? super.useWithoutItem(state, level, pos, player, hit) : InteractionResult.CONSUME;
@@ -139,6 +142,7 @@ public final class HoldingCellBedBlock extends BedBlock {
     //?} else {
     /*@Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (WrenchItem.isHeldBy(player)) return InteractionResult.PASS;
         state = upgradeLegacy(level, pos, state);
         return state.is(this) && !state.getValue(LEGACY_LAYOUT)
                 ? super.use(state, level, pos, player, hand, hit) : InteractionResult.CONSUME;

@@ -9,96 +9,112 @@
       "when": {
         "OR": [
           {
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "down": "true",
+                    "placement": "vertical|wall|ceiling"
+                  },
+                  {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "west"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manual_connections": "true",
             "down": "true",
             "placement": "vertical|wall|ceiling"
-          },
-          {
-            "down": "false",
-            "up": "true",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "west"
           }
         ]
       },
@@ -108,94 +124,101 @@
     },
     {
       "when": {
-        "OR": [
+        "AND": [
           {
-            "down": "false",
-            "up": "true",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false"
+            "manual_connections": "false"
           },
           {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "west"
+            "OR": [
+              {
+                "down": "false",
+                "up": "true",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "vertical",
+                "facing": "north"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "vertical",
+                "facing": "east"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "vertical",
+                "facing": "south"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "vertical",
+                "facing": "west"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "hood",
+                "facing": "north"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "hood",
+                "facing": "east"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "hood",
+                "facing": "south"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "hood",
+                "facing": "west"
+              }
+            ]
           }
         ]
       },
@@ -207,100 +230,115 @@
       "when": {
         "OR": [
           {
-            "down": "false",
-            "north": "true"
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "down": "false",
+                    "north": "true"
+                  },
+                  {
+                    "down": "false",
+                    "south": "true"
+                  },
+                  {
+                    "down": "false",
+                    "west": "true"
+                  },
+                  {
+                    "down": "false",
+                    "east": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "west"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "down": "false",
-            "south": "true"
-          },
-          {
-            "down": "false",
-            "west": "true"
-          },
-          {
-            "down": "false",
-            "east": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "west"
+            "manual_connections": "true",
+            "down": "false"
           }
         ]
       },
@@ -312,95 +350,110 @@
       "when": {
         "OR": [
           {
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "up": "true"
+                  },
+                  {
+                    "down": "true",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "west"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manual_connections": "true",
             "up": "true"
-          },
-          {
-            "down": "true",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "west"
           }
         ]
       },
@@ -410,94 +463,101 @@
     },
     {
       "when": {
-        "OR": [
+        "AND": [
           {
-            "down": "true",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false"
+            "manual_connections": "false"
           },
           {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "west"
+            "OR": [
+              {
+                "down": "true",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "vertical",
+                "facing": "north"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "vertical",
+                "facing": "east"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "vertical",
+                "facing": "south"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "vertical",
+                "facing": "west"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "hood",
+                "facing": "north"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "hood",
+                "facing": "east"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "hood",
+                "facing": "south"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "hood",
+                "facing": "west"
+              }
+            ]
           }
         ]
       },
@@ -509,100 +569,115 @@
       "when": {
         "OR": [
           {
-            "up": "false",
-            "north": "true"
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "up": "false",
+                    "north": "true"
+                  },
+                  {
+                    "up": "false",
+                    "south": "true"
+                  },
+                  {
+                    "up": "false",
+                    "west": "true"
+                  },
+                  {
+                    "up": "false",
+                    "east": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "west"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "up": "false",
-            "south": "true"
-          },
-          {
-            "up": "false",
-            "west": "true"
-          },
-          {
-            "up": "false",
-            "east": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "west"
+            "manual_connections": "true",
+            "up": "false"
           }
         ]
       },
@@ -614,55 +689,70 @@
       "when": {
         "OR": [
           {
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "north": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "true",
+                    "west": "false",
+                    "east": "false"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "south"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manual_connections": "true",
             "north": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "true",
-            "west": "false",
-            "east": "false"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "south"
           }
         ]
       },
@@ -672,54 +762,61 @@
     },
     {
       "when": {
-        "OR": [
+        "AND": [
           {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "true",
-            "west": "false",
-            "east": "false"
+            "manual_connections": "false"
           },
           {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "south"
+            "OR": [
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "true",
+                "west": "false",
+                "east": "false"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "wall",
+                "facing": "east"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "wall",
+                "facing": "west"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "ceiling",
+                "facing": "north"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "ceiling",
+                "facing": "south"
+              }
+            ]
           }
         ]
       },
@@ -731,140 +828,155 @@
       "when": {
         "OR": [
           {
-            "north": "false",
-            "down": "true"
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "north": "false",
+                    "down": "true"
+                  },
+                  {
+                    "north": "false",
+                    "up": "true"
+                  },
+                  {
+                    "north": "false",
+                    "west": "true"
+                  },
+                  {
+                    "north": "false",
+                    "east": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "west"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "north": "false",
-            "up": "true"
-          },
-          {
-            "north": "false",
-            "west": "true"
-          },
-          {
-            "north": "false",
-            "east": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "west"
+            "manual_connections": "true",
+            "north": "false"
           }
         ]
       },
@@ -876,55 +988,70 @@
       "when": {
         "OR": [
           {
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "south": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "true",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "south"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manual_connections": "true",
             "south": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "true",
-            "south": "false",
-            "west": "false",
-            "east": "false"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "south"
           }
         ]
       },
@@ -934,54 +1061,61 @@
     },
     {
       "when": {
-        "OR": [
+        "AND": [
           {
-            "down": "false",
-            "up": "false",
-            "north": "true",
-            "south": "false",
-            "west": "false",
-            "east": "false"
+            "manual_connections": "false"
           },
           {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "south"
+            "OR": [
+              {
+                "down": "false",
+                "up": "false",
+                "north": "true",
+                "south": "false",
+                "west": "false",
+                "east": "false"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "wall",
+                "facing": "east"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "wall",
+                "facing": "west"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "ceiling",
+                "facing": "north"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "ceiling",
+                "facing": "south"
+              }
+            ]
           }
         ]
       },
@@ -993,140 +1127,155 @@
       "when": {
         "OR": [
           {
-            "south": "false",
-            "down": "true"
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "south": "false",
+                    "down": "true"
+                  },
+                  {
+                    "south": "false",
+                    "up": "true"
+                  },
+                  {
+                    "south": "false",
+                    "west": "true"
+                  },
+                  {
+                    "south": "false",
+                    "east": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "west"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "south": "false",
-            "up": "true"
-          },
-          {
-            "south": "false",
-            "west": "true"
-          },
-          {
-            "south": "false",
-            "east": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "west"
+            "manual_connections": "true",
+            "south": "false"
           }
         ]
       },
@@ -1138,55 +1287,70 @@
       "when": {
         "OR": [
           {
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "west": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "west"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manual_connections": "true",
             "west": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "west"
           }
         ]
       },
@@ -1196,54 +1360,61 @@
     },
     {
       "when": {
-        "OR": [
+        "AND": [
           {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "true"
+            "manual_connections": "false"
           },
           {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "west"
+            "OR": [
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "true"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "wall",
+                "facing": "north"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "wall",
+                "facing": "south"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "ceiling",
+                "facing": "east"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "ceiling",
+                "facing": "west"
+              }
+            ]
           }
         ]
       },
@@ -1255,140 +1426,155 @@
       "when": {
         "OR": [
           {
-            "west": "false",
-            "down": "true"
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "west": "false",
+                    "down": "true"
+                  },
+                  {
+                    "west": "false",
+                    "up": "true"
+                  },
+                  {
+                    "west": "false",
+                    "north": "true"
+                  },
+                  {
+                    "west": "false",
+                    "south": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "south"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "west": "false",
-            "up": "true"
-          },
-          {
-            "west": "false",
-            "north": "true"
-          },
-          {
-            "west": "false",
-            "south": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "south"
+            "manual_connections": "true",
+            "west": "false"
           }
         ]
       },
@@ -1400,55 +1586,70 @@
       "when": {
         "OR": [
           {
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "east": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "true",
+                    "east": "false"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "west"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manual_connections": "true",
             "east": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "true",
-            "east": "false"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "west"
           }
         ]
       },
@@ -1458,54 +1659,61 @@
     },
     {
       "when": {
-        "OR": [
+        "AND": [
           {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "true",
-            "east": "false"
+            "manual_connections": "false"
           },
           {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "west"
+            "OR": [
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "true",
+                "east": "false"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "wall",
+                "facing": "north"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "wall",
+                "facing": "south"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "ceiling",
+                "facing": "east"
+              },
+              {
+                "down": "false",
+                "up": "false",
+                "north": "false",
+                "south": "false",
+                "west": "false",
+                "east": "false",
+                "placement": "ceiling",
+                "facing": "west"
+              }
+            ]
           }
         ]
       },
@@ -1517,140 +1725,155 @@
       "when": {
         "OR": [
           {
-            "east": "false",
-            "down": "true"
+            "AND": [
+              {
+                "manual_connections": "false"
+              },
+              {
+                "OR": [
+                  {
+                    "east": "false",
+                    "down": "true"
+                  },
+                  {
+                    "east": "false",
+                    "up": "true"
+                  },
+                  {
+                    "east": "false",
+                    "north": "true"
+                  },
+                  {
+                    "east": "false",
+                    "south": "true"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "vertical",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "south"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "hood",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "east"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "wall",
+                    "facing": "west"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "north"
+                  },
+                  {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false",
+                    "placement": "ceiling",
+                    "facing": "south"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "east": "false",
-            "up": "true"
-          },
-          {
-            "east": "false",
-            "north": "true"
-          },
-          {
-            "east": "false",
-            "south": "true"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "vertical",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "south"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "hood",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "east"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "wall",
-            "facing": "west"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "north"
-          },
-          {
-            "down": "false",
-            "up": "false",
-            "north": "false",
-            "south": "false",
-            "west": "false",
-            "east": "false",
-            "placement": "ceiling",
-            "facing": "south"
+            "manual_connections": "true",
+            "east": "false"
           }
         ]
       },

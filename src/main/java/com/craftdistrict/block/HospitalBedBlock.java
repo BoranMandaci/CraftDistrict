@@ -5,6 +5,10 @@ import com.mojang.serialization.MapCodec;
 //?}
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import com.craftdistrict.item.WrenchItem;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
@@ -21,6 +25,7 @@ import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.BlockHitResult;
 
 /** Vanilla bed interaction and paired removal; all visuals are static JSON models. */
 public final class HospitalBedBlock extends BedBlock {
@@ -37,6 +42,16 @@ public final class HospitalBedBlock extends BedBlock {
                     box(.75, 10.5, 0, 1.75, 13.5, 6), box(14.25, 10.5, 0, 15.25, 13.5, 6)).optimize())};
 
     public HospitalBedBlock(Properties properties) { super(DyeColor.WHITE, properties); }
+
+    //? if >=1.21 {
+    @Override public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        return WrenchItem.isHeldBy(player) ? InteractionResult.PASS : super.useWithoutItem(state, level, pos, player, hit);
+    }
+    //?} else {
+    /*@Override public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        return WrenchItem.isHeldBy(player) ? InteractionResult.PASS : super.use(state, level, pos, player, hand, hit);
+    }
+    *///?}
 
     private static boolean inBounds(Level level, BlockPos pos) {
         return !level.isOutsideBuildHeight(pos) && level.getWorldBorder().isWithinBounds(pos) && level.hasChunkAt(pos);
