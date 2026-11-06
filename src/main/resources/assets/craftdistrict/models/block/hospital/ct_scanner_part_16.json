@@ -1,0 +1,95 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/hospital/hospital_radiology",
+    "screens": "craftdistrict:block/hospital/hospital_radiology_b",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "patient_table_frame",
+      "from": [
+        0.5,
+        0,
+        0
+      ],
+      "to": [
+        15.5,
+        0.25,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.6,
+            0.25,
+            1.0,
+            0.55
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.0,
+            0.25,
+            1.4,
+            0.55
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.6,
+            1.75,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "padded_leg_section",
+      "from": [
+        1.25,
+        0.25,
+        0
+      ],
+      "to": [
+        14.75,
+        2.25,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.83536585,
+            0.25,
+            11.61585366,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.38414634,
+            0.25,
+            11.16463415,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.83536585,
+            11.75,
+            1.61585366
+          ]
+        }
+      }
+    }
+  ]
+}

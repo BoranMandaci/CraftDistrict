@@ -1,0 +1,512 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/hospital/hospital_radiology",
+    "screens": "craftdistrict:block/hospital/hospital_radiology_b",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "floor_base",
+      "from": [
+        2.5,
+        0,
+        0
+      ],
+      "to": [
+        13.5,
+        1.5,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14.91,
+            2.25,
+            15.75,
+            3.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14.25,
+            2.25,
+            15.09,
+            3.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14.25,
+            2.25,
+            15.75,
+            3.09
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14.25,
+            2.91,
+            15.75,
+            3.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14.25,
+            2.25,
+            15.75,
+            3.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_foot",
+      "from": [
+        3,
+        1.5,
+        0
+      ],
+      "to": [
+        13,
+        3,
+        13
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.90217391,
+            0.25,
+            3.75,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            3.09782609,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.90217391,
+            3.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            3.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "floor_linkage",
+      "from": [
+        5,
+        1.5,
+        12
+      ],
+      "to": [
+        11,
+        2.5,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            4.85,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.15,
+            0.25,
+            5.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            1.15,
+            5.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            0.85
+          ]
+        }
+      }
+    },
+    {
+      "name": "lift_column",
+      "from": [
+        4,
+        3,
+        0
+      ],
+      "to": [
+        12,
+        10,
+        10
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.8125,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.1875,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.8125,
+            1.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "telescopic_lift",
+      "from": [
+        5,
+        10,
+        0
+      ],
+      "to": [
+        11,
+        14.25,
+        8
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.75,
+            0.25,
+            5.75,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.25,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "table_carriage",
+      "from": [
+        2,
+        14.25,
+        0
+      ],
+      "to": [
+        14,
+        15,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.83695652,
+            0.25,
+            11.75,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.25,
+            11.16304348,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.25,
+            11.75,
+            1.16304348
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.25,
+            11.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "longitudinal_table_rail",
+      "from": [
+        5,
+        14,
+        12
+      ],
+      "to": [
+        11,
+        15,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            4.5,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.5,
+            0.25,
+            5.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            1.5,
+            5.75,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "patient_table_frame",
+      "from": [
+        0.5,
+        15,
+        0
+      ],
+      "to": [
+        15.5,
+        16,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.6,
+            0.55,
+            1.0,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.0,
+            0.55,
+            1.4,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            1.0,
+            1.75,
+            1.4
+          ]
+        }
+      }
+    },
+    {
+      "name": "table_guide_16",
+      "from": [
+        0,
+        15.125,
+        0
+      ],
+      "to": [
+        0.5,
+        15.875,
+        13
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.9375,
+            0.25,
+            5.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.0625
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.9375,
+            5.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "table_guide_31.5",
+      "from": [
+        15.5,
+        15.125,
+        0
+      ],
+      "to": [
+        16.0,
+        15.875,
+        13
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.0625,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.0625
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.9375,
+            5.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        }
+      }
+    }
+  ]
+}

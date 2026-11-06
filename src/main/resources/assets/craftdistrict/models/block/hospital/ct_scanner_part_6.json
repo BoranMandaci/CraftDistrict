@@ -1,0 +1,514 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/hospital/hospital_radiology",
+    "screens": "craftdistrict:block/hospital/hospital_radiology_b",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "short_front_gantry_1",
+      "from": [
+        10.5,
+        6,
+        4
+      ],
+      "to": [
+        16,
+        9,
+        6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.55555556,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.44444444,
+            0.25,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "short_front_gantry_2",
+      "from": [
+        7.5,
+        9,
+        4
+      ],
+      "to": [
+        16,
+        12,
+        6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.63636364,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.63636364,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.36363636,
+            0.25,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "short_front_gantry_l3",
+      "from": [
+        5.0,
+        12,
+        4
+      ],
+      "to": [
+        15.0,
+        15,
+        6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "short_front_gantry_l4",
+      "from": [
+        3.5,
+        15,
+        4
+      ],
+      "to": [
+        12.5,
+        16,
+        6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            1.25,
+            1.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            1.25,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "short_gantry_core_1",
+      "from": [
+        10.5,
+        6,
+        6
+      ],
+      "to": [
+        16,
+        9,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.1875,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.8125,
+            0.55555556,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "short_gantry_core_2",
+      "from": [
+        7.5,
+        9,
+        6
+      ],
+      "to": [
+        16,
+        12,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.1875,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.8125,
+            0.63636364,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.63636364,
+            1.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "short_gantry_core_l3",
+      "from": [
+        5.0,
+        12,
+        6
+      ],
+      "to": [
+        15.0,
+        15,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.1875,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.8125,
+            1.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "short_gantry_core_l4",
+      "from": [
+        3.5,
+        15,
+        6
+      ],
+      "to": [
+        12.5,
+        16,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            1.25,
+            1.1875,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.8125,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "ct_inner_aperture_l3",
+      "from": [
+        15.0,
+        12,
+        4.75
+      ],
+      "to": [
+        16,
+        15,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            3.0,
+            1.16216216
+          ]
+        }
+      }
+    },
+    {
+      "name": "ct_inner_aperture_l4",
+      "from": [
+        12.5,
+        15,
+        4.75
+      ],
+      "to": [
+        13.5,
+        16,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.83783784,
+            1.25,
+            3.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "ct_front_indicator_l3",
+      "from": [
+        15.0,
+        12,
+        4
+      ],
+      "to": [
+        16,
+        15,
+        4.75
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.25,
+            0.25,
+            13.0,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            13.0,
+            0.25,
+            13.75,
+            1.75
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "ct_front_indicator_l4",
+      "from": [
+        12.5,
+        15,
+        4
+      ],
+      "to": [
+        13.5,
+        16,
+        4.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.25,
+            1.25,
+            13.75,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12.25,
+            1.25,
+            13.75,
+            1.75
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "gantry_base",
+      "from": [
+        10.5,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        3,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            3.16666667,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.83333333,
+            2.55555556,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            2.55555556,
+            1.16666667
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            3.44444444,
+            0.25,
+            3.75,
+            1.75
+          ]
+        }
+      }
+    }
+  ]
+}

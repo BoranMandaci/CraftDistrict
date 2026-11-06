@@ -1,0 +1,122 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/hospital/hospital_radiology",
+    "screens": "craftdistrict:block/hospital/hospital_radiology_b",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "upper_flat_detector",
+      "from": [
+        14,
+        4.5,
+        2
+      ],
+      "to": [
+        16,
+        8,
+        11
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            3.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            2.55,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            2.55,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            3.45,
+            0.25,
+            3.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            2.55,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_detector_imaging_face",
+      "from": [
+        14.5,
+        3.75,
+        2.5
+      ],
+      "to": [
+        16,
+        4.5,
+        10.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.25,
+            7.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.25,
+            6.5,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            7.5,
+            0.25,
+            7.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.25,
+            6.5,
+            1.75
+          ]
+        }
+      }
+    }
+  ]
+}

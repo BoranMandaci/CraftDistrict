@@ -1,0 +1,353 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/hospital/hospital_radiology",
+    "screens": "craftdistrict:block/hospital/hospital_radiology_b",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "horizontal_boom",
+      "from": [
+        0,
+        10,
+        7
+      ],
+      "to": [
+        10,
+        12.5,
+        10.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.59615385,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.59615385,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.40384615,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.59615385,
+            0.25,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "boom_elbow",
+      "from": [
+        7,
+        8,
+        6
+      ],
+      "to": [
+        11,
+        12,
+        10
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "forward_articulated_arm",
+      "from": [
+        7,
+        7.5,
+        0
+      ],
+      "to": [
+        11,
+        10,
+        6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.0,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.0,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            1.0,
+            1.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "tube_power_lead_joint_2",
+      "from": [
+        13.5625,
+        10.8125,
+        8.8125
+      ],
+      "to": [
+        13.9375,
+        11.1875,
+        9.1875
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.25,
+            7.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.25,
+            7.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.25,
+            7.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.25,
+            7.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "tube_power_lead_link_1",
+      "from": [
+        13.5625,
+        10.8125,
+        0
+      ],
+      "to": [
+        13.9375,
+        11.1875,
+        8.8125
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.53448276,
+            0.25,
+            7.75,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.25,
+            7.46551724,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.25,
+            7.75,
+            1.46551724
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.53448276,
+            7.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "tube_power_lead_link_2",
+      "from": [
+        0,
+        10.8125,
+        8.8125
+      ],
+      "to": [
+        13.5625,
+        11.1875,
+        9.1875
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.52631579,
+            0.25,
+            7.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.52631579,
+            0.25,
+            7.75,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.25,
+            0.25,
+            7.47368421,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.52631579,
+            0.25,
+            7.75,
+            1.75
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/hospital/hospital_radiology",
+    "screens": "craftdistrict:block/hospital/hospital_radiology_b",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "lower_xray_monoblock",
+      "from": [
+        13.5,
+        9,
+        2
+      ],
+      "to": [
+        16,
+        14.5,
+        11
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.59090909,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.59090909,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.40909091,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.59090909,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_source_collimator",
+      "from": [
+        15,
+        14.5,
+        3.5
+      ],
+      "to": [
+        16,
+        15.5,
+        9.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.25,
+            11.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.25,
+            10.4375,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            11.5625,
+            0.25,
+            11.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.25,
+            10.4375,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_generator_vent",
+      "from": [
+        14.5,
+        10,
+        1.75
+      ],
+      "to": [
+        16,
+        11.5,
+        2
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            5.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            4.5,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.25,
+            0.25,
+            4.5,
+            1.75
+          ]
+        },
+        "north": {
+          "texture": "#screens",
+          "uv": [
+            11.32291667,
+            10.03125,
+            11.984375,
+            15.96875
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_xray_warning",
+      "from": [
+        14.5,
+        12,
+        1.75
+      ],
+      "to": [
+        16,
+        14,
+        2
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8.25,
+            2.25,
+            9.75,
+            3.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8.25,
+            2.25,
+            8.5,
+            3.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8.25,
+            2.25,
+            8.5,
+            3.75
+          ]
+        },
+        "north": {
+          "texture": "#screens",
+          "uv": [
+            11.32291667,
+            6.03125,
+            11.984375,
+            9.96875
+          ]
+        }
+      }
+    }
+  ]
+}

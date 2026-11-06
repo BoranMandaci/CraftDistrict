@@ -1,0 +1,155 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/hospital/hospital_radiology",
+    "screens": "craftdistrict:block/hospital/hospital_radiology_b",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "patient_table_frame",
+      "from": [
+        0.5,
+        0,
+        0
+      ],
+      "to": [
+        15.5,
+        1.25,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.29545455,
+            0.25,
+            1.65909091,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.34090909,
+            0.25,
+            0.70454545,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.34090909,
+            1.75,
+            0.70454545
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            1.29545455,
+            1.75,
+            1.65909091
+          ]
+        }
+      }
+    },
+    {
+      "name": "padded_upper_section",
+      "from": [
+        1.25,
+        1.25,
+        0
+      ],
+      "to": [
+        14.75,
+        3.25,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8.88934426,
+            0.25,
+            9.67622951,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8.32377049,
+            0.25,
+            9.11065574,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8.25,
+            0.88934426,
+            9.75,
+            1.67622951
+          ]
+        }
+      }
+    },
+    {
+      "name": "aligned_padded_head_support",
+      "from": [
+        2.5,
+        3.25,
+        11
+      ],
+      "to": [
+        13.5,
+        4.25,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            3.32142857,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.67857143,
+            0.25,
+            3.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            3.75,
+            1.32142857
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            3.75,
+            1.75
+          ]
+        }
+      }
+    }
+  ]
+}

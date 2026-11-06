@@ -70,10 +70,11 @@ public final class MedicalResting {
                 return InteractionResult.CONSUME;
             }
         }
-        Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+        Direction facing = lying.lyingDirection(state);
         // Check free air above the furniture, rather than the broad decorative mattress hitbox.
-        AABB clearance = new AABB(head.above()).deflate(.15, 0, .15);
-        if (!level.noCollision(player, clearance) || SeatEntity.safeExit(level, head, facing, player) == null) return InteractionResult.FAIL;
+        AABB clearance = lying.lyingClearance(state, head);
+        if (!level.noCollision(player, clearance) || SeatEntity.safeExit(level, lying.lyingExitAnchor(state, head),
+                state.getValue(BlockStateProperties.HORIZONTAL_FACING), player) == null) return InteractionResult.FAIL;
         serverPlayer.startSleeping(head);
         player.fallDistance = 0;
         serverPlayer.connection.teleport(player.getX(), player.getY(), player.getZ(), facing.toYRot(), 0);
@@ -88,6 +89,19 @@ public final class MedicalResting {
         }
     }
 
+    /** A scanner anchor may itself be the broken part, so retain its exit geometry explicitly. */
+    public static void removeAt(Level level, BlockPos head, BlockState state) {
+        if (!(level instanceof ServerLevel server) || !(state.getBlock() instanceof LyingBlock lying)) return;
+        for (ServerPlayer player : server.players()) {
+            if (player.isSleeping() && player.getSleepingPos().filter(head::equals).isPresent()) {
+                Vec3 exit = SeatEntity.safeExit(level, lying.lyingExitAnchor(state, head),
+                        state.getValue(BlockStateProperties.HORIZONTAL_FACING), player);
+                player.stopSleepInBed(true, false);
+                if (exit != null) player.connection.teleport(exit.x, exit.y, exit.z, player.getYRot(), player.getXRot());
+            }
+        }
+    }
+
     public static void position(LivingEntity entity, BlockPos head) {
         BlockState state = entity.level().getBlockState(head);
         if (state.getBlock() instanceof LyingBlock lying)
@@ -96,8 +110,10 @@ public final class MedicalResting {
 
     public static void wake(LivingEntity entity) {
         BlockPos head = entity.getSleepingPos().orElseThrow();
-        Direction facing = entity.level().getBlockState(head).getValue(BlockStateProperties.HORIZONTAL_FACING);
-        Vec3 exit = SeatEntity.safeExit(entity.level(), head, facing, entity);
+        BlockState state = entity.level().getBlockState(head);
+        Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+        BlockPos exitAnchor = state.getBlock() instanceof LyingBlock lying ? lying.lyingExitAnchor(state, head) : head;
+        Vec3 exit = SeatEntity.safeExit(entity.level(), exitAnchor, facing, entity);
         entity.setPose(Pose.STANDING);
         entity.clearSleepingPos();
         if (exit != null) entity.setPos(exit.x, exit.y, exit.z);

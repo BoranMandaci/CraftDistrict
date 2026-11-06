@@ -37,6 +37,7 @@ import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
 import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.HospitalBedBlock;
 import com.craftdistrict.block.HospitalWideBlock;
+import com.craftdistrict.block.HospitalRadiologyBlock;
 import com.craftdistrict.block.HospitalUtilityBlock;
 import com.craftdistrict.block.OverbedTableBlock;
 import com.craftdistrict.block.HospitalEquipmentBlock;
@@ -224,6 +225,22 @@ public final class CraftDistrictBlocks {
                 () -> new OverbedTableBlock(metalProperties()));
         public static final RegistrySupplier<HospitalUtilityBlock> SANITIZER_DISPENSER = register("sanitizer_dispenser",
                 () -> new HospitalUtilityBlock(HospitalUtilityBlock.Design.SANITIZER, metalProperties()));
+        public static final RegistrySupplier<HospitalRadiologyBlock.Mri> MRI_SCANNER = register("mri_scanner",
+                () -> new HospitalRadiologyBlock.Mri(metalProperties()));
+        public static final RegistrySupplier<HospitalRadiologyBlock.Ct> CT_SCANNER = register("ct_scanner",
+                () -> new HospitalRadiologyBlock.Ct(metalProperties()));
+        public static final RegistrySupplier<HospitalRadiologyBlock.Console> RADIOLOGY_CONSOLE = register("radiology_control_console",
+                () -> new HospitalRadiologyBlock.Console(metalProperties()));
+        public static final RegistrySupplier<HospitalRadiologyBlock.ApronRack> LEAD_APRON_RACK = register("lead_apron_rack",
+                () -> new HospitalRadiologyBlock.ApronRack(metalProperties()));
+        public static final RegistrySupplier<HospitalRadiologyBlock.MobileXray> MOBILE_XRAY_MACHINE = register("mobile_xray_machine",
+                () -> new HospitalRadiologyBlock.MobileXray(metalProperties()));
+        public static final RegistrySupplier<HospitalRadiologyBlock.CArm> C_ARM_XRAY_MACHINE = register("c_arm_xray_machine",
+                () -> new HospitalRadiologyBlock.CArm(metalProperties()));
+        public static final RegistrySupplier<HospitalRadiologyBlock.Ultrasound> ULTRASOUND_MACHINE = register("ultrasound_machine",
+                () -> new HospitalRadiologyBlock.Ultrasound(metalProperties()));
+        public static final RegistrySupplier<HospitalRadiologyBlock.Mammography> MAMMOGRAPHY_MACHINE = register("mammography_machine",
+                () -> new HospitalRadiologyBlock.Mammography(metalProperties()));
 
         private static BlockBehaviour.Properties metalProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();

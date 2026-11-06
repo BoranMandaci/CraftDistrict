@@ -1,17 +1,17 @@
 package com.craftdistrict.mixin;
 
 import com.craftdistrict.entity.MedicalResting;
+import com.craftdistrict.block.LyingBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-/** Only the three opted-in medical tables extend vanilla sleep-pose handling. */
+/** Only opted-in medical furniture extends vanilla pose handling. */
 @Mixin(LivingEntity.class)
 public abstract class MedicalRestingEntityMixin {
     @Inject(method = "checkBedExists()Z", at = @At("HEAD"), cancellable = true)
@@ -23,8 +23,10 @@ public abstract class MedicalRestingEntityMixin {
     @Inject(method = "getBedOrientation()Lnet/minecraft/core/Direction;", at = @At("HEAD"), cancellable = true)
     private void craftdistrict$medicalFacing(CallbackInfoReturnable<Direction> cir) {
         LivingEntity entity = (LivingEntity)(Object)this;
-        if (MedicalResting.isResting(entity)) cir.setReturnValue(entity.level().getBlockState(entity.getSleepingPos().orElseThrow())
-                .getValue(BlockStateProperties.HORIZONTAL_FACING));
+        if (MedicalResting.isResting(entity)) {
+            var state = entity.level().getBlockState(entity.getSleepingPos().orElseThrow());
+            cir.setReturnValue(((LyingBlock)state.getBlock()).lyingDirection(state));
+        }
     }
 
     @Inject(method = "setPosToBed(Lnet/minecraft/core/BlockPos;)V", at = @At("TAIL"))

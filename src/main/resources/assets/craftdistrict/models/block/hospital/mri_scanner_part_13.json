@@ -1,0 +1,631 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/hospital/hospital_radiology",
+    "screens": "craftdistrict:block/hospital/hospital_radiology_b",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "long_magnet_housing_0",
+      "from": [
+        0.0,
+        3,
+        0
+      ],
+      "to": [
+        16.0,
+        6,
+        12
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            3.34090909,
+            0.25,
+            3.75,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            2.65909091,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "long_magnet_housing_1",
+      "from": [
+        0,
+        6,
+        0
+      ],
+      "to": [
+        16,
+        9,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.55555556,
+            0.25,
+            3.44444444,
+            0.65909091
+          ]
+        }
+      }
+    },
+    {
+      "name": "long_magnet_housing_2",
+      "from": [
+        0,
+        9,
+        0
+      ],
+      "to": [
+        16,
+        12,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.63636364,
+            0.25,
+            3.36363636,
+            0.65909091
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.63636364,
+            1.34090909,
+            3.36363636,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "long_magnet_housing_l3",
+      "from": [
+        0,
+        12,
+        0
+      ],
+      "to": [
+        2.0,
+        15,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            3.51923077,
+            0.25,
+            3.75,
+            0.65909091
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            3.51923077,
+            1.34090909,
+            3.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "long_magnet_housing_r3",
+      "from": [
+        14.0,
+        12,
+        0
+      ],
+      "to": [
+        16,
+        15,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            0.25,
+            2.48076923,
+            0.65909091
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.25,
+            1.34090909,
+            2.48076923,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_rounded_collar_0",
+      "from": [
+        0.0,
+        3,
+        12
+      ],
+      "to": [
+        16.0,
+        6,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_rounded_collar_1",
+      "from": [
+        0,
+        6,
+        12
+      ],
+      "to": [
+        16,
+        9,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.55555556,
+            0.25,
+            1.44444444,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.55555556,
+            0.25,
+            1.44444444,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_rounded_collar_2",
+      "from": [
+        0,
+        9,
+        12
+      ],
+      "to": [
+        16,
+        12,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.63636364,
+            0.25,
+            1.36363636,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.63636364,
+            0.25,
+            1.36363636,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.63636364,
+            0.25,
+            1.36363636,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_rounded_collar_l3",
+      "from": [
+        0,
+        12,
+        12
+      ],
+      "to": [
+        2.0,
+        15,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            1.51923077,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.51923077,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            1.51923077,
+            0.25,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_rounded_collar_r3",
+      "from": [
+        14.0,
+        12,
+        12
+      ],
+      "to": [
+        16,
+        15,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.48076923,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.48076923,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.48076923,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_bore_l3",
+      "from": [
+        2.0,
+        12,
+        0
+      ],
+      "to": [
+        3.0,
+        15,
+        13
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.25,
+            0.67391304,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            1.32608696,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_bore_r3",
+      "from": [
+        13.0,
+        12,
+        0
+      ],
+      "to": [
+        14.0,
+        15,
+        13
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.32608696,
+            0.25,
+            1.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            1.32608696,
+            1.75,
+            1.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_blue_bore_light_l3",
+      "from": [
+        2.0,
+        12,
+        13
+      ],
+      "to": [
+        3.0,
+        15,
+        14
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.25,
+            0.25,
+            13.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.25,
+            0.25,
+            13.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12.25,
+            0.25,
+            13.75,
+            1.75
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "rear_blue_bore_light_r3",
+      "from": [
+        13.0,
+        12,
+        13
+      ],
+      "to": [
+        14.0,
+        15,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.25,
+            0.25,
+            13.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.25,
+            0.25,
+            13.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12.25,
+            0.25,
+            13.75,
+            1.75
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "scanner_floor_plinth",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        3,
+        13
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14.52,
+            2.25,
+            15.48,
+            2.67391304
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14.52,
+            3.32608696,
+            15.48,
+            3.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14.52,
+            2.25,
+            15.48,
+            3.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_service_panel",
+      "from": [
+        0,
+        4,
+        14
+      ],
+      "to": [
+        16,
+        8,
+        14.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.25,
+            11.75,
+            1.75
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.25,
+            11.75,
+            1.75
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.25,
+            11.75,
+            1.75
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10.25,
+            0.25,
+            11.75,
+            1.75
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8.015625,
+            13.015625,
+            11.984375,
+            14.984375
+          ]
+        }
+      }
+    }
+  ]
+}
