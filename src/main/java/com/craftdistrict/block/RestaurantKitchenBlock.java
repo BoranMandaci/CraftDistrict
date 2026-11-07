@@ -37,9 +37,9 @@ public class RestaurantKitchenBlock extends CashRegisterBlock {
             rotations(Shapes.or(Block.box(0, 0, 1, 16, 13.5, 16),
                     Block.box(0, 13.5, 0, 16, 14.5, 16), Block.box(0, 14.5, 14.5, 16, 16.5, 16))),
             rotations(openFrame()),
-            rotations(Shapes.or(openFrame(), Block.box(2, 11, 2.5, 14, 13.5, 12),
-                    Block.box(7.5, 14.5, 13.5, 8.5, 19.25, 14.5),
-                    Block.box(7.5, 17.75, 9, 8.5, 19.25, 13.5)))
+            rotations(Shapes.or(openFrame(), Block.box(2, 12.25, 2.5, 14, 15, 12),
+                    Block.box(7.5, 16, 13.5, 8.5, 20.75, 14.5),
+                    Block.box(7.5, 19.25, 9, 8.5, 20.75, 13.5)))
     };
 
     private final Equipment equipment;
@@ -50,9 +50,9 @@ public class RestaurantKitchenBlock extends CashRegisterBlock {
     }
 
     private static VoxelShape openFrame() {
-        return Shapes.or(Block.box(0, 13.5, 0, 16, 14.5, 16), Block.box(1, 3.5, 1.5, 15, 4.25, 15),
-                Block.box(1.25, 0, 1.5, 2.5, 13.5, 2.75), Block.box(13.5, 0, 1.5, 14.75, 13.5, 2.75),
-                Block.box(1.25, 0, 13.5, 2.5, 13.5, 14.75), Block.box(13.5, 0, 13.5, 14.75, 13.5, 14.75));
+        return Shapes.or(Block.box(0, 15, 0, 16, 16, 16), Block.box(1, 3.5, 1.5, 15, 4.25, 15),
+                Block.box(1.25, 0, 1.5, 2.5, 15, 2.75), Block.box(13.5, 0, 1.5, 14.75, 15, 2.75),
+                Block.box(1.25, 0, 13.5, 2.5, 15, 14.75), Block.box(13.5, 0, 13.5, 14.75, 15, 14.75));
     }
 
     static VoxelShape[] rotations(VoxelShape north) {

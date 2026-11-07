@@ -17,15 +17,15 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** A static tabletop speaker, seated flush on the lower Office conference worktop. */
+/** A static tabletop speaker; the old lowered state remains readable after the table-height update. */
 public final class OfficeSpeakerBlock extends CashRegisterBlock {
     public static final BooleanProperty LOWERED = BooleanProperty.create("lowered");
     //? if >=1.21 {
     public static final MapCodec<OfficeSpeakerBlock> CODEC = simpleCodec(OfficeSpeakerBlock::new);
     //?}
     private static final VoxelShape NORMAL = box(2, 0, 3.625, 14, 6.75, 12);
-    private static final VoxelShape[][] SHAPES = {RestaurantKitchenBlock.rotations(NORMAL),
-            RestaurantKitchenBlock.rotations(NORMAL.move(0, -1.5 / 16, 0))};
+    private static final VoxelShape[] ORIENTED = RestaurantKitchenBlock.rotations(NORMAL);
+    private static final VoxelShape[][] SHAPES = {ORIENTED, ORIENTED};
 
     public OfficeSpeakerBlock(Properties properties) {
         super(properties); registerDefaultState(defaultBlockState().setValue(LOWERED, false));
@@ -36,8 +36,10 @@ public final class OfficeSpeakerBlock extends CashRegisterBlock {
     }
 
     private static boolean lowTable(LevelReader level, BlockPos pos) {
-        return level.getBlockState(pos.below()).getBlock() instanceof OfficeConnectedBlock table
-                && table.supportsTabletopProps();
+        BlockPos below = pos.below();
+        BlockState state = level.getBlockState(below);
+        return state.getBlock() instanceof OfficeConnectedBlock table && table.supportsTabletopProps()
+                && Math.abs(state.getCollisionShape(level, below).max(Direction.Axis.Y) - 14.5 / 16) < 1e-7;
     }
 
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {

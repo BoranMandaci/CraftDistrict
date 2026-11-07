@@ -6,6 +6,7 @@ import com.craftdistrict.block.ControlledLight;
 import com.craftdistrict.block.KitchenExhaustDuctBlock;
 import com.craftdistrict.block.ModularDiningTableBlock;
 import com.craftdistrict.block.ConferenceTableBlock;
+import com.craftdistrict.block.PoliceWaitingBenchBlock;
 import com.craftdistrict.block.SittableBlock;
 import com.craftdistrict.block.LyingBlock;
 import com.craftdistrict.lighting.LightControls;
@@ -35,6 +36,7 @@ public final class WrenchItem extends Item {
         var block = state.getBlock();
         if (block instanceof ModularDiningTableBlock table) return table.toggleSupport(state, level, pos, player);
         if (block instanceof ConferenceTableBlock table) return table.toggleSupport(state, level, pos, player);
+        if (block instanceof PoliceWaitingBenchBlock bench) return bench.toggleSupport(state, level, pos, player);
         if (block instanceof KitchenExhaustDuctBlock duct)
             return duct.toggleConnection(state, level, pos, player, context.getClickedFace(), context.getClickLocation());
         if (block instanceof OverbedTableBlock table) return table.cycleDesign(state, level, pos, player);

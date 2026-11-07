@@ -21,6 +21,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Four local joins form square work surfaces; no ticking or arrangement traversal. */
 public final class StainlessSteelPrepTableBlock extends RestaurantKitchenBlock {
+    @Override public VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+        return DecorationSupport.withTop(super.getBlockSupportShape(state, level, pos));
+    }
     public static final BooleanProperty LEFT = BooleanProperty.create("left");
     public static final BooleanProperty RIGHT = BooleanProperty.create("right");
     public static final BooleanProperty FRONT = BooleanProperty.create("front");
@@ -86,11 +89,11 @@ public final class StainlessSteelPrepTableBlock extends RestaurantKitchenBlock {
         for (int mask = 0; mask < 16; mask++) {
             boolean left = (mask & 1) != 0, right = (mask & 2) != 0;
             boolean front = (mask & 4) != 0, back = (mask & 8) != 0;
-            VoxelShape shape = Shapes.or(Block.box(0, 12.75, 0, 16, 14.5, 16), Block.box(0, 3.5, 0, 16, 4.25, 16));
-            if (!left && !front) shape = Shapes.or(shape, Block.box(1.125, 0, 1.125, 2.625, 13.5, 2.625));
-            if (!right && !front) shape = Shapes.or(shape, Block.box(13.375, 0, 1.125, 14.875, 13.5, 2.625));
-            if (!left && !back) shape = Shapes.or(shape, Block.box(1.125, 0, 13.375, 2.625, 13.5, 14.875));
-            if (!right && !back) shape = Shapes.or(shape, Block.box(13.375, 0, 13.375, 14.875, 13.5, 14.875));
+            VoxelShape shape = Shapes.or(Block.box(0, 14.25, 0, 16, 16, 16), Block.box(0, 3.5, 0, 16, 4.25, 16));
+            if (!left && !front) shape = Shapes.or(shape, Block.box(1.125, 0, 1.125, 2.625, 15, 2.625));
+            if (!right && !front) shape = Shapes.or(shape, Block.box(13.375, 0, 1.125, 14.875, 15, 2.625));
+            if (!left && !back) shape = Shapes.or(shape, Block.box(1.125, 0, 13.375, 2.625, 15, 14.875));
+            if (!right && !back) shape = Shapes.or(shape, Block.box(13.375, 0, 13.375, 14.875, 15, 14.875));
             shapes[mask] = rotations(shape);
         }
         return shapes;

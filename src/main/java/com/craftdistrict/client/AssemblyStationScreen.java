@@ -149,6 +149,10 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
         ResourceLocation previous = selected;
         String query = AssemblyCatalog.normalizeSearch(search.getValue());
         visible = rows.stream().filter(row -> AssemblyCatalog.matches(row.icon().getItem(), filter, row.searchName(), query)).toList();
+        if (filter == DecorationCollection.HOSPITAL) {
+            var order = filter.items();
+            visible = visible.stream().sorted(Comparator.comparingInt(row -> order.indexOf(row.icon().getItem()))).toList();
+        }
         if (visible.stream().noneMatch(row -> row.entry().id().equals(selected))) selected = visible.isEmpty() ? null : visible.get(0).entry().id();
         if (!Objects.equals(previous, selected)) quantity = 1;
         selection = visible.stream().filter(row -> row.entry().id().equals(selected)).findFirst().orElse(null);

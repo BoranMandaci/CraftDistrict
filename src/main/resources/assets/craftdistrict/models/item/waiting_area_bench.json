@@ -8,14 +8,14 @@
   },
   "elements": [
     {
-      "name": "connected_under_seat_beam",
+      "name": "continuous_under_seat_beam",
       "from": [
-        -15,
+        1,
         5.5,
         7
       ],
       "to": [
-        31,
+        15,
         6.5,
         10.5
       ],
@@ -77,62 +77,20 @@
       }
     },
     {
-      "name": "back_support_crossbar",
+      "name": "seat_shell",
       "from": [
-        -15,
-        8.5,
-        11.5
+        1.5,
+        6.5,
+        4
       ],
       "to": [
-        31,
-        9.125,
-        12.25
-      ],
-      "faces": {
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "left_floor_foot",
-      "from": [
-        -9,
-        0,
-        3
-      ],
-      "to": [
-        -7,
-        1,
-        13
+        14.5,
+        7.25,
+        12
       ],
       "faces": {
         "north": {
-          "texture": "#dark",
+          "texture": "#metal",
           "uv": [
             0,
             0,
@@ -141,7 +99,7 @@
           ]
         },
         "south": {
-          "texture": "#dark",
+          "texture": "#metal",
           "uv": [
             0,
             0,
@@ -150,7 +108,7 @@
           ]
         },
         "west": {
-          "texture": "#dark",
+          "texture": "#metal",
           "uv": [
             0,
             0,
@@ -159,7 +117,7 @@
           ]
         },
         "east": {
-          "texture": "#dark",
+          "texture": "#metal",
           "uv": [
             0,
             0,
@@ -168,7 +126,7 @@
           ]
         },
         "up": {
-          "texture": "#dark",
+          "texture": "#metal",
           "uv": [
             0,
             0,
@@ -177,7 +135,7 @@
           ]
         },
         "down": {
-          "texture": "#dark",
+          "texture": "#metal",
           "uv": [
             0,
             0,
@@ -188,17 +146,434 @@
       }
     },
     {
-      "name": "left_metal_leg",
+      "name": "seat_upholstery",
       "from": [
-        -8.75,
-        1,
-        7.25
+        1.75,
+        7.25,
+        4.25
       ],
       "to": [
-        -7.25,
+        14.25,
+        8,
+        11.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "continuous_backrest",
+      "from": [
+        1.5,
+        9,
+        11.75
+      ],
+      "to": [
+        14.5,
+        15.75,
+        12.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#seat",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "origin": [
+          8,
+          8.75,
+          12
+        ],
+        "axis": "x",
+        "angle": 22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "backrest_frame_bracket_left",
+      "from": [
+        3.75,
+        5.75,
+        10.5
+      ],
+      "to": [
+        4.5,
+        6.25,
+        12.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "angled_backrest_post_left",
+      "from": [
+        3.75,
+        6.25,
+        12.75
+      ],
+      "to": [
+        4.5,
+        14.25,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "origin": [
+          8,
+          8.75,
+          12
+        ],
+        "axis": "x",
+        "angle": 22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "backrest_frame_bracket_right",
+      "from": [
+        11.5,
+        5.75,
+        10.5
+      ],
+      "to": [
+        12.25,
+        6.25,
+        12.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "angled_backrest_post_right",
+      "from": [
+        11.5,
+        6.25,
+        12.75
+      ],
+      "to": [
+        12.25,
+        14.25,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "rotation": {
+        "origin": [
+          8,
+          8.75,
+          12
+        ],
+        "axis": "x",
+        "angle": 22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "left_armrest_mount",
+      "from": [
+        0.625,
         6.5,
         8.75
       ],
+      "to": [
+        1.375,
+        9.75,
+        9.75
+      ],
       "faces": {
         "north": {
           "texture": "#metal",
@@ -218,7 +593,7 @@
             16
           ]
         },
-        "west": {
+        "east": {
           "texture": "#metal",
           "uv": [
             0,
@@ -227,7 +602,7 @@
             16
           ]
         },
-        "east": {
+        "west": {
           "texture": "#metal",
           "uv": [
             0,
@@ -239,16 +614,16 @@
       }
     },
     {
-      "name": "left_back_support",
+      "name": "left_armrest_carrier",
       "from": [
-        -8.5,
-        6.5,
-        11.5
+        0.5,
+        9.75,
+        4.75
       ],
       "to": [
-        -7.5,
-        9.125,
-        12.25
+        1.5,
+        10.125,
+        10.5
       ],
       "faces": {
         "north": {
@@ -269,15 +644,6 @@
             16
           ]
         },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
         "east": {
           "texture": "#metal",
           "uv": [
@@ -287,7 +653,16 @@
             16
           ]
         },
-        "up": {
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
           "texture": "#metal",
           "uv": [
             0,
@@ -299,16 +674,16 @@
       }
     },
     {
-      "name": "right_floor_foot",
+      "name": "left_armrest_pad_base",
       "from": [
-        23,
-        0,
-        3
+        0.375,
+        10.125,
+        4.625
       ],
       "to": [
-        25,
-        1,
-        13
+        1.625,
+        10.375,
+        10.625
       ],
       "faces": {
         "north": {
@@ -329,7 +704,7 @@
             16
           ]
         },
-        "west": {
+        "east": {
           "texture": "#dark",
           "uv": [
             0,
@@ -338,7 +713,7 @@
             16
           ]
         },
-        "east": {
+        "west": {
           "texture": "#dark",
           "uv": [
             0,
@@ -368,20 +743,20 @@
       }
     },
     {
-      "name": "right_metal_leg",
+      "name": "left_armrest_pad_crown",
       "from": [
-        23.25,
-        1,
-        7.25
+        0.5,
+        10.375,
+        4.875
       ],
       "to": [
-        24.75,
-        6.5,
-        8.75
+        1.5,
+        10.625,
+        10.375
       ],
       "faces": {
         "north": {
-          "texture": "#metal",
+          "texture": "#dark",
           "uv": [
             0,
             0,
@@ -390,16 +765,7 @@
           ]
         },
         "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
+          "texture": "#dark",
           "uv": [
             0,
             0,
@@ -408,40 +774,7 @@
           ]
         },
         "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "right_back_support",
-      "from": [
-        23.5,
-        6.5,
-        11.5
-      ],
-      "to": [
-        24.5,
-        9.125,
-        12.25
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
+          "texture": "#dark",
           "uv": [
             0,
             0,
@@ -450,16 +783,7 @@
           ]
         },
         "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
+          "texture": "#dark",
           "uv": [
             0,
             0,
@@ -468,6 +792,57 @@
           ]
         },
         "up": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_armrest_mount",
+      "from": [
+        14.625,
+        6.5,
+        8.75
+      ],
+      "to": [
+        15.375,
+        9.75,
+        9.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
           "texture": "#metal",
           "uv": [
             0,
@@ -479,7 +854,196 @@
       }
     },
     {
-      "name": "center_floor_foot",
+      "name": "right_armrest_carrier",
+      "from": [
+        14.5,
+        9.75,
+        4.75
+      ],
+      "to": [
+        15.5,
+        10.125,
+        10.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#metal",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_armrest_pad_base",
+      "from": [
+        14.375,
+        10.125,
+        4.625
+      ],
+      "to": [
+        15.625,
+        10.375,
+        10.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_armrest_pad_crown",
+      "from": [
+        14.5,
+        10.375,
+        4.875
+      ],
+      "to": [
+        15.5,
+        10.625,
+        10.375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#dark",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_foot",
       "from": [
         7,
         0,
@@ -548,7 +1112,7 @@
       }
     },
     {
-      "name": "center_metal_leg",
+      "name": "pedestal_leg",
       "from": [
         7.25,
         1,
@@ -556,7 +1120,7 @@
       ],
       "to": [
         8.75,
-        6.5,
+        5.5,
         8.75
       ],
       "faces": {
@@ -597,1650 +1161,24 @@
           ]
         }
       }
-    },
-    {
-      "name": "seat_0_shell",
-      "from": [
-        -14.5,
-        6.5,
-        4
-      ],
-      "to": [
-        -1.5,
-        7.25,
-        12
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "seat_0_padded_surface",
-      "from": [
-        -14.25,
-        7.25,
-        4.25
-      ],
-      "to": [
-        -1.75,
-        8,
-        11.75
-      ],
-      "faces": {
-        "north": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "seat_0_backrest",
-      "from": [
-        -14.5,
-        9,
-        11.75
-      ],
-      "to": [
-        -1.5,
-        15.75,
-        12.75
-      ],
-      "faces": {
-        "north": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      },
-      "rotation": {
-        "origin": [
-          -8.0,
-          8.75,
-          12
-        ],
-        "axis": "x",
-        "angle": 22.5,
-        "rescale": false
-      }
-    },
-    {
-      "name": "seat_1_shell",
-      "from": [
-        1.5,
-        6.5,
-        4
-      ],
-      "to": [
-        14.5,
-        7.25,
-        12
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "seat_1_padded_surface",
-      "from": [
-        1.75,
-        7.25,
-        4.25
-      ],
-      "to": [
-        14.25,
-        8,
-        11.75
-      ],
-      "faces": {
-        "north": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "seat_1_backrest",
-      "from": [
-        1.5,
-        9,
-        11.75
-      ],
-      "to": [
-        14.5,
-        15.75,
-        12.75
-      ],
-      "faces": {
-        "north": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      },
-      "rotation": {
-        "origin": [
-          8.0,
-          8.75,
-          12
-        ],
-        "axis": "x",
-        "angle": 22.5,
-        "rescale": false
-      }
-    },
-    {
-      "name": "seat_2_shell",
-      "from": [
-        17.5,
-        6.5,
-        4
-      ],
-      "to": [
-        30.5,
-        7.25,
-        12
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "seat_2_padded_surface",
-      "from": [
-        17.75,
-        7.25,
-        4.25
-      ],
-      "to": [
-        30.25,
-        8,
-        11.75
-      ],
-      "faces": {
-        "north": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "seat_2_backrest",
-      "from": [
-        17.5,
-        9,
-        11.75
-      ],
-      "to": [
-        30.5,
-        15.75,
-        12.75
-      ],
-      "faces": {
-        "north": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#seat",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      },
-      "rotation": {
-        "origin": [
-          24.0,
-          8.75,
-          12
-        ],
-        "axis": "x",
-        "angle": 22.5,
-        "rescale": false
-      }
-    },
-    {
-      "name": "armrest_0_support",
-      "from": [
-        -15.5,
-        6.5,
-        9.75
-      ],
-      "to": [
-        -14.5,
-        9.75,
-        10.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_0_rail",
-      "from": [
-        -15.5,
-        9.75,
-        4.5
-      ],
-      "to": [
-        -14.5,
-        10.375,
-        11
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_0_dark_pad",
-      "from": [
-        -15.5,
-        10.375,
-        4.5
-      ],
-      "to": [
-        -14.5,
-        10.625,
-        10.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_1_support",
-      "from": [
-        -0.5,
-        6.5,
-        9.75
-      ],
-      "to": [
-        0.5,
-        9.75,
-        10.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_1_rail",
-      "from": [
-        -0.5,
-        9.75,
-        4.5
-      ],
-      "to": [
-        0.5,
-        10.375,
-        11
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_1_dark_pad",
-      "from": [
-        -0.5,
-        10.375,
-        4.5
-      ],
-      "to": [
-        0.5,
-        10.625,
-        10.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_2_support",
-      "from": [
-        15.5,
-        6.5,
-        9.75
-      ],
-      "to": [
-        16.5,
-        9.75,
-        10.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_2_rail",
-      "from": [
-        15.5,
-        9.75,
-        4.5
-      ],
-      "to": [
-        16.5,
-        10.375,
-        11
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_2_dark_pad",
-      "from": [
-        15.5,
-        10.375,
-        4.5
-      ],
-      "to": [
-        16.5,
-        10.625,
-        10.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_3_support",
-      "from": [
-        30.5,
-        6.5,
-        9.75
-      ],
-      "to": [
-        31.5,
-        9.75,
-        10.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_3_rail",
-      "from": [
-        30.5,
-        9.75,
-        4.5
-      ],
-      "to": [
-        31.5,
-        10.375,
-        11
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "armrest_3_dark_pad",
-      "from": [
-        30.5,
-        10.375,
-        4.5
-      ],
-      "to": [
-        31.5,
-        10.625,
-        10.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "south": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "west": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "east": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        },
-        "up": {
-          "texture": "#dark",
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ]
-        }
-      }
-    },
-    {
-      "name": "back_support_crossbar_surface_north",
-      "from": [
-        -15,
-        8.5,
-        11.5
-      ],
-      "to": [
-        -8.5,
-        9.125,
-        11.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            13.7391304,
-            0.0,
-            16.0,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "back_support_crossbar_surface_north",
-      "from": [
-        -7.5,
-        8.5,
-        11.5
-      ],
-      "to": [
-        23.5,
-        9.125,
-        11.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            2.6086957,
-            0.0,
-            13.3913043,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "back_support_crossbar_surface_north",
-      "from": [
-        24.5,
-        8.5,
-        11.5
-      ],
-      "to": [
-        31,
-        9.125,
-        11.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#metal",
-          "uv": [
-            0.0,
-            0.0,
-            2.2608696,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "back_support_crossbar_surface_south",
-      "from": [
-        -15,
-        8.5,
-        12.25
-      ],
-      "to": [
-        -8.5,
-        9.125,
-        12.25
-      ],
-      "faces": {
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            0.0,
-            0.0,
-            2.2608696,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "back_support_crossbar_surface_south",
-      "from": [
-        -7.5,
-        8.5,
-        12.25
-      ],
-      "to": [
-        23.5,
-        9.125,
-        12.25
-      ],
-      "faces": {
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            2.6086957,
-            0.0,
-            13.3913043,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "back_support_crossbar_surface_south",
-      "from": [
-        24.5,
-        8.5,
-        12.25
-      ],
-      "to": [
-        31,
-        9.125,
-        12.25
-      ],
-      "faces": {
-        "south": {
-          "texture": "#metal",
-          "uv": [
-            13.7391304,
-            0.0,
-            16.0,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "back_support_crossbar_surface_up",
-      "from": [
-        -15,
-        9.125,
-        11.5
-      ],
-      "to": [
-        -8.5,
-        9.125,
-        12.25
-      ],
-      "faces": {
-        "up": {
-          "texture": "#metal",
-          "uv": [
-            0.0,
-            0.0,
-            2.2608696,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "back_support_crossbar_surface_up",
-      "from": [
-        -7.5,
-        9.125,
-        11.5
-      ],
-      "to": [
-        23.5,
-        9.125,
-        12.25
-      ],
-      "faces": {
-        "up": {
-          "texture": "#metal",
-          "uv": [
-            2.6086957,
-            0.0,
-            13.3913043,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "back_support_crossbar_surface_up",
-      "from": [
-        24.5,
-        9.125,
-        11.5
-      ],
-      "to": [
-        31,
-        9.125,
-        12.25
-      ],
-      "faces": {
-        "up": {
-          "texture": "#metal",
-          "uv": [
-            13.7391304,
-            0.0,
-            16.0,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "right_back_support_surface_down",
-      "from": [
-        23.5,
-        6.5,
-        12
-      ],
-      "to": [
-        24.5,
-        6.5,
-        12.25
-      ],
-      "faces": {
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            5.3333333
-          ]
-        }
-      }
-    },
-    {
-      "name": "left_back_support_surface_down",
-      "from": [
-        -8.5,
-        6.5,
-        12
-      ],
-      "to": [
-        -7.5,
-        6.5,
-        12.25
-      ],
-      "faces": {
-        "down": {
-          "texture": "#metal",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            5.3333333
-          ]
-        }
-      }
     }
   ],
   "display": {
     "gui": {
       "rotation": [
-        20,
+        25,
         135,
         0
       ],
       "translation": [
-        0,
-        0.75,
+        -0.659943,
+        -0.472377,
         0
       ],
       "scale": [
-        0.32,
-        0.32,
-        0.32
+        0.65,
+        0.65,
+        0.65
       ]
     },
     "ground": {
@@ -2250,9 +1188,9 @@
         0
       ],
       "scale": [
-        0.25,
-        0.25,
-        0.25
+        0.45,
+        0.45,
+        0.45
       ]
     },
     "fixed": {
@@ -2262,9 +1200,9 @@
         0
       ],
       "scale": [
-        0.4,
-        0.4,
-        0.4
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "thirdperson_righthand": {
@@ -2274,9 +1212,9 @@
         0
       ],
       "scale": [
-        0.3,
-        0.3,
-        0.3
+        0.45,
+        0.45,
+        0.45
       ]
     },
     "thirdperson_lefthand": {
@@ -2286,9 +1224,9 @@
         0
       ],
       "scale": [
-        0.3,
-        0.3,
-        0.3
+        0.45,
+        0.45,
+        0.45
       ]
     },
     "firstperson_righthand": {
@@ -2298,9 +1236,9 @@
         0
       ],
       "scale": [
-        0.3,
-        0.3,
-        0.3
+        0.45,
+        0.45,
+        0.45
       ]
     },
     "firstperson_lefthand": {
@@ -2310,9 +1248,9 @@
         0
       ],
       "scale": [
-        0.3,
-        0.3,
-        0.3
+        0.45,
+        0.45,
+        0.45
       ]
     }
   }

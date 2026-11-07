@@ -151,6 +151,10 @@ public final class PoliceOfficeSecurityBlock extends MultiBlockDecorationBlock {
     public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return getShape(state, level, pos, context);
     }
+    @Override public VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+        VoxelShape support = super.getBlockSupportShape(state, level, pos);
+        return design == Design.FILE_CABINET && state.getValue(PRIMARY) ? DecorationSupport.withTop(support) : support;
+    }
 
     //? if >=1.21 {
     @Override protected MapCodec<? extends HorizontalDirectionalBlock> codec() { return CODEC; }

@@ -51,7 +51,7 @@ public class RestaurantStoragePropBlock extends CashRegisterBlock {
 
     private static VoxelShape[][][] shapes() {
         VoxelShape[] north = {
-                Block.box(0, 0, 0, 16, 14.5, 16),
+                Block.box(0, 0, 0, 16, 16, 16),
                 Block.box(1, 0, 2, 15, 9, 14),
                 Block.box(1.5, 0, 2, 14.5, 2.75, 14),
                 Shapes.or(Block.box(1.75, 0, 2.75, 14.25, 13.5, 14.5), Block.box(6, 0, .75, 10, 1.5, 2.75)),

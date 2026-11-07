@@ -21,6 +21,20 @@ import java.util.stream.Stream;
 public final class LightingColors {
     // Render workers only read immutable chunk palettes; packets publish a new copy.
     private static final Map<ResourceLocation, ConcurrentHashMap<Long, Long2ByteOpenHashMap>> COLORS = new ConcurrentHashMap<>();
+    private static final int[] DYE_RGB = new int[16];
+    private static final int[] DIMMED_DYE_RGB = new int[16];
+    static {
+        for (DyeColor dye : DyeColor.values()) {
+            //? if >=1.21 {
+            int rgb = dye.getTextureDiffuseColor();
+            //?} else {
+            /*float[] channels = dye.getTextureDiffuseColors();
+            int rgb = Math.round(channels[0]*255) << 16 | Math.round(channels[1]*255) << 8 | Math.round(channels[2]*255);
+            *///?}
+            DYE_RGB[dye.getId()] = rgb;
+            DIMMED_DYE_RGB[dye.getId()] = dim(rgb);
+        }
+    }
     private LightingColors() { }
 
     public static void init() {
@@ -28,7 +42,8 @@ public final class LightingColors {
                 .map(item -> ((BlockItem)item).getBlock()),
                 Stream.of(CraftDistrictBlocks.Hospital.SURGICAL_LIGHT.get())).toArray(Block[]::new);
         ColorHandlerRegistry.registerBlockColors((state, level, pos, tint) -> color(tint,
-                level == null || pos == null ? -1 : dye(pos)), lights);
+                level == null || pos == null || tint < 0 || (tint & 0x1000000) == 0
+                        || (tint & 0x4000000) != 0 ? -1 : dye(pos)), lights);
         ColorHandlerRegistry.registerItemColors((stack, tint) -> color(tint, -1), lights);
         LightDyeNetworking.receiveWith(LightingColors::receive);
         ClientPlayerEvent.CLIENT_PLAYER_QUIT.register(player -> COLORS.clear());
@@ -49,17 +64,14 @@ public final class LightingColors {
         int rgb = tint & 0xFFFFFF;
         // Warning/sign faces keep their original multicolor artwork, even if a stale palette exists.
         if ((tint & 0x4000000) == 0 && dye >= 0 && dye <= 15) {
-            //? if >=1.21 {
-            rgb = DyeColor.byId(dye).getTextureDiffuseColor();
-            //?} else {
-            /*float[] channels = DyeColor.byId(dye).getTextureDiffuseColors();
-            rgb = Math.round(channels[0]*255) << 16 | Math.round(channels[1]*255) << 8 | Math.round(channels[2]*255);
-            *///?}
+            return 0xFF000000 | ((tint & 0x2000000) != 0 ? DIMMED_DYE_RGB[dye] : DYE_RGB[dye]);
         }
-        if ((tint & 0x2000000) != 0) {
-            rgb = (int)((rgb >> 16 & 255)*.30) << 16 | (int)((rgb >> 8 & 255)*.30) << 8 | (int)((rgb & 255)*.30);
-        }
+        if ((tint & 0x2000000) != 0) rgb = dim(rgb);
         return 0xFF000000 | rgb;
+    }
+
+    private static int dim(int rgb) {
+        return (int)((rgb >> 16 & 255)*.30) << 16 | (int)((rgb >> 8 & 255)*.30) << 8 | (int)((rgb & 255)*.30);
     }
 
     public static void receive(LightDyeNetworking.Palette packet) {

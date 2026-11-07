@@ -28,6 +28,11 @@ public final class SupermarketDairyBlock extends WideTallDecorationBlock {
         return getShape(state, level, pos, context);
     }
 
+    @Override public VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+        VoxelShape support = super.getBlockSupportShape(state, level, pos);
+        return partIndex(state) >= 2 ? DecorationSupport.withTop(support) : support;
+    }
+
     //? if >=1.21 {
     @Override
     protected MapCodec<? extends HorizontalDirectionalBlock> codec() { return CODEC; }

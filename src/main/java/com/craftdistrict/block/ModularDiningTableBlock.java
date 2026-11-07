@@ -56,12 +56,12 @@ public final class ModularDiningTableBlock extends Block {
     private static VoxelShape[] makeShapes() {
         VoxelShape[] shapes = new VoxelShape[16];
         for (int mask = 0; mask < shapes.length; mask++) {
-            VoxelShape shape = box(0, 13.25, 0, 16, 14.5, 16);
+            VoxelShape shape = box(0, 14.75, 0, 16, 16, 16);
             for (int corner = 0; corner < 4; corner++) {
                 if ((mask & 1 << corner) == 0) continue;
                 double x = corner == 1 || corner == 2 ? 12.75 : 1.25;
                 double z = corner >= 2 ? 12.75 : 1.25;
-                shape = Shapes.or(shape, box(x, 0, z, x + 2, 13.25, z + 2));
+                shape = Shapes.or(shape, box(x, 0, z, x + 2, 14.75, z + 2));
             }
             shapes[mask] = shape.optimize();
         }

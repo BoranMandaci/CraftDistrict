@@ -25,6 +25,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Bakery.CROISSANT_TRAY,
             CraftDistrictBlocks.Bakery.COOKIE_TRAY,
             CraftDistrictBlocks.Bakery.BREAD_ROLLS_TRAY,
+            CraftDistrictBlocks.Bakery.BREAD_STACK,
             // Baking machines.
             CraftDistrictBlocks.Bakery.INDUSTRIAL_OVEN,
             CraftDistrictBlocks.Bakery.INDUSTRIAL_DOUGH_MIXER,
@@ -298,32 +299,41 @@ public enum DecorationCollection {
             CraftDistrictItems.WRENCH,
             CraftDistrictBlocks.Survival.ASSEMBLY_STATION),
     HOSPITAL("hospital", CraftDistrictBlocks.Hospital.BED,
+            // Patient rooms and bedside furniture.
             CraftDistrictBlocks.Hospital.BED,
-            CraftDistrictBlocks.Hospital.INCUBATOR,
             CraftDistrictBlocks.Hospital.BED_HEAD_PANEL,
-            CraftDistrictBlocks.Hospital.PATIENT_MONITOR,
-            CraftDistrictBlocks.Hospital.IV_STAND,
             CraftDistrictBlocks.Hospital.BEDSIDE_CABINET,
             CraftDistrictBlocks.Hospital.OVERBED_TABLE,
+            CraftDistrictBlocks.Hospital.INCUBATOR,
             CraftDistrictBlocks.Hospital.PRIVACY_CURTAIN,
-            CraftDistrictBlocks.Hospital.WHEELCHAIR,
+            // Reception, nursing and waiting areas.
+            CraftDistrictBlocks.Hospital.RECEPTION_DESK,
+            CraftDistrictBlocks.Hospital.NURSE_COUNTER,
+            CraftDistrictBlocks.Police.WAITING_BENCH,
+            // Examination and treatment.
             CraftDistrictBlocks.Hospital.EXAMINATION_TABLE,
             CraftDistrictBlocks.Hospital.DENTAL_CHAIR,
             CraftDistrictBlocks.Hospital.INSTRUMENT_TROLLEY,
-            CraftDistrictBlocks.Hospital.STRETCHER,
-            CraftDistrictBlocks.Hospital.DEFIBRILLATOR_CART,
-            CraftDistrictBlocks.Hospital.EKG_MACHINE,
-            CraftDistrictBlocks.Hospital.CRASH_CART,
             CraftDistrictBlocks.Hospital.SUPPLY_CABINET,
-            CraftDistrictBlocks.Hospital.RECEPTION_DESK,
-            CraftDistrictBlocks.Hospital.NURSE_COUNTER,
-            CraftDistrictBlocks.Hospital.DEPARTMENT_SIGN,
+            // Monitoring, patient transport and emergency equipment.
+            CraftDistrictBlocks.Hospital.PATIENT_MONITOR,
+            CraftDistrictBlocks.Hospital.IV_STAND,
+            CraftDistrictBlocks.Hospital.EKG_MACHINE,
+            CraftDistrictBlocks.Hospital.WHEELCHAIR,
+            CraftDistrictBlocks.Hospital.STRETCHER,
+            CraftDistrictBlocks.FireStation.RESCUE_STRETCHER,
+            CraftDistrictBlocks.Hospital.DEFIBRILLATOR_CART,
+            CraftDistrictBlocks.Hospital.CRASH_CART,
+            // Operating rooms and sterile equipment.
             CraftDistrictBlocks.Hospital.SURGICAL_TABLE,
             CraftDistrictBlocks.Hospital.SURGICAL_LIGHT,
             CraftDistrictBlocks.Hospital.ANESTHESIA_MACHINE,
-            CraftDistrictBlocks.Hospital.ENDOSCOPY_UNIT,
             CraftDistrictBlocks.Hospital.ELECTROSURGICAL_UNIT,
-            CraftDistrictBlocks.Hospital.IMAGING_DISPLAY,
+            CraftDistrictBlocks.Hospital.ENDOSCOPY_UNIT,
+            CraftDistrictBlocks.Hospital.INSTRUMENT_TRAY,
+            CraftDistrictBlocks.Hospital.STERILE_CABINET,
+            CraftDistrictBlocks.Hospital.AUTOCLAVE,
+            // Radiology and imaging.
             CraftDistrictBlocks.Hospital.MRI_SCANNER,
             CraftDistrictBlocks.Hospital.CT_SCANNER,
             CraftDistrictBlocks.Hospital.MOBILE_XRAY_MACHINE,
@@ -332,11 +342,14 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hospital.MAMMOGRAPHY_MACHINE,
             CraftDistrictBlocks.Hospital.RADIOLOGY_CONSOLE,
             CraftDistrictBlocks.Hospital.LEAD_APRON_RACK,
-            CraftDistrictBlocks.Hospital.STERILE_CABINET,
-            CraftDistrictBlocks.Hospital.AUTOCLAVE,
-            CraftDistrictBlocks.Hospital.INSTRUMENT_TRAY,
+            CraftDistrictBlocks.Hospital.IMAGING_DISPLAY,
+            // Hygiene, wall utilities and safety accessories.
             CraftDistrictBlocks.Hospital.HANDWASH_STATION,
-            CraftDistrictBlocks.Hospital.SANITIZER_DISPENSER);
+            CraftDistrictBlocks.Hospital.SANITIZER_DISPENSER,
+            CraftDistrictBlocks.Hospital.DEPARTMENT_SIGN,
+            CraftDistrictBlocks.FireStation.WALL_CLOCK,
+            CraftDistrictBlocks.FireStation.EXTINGUISHER,
+            CraftDistrictBlocks.FireStation.FIRST_AID_CABINET);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

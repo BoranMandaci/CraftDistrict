@@ -112,6 +112,9 @@ public abstract class HospitalClinicalBlock extends MultiBlockDecorationBlock {
         @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
             return (state.getValue(OPEN) ? OPEN_SHAPES : SHAPES)[RestaurantKitchenBlock.turn(state)];
         }
+        @Override public VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+            return DecorationSupport.withTop(super.getBlockSupportShape(state, level, pos));
+        }
     }
     public static final class Endoscopy extends HospitalClinicalBlock {
         private static final VoxelShape[][] SHAPES = HospitalClinicalBlock.shapes(1,

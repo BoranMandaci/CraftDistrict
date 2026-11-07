@@ -90,6 +90,10 @@ public class OfficeFurnitureBlock extends MultiBlockDecorationBlock {
     @Override public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return getShape(state, level, pos, context);
     }
+    @Override public VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+        VoxelShape support = super.getBlockSupportShape(state, level, pos);
+        return design == Design.VENDING && partIndex(state) == partCount() - 1 ? DecorationSupport.withTop(support) : support;
+    }
 
     private static VoxelShape[][][] buildShapes() {
         VoxelShape[][][] shapes = new VoxelShape[Design.values().length][][];

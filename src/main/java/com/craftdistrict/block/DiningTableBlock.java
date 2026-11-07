@@ -35,13 +35,13 @@ public final class DiningTableBlock extends Block {
     //?}
 
     private static final VoxelShape SQUARE = Shapes.or(
-            box(1, 13.25, 1, 15, 14.5, 15),
-            box(2, 0, 2, 4, 13.25, 4), box(12, 0, 2, 14, 13.25, 4),
-            box(2, 0, 12, 4, 13.25, 14), box(12, 0, 12, 14, 13.25, 14)).optimize();
+            box(1, 14.75, 1, 15, 16, 15),
+            box(2, 0, 2, 4, 14.75, 4), box(12, 0, 2, 14, 14.75, 4),
+            box(2, 0, 12, 4, 14.75, 14), box(12, 0, 12, 14, 14.75, 14)).optimize();
     private static final VoxelShape CAFE = Shapes.or(
-            box(5, 13.25, 1, 11, 14.5, 15), box(3, 13.25, 2, 13, 14.5, 14),
-            box(1.5, 13.25, 4, 14.5, 14.5, 12),
-            box(6.5, 1.25, 6.5, 9.5, 13.25, 9.5),
+            box(5, 14.75, 1, 11, 16, 15), box(3, 14.75, 2, 13, 16, 14),
+            box(1.5, 14.75, 4, 14.5, 16, 12),
+            box(6.5, 1.25, 6.5, 9.5, 14.75, 9.5),
             box(3, 0, 6, 13, 1.25, 10), box(6, 0, 3, 10, 1.25, 13)).optimize();
     private static final VoxelShape BAR = Shapes.or(
             box(1.5, 17.5, 1.5, 14.5, 19, 14.5),
@@ -58,6 +58,13 @@ public final class DiningTableBlock extends Block {
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return switch (design) { case SQUARE -> SQUARE; case CAFE -> CAFE; case BAR -> BAR; };
+    }
+
+    @Override
+    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+        VoxelShape shape = super.getBlockSupportShape(state, level, pos);
+        // Sturdy support is separate from the inset/rounded tabletop collision.
+        return design == Design.BAR ? shape : DecorationSupport.withTop(shape);
     }
 
     @Override

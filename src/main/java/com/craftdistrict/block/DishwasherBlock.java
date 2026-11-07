@@ -26,9 +26,9 @@ public final class DishwasherBlock extends RestaurantStoragePropBlock {
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
     private static final VoxelShape[] OPEN_SHAPES = RestaurantKitchenBlock.rotations(Shapes.or(
             Block.box(0, 0, 1.5, 16, 3, 16),
-            Block.box(0, 3, 1.5, .75, 12.5, 16), Block.box(15.25, 3, 1.5, 16, 12.5, 16),
-            Block.box(.75, 3, 15.25, 15.25, 12.5, 16), Block.box(0, 12.5, 0, 16, 14.5, 16),
-            Block.box(.5, 1.5, -8, 15.5, 3.25, 1.75)).optimize());
+            Block.box(0, 3, 1.5, .75, 13.75, 16), Block.box(15.25, 3, 1.5, 16, 13.75, 16),
+            Block.box(.75, 3, 15.25, 15.25, 13.75, 16), Block.box(0, 13.75, 0, 16, 16, 16),
+            Block.box(.5, 1.5, -9.25, 15.5, 3.25, 1.75)).optimize());
     //? if >=1.21 {
     public static final MapCodec<DishwasherBlock> CODEC = simpleCodec(DishwasherBlock::new);
     //?}

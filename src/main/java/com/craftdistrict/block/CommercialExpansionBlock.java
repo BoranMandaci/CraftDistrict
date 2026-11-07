@@ -78,6 +78,10 @@ public final class CommercialExpansionBlock extends MultiBlockDecorationBlock {
     @Override public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return getShape(state, level, pos, context);
     }
+    @Override public VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+        VoxelShape support = super.getBlockSupportShape(state, level, pos);
+        return design == Design.BOTTLE_RETURN && partIndex(state) == 1 ? DecorationSupport.withTop(support) : support;
+    }
     //? if >=1.21 {
     @Override protected MapCodec<? extends HorizontalDirectionalBlock> codec() { return CODEC; }
     //?}

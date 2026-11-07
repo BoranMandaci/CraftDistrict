@@ -1,68 +1,380 @@
 {
-  "variants": {
-    "end=false,facing=north,primary=true": {
-      "model": "craftdistrict:block/police/waiting_area_bench_primary",
-      "y": 0
+  "multipart": [
+    {
+      "when": {
+        "modular": "false",
+        "facing": "north",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_primary",
+        "y": 0
+      }
     },
-    "end=true,facing=north,primary=true": {
-      "model": "craftdistrict:block/police/waiting_area_bench_primary",
-      "y": 0
+    {
+      "when": {
+        "modular": "false",
+        "facing": "north",
+        "primary": "false",
+        "end": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_extension",
+        "y": 0
+      }
     },
-    "end=false,facing=east,primary=true": {
-      "model": "craftdistrict:block/police/waiting_area_bench_primary",
-      "y": 90
+    {
+      "when": {
+        "modular": "false",
+        "facing": "north",
+        "primary": "false",
+        "end": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_end",
+        "y": 0
+      }
     },
-    "end=true,facing=east,primary=true": {
-      "model": "craftdistrict:block/police/waiting_area_bench_primary",
-      "y": 90
+    {
+      "when": {
+        "modular": "true",
+        "facing": "north",
+        "left": "false",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_single",
+        "y": 0
+      }
     },
-    "end=false,facing=south,primary=true": {
-      "model": "craftdistrict:block/police/waiting_area_bench_primary",
-      "y": 180
+    {
+      "when": {
+        "modular": "true",
+        "facing": "north",
+        "left": "false",
+        "right": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_left_end",
+        "y": 0
+      }
     },
-    "end=true,facing=south,primary=true": {
-      "model": "craftdistrict:block/police/waiting_area_bench_primary",
-      "y": 180
+    {
+      "when": {
+        "modular": "true",
+        "facing": "north",
+        "left": "true",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_right_end",
+        "y": 0
+      }
     },
-    "end=false,facing=west,primary=true": {
-      "model": "craftdistrict:block/police/waiting_area_bench_primary",
-      "y": 270
+    {
+      "when": {
+        "modular": "true",
+        "facing": "north",
+        "left": "true",
+        "right": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_middle",
+        "y": 0
+      }
     },
-    "end=true,facing=west,primary=true": {
-      "model": "craftdistrict:block/police/waiting_area_bench_primary",
-      "y": 270
+    {
+      "when": {
+        "modular": "true",
+        "facing": "north",
+        "support": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_support",
+        "y": 0
+      }
     },
-    "end=false,facing=north,primary=false": {
-      "model": "craftdistrict:block/police/waiting_area_bench_extension",
-      "y": 0
+    {
+      "when": {
+        "modular": "false",
+        "facing": "east",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_primary",
+        "y": 90
+      }
     },
-    "end=false,facing=east,primary=false": {
-      "model": "craftdistrict:block/police/waiting_area_bench_extension",
-      "y": 90
+    {
+      "when": {
+        "modular": "false",
+        "facing": "east",
+        "primary": "false",
+        "end": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_extension",
+        "y": 90
+      }
     },
-    "end=false,facing=south,primary=false": {
-      "model": "craftdistrict:block/police/waiting_area_bench_extension",
-      "y": 180
+    {
+      "when": {
+        "modular": "false",
+        "facing": "east",
+        "primary": "false",
+        "end": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_end",
+        "y": 90
+      }
     },
-    "end=false,facing=west,primary=false": {
-      "model": "craftdistrict:block/police/waiting_area_bench_extension",
-      "y": 270
+    {
+      "when": {
+        "modular": "true",
+        "facing": "east",
+        "left": "false",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_single",
+        "y": 90
+      }
     },
-    "end=true,facing=north,primary=false": {
-      "model": "craftdistrict:block/police/waiting_area_bench_end",
-      "y": 0
+    {
+      "when": {
+        "modular": "true",
+        "facing": "east",
+        "left": "false",
+        "right": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_left_end",
+        "y": 90
+      }
     },
-    "end=true,facing=east,primary=false": {
-      "model": "craftdistrict:block/police/waiting_area_bench_end",
-      "y": 90
+    {
+      "when": {
+        "modular": "true",
+        "facing": "east",
+        "left": "true",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_right_end",
+        "y": 90
+      }
     },
-    "end=true,facing=south,primary=false": {
-      "model": "craftdistrict:block/police/waiting_area_bench_end",
-      "y": 180
+    {
+      "when": {
+        "modular": "true",
+        "facing": "east",
+        "left": "true",
+        "right": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_middle",
+        "y": 90
+      }
     },
-    "end=true,facing=west,primary=false": {
-      "model": "craftdistrict:block/police/waiting_area_bench_end",
-      "y": 270
+    {
+      "when": {
+        "modular": "true",
+        "facing": "east",
+        "support": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_support",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "modular": "false",
+        "facing": "south",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_primary",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "modular": "false",
+        "facing": "south",
+        "primary": "false",
+        "end": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_extension",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "modular": "false",
+        "facing": "south",
+        "primary": "false",
+        "end": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_end",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "modular": "true",
+        "facing": "south",
+        "left": "false",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_single",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "modular": "true",
+        "facing": "south",
+        "left": "false",
+        "right": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_left_end",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "modular": "true",
+        "facing": "south",
+        "left": "true",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_right_end",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "modular": "true",
+        "facing": "south",
+        "left": "true",
+        "right": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_middle",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "modular": "true",
+        "facing": "south",
+        "support": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_support",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "modular": "false",
+        "facing": "west",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_primary",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "modular": "false",
+        "facing": "west",
+        "primary": "false",
+        "end": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_extension",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "modular": "false",
+        "facing": "west",
+        "primary": "false",
+        "end": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_end",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "modular": "true",
+        "facing": "west",
+        "left": "false",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_single",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "modular": "true",
+        "facing": "west",
+        "left": "false",
+        "right": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_left_end",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "modular": "true",
+        "facing": "west",
+        "left": "true",
+        "right": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_right_end",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "modular": "true",
+        "facing": "west",
+        "left": "true",
+        "right": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_middle",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "modular": "true",
+        "facing": "west",
+        "support": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/waiting_area_bench_support",
+        "y": 270
+      }
     }
-  }
+  ]
 }

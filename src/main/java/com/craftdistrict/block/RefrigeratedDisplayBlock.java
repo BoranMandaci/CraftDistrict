@@ -60,6 +60,12 @@ public final class RefrigeratedDisplayBlock extends WideTallDecorationBlock {
         return getShape(state, level, pos, context);
     }
 
+    @Override
+    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+        VoxelShape shape = super.getBlockSupportShape(state, level, pos);
+        return partIndex(state) >= 2 ? DecorationSupport.withTop(shape) : shape;
+    }
+
     //? if >=1.21 {
     @Override
     protected MapCodec<? extends HorizontalDirectionalBlock> codec() {

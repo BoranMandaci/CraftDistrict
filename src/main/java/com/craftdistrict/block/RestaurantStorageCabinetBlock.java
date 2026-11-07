@@ -29,7 +29,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Four linked cabinet sections; the shared grid lifecycle owns placement and loot cleanup. */
+/** Four linked sections; complete per-state models let outward-open doors opt out of cell-local AO. */
 public final class RestaurantStorageCabinetBlock extends WideTallDecorationBlock {
     public enum Design implements StringRepresentable {
         REFRIGERATOR, PANTRY;
@@ -148,6 +148,11 @@ public final class RestaurantStorageCabinetBlock extends WideTallDecorationBlock
 
     @Override public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return getShape(state, level, pos, context);
+    }
+
+    @Override public VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+        VoxelShape support = super.getBlockSupportShape(state, level, pos);
+        return partIndex(state) >= 2 ? DecorationSupport.withTop(support) : support;
     }
 
     //? if >=1.21 {

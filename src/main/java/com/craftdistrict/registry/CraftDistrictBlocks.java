@@ -11,6 +11,7 @@ import com.craftdistrict.block.DoughPreparationTableBlock;
 import com.craftdistrict.block.DoughSheeterBlock;
 import com.craftdistrict.block.FlourSacksBlock;
 import com.craftdistrict.block.PastryTrayBlock;
+import com.craftdistrict.block.BakeryBreadStackBlock;
 import com.craftdistrict.block.IndustrialDoughMixerBlock;
 import com.craftdistrict.block.BakerySignageBlock;
 import com.craftdistrict.block.BakeryTrayRackBlock;
@@ -489,6 +490,9 @@ public final class CraftDistrictBlocks {
                 () -> new PastryTrayBlock(PastryTrayBlock.Variant.COOKIE, pastryTrayProperties()));
         public static final RegistrySupplier<PastryTrayBlock> BREAD_ROLLS_TRAY = register("bread_rolls_tray",
                 () -> new PastryTrayBlock(PastryTrayBlock.Variant.BREAD_ROLLS, pastryTrayProperties()));
+        public static final RegistrySupplier<BakeryBreadStackBlock> BREAD_STACK = register("bakery_bread_stack",
+                () -> new BakeryBreadStackBlock(BlockBehaviour.Properties.of()
+                        .strength(0.5F).sound(SoundType.WOOL).noOcclusion()));
         public static final RegistrySupplier<PastryTrayBlock> EMPTY_BAKING_TRAY = register("empty_baking_tray",
                 () -> new PastryTrayBlock(PastryTrayBlock.Variant.EMPTY, pastryTrayProperties()));
         public static final RegistrySupplier<IndustrialDoughMixerBlock> INDUSTRIAL_DOUGH_MIXER = register("industrial_dough_mixer",

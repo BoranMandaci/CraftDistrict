@@ -174,13 +174,13 @@ public class OfficeConnectedBlock extends CashRegisterBlock {
     private static VoxelShape[][] conferenceShapes() {
         VoxelShape[][] shapes = new VoxelShape[32][];
         for (int mask = 0; mask < shapes.length; mask++) {
-            VoxelShape shape = Shapes.or(box(0,13.25,0,16,14.5,16),
-                    box(5.5,12.75,5.5,10.5,13.25,10.5));
-            if ((mask & 1) != 0) shape = Shapes.or(shape,box(0,12.75,7,5.5,13.25,9));
-            if ((mask & 2) != 0) shape = Shapes.or(shape,box(10.5,12.75,7,16,13.25,9));
-            if ((mask & 4) != 0) shape = Shapes.or(shape,box(7,12.75,0,9,13.25,5.5));
-            if ((mask & 8) != 0) shape = Shapes.or(shape,box(7,12.75,10.5,9,13.25,16));
-            if ((mask & 16) != 0) shape = Shapes.or(shape,box(6.25,0,6.25,9.75,12.75,9.75));
+            VoxelShape shape = Shapes.or(box(0,14.75,0,16,16,16),
+                    box(5.5,14.25,5.5,10.5,14.75,10.5));
+            if ((mask & 1) != 0) shape = Shapes.or(shape,box(0,14.25,7,5.5,14.75,9));
+            if ((mask & 2) != 0) shape = Shapes.or(shape,box(10.5,14.25,7,16,14.75,9));
+            if ((mask & 4) != 0) shape = Shapes.or(shape,box(7,14.25,0,9,14.75,5.5));
+            if ((mask & 8) != 0) shape = Shapes.or(shape,box(7,14.25,10.5,9,14.75,16));
+            if ((mask & 16) != 0) shape = Shapes.or(shape,box(6.25,0,6.25,9.75,14.25,9.75));
             shapes[mask] = RestaurantKitchenBlock.rotations(shape.optimize());
         }
         return shapes;

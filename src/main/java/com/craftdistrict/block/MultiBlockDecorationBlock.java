@@ -107,10 +107,11 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
                 ? CollisionContext.empty() : CollisionContext.of(context.getPlayer());
         for (int index = 0; index < partCount(placementState); index++) {
             BlockPos partPos = primaryPos.offset(partOffset(placementState, index));
+            BlockState partState = stateForPart(placementState, index);
             if (!isWithinPlacementBounds(level, partPos)
                     || !level.getBlockState(partPos).canBeReplaced(context)
-                    || !stateForPart(placementState, index).canSurvive(level, partPos)
-                    || !level.isUnobstructed(stateForPart(placementState, index), partPos, collisionContext)) {
+                    || !partState.canSurvive(level, partPos)
+                    || !level.isUnobstructed(partState, partPos, collisionContext)) {
                 return null;
             }
         }
@@ -158,25 +159,35 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
         }
         CollisionContext collisionContext = placer == null
                 ? CollisionContext.empty() : CollisionContext.of(placer);
+        int count = partCount(state);
+        if (count == 1) return;
+        // Reuse this immutable layout during all callback/replacement checks.
+        // Large fixtures previously rebuilt it for every already-written part.
+        BlockPos[] positions = new BlockPos[count];
+        BlockState[] expected = new BlockState[count];
+        for (int index = 0; index < count; index++) {
+            positions[index] = pos.offset(partOffset(state, index)).immutable();
+            expected[index] = stateForPart(state, index);
+        }
         // Check the complete footprint before writing any associated part.
-        for (int index = 1; index < partCount(state); index++) {
-            if (!canPlacePart(level, pos, state, index, collisionContext)) {
+        for (int index = 1; index < count; index++) {
+            if (!canPlacePart(level, positions[index], expected[index], collisionContext)) {
                 rollbackPlacement(level, pos, state, 1);
                 return;
             }
         }
         int placed = 1;
-        for (int index = 1; index < partCount(state); index++) {
-            BlockPos partPos = pos.offset(partOffset(state, index));
+        for (int index = 1; index < count; index++) {
+            BlockPos partPos = positions[index];
             // Earlier writes can invoke other mods' callbacks: recheck each write.
-            if (!canPlacePart(level, pos, state, index, collisionContext)
-                    || !level.setBlock(partPos, stateForPart(state, index), LINKED_PART_UPDATE_FLAGS)) {
+            if (!canPlacePart(level, partPos, expected[index], collisionContext)
+                    || !level.setBlock(partPos, expected[index], LINKED_PART_UPDATE_FLAGS)) {
                 rollbackPlacement(level, pos, state, placed);
                 return;
             }
             placed++;
             for (int written = 0; written < placed; written++) {
-                if (level.getBlockState(pos.offset(partOffset(state, written))) != stateForPart(state, written)) {
+                if (level.getBlockState(positions[written]) != expected[written]) {
                     rollbackPlacement(level, pos, state, placed);
                     return;
                 }
@@ -184,13 +195,12 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
         }
     }
 
-    private boolean canPlacePart(Level level, BlockPos origin, BlockState state, int index,
+    private boolean canPlacePart(Level level, BlockPos partPos, BlockState expected,
                                  CollisionContext collisionContext) {
-        BlockPos partPos = origin.offset(partOffset(state, index));
         return isWithinPlacementBounds(level, partPos)
                 && level.getBlockState(partPos).canBeReplaced()
-                && stateForPart(state, index).canSurvive(level, partPos)
-                && level.isUnobstructed(stateForPart(state, index), partPos, collisionContext);
+                && expected.canSurvive(level, partPos)
+                && level.isUnobstructed(expected, partPos, collisionContext);
     }
 
     private void rollbackPlacement(Level level, BlockPos origin, BlockState state, int placed) {

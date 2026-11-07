@@ -15,10 +15,10 @@ final class RefrigeratedDisplayShapes {
                     Block.box(0, 0, 0.875, 15.25, 7.75, 15.5),
                     Block.box(0, 7.75, 1.125, 15.25, 16, 15.5)).optimize()),
             rotations(Shapes.or(
-                    Block.box(0.75, 0, 1.125, 16, 15.5, 15.5),
+                    Block.box(0.75, 0, 1.125, 16, 16, 15.5),
                     Block.box(12.5, 0.75, 15.5, 13.125, 5.875, 16)).optimize()),
             rotations(Shapes.or(
-                    Block.box(0, 0, 1.125, 15.25, 15.5, 15.5),
+                    Block.box(0, 0, 1.125, 15.25, 16, 15.5),
                     Block.box(2.75, 0.75, 15.5, 3.375, 5.875, 16)).optimize())
     };
 
