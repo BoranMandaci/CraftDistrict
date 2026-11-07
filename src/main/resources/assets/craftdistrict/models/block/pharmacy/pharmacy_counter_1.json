@@ -1,0 +1,1337 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "render_type": "minecraft:solid",
+  "textures": {
+    "atlas": "craftdistrict:block/pharmacy/pharmacy",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "recessed_plinth",
+      "from": [
+        0,
+        0,
+        1.5
+      ],
+      "to": [
+        15.5,
+        0.875,
+        14.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            4.0,
+            12.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            11.0,
+            4.0,
+            12.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            4.0,
+            11.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            11.0,
+            4.0,
+            12.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "closed_cabinet",
+      "from": [
+        0,
+        0.875,
+        1
+      ],
+      "to": [
+        16,
+        13.25,
+        15
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            1.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            1.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            1.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "worktop",
+      "from": [
+        0,
+        13.25,
+        0
+      ],
+      "to": [
+        16,
+        14.25,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            1.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            1.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            1.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "customer_ledge",
+      "from": [
+        0,
+        14.25,
+        0
+      ],
+      "to": [
+        16,
+        15,
+        2
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            5.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            5.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "customer_panel_1",
+      "from": [
+        0.5,
+        1.5,
+        0.875
+      ],
+      "to": [
+        15.25,
+        10.75,
+        1
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "green_front_band_1",
+      "from": [
+        0.5,
+        10.75,
+        0.75
+      ],
+      "to": [
+        15.25,
+        12,
+        1
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            0.0,
+            8.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "staff_cabinet_1",
+      "from": [
+        0.5,
+        1.625,
+        15
+      ],
+      "to": [
+        15.25,
+        10.75,
+        15.125
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "drawer_1",
+      "from": [
+        0.5,
+        11,
+        15
+      ],
+      "to": [
+        15.25,
+        12.75,
+        15.125
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "staff_handle_1",
+      "from": [
+        1.5,
+        8.25,
+        15.125
+      ],
+      "to": [
+        1.875,
+        10,
+        15.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "drawer_handle_1",
+      "from": [
+        4.5,
+        11.625,
+        15.125
+      ],
+      "to": [
+        11.25,
+        12,
+        15.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "scanner_base",
+      "from": [
+        0,
+        14.25,
+        11.75
+      ],
+      "to": [
+        3,
+        14.75,
+        14.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10.153846,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            11.846154,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.153846,
+            0.0,
+            12.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "scanner_window",
+      "from": [
+        0,
+        14.75,
+        12
+      ],
+      "to": [
+        2.75,
+        14.8125,
+        14.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            6.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "paperwork",
+      "from": [
+        4.25,
+        14.25,
+        10.75
+      ],
+      "to": [
+        8,
+        14.375,
+        14.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            6.0,
+            8.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "phone_console",
+      "from": [
+        10,
+        14.25,
+        10
+      ],
+      "to": [
+        14.5,
+        15.125,
+        14.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            6.0,
+            14.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "handset_mount_0",
+      "from": [
+        10.375,
+        15.125,
+        10.5
+      ],
+      "to": [
+        11.125,
+        15.75,
+        11.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            14.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            14.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            14.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            14.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "handset_mount_1",
+      "from": [
+        13.375,
+        15.125,
+        10.5
+      ],
+      "to": [
+        14.125,
+        15.75,
+        11.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            14.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            14.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            14.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            0.0,
+            14.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "telephone_handset",
+      "from": [
+        10.25,
+        15.75,
+        10.5
+      ],
+      "to": [
+        14.25,
+        16.375,
+        11.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_a",
+      "from": [
+        4,
+        14.25,
+        3.75
+      ],
+      "to": [
+        6,
+        18.0,
+        5.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            8.0,
+            6.0,
+            10.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            8.0,
+            6.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_b",
+      "from": [
+        6.5,
+        14.25,
+        3.75
+      ],
+      "to": [
+        8.875,
+        17.125,
+        5.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            8.0,
+            8.0,
+            10.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            8.0,
+            8.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medicine_c",
+      "from": [
+        9.5,
+        14.25,
+        4.75
+      ],
+      "to": [
+        11.5,
+        16.75,
+        6.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            10.0,
+            2.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            10.0,
+            2.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "pharmacy_bottle_body",
+      "from": [
+        12.75,
+        14.25,
+        4
+      ],
+      "to": [
+        14.375,
+        17.37,
+        5.625
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            10.0,
+            10.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            10.0,
+            10.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "pharmacy_bottle_neck",
+      "from": [
+        13.107500000000002,
+        17.37,
+        4.3575
+      ],
+      "to": [
+        14.017499999999998,
+        17.85,
+        5.2675
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "pharmacy_bottle_cap",
+      "from": [
+        13.026250000000001,
+        17.85,
+        4.27625
+      ],
+      "to": [
+        14.098749999999999,
+        18.25,
+        5.34875
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        }
+      }
+    }
+  ]
+}

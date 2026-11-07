@@ -87,13 +87,15 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
         filterIcons.clear();
         filterIcons.add(new ItemStack(CraftDistrictBlocks.Survival.ASSEMBLY_STATION.get()));
         int start = 8;
+        int filterStep = Math.min(27, 245 / (AssemblyCatalog.collections().size() + 1));
+        int filterWidth = Math.min(24, filterStep - 2);
         filters.add(addRenderableWidget(Button.builder(Component.empty(), button -> chooseFilter(null))
-                .bounds(leftPos + start, topPos + 32, 24, 20).tooltip(Tooltip.create(text("all"))).build()));
+                .bounds(leftPos + start, topPos + 32, filterWidth, 20).tooltip(Tooltip.create(text("all"))).build()));
         for (DecorationCollection collection : AssemblyCatalog.collections()) {
             filterIcons.add(collection.icon());
-            int x = start + filters.size() * 27;
+            int x = start + filters.size() * filterStep;
             filters.add(addRenderableWidget(Button.builder(Component.empty(), button -> chooseFilter(collection))
-                    .bounds(leftPos + x, topPos + 32, 24, 20).tooltip(Tooltip.create(collection.title())).build()));
+                    .bounds(leftPos + x, topPos + 32, filterWidth, 20).tooltip(Tooltip.create(collection.title())).build()));
         }
         decrease = addRenderableWidget(Button.builder(Component.literal("-"), button -> setQuantity(quantity - 1))
                 .bounds(leftPos + 253, topPos + 32, 16, 20).tooltip(Tooltip.create(text("decrease"))).build());
@@ -149,7 +151,7 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
         ResourceLocation previous = selected;
         String query = AssemblyCatalog.normalizeSearch(search.getValue());
         visible = rows.stream().filter(row -> AssemblyCatalog.matches(row.icon().getItem(), filter, row.searchName(), query)).toList();
-        if (filter == DecorationCollection.HOSPITAL) {
+        if (filter == DecorationCollection.HOSPITAL || filter == DecorationCollection.PHARMACY) {
             var order = filter.items();
             visible = visible.stream().sorted(Comparator.comparingInt(row -> order.indexOf(row.icon().getItem()))).toList();
         }
@@ -308,7 +310,7 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
         *///?}
         super.render(graphics, mouseX, mouseY, delta);
         for (int i = 0; i < filters.size(); i++) {
-            graphics.renderItem(filterIcons.get(i), filters.get(i).getX() + 4, filters.get(i).getY() + 2);
+            graphics.renderItem(filterIcons.get(i), filters.get(i).getX() + (filters.get(i).getWidth() - 16) / 2, filters.get(i).getY() + 2);
         }
         renderTooltip(graphics, mouseX, mouseY);
         int x = mouseX - leftPos, y = mouseY - topPos;

@@ -90,6 +90,7 @@ public final class DecorationBreakParticles {
                 || block instanceof NurseStationCounterBlock || block instanceof HospitalDepartmentSignBlock
                 || block instanceof SurgicalTableBlock || block instanceof SurgicalCeilingLightBlock
                 || block instanceof MedicalImagingDisplayBlock
+                || block instanceof com.craftdistrict.block.PharmacyFixtureBlock
                 || block instanceof FireDispatchDeskBlock || block instanceof SupermarketSelfCheckoutBlock
                 || state.is(CraftDistrictBlocks.Police.BLUE_CHAIR.get())
                 || state.is(CraftDistrictBlocks.Restaurant.STAINLESS_STEEL_PREP_TABLE.get())

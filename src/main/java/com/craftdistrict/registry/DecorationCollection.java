@@ -349,7 +349,13 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hospital.DEPARTMENT_SIGN,
             CraftDistrictBlocks.FireStation.WALL_CLOCK,
             CraftDistrictBlocks.FireStation.EXTINGUISHER,
-            CraftDistrictBlocks.FireStation.FIRST_AID_CABINET);
+            CraftDistrictBlocks.FireStation.FIRST_AID_CABINET),
+    PHARMACY("pharmacy", CraftDistrictBlocks.Pharmacy.SIGN,
+            CraftDistrictBlocks.Pharmacy.SIGN,
+            CraftDistrictBlocks.Pharmacy.COUNTER,
+            CraftDistrictBlocks.Pharmacy.MEDICINE_WALL_SHELF,
+            CraftDistrictBlocks.Pharmacy.OTC_DISPLAY_SHELF,
+            CraftDistrictBlocks.Pharmacy.GLASS_DISPLAY);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

@@ -38,6 +38,7 @@ import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
 import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.HospitalBedBlock;
 import com.craftdistrict.block.HospitalWideBlock;
+import com.craftdistrict.block.PharmacyFixtureBlock;
 import com.craftdistrict.block.HospitalRadiologyBlock;
 import com.craftdistrict.block.HospitalClinicalBlock;
 import com.craftdistrict.block.HospitalUtilityBlock;
@@ -162,6 +163,7 @@ public final class CraftDistrictBlocks {
         Restaurant.initialize();
         Office.initialize();
         Hospital.initialize();
+        Pharmacy.initialize();
         Survival.initialize();
         BLOCKS.register();
     }
@@ -174,6 +176,25 @@ public final class CraftDistrictBlocks {
                 ? new BedItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
+    }
+
+    public static final class Pharmacy {
+        public static final RegistrySupplier<PharmacyFixtureBlock> SIGN = register("pharmacy_sign",
+                () -> new PharmacyFixtureBlock(PharmacyFixtureBlock.Design.SIGN, properties()));
+        public static final RegistrySupplier<PharmacyFixtureBlock> COUNTER = register("pharmacy_counter",
+                () -> new PharmacyFixtureBlock(PharmacyFixtureBlock.Design.COUNTER, properties()));
+        public static final RegistrySupplier<MedicalSupplyCabinetBlock> MEDICINE_WALL_SHELF = register("medicine_wall_shelf",
+                () -> new MedicalSupplyCabinetBlock(properties()));
+        public static final RegistrySupplier<HospitalEquipmentBlock> OTC_DISPLAY_SHELF = register("otc_display_shelf",
+                () -> new HospitalEquipmentBlock(HospitalEquipmentBlock.Design.STERILE_CABINET, properties()));
+        public static final RegistrySupplier<PharmacyFixtureBlock> GLASS_DISPLAY = register("pharmacy_glass_display",
+                () -> new PharmacyFixtureBlock(PharmacyFixtureBlock.Design.GLASS_DISPLAY, properties()));
+
+        private static BlockBehaviour.Properties properties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
+        }
+        private Pharmacy() { }
+        private static void initialize() { }
     }
 
     public static final class Hospital {
