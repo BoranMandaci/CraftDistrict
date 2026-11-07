@@ -1,0 +1,442 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "render_type": "minecraft:solid",
+  "textures": {
+    "atlas": "craftdistrict:block/pharmacy/pharmacy",
+    "storage": "craftdistrict:block/pharmacy/storage",
+    "customer": "craftdistrict:block/pharmacy/customer",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "stable_kiosk_plinth",
+      "from": [
+        1,
+        0,
+        2.5
+      ],
+      "to": [
+        15,
+        1.5,
+        14.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            4.0,
+            12.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            4.0,
+            12.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            4.0,
+            12.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            4.0,
+            12.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            4.0,
+            12.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            4.0,
+            12.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "clinical_kiosk_body",
+      "from": [
+        2.25,
+        1.5,
+        4
+      ],
+      "to": [
+        13.75,
+        15.25,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "work_surface",
+      "from": [
+        1,
+        15.25,
+        1.5
+      ],
+      "to": [
+        15,
+        16,
+        14.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_cuff_badge",
+      "from": [
+        4,
+        6,
+        3.9375
+      ],
+      "to": [
+        12,
+        12.5,
+        4
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#customer",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "low_vent",
+      "from": [
+        6,
+        2.5,
+        3.875
+      ],
+      "to": [
+        10,
+        4.5,
+        4
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            14.0,
+            8.0,
+            16.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "clinical_green_band",
+      "from": [
+        2.75,
+        13.5,
+        3.875
+      ],
+      "to": [
+        13.25,
+        14.5,
+        4
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            0.0,
+            6.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "finished_rear_panel",
+      "from": [
+        3,
+        3,
+        14
+      ],
+      "to": [
+        13,
+        13.5,
+        14.125
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12.0,
+            4.0,
+            14.0,
+            6.0
+          ]
+        }
+      }
+    }
+  ]
+}

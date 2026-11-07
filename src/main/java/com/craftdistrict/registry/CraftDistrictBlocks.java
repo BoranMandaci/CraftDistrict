@@ -41,6 +41,8 @@ import com.craftdistrict.block.HospitalWideBlock;
 import com.craftdistrict.block.PharmacyFixtureBlock;
 import com.craftdistrict.block.PharmacyCabinetBlock;
 import com.craftdistrict.block.PillCountingStationBlock;
+import com.craftdistrict.block.PharmacyAccessoryBlock;
+import com.craftdistrict.block.PharmacyKioskBlock;
 import com.craftdistrict.block.HospitalRadiologyBlock;
 import com.craftdistrict.block.HospitalClinicalBlock;
 import com.craftdistrict.block.HospitalUtilityBlock;
@@ -201,6 +203,15 @@ public final class CraftDistrictBlocks {
                 () -> new PillCountingStationBlock(properties()));
         public static final RegistrySupplier<PharmacyCabinetBlock> SECURED_CABINET = register("secured_medicine_cabinet",
                 () -> new PharmacyCabinetBlock(PharmacyCabinetBlock.Style.SECURED, properties()));
+        public static final RegistrySupplier<PharmacyAccessoryBlock> PROMOTIONAL_STAND = register("pharmacy_promotional_stand",
+                () -> new PharmacyAccessoryBlock(PharmacyAccessoryBlock.Style.PROMOTIONAL, properties()));
+        public static final RegistrySupplier<PharmacyAccessoryBlock> MEDICINE_STACK = register("medicine_bottle_box_stack",
+                () -> new PharmacyAccessoryBlock(PharmacyAccessoryBlock.Style.MEDICINE_STACK,
+                        properties().strength(.5F).sound(SoundType.WOOD)));
+        public static final RegistrySupplier<PharmacyKioskBlock> QUEUE_TICKET_DISPENSER = register("queue_ticket_dispenser",
+                () -> new PharmacyKioskBlock(PharmacyKioskBlock.Style.QUEUE_TICKET, properties()));
+        public static final RegistrySupplier<PharmacyKioskBlock> BLOOD_PRESSURE_KIOSK = register("blood_pressure_kiosk",
+                () -> new PharmacyKioskBlock(PharmacyKioskBlock.Style.BLOOD_PRESSURE, properties()));
 
         private static BlockBehaviour.Properties properties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();

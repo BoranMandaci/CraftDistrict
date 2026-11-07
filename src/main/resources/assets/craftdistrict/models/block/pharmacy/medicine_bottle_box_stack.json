@@ -1,0 +1,982 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "render_type": "minecraft:solid",
+  "textures": {
+    "atlas": "craftdistrict:block/pharmacy/pharmacy",
+    "storage": "craftdistrict:block/pharmacy/storage",
+    "customer": "craftdistrict:block/pharmacy/customer",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "organizer_base",
+      "from": [
+        1.5,
+        0,
+        2
+      ],
+      "to": [
+        14.5,
+        0.375,
+        14
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tall_prescription_bottle_body",
+      "from": [
+        2.5,
+        0.375,
+        3
+      ],
+      "to": [
+        4.75,
+        5.445,
+        5.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#storage",
+          "uv": [
+            12.0,
+            8.0,
+            14.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#storage",
+          "uv": [
+            12.0,
+            8.0,
+            14.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tall_prescription_bottle_neck",
+      "from": [
+        2.95,
+        5.445,
+        3.45
+      ],
+      "to": [
+        4.3,
+        6.16,
+        4.8
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tall_prescription_bottle_cap",
+      "from": [
+        2.78125,
+        6.16,
+        3.28125
+      ],
+      "to": [
+        4.46875,
+        6.875,
+        4.96875
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medium_medicine_bottle_body",
+      "from": [
+        10.25,
+        0.375,
+        8
+      ],
+      "to": [
+        12.5,
+        4.275,
+        10.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#customer",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#customer",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medium_medicine_bottle_neck",
+      "from": [
+        10.7,
+        4.275,
+        8.45
+      ],
+      "to": [
+        12.05,
+        4.825,
+        9.8
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medium_medicine_bottle_cap",
+      "from": [
+        10.53125,
+        4.825,
+        8.28125
+      ],
+      "to": [
+        12.21875,
+        5.375,
+        9.96875
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "small_medicine_bottle_body",
+      "from": [
+        8,
+        0.375,
+        2.75
+      ],
+      "to": [
+        9.875,
+        3.69,
+        4.625
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            8.0,
+            6.0,
+            10.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            8.0,
+            6.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "small_medicine_bottle_neck",
+      "from": [
+        8.375,
+        3.69,
+        3.125
+      ],
+      "to": [
+        9.5,
+        4.157500000000001,
+        4.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "small_medicine_bottle_cap",
+      "from": [
+        8.234375,
+        4.157500000000001,
+        2.984375
+      ],
+      "to": [
+        9.640625,
+        4.625,
+        4.390625
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            4.0,
+            16.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "bottom_box",
+      "from": [
+        2,
+        0.375,
+        9.25
+      ],
+      "to": [
+        6.75,
+        2.625,
+        12.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            10.0,
+            2.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            10.0,
+            2.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "stacked_box",
+      "from": [
+        2.5,
+        2.625,
+        9.5
+      ],
+      "to": [
+        6.25,
+        5.125,
+        12.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            8.0,
+            8.0,
+            10.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6.0,
+            8.0,
+            8.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "middle_box",
+      "from": [
+        6.75,
+        0.375,
+        6
+      ],
+      "to": [
+        9.75,
+        3.625,
+        8.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            10.0,
+            10.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            10.0,
+            10.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "small_box",
+      "from": [
+        10,
+        0.375,
+        3.25
+      ],
+      "to": [
+        13.25,
+        3.125,
+        5.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            10.0,
+            6.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0,
+            10.0,
+            6.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "sealed_blister_pack",
+      "from": [
+        2.875,
+        5.125,
+        10
+      ],
+      "to": [
+        5.75,
+        5.3125,
+        12.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            10.0,
+            12.0,
+            12.0,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "folded_prescription",
+      "from": [
+        7,
+        0.375,
+        10.5
+      ],
+      "to": [
+        10,
+        0.5,
+        13
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#storage",
+          "uv": [
+            0.0,
+            12.0,
+            4.0,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    }
+  ]
+}
