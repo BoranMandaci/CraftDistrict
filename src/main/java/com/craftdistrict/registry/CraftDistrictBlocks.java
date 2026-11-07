@@ -39,6 +39,8 @@ import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.HospitalBedBlock;
 import com.craftdistrict.block.HospitalWideBlock;
 import com.craftdistrict.block.PharmacyFixtureBlock;
+import com.craftdistrict.block.PharmacyCabinetBlock;
+import com.craftdistrict.block.PillCountingStationBlock;
 import com.craftdistrict.block.HospitalRadiologyBlock;
 import com.craftdistrict.block.HospitalClinicalBlock;
 import com.craftdistrict.block.HospitalUtilityBlock;
@@ -189,6 +191,16 @@ public final class CraftDistrictBlocks {
                 () -> new HospitalEquipmentBlock(HospitalEquipmentBlock.Design.STERILE_CABINET, properties()));
         public static final RegistrySupplier<PharmacyFixtureBlock> GLASS_DISPLAY = register("pharmacy_glass_display",
                 () -> new PharmacyFixtureBlock(PharmacyFixtureBlock.Design.GLASS_DISPLAY, properties()));
+        public static final RegistrySupplier<MedicalSupplyCabinetBlock> DRAWER_CABINET = register("pharmacy_drawer_cabinet",
+                () -> new MedicalSupplyCabinetBlock(properties()));
+        public static final RegistrySupplier<PharmacyCabinetBlock> REFRIGERATOR = register("pharmacy_refrigerator",
+                () -> new PharmacyCabinetBlock(PharmacyCabinetBlock.Style.REFRIGERATOR, properties()));
+        public static final RegistrySupplier<PharmacyFixtureBlock> PREPARATION_STATION = register("prescription_preparation_station",
+                () -> new PharmacyFixtureBlock(PharmacyFixtureBlock.Design.PREPARATION, properties()));
+        public static final RegistrySupplier<PillCountingStationBlock> PILL_COUNTING_STATION = register("pill_counting_station",
+                () -> new PillCountingStationBlock(properties()));
+        public static final RegistrySupplier<PharmacyCabinetBlock> SECURED_CABINET = register("secured_medicine_cabinet",
+                () -> new PharmacyCabinetBlock(PharmacyCabinetBlock.Style.SECURED, properties()));
 
         private static BlockBehaviour.Properties properties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();

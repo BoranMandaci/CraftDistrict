@@ -355,7 +355,12 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Pharmacy.COUNTER,
             CraftDistrictBlocks.Pharmacy.MEDICINE_WALL_SHELF,
             CraftDistrictBlocks.Pharmacy.OTC_DISPLAY_SHELF,
-            CraftDistrictBlocks.Pharmacy.GLASS_DISPLAY);
+            CraftDistrictBlocks.Pharmacy.GLASS_DISPLAY,
+            CraftDistrictBlocks.Pharmacy.PREPARATION_STATION,
+            CraftDistrictBlocks.Pharmacy.PILL_COUNTING_STATION,
+            CraftDistrictBlocks.Pharmacy.DRAWER_CABINET,
+            CraftDistrictBlocks.Pharmacy.REFRIGERATOR,
+            CraftDistrictBlocks.Pharmacy.SECURED_CABINET);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

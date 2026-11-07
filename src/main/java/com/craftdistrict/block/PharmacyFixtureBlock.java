@@ -19,10 +19,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Passive two-cell sales fixtures on the shared atomic placement/removal lifecycle. */
+/** Passive two-cell pharmacy fixtures on the shared atomic placement/removal lifecycle. */
 public final class PharmacyFixtureBlock extends MultiBlockDecorationBlock {
     public enum Design implements StringRepresentable {
-        SIGN, COUNTER, GLASS_DISPLAY;
+        SIGN, COUNTER, GLASS_DISPLAY, PREPARATION;
         @Override public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
     }
 
@@ -40,7 +40,12 @@ public final class PharmacyFixtureBlock extends MultiBlockDecorationBlock {
                     RestaurantKitchenBlock.rotations(Shapes.or(box(0, 0, 1, 16, 14.25, 15),
                             box(0, 13.25, 0, 16, 15, 16), box(3.5, 14.25, 3, 15, 18.5, 14.5)).optimize())},
             {RestaurantKitchenBlock.rotations(box(0, 0, .5, 16, 16, 15.5)),
-                    RestaurantKitchenBlock.rotations(box(0, 0, .5, 16, 16, 15.5))}};
+                    RestaurantKitchenBlock.rotations(box(0, 0, .5, 16, 16, 15.5))},
+            {RestaurantKitchenBlock.rotations(Shapes.or(box(0, 0, 1, 16, 14.25, 15),
+                    box(0, 13.25, 0, 16, 14.25, 16), box(1, 14.25, 12, 16, 20.25, 15),
+                    box(1.5, 14.25, 3, 10.5, 19.25, 10.5)).optimize()),
+                    RestaurantKitchenBlock.rotations(Shapes.or(box(0, 0, 1, 16, 14.25, 15),
+                            box(0, 13.25, 0, 16, 14.25, 16), box(6, 14.25, 2, 15, 18.5, 13)).optimize())}};
 
     public PharmacyFixtureBlock(Design design, Properties properties) { super(properties); this.design = design; }
 
