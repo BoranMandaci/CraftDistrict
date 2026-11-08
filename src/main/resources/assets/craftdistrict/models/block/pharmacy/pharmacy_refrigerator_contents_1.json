@@ -5,269 +5,152 @@
   "textures": {
     "atlas": "craftdistrict:block/pharmacy/pharmacy",
     "storage": "craftdistrict:block/pharmacy/storage",
+    "customer": "craftdistrict:block/pharmacy/customer",
+    "polish": "craftdistrict:block/pharmacy/polish",
+    "revision": "craftdistrict:block/pharmacy/refinement",
     "particle": "craftdistrict:block/particles/particle_white"
   },
   "elements": [
     {
       "name": "interior_shelf_2",
       "from": [
-        0.75,
+        1.125,
         0.5,
-        1.5
+        1.625
       ],
       "to": [
-        15.25,
+        14.875,
         1,
         15.25
       ],
       "faces": {
         "west": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_stock_riser_2",
+      "from": [
+        1.25,
+        1,
+        9
+      ],
+      "to": [
+        14.75,
+        1.375,
+        14.75
+      ],
+      "faces": {
+        "west": {
           "texture": "#atlas",
           "uv": [
-            8.0,
             0.0,
-            10.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "east": {
           "texture": "#atlas",
           "uv": [
-            8.0,
             0.0,
-            10.0,
-            2.0
-          ]
-        },
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            8.0,
             0.0,
-            10.0,
+            2.0,
             2.0
           ]
         },
         "up": {
           "texture": "#atlas",
           "uv": [
-            8.0,
             0.0,
-            10.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "north": {
           "texture": "#atlas",
           "uv": [
-            8.0,
             0.0,
-            10.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
-            8.0,
             0.0,
-            10.0,
+            0.0,
+            2.0,
             2.0
           ]
         }
       }
     },
     {
-      "name": "serum_bottle_2_0_body",
+      "name": "front_jar_2_0_body",
       "from": [
         1.5,
-        1,
-        5
-      ],
-      "to": [
-        3.25,
-        4.120000000000001,
-        6.75
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#storage",
-          "uv": [
-            8.0,
-            12.0,
-            10.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#storage",
-          "uv": [
-            8.0,
-            12.0,
-            10.0,
-            16.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "serum_bottle_2_0_neck",
-      "from": [
-        1.85,
-        4.120000000000001,
-        5.35
-      ],
-      "to": [
-        2.9000000000000004,
-        4.559999999999999,
-        6.4
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "serum_bottle_2_0_cap",
-      "from": [
-        1.71875,
-        4.559999999999999,
-        5.21875
-      ],
-      "to": [
-        3.03125,
-        5,
-        6.53125
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "refrigerated_carton_2_1",
-      "from": [
-        4.75,
         1,
         3.75
       ],
       "to": [
-        7.25,
-        5.375,
-        6.25
+        3.625,
+        3.4974999999999987,
+        5.875
       ],
       "faces": {
         "west": {
@@ -298,36 +181,96 @@
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
             8.0,
-            8.0,
-            10.0
+            12.0,
+            12.0,
+            16.0
           ]
         },
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
             8.0,
-            8.0,
-            10.0
+            12.0,
+            12.0,
+            16.0
           ]
         }
       }
     },
     {
-      "name": "serum_bottle_2_2_body",
+      "name": "front_jar_2_0_lid",
       "from": [
-        8.0,
-        1,
-        5
+        1.67,
+        3.4974999999999987,
+        3.92
       ],
       "to": [
-        9.75,
-        4.120000000000001,
-        6.75
+        3.455,
+        4.375,
+        5.705
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_bottle_2_0_body",
+      "from": [
+        1.75,
+        1.375,
+        10.25
+      ],
+      "to": [
+        3.75,
+        5.032499999999999,
+        12.25
       ],
       "faces": {
         "west": {
@@ -358,36 +301,36 @@
           ]
         },
         "north": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
             8.0,
+            0.0,
             12.0,
-            10.0,
-            16.0
+            4.0
           ]
         },
         "south": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
             8.0,
+            0.0,
             12.0,
-            10.0,
-            16.0
+            4.0
           ]
         }
       }
     },
     {
-      "name": "serum_bottle_2_2_neck",
+      "name": "rear_bottle_2_0_neck",
       "from": [
-        8.35,
-        4.120000000000001,
-        5.35
+        2.31,
+        5.032499999999999,
+        10.81
       ],
       "to": [
-        9.4,
-        4.559999999999999,
-        6.4
+        3.19,
+        5.649999999999999,
+        11.69
       ],
       "faces": {
         "west": {
@@ -429,85 +372,205 @@
       }
     },
     {
-      "name": "serum_bottle_2_2_cap",
+      "name": "rear_bottle_2_0_lid",
       "from": [
-        8.21875,
-        4.559999999999999,
-        5.21875
+        2.11,
+        5.649999999999999,
+        10.61
       ],
       "to": [
-        9.53125,
-        5,
-        6.53125
+        3.3899999999999997,
+        6.125,
+        11.89
       ],
       "faces": {
         "west": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "down": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "up": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         }
       }
     },
     {
-      "name": "serum_bottle_2_3_body",
+      "name": "front_box_2_1",
       "from": [
-        11.25,
+        4.7,
         1,
-        5
+        3.5
       ],
       "to": [
-        13.0,
-        4.120000000000001,
-        6.75
+        7.2,
+        5.25,
+        5.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_pack_2_1",
+      "from": [
+        4.7,
+        1.375,
+        10.25
+      ],
+      "to": [
+        7.325,
+        5.875,
+        12.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_bottle_2_2_body",
+      "from": [
+        7.9,
+        1,
+        4.25
+      ],
+      "to": [
+        9.775,
+        4.17625,
+        6.125
       ],
       "faces": {
         "west": {
@@ -538,36 +601,36 @@
           ]
         },
         "north": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
             8.0,
+            0.0,
             12.0,
-            10.0,
-            16.0
+            4.0
           ]
         },
         "south": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
             8.0,
+            0.0,
             12.0,
-            10.0,
-            16.0
+            4.0
           ]
         }
       }
     },
     {
-      "name": "serum_bottle_2_3_neck",
+      "name": "front_bottle_2_2_neck",
       "from": [
-        11.6,
-        4.120000000000001,
-        5.35
+        8.425,
+        4.17625,
+        4.775
       ],
       "to": [
-        12.65,
-        4.559999999999999,
-        6.4
+        9.25,
+        4.712499999999999,
+        5.6
       ],
       "faces": {
         "west": {
@@ -609,85 +672,265 @@
       }
     },
     {
-      "name": "serum_bottle_2_3_cap",
+      "name": "front_bottle_2_2_lid",
       "from": [
-        11.46875,
-        4.559999999999999,
-        5.21875
+        8.2375,
+        4.712499999999999,
+        4.5875
       ],
       "to": [
-        12.78125,
-        5,
-        6.53125
+        9.4375,
+        5.125,
+        5.7875
       ],
       "faces": {
         "west": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "down": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_bottle_2_2_body",
+      "from": [
+        8.15,
+        1.375,
+        10.25
+      ],
+      "to": [
+        10.15,
+        5.032499999999999,
+        12.25
+      ],
+      "faces": {
+        "west": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            0.0,
             4.0,
-            16.0,
+            2.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
             6.0
           ]
         },
         "up": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            0.0,
             4.0,
-            16.0,
+            2.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_bottle_2_2_neck",
+      "from": [
+        8.71,
+        5.032499999999999,
+        10.81
+      ],
+      "to": [
+        9.59,
+        5.649999999999999,
+        11.69
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
             6.0
           ]
         },
         "north": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            0.0,
             4.0,
-            16.0,
+            2.0,
             6.0
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            0.0,
             4.0,
-            16.0,
+            2.0,
             6.0
           ]
         }
       }
     },
     {
-      "name": "cold_pack_2",
+      "name": "rear_bottle_2_2_lid",
       "from": [
-        5,
-        1,
-        11.5
+        8.51,
+        5.649999999999999,
+        10.61
       ],
       "to": [
-        11,
-        3.5,
-        13.5
+        9.790000000000001,
+        6.125,
+        11.89
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_jar_2_3_body",
+      "from": [
+        11.100000000000001,
+        1,
+        3.75
+      ],
+      "to": [
+        13.225000000000001,
+        3.4974999999999987,
+        5.875
       ],
       "faces": {
         "west": {
@@ -718,21 +961,141 @@
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            0.0,
-            10.0,
-            2.0,
-            12.0
+            8.0,
+            12.0,
+            12.0,
+            16.0
           ]
         },
         "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            12.0,
+            12.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_jar_2_3_lid",
+      "from": [
+        11.270000000000001,
+        3.4974999999999987,
+        3.92
+      ],
+      "to": [
+        13.055000000000001,
+        4.375,
+        5.705
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_pack_2_3",
+      "from": [
+        11.100000000000001,
+        1.375,
+        10.25
+      ],
+      "to": [
+        13.725000000000001,
+        5.875,
+        12.75
+      ],
+      "faces": {
+        "west": {
           "texture": "#atlas",
           "uv": [
             0.0,
-            10.0,
+            0.0,
             2.0,
-            12.0
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
           ]
         }
       }
@@ -740,83 +1103,143 @@
     {
       "name": "interior_shelf_3",
       "from": [
-        0.75,
+        1.125,
         7.5,
-        1.5
+        1.625
       ],
       "to": [
-        15.25,
+        14.875,
         8,
         15.25
       ],
       "faces": {
         "west": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_stock_riser_3",
+      "from": [
+        1.25,
+        8,
+        9
+      ],
+      "to": [
+        14.75,
+        8.375,
+        14.75
+      ],
+      "faces": {
+        "west": {
           "texture": "#atlas",
           "uv": [
-            8.0,
             0.0,
-            10.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "east": {
           "texture": "#atlas",
           "uv": [
-            8.0,
             0.0,
-            10.0,
-            2.0
-          ]
-        },
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            8.0,
             0.0,
-            10.0,
+            2.0,
             2.0
           ]
         },
         "up": {
           "texture": "#atlas",
           "uv": [
-            8.0,
             0.0,
-            10.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "north": {
           "texture": "#atlas",
           "uv": [
-            8.0,
             0.0,
-            10.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
-            8.0,
             0.0,
-            10.0,
+            0.0,
+            2.0,
             2.0
           ]
         }
       }
     },
     {
-      "name": "refrigerated_carton_3_0",
+      "name": "front_box_3_0",
       "from": [
         1.5,
         8,
-        3.75
+        3.5
       ],
       "to": [
         4.0,
-        12.375,
-        6.25
+        11.75,
+        5.75
       ],
       "faces": {
         "west": {
@@ -840,43 +1263,103 @@
         "up": {
           "texture": "#atlas",
           "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_pack_3_0",
+      "from": [
+        1.5,
+        8.375,
+        10.25
+      ],
+      "to": [
+        4.125,
+        12.875,
+        12.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
             0.0,
             0.0,
             2.0,
             2.0
           ]
         },
-        "north": {
+        "east": {
           "texture": "#atlas",
           "uv": [
             0.0,
-            10.0,
+            0.0,
             2.0,
-            12.0
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
           ]
         },
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            8.0,
             0.0,
-            10.0,
-            2.0,
-            12.0
+            12.0,
+            4.0
           ]
         }
       }
     },
     {
-      "name": "serum_bottle_3_1_body",
+      "name": "front_bottle_3_1_body",
       "from": [
-        4.75,
+        4.7,
         8,
-        5
+        4.25
       ],
       "to": [
-        6.5,
-        11.510000000000002,
-        6.75
+        6.575,
+        11.17625,
+        6.125
       ],
       "faces": {
         "west": {
@@ -907,36 +1390,36 @@
           ]
         },
         "north": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
             8.0,
+            0.0,
             12.0,
-            10.0,
-            16.0
+            4.0
           ]
         },
         "south": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
             8.0,
+            0.0,
             12.0,
-            10.0,
-            16.0
+            4.0
           ]
         }
       }
     },
     {
-      "name": "serum_bottle_3_1_neck",
+      "name": "front_bottle_3_1_neck",
       "from": [
-        5.1,
-        11.510000000000002,
-        5.35
+        5.2250000000000005,
+        11.17625,
+        4.775
       ],
       "to": [
-        6.15,
-        12.004999999999999,
-        6.4
+        6.05,
+        11.712499999999999,
+        5.6
       ],
       "faces": {
         "west": {
@@ -978,108 +1461,108 @@
       }
     },
     {
-      "name": "serum_bottle_3_1_cap",
+      "name": "front_bottle_3_1_lid",
       "from": [
-        4.96875,
-        12.004999999999999,
-        5.21875
+        5.0375000000000005,
+        11.712499999999999,
+        4.5875
       ],
       "to": [
-        6.28125,
-        12.5,
-        6.53125
+        6.2375,
+        12.125,
+        5.7875
       ],
       "faces": {
         "west": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "down": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_bottle_3_1_body",
+      "from": [
+        4.95,
+        8.375,
+        10.25
+      ],
+      "to": [
+        6.95,
+        12.032499999999999,
+        12.25
+      ],
+      "faces": {
+        "west": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            0.0,
             4.0,
-            16.0,
+            2.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
             6.0
           ]
         },
         "up": {
           "texture": "#atlas",
           "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "serum_bottle_3_2_body",
-      "from": [
-        8.0,
-        8,
-        5
-      ],
-      "to": [
-        9.75,
-        11.510000000000002,
-        6.75
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
             0.0,
             4.0,
             2.0,
@@ -1087,36 +1570,36 @@
           ]
         },
         "north": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
             8.0,
+            0.0,
             12.0,
-            10.0,
-            16.0
+            4.0
           ]
         },
         "south": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
             8.0,
+            0.0,
             12.0,
-            10.0,
-            16.0
+            4.0
           ]
         }
       }
     },
     {
-      "name": "serum_bottle_3_2_neck",
+      "name": "rear_bottle_3_1_neck",
       "from": [
-        8.35,
-        11.510000000000002,
-        5.35
+        5.51,
+        12.032499999999999,
+        10.81
       ],
       "to": [
-        9.4,
-        12.004999999999999,
-        6.4
+        6.390000000000001,
+        12.649999999999999,
+        11.69
       ],
       "faces": {
         "west": {
@@ -1158,85 +1641,85 @@
       }
     },
     {
-      "name": "serum_bottle_3_2_cap",
+      "name": "rear_bottle_3_1_lid",
       "from": [
-        8.21875,
-        12.004999999999999,
-        5.21875
+        5.3100000000000005,
+        12.649999999999999,
+        10.61
       ],
       "to": [
-        9.53125,
-        12.5,
-        6.53125
+        6.59,
+        13.125,
+        11.89
       ],
       "faces": {
         "west": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "down": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "up": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         },
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            14.0,
+            8.0,
             4.0,
-            16.0,
-            6.0
+            12.0,
+            8.0
           ]
         }
       }
     },
     {
-      "name": "refrigerated_carton_3_3",
+      "name": "front_jar_3_2_body",
       "from": [
-        11.25,
+        7.9,
         8,
         3.75
       ],
       "to": [
-        13.75,
-        12.375,
-        6.25
+        10.025,
+        10.497499999999999,
+        5.875
       ],
       "faces": {
         "west": {
@@ -1267,36 +1750,96 @@
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
             8.0,
-            8.0,
-            10.0
+            12.0,
+            12.0,
+            16.0
           ]
         },
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
             8.0,
-            8.0,
-            10.0
+            12.0,
+            12.0,
+            16.0
           ]
         }
       }
     },
     {
-      "name": "cold_pack_3",
+      "name": "front_jar_3_2_lid",
       "from": [
-        5,
-        8,
-        11.5
+        8.07,
+        10.497499999999999,
+        3.92
       ],
       "to": [
-        11,
-        10.5,
-        13.5
+        9.855,
+        11.375,
+        5.705
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_pack_3_2",
+      "from": [
+        7.9,
+        8.375,
+        10.25
+      ],
+      "to": [
+        10.525,
+        12.875,
+        12.75
       ],
       "faces": {
         "west": {
@@ -1320,28 +1863,268 @@
         "up": {
           "texture": "#atlas",
           "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_box_3_3",
+      "from": [
+        11.100000000000001,
+        8,
+        3.5
+      ],
+      "to": [
+        13.600000000000001,
+        12.25,
+        5.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
             0.0,
             0.0,
             2.0,
             2.0
           ]
         },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_bottle_3_3_body",
+      "from": [
+        11.350000000000001,
+        8.375,
+        10.25
+      ],
+      "to": [
+        13.350000000000001,
+        12.032499999999999,
+        12.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_bottle_3_3_neck",
+      "from": [
+        11.910000000000002,
+        12.032499999999999,
+        10.81
+      ],
+      "to": [
+        12.790000000000001,
+        12.649999999999999,
+        11.69
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
         "north": {
           "texture": "#atlas",
           "uv": [
             0.0,
-            10.0,
+            4.0,
             2.0,
-            12.0
+            6.0
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
             0.0,
-            10.0,
+            4.0,
             2.0,
-            12.0
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "rear_bottle_3_3_lid",
+      "from": [
+        11.71,
+        12.649999999999999,
+        10.61
+      ],
+      "to": [
+        12.990000000000002,
+        13.125,
+        11.89
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
           ]
         }
       }

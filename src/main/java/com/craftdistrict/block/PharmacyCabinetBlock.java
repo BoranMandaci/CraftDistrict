@@ -38,9 +38,9 @@ public final class PharmacyCabinetBlock extends HospitalEquipmentBlock {
     private static final VoxelShape[] CLOSED = RestaurantKitchenBlock.rotations(box(0, 0, 0, 16, 16, 16));
     private static final VoxelShape[][] OPEN_SHAPES = {
             RestaurantKitchenBlock.rotations(Shapes.or(box(0, 0, 1.5, 16, 16, 16),
-                    box(0, 1.25, -13.125, .75, 16, 1.375)).optimize()),
+                    box(0, 1.25, -13.125, .875, 16, 1.375)).optimize()),
             RestaurantKitchenBlock.rotations(Shapes.or(box(0, 0, 1.5, 16, 16, 16),
-                    box(0, 0, -13.125, .75, 14.25, 1.375)).optimize())};
+                    box(0, 0, -13.125, .875, 14.25, 1.375)).optimize())};
 
     public PharmacyCabinetBlock(Style style, Properties properties) {
         super(Design.STERILE_CABINET, properties);

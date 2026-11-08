@@ -6,283 +6,663 @@
     "atlas": "craftdistrict:block/pharmacy/pharmacy",
     "storage": "craftdistrict:block/pharmacy/storage",
     "customer": "craftdistrict:block/pharmacy/customer",
+    "polish": "craftdistrict:block/pharmacy/polish",
+    "revision": "craftdistrict:block/pharmacy/refinement",
     "particle": "craftdistrict:block/particles/particle_white"
   },
   "elements": [
     {
-      "name": "organizer_base",
+      "name": "tall_ground_bottle_front_body",
       "from": [
-        1.5,
-        4.5625,
-        2.0
+        3.155,
+        5.0,
+        2.75
       ],
       "to": [
-        14.5,
-        4.9375,
-        14.0
+        4.595,
+        9.620000000000001,
+        5.0
       ],
       "faces": {
         "west": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
             0.0,
-            16.0,
+            8.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tall_ground_bottle_left_shoulder",
+      "from": [
+        2.75,
+        5.0,
+        3.155
+      ],
+      "to": [
+        3.155,
+        9.620000000000001,
+        4.595
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tall_ground_bottle_right_shoulder",
+      "from": [
+        4.595,
+        5.0,
+        3.155
+      ],
+      "to": [
+        5.0,
+        9.620000000000001,
+        4.595
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tall_ground_bottle_neck",
+      "from": [
+        3.38,
+        9.620000000000001,
+        3.38
+      ],
+      "to": [
+        4.37,
+        10.4,
+        4.37
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "tall_ground_bottle_lid",
+      "from": [
+        3.155,
+        10.4,
+        3.155
+      ],
+      "to": [
+        4.595,
+        11.0,
+        4.595
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medium_ground_bottle_front_body",
+      "from": [
+        10.905,
+        5.0,
+        8.75
+      ],
+      "to": [
+        12.345,
+        8.465,
+        11.0
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "east": {
           "texture": "#atlas",
           "uv": [
-            14.0,
             0.0,
-            16.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "down": {
           "texture": "#atlas",
           "uv": [
-            14.0,
             0.0,
-            16.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "up": {
           "texture": "#atlas",
           "uv": [
-            14.0,
             0.0,
-            16.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            12.0,
+            12.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            12.0,
+            12.0,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medium_ground_bottle_left_shoulder",
+      "from": [
+        10.5,
+        5.0,
+        9.155
+      ],
+      "to": [
+        10.905,
+        8.465,
+        10.595
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "north": {
           "texture": "#atlas",
           "uv": [
-            14.0,
             0.0,
-            16.0,
+            0.0,
+            2.0,
             2.0
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
-            14.0,
             0.0,
-            16.0,
+            0.0,
+            2.0,
             2.0
           ]
         }
       }
     },
     {
-      "name": "tall_prescription_bottle_body",
+      "name": "medium_ground_bottle_right_shoulder",
       "from": [
-        2.5,
-        4.9375,
-        3.0
+        12.345,
+        5.0,
+        9.155
       ],
       "to": [
-        4.75,
-        10.0075,
+        12.75,
+        8.465,
+        10.595
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medium_ground_bottle_neck",
+      "from": [
+        11.13,
+        8.465,
+        9.38
+      ],
+      "to": [
+        12.12,
+        9.05,
+        10.37
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "medium_ground_bottle_lid",
+      "from": [
+        10.905,
+        9.05,
+        9.155
+      ],
+      "to": [
+        12.345,
+        9.5,
+        10.595
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "ground_jar_front_body",
+      "from": [
+        8.86,
+        5.0,
+        3.25
+      ],
+      "to": [
+        10.14,
+        7.59,
         5.25
       ],
       "faces": {
         "west": {
           "texture": "#atlas",
           "uv": [
+            0.0,
+            4.0,
             2.0,
-            4.0,
-            4.0,
             6.0
           ]
         },
         "east": {
           "texture": "#atlas",
           "uv": [
+            0.0,
+            4.0,
             2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#storage",
-          "uv": [
-            12.0,
-            8.0,
-            14.0,
-            12.0
-          ]
-        },
-        "south": {
-          "texture": "#storage",
-          "uv": [
-            12.0,
-            8.0,
-            14.0,
-            12.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "tall_prescription_bottle_neck",
-      "from": [
-        2.95,
-        10.0075,
-        3.45
-      ],
-      "to": [
-        4.3,
-        10.7225,
-        4.8
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "tall_prescription_bottle_cap",
-      "from": [
-        2.78125,
-        10.7225,
-        3.28125
-      ],
-      "to": [
-        4.46875,
-        11.4375,
-        4.96875
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
             6.0
           ]
         },
         "down": {
           "texture": "#atlas",
           "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "medium_medicine_bottle_body",
-      "from": [
-        10.25,
-        4.9375,
-        8.0
-      ],
-      "to": [
-        12.5,
-        8.8375,
-        10.25
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
             0.0,
             4.0,
             2.0,
@@ -299,335 +679,224 @@
           ]
         },
         "north": {
-          "texture": "#customer",
+          "texture": "#polish",
           "uv": [
-            12.0,
-            8.0,
-            16.0,
-            12.0
-          ]
-        },
-        "south": {
-          "texture": "#customer",
-          "uv": [
-            12.0,
-            8.0,
-            16.0,
-            12.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "medium_medicine_bottle_neck",
-      "from": [
-        10.7,
-        8.8375,
-        8.45
-      ],
-      "to": [
-        12.05,
-        9.3875,
-        9.8
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            4.0,
-            2.0,
-            6.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "medium_medicine_bottle_cap",
-      "from": [
-        10.53125,
-        9.3875,
-        8.28125
-      ],
-      "to": [
-        12.21875,
-        9.9375,
-        9.96875
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
-            6.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "small_medicine_bottle_body",
-      "from": [
-        8.0,
-        4.9375,
-        2.75
-      ],
-      "to": [
-        9.875,
-        8.2525,
-        4.625
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
-            8.0,
             6.0,
-            10.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            4.0,
+            0.0,
             8.0,
-            6.0,
-            10.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "small_medicine_bottle_neck",
-      "from": [
-        8.375,
-        8.2525,
-        3.125
-      ],
-      "to": [
-        9.5,
-        8.72,
-        4.25
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
+            4.0
           ]
         },
         "south": {
-          "texture": "#atlas",
+          "texture": "#polish",
           "uv": [
-            2.0,
-            4.0,
-            4.0,
-            6.0
+            6.0,
+            0.0,
+            8.0,
+            4.0
           ]
         }
       }
     },
     {
-      "name": "small_medicine_bottle_cap",
+      "name": "ground_jar_left_shoulder",
       "from": [
-        8.234375,
-        8.72,
-        2.984375
+        8.5,
+        5.0,
+        3.61
       ],
       "to": [
-        9.640625,
-        9.1875,
-        4.390625
+        8.86,
+        7.59,
+        4.89
       ],
       "faces": {
         "west": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            0.0,
             4.0,
-            16.0,
-            6.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            4.0,
-            16.0,
+            2.0,
             6.0
           ]
         },
         "down": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            0.0,
             4.0,
-            16.0,
+            2.0,
             6.0
           ]
         },
         "up": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            0.0,
             4.0,
-            16.0,
+            2.0,
             6.0
           ]
         },
         "north": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            0.0,
             4.0,
-            16.0,
+            2.0,
             6.0
           ]
         },
         "south": {
           "texture": "#atlas",
           "uv": [
-            14.0,
+            0.0,
             4.0,
-            16.0,
+            2.0,
             6.0
           ]
         }
       }
     },
     {
-      "name": "bottom_box",
+      "name": "ground_jar_right_shoulder",
       "from": [
-        2.0,
-        4.9375,
-        9.25
+        10.14,
+        5.0,
+        3.61
       ],
       "to": [
-        6.75,
-        7.1875,
+        10.5,
+        7.59,
+        4.89
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            4.0,
+            2.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "ground_jar_lid",
+      "from": [
+        8.66,
+        7.59,
+        3.41
+      ],
+      "to": [
+        10.34,
+        8.5,
+        5.09
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            4.0,
+            12.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "bottom_carton",
+      "from": [
+        2.25,
+        5.0,
+        9.0
+      ],
+      "to": [
+        7.25,
+        7.0,
         12.75
       ],
       "faces": {
@@ -649,58 +918,7 @@
             2.0
           ]
         },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            0.0,
-            2.0,
-            2.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            10.0,
-            2.0,
-            12.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            10.0,
-            2.0,
-            12.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "stacked_box",
-      "from": [
-        2.5,
-        7.1875,
-        9.5
-      ],
-      "to": [
-        6.25,
-        9.6875,
-        12.5
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            0.0,
-            2.0,
-            2.0
-          ]
-        },
-        "east": {
+        "down": {
           "texture": "#atlas",
           "uv": [
             0.0,
@@ -712,168 +930,126 @@
         "up": {
           "texture": "#atlas",
           "uv": [
-            0.0,
-            0.0,
             2.0,
+            0.0,
+            4.0,
             2.0
           ]
         },
         "north": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            8.0,
-            8.0,
-            10.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            8.0,
-            8.0,
-            10.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "middle_box",
-      "from": [
-        6.75,
-        4.9375,
-        6.0
-      ],
-      "to": [
-        9.75,
-        8.1875,
-        8.25
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            0.0,
-            2.0,
-            2.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            0.0,
-            2.0,
-            2.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            0.0,
-            2.0,
-            2.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            8.0,
-            10.0,
-            10.0,
-            12.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            8.0,
-            10.0,
-            10.0,
-            12.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "small_box",
-      "from": [
-        10.0,
-        4.9375,
-        3.25
-      ],
-      "to": [
-        13.25,
-        7.6875,
-        5.25
-      ],
-      "faces": {
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            0.0,
-            2.0,
-            2.0
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            0.0,
-            2.0,
-            2.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            0.0,
-            0.0,
-            2.0,
-            2.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
+          "texture": "#polish",
           "uv": [
             4.0,
-            10.0,
+            0.0,
             6.0,
-            12.0
+            4.0
           ]
         },
         "south": {
-          "texture": "#atlas",
+          "texture": "#polish",
           "uv": [
             4.0,
-            10.0,
+            0.0,
             6.0,
-            12.0
+            4.0
           ]
         }
       }
     },
     {
-      "name": "sealed_blister_pack",
+      "name": "offset_upper_carton",
       "from": [
-        2.875,
-        9.6875,
-        10.0
+        2.75,
+        7.0,
+        9.25
       ],
       "to": [
-        5.75,
-        9.875,
+        7.0,
+        9.25,
         12.25
       ],
       "faces": {
         "west": {
           "texture": "#atlas",
           "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            0.0,
+            8.0,
+            4.0
+          ]
+        }
+      },
+      "rotation": {
+        "origin": [
+          4.875,
+          7.0,
+          10.75
+        ],
+        "axis": "y",
+        "angle": -22.5
+      }
+    },
+    {
+      "name": "blister_pack_on_box",
+      "from": [
+        3.5,
+        9.25,
+        10.0
+      ],
+      "to": [
+        6.125,
+        9.4375,
+        12.0
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
             8.0,
             0.0,
             10.0,
@@ -881,6 +1057,15 @@
           ]
         },
         "east": {
+          "texture": "#atlas",
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.0
+          ]
+        },
+        "down": {
           "texture": "#atlas",
           "uv": [
             8.0,
@@ -916,19 +1101,235 @@
             2.0
           ]
         }
+      },
+      "rotation": {
+        "origin": [
+          4.875,
+          7.0,
+          10.75
+        ],
+        "axis": "y",
+        "angle": -22.5
       }
     },
     {
-      "name": "folded_prescription",
+      "name": "middle_carton",
       "from": [
-        7.0,
-        4.9375,
-        10.5
+        6.75,
+        5.0,
+        6.0
       ],
       "to": [
-        10.0,
-        5.0625,
-        13.0
+        9.75,
+        7.75,
+        8.0
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#polish",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#polish",
+          "uv": [
+            2.0,
+            4.0,
+            4.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "small_carton",
+      "from": [
+        10.75,
+        5.0,
+        3.75
+      ],
+      "to": [
+        13.75,
+        7.25,
+        6.0
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "loose_flat_pack",
+      "from": [
+        6.25,
+        5.0,
+        2.75
+      ],
+      "to": [
+        7.75,
+        6.125,
+        4.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            0.0,
+            8.0,
+            4.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            0.0,
+            8.0,
+            4.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "loose_prescription",
+      "from": [
+        7.5,
+        5.0,
+        11.0
+      ],
+      "to": [
+        10.5,
+        5.125,
+        13.25
       ],
       "faces": {
         "west": {
@@ -941,6 +1342,15 @@
           ]
         },
         "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "down": {
           "texture": "#atlas",
           "uv": [
             10.0,
@@ -992,8 +1402,8 @@
         0.75
       ],
       "translation": [
-        0,
-        1.324066,
+        -0.132583,
+        0.905437,
         0
       ]
     },

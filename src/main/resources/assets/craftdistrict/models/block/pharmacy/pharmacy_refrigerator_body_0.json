@@ -5,6 +5,9 @@
   "textures": {
     "atlas": "craftdistrict:block/pharmacy/pharmacy",
     "storage": "craftdistrict:block/pharmacy/storage",
+    "customer": "craftdistrict:block/pharmacy/customer",
+    "polish": "craftdistrict:block/pharmacy/polish",
+    "revision": "craftdistrict:block/pharmacy/refinement",
     "particle": "craftdistrict:block/particles/particle_white"
   },
   "elements": [
@@ -85,7 +88,7 @@
         1.5
       ],
       "to": [
-        0.75,
+        1.125,
         16,
         16
       ],
@@ -131,7 +134,7 @@
     {
       "name": "right_wall",
       "from": [
-        15.25,
+        14.875,
         1.25,
         1.5
       ],
@@ -182,12 +185,12 @@
     {
       "name": "full_back",
       "from": [
-        0.75,
+        1.125,
         1.25,
         15.25
       ],
       "to": [
-        15.25,
+        14.875,
         16,
         16
       ],
@@ -215,12 +218,12 @@
     {
       "name": "bottom_floor",
       "from": [
-        0.75,
+        1.125,
         1.25,
         1.5
       ],
       "to": [
-        15.25,
+        14.875,
         1.875,
         15.25
       ],
@@ -246,6 +249,177 @@
       }
     },
     {
+      "name": "left_recessed_seal",
+      "from": [
+        1,
+        1.8125,
+        1.375
+      ],
+      "to": [
+        1.375,
+        16,
+        1.5625
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.979775,
+            12.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.979775,
+            12.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.979775,
+            12.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.979775,
+            12.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_recessed_seal",
+      "from": [
+        14.625,
+        1.8125,
+        1.375
+      ],
+      "to": [
+        15,
+        16,
+        1.5625
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.979775,
+            12.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.979775,
+            12.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.979775,
+            12.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.979775,
+            12.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "bottom_recessed_seal",
+      "from": [
+        1,
+        1.5,
+        1.375
+      ],
+      "to": [
+        15,
+        1.8125,
+        1.5625
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10.0,
+            0.0,
+            12.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
       "name": "fixed_hinge_0",
       "from": [
         0.375,
@@ -259,57 +433,48 @@
       ],
       "faces": {
         "west": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            4.0,
+            4.0,
             8.0,
-            0.0,
-            10.0,
-            2.0
+            8.0
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            4.0,
+            4.0,
             8.0,
-            0.0,
-            10.0,
-            2.0
+            8.0
           ]
         },
         "down": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            4.0,
+            4.0,
             8.0,
-            0.0,
-            10.0,
-            2.0
+            8.0
           ]
         },
         "up": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            4.0,
+            4.0,
             8.0,
-            0.0,
-            10.0,
-            2.0
+            8.0
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            4.0,
+            4.0,
             8.0,
-            0.0,
-            10.0,
-            2.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            8.0,
-            0.0,
-            10.0,
-            2.0
+            8.0
           ]
         }
       }

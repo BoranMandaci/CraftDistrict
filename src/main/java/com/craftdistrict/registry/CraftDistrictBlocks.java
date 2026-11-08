@@ -39,6 +39,7 @@ import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.HospitalBedBlock;
 import com.craftdistrict.block.HospitalWideBlock;
 import com.craftdistrict.block.PharmacyFixtureBlock;
+import com.craftdistrict.block.PharmacyGlassDisplayBlock;
 import com.craftdistrict.block.PharmacyCabinetBlock;
 import com.craftdistrict.block.PillCountingStationBlock;
 import com.craftdistrict.block.PharmacyAccessoryBlock;
@@ -191,8 +192,8 @@ public final class CraftDistrictBlocks {
                 () -> new MedicalSupplyCabinetBlock(properties()));
         public static final RegistrySupplier<HospitalEquipmentBlock> OTC_DISPLAY_SHELF = register("otc_display_shelf",
                 () -> new HospitalEquipmentBlock(HospitalEquipmentBlock.Design.STERILE_CABINET, properties()));
-        public static final RegistrySupplier<PharmacyFixtureBlock> GLASS_DISPLAY = register("pharmacy_glass_display",
-                () -> new PharmacyFixtureBlock(PharmacyFixtureBlock.Design.GLASS_DISPLAY, properties()));
+        public static final RegistrySupplier<PharmacyGlassDisplayBlock> GLASS_DISPLAY = register("pharmacy_glass_display",
+                () -> new PharmacyGlassDisplayBlock(properties()));
         public static final RegistrySupplier<MedicalSupplyCabinetBlock> DRAWER_CABINET = register("pharmacy_drawer_cabinet",
                 () -> new MedicalSupplyCabinetBlock(properties()));
         public static final RegistrySupplier<PharmacyCabinetBlock> REFRIGERATOR = register("pharmacy_refrigerator",
@@ -212,6 +213,10 @@ public final class CraftDistrictBlocks {
                 () -> new PharmacyKioskBlock(PharmacyKioskBlock.Style.QUEUE_TICKET, properties()));
         public static final RegistrySupplier<PharmacyKioskBlock> BLOOD_PRESSURE_KIOSK = register("blood_pressure_kiosk",
                 () -> new PharmacyKioskBlock(PharmacyKioskBlock.Style.BLOOD_PRESSURE, properties()));
+        public static final RegistrySupplier<PharmacyAccessoryBlock> DELIVERY_CART = register("pharmacy_delivery_cart",
+                () -> new PharmacyAccessoryBlock(PharmacyAccessoryBlock.Style.DELIVERY_CART, properties()));
+        public static final RegistrySupplier<PharmacyKioskBlock> INFORMATION_BOARD = register("pharmacy_information_board",
+                () -> new PharmacyKioskBlock(PharmacyKioskBlock.Style.INFORMATION_BOARD, properties()));
 
         private static BlockBehaviour.Properties properties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();

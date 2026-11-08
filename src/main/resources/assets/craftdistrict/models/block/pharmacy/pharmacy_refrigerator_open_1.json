@@ -5,6 +5,9 @@
   "textures": {
     "atlas": "craftdistrict:block/pharmacy/pharmacy",
     "storage": "craftdistrict:block/pharmacy/storage",
+    "customer": "craftdistrict:block/pharmacy/customer",
+    "polish": "craftdistrict:block/pharmacy/polish",
+    "revision": "craftdistrict:block/pharmacy/refinement",
     "particle": "craftdistrict:block/particles/particle_white"
   },
   "elements": [
@@ -16,7 +19,7 @@
         0.5
       ],
       "to": [
-        0.75,
+        0.875,
         12.5,
         1.375
       ],
@@ -67,7 +70,7 @@
         -13.125
       ],
       "to": [
-        0.75,
+        0.875,
         12.5,
         -12.25
       ],
@@ -118,7 +121,7 @@
         -13.125
       ],
       "to": [
-        0.75,
+        0.875,
         14.25,
         1.375
       ],
@@ -182,7 +185,7 @@
       }
     },
     {
-      "name": "glass_door",
+      "name": "sealed_glass_door",
       "from": [
         0.25,
         0,
@@ -195,21 +198,21 @@
       ],
       "faces": {
         "west": {
-          "texture": "#atlas",
+          "texture": "#polish",
           "uv": [
-            4.0,
-            4.0,
-            6.0,
-            4.990099
+            0.0,
+            12.0,
+            8.0,
+            13.980198
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#polish",
           "uv": [
-            4.0,
-            4.0,
-            6.0,
-            4.990099
+            0.0,
+            12.0,
+            8.0,
+            13.980198
           ]
         }
       }

@@ -16,7 +16,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 /** Passive floor/countertop accessories on the existing solid-support placement rules. */
 public final class PharmacyAccessoryBlock extends CashRegisterBlock {
     public enum Style implements StringRepresentable {
-        PROMOTIONAL, MEDICINE_STACK;
+        PROMOTIONAL, MEDICINE_STACK, DELIVERY_CART;
         @Override public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
     }
     private final Style style;
@@ -28,9 +28,11 @@ public final class PharmacyAccessoryBlock extends CashRegisterBlock {
     private static final VoxelShape[][] SHAPES = {
             RestaurantKitchenBlock.rotations(Shapes.or(box(1.5, 0, 2, 14.5, 1.25, 14),
                     box(2, 1.25, 2.5, 14, 11, 13), box(2.5, 11, 10.5, 13.5, 16, 13)).optimize()),
-            RestaurantKitchenBlock.rotations(Shapes.or(box(1.5, 0, 2, 14.5, .375, 14),
-                    box(2.25, .375, 2.75, 5, 6.875, 5.5), box(2, .375, 9.25, 6.75, 5.3125, 12.75),
-                    box(6.75, .375, 2.75, 13.5, 5.375, 10.25)).optimize())};
+            RestaurantKitchenBlock.rotations(Shapes.or(box(2.25, 0, 2.5, 5, 6, 5),
+                    box(1.5, 0, 8, 7.75, 4.5, 13), box(6, 0, 2.5, 13.75, 4.5, 11)).optimize()),
+            RestaurantKitchenBlock.rotations(Shapes.or(box(1.25, 0, 2, 14.75, 3.875, 14.25),
+                    box(1.75, 3.875, 2, 14.25, 14.25, 14.25),
+                    box(2.375, 14.25, 13.375, 13.625, 15.625, 14.25)).optimize())};
 
     public PharmacyAccessoryBlock(Style style, Properties properties) { super(properties); this.style = style; }
     @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {

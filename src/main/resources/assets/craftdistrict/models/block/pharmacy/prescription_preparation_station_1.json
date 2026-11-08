@@ -5,6 +5,9 @@
   "textures": {
     "atlas": "craftdistrict:block/pharmacy/pharmacy",
     "storage": "craftdistrict:block/pharmacy/storage",
+    "customer": "craftdistrict:block/pharmacy/customer",
+    "polish": "craftdistrict:block/pharmacy/polish",
+    "revision": "craftdistrict:block/pharmacy/refinement",
     "particle": "craftdistrict:block/particles/particle_white"
   },
   "elements": [
@@ -12,12 +15,12 @@
       "name": "prep_plinth",
       "from": [
         0,
-        0,
+        0.0,
         1.5
       ],
       "to": [
         15.5,
-        1,
+        1.0,
         14.5
       ],
       "faces": {
@@ -63,13 +66,13 @@
       "name": "preparation_cabinet",
       "from": [
         0,
-        1,
-        1
+        1.0,
+        1.0
       ],
       "to": [
-        16,
+        16.0,
         13.25,
-        15
+        15.0
       ],
       "faces": {
         "east": {
@@ -115,12 +118,12 @@
       "from": [
         0,
         13.25,
-        0
+        0.0
       ],
       "to": [
-        16,
+        16.0,
         14.25,
-        16
+        16.0
       ],
       "faces": {
         "east": {
@@ -178,9 +181,9 @@
         15.25
       ],
       "to": [
-        16,
-        16,
-        16
+        16.0,
+        16.0,
+        16.0
       ],
       "faces": {
         "east": {
@@ -231,7 +234,7 @@
       "to": [
         15.25,
         4.5,
-        1
+        1.0
       ],
       "faces": {
         "west": {
@@ -351,7 +354,7 @@
       "to": [
         15.25,
         7.875,
-        1
+        1.0
       ],
       "faces": {
         "west": {
@@ -471,7 +474,7 @@
       "to": [
         15.25,
         11.25,
-        1
+        1.0
       ],
       "faces": {
         "west": {
@@ -586,7 +589,7 @@
       "from": [
         0.5,
         1.5,
-        15
+        15.0
       ],
       "to": [
         15.25,
@@ -651,7 +654,7 @@
       "to": [
         15.25,
         12.5,
-        1
+        1.0
       ],
       "faces": {
         "west": {
@@ -702,7 +705,7 @@
       }
     },
     {
-      "name": "back_organizer_shelf",
+      "name": "organizer_shelf",
       "from": [
         0,
         14.25,
@@ -740,6 +743,15 @@
             0.125,
             2.0
           ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            1.875,
+            0.0,
+            2.0,
+            2.0
+          ]
         }
       }
     },
@@ -753,7 +765,7 @@
       "to": [
         5.25,
         14.375,
-        12
+        11.75
       ],
       "faces": {
         "east": {
@@ -766,12 +778,12 @@
           ]
         },
         "up": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
-            1.846154,
-            12.0,
+            13.846154,
             4.0,
-            16.0
+            16.0,
+            8.0
           ]
         },
         "north": {
@@ -817,12 +829,12 @@
           ]
         },
         "up": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            12.0,
-            8.0,
-            16.0
+            14.0,
+            4.0,
+            16.0,
+            8.0
           ]
         },
         "north": {
@@ -854,7 +866,7 @@
       ],
       "to": [
         4,
-        15.125,
+        15.0,
         4.25
       ],
       "faces": {
@@ -905,7 +917,7 @@
       ],
       "to": [
         4,
-        15.125,
+        15.0,
         9
       ],
       "faces": {
@@ -956,7 +968,7 @@
       ],
       "to": [
         4,
-        15.125,
+        15.0,
         8.75
       ],
       "faces": {
@@ -994,39 +1006,39 @@
       "from": [
         0,
         14.625,
-        7.25
+        7.375
       ],
       "to": [
-        2.125,
+        1.125,
         14.875,
         7.625
       ],
       "faces": {
         "up": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            8.454545,
-            0.0,
-            10.0,
-            2.0
+            6.0,
+            4.0,
+            8.0,
+            8.0
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            8.0,
-            0.0,
-            9.545455,
-            2.0
+            4.0,
+            4.0,
+            6.0,
+            8.0
           ]
         },
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            8.454545,
-            0.0,
-            10.0,
-            2.0
+            6.0,
+            4.0,
+            8.0,
+            8.0
           ]
         }
       }
@@ -1034,12 +1046,12 @@
     {
       "name": "dispensing_spatula_grip",
       "from": [
-        2.125,
+        1.125,
         14.625,
-        7.125
+        7.25
       ],
       "to": [
-        3.25,
+        2.875,
         15.0,
         7.75
       ],
@@ -1092,76 +1104,16 @@
       }
     },
     {
-      "name": "dispensed_tablet_1_ends",
+      "name": "dispensed_tablet_2_center",
       "from": [
-        0,
-        14.65625,
-        5.125
-      ],
-      "to": [
-        0.125,
-        14.84375,
-        5.375
-      ],
-      "faces": {
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            0.0,
-            16.0,
-            2.0
-          ]
-        },
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            15.75,
-            0.0,
-            16.0,
-            2.0
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            15.75,
-            0.0,
-            16.0,
-            2.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            14.0,
-            0.0,
-            14.25,
-            2.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            15.75,
-            0.0,
-            16.0,
-            2.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "dispensed_tablet_2_core",
-      "from": [
-        1.125,
+        1.375,
         14.625,
-        4.625
+        4.875
       ],
       "to": [
-        1.875,
+        2.125,
         14.875,
-        5.125
+        5.375
       ],
       "faces": {
         "west": {
@@ -1182,6 +1134,15 @@
             2.0
           ]
         },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14.0,
+            0.0,
+            16.0,
+            2.0
+          ]
+        },
         "up": {
           "texture": "#atlas",
           "uv": [
@@ -1209,19 +1170,28 @@
             2.0
           ]
         }
+      },
+      "rotation": {
+        "origin": [
+          1.75,
+          14.625,
+          5.125
+        ],
+        "axis": "y",
+        "angle": -22.5
       }
     },
     {
       "name": "dispensed_tablet_2_ends",
       "from": [
-        1,
+        1.25,
         14.65625,
-        4.75
+        5.0
       ],
       "to": [
-        2,
+        2.25,
         14.84375,
-        5.0
+        5.25
       ],
       "faces": {
         "west": {
@@ -1278,10 +1248,19 @@
             2.0
           ]
         }
+      },
+      "rotation": {
+        "origin": [
+          1.75,
+          14.625,
+          5.125
+        ],
+        "axis": "y",
+        "angle": -22.5
       }
     },
     {
-      "name": "electronic_scale",
+      "name": "scale_base",
       "from": [
         7,
         14.25,
@@ -1354,54 +1333,54 @@
       ],
       "faces": {
         "west": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            4.0,
+            4.0,
             8.0,
-            0.0,
-            10.0,
-            2.0
+            8.0
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            4.0,
+            4.0,
             8.0,
-            0.0,
-            10.0,
-            2.0
+            8.0
           ]
         },
         "up": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            4.0,
+            4.0,
             8.0,
-            0.0,
-            10.0,
-            2.0
+            8.0
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            4.0,
+            4.0,
             8.0,
-            0.0,
-            10.0,
-            2.0
+            8.0
           ]
         },
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
+            4.0,
+            4.0,
             8.0,
-            0.0,
-            10.0,
-            2.0
+            8.0
           ]
         }
       }
     },
     {
-      "name": "scale_status",
+      "name": "scale_front_control",
       "from": [
         8.25,
         14.875,
@@ -1450,12 +1429,12 @@
           ]
         },
         "north": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
-            10.0,
-            8.0,
-            12.0,
-            12.0
+            0.0,
+            4.0,
+            4.0,
+            8.0
           ]
         }
       }
@@ -1512,7 +1491,7 @@
       }
     },
     {
-      "name": "small_scale_readout",
+      "name": "scale_readout",
       "from": [
         7.75,
         16.625,
@@ -1525,63 +1504,63 @@
       ],
       "faces": {
         "west": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            10.0,
-            0.0,
             12.0,
-            2.0
+            8.0,
+            16.0,
+            12.0
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            10.0,
-            0.0,
             12.0,
-            2.0
+            8.0,
+            16.0,
+            12.0
           ]
         },
         "down": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            10.0,
-            0.0,
             12.0,
-            2.0
+            8.0,
+            16.0,
+            12.0
           ]
         },
         "up": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            10.0,
-            0.0,
             12.0,
-            2.0
+            8.0,
+            16.0,
+            12.0
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            10.0,
-            0.0,
             12.0,
-            2.0
+            8.0,
+            16.0,
+            12.0
           ]
         },
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            10.0,
-            0.0,
             12.0,
-            2.0
+            8.0,
+            16.0,
+            12.0
           ]
         }
       }
     },
     {
-      "name": "readout_face",
+      "name": "scale_screen",
       "from": [
         8,
         16.875,
@@ -1630,18 +1609,18 @@
           ]
         },
         "north": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
             0.0,
-            8.0,
             4.0,
-            12.0
+            4.0,
+            8.0
           ]
         }
       }
     },
     {
-      "name": "label_printer_body",
+      "name": "label_printer_base",
       "from": [
         6.5,
         14.25,
@@ -1649,8 +1628,68 @@
       ],
       "to": [
         12.75,
-        17,
+        14.625,
         5.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "label_printer_housing",
+      "from": [
+        6.75,
+        14.625,
+        2.125
+      ],
+      "to": [
+        12.5,
+        16.75,
+        5.5
       ],
       "faces": {
         "west": {
@@ -1701,16 +1740,136 @@
       }
     },
     {
-      "name": "label_printer_slot",
+      "name": "label_printer_lid",
+      "from": [
+        7,
+        16.75,
+        2.25
+      ],
+      "to": [
+        12.25,
+        17,
+        5.375
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.0,
+            0.0,
+            4.0,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "label_printer_screen",
+      "from": [
+        8,
+        17,
+        3
+      ],
+      "to": [
+        11.25,
+        17.0625,
+        4.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            0.0,
+            4.0,
+            4.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "label_output_slot",
       "from": [
         7.25,
-        15.625,
-        1.875
+        15,
+        2
       ],
       "to": [
         12,
-        16,
-        2
+        15.375,
+        2.125
       ],
       "faces": {
         "west": {
@@ -1761,75 +1920,66 @@
       }
     },
     {
-      "name": "label_printer_controls",
+      "name": "label_output_tray",
       "from": [
-        7.5,
-        17,
-        2.625
+        7.25,
+        14.25,
+        0.625
       ],
       "to": [
-        11.75,
-        17.0625,
-        4.75
+        12,
+        14.5,
+        2.125
       ],
       "faces": {
         "west": {
           "texture": "#atlas",
           "uv": [
-            0.0,
-            0.0,
             2.0,
+            0.0,
+            4.0,
             2.0
           ]
         },
         "east": {
           "texture": "#atlas",
           "uv": [
-            0.0,
-            0.0,
             2.0,
+            0.0,
+            4.0,
             2.0
           ]
         },
         "up": {
-          "texture": "#storage",
+          "texture": "#atlas",
           "uv": [
+            2.0,
             0.0,
-            8.0,
             4.0,
-            12.0
+            2.0
           ]
         },
         "north": {
           "texture": "#atlas",
           "uv": [
-            0.0,
-            0.0,
             2.0,
-            2.0
-          ]
-        },
-        "south": {
-          "texture": "#atlas",
-          "uv": [
             0.0,
-            0.0,
-            2.0,
+            4.0,
             2.0
           ]
         }
       }
     },
     {
-      "name": "printed_prescription",
+      "name": "printed_label",
       "from": [
-        8,
-        14.25,
+        7.5,
+        14.5,
         0.75
       ],
       "to": [
-        12,
-        14.375,
+        11.75,
+        14.625,
         1.875
       ],
       "faces": {
@@ -1852,11 +2002,11 @@
           ]
         },
         "up": {
-          "texture": "#storage",
+          "texture": "#revision",
           "uv": [
-            0.0,
             12.0,
-            4.0,
+            12.0,
+            16.0,
             16.0
           ]
         },
@@ -1883,7 +2033,7 @@
     {
       "name": "sealed_blister_pack",
       "from": [
-        12.875,
+        13,
         14.25,
         4
       ],
@@ -1938,6 +2088,384 @@
             2.0
           ]
         }
+      }
+    },
+    {
+      "name": "mortar_base",
+      "from": [
+        2,
+        14.25,
+        12
+      ],
+      "to": [
+        5,
+        14.625,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "mortar_front",
+      "from": [
+        2.25,
+        14.625,
+        12
+      ],
+      "to": [
+        4.75,
+        15.75,
+        12.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "mortar_back",
+      "from": [
+        2.25,
+        14.625,
+        14.5
+      ],
+      "to": [
+        4.75,
+        15.75,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "mortar_left",
+      "from": [
+        2,
+        14.625,
+        12.5
+      ],
+      "to": [
+        2.5,
+        15.75,
+        14.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "mortar_right",
+      "from": [
+        4.5,
+        14.625,
+        12.5
+      ],
+      "to": [
+        5,
+        15.75,
+        14.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "resting_pestle",
+      "from": [
+        3,
+        14.625,
+        13
+      ],
+      "to": [
+        3.5,
+        17,
+        13.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "down": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            8.0,
+            8.0,
+            12.0,
+            12.0
+          ]
+        }
+      },
+      "rotation": {
+        "origin": [
+          3.25,
+          14.625,
+          13.25
+        ],
+        "axis": "z",
+        "angle": 22.5
       }
     }
   ]

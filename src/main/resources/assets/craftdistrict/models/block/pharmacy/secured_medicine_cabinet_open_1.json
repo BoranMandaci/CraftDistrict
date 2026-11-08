@@ -5,428 +5,546 @@
   "textures": {
     "atlas": "craftdistrict:block/pharmacy/pharmacy",
     "storage": "craftdistrict:block/pharmacy/storage",
+    "customer": "craftdistrict:block/pharmacy/customer",
+    "polish": "craftdistrict:block/pharmacy/polish",
+    "revision": "craftdistrict:block/pharmacy/refinement",
     "particle": "craftdistrict:block/particles/particle_white"
   },
   "elements": [
     {
-      "name": "door_left_rail",
+      "name": "heavy_left_stile",
       "from": [
         0.0,
         0,
         0.5
       ],
       "to": [
-        0.75,
-        12.5,
+        0.875,
+        13.25,
         1.375
       ],
       "faces": {
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            0.990099
+            5.962963
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            0.990099
+            5.962963
           ]
         },
         "west": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            0.990099
+            5.962963
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            0.990099
+            5.962963
           ]
         }
       }
     },
     {
-      "name": "door_right_rail",
+      "name": "heavy_right_stile",
       "from": [
         0.0,
         0,
         -13.125
       ],
       "to": [
-        0.75,
-        12.5,
+        0.875,
+        13.25,
         -12.25
       ],
       "faces": {
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            0.990099
+            5.962963
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            0.990099
+            5.962963
           ]
         },
         "west": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            0.990099
+            5.962963
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            0.990099
+            5.962963
           ]
         }
       }
     },
     {
-      "name": "door_upper_rail",
+      "name": "heavy_top_rail",
       "from": [
         0.0,
-        12.5,
+        13.25,
         -13.125
       ],
       "to": [
-        0.75,
+        0.875,
         14.25,
         1.375
       ],
       "faces": {
         "south": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            2.0
+            8.0
           ]
         },
         "north": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            2.0
+            8.0
           ]
         },
         "down": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            2.0
+            8.0
           ],
           "rotation": 270
         },
         "up": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            2.0
+            8.0
           ],
           "rotation": 90
         },
         "west": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            2.0
+            8.0
           ]
         },
         "east": {
-          "texture": "#atlas",
+          "texture": "#revision",
           "uv": [
-            6.0,
-            0.0,
+            4.0,
+            4.0,
             8.0,
-            2.0
+            8.0
           ]
         }
       }
     },
     {
-      "name": "reinforced_door_panel",
+      "name": "solid_inner_door_plate",
+      "from": [
+        0.25,
+        0,
+        -12.25
+      ],
+      "to": [
+        0.875,
+        13.25,
+        0.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            5.962963
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            5.962963
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_pressed_metal_panel",
       "from": [
         0.125,
         0,
         -12.25
       ],
       "to": [
-        0.625,
-        12.5,
+        0.25,
+        13.25,
         0.5
       ],
       "faces": {
         "west": {
           "texture": "#atlas",
           "uv": [
-            12.0,
             2.0,
-            14.0,
-            2.990099
+            0.0,
+            4.0,
+            1.876106
+          ]
+        }
+      }
+    },
+    {
+      "name": "integrated_handle_backplate",
+      "from": [
+        0.0,
+        0,
+        -11.625
+      ],
+      "to": [
+        0.125,
+        3.5,
+        -10.125
+      ],
+      "faces": {
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            10.333333
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            10.333333
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            12.0
+          ],
+          "rotation": 90
+        },
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            10.333333
           ]
         },
         "east": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            10.333333
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_handle_mount",
+      "from": [
+        -0.25,
+        2.25,
+        -11.375
+      ],
+      "to": [
+        0.0,
+        2.75,
+        -10.375
+      ],
+      "faces": {
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ],
+          "rotation": 270
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ],
+          "rotation": 90
+        },
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "vertical_cabinet_grip",
+      "from": [
+        -0.375,
+        0,
+        -11.25
+      ],
+      "to": [
+        -0.125,
+        2.25,
+        -10.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            10.4
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            10.4
+          ]
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            12.0
+          ],
+          "rotation": 90
+        },
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            10.4
+          ]
+        },
+        "east": {
+          "texture": "#revision",
+          "uv": [
+            12.0,
+            8.0,
+            16.0,
+            10.4
+          ]
+        }
+      }
+    },
+    {
+      "name": "small_cylinder_face",
+      "from": [
+        -0.125,
+        3,
+        -11.125
+      ],
+      "to": [
+        0.0,
+        3.5,
+        -10.625
+      ],
+      "faces": {
+        "south": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "north": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        },
+        "down": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ],
+          "rotation": 270
+        },
+        "up": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ],
+          "rotation": 90
+        },
+        "west": {
+          "texture": "#revision",
+          "uv": [
+            4.0,
+            4.0,
+            8.0,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "mechanical_key_slot",
+      "from": [
+        -0.15625,
+        3.125,
+        -10.9375
+      ],
+      "to": [
+        -0.125,
+        3.375,
+        -10.8125
+      ],
+      "faces": {
+        "south": {
           "texture": "#atlas",
           "uv": [
             12.0,
-            2.0,
+            0.0,
             14.0,
-            2.990099
-          ]
-        }
-      }
-    },
-    {
-      "name": "lock_plate",
-      "from": [
-        -0.125,
-        0,
-        -12.0
-      ],
-      "to": [
-        0.125,
-        2,
-        -8.125
-      ],
-      "faces": {
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            10.0,
-            0.0,
-            12.0,
-            0.941176
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            10.0,
-            0.0,
-            12.0,
-            0.941176
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            10.0,
-            0.0,
-            12.0,
             2.0
-          ],
-          "rotation": 90
-        },
-        "west": {
-          "texture": "#storage",
-          "uv": [
-            6.0,
-            8.0,
-            8.0,
-            9.882353
-          ]
-        }
-      }
-    },
-    {
-      "name": "central_reinforcement",
-      "from": [
-        -0.125,
-        0,
-        -6.5
-      ],
-      "to": [
-        0.125,
-        12.25,
-        -5.25
-      ],
-      "faces": {
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            8.0,
-            0.0,
-            10.0,
-            0.989899
           ]
         },
         "north": {
           "texture": "#atlas",
           "uv": [
-            8.0,
+            12.0,
             0.0,
-            10.0,
-            0.989899
-          ]
-        },
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            8.0,
-            0.0,
-            10.0,
+            14.0,
             2.0
-          ],
-          "rotation": 90
-        },
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            8.0,
-            0.0,
-            10.0,
-            0.989899
-          ]
-        }
-      }
-    },
-    {
-      "name": "handle_upper_mount",
-      "from": [
-        -0.5,
-        2,
-        -12.875
-      ],
-      "to": [
-        0.25,
-        2.5,
-        -12.375
-      ],
-      "faces": {
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            4.0,
-            8.0,
-            6.0
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            4.0,
-            8.0,
-            6.0
           ]
         },
         "down": {
           "texture": "#atlas",
           "uv": [
-            6.0,
-            4.0,
-            8.0,
-            6.0
+            12.0,
+            0.0,
+            14.0,
+            2.0
           ],
           "rotation": 270
         },
         "up": {
           "texture": "#atlas",
           "uv": [
-            6.0,
-            4.0,
-            8.0,
-            6.0
+            12.0,
+            0.0,
+            14.0,
+            2.0
           ],
           "rotation": 90
         },
         "west": {
           "texture": "#atlas",
           "uv": [
-            6.0,
-            4.0,
-            8.0,
-            6.0
-          ]
-        }
-      }
-    },
-    {
-      "name": "vertical_door_grip",
-      "from": [
-        -0.5,
-        0,
-        -12.875
-      ],
-      "to": [
-        -0.125,
-        2,
-        -12.375
-      ],
-      "faces": {
-        "south": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            4.0,
-            8.0,
-            4.888889
-          ]
-        },
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            4.0,
-            8.0,
-            4.888889
-          ]
-        },
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            4.0,
-            8.0,
-            4.888889
-          ]
-        },
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            6.0,
-            4.0,
-            8.0,
-            4.888889
+            12.0,
+            0.0,
+            14.0,
+            2.0
           ]
         }
       }

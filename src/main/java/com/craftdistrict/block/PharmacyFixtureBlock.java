@@ -20,7 +20,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Passive two-cell pharmacy fixtures on the shared atomic placement/removal lifecycle. */
-public final class PharmacyFixtureBlock extends MultiBlockDecorationBlock {
+public class PharmacyFixtureBlock extends MultiBlockDecorationBlock {
     public enum Design implements StringRepresentable {
         SIGN, COUNTER, GLASS_DISPLAY, PREPARATION;
         @Override public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
@@ -36,9 +36,9 @@ public final class PharmacyFixtureBlock extends MultiBlockDecorationBlock {
             {RestaurantKitchenBlock.rotations(box(.5, 4, 14.5, 16, 12.5, 16)),
                     RestaurantKitchenBlock.rotations(box(0, 4, 14.5, 15.5, 12.5, 16))},
             {RestaurantKitchenBlock.rotations(Shapes.or(box(0, 0, 1, 16, 14.25, 15),
-                    box(0, 13.25, 0, 16, 15, 16), box(2.75, 14.25, 8, 13.25, 24, 9.3125)).optimize()),
+                    box(0, 13.25, 0, 16, 15, 16), box(3.5, 14.25, 3, 14.5, 18.5, 15)).optimize()),
                     RestaurantKitchenBlock.rotations(Shapes.or(box(0, 0, 1, 16, 14.25, 15),
-                            box(0, 13.25, 0, 16, 15, 16), box(3.5, 14.25, 3, 15, 18.5, 14.5)).optimize())},
+                            box(0, 13.25, 0, 16, 15, 16), box(2.75, 14.25, 7.875, 13.25, 24, 9.3125)).optimize())},
             {RestaurantKitchenBlock.rotations(box(0, 0, .5, 16, 16, 15.5)),
                     RestaurantKitchenBlock.rotations(box(0, 0, .5, 16, 16, 15.5))},
             {RestaurantKitchenBlock.rotations(Shapes.or(box(0, 0, 1, 16, 14.25, 15),

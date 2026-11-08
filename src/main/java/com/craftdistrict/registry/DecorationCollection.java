@@ -353,6 +353,7 @@ public enum DecorationCollection {
     PHARMACY("pharmacy", CraftDistrictBlocks.Pharmacy.SIGN,
             CraftDistrictBlocks.Pharmacy.SIGN,
             CraftDistrictBlocks.Pharmacy.COUNTER,
+            CraftDistrictBlocks.Pharmacy.INFORMATION_BOARD,
             CraftDistrictBlocks.Pharmacy.QUEUE_TICKET_DISPENSER,
             CraftDistrictBlocks.Pharmacy.BLOOD_PRESSURE_KIOSK,
             CraftDistrictBlocks.Pharmacy.MEDICINE_WALL_SHELF,
@@ -362,6 +363,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Pharmacy.PREPARATION_STATION,
             CraftDistrictBlocks.Pharmacy.PILL_COUNTING_STATION,
             CraftDistrictBlocks.Pharmacy.MEDICINE_STACK,
+            CraftDistrictBlocks.Pharmacy.DELIVERY_CART,
             CraftDistrictBlocks.Pharmacy.DRAWER_CABINET,
             CraftDistrictBlocks.Pharmacy.REFRIGERATOR,
             CraftDistrictBlocks.Pharmacy.SECURED_CABINET);
