@@ -51,11 +51,14 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Police.RECEPTION_DESK,
             CraftDistrictBlocks.Police.WAITING_BENCH,
             // Office and dispatch.
+            CraftDistrictBlocks.Police.CHIEF_DESK,
+            CraftDistrictBlocks.Police.DETECTIVE_DESK,
             CraftDistrictBlocks.Police.DISPATCH_CONSOLE,
             CraftDistrictBlocks.Police.OFFICE_CHAIR,
             CraftDistrictBlocks.Police.CASE_FILE_CABINET,
             // Investigation and interrogation.
             CraftDistrictBlocks.Police.INVESTIGATION_BOARD,
+            CraftDistrictBlocks.Police.WANTED_POSTERS,
             CraftDistrictBlocks.Police.EVIDENCE_STORAGE_SHELF,
             CraftDistrictBlocks.Police.INTERROGATION_TABLE,
             CraftDistrictBlocks.Police.BLUE_CHAIR,
@@ -82,6 +85,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Police.SECURITY_MONITOR_WALL_UNIT,
             CraftDistrictBlocks.Police.VISITOR_SECURITY_SCANNER,
             CraftDistrictBlocks.FireStation.EXTINGUISHER,
+            CraftDistrictBlocks.Lighting.PULL_DOWN_FIRE_ALARM,
             CraftDistrictBlocks.FireStation.FIRST_AID_CABINET,
             CraftDistrictBlocks.FireStation.WALL_CLOCK),
     FIRE_STATION("fire_station", CraftDistrictBlocks.FireStation.EXTINGUISHER,
@@ -93,12 +97,15 @@ public enum DecorationCollection {
             CraftDistrictBlocks.FireStation.HOSE_STORAGE_RACK,
             CraftDistrictBlocks.FireStation.HOSE_REEL,
             CraftDistrictBlocks.FireStation.EXTINGUISHER,
+            CraftDistrictBlocks.Lighting.PULL_DOWN_FIRE_ALARM,
             // Rescue tools and first aid.
             CraftDistrictBlocks.FireStation.RESCUE_TOOLS_RACK,
             CraftDistrictBlocks.FireStation.HYDRAULIC_RESCUE_TOOL,
             CraftDistrictBlocks.FireStation.RESCUE_STRETCHER,
             CraftDistrictBlocks.FireStation.FIRST_AID_CABINET,
             // Dispatch and alarms.
+            CraftDistrictBlocks.FireStation.CHIEF_DESK,
+            CraftDistrictBlocks.FireStation.INVESTIGATOR_DESK,
             CraftDistrictBlocks.FireStation.DISPATCH_DESK,
             CraftDistrictBlocks.Police.OFFICE_CHAIR,
             CraftDistrictBlocks.Police.RADIO_CHARGING_STATION,
@@ -138,6 +145,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Supermarket.WHISKEY_DISPLAY_CABINET,
             CraftDistrictBlocks.Supermarket.CHEST_FREEZER_FROZEN_FOOD,
             CraftDistrictBlocks.Supermarket.CHEST_FREEZER_ICE_CREAM,
+            CraftDistrictBlocks.Supermarket.ICE_MERCHANDISER,
             // Checkout equipment.
             CraftDistrictBlocks.Supermarket.CHECKOUT,
             CraftDistrictBlocks.Supermarket.SELF_CHECKOUT,
@@ -179,6 +187,7 @@ public enum DecorationCollection {
             // Signs and indicators.
             CraftDistrictBlocks.Lighting.EXIT_SIGN,
             CraftDistrictBlocks.Lighting.EXIT_SIGN_LEFT,
+            CraftDistrictBlocks.Lighting.EXIT_SIGN_NO_ARROW,
             CraftDistrictBlocks.Lighting.NEON_OPEN_SIGN,
             CraftDistrictBlocks.Lighting.EMERGENCY_BEACON,
             CraftDistrictBlocks.Lighting.INDUSTRIAL_WARNING_LIGHT,
@@ -218,12 +227,16 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Restaurant.PLATE_CUTLERY_RACK,
             CraftDistrictBlocks.Restaurant.CONDIMENT_STATION,
             CraftDistrictBlocks.Restaurant.BEVERAGE_DISPENSER,
+            CraftDistrictBlocks.Restaurant.SOFT_DRINK_DISPENSER,
+            CraftDistrictBlocks.Restaurant.DISPOSABLE_CUPS,
+            CraftDistrictBlocks.Restaurant.BLENDER,
             CraftDistrictBlocks.Restaurant.COMMERCIAL_COFFEE_MACHINE,
             // Cooking equipment.
             CraftDistrictBlocks.Restaurant.COMMERCIAL_COOKING_RANGE,
             CraftDistrictBlocks.Restaurant.COMMERCIAL_GRIDDLE,
             CraftDistrictBlocks.Restaurant.COMMERCIAL_DEEP_FRYER,
             CraftDistrictBlocks.Restaurant.COMMERCIAL_PIZZA_OVEN,
+            CraftDistrictBlocks.Restaurant.EMPTY_COMMERCIAL_PIZZA_OVEN,
             CraftDistrictBlocks.Restaurant.COMMERCIAL_MICROWAVE,
             // Kitchen workstations.
             CraftDistrictBlocks.Restaurant.STAINLESS_STEEL_PREP_TABLE,
@@ -282,6 +295,7 @@ public enum DecorationCollection {
             // Safety, accessories and access control.
             CraftDistrictBlocks.FireStation.WALL_CLOCK,
             CraftDistrictBlocks.FireStation.EXTINGUISHER,
+            CraftDistrictBlocks.Lighting.PULL_DOWN_FIRE_ALARM,
             CraftDistrictBlocks.FireStation.FIRST_AID_CABINET,
             CraftDistrictBlocks.Office.COAT_RACK,
             CraftDistrictBlocks.Office.PLANTER,
@@ -349,6 +363,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hospital.DEPARTMENT_SIGN,
             CraftDistrictBlocks.FireStation.WALL_CLOCK,
             CraftDistrictBlocks.FireStation.EXTINGUISHER,
+            CraftDistrictBlocks.Lighting.PULL_DOWN_FIRE_ALARM,
             CraftDistrictBlocks.FireStation.FIRST_AID_CABINET),
     PHARMACY("pharmacy", CraftDistrictBlocks.Pharmacy.SIGN,
             CraftDistrictBlocks.Pharmacy.SIGN,

@@ -4,32 +4,24 @@
   "ambientocclusion": false,
   "textures": {
     "atlas": "craftdistrict:block/lighting/fixtures",
-    "particle": "craftdistrict:block/lighting/fixtures"
+    "particle": "craftdistrict:block/particles/particle_metal",
+    "light_tint": "craftdistrict:block/lighting/fixtures_tint"
   },
   "elements": [
     {
-      "name": "thin_ceiling_frame",
+      "name": "thin_panel_back",
       "from": [
-        0.5,
-        7.5,
-        0.5
+        0.0,
+        7.875,
+        0.0
       ],
       "to": [
-        15.5,
-        8.75,
-        15.5
+        16.0,
+        8.625,
+        16.0
       ],
       "faces": {
-        "north": {
-          "texture": "#atlas",
-          "uv": [
-            0.0625,
-            0.125,
-            1.9375,
-            3.875
-          ]
-        },
-        "south": {
+        "west": {
           "texture": "#atlas",
           "uv": [
             0.0625,
@@ -39,15 +31,6 @@
           ]
         },
         "east": {
-          "texture": "#atlas",
-          "uv": [
-            0.0625,
-            0.125,
-            1.9375,
-            3.875
-          ]
-        },
-        "west": {
           "texture": "#atlas",
           "uv": [
             0.0625,
@@ -65,7 +48,16 @@
             3.875
           ]
         },
-        "down": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "south": {
           "texture": "#atlas",
           "uv": [
             0.0625,
@@ -77,65 +69,270 @@
       }
     },
     {
-      "name": "downward_led_diffuser",
+      "name": "continuous_diffuser",
       "from": [
-        1.25,
-        7.25,
-        1.25
+        0.5,
+        7.375,
+        0.5
       ],
       "to": [
-        14.75,
-        7.5,
-        14.75
+        15.5,
+        7.875,
+        15.5
       ],
       "faces": {
-        "north": {
-          "texture": "#atlas",
+        "down": {
+          "texture": "#light_tint",
           "uv": [
             8.0625,
             0.125,
             9.9375,
             3.875
-          ]
-        },
-        "south": {
+          ],
+          "tintindex": 33554431
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "north_outer_rim",
+      "from": [
+        0.0,
+        7.375,
+        0.0
+      ],
+      "to": [
+        16.0,
+        7.875,
+        0.5
+      ],
+      "faces": {
+        "west": {
           "texture": "#atlas",
           "uv": [
-            8.0625,
+            0.0625,
             0.125,
-            9.9375,
+            1.9375,
             3.875
           ]
         },
         "east": {
           "texture": "#atlas",
           "uv": [
-            8.0625,
+            0.0625,
             0.125,
-            9.9375,
-            3.875
-          ]
-        },
-        "west": {
-          "texture": "#atlas",
-          "uv": [
-            8.0625,
-            0.125,
-            9.9375,
+            1.9375,
             3.875
           ]
         },
         "down": {
           "texture": "#atlas",
           "uv": [
-            8.0625,
+            0.0625,
             0.125,
-            9.9375,
+            1.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
             3.875
           ]
         }
-      },
-      "shade": false
+      }
+    },
+    {
+      "name": "south_outer_rim",
+      "from": [
+        0.0,
+        7.375,
+        15.5
+      ],
+      "to": [
+        16.0,
+        7.875,
+        16.0
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "west_outer_rim",
+      "from": [
+        0.0,
+        7.375,
+        0.5
+      ],
+      "to": [
+        0.5,
+        7.875,
+        15.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "east_outer_rim",
+      "from": [
+        15.5,
+        7.375,
+        0.5
+      ],
+      "to": [
+        16.0,
+        7.875,
+        15.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.125,
+            1.9375,
+            3.875
+          ]
+        }
+      }
     }
   ],
   "display": {
@@ -146,13 +343,13 @@
         0
       ],
       "scale": [
-        0.7071,
-        0.7071,
-        0.7071
+        0.62976698,
+        0.62976698,
+        0.62976698
       ],
       "translation": [
-        0.0,
-        -0.0801,
+        0,
+        -0.0,
         0
       ]
     },

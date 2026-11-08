@@ -1,36 +1,2388 @@
 {
-  "variants": {
-    "facing=north,primary=true": {
-      "model": "craftdistrict:block/police/police_evidence_storage_shelf_lower",
-      "y": 0
+  "multipart": [
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_0_0",
+        "y": 0
+      }
     },
-    "facing=east,primary=true": {
-      "model": "craftdistrict:block/police/police_evidence_storage_shelf_lower",
-      "y": 90
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_0_1",
+        "y": 0
+      }
     },
-    "facing=south,primary=true": {
-      "model": "craftdistrict:block/police/police_evidence_storage_shelf_lower",
-      "y": 180
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_1_0",
+        "y": 0
+      }
     },
-    "facing=west,primary=true": {
-      "model": "craftdistrict:block/police/police_evidence_storage_shelf_lower",
-      "y": 270
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_1_1",
+        "y": 0
+      }
     },
-    "facing=north,primary=false": {
-      "model": "craftdistrict:block/police/police_evidence_storage_shelf_upper",
-      "y": 0
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_2_0",
+        "y": 0
+      }
     },
-    "facing=east,primary=false": {
-      "model": "craftdistrict:block/police/police_evidence_storage_shelf_upper",
-      "y": 90
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_2_1",
+        "y": 0
+      }
     },
-    "facing=south,primary=false": {
-      "model": "craftdistrict:block/police/police_evidence_storage_shelf_upper",
-      "y": 180
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_3_0",
+        "y": 0
+      }
     },
-    "facing=west,primary=false": {
-      "model": "craftdistrict:block/police/police_evidence_storage_shelf_upper",
-      "y": 270
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_3_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_4_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_4_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_5_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_5_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_6_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_6_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_7_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_7_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_8_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_8_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_9_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_9_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_10_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_10_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_11_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_11_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_12_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_12_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_13_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_13_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_14_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_14_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_15_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_15_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_0_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_0_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_1_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_1_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_2_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_2_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_3_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_3_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_4_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_4_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_5_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_5_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_6_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_6_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_7_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_7_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_8_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_8_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_9_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_9_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_10_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_10_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_11_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_11_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_12_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_12_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_13_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_13_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_14_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_14_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_15_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_15_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_0_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_0_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_1_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_1_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_2_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_2_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_3_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_3_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_4_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_4_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_5_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_5_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_6_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_6_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_7_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_7_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_8_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_8_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_9_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_9_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_10_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_10_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_11_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_11_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_12_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_12_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_13_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_13_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_14_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_14_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_15_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_15_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_0_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_0_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_1_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_1_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_2_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_2_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_3_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_3_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_4_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_4_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_5_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_5_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_6_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_6_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_7_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_7_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_8_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_8_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_9_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_9_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_10_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_10_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_11_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "false",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_11_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_12_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "false",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_12_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_13_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "true",
+        "right": "false",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_13_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_14_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "false",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_14_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "true",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_15_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "true",
+        "right": "true",
+        "front": "true",
+        "back": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_grid_15_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "left": "false"
+              },
+              {
+                "front": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_0_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "true",
+        "front": "true",
+        "inner_corners": "0|2|4|6|8|10|12|14"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_0_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "right": "false"
+              },
+              {
+                "front": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_1_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "right": "true",
+        "front": "true",
+        "inner_corners": "0|1|4|5|8|9|12|13"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_1_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "left": "false"
+              },
+              {
+                "back": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_2_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "left": "true",
+        "back": "true",
+        "inner_corners": "0|1|2|3|8|9|10|11"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_2_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "north",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "right": "false"
+              },
+              {
+                "back": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_3_0",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "primary": "false",
+        "right": "true",
+        "back": "true",
+        "inner_corners": "0|1|2|3|4|5|6|7"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_3_1",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "left": "false"
+              },
+              {
+                "front": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_0_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "true",
+        "front": "true",
+        "inner_corners": "0|2|4|6|8|10|12|14"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_0_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "right": "false"
+              },
+              {
+                "front": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_1_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "right": "true",
+        "front": "true",
+        "inner_corners": "0|1|4|5|8|9|12|13"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_1_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "left": "false"
+              },
+              {
+                "back": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_2_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "left": "true",
+        "back": "true",
+        "inner_corners": "0|1|2|3|8|9|10|11"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_2_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "east",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "right": "false"
+              },
+              {
+                "back": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_3_0",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "primary": "false",
+        "right": "true",
+        "back": "true",
+        "inner_corners": "0|1|2|3|4|5|6|7"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_3_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "left": "false"
+              },
+              {
+                "front": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_0_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "true",
+        "front": "true",
+        "inner_corners": "0|2|4|6|8|10|12|14"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_0_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "right": "false"
+              },
+              {
+                "front": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_1_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "right": "true",
+        "front": "true",
+        "inner_corners": "0|1|4|5|8|9|12|13"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_1_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "left": "false"
+              },
+              {
+                "back": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_2_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "left": "true",
+        "back": "true",
+        "inner_corners": "0|1|2|3|8|9|10|11"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_2_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "south",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "right": "false"
+              },
+              {
+                "back": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_3_0",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "primary": "false",
+        "right": "true",
+        "back": "true",
+        "inner_corners": "0|1|2|3|4|5|6|7"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_3_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "left": "false"
+              },
+              {
+                "front": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_0_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "true",
+        "front": "true",
+        "inner_corners": "0|2|4|6|8|10|12|14"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_0_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "right": "false"
+              },
+              {
+                "front": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_1_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "right": "true",
+        "front": "true",
+        "inner_corners": "0|1|4|5|8|9|12|13"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_1_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "left": "false"
+              },
+              {
+                "back": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_2_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "left": "true",
+        "back": "true",
+        "inner_corners": "0|1|2|3|8|9|10|11"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_2_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "facing": "west",
+            "primary": "false"
+          },
+          {
+            "OR": [
+              {
+                "right": "false"
+              },
+              {
+                "back": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_3_0",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "primary": "false",
+        "right": "true",
+        "back": "true",
+        "inner_corners": "0|1|2|3|4|5|6|7"
+      },
+      "apply": {
+        "model": "craftdistrict:block/police/police_evidence_storage_shelf_terminal_3_1",
+        "y": 270
+      }
     }
-  }
+  ]
 }

@@ -21,12 +21,12 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** One item per arrow direction; the clicked surface chooses the mounting style. */
+/** One item per sign design; the clicked surface chooses the mounting style. */
 public final class ExitSignBlock extends RotatableDecorationBlock implements ControlledLight {
     public static final BooleanProperty HANGING = BooleanProperty.create("hanging");
 
     public enum Arrow implements StringRepresentable {
-        RIGHT, LEFT;
+        RIGHT, LEFT, NONE;
 
         @Override
         public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }

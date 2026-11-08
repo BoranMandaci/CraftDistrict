@@ -98,6 +98,12 @@ import com.craftdistrict.block.UnderCabinetLightBlock;
 import com.craftdistrict.block.WallLightBlock;
 import com.craftdistrict.block.FluorescentLightBlock;
 import com.craftdistrict.block.ExitSignBlock;
+import com.craftdistrict.block.ModularLedPanelBlock;
+import com.craftdistrict.block.PullDownFireAlarmBlock;
+import com.craftdistrict.block.EvidenceStorageRackBlock;
+import com.craftdistrict.block.AdministrativeDeskBlock;
+import com.craftdistrict.block.IceMerchandiserBlock;
+import com.craftdistrict.block.WantedPostersBlock;
 import com.craftdistrict.block.TrackLightBlock;
 import com.craftdistrict.block.FloorLightBlock;
 import com.craftdistrict.block.OpenSignBlock;
@@ -467,6 +473,13 @@ public final class CraftDistrictBlocks {
                 () -> new RestaurantServiceWallBlock(RestaurantServiceWallBlock.Design.PLATE_CUTLERY_RACK, metalProperties()));
         public static final RegistrySupplier<RestaurantServicePropBlock> BEVERAGE_DISPENSER = register("beverage_dispenser",
                 () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.BEVERAGE_DISPENSER, metalProperties()));
+        public static final RegistrySupplier<RestaurantServicePropBlock> BLENDER = register("blender",
+                () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.BLENDER, metalProperties()));
+        public static final RegistrySupplier<RestaurantServicePropBlock> DISPOSABLE_CUPS = register("stack_of_disposable_cups",
+                () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.DISPOSABLE_CUPS,
+                        metalProperties().strength(.5F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<RestaurantServicePropBlock> SOFT_DRINK_DISPENSER = register("soft_drink_dispenser",
+                () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.SOFT_DRINK_DISPENSER, metalProperties()));
         public static final RegistrySupplier<RestaurantServicePropBlock> CONDIMENT_STATION = register("condiment_station",
                 () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.CONDIMENT_STATION, woodProperties()));
         public static final RegistrySupplier<RestaurantServicePropBlock> COMMERCIAL_COFFEE_MACHINE = register("commercial_coffee_machine",
@@ -488,6 +501,8 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<RestaurantStoragePropBlock> COMMERCIAL_MICROWAVE = register("commercial_microwave",
                 () -> new RestaurantStoragePropBlock(RestaurantStoragePropBlock.Design.MICROWAVE, metalProperties()));
         public static final RegistrySupplier<CommercialPizzaOvenBlock> COMMERCIAL_PIZZA_OVEN = register("commercial_pizza_oven",
+                () -> new CommercialPizzaOvenBlock(metalProperties()));
+        public static final RegistrySupplier<CommercialPizzaOvenBlock> EMPTY_COMMERCIAL_PIZZA_OVEN = register("empty_commercial_pizza_oven",
                 () -> new CommercialPizzaOvenBlock(metalProperties()));
         public static final RegistrySupplier<RestaurantStoragePropBlock> CUTTING_BOARD_STATION = register("cutting_board_station",
                 () -> new RestaurantStoragePropBlock(RestaurantStoragePropBlock.Design.CUTTING_BOARD, woodProperties()));
@@ -611,6 +626,12 @@ public final class CraftDistrictBlocks {
     }
 
     public static final class Police {
+        public static final RegistrySupplier<AdministrativeDeskBlock> CHIEF_DESK = register("police_chief_desk",
+                () -> new AdministrativeDeskBlock(AdministrativeDeskBlock.Style.CHIEF, entranceProperties()));
+        public static final RegistrySupplier<AdministrativeDeskBlock> DETECTIVE_DESK = register("detective_desk",
+                () -> new AdministrativeDeskBlock(AdministrativeDeskBlock.Style.INVESTIGATOR, entranceProperties()));
+        public static final RegistrySupplier<WantedPostersBlock> WANTED_POSTERS = register("wanted_posters",
+                () -> new WantedPostersBlock(entranceProperties()));
         public static final RegistrySupplier<PoliceEntranceBlock> RECEPTION_DESK = register("police_reception_desk",
                 () -> new PoliceEntranceBlock(PoliceEntranceBlock.Variant.RECEPTION_DESK, entranceProperties()));
         public static final RegistrySupplier<PoliceEntranceBlock> DEPARTMENT_SIGN = register("police_department_sign",
@@ -619,8 +640,8 @@ public final class CraftDistrictBlocks {
                 () -> new PoliceWaitingBenchBlock(entranceProperties()));
         public static final RegistrySupplier<PoliceDispatchBlock> DISPATCH_CONSOLE = register("police_dispatch_console",
                 () -> new PoliceDispatchBlock(entranceProperties()));
-        public static final RegistrySupplier<PoliceWorkroomBlock> EVIDENCE_STORAGE_SHELF = register("police_evidence_storage_shelf",
-                () -> new PoliceWorkroomBlock(PoliceWorkroomBlock.Variant.EVIDENCE, entranceProperties()));
+        public static final RegistrySupplier<EvidenceStorageRackBlock> EVIDENCE_STORAGE_SHELF = register("police_evidence_storage_shelf",
+                () -> new EvidenceStorageRackBlock(entranceProperties()));
         public static final RegistrySupplier<OfficeChairBlock> OFFICE_CHAIR = register("office_chair",
                 () -> new OfficeChairBlock(entranceProperties()));
         public static final RegistrySupplier<PoliceOfficeSecurityBlock> CASE_FILE_CABINET = register("case_file_cabinet",
@@ -737,6 +758,8 @@ public final class CraftDistrictBlocks {
                 () -> new SupermarketColdBlock(SupermarketColdBlock.Layout.CHEST, shelfProperties()));
         public static final RegistrySupplier<SupermarketColdBlock> CHEST_FREEZER_ICE_CREAM = register("chest_freezer_ice_cream",
                 () -> new SupermarketColdBlock(SupermarketColdBlock.Layout.CHEST, shelfProperties()));
+        public static final RegistrySupplier<IceMerchandiserBlock> ICE_MERCHANDISER = register("ice_merchandiser",
+                () -> new IceMerchandiserBlock(shelfProperties()));
         public static final RegistrySupplier<SupermarketColdBlock> DELI_DISPLAY_COUNTER = register("deli_display_counter",
                 () -> new SupermarketColdBlock(SupermarketColdBlock.Layout.DELI, shelfProperties()));
         public static final RegistrySupplier<SupermarketCheckoutBlock> CHECKOUT = register("supermarket_checkout",
@@ -772,7 +795,7 @@ public final class CraftDistrictBlocks {
 
     public static final class Lighting {
         public static final RegistrySupplier<CeilingLightBlock> LED_CEILING_PANEL = register("lighting_led_ceiling_panel",
-                () -> new SurfaceLightBlock(CeilingLightBlock.Fixture.PANEL, lightProperties(15)));
+                () -> new ModularLedPanelBlock(lightProperties(15)));
         public static final RegistrySupplier<FluorescentLightBlock> FLUORESCENT_TUBE = register("lighting_fluorescent_tube",
                 () -> new FluorescentLightBlock(lightProperties(15)));
         public static final RegistrySupplier<CeilingLightBlock> INDUSTRIAL_PENDANT = register("lighting_industrial_pendant",
@@ -785,6 +808,10 @@ public final class CraftDistrictBlocks {
                 () -> new ExitSignBlock(ExitSignBlock.Arrow.RIGHT, lightProperties(9)));
         public static final RegistrySupplier<ExitSignBlock> EXIT_SIGN_LEFT = register("lighting_exit_sign_left",
                 () -> new ExitSignBlock(ExitSignBlock.Arrow.LEFT, lightProperties(9)));
+        public static final RegistrySupplier<ExitSignBlock> EXIT_SIGN_NO_ARROW = register("lighting_exit_sign_no_arrow",
+                () -> new ExitSignBlock(ExitSignBlock.Arrow.NONE, lightProperties(9)));
+        public static final RegistrySupplier<PullDownFireAlarmBlock> PULL_DOWN_FIRE_ALARM = register("pull_down_fire_alarm",
+                () -> new PullDownFireAlarmBlock(BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.METAL).noOcclusion()));
         public static final RegistrySupplier<CeilingLightBlock> RECESSED_SPOTLIGHT = register("lighting_recessed_spotlight",
                 () -> new CeilingLightBlock(CeilingLightBlock.Fixture.SPOTLIGHT, lightProperties(14)));
         public static final RegistrySupplier<TrackLightBlock> TRACK_LIGHT = register("lighting_track_light",
@@ -831,6 +858,10 @@ public final class CraftDistrictBlocks {
     }
 
     public static final class FireStation {
+        public static final RegistrySupplier<AdministrativeDeskBlock> CHIEF_DESK = register("fire_chief_desk",
+                () -> new AdministrativeDeskBlock(AdministrativeDeskBlock.Style.CHIEF, equipmentProperties()));
+        public static final RegistrySupplier<AdministrativeDeskBlock> INVESTIGATOR_DESK = register("fire_investigator_desk",
+                () -> new AdministrativeDeskBlock(AdministrativeDeskBlock.Style.INVESTIGATOR, equipmentProperties()));
         public static final RegistrySupplier<FireStationBlock> GEAR_LOCKER = register("firefighter_gear_locker",
                 () -> new FireStationBlock(FireStationBlock.Variant.GEAR_LOCKER, equipmentProperties()));
         public static final RegistrySupplier<FireStationBlock> BREATHING_APPARATUS_RACK = register("breathing_apparatus_rack",

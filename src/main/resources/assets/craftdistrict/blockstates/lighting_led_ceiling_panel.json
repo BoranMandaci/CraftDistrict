@@ -1,276 +1,612 @@
 {
-  "multipart": [
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "north",
-            "wall_mounted": "false"
-          },
-          {
-            "lit": "true"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel",
-        "y": 0
-      }
+  "variants": {
+    "wall_mounted=false,north=false,east=false,south=false,west=false,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "north",
-            "wall_mounted": "false"
-          },
-          {
-            "lit": "false"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_off",
-        "y": 0
-      }
+    "wall_mounted=false,north=false,east=false,south=false,west=false,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_off"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "east",
-            "wall_mounted": "false"
-          },
-          {
-            "lit": "true"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel",
-        "y": 90
-      }
+    "wall_mounted=false,north=true,east=false,south=false,west=false,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_1"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "east",
-            "wall_mounted": "false"
-          },
-          {
-            "lit": "false"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_off",
-        "y": 90
-      }
+    "wall_mounted=false,north=true,east=false,south=false,west=false,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_1_off"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "south",
-            "wall_mounted": "false"
-          },
-          {
-            "lit": "true"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel",
-        "y": 180
-      }
+    "wall_mounted=false,north=false,east=true,south=false,west=false,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_2"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "south",
-            "wall_mounted": "false"
-          },
-          {
-            "lit": "false"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_off",
-        "y": 180
-      }
+    "wall_mounted=false,north=false,east=true,south=false,west=false,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_2_off"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "west",
-            "wall_mounted": "false"
-          },
-          {
-            "lit": "true"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel",
-        "y": 270
-      }
+    "wall_mounted=false,north=true,east=true,south=false,west=false,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_3"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "west",
-            "wall_mounted": "false"
-          },
-          {
-            "lit": "false"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_off",
-        "y": 270
-      }
+    "wall_mounted=false,north=true,east=true,south=false,west=false,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_3_off"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "north",
-            "wall_mounted": "true"
-          },
-          {
-            "lit": "true"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall",
-        "y": 0
-      }
+    "wall_mounted=false,north=false,east=false,south=true,west=false,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_4"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "north",
-            "wall_mounted": "true"
-          },
-          {
-            "lit": "false"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_off",
-        "y": 0
-      }
+    "wall_mounted=false,north=false,east=false,south=true,west=false,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_4_off"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "east",
-            "wall_mounted": "true"
-          },
-          {
-            "lit": "true"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall",
-        "y": 90
-      }
+    "wall_mounted=false,north=true,east=false,south=true,west=false,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_5"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "east",
-            "wall_mounted": "true"
-          },
-          {
-            "lit": "false"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_off",
-        "y": 90
-      }
+    "wall_mounted=false,north=true,east=false,south=true,west=false,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_5_off"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "south",
-            "wall_mounted": "true"
-          },
-          {
-            "lit": "true"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall",
-        "y": 180
-      }
+    "wall_mounted=false,north=false,east=true,south=true,west=false,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_6"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "south",
-            "wall_mounted": "true"
-          },
-          {
-            "lit": "false"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_off",
-        "y": 180
-      }
+    "wall_mounted=false,north=false,east=true,south=true,west=false,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_6_off"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "west",
-            "wall_mounted": "true"
-          },
-          {
-            "lit": "true"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall",
-        "y": 270
-      }
+    "wall_mounted=false,north=true,east=true,south=true,west=false,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_7"
     },
-    {
-      "when": {
-        "AND": [
-          {
-            "facing": "west",
-            "wall_mounted": "true"
-          },
-          {
-            "lit": "false"
-          }
-        ]
-      },
-      "apply": {
-        "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_off",
-        "y": 270
-      }
+    "wall_mounted=false,north=true,east=true,south=true,west=false,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_7_off"
+    },
+    "wall_mounted=false,north=false,east=false,south=false,west=true,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_8"
+    },
+    "wall_mounted=false,north=false,east=false,south=false,west=true,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_8_off"
+    },
+    "wall_mounted=false,north=true,east=false,south=false,west=true,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_9"
+    },
+    "wall_mounted=false,north=true,east=false,south=false,west=true,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_9_off"
+    },
+    "wall_mounted=false,north=false,east=true,south=false,west=true,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_10"
+    },
+    "wall_mounted=false,north=false,east=true,south=false,west=true,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_10_off"
+    },
+    "wall_mounted=false,north=true,east=true,south=false,west=true,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_11"
+    },
+    "wall_mounted=false,north=true,east=true,south=false,west=true,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_11_off"
+    },
+    "wall_mounted=false,north=false,east=false,south=true,west=true,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_12"
+    },
+    "wall_mounted=false,north=false,east=false,south=true,west=true,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_12_off"
+    },
+    "wall_mounted=false,north=true,east=false,south=true,west=true,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_13"
+    },
+    "wall_mounted=false,north=true,east=false,south=true,west=true,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_13_off"
+    },
+    "wall_mounted=false,north=false,east=true,south=true,west=true,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_14"
+    },
+    "wall_mounted=false,north=false,east=true,south=true,west=true,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_14_off"
+    },
+    "wall_mounted=false,north=true,east=true,south=true,west=true,lit=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_15"
+    },
+    "wall_mounted=false,north=true,east=true,south=true,west=true,lit=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_connected_15_off"
+    },
+    "wall_mounted=true,facing=north,lit=true,north=false,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=false,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=true,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_1",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=true,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_1_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=false,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_2",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=false,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_2_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=true,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_3",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=true,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_3_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=false,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_4",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=false,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_4_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=true,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_5",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=true,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_5_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=false,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_6",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=false,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_6_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=true,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_7",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=true,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_7_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=false,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_8",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=false,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_8_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=true,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_9",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=true,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_9_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=false,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_10",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=false,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_10_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=true,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_11",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=true,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_11_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=false,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_12",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=false,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_12_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=true,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_13",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=true,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_13_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=false,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_14",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=false,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_14_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=true,north=true,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_15",
+      "y": 0
+    },
+    "wall_mounted=true,facing=north,lit=false,north=true,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_15_off",
+      "y": 0
+    },
+    "wall_mounted=true,facing=east,lit=true,north=false,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=false,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=true,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_1",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=true,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_1_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=false,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_2",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=false,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_2_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=true,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_3",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=true,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_3_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=false,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_4",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=false,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_4_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=true,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_5",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=true,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_5_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=false,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_6",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=false,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_6_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=true,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_7",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=true,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_7_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=false,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_8",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=false,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_8_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=true,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_9",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=true,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_9_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=false,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_10",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=false,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_10_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=true,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_11",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=true,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_11_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=false,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_12",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=false,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_12_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=true,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_13",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=true,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_13_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=false,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_14",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=false,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_14_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=true,north=true,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_15",
+      "y": 90
+    },
+    "wall_mounted=true,facing=east,lit=false,north=true,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_15_off",
+      "y": 90
+    },
+    "wall_mounted=true,facing=south,lit=true,north=false,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=false,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=true,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_1",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=true,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_1_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=false,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_2",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=false,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_2_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=true,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_3",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=true,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_3_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=false,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_4",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=false,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_4_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=true,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_5",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=true,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_5_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=false,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_6",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=false,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_6_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=true,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_7",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=true,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_7_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=false,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_8",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=false,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_8_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=true,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_9",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=true,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_9_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=false,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_10",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=false,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_10_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=true,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_11",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=true,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_11_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=false,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_12",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=false,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_12_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=true,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_13",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=true,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_13_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=false,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_14",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=false,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_14_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=true,north=true,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_15",
+      "y": 180
+    },
+    "wall_mounted=true,facing=south,lit=false,north=true,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_15_off",
+      "y": 180
+    },
+    "wall_mounted=true,facing=west,lit=true,north=false,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=false,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=true,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_1",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=true,east=false,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_1_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=false,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_2",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=false,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_2_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=true,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_3",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=true,east=true,south=false,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_3_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=false,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_4",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=false,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_4_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=true,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_5",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=true,east=false,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_5_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=false,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_6",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=false,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_6_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=true,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_7",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=true,east=true,south=true,west=false": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_7_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=false,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_8",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=false,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_8_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=true,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_9",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=true,east=false,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_9_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=false,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_10",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=false,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_10_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=true,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_11",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=true,east=true,south=false,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_11_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=false,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_12",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=false,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_12_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=true,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_13",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=true,east=false,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_13_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=false,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_14",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=false,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_14_off",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=true,north=true,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_15",
+      "y": 270
+    },
+    "wall_mounted=true,facing=west,lit=false,north=true,east=true,south=true,west=true": {
+      "model": "craftdistrict:block/lighting/lighting_led_ceiling_panel_wall_connected_15_off",
+      "y": 270
     }
-  ]
+  }
 }

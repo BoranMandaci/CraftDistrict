@@ -42,10 +42,14 @@ public class MedicalSupplyCabinetBlock extends HospitalEquipmentBlock {
     private boolean matches(BlockState state, Direction facing, boolean primary) {
         return state.is(this) && state.getValue(FACING) == facing && state.getValue(PRIMARY) == primary;
     }
+    protected boolean connectsFacing(Direction facing, Direction otherFacing) { return facing == otherFacing; }
     private boolean complete(LevelReader level, BlockPos origin, Direction facing) {
-        return level.hasChunkAt(origin) && level.hasChunkAt(origin.above())
-                && matches(level.getBlockState(origin), facing, true)
-                && matches(level.getBlockState(origin.above()), facing, false);
+        if (!level.hasChunkAt(origin) || !level.hasChunkAt(origin.above())) return false;
+        BlockState lower = level.getBlockState(origin);
+        if (!lower.is(this) || !lower.getValue(PRIMARY)) return false;
+        Direction actualFacing = lower.getValue(FACING);
+        return connectsFacing(facing, actualFacing)
+                && matches(level.getBlockState(origin.above()), actualFacing, false);
     }
     public BlockState layout(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos origin = structureOrigin(state, pos); Direction facing = state.getValue(FACING);
@@ -56,7 +60,7 @@ public class MedicalSupplyCabinetBlock extends HospitalEquipmentBlock {
         BlockState state = super.getPlacementState(context);
         return state == null ? null : layout(state, context.getLevel(), context.getClickedPos());
     }
-    private void refresh(Level level, BlockPos origin, Direction facing) {
+    protected final void refresh(Level level, BlockPos origin, Direction facing) {
         if (!complete(level, origin, facing)) return;
         BlockState first = level.getBlockState(origin), second = level.getBlockState(origin.above());
         BlockState joined = layout(first, level, origin), joinedSecond = structurePartState(joined, 1);
@@ -65,7 +69,7 @@ public class MedicalSupplyCabinetBlock extends HospitalEquipmentBlock {
         if (second != joinedSecond && level.getBlockState(origin) == joined && level.getBlockState(origin.above()) == second)
             level.setBlock(origin.above(), joinedSecond, JOIN_FLAGS);
     }
-    private void refreshRow(Level level, BlockPos origin, Direction facing) {
+    protected void refreshRow(Level level, BlockPos origin, Direction facing) {
         refresh(level, origin, facing);
         refresh(level, origin.relative(facing.getCounterClockWise()), facing);
         refresh(level, origin.relative(facing.getClockWise()), facing);

@@ -17,7 +17,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 /** Static floor/countertop service props share the existing solid-top lifecycle. */
 public final class RestaurantServicePropBlock extends CashRegisterBlock {
     public enum Design implements StringRepresentable {
-        PICKUP_COUNTER, POS_TERMINAL, BEVERAGE_DISPENSER, CONDIMENT_STATION, COFFEE_MACHINE, MENU_BOARD;
+        PICKUP_COUNTER, POS_TERMINAL, BEVERAGE_DISPENSER, CONDIMENT_STATION, COFFEE_MACHINE, MENU_BOARD,
+        BLENDER, DISPOSABLE_CUPS, SOFT_DRINK_DISPENSER;
         @Override public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
     }
     //? if >=1.21 {
@@ -38,7 +39,13 @@ public final class RestaurantServicePropBlock extends CashRegisterBlock {
             RestaurantKitchenBlock.rotations(Shapes.or(Block.box(1, 0, 2, 15, 1.75, 14), Block.box(1.5, 1.75, 10.5, 14.5, 11.75, 14),
                     Block.box(1, 7.5, 5, 15, 13, 14), Block.box(3, 4.5, 2.75, 11.75, 7.5, 8.5))),
             RestaurantKitchenBlock.rotations(Shapes.or(Block.box(2, 0, 2, 14, 1.5, 14),
-                    Block.box(6.75, 1.5, 7, 9.25, 5, 9), Block.box(1, 5, 6.75, 15, 19, 9.25)))
+                    Block.box(6.75, 1.5, 7, 9.25, 5, 9), Block.box(1, 5, 6.75, 15, 19, 9.25))),
+            RestaurantKitchenBlock.rotations(Shapes.or(Block.box(4, 0, 4, 12, 3.5, 12),
+                    Block.box(5, 3.5, 5, 11, 14, 11), Block.box(11, 5, 6, 13, 11.5, 10))),
+            RestaurantKitchenBlock.rotations(Block.box(3, 0, 4, 13, 6.25, 11)),
+            RestaurantKitchenBlock.rotations(Shapes.or(Block.box(1, 0, 1.5, 15, 1.25, 14.5),
+                    Block.box(1.75, 1.25, 8.5, 14.25, 9.5, 14.5),
+                    Block.box(1, 6, 6.5, 15, 16, 14.5)))
     };
     private final Design design;
 
