@@ -9,6 +9,7 @@ import com.craftdistrict.registry.CraftDistrictAssembly;
 import com.craftdistrict.network.AssemblyNetworking;
 import com.craftdistrict.network.LightDyeNetworking;
 import com.craftdistrict.network.LightColorNetworking;
+import com.craftdistrict.lighting.LightProximityData;
 import com.craftdistrict.entity.Seating;
 import com.craftdistrict.entity.MedicalResting;
 import com.craftdistrict.block.PoliceOfficeSecurityBlock;
@@ -34,6 +35,8 @@ public final class CraftDistrict {
         AssemblyNetworking.register();
         LightDyeNetworking.register();
         LightColorNetworking.register();
+        LightProximityData.register();
+        com.craftdistrict.lighting.LedLightGroups.register();
         CraftDistrictEntities.register();
         Seating.init();
         MedicalResting.init();

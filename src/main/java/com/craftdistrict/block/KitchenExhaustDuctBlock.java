@@ -154,6 +154,8 @@ public final class KitchenExhaustDuctBlock extends RotatableDecorationBlock {
             }
             written.add(entry.getKey());
         }
+        if (beforeMasks.entrySet().stream().anyMatch(entry -> entry.getValue().intValue() != data.mask(entry.getKey())))
+            com.craftdistrict.item.WrenchItem.usedIfHeld(player);
         return true;
     }
     public static BooleanProperty port(Direction direction) { return PORTS[direction.get3DDataValue()]; }

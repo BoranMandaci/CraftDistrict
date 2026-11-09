@@ -1,6 +1,8 @@
 package com.craftdistrict.client;
 
 import com.craftdistrict.network.LightDyeNetworking;
+import com.craftdistrict.lighting.LightControls;
+import net.minecraft.world.level.block.state.BlockState;
 import com.craftdistrict.registry.DecorationCollection;
 import com.craftdistrict.registry.CraftDistrictBlocks;
 import dev.architectury.event.events.client.ClientPlayerEvent;
@@ -41,7 +43,7 @@ public final class LightingColors {
         Block[] lights = Stream.concat(DecorationCollection.LIGHTING.items().stream()
                 .map(item -> ((BlockItem)item).getBlock()),
                 Stream.of(CraftDistrictBlocks.Hospital.SURGICAL_LIGHT.get())).toArray(Block[]::new);
-        ColorHandlerRegistry.registerBlockColors((state, level, pos, tint) -> color(tint,
+        ColorHandlerRegistry.registerBlockColors((state, level, pos, tint) -> color(state, tint,
                 level == null || pos == null || tint < 0 || (tint & 0x1000000) == 0
                         || (tint & 0x4000000) != 0 ? -1 : dye(pos)), lights);
         ColorHandlerRegistry.registerItemColors((stack, tint) -> color(tint, -1), lights);
@@ -57,6 +59,17 @@ public final class LightingColors {
         if (dimension == null) return -1;
         var chunk = dimension.get(ChunkPos.asLong(pos.getX() >> 4, pos.getZ() >> 4));
         return chunk == null ? -1 : chunk.get(pos.asLong());
+    }
+
+    /** Use the server-synchronized brightness stage, never an independent client animation clock. */
+    public static int color(BlockState state, int tint, int dye) {
+        int rgb = color(tint, dye);
+        if (tint < 0 || (tint & 0x1000000) == 0 || !state.hasProperty(LightControls.EFFECT) || !state.getValue(LightControls.LIT)
+                || (tint & 0x2000000) != 0) return rgb;
+        int level = state.getValue(LightControls.EFFECT).level;
+        if (level == 15) return rgb;
+        return 0xFF000000 | ((rgb >> 16 & 255) * level / 15) << 16
+                | ((rgb >> 8 & 255) * level / 15) << 8 | (rgb & 255) * level / 15;
     }
 
     public static int color(int tint, int dye) {

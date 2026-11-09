@@ -131,7 +131,11 @@ public final class LightDyeNetworking {
             ChunkPos chunk = new ChunkPos(pos);
             updates.computeIfAbsent(chunk, ignored -> new ArrayList<>(3)).add(new Color(pos.asLong(), data.color(pos)));
         }
-        updates.forEach((chunk, colors) -> send(level.getChunkSource().chunkMap.getPlayers(chunk, false),
-                new Palette(level.dimension().location(), chunk.x, chunk.z, false, List.copyOf(colors))));
+        updates.forEach((chunk, colors) -> {
+            var players = level.getChunkSource().chunkMap.getPlayers(chunk, false);
+            for (int start = 0; start < colors.size(); start += LIMIT)
+                send(players, new Palette(level.dimension().location(), chunk.x, chunk.z, false,
+                        List.copyOf(colors.subList(start, Math.min(start + LIMIT, colors.size())))));
+        });
     }
 }

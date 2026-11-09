@@ -262,7 +262,7 @@ public final class CraftDistrictBlocks {
                 () -> new SurgicalTableBlock(metalProperties()));
         public static final RegistrySupplier<SurgicalCeilingLightBlock> SURGICAL_LIGHT = register("surgical_ceiling_light",
                 () -> new SurgicalCeilingLightBlock(metalProperties().lightLevel(
-                        state -> state.getValue(com.craftdistrict.lighting.LightControls.LIT) ? 15 : 0)));
+                        state -> com.craftdistrict.lighting.LightControls.emission(state, 15))));
         public static final RegistrySupplier<HospitalTreatmentCartBlock> ANESTHESIA_MACHINE = register("anesthesia_machine",
                 () -> new HospitalTreatmentCartBlock(HospitalTreatmentCartBlock.Design.ANESTHESIA, metalProperties()));
         public static final RegistrySupplier<MedicalImagingDisplayBlock> IMAGING_DISPLAY = register("medical_imaging_display",
@@ -849,7 +849,7 @@ public final class CraftDistrictBlocks {
 
         private static BlockBehaviour.Properties lightProperties(int level) {
             return BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.METAL)
-                    .noOcclusion().lightLevel(state -> state.getValue(com.craftdistrict.lighting.LightControls.LIT) ? level : 0);
+                    .noOcclusion().lightLevel(state -> com.craftdistrict.lighting.LightControls.emission(state, level));
         }
 
         private Lighting() { }

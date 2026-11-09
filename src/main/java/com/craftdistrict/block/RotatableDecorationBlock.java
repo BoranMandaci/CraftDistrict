@@ -6,6 +6,7 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import com.craftdistrict.lighting.LightControls;
+import com.craftdistrict.lighting.LightEffect;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -39,6 +40,7 @@ public class RotatableDecorationBlock extends HorizontalDirectionalBlock {
         super(properties);
         BlockState state = defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH);
         if (this instanceof ControlledLight) state = state.setValue(LightControls.LIT, true).setValue(LightControls.REDSTONE, false);
+        if (LightControls.settingsEligible(this)) state = state.setValue(LightControls.EFFECT, LightEffect.Stage.STEADY);
         registerDefaultState(state);
     }
 
@@ -46,6 +48,7 @@ public class RotatableDecorationBlock extends HorizontalDirectionalBlock {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(BlockStateProperties.HORIZONTAL_FACING);
         if (this instanceof ControlledLight) builder.add(LightControls.LIT, LightControls.REDSTONE);
+        if (LightControls.settingsEligible(this)) builder.add(LightControls.EFFECT);
     }
 
     @Override public void neighborChanged(BlockState state, Level level, BlockPos pos, Block source, BlockPos sourcePos, boolean moving) {
@@ -89,6 +92,8 @@ public class RotatableDecorationBlock extends HorizontalDirectionalBlock {
         if (this instanceof ControlledLight) {
             tooltip.add(Component.translatable("tooltip.craftdistrict.light.control").withStyle(ChatFormatting.GRAY));
             tooltip.add(Component.translatable("tooltip.craftdistrict.light.mode").withStyle(ChatFormatting.GRAY));
+            if (LightControls.settingsEligible(this))
+                tooltip.add(Component.translatable("tooltip.craftdistrict.light.settings").withStyle(ChatFormatting.GRAY));
             if (LightControls.dyeable(defaultBlockState()))
                 tooltip.add(Component.translatable("tooltip.craftdistrict.light.dye").withStyle(ChatFormatting.GRAY));
         }

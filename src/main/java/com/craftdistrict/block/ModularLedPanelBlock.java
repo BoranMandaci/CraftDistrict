@@ -9,6 +9,8 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.server.level.ServerLevel;
+import com.craftdistrict.lighting.LedLightGroups;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
@@ -20,7 +22,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Four immediate neighbors select the outer frame; light controls remain per panel. */
+/** Immediate neighbors select the frame; the shared lighting ledger owns connected settings. */
 public final class ModularLedPanelBlock extends SurfaceLightBlock {
     public static final BooleanProperty NORTH = BlockStateProperties.NORTH, EAST = BlockStateProperties.EAST,
             SOUTH = BlockStateProperties.SOUTH, WEST = BlockStateProperties.WEST;
@@ -93,9 +95,21 @@ public final class ModularLedPanelBlock extends SurfaceLightBlock {
         BlockState current = level.getBlockState(pos);
         if (!current.is(this)) return;
         BlockState joined = current;
-        for (Direction direction : Direction.Plane.HORIZONTAL)
-            joined = joined.setValue(side(direction), connects(current, level.getBlockState(pos.relative(physicalSide(current, direction)))));
+        for (Direction direction : Direction.Plane.HORIZONTAL) {
+            BlockPos neighbor = pos.relative(physicalSide(current, direction));
+            if (level.hasChunkAt(neighbor)) joined = joined.setValue(side(direction), connects(current, level.getBlockState(neighbor)));
+        }
         if (joined != current) level.setBlock(pos, joined, Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+        if (level instanceof ServerLevel server) LedLightGroups.get(server).ensure(server, pos);
+    }
+
+    @Override public void onPlace(BlockState state, Level level, BlockPos pos, BlockState previous, boolean moving) {
+        super.onPlace(state, level, pos, previous, moving);
+        if (!previous.is(this) && level instanceof ServerLevel server) LedLightGroups.get(server).placed(server, pos);
+    }
+    @Override public void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moving) {
+        if (!replacement.is(this) && level instanceof ServerLevel server) LedLightGroups.get(server).removed(server, pos);
+        super.onRemove(state, level, pos, replacement, moving);
     }
 
     @Override public BlockState rotate(BlockState state, Rotation rotation) {

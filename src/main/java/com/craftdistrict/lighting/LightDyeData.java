@@ -24,6 +24,9 @@ public final class LightDyeData extends SavedData {
             (tag, registries) -> load(tag), DataFixTypes.SAVED_DATA_COMMAND_STORAGE);
     //?}
     private final Long2ObjectOpenHashMap<Long2ByteOpenHashMap> chunks = new Long2ObjectOpenHashMap<>();
+    // A merged/inherited display color does not create a refundable dye that was never paid.
+    private final Long2ByteOpenHashMap credits = new Long2ByteOpenHashMap();
+    public LightDyeData() { credits.defaultReturnValue((byte)-2); }
 
     public static LightDyeData get(ServerLevel level) {
         //? if >=1.21 {
@@ -40,7 +43,25 @@ public final class LightDyeData extends SavedData {
         return values == null ? -1 : values.get(pos.asLong());
     }
 
+    public int appliedDye(BlockPos pos) {
+        int credit = credits.get(pos.asLong());
+        return credit == -2 ? color(pos) : credit;
+    }
+    public boolean inherit(BlockPos pos, int color) {
+        int paid = appliedDye(pos);
+        boolean changed = display(pos, color);
+        if (paid != color) credits.put(pos.asLong(), (byte)paid);
+        else credits.remove(pos.asLong());
+        if (changed) setDirty();
+        return changed;
+    }
     public boolean put(BlockPos pos, int color) {
+        if (color(pos) == color && (color != -1 || !credits.containsKey(pos.asLong()))) return false;
+        credits.remove(pos.asLong());
+        boolean changed = display(pos, color);
+        setDirty(); return changed;
+    }
+    private boolean display(BlockPos pos, int color) {
         if (color < -1 || color > 15) throw new IllegalArgumentException("Invalid light dye");
         if (color(pos) == color) return false;
         long chunk = chunk(pos);
@@ -62,6 +83,53 @@ public final class LightDyeData extends SavedData {
         return true;
     }
 
+    /** Validate the whole per-fixture/per-panel dye cost before any settings are committed. */
+    public Payment payment(net.minecraft.world.entity.player.Player player, java.util.List<BlockPos> parts,
+                           int selected, boolean perPanel, boolean refund) {
+        int count = perPanel ? parts.size() : 1;
+        net.minecraft.world.item.DyeItem dye = net.minecraft.world.item.DyeItem.byColor(net.minecraft.world.item.DyeColor.byId(selected));
+        int available = 0;
+        for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+            var stack = player.getInventory().getItem(i); if (stack.is(dye)) available += stack.getCount();
+        }
+        if (!player.getAbilities().instabuild && available < count) return null;
+        int[] refunds = new int[16];
+        if (refund && !player.getAbilities().instabuild) for (int i = 0; i < (perPanel ? parts.size() : 1); i++) {
+            int previous = appliedDye(parts.get(i)); if (previous >= 0) refunds[previous]++;
+        }
+        return new Payment(java.util.List.copyOf(parts), selected, count, refunds);
+    }
+    public final class Payment {
+        private final java.util.List<BlockPos> parts;
+        private final int selected, count;
+        private final int[] refunds;
+        private boolean committed;
+        private Payment(java.util.List<BlockPos> parts, int selected, int count, int[] refunds) {
+            this.parts = parts; this.selected = selected; this.count = count; this.refunds = refunds;
+        }
+        public void commit(net.minecraft.world.entity.player.Player player) {
+            if (committed) throw new IllegalStateException("Dye payment already committed");
+            committed = true;
+            var inventory = player.getInventory();
+            if (!player.getAbilities().instabuild) {
+                var dye = net.minecraft.world.item.DyeItem.byColor(net.minecraft.world.item.DyeColor.byId(selected));
+                int remaining = count;
+                for (int i = 0; i < inventory.getContainerSize() && remaining > 0; i++) {
+                    var stack = inventory.getItem(i); if (!stack.is(dye)) continue;
+                    int used = Math.min(remaining, stack.getCount()); stack.shrink(used); remaining -= used;
+                }
+            }
+            for (BlockPos pos : parts) put(pos, selected);
+            if (!player.getAbilities().instabuild) {
+                for (int color = 0; color < 16; color++) for (int remaining = refunds[color]; remaining > 0; remaining -= 64) {
+                    var stack = new net.minecraft.world.item.ItemStack(net.minecraft.world.item.DyeItem.byColor(net.minecraft.world.item.DyeColor.byId(color)), Math.min(64, remaining));
+                    inventory.add(stack); if (!stack.isEmpty()) player.drop(stack, false);
+                }
+                inventory.setChanged(); player.inventoryMenu.broadcastChanges();
+            }
+        }
+    }
+
     public Long2ByteMap snapshot(ChunkPos pos) {
         Long2ByteOpenHashMap values = chunks.get(pos.toLong());
         return values == null ? Long2ByteMaps.EMPTY_MAP : values.clone();
@@ -75,6 +143,12 @@ public final class LightDyeData extends SavedData {
             int color = entry.getByte("color");
             if (entry.contains("pos", Tag.TAG_LONG) && color >= 0 && color <= 15)
                 data.put(BlockPos.of(entry.getLong("pos")), color);
+        }
+        ListTag applied = tag.getList("applied", Tag.TAG_COMPOUND);
+        for (int i = 0; i < applied.size(); i++) {
+            CompoundTag entry = applied.getCompound(i); int credit = entry.getByte("dye");
+            if (entry.contains("pos", Tag.TAG_LONG) && credit >= -1 && credit <= 15)
+                data.credits.put(entry.getLong("pos"), (byte)credit);
         }
         data.setDirty(false);
         return data;
@@ -93,6 +167,11 @@ public final class LightDyeData extends SavedData {
             entries.add(entry);
         }
         tag.put("colors", entries);
+        ListTag applied = new ListTag();
+        for (var entry : credits.long2ByteEntrySet()) {
+            CompoundTag value = new CompoundTag(); value.putLong("pos", entry.getLongKey()); value.putByte("dye", entry.getByteValue()); applied.add(value);
+        }
+        tag.put("applied", applied);
         return tag;
     }
 }

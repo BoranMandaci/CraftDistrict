@@ -125,6 +125,7 @@ public final class RestaurantStorageCabinetBlock extends WideTallDecorationBlock
             }
             return InteractionResult.PASS;
         }
+        com.craftdistrict.item.WrenchItem.usedIfHeld(player);
         level.playSound(null, origin, open ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE,
                 SoundSource.BLOCKS, .65F, 1.15F);
         level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, origin);

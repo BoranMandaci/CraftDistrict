@@ -52,6 +52,7 @@ public final class KitchenTrashBinBlock extends RestaurantStoragePropBlock {
         if (level.isClientSide) return InteractionResult.SUCCESS;
         boolean open = !current.getValue(OPEN);
         if (!level.setBlock(pos, current.setValue(OPEN, open), Block.UPDATE_ALL)) return InteractionResult.PASS;
+        com.craftdistrict.item.WrenchItem.usedIfHeld(player);
         level.playSound(null, pos, open ? SoundEvents.IRON_TRAPDOOR_OPEN : SoundEvents.IRON_TRAPDOOR_CLOSE,
                 SoundSource.BLOCKS, .55F, 1.2F);
         level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);

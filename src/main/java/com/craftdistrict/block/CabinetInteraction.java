@@ -25,6 +25,7 @@ final class CabinetInteraction {
         if (!level.setBlock(pos, current.setValue(BlockStateProperties.OPEN, open), Block.UPDATE_ALL)) {
             return InteractionResult.PASS;
         }
+        com.craftdistrict.item.WrenchItem.usedIfHeld(player);
         level.playSound(null, pos, open ? openSound : closeSound, SoundSource.BLOCKS, .6F, 1.1F);
         level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);
         return InteractionResult.CONSUME;
@@ -71,6 +72,7 @@ final class CabinetInteraction {
             }
             return InteractionResult.PASS;
         }
+        com.craftdistrict.item.WrenchItem.usedIfHeld(player);
         level.playSound(null, origin, open ? openSound : closeSound, SoundSource.BLOCKS, .6F, 1.1F);
         level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, origin);
         return InteractionResult.CONSUME;

@@ -37,6 +37,7 @@ object DistributionJson {
     }
 }
 
+
 plugins {
     id("dev.architectury.loom")
     id("architectury-plugin")
@@ -115,6 +116,7 @@ tasks.processResources {
     inputs.property("resource_pack_format", resourcePackFormat)
     inputs.property("mixin_java_version", "JAVA_$javaVersion")
     inputs.property("distribution_json_format", "minecraft-float32-utf8")
+    inputs.property("lighting_effect_resources", 3)
     filesMatching("pack.mcmeta") {
         expand("resource_pack_format" to resourcePackFormat)
     }
@@ -128,6 +130,16 @@ tasks.processResources {
             filter(ModernRecipeJsonReader::class.java)
         } else {
             filter(CompactJsonReader::class.java)
+        }
+    }
+    doLast {
+        // Remove only the previous build-generated animations; models now use synchronized vanilla LIT states.
+        val assets = destinationDir.resolve("assets/craftdistrict").canonicalFile
+        for (path in listOf("models/block/lighting_effects", "textures/block/lighting_effects")) {
+            val generated = assets.resolve(path).canonicalFile
+            require(generated.toPath().startsWith(assets.toPath())
+                && !rootProject.file("src/main/resources/assets/craftdistrict/" + path).exists())
+            if (generated.exists()) check(generated.deleteRecursively())
         }
     }
     if (minecraftVersion == "1.21.1") {
