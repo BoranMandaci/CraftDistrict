@@ -8,8 +8,10 @@ import com.craftdistrict.registry.CraftDistrictBlocks;
 import dev.architectury.event.events.client.ClientPlayerEvent;
 import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import it.unimi.dsi.fastutil.longs.Long2ByteOpenHashMap;
+import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.SectionPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -99,15 +101,23 @@ public final class LightingColors {
         }
         if (chunk.isEmpty()) dimension.remove(key);else dimension.put(key, chunk);
         if (dimension.isEmpty()) COLORS.remove(packet.dimension());
+        Minecraft client = Minecraft.getInstance();
+        if (client.level == null || !client.level.dimension().location().equals(packet.dimension())) return;
+        LongOpenHashSet sections = new LongOpenHashSet();
         if (packet.reset() && previous != null)
-            for (long pos : previous.keySet()) dirty(packet.dimension(), BlockPos.of(pos));
-        for (var entry : packet.colors()) dirty(packet.dimension(), BlockPos.of(entry.pos()));
+            for (long pos : previous.keySet()) if (previous.get(pos) != chunk.get(pos)) dirtySections(sections, pos);
+        for (var entry : packet.colors())
+            if ((previous == null ? -1 : previous.get(entry.pos())) != chunk.get(entry.pos())) dirtySections(sections, entry.pos());
+        for (long section : sections)
+            client.levelRenderer.setSectionDirty(SectionPos.x(section), SectionPos.y(section), SectionPos.z(section));
     }
 
-    private static void dirty(ResourceLocation dimension, BlockPos pos) {
-        Minecraft client = Minecraft.getInstance();
-        if (client.level != null && client.level.dimension().location().equals(dimension))
-            client.levelRenderer.setBlocksDirty(pos.getX(), pos.getY(), pos.getZ(), pos.getX(), pos.getY(), pos.getZ());
+    private static void dirtySections(LongOpenHashSet sections, long pos) {
+        int x = BlockPos.getX(pos), y = BlockPos.getY(pos), z = BlockPos.getZ(pos);
+        // Preserve vanilla's one-block border for neighboring faces, but invalidate each section once per packet.
+        for (int sx = (x - 1) >> 4; sx <= (x + 1) >> 4; sx++)
+            for (int sy = (y - 1) >> 4; sy <= (y + 1) >> 4; sy++)
+                for (int sz = (z - 1) >> 4; sz <= (z + 1) >> 4; sz++) sections.add(SectionPos.asLong(sx, sy, sz));
     }
 
     public static void forget(ChunkPos pos) {

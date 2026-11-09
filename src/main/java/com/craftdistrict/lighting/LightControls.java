@@ -31,6 +31,7 @@ public final class LightControls {
     public static final BooleanProperty REDSTONE = BooleanProperty.create("redstone_controlled");
     public static final EnumProperty<LightEffect.Stage> EFFECT = EnumProperty.create("effect", LightEffect.Stage.class);
     private static final int FLAGS = Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE;
+    private static final net.minecraft.core.Direction[] POWER_SIDES = net.minecraft.core.Direction.values();
     private static final Predicate<Entity> ELIGIBLE = player -> player.isAlive() && !player.isSpectator();
     private LightControls() { }
 
@@ -113,7 +114,7 @@ public final class LightControls {
     }
 
     public static boolean hasPower(Level level, BlockPos pos) {
-        for (net.minecraft.core.Direction side : net.minecraft.core.Direction.values()) {
+        for (net.minecraft.core.Direction side : POWER_SIDES) {
             BlockPos neighbor = pos.relative(side);
             if (level.hasChunkAt(neighbor) && level.getSignal(neighbor, side) > 0) return true;
         }

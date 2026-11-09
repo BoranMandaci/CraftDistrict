@@ -24,6 +24,13 @@ import net.minecraft.world.level.saveddata.SavedData;
 public final class LedLightGroups extends SavedData {
     private static final String NAME = "craftdistrict_led_groups";
     private static final int FLAGS = Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE;
+    private static final Direction[][] EDGES = {
+            {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST},
+            {Direction.UP, Direction.DOWN, Direction.WEST, Direction.EAST},
+            {Direction.UP, Direction.DOWN, Direction.NORTH, Direction.SOUTH},
+            {Direction.UP, Direction.DOWN, Direction.EAST, Direction.WEST},
+            {Direction.UP, Direction.DOWN, Direction.SOUTH, Direction.NORTH}
+    };
     //? if >=1.21 {
     private static final Factory<LedLightGroups> FACTORY = new Factory<>(LedLightGroups::new,
             (tag, registries) -> load(tag), DataFixTypes.SAVED_DATA_COMMAND_STORAGE);
@@ -82,9 +89,7 @@ public final class LedLightGroups extends SavedData {
         return state.getValue(SurfaceLightBlock.WALL_MOUNTED) ? 1 + state.getValue(ModularLedPanelBlock.FACING).get2DDataValue() : 0;
     }
     private static Direction[] edges(int mount) {
-        if (mount == 0) return new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
-        Direction facing = Direction.from2DDataValue(mount - 1);
-        return new Direction[]{Direction.UP, Direction.DOWN, facing.getClockWise(), facing.getCounterClockWise()};
+        return EDGES[mount];
     }
     private static boolean loaded(ServerLevel level, long chunk) {
         return level.getChunkSource().getChunkNow(ChunkPos.getX(chunk), ChunkPos.getZ(chunk)) != null;
@@ -106,6 +111,7 @@ public final class LedLightGroups extends SavedData {
     /** Chunk IO can finish before the chunk is installed. Reconcile once it is available, never load it ourselves. */
     public void tickLoads(ServerLevel level) {
         if (pending.isEmpty()) return;
+        Set<Group> touched = Collections.newSetFromMap(new IdentityHashMap<>());
         var iterator = pending.long2LongEntrySet().fastIterator();
         while (iterator.hasNext()) {
             var entry = iterator.next(); long key = entry.getLongKey();
@@ -116,13 +122,13 @@ public final class LedLightGroups extends SavedData {
             chunk.findBlocks(LedLightGroups::panel, (pos, state) -> actual.add(pos.asLong()));
             var known = chunks.get(key);
             if (known != null) for (long pos : known.toLongArray()) if (!actual.contains(pos)) refresh(level, BlockPos.of(pos), false);
-            Set<Group> touched = Collections.newSetFromMap(new IdentityHashMap<>());
             for (long packed : actual) {
                 Group group = ensure(level, BlockPos.of(packed)); if (group != null) touched.add(group);
             }
-            for (Group group : touched) if (roots.get(group.root) == group) {
-                sync(level, group); schedule(level, group);
-            }
+        }
+        // A component spanning several loaded chunks needs one reconciliation, not one per chunk.
+        for (Group group : touched) if (roots.get(group.root) == group) {
+            sync(level, group); schedule(level, group);
         }
     }
     public Group ensure(ServerLevel level, BlockPos pos) {
@@ -174,16 +180,19 @@ public final class LedLightGroups extends SavedData {
         if (rebuilding) return;
         rebuilding = true;
         try {
-            ArrayDeque<Long> queue = new ArrayDeque<>(); queue.add(seed.asLong());
+            LongArrayFIFOQueue queue = new LongArrayFIFOQueue(); queue.enqueue(seed.asLong());
             LongOpenHashSet visited = new LongOpenHashSet();
             Long2ByteOpenHashMap nodes = new Long2ByteOpenHashMap();
             Long2ObjectOpenHashMap<Settings> settings = new Long2ObjectOpenHashMap<>();
             Long2LongOpenHashMap priorities = new Long2LongOpenHashMap();
-            Set<Group> previous = Collections.newSetFromMap(new IdentityHashMap<>());
+            Map<Group, Settings> previous = new IdentityHashMap<>();
             while (!queue.isEmpty()) {
-                long packed = queue.removeFirst(); if (!visited.add(packed)) continue;
+                long packed = queue.dequeueLong(); if (!visited.add(packed)) continue;
                 BlockPos pos = BlockPos.of(packed); Group old = members.get(packed);
-                if (old != null && previous.add(old)) for (long p : old.members) queue.add(p);
+                if (old != null && !previous.containsKey(old)) {
+                    previous.put(old, old.settings());
+                    for (long p : old.members) queue.enqueue(p);
+                }
                 int mounting;
                 if (loaded(level, chunk(pos))) {
                     BlockState state = level.getBlockState(pos); if (!panel(state)) continue;
@@ -191,32 +200,33 @@ public final class LedLightGroups extends SavedData {
                     if (old == null) settings.put(packed, legacy(level, pos, state));
                 } else { if (old == null) continue; mounting = old.mount; }
                 nodes.put(packed, (byte)mounting);
-                if (old != null) settings.put(packed, old.settings());
+                if (old != null) settings.put(packed, previous.get(old));
                 priorities.put(packed, old == null ? packed : old.root);
                 for (Direction side : edges(mounting)) {
                     BlockPos next = pos.relative(side); Group known = members.get(next.asLong());
                     if (loaded(level, chunk(next))) {
                         BlockState other = level.getBlockState(next);
-                        if (panel(other) && mounting(other) == mounting) queue.add(next.asLong());
-                    } else if (known != null && known.mount == mounting) queue.add(next.asLong());
+                        if (panel(other) && mounting(other) == mounting) queue.enqueue(next.asLong());
+                    } else if (known != null && known.mount == mounting) queue.enqueue(next.asLong());
                 }
             }
             LightProximityData scheduler = LightProximityData.get(level);
-            for (Group group : previous) unindex(group);
+            for (Group group : previous.keySet()) unindex(group);
             for (long packed : visited) { BlockPos pos = BlockPos.of(packed); scheduler.set(pos, false); scheduler.setAnimation(pos, LightEffect.STEADY); }
             LongOpenHashSet assigned = new LongOpenHashSet();
             for (long start : nodes.keySet()) {
                 if (!assigned.add(start)) continue;
-                LongArrayList component = new LongArrayList(); queue.add(start);
+                LongArrayList component = new LongArrayList(); queue.enqueue(start);
                 Settings winner = null; long priority = Long.MAX_VALUE; int mounting = nodes.get(start);
                 while (!queue.isEmpty()) {
-                    long packed = queue.removeFirst(); component.add(packed);
+                    long packed = queue.dequeueLong(); component.add(packed);
                     if (!(newlyPlaced && packed == seed.asLong()) && (winner == null || priorities.get(packed) < priority)) {
                         winner = settings.get(packed); priority = priorities.get(packed);
                     }
+                    BlockPos pos = BlockPos.of(packed);
                     for (Direction side : edges(mounting)) {
-                        long next = BlockPos.of(packed).relative(side).asLong();
-                        if (nodes.containsKey(next) && nodes.get(next) == mounting && assigned.add(next)) queue.add(next);
+                        long next = pos.relative(side).asLong();
+                        if (nodes.containsKey(next) && nodes.get(next) == mounting && assigned.add(next)) queue.enqueue(next);
                     }
                 }
                 if (winner == null) winner = new Settings(LightMode.MANUAL, LightEffect.STEADY, true, true, -1, LightProximityData.phase(start));
@@ -251,8 +261,7 @@ public final class LedLightGroups extends SavedData {
                 double dy = Math.max(Math.max(group.minY + .5 - y, y - group.maxY - .5), 0);
                 if (dx * dx + dy * dy + dz * dz > limit) continue;
                 for (long packed : entry.getValue()) {
-                    BlockPos pos = BlockPos.of(packed);
-                    if (player.distanceToSqr(pos.getX()+.5, pos.getY()+.5, pos.getZ()+.5) <= limit) return true;
+                    if (player.distanceToSqr(BlockPos.getX(packed)+.5, BlockPos.getY(packed)+.5, BlockPos.getZ(packed)+.5) <= limit) return true;
                 }
             }
         }
@@ -323,7 +332,24 @@ public final class LedLightGroups extends SavedData {
     }
     public void animate(ServerLevel level, Group group) {
         int brightness = group.active ? group.effect.levelAt(level.getGameTime() + group.phase) : 0;
-        if (brightness != group.lastLevel) render(level, group, group.mode, group.effect, group.active);
+        if (brightness == group.lastLevel) return;
+        LightEffect.Stage stage = LightEffect.Stage.of(group.effect, brightness);
+        boolean complete = true;
+        // Animation only changes the frame; settings/dye transactions retain the rollback path in render().
+        // Stream loaded chunks once, without per-frame part lists or before/after arrays.
+        var chunks = group.chunks.long2ObjectEntrySet().fastIterator();
+        while (chunks.hasNext()) {
+            var entry = chunks.next(); long key = entry.getLongKey();
+            var chunk = level.getChunkSource().getChunkNow(ChunkPos.getX(key), ChunkPos.getZ(key));
+            if (chunk == null) continue;
+            for (long packed : entry.getValue()) {
+                BlockPos pos = BlockPos.of(packed); BlockState before = chunk.getBlockState(pos);
+                if (!panel(before) || mounting(before) != group.mount) continue;
+                BlockState after = before.setValue(LightControls.LIT, brightness > 0).setValue(LightControls.EFFECT, stage);
+                if (after != before && !level.setBlock(pos, after, FLAGS)) complete = false;
+            }
+        }
+        group.lastLevel = complete ? brightness : -1;
     }
 
     public static LedLightGroups load(CompoundTag tag) {
