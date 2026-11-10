@@ -1,0 +1,337 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "hotel": "craftdistrict:block/hotel/hotel_atlas",
+    "particle": "craftdistrict:block/particles/particle_brass"
+  },
+  "elements": [
+    {
+      "name": "wall_backplate",
+      "from": [
+        0.0,
+        3.5,
+        7.5625
+      ],
+      "to": [
+        16.0,
+        12.5,
+        8.8125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            2.0,
+            2.4375,
+            4.0,
+            3.5625
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            2.0,
+            2.4375,
+            4.0,
+            3.5625
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            2.921875,
+            2.4375,
+            3.078125,
+            3.5625
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            2.921875,
+            2.4375,
+            3.078125,
+            3.5625
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            2.0,
+            2.921875,
+            4.0,
+            3.078125
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            2.0,
+            2.921875,
+            4.0,
+            3.078125
+          ]
+        }
+      }
+    },
+    {
+      "name": "brass_frame",
+      "from": [
+        0.25,
+        3.75,
+        7.3125
+      ],
+      "to": [
+        15.75,
+        12.25,
+        7.5625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            6.03125,
+            0.46875,
+            7.96875,
+            1.53125
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            6.03125,
+            0.46875,
+            7.96875,
+            1.53125
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            6.984375,
+            0.46875,
+            7.015625,
+            1.53125
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            6.984375,
+            0.46875,
+            7.015625,
+            1.53125
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            6.03125,
+            0.984375,
+            7.96875,
+            1.015625
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            6.03125,
+            0.984375,
+            7.96875,
+            1.015625
+          ]
+        }
+      }
+    },
+    {
+      "name": "hotel_lettering",
+      "from": [
+        0.75,
+        4.75,
+        7.1875
+      ],
+      "to": [
+        15.25,
+        10.791667,
+        7.3125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            0,
+            9,
+            12,
+            14
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            2.09375,
+            2.6223958124999998,
+            3.90625,
+            3.3776041875000002
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            2.9921875,
+            2.6223958124999998,
+            3.0078125,
+            3.3776041875000002
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            2.9921875,
+            2.6223958124999998,
+            3.0078125,
+            3.3776041875000002
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            2.09375,
+            2.9921875,
+            3.90625,
+            3.0078125
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            2.09375,
+            2.9921875,
+            3.90625,
+            3.0078125
+          ]
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        1
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        -45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        1
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        -90,
+        20
+      ],
+      "translation": [
+        1,
+        2,
+        1
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        90,
+        -20
+      ],
+      "translation": [
+        1,
+        2,
+        1
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    }
+  }
+}

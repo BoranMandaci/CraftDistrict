@@ -39,6 +39,12 @@ import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.HospitalBedBlock;
 import com.craftdistrict.block.HospitalWideBlock;
 import com.craftdistrict.block.PharmacyFixtureBlock;
+import com.craftdistrict.block.HotelReceptionCounterBlock;
+import com.craftdistrict.block.HotelBackCabinetBlock;
+import com.craftdistrict.block.HotelDecorationBlock;
+import com.craftdistrict.block.HotelTallBlock;
+import com.craftdistrict.block.HotelLobbySofaBlock;
+import com.craftdistrict.block.HotelLobbyArmchairBlock;
 import com.craftdistrict.block.PharmacyGlassDisplayBlock;
 import com.craftdistrict.block.PharmacyCabinetBlock;
 import com.craftdistrict.block.PillCountingStationBlock;
@@ -175,6 +181,7 @@ public final class CraftDistrictBlocks {
         Office.initialize();
         Hospital.initialize();
         Pharmacy.initialize();
+        Hotel.initialize();
         Survival.initialize();
         BLOCKS.register();
     }
@@ -187,6 +194,44 @@ public final class CraftDistrictBlocks {
                 ? new BedItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
+    }
+
+    public static final class Hotel {
+        public static final RegistrySupplier<HotelReceptionCounterBlock> RECEPTION_COUNTER = register("hotel_reception_counter",
+                () -> new HotelReceptionCounterBlock(woodProperties()));
+        public static final RegistrySupplier<HotelBackCabinetBlock> BACK_CABINET = register("reception_back_cabinet",
+                () -> new HotelBackCabinetBlock(woodProperties()));
+        public static final RegistrySupplier<HotelDecorationBlock> SERVICE_BELL = register("hotel_service_bell",
+                () -> new HotelDecorationBlock(HotelDecorationBlock.Design.BELL, metalProperties().strength(.5F)));
+        public static final RegistrySupplier<HotelDecorationBlock> KEY_CARD_ENCODER = register("key_card_encoder",
+                () -> new HotelDecorationBlock(HotelDecorationBlock.Design.ENCODER, metalProperties().strength(.75F)));
+        public static final RegistrySupplier<HotelTallBlock> LUGGAGE_CART = register("hotel_luggage_cart",
+                () -> new HotelTallBlock(HotelTallBlock.Design.LUGGAGE_CART, metalProperties()));
+        public static final RegistrySupplier<HotelDecorationBlock> LUGGAGE_STACK = register("luggage_stack",
+                () -> new HotelDecorationBlock(HotelDecorationBlock.Design.LUGGAGE_STACK, upholsteryProperties()));
+        public static final RegistrySupplier<HotelLobbySofaBlock> LOBBY_SOFA = register("lobby_sofa",
+                () -> new HotelLobbySofaBlock(upholsteryProperties()));
+        public static final RegistrySupplier<HotelLobbyArmchairBlock> LOBBY_ARMCHAIR = register("lobby_armchair",
+                () -> new HotelLobbyArmchairBlock(upholsteryProperties()));
+        public static final RegistrySupplier<HotelDecorationBlock> COFFEE_TABLE = register("lobby_coffee_table",
+                () -> new HotelDecorationBlock(HotelDecorationBlock.Design.COFFEE_TABLE,
+                        BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.STONE).noOcclusion()));
+        public static final RegistrySupplier<HotelDecorationBlock> LOGO_SIGN = register("hotel_logo_sign",
+                () -> new HotelDecorationBlock(HotelDecorationBlock.Design.LOGO_SIGN, metalProperties()));
+        public static final RegistrySupplier<HotelTallBlock> BROCHURE_STAND = register("brochure_stand",
+                () -> new HotelTallBlock(HotelTallBlock.Design.BROCHURE_STAND, woodProperties()));
+
+        private static BlockBehaviour.Properties woodProperties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD).noOcclusion();
+        }
+        private static BlockBehaviour.Properties metalProperties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
+        }
+        private static BlockBehaviour.Properties upholsteryProperties() {
+            return BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.WOOL).noOcclusion();
+        }
+        private Hotel() { }
+        private static void initialize() { }
     }
 
     public static final class Pharmacy {

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "craftdistrict:hotel_luggage_cart"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "craftdistrict:hotel_luggage_cart",
+          "properties": {
+            "primary": "true"
+          }
+        }
+      ]
+    }
+  ]
+}

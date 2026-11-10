@@ -381,7 +381,19 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Pharmacy.DELIVERY_CART,
             CraftDistrictBlocks.Pharmacy.DRAWER_CABINET,
             CraftDistrictBlocks.Pharmacy.REFRIGERATOR,
-            CraftDistrictBlocks.Pharmacy.SECURED_CABINET);
+            CraftDistrictBlocks.Pharmacy.SECURED_CABINET),
+    HOTEL("hotel", CraftDistrictBlocks.Hotel.RECEPTION_COUNTER,
+            CraftDistrictBlocks.Hotel.RECEPTION_COUNTER,
+            CraftDistrictBlocks.Hotel.BACK_CABINET,
+            CraftDistrictBlocks.Hotel.SERVICE_BELL,
+            CraftDistrictBlocks.Hotel.KEY_CARD_ENCODER,
+            CraftDistrictBlocks.Hotel.LOGO_SIGN,
+            CraftDistrictBlocks.Hotel.LOBBY_SOFA,
+            CraftDistrictBlocks.Hotel.LOBBY_ARMCHAIR,
+            CraftDistrictBlocks.Hotel.COFFEE_TABLE,
+            CraftDistrictBlocks.Hotel.BROCHURE_STAND,
+            CraftDistrictBlocks.Hotel.LUGGAGE_CART,
+            CraftDistrictBlocks.Hotel.LUGGAGE_STACK);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;
