@@ -393,6 +393,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hotel.COFFEE_TABLE,
             CraftDistrictBlocks.Hotel.BROCHURE_STAND,
             CraftDistrictBlocks.Hotel.LUGGAGE_CART,
+            CraftDistrictBlocks.Hotel.LUGGAGE_CART_LOADED,
             CraftDistrictBlocks.Hotel.LUGGAGE_STACK);
 
     private final String id;

@@ -8,17 +8,18 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Shared paired-cabinet lifecycle and reciprocal row connections, with shallower lobby proportions. */
+/** Full-depth cabinets retain the paired lifecycle and reciprocal row connections. */
 public final class HotelBackCabinetBlock extends MedicalSupplyCabinetBlock {
-    private static final VoxelShape[] SHAPES = RestaurantKitchenBlock.rotations(box(0, 0, 4, 16, 16, 16));
+    private static final VoxelShape SHAPE = Shapes.block();
     //? if >=1.21 {
     public static final MapCodec<HotelBackCabinetBlock> CODEC = simpleCodec(HotelBackCabinetBlock::new);
     //?}
     public HotelBackCabinetBlock(Properties properties) { super(properties); }
     @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES[RestaurantKitchenBlock.turn(state)];
+        return SHAPE;
     }
     @Override public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return getShape(state, level, pos, context);

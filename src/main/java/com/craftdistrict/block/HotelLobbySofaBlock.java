@@ -19,6 +19,7 @@ public final class HotelLobbySofaBlock extends ConnectedRestaurantSeatBlock {
     public static final MapCodec<HotelLobbySofaBlock> CODEC = simpleCodec(HotelLobbySofaBlock::new);
     //?}
     public HotelLobbySofaBlock(Properties properties) { super(Design.MODERN_BOOTH, properties); }
+    @Override public double seatHeight() { return 8.75 / 16; }
     private static VoxelShape turn(VoxelShape shape, int turns) {
         for (int i = 0; i < turns; i++) {
             VoxelShape next = Shapes.empty();
@@ -31,14 +32,14 @@ public final class HotelLobbySofaBlock extends ConnectedRestaurantSeatBlock {
     private static VoxelShape[][] buildShapes() {
         VoxelShape[][] result = new VoxelShape[Connection.values().length][];
         for (Connection c : Connection.values()) {
-            VoxelShape shape = box(0, 0, 0, 16, 9.5, 16);
-            shape = Shapes.or(shape, box(c.corner == Corner.OUTER_RIGHT ? 12 : 0, 9.5, 12,
-                    c.corner == Corner.OUTER_LEFT ? 4 : 16, 16, 16));
-            if (c.corner == Corner.INNER_LEFT) shape = Shapes.or(shape, box(0, 9.5, 0, 4, 16, 12));
-            if (c.corner == Corner.INNER_RIGHT) shape = Shapes.or(shape, box(12, 9.5, 0, 16, 16, 12));
-            if (!c.left) shape = Shapes.or(shape, turn(box(0, 9.5, 1, 2.5, 13, 12),
+            VoxelShape shape = box(0, 0, 0, 16, 8.75, 16);
+            shape = Shapes.or(shape, box(c.corner == Corner.OUTER_RIGHT ? 12 : 0, 8.75, 12,
+                    c.corner == Corner.OUTER_LEFT ? 4 : 16, 15.25, 16));
+            if (c.corner == Corner.INNER_LEFT) shape = Shapes.or(shape, box(0, 8.75, 0, 4, 15.25, 12));
+            if (c.corner == Corner.INNER_RIGHT) shape = Shapes.or(shape, box(12, 8.75, 0, 16, 15.25, 12));
+            if (!c.left) shape = Shapes.or(shape, turn(box(0, 8.75, .5, 2.8125, 12.5, 12),
                     c.corner == Corner.INNER_LEFT ? 1 : c.corner == Corner.OUTER_RIGHT ? 3 : 0));
-            if (!c.right) shape = Shapes.or(shape, turn(box(13.5, 9.5, 1, 16, 13, 12),
+            if (!c.right) shape = Shapes.or(shape, turn(box(13.1875, 8.75, .5, 16, 12.5, 12),
                     c.corner == Corner.INNER_RIGHT ? 3 : c.corner == Corner.OUTER_LEFT ? 1 : 0));
             result[c.ordinal()] = RestaurantKitchenBlock.rotations(shape.optimize());
         }

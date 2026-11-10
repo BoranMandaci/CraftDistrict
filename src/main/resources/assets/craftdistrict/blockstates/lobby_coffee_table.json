@@ -2,7 +2,9 @@
   "multipart": [
     {
       "when": {
-        "facing": "north"
+        "facing": "north",
+        "expanded": "false",
+        "primary": "true"
       },
       "apply": {
         "model": "craftdistrict:block/hotel/lobby_coffee_table",
@@ -11,7 +13,31 @@
     },
     {
       "when": {
-        "facing": "east"
+        "facing": "north",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/lobby_coffee_table_primary",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/lobby_coffee_table_secondary",
+        "y": 0
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "expanded": "false",
+        "primary": "true"
       },
       "apply": {
         "model": "craftdistrict:block/hotel/lobby_coffee_table",
@@ -20,7 +46,31 @@
     },
     {
       "when": {
-        "facing": "south"
+        "facing": "east",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/lobby_coffee_table_primary",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/lobby_coffee_table_secondary",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "expanded": "false",
+        "primary": "true"
       },
       "apply": {
         "model": "craftdistrict:block/hotel/lobby_coffee_table",
@@ -29,10 +79,56 @@
     },
     {
       "when": {
-        "facing": "west"
+        "facing": "south",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/lobby_coffee_table_primary",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/lobby_coffee_table_secondary",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "expanded": "false",
+        "primary": "true"
       },
       "apply": {
         "model": "craftdistrict:block/hotel/lobby_coffee_table",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "expanded": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/lobby_coffee_table_primary",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "expanded": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/lobby_coffee_table_secondary",
         "y": 270
       }
     }

@@ -45,6 +45,8 @@ import com.craftdistrict.block.HotelDecorationBlock;
 import com.craftdistrict.block.HotelTallBlock;
 import com.craftdistrict.block.HotelLobbySofaBlock;
 import com.craftdistrict.block.HotelLobbyArmchairBlock;
+import com.craftdistrict.block.HotelCoffeeTableBlock;
+import com.craftdistrict.block.HotelLuggageCartBlock;
 import com.craftdistrict.block.PharmacyGlassDisplayBlock;
 import com.craftdistrict.block.PharmacyCabinetBlock;
 import com.craftdistrict.block.PillCountingStationBlock;
@@ -205,16 +207,18 @@ public final class CraftDistrictBlocks {
                 () -> new HotelDecorationBlock(HotelDecorationBlock.Design.BELL, metalProperties().strength(.5F)));
         public static final RegistrySupplier<HotelDecorationBlock> KEY_CARD_ENCODER = register("key_card_encoder",
                 () -> new HotelDecorationBlock(HotelDecorationBlock.Design.ENCODER, metalProperties().strength(.75F)));
-        public static final RegistrySupplier<HotelTallBlock> LUGGAGE_CART = register("hotel_luggage_cart",
-                () -> new HotelTallBlock(HotelTallBlock.Design.LUGGAGE_CART, metalProperties()));
+        public static final RegistrySupplier<HotelLuggageCartBlock> LUGGAGE_CART = register("hotel_luggage_cart",
+                () -> new HotelLuggageCartBlock(false, metalProperties()));
+        public static final RegistrySupplier<HotelLuggageCartBlock> LUGGAGE_CART_LOADED = register("hotel_luggage_cart_loaded",
+                () -> new HotelLuggageCartBlock(true, metalProperties()));
         public static final RegistrySupplier<HotelDecorationBlock> LUGGAGE_STACK = register("luggage_stack",
                 () -> new HotelDecorationBlock(HotelDecorationBlock.Design.LUGGAGE_STACK, upholsteryProperties()));
         public static final RegistrySupplier<HotelLobbySofaBlock> LOBBY_SOFA = register("lobby_sofa",
                 () -> new HotelLobbySofaBlock(upholsteryProperties()));
         public static final RegistrySupplier<HotelLobbyArmchairBlock> LOBBY_ARMCHAIR = register("lobby_armchair",
                 () -> new HotelLobbyArmchairBlock(upholsteryProperties()));
-        public static final RegistrySupplier<HotelDecorationBlock> COFFEE_TABLE = register("lobby_coffee_table",
-                () -> new HotelDecorationBlock(HotelDecorationBlock.Design.COFFEE_TABLE,
+        public static final RegistrySupplier<HotelCoffeeTableBlock> COFFEE_TABLE = register("lobby_coffee_table",
+                () -> new HotelCoffeeTableBlock(
                         BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.STONE).noOcclusion()));
         public static final RegistrySupplier<HotelDecorationBlock> LOGO_SIGN = register("hotel_logo_sign",
                 () -> new HotelDecorationBlock(HotelDecorationBlock.Design.LOGO_SIGN, metalProperties()));

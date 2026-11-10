@@ -25,8 +25,8 @@ public final class HotelDecorationBlock extends RotatableDecorationBlock {
     }
     private final Design design;
     private static final VoxelShape[][] SHAPES = {
-            RestaurantKitchenBlock.rotations(box(5, 0, 5, 11, 4.5, 11)),
-            RestaurantKitchenBlock.rotations(box(3, 0, 3.5, 13, 5.5, 12.5)),
+            RestaurantKitchenBlock.rotations(box(6.2, 0, 6.2, 9.8, 2.625, 9.8)),
+            RestaurantKitchenBlock.rotations(box(5, 0, 5.6, 11, 3.125, 10.4)),
             RestaurantKitchenBlock.rotations(box(1.5, 0, 1.5, 14.5, 15.5, 14.5)),
             RestaurantKitchenBlock.rotations(Shapes.or(box(3, 0, 5, 13, 1.25, 11),
                     box(5, 1.25, 5, 11, 8, 11), box(1, 8, 2.5, 15, 9.5, 13.5)).optimize()),
