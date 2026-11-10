@@ -1,0 +1,106 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base"
+      }
+    },
+    {
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_drain"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_north"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_east"
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_south"
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_west"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "false"
+          },
+          {
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_north_west"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "false"
+          },
+          {
+            "east": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_north_east"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "south": "false"
+          },
+          {
+            "east": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_south_east"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "south": "false"
+          },
+          {
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_south_west"
+      }
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "hotel": "craftdistrict:block/hotel/hotel_atlas",
+    "ceramic": "minecraft:block/white_concrete",
+    "stone": "minecraft:block/quartz_block_top",
+    "chrome": "minecraft:block/iron_block",
+    "silver": "minecraft:block/light_gray_concrete",
+    "fabric": "minecraft:block/white_wool",
+    "glass": "minecraft:block/light_blue_stained_glass",
+    "mirror": "craftdistrict:block/hotel/bathroom_mirror",
+    "particle": "craftdistrict:block/particles/particle_metal"
+  },
+  "elements": [
+    {
+      "name": "warm_mirror_back",
+      "from": [
+        1,
+        0.5,
+        15.5
+      ],
+      "to": [
+        15,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.7447916666666667,
+            3.875,
+            1.875
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.7447916666666667,
+            3.875,
+            1.875
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            2.96875,
+            0.7447916666666667,
+            3.03125,
+            1.875
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            2.96875,
+            0.7447916666666667,
+            3.03125,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.96875,
+            3.875,
+            1.03125
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_frame",
+      "from": [
+        1,
+        0.5,
+        14.75
+      ],
+      "to": [
+        1.75,
+        16,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.7447916666666667,
+            7.046875,
+            1.875
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.7447916666666667,
+            7.046875,
+            1.875
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.7447916666666667,
+            7.046875,
+            1.875
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.7447916666666667,
+            7.046875,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.953125,
+            7.046875,
+            1.046875
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_frame",
+      "from": [
+        14.25,
+        0.5,
+        14.75
+      ],
+      "to": [
+        15,
+        16,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.7447916666666667,
+            7.046875,
+            1.875
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.7447916666666667,
+            7.046875,
+            1.875
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.7447916666666667,
+            7.046875,
+            1.875
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.7447916666666667,
+            7.046875,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.953125,
+            7.046875,
+            1.046875
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_frame",
+      "from": [
+        1.75,
+        0.5,
+        14.75
+      ],
+      "to": [
+        14.25,
+        1.25,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            6.21875,
+            0.953125,
+            7.78125,
+            1.046875
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            6.21875,
+            0.953125,
+            7.78125,
+            1.046875
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.953125,
+            7.046875,
+            1.046875
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            6.953125,
+            0.953125,
+            7.046875,
+            1.046875
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            6.21875,
+            0.953125,
+            7.78125,
+            1.046875
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            6.21875,
+            0.953125,
+            7.78125,
+            1.046875
+          ]
+        }
+      }
+    },
+    {
+      "name": "reflective_mirror_surface",
+      "from": [
+        1.75,
+        1.25,
+        15
+      ],
+      "to": [
+        14.25,
+        16,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#mirror",
+          "uv": [
+            0,
+            5.511111111111111,
+            16,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#silver",
+          "uv": [
+            2.0,
+            6.133333333333333,
+            14.0,
+            14.0
+          ]
+        },
+        "west": {
+          "texture": "#silver",
+          "uv": [
+            7.75,
+            6.133333333333333,
+            8.25,
+            14.0
+          ]
+        },
+        "east": {
+          "texture": "#silver",
+          "uv": [
+            7.75,
+            6.133333333333333,
+            8.25,
+            14.0
+          ]
+        },
+        "down": {
+          "texture": "#silver",
+          "uv": [
+            2.0,
+            7.75,
+            14.0,
+            8.25
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "facing": "north",
+        "tall": "false",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "tall": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls_lower"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "tall": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls_upper"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "tall": "false",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "tall": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls_lower",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "tall": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls_upper",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "tall": "false",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "tall": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls_lower",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "tall": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls_upper",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "tall": "false",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "tall": "true",
+        "primary": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls_lower",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "tall": "true",
+        "primary": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_head_controls_upper",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "tall": "true",
+        "primary": "true",
+        "base": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base"
+      }
+    },
+    {
+      "when": {
+        "tall": "true",
+        "primary": "true",
+        "base": "true",
+        "plain_base": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_drain"
+      }
+    },
+    {
+      "when": {
+        "tall": "true",
+        "primary": "true",
+        "base": "true",
+        "north": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_north"
+      }
+    },
+    {
+      "when": {
+        "tall": "true",
+        "primary": "true",
+        "base": "true",
+        "east": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_east"
+      }
+    },
+    {
+      "when": {
+        "tall": "true",
+        "primary": "true",
+        "base": "true",
+        "south": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_south"
+      }
+    },
+    {
+      "when": {
+        "tall": "true",
+        "primary": "true",
+        "base": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_west"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "tall": "true",
+            "primary": "true",
+            "base": "true"
+          },
+          {
+            "OR": [
+              {
+                "north": "false"
+              },
+              {
+                "west": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_north_west"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "tall": "true",
+            "primary": "true",
+            "base": "true"
+          },
+          {
+            "OR": [
+              {
+                "north": "false"
+              },
+              {
+                "east": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_north_east"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "tall": "true",
+            "primary": "true",
+            "base": "true"
+          },
+          {
+            "OR": [
+              {
+                "south": "false"
+              },
+              {
+                "east": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_south_east"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "tall": "true",
+            "primary": "true",
+            "base": "true"
+          },
+          {
+            "OR": [
+              {
+                "south": "false"
+              },
+              {
+                "west": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/hotel_shower_floor_base_south_west"
+      }
+    }
+  ]
+}

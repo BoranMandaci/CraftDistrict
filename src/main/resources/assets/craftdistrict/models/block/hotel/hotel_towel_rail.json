@@ -1,0 +1,844 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "hotel": "craftdistrict:block/hotel/hotel_atlas",
+    "ceramic": "minecraft:block/white_concrete",
+    "stone": "minecraft:block/quartz_block_top",
+    "chrome": "minecraft:block/iron_block",
+    "silver": "minecraft:block/light_gray_concrete",
+    "fabric": "minecraft:block/white_wool",
+    "glass": "minecraft:block/light_blue_stained_glass",
+    "particle": "minecraft:block/white_wool"
+  },
+  "elements": [
+    {
+      "name": "left_rail_mount",
+      "from": [
+        2.0,
+        12.5,
+        15.5
+      ],
+      "to": [
+        3.0,
+        14.0,
+        16.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_rail_arm",
+      "from": [
+        2.25,
+        13.0,
+        13.25
+      ],
+      "to": [
+        2.75,
+        13.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_rail_mount",
+      "from": [
+        13.0,
+        12.5,
+        15.5
+      ],
+      "to": [
+        14.0,
+        14.0,
+        16.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_rail_arm",
+      "from": [
+        13.25,
+        13.0,
+        13.25
+      ],
+      "to": [
+        13.75,
+        13.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "horizontal_rail",
+      "from": [
+        2.25,
+        13.0,
+        12.75
+      ],
+      "to": [
+        13.75,
+        13.5,
+        13.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "front_towel",
+      "from": [
+        4.0,
+        3.25,
+        12.5
+      ],
+      "to": [
+        12.0,
+        13.5,
+        12.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#fabric",
+          "uv": [
+            4.0,
+            2.875,
+            12.0,
+            13.125
+          ]
+        },
+        "south": {
+          "texture": "#fabric",
+          "uv": [
+            4.0,
+            2.875,
+            12.0,
+            13.125
+          ]
+        },
+        "west": {
+          "texture": "#fabric",
+          "uv": [
+            7.8125,
+            2.875,
+            8.1875,
+            13.125
+          ]
+        },
+        "east": {
+          "texture": "#fabric",
+          "uv": [
+            7.8125,
+            2.875,
+            8.1875,
+            13.125
+          ]
+        },
+        "up": {
+          "texture": "#fabric",
+          "uv": [
+            4.0,
+            7.8125,
+            12.0,
+            8.1875
+          ]
+        },
+        "down": {
+          "texture": "#fabric",
+          "uv": [
+            4.0,
+            7.8125,
+            12.0,
+            8.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "back_towel",
+      "from": [
+        4.25,
+        4.5,
+        13.25
+      ],
+      "to": [
+        11.75,
+        13.5,
+        13.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#fabric",
+          "uv": [
+            4.25,
+            3.375,
+            11.75,
+            12.625
+          ]
+        },
+        "south": {
+          "texture": "#fabric",
+          "uv": [
+            4.25,
+            3.375,
+            11.75,
+            12.625
+          ]
+        },
+        "west": {
+          "texture": "#fabric",
+          "uv": [
+            7.8125,
+            3.375,
+            8.1875,
+            12.625
+          ]
+        },
+        "east": {
+          "texture": "#fabric",
+          "uv": [
+            7.8125,
+            3.375,
+            8.1875,
+            12.625
+          ]
+        },
+        "up": {
+          "texture": "#fabric",
+          "uv": [
+            4.25,
+            7.8125,
+            11.75,
+            8.1875
+          ]
+        },
+        "down": {
+          "texture": "#fabric",
+          "uv": [
+            4.25,
+            7.8125,
+            11.75,
+            8.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "towel_over_rail",
+      "from": [
+        4.0,
+        13.5,
+        12.5
+      ],
+      "to": [
+        12.0,
+        13.875,
+        13.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#fabric",
+          "uv": [
+            4.0,
+            7.8125,
+            12.0,
+            8.1875
+          ]
+        },
+        "south": {
+          "texture": "#fabric",
+          "uv": [
+            4.0,
+            7.8125,
+            12.0,
+            8.1875
+          ]
+        },
+        "west": {
+          "texture": "#fabric",
+          "uv": [
+            7.4375,
+            7.8125,
+            8.5625,
+            8.1875
+          ]
+        },
+        "east": {
+          "texture": "#fabric",
+          "uv": [
+            7.4375,
+            7.8125,
+            8.5625,
+            8.1875
+          ]
+        },
+        "up": {
+          "texture": "#fabric",
+          "uv": [
+            4.0,
+            7.4375,
+            12.0,
+            8.5625
+          ]
+        },
+        "down": {
+          "texture": "#fabric",
+          "uv": [
+            4.0,
+            7.4375,
+            12.0,
+            8.5625
+          ]
+        }
+      }
+    },
+    {
+      "name": "linen_fold_5",
+      "from": [
+        5.0,
+        4.25,
+        12.375
+      ],
+      "to": [
+        5.375,
+        12.75,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.46875,
+            5.0234375,
+            1.53125
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.46875,
+            5.0234375,
+            1.53125
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            0.46875,
+            5.0078125,
+            1.53125
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            0.46875,
+            5.0078125,
+            1.53125
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.9921875,
+            5.0234375,
+            1.0078125
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.9921875,
+            5.0234375,
+            1.0078125
+          ]
+        }
+      }
+    },
+    {
+      "name": "linen_fold_7.75",
+      "from": [
+        7.75,
+        4.25,
+        12.375
+      ],
+      "to": [
+        8.125,
+        12.75,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.46875,
+            5.0234375,
+            1.53125
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.46875,
+            5.0234375,
+            1.53125
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            0.46875,
+            5.0078125,
+            1.53125
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            0.46875,
+            5.0078125,
+            1.53125
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.9921875,
+            5.0234375,
+            1.0078125
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.9921875,
+            5.0234375,
+            1.0078125
+          ]
+        }
+      }
+    },
+    {
+      "name": "linen_fold_10.5",
+      "from": [
+        10.5,
+        4.25,
+        12.375
+      ],
+      "to": [
+        10.875,
+        12.75,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.46875,
+            5.0234375,
+            1.53125
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.46875,
+            5.0234375,
+            1.53125
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            0.46875,
+            5.0078125,
+            1.53125
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            0.46875,
+            5.0078125,
+            1.53125
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.9921875,
+            5.0234375,
+            1.0078125
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            4.9765625,
+            0.9921875,
+            5.0234375,
+            1.0078125
+          ]
+        }
+      }
+    },
+    {
+      "name": "woven_lower_border",
+      "from": [
+        4.0,
+        3.75,
+        12.375
+      ],
+      "to": [
+        12.0,
+        4.25,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            8.5,
+            0.96875,
+            9.5,
+            1.03125
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            8.5,
+            0.96875,
+            9.5,
+            1.03125
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            8.9921875,
+            0.96875,
+            9.0078125,
+            1.03125
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            8.9921875,
+            0.96875,
+            9.0078125,
+            1.03125
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            8.5,
+            0.9921875,
+            9.5,
+            1.0078125
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            8.5,
+            0.9921875,
+            9.5,
+            1.0078125
+          ]
+        }
+      }
+    }
+  ]
+}

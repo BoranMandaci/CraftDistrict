@@ -62,6 +62,19 @@ import com.craftdistrict.block.HotelRoomApplianceBlock;
 import com.craftdistrict.block.HotelCurtainsBlock;
 import com.craftdistrict.block.HotelFullLengthMirrorBlock;
 import com.craftdistrict.block.HotelRoomRugBlock;
+import com.craftdistrict.block.HotelBathroomAccessoryBlock;
+import com.craftdistrict.block.HotelVanitySinkBlock;
+import com.craftdistrict.block.HotelBathtubBlock;
+import com.craftdistrict.block.HotelShowerEnclosureBlock;
+import com.craftdistrict.block.HotelBathrobeHookBlock;
+import com.craftdistrict.block.HotelVanityMirrorBlock;
+import com.craftdistrict.block.HotelBathroomBinBlock;
+import com.craftdistrict.item.VanityArrangementBlockItem;
+import com.craftdistrict.item.ShowerFixtureBlockItem;
+import com.craftdistrict.block.HotelFixedShowerPanelBlock;
+import com.craftdistrict.block.HotelShowerFixtureBlock;
+import com.craftdistrict.block.HotelShowerFloorBlock;
+import com.craftdistrict.block.HotelToiletBlock;
 import com.craftdistrict.block.PharmacyGlassDisplayBlock;
 import com.craftdistrict.block.PharmacyCabinetBlock;
 import com.craftdistrict.block.PillCountingStationBlock;
@@ -209,6 +222,12 @@ public final class CraftDistrictBlocks {
                 ? new DoubleHighBlockItem(block.get(), new Item.Properties())
                 : block.get() instanceof HoldingCellBedBlock || block.get() instanceof HospitalBedBlock
                 ? new BedItem(block.get(), new Item.Properties())
+                : block.get() instanceof HotelVanityMirrorBlock
+                    || block.get() instanceof HotelBathroomAccessoryBlock accessory && accessory.isToiletries()
+                ? new VanityArrangementBlockItem(block.get(), new Item.Properties())
+                : block.get() instanceof HotelShowerFixtureBlock
+                    || block.get() instanceof HotelShowerFloorBlock
+                ? new ShowerFixtureBlockItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
     }
@@ -287,6 +306,38 @@ public final class CraftDistrictBlocks {
                 () -> new HotelFullLengthMirrorBlock(woodProperties()));
         public static final RegistrySupplier<HotelRoomRugBlock> RUG = register("hotel_room_rug",
                 () -> new HotelRoomRugBlock(upholsteryProperties().strength(.2F)));
+        public static final RegistrySupplier<HotelVanitySinkBlock> VANITY_SINK = register("hotel_vanity_sink",
+                () -> new HotelVanitySinkBlock(woodProperties()));
+        public static final RegistrySupplier<HotelVanityMirrorBlock> VANITY_MIRROR = register("hotel_vanity_mirror",
+                () -> new HotelVanityMirrorBlock(metalProperties()));
+        public static final RegistrySupplier<HotelShowerEnclosureBlock> SHOWER_ENCLOSURE = register("hotel_glass_shower_enclosure",
+                () -> new HotelShowerEnclosureBlock(metalProperties().sound(SoundType.GLASS)));
+        public static final RegistrySupplier<HotelShowerEnclosureBlock> FIXED_SHOWER_GLASS = register("hotel_fixed_shower_glass_panel",
+                () -> new HotelFixedShowerPanelBlock(metalProperties().sound(SoundType.GLASS)));
+        public static final RegistrySupplier<HotelShowerFixtureBlock> SHOWER_FIXTURE = register("hotel_shower_head_controls",
+                () -> new HotelShowerFixtureBlock(metalProperties()));
+        public static final RegistrySupplier<HotelShowerFloorBlock> SHOWER_BASE = register("hotel_shower_floor_base",
+                () -> new HotelShowerFloorBlock(true, metalProperties().sound(SoundType.STONE)));
+        public static final RegistrySupplier<HotelShowerFloorBlock> SHOWER_BASE_PLAIN = register("hotel_shower_floor_base_plain",
+                () -> new HotelShowerFloorBlock(false, metalProperties().sound(SoundType.STONE)));
+        public static final RegistrySupplier<HotelBathtubBlock> BATHTUB = register("hotel_bathtub",
+                () -> new HotelBathtubBlock(metalProperties().sound(SoundType.STONE)));
+        public static final RegistrySupplier<HotelToiletBlock> TOILET = register("hotel_toilet",
+                () -> new HotelToiletBlock(metalProperties().sound(SoundType.STONE)));
+        public static final RegistrySupplier<HotelBathroomAccessoryBlock> PAPER_HOLDER = register("hotel_toilet_paper_holder",
+                () -> new HotelBathroomAccessoryBlock(HotelBathroomAccessoryBlock.Design.PAPER_HOLDER, metalProperties()));
+        public static final RegistrySupplier<HotelBathroomAccessoryBlock> TOWEL_RAIL = register("hotel_towel_rail",
+                () -> new HotelBathroomAccessoryBlock(HotelBathroomAccessoryBlock.Design.TOWEL_RAIL, metalProperties()));
+        public static final RegistrySupplier<HotelBathroomAccessoryBlock> TOWEL_STACK = register("hotel_folded_towel_stack",
+                () -> new HotelBathroomAccessoryBlock(HotelBathroomAccessoryBlock.Design.TOWEL_STACK, upholsteryProperties()));
+        public static final RegistrySupplier<HotelBathrobeHookBlock> BATHROBE_HOOK = register("hotel_bathrobe_hook",
+                () -> new HotelBathrobeHookBlock(upholsteryProperties()));
+        public static final RegistrySupplier<HotelBathroomAccessoryBlock> TOILETRIES = register("hotel_toiletries_tray",
+                () -> new HotelBathroomAccessoryBlock(HotelBathroomAccessoryBlock.Design.TOILETRIES, metalProperties().strength(.5F)));
+        public static final RegistrySupplier<HotelBathroomAccessoryBlock> HAIR_DRYER = register("hotel_wall_hair_dryer",
+                () -> new HotelBathroomAccessoryBlock(HotelBathroomAccessoryBlock.Design.HAIR_DRYER, metalProperties()));
+        public static final RegistrySupplier<HotelBathroomBinBlock> TRASH_BIN = register("hotel_bathroom_trash_bin",
+                () -> new HotelBathroomBinBlock(metalProperties()));
 
         private static BlockBehaviour.Properties woodProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD).noOcclusion();

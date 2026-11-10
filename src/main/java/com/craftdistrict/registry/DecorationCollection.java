@@ -418,7 +418,23 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hotel.THERMOSTAT,
             CraftDistrictBlocks.Hotel.CURTAINS,
             CraftDistrictBlocks.Hotel.MIRROR,
-            CraftDistrictBlocks.Hotel.RUG);
+            CraftDistrictBlocks.Hotel.RUG,
+            CraftDistrictBlocks.Hotel.VANITY_SINK,
+            CraftDistrictBlocks.Hotel.VANITY_MIRROR,
+            CraftDistrictBlocks.Hotel.TOILETRIES,
+            CraftDistrictBlocks.Hotel.SHOWER_ENCLOSURE,
+            CraftDistrictBlocks.Hotel.FIXED_SHOWER_GLASS,
+            CraftDistrictBlocks.Hotel.SHOWER_FIXTURE,
+            CraftDistrictBlocks.Hotel.SHOWER_BASE,
+            CraftDistrictBlocks.Hotel.SHOWER_BASE_PLAIN,
+            CraftDistrictBlocks.Hotel.BATHTUB,
+            CraftDistrictBlocks.Hotel.TOILET,
+            CraftDistrictBlocks.Hotel.PAPER_HOLDER,
+            CraftDistrictBlocks.Hotel.TOWEL_RAIL,
+            CraftDistrictBlocks.Hotel.TOWEL_STACK,
+            CraftDistrictBlocks.Hotel.BATHROBE_HOOK,
+            CraftDistrictBlocks.Hotel.HAIR_DRYER,
+            CraftDistrictBlocks.Hotel.TRASH_BIN);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;
