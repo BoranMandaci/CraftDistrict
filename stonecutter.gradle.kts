@@ -4,6 +4,7 @@ import java.util.zip.Deflater
 import org.apache.tools.zip.ZipEntry
 import java.util.zip.ZipFile
 import org.apache.tools.zip.ZipOutputStream
+import net.fabricmc.loom.api.LoomGradleExtensionAPI
 import net.fabricmc.loom.task.RemapJarTask
 import org.gradle.workers.WorkerExecutor
 import javax.inject.Inject
@@ -48,6 +49,15 @@ fun compressReleaseJar(archive: java.io.File) {
 }
 
 subprojects {
+    plugins.withId("dev.architectury.loom") {
+        extensions.configure<LoomGradleExtensionAPI> {
+            runs.configureEach {
+                // Limit the development game JVM, independently of the Gradle daemon.
+                jvmArguments.add("-Xmx6G")
+            }
+        }
+    }
+
     tasks.withType<RemapJarTask>().configureEach {
         val workers = project.objects.newInstance(ReleaseWorkers::class.java)
         doLast {

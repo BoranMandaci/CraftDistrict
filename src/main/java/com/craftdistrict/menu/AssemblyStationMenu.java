@@ -54,6 +54,14 @@ public final class AssemblyStationMenu extends AbstractContainerMenu {
         addDataSlot(feedback); addDataSlot(acknowledgement);
     }
 
+    public List<AssemblyCatalog.Entry> catalog() { return openedCatalog; }
+
+    public boolean catalogCurrent(List<AssemblyCatalog.Entry> catalog) {
+        return catalog == openedCatalog
+                ? AssemblyCatalog.same(level.getRecipeManager(), openedCatalog, allowedRecipes)
+                : AssemblyCatalog.same(catalog, AssemblyCatalog.entries(level.getRecipeManager()));
+    }
+
     public static void open(ServerPlayer player, BlockPos pos) {
         long session = ThreadLocalRandom.current().nextLong();
         MenuRegistry.openExtendedMenu(player, new ExtendedMenuProvider() {
@@ -124,7 +132,7 @@ public final class AssemblyStationMenu extends AbstractContainerMenu {
     @Override public void broadcastChanges() {
         if (!level.isClientSide && !closed && ++reloadTicks >= 10) {
             reloadTicks = 0;
-            if (!AssemblyCatalog.same(openedCatalog, AssemblyCatalog.entries(level.getRecipeManager()))) {
+            if (!catalogCurrent(openedCatalog)) {
                 if (owner instanceof ServerPlayer player) invalidate(player);
                 return;
             }

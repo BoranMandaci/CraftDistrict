@@ -66,4 +66,19 @@ public final class AssemblyCatalog {
         }
         return true;
     }
+
+    /** Reuse a menu's existing index; routine reload checks need no new entries, sorting or output set. */
+    public static boolean same(RecipeManager manager, List<Entry> expected, Map<ResourceLocation, AssemblyRecipe> index) {
+        var recipes = manager.getAllRecipesFor(CraftDistrictAssembly.RECIPE_TYPE.get());
+        // Datapacks may provide several recipes for one output. Preserve the existing deterministic selection.
+        if (recipes.size() != expected.size()) return same(expected, entries(manager));
+        for (var recipe : recipes) {
+            //? if >=1.21 {
+            if (index.get(recipe.id()) != recipe.value()) return false;
+            //?} else {
+            /*if (index.get(recipe.getId()) != recipe) return false;
+            *///?}
+        }
+        return true;
+    }
 }

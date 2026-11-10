@@ -9,6 +9,9 @@ import net.minecraft.client.renderer.entity.NoopRenderer;
 import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
 import net.minecraft.client.renderer.RenderType;
+//? if >=1.21 {
+import dev.architectury.platform.Platform;
+//?}
 
 public final class CraftDistrictClient {
     private CraftDistrictClient() {
@@ -16,10 +19,23 @@ public final class CraftDistrictClient {
 
     public static void init() {
         EntityRendererRegistry.register(CraftDistrictEntities.SEAT, NoopRenderer::new);
+        // NeoForge's RegisterMenuScreensEvent runs before CLIENT_SETUP. Listen as soon as the menu types exist.
+        // Fabric/Forge register directly, retaining their existing client-setup timing.
+        //? if >=1.21 {
+        final boolean earlyScreens = Platform.isNeoForge();
+        //?} else {
+        /*final boolean earlyScreens = false;
+        *///?}
+        if (earlyScreens) {
+            CraftDistrictAssembly.MENU.listen(type -> MenuRegistry.registerScreenFactory(type, AssemblyStationScreen::new));
+            CraftDistrictAssembly.LIGHT_COLOR_MENU.listen(type -> MenuRegistry.registerScreenFactory(type, LightColorScreen::new));
+        }
         ClientLifecycleEvent.CLIENT_SETUP.register(client -> {
             LightingColors.init();
-            MenuRegistry.registerScreenFactory(CraftDistrictAssembly.MENU.get(), AssemblyStationScreen::new);
-            MenuRegistry.registerScreenFactory(CraftDistrictAssembly.LIGHT_COLOR_MENU.get(), LightColorScreen::new);
+            if (!earlyScreens) {
+                MenuRegistry.registerScreenFactory(CraftDistrictAssembly.MENU.get(), AssemblyStationScreen::new);
+                MenuRegistry.registerScreenFactory(CraftDistrictAssembly.LIGHT_COLOR_MENU.get(), LightColorScreen::new);
+            }
             RenderTypeRegistry.register(
                 RenderType.cutout(), CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get(),
                 CraftDistrictBlocks.Bakery.INDUSTRIAL_OVEN.get(),

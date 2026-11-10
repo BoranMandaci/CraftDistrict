@@ -20,8 +20,15 @@ import java.util.*;
 
 /** Fits Minecraft's minimum normal 320x240 GUI; long catalogs and material lists scroll independently. */
 public final class AssemblyStationScreen extends AbstractContainerScreen<AssemblyStationMenu> {
-    private static final int LIST_X = 8, LIST_Y = 58, LIST_WIDTH = 144, ROW_HEIGHT = 20, VISIBLE_ROWS = 4;
-    private static final int DETAIL_X = 160, COST_Y = 92, CELL_WIDTH = 73, CELL_HEIGHT = 16, VISIBLE_COST_ROWS = 2;
+    private static final int LIST_X = 8, LIST_Y = 58, LIST_WIDTH = 144, ROW_HEIGHT = 16, VISIBLE_ROWS = 4;
+    private static final int LIST_HEIGHT = VISIBLE_ROWS * ROW_HEIGHT + 4;
+    private static final int DETAIL_X = 160, DETAIL_HEIGHT = 68, COST_Y = 90,
+            CELL_WIDTH = 73, CELL_HEIGHT = 16, CELL_STEP = 18, VISIBLE_COST_ROWS = 2;
+    private static final int COST_WIDTH = CELL_WIDTH * 2 + 1,
+            COST_HEIGHT = (VISIBLE_COST_ROWS - 1) * CELL_STEP + CELL_HEIGHT;
+    private static final int ACTION_Y = 128, ACTION_HEIGHT = 16,
+            QUANTITY_X = 8, QUANTITY_WIDTH = 144, DECREASE_X = 72, INCREASE_X = 136,
+            VALUE_X = 90, VALUE_WIDTH = 44;
     private record Row(AssemblyCatalog.Entry entry, ItemStack icon, Component name, String searchName) { }
     private final Inventory inventory;
     private final List<Button> filters = new ArrayList<>();
@@ -87,7 +94,7 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
         filterIcons.clear();
         filterIcons.add(new ItemStack(CraftDistrictBlocks.Survival.ASSEMBLY_STATION.get()));
         int start = 8;
-        int filterStep = Math.min(27, 245 / (AssemblyCatalog.collections().size() + 1));
+        int filterStep = Math.min(27, 300 / (AssemblyCatalog.collections().size() + 1));
         int filterWidth = Math.min(24, filterStep - 2);
         filters.add(addRenderableWidget(Button.builder(Component.empty(), button -> chooseFilter(null))
                 .bounds(leftPos + start, topPos + 32, filterWidth, 20).tooltip(Tooltip.create(text("all"))).build()));
@@ -98,15 +105,15 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
                     .bounds(leftPos + x, topPos + 32, filterWidth, 20).tooltip(Tooltip.create(collection.title())).build()));
         }
         decrease = addRenderableWidget(Button.builder(Component.literal("-"), button -> setQuantity(quantity - 1))
-                .bounds(leftPos + 253, topPos + 32, 16, 20).tooltip(Tooltip.create(text("decrease"))).build());
+                .bounds(leftPos + DECREASE_X, topPos + ACTION_Y, 16, ACTION_HEIGHT).tooltip(Tooltip.create(text("decrease"))).build());
         increase = addRenderableWidget(Button.builder(Component.literal("+"), button -> setQuantity(quantity + 1))
-                .bounds(leftPos + 292, topPos + 32, 16, 20).tooltip(Tooltip.create(text("increase"))).build());
+                .bounds(leftPos + INCREASE_X, topPos + ACTION_Y, 16, ACTION_HEIGHT).tooltip(Tooltip.create(text("increase"))).build());
         craft = addRenderableWidget(Button.builder(Component.translatable("screen.craftdistrict.assembly.craft", quantity), button -> {
             if (selected != null && preview != null && preview.result() == AssemblyCrafting.Result.READY) {
                 menu.requestCraft(selected, quantity); updateButton();
                 wasPending = menu.pending();
             }
-        }).bounds(leftPos + DETAIL_X, topPos + 126, 148, 18).build());
+        }).bounds(leftPos + DETAIL_X, topPos + ACTION_Y, 148, ACTION_HEIGHT).build());
         buttonLabel = ""; buttonQuantity = -1;
         refreshCatalog();
         refreshInventory();
@@ -139,7 +146,9 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
     }
 
     private void refreshCatalog() {
-        catalog = AssemblyCatalog.entries(inventory.player.level().getRecipeManager());
+        // The client menu already owns this immutable snapshot and its lookup index.
+        catalog = menu.catalogCurrent(menu.catalog()) ? menu.catalog()
+                : AssemblyCatalog.entries(inventory.player.level().getRecipeManager());
         rows = catalog.stream().map(entry -> {
             ItemStack icon = entry.recipe().output(); Component name = icon.getHoverName();
             return new Row(entry, icon, name, AssemblyCatalog.normalizeSearch(name.getString()));
@@ -207,7 +216,7 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
         *///?}
         if (++catalogTicks >= 10) {
             catalogTicks = 0;
-            if (!AssemblyCatalog.same(catalog, AssemblyCatalog.entries(inventory.player.level().getRecipeManager()))) refreshCatalog();
+            if (!menu.catalogCurrent(catalog)) refreshCatalog();
         }
         boolean changed = inventorySnapshot.size() != 36;
         for (int i = 0; !changed && i < 36; i++) changed = !ItemStack.matches(inventorySnapshot.get(i), inventory.getItem(i));
@@ -238,9 +247,10 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
         panel(graphics, leftPos, topPos, imageWidth, imageHeight, 0xffb9b7a9);
         graphics.fill(leftPos + 3, topPos + 3, leftPos + imageWidth - 3, topPos + 28, 0xff7c5b3e);
         graphics.fill(leftPos + 3, topPos + 29, leftPos + imageWidth - 3, topPos + 55, 0xff969d97);
-        panel(graphics, leftPos + 270, topPos + 33, 21, 18, 0xff333c3e);
-        panel(graphics, leftPos + LIST_X, topPos + LIST_Y, LIST_WIDTH, 84, 0xff333c3e);
-        panel(graphics, leftPos + DETAIL_X - 2, topPos + LIST_Y, 152, 66, 0xffd2d0c2);
+        panel(graphics, leftPos + QUANTITY_X, topPos + ACTION_Y, QUANTITY_WIDTH, ACTION_HEIGHT, 0xff969d97);
+        panel(graphics, leftPos + VALUE_X, topPos + ACTION_Y + 1, VALUE_WIDTH, ACTION_HEIGHT - 2, 0xff333c3e);
+        panel(graphics, leftPos + LIST_X, topPos + LIST_Y, LIST_WIDTH, LIST_HEIGHT, 0xff333c3e);
+        panel(graphics, leftPos + DETAIL_X - 2, topPos + LIST_Y, 152, DETAIL_HEIGHT, 0xffd2d0c2);
         for (var slot : menu.slots) {
             int x = leftPos + slot.x, y = topPos + slot.y;
             graphics.fill(x - 1, y - 1, x + 17, y + 17, 0xfff0eee4);
@@ -256,8 +266,8 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
 
     @Override protected void renderLabels(GuiGraphics graphics, int mouseX, int mouseY) {
         graphics.drawString(font, shorten(title, 130), 8, 12, 0xfff2e4c8, false);
-        graphics.drawString(font, shorten(text("quantity"), 49), 201, 38, 0xff303833, false);
-        graphics.drawCenteredString(font, Integer.toString(quantity), 280, 38, 0xfff1efe3);
+        graphics.drawString(font, shorten(text("quantity"), DECREASE_X - QUANTITY_X - 6), QUANTITY_X + 2, ACTION_Y + 4, 0xff303833, false);
+        graphics.drawCenteredString(font, Integer.toString(quantity), VALUE_X + VALUE_WIDTH / 2, ACTION_Y + 4, 0xfff1efe3);
         graphics.drawString(font, Component.translatable("container.inventory"), AssemblyStationMenu.INVENTORY_X, 146, 0xff303833, false);
         if (visible.isEmpty()) {
             graphics.drawWordWrap(font, text("none"), LIST_X + 8, LIST_Y + 25, LIST_WIDTH - 18, 0xffdeded4);
@@ -268,13 +278,14 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
                 graphics.fill(LIST_X + 2, y, LIST_X + LIST_WIDTH - 6, y + ROW_HEIGHT, 0xff6c796e);
                 graphics.fill(LIST_X + 2, y, LIST_X + 4, y + ROW_HEIGHT, 0xffdab76d);
             }
-            graphics.renderItem(row.icon(), LIST_X + 5, y + 2);
-            graphics.drawString(font, shorten(row.name(), LIST_WIDTH - 33), LIST_X + 25, y + 6, 0xfff1efe3, false);
+            graphics.renderItem(row.icon(), LIST_X + 5, y);
+            graphics.drawString(font, shorten(row.name(), LIST_WIDTH - 33), LIST_X + 25, y + 4, 0xfff1efe3, false);
         }
         if (visible.size() > VISIBLE_ROWS) {
-            int thumb = Math.max(10, 80 * VISIBLE_ROWS / visible.size());
-            int y = LIST_Y + 2 + (80 - thumb) * scroll / (visible.size() - VISIBLE_ROWS);
-            graphics.fill(LIST_X + LIST_WIDTH - 5, LIST_Y + 2, LIST_X + LIST_WIDTH - 2, LIST_Y + 82, 0xff1d282a);
+            int viewport = LIST_HEIGHT - 4;
+            int thumb = Math.max(10, viewport * VISIBLE_ROWS / visible.size());
+            int y = LIST_Y + 2 + (viewport - thumb) * scroll / (visible.size() - VISIBLE_ROWS);
+            graphics.fill(LIST_X + LIST_WIDTH - 5, LIST_Y + 2, LIST_X + LIST_WIDTH - 2, LIST_Y + LIST_HEIGHT - 2, 0xff1d282a);
             graphics.fill(LIST_X + LIST_WIDTH - 5, y, LIST_X + LIST_WIDTH - 2, y + thumb, 0xffd4c292);
         }
         Row row = selectedRow();
@@ -284,10 +295,10 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
         graphics.renderItemDecorations(font, row.icon(), DETAIL_X + 2, LIST_Y + 3, totalOutput > 1 ? Integer.toString(totalOutput) : null);
         var lines = font.split(row.name(), 122);
         for (int i = 0; i < Math.min(2, lines.size()); i++) graphics.drawString(font, lines.get(i), DETAIL_X + 24, LIST_Y + 2 + i * 9, 0xff252c2c, false);
-        graphics.drawString(font, shorten(text("counts"), 145), DETAIL_X, 81, 0xff39443c, false);
+        graphics.drawString(font, shorten(text("counts"), COST_WIDTH), DETAIL_X, COST_Y - 10, 0xff39443c, false);
         List<AssemblyIngredient> requirements = row.entry().recipe().requirements();
         for (int i = costScroll * 2; i < Math.min(requirements.size(), (costScroll + VISIBLE_COST_ROWS) * 2); i++) {
-            int x = DETAIL_X + (i % 2) * (CELL_WIDTH + 1), y = COST_Y + (i / 2 - costScroll) * CELL_HEIGHT;
+            int x = DETAIL_X + (i % 2) * (CELL_WIDTH + 1), y = COST_Y + (i / 2 - costScroll) * CELL_STEP;
             graphics.fill(x, y, x + CELL_WIDTH, y + CELL_HEIGHT, 0xffb8bcaf);
             ItemStack icon = ingredientIcon(requirements.get(i)); graphics.renderItem(icon, x, y);
             int available = preview == null ? 0 : preview.available()[i];
@@ -314,14 +325,15 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
         }
         renderTooltip(graphics, mouseX, mouseY);
         int x = mouseX - leftPos, y = mouseY - topPos;
-        if (x >= LIST_X && x < LIST_X + LIST_WIDTH - 6 && y >= LIST_Y + 2 && y < LIST_Y + 82) {
+        if (x >= LIST_X && x < LIST_X + LIST_WIDTH - 6 && y >= LIST_Y + 2 && y < LIST_Y + LIST_HEIGHT - 2) {
             int index = scroll + (y - LIST_Y - 2) / ROW_HEIGHT;
             if (index < visible.size()) graphics.renderTooltip(font, visible.get(index).icon(), mouseX, mouseY);
         }
         Row row = selectedRow();
-        if (row != null && x >= DETAIL_X && x < DETAIL_X + 148 && y >= COST_Y && y < COST_Y + VISIBLE_COST_ROWS * CELL_HEIGHT) {
+        if (row != null && x >= DETAIL_X && x < DETAIL_X + COST_WIDTH && y >= COST_Y && y < COST_Y + COST_HEIGHT
+                && (x - DETAIL_X) % (CELL_WIDTH + 1) < CELL_WIDTH && (y - COST_Y) % CELL_STEP < CELL_HEIGHT) {
             int column = Math.min(1, (x - DETAIL_X) / (CELL_WIDTH + 1));
-            int index = (costScroll + (y - COST_Y) / CELL_HEIGHT) * 2 + column;
+            int index = (costScroll + (y - COST_Y) / CELL_STEP) * 2 + column;
             if (index < row.entry().recipe().requirements().size()) {
                 AssemblyIngredient ingredient = row.entry().recipe().requirements().get(index);
                 graphics.renderComponentTooltip(font, List.of(ingredientIcon(ingredient).getHoverName(), text("materials"),
@@ -331,13 +343,15 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
         if (row != null && x >= DETAIL_X && x < DETAIL_X + 148 && y >= LIST_Y && y < LIST_Y + 22) {
             graphics.renderComponentTooltip(font, List.of(row.name(), Component.translatable("screen.craftdistrict.assembly.output", Math.multiplyExact(row.icon().getCount(), quantity))), mouseX, mouseY);
         }
-        if (x >= 201 && x < 292 && y >= 32 && y < 52) graphics.renderTooltip(font, Component.translatable("screen.craftdistrict.assembly.quantity_hint", quantity, AssemblyCrafting.MAX_OPERATIONS), mouseX, mouseY);
+        if (y >= ACTION_Y && y < ACTION_Y + ACTION_HEIGHT
+                && (x >= QUANTITY_X && x < DECREASE_X || x >= VALUE_X && x < VALUE_X + VALUE_WIDTH))
+            graphics.renderTooltip(font, Component.translatable("screen.craftdistrict.assembly.quantity_hint", quantity, AssemblyCrafting.MAX_OPERATIONS), mouseX, mouseY);
     }
 
     @Override public boolean mouseClicked(double mouseX, double mouseY, int button) {
         stopQuantityRepeat();
         int x = (int) mouseX - leftPos, y = (int) mouseY - topPos;
-        if (button == 0 && x >= LIST_X && x < LIST_X + LIST_WIDTH && y >= LIST_Y + 2 && y < LIST_Y + 82) {
+        if (button == 0 && x >= LIST_X && x < LIST_X + LIST_WIDTH && y >= LIST_Y + 2 && y < LIST_Y + LIST_HEIGHT - 2) {
             search.setFocused(false); setFocused(null);
             if (x >= LIST_X + LIST_WIDTH - 6 && visible.size() > VISIBLE_ROWS) { dragging = true; dragScroll(y); return true; }
             int index = scroll + (y - LIST_Y - 2) / ROW_HEIGHT;
@@ -360,7 +374,8 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
     }
 
     private void dragScroll(double y) {
-        scroll = Math.max(0, Math.min(visible.size() - VISIBLE_ROWS, (int) Math.round((y - LIST_Y - 2) / 80 * (visible.size() - VISIBLE_ROWS))));
+        scroll = Math.max(0, Math.min(visible.size() - VISIBLE_ROWS,
+                (int) Math.round((y - LIST_Y - 2) / (LIST_HEIGHT - 4) * (visible.size() - VISIBLE_ROWS))));
     }
     @Override public boolean mouseDragged(double x, double y, int button, double dx, double dy) {
         if (heldQuantityButton != null && !heldQuantityButton.isMouseOver(x, y)) stopQuantityRepeat();
@@ -384,11 +399,11 @@ public final class AssemblyStationScreen extends AbstractContainerScreen<Assembl
     private boolean scrollAt(double mouseX, double mouseY, double amount) {
         int x = (int) mouseX - leftPos, y = (int) mouseY - topPos;
         int step = amount > 0 ? -1 : amount < 0 ? 1 : 0;
-        if (x >= LIST_X && x < LIST_X + LIST_WIDTH && y >= LIST_Y && y < LIST_Y + 84) {
+        if (x >= LIST_X && x < LIST_X + LIST_WIDTH && y >= LIST_Y && y < LIST_Y + LIST_HEIGHT) {
             scroll = Math.max(0, Math.min(Math.max(0, visible.size() - VISIBLE_ROWS), scroll + step)); return true;
         }
         Row row = selectedRow();
-        if (row != null && x >= DETAIL_X && x < DETAIL_X + 150 && y >= COST_Y && y < COST_Y + 32) {
+        if (row != null && x >= DETAIL_X && x < DETAIL_X + 150 && y >= COST_Y && y < COST_Y + COST_HEIGHT) {
             int maximum = Math.max(0, (row.entry().recipe().requirements().size() + 1) / 2 - VISIBLE_COST_ROWS);
             costScroll = Math.max(0, Math.min(maximum, costScroll + step)); return true;
         }
