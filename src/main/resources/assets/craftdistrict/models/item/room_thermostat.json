@@ -1,0 +1,661 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "hotel": "craftdistrict:block/hotel/hotel_atlas",
+    "fabric": "minecraft:block/white_wool",
+    "silver": "minecraft:block/light_gray_concrete",
+    "bread": "minecraft:block/yellow_terracotta",
+    "brown": "minecraft:block/brown_terracotta",
+    "particle": "craftdistrict:block/particles/particle_metal"
+  },
+  "elements": [
+    {
+      "name": "thermostat_wall_plate",
+      "from": [
+        5.5,
+        5.25,
+        7.34375
+      ],
+      "to": [
+        10.5,
+        10.75,
+        8.84375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.6875,
+            0.65625,
+            5.3125,
+            1.34375
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            4.6875,
+            0.65625,
+            5.3125,
+            1.34375
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            4.90625,
+            0.65625,
+            5.09375,
+            1.34375
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            4.90625,
+            0.65625,
+            5.09375,
+            1.34375
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            4.6875,
+            0.90625,
+            5.3125,
+            1.09375
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            4.6875,
+            0.90625,
+            5.3125,
+            1.09375
+          ]
+        }
+      }
+    },
+    {
+      "name": "room_control_display",
+      "from": [
+        6.25,
+        7.25,
+        7.21875
+      ],
+      "to": [
+        9.75,
+        9.75,
+        7.34375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            8.78125,
+            2.84375,
+            9.21875,
+            3.15625
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            8.78125,
+            2.84375,
+            9.21875,
+            3.15625
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            8.9921875,
+            2.84375,
+            9.0078125,
+            3.15625
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            8.9921875,
+            2.84375,
+            9.0078125,
+            3.15625
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            8.78125,
+            2.9921875,
+            9.21875,
+            3.0078125
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            8.78125,
+            2.9921875,
+            9.21875,
+            3.0078125
+          ]
+        }
+      }
+    },
+    {
+      "name": "temperature_down_button",
+      "from": [
+        6.25,
+        5.75,
+        7.21875
+      ],
+      "to": [
+        7.25,
+        6.5,
+        7.34375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.9375,
+            2.953125,
+            5.0625,
+            3.046875
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            4.9375,
+            2.953125,
+            5.0625,
+            3.046875
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            2.953125,
+            5.0078125,
+            3.046875
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            2.953125,
+            5.0078125,
+            3.046875
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            4.9375,
+            2.9921875,
+            5.0625,
+            3.0078125
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            4.9375,
+            2.9921875,
+            5.0625,
+            3.0078125
+          ]
+        }
+      }
+    },
+    {
+      "name": "temperature_up_button",
+      "from": [
+        8.75,
+        5.75,
+        7.21875
+      ],
+      "to": [
+        9.75,
+        6.5,
+        7.34375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.9375,
+            2.953125,
+            5.0625,
+            3.046875
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            4.9375,
+            2.953125,
+            5.0625,
+            3.046875
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            2.953125,
+            5.0078125,
+            3.046875
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            2.953125,
+            5.0078125,
+            3.046875
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            4.9375,
+            2.9921875,
+            5.0625,
+            3.0078125
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            4.9375,
+            2.9921875,
+            5.0625,
+            3.0078125
+          ]
+        }
+      }
+    },
+    {
+      "name": "temperature_digit_2",
+      "from": [
+        6.75,
+        9.125,
+        7.15625
+      ],
+      "to": [
+        7.5,
+        9.25,
+        7.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.953125,
+            0.9921875,
+            5.046875,
+            1.0078125
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "temperature_digit_2",
+      "from": [
+        6.75,
+        8.375,
+        7.15625
+      ],
+      "to": [
+        7.5,
+        8.5,
+        7.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.953125,
+            0.9921875,
+            5.046875,
+            1.0078125
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "temperature_digit_2",
+      "from": [
+        6.75,
+        7.625,
+        7.15625
+      ],
+      "to": [
+        7.5,
+        7.75,
+        7.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.953125,
+            0.9921875,
+            5.046875,
+            1.0078125
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "temperature_digit_2",
+      "from": [
+        7.375,
+        8.5,
+        7.15625
+      ],
+      "to": [
+        7.5,
+        9.125,
+        7.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            0.9609375,
+            5.0078125,
+            1.0390625
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "temperature_digit_2",
+      "from": [
+        6.75,
+        7.75,
+        7.15625
+      ],
+      "to": [
+        6.875,
+        8.375,
+        7.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            0.9609375,
+            5.0078125,
+            1.0390625
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "temperature_digit_2",
+      "from": [
+        8.0,
+        9.125,
+        7.15625
+      ],
+      "to": [
+        8.75,
+        9.25,
+        7.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.953125,
+            0.9921875,
+            5.046875,
+            1.0078125
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "temperature_digit_2",
+      "from": [
+        8.0,
+        8.375,
+        7.15625
+      ],
+      "to": [
+        8.75,
+        8.5,
+        7.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.953125,
+            0.9921875,
+            5.046875,
+            1.0078125
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "temperature_digit_2",
+      "from": [
+        8.0,
+        7.625,
+        7.15625
+      ],
+      "to": [
+        8.75,
+        7.75,
+        7.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.953125,
+            0.9921875,
+            5.046875,
+            1.0078125
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "temperature_digit_2",
+      "from": [
+        8.625,
+        8.5,
+        7.15625
+      ],
+      "to": [
+        8.75,
+        9.125,
+        7.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            0.9609375,
+            5.0078125,
+            1.0390625
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "temperature_digit_2",
+      "from": [
+        8.0,
+        7.75,
+        7.15625
+      ],
+      "to": [
+        8.125,
+        8.375,
+        7.1875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.9921875,
+            0.9609375,
+            5.0078125,
+            1.0390625
+          ]
+        }
+      },
+      "shade": false
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0.07292,
+        -0.03646,
+        0
+      ],
+      "scale": [
+        1.1,
+        1.1,
+        1.1
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        1
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        -45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        1
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        -90,
+        20
+      ],
+      "translation": [
+        1,
+        2,
+        1
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        90,
+        -20
+      ],
+      "translation": [
+        1,
+        2,
+        1
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    }
+  }
+}

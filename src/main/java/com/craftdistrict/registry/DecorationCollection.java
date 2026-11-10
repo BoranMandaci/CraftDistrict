@@ -405,7 +405,20 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hotel.FOOT_BENCH,
             CraftDistrictBlocks.Hotel.WRITING_DESK,
             CraftDistrictBlocks.Hotel.DESK_CHAIR,
-            CraftDistrictBlocks.Hotel.WARDROBE);
+            CraftDistrictBlocks.Hotel.WARDROBE,
+            CraftDistrictBlocks.Hotel.TV_CONSOLE,
+            CraftDistrictBlocks.Hotel.STANDING_TV,
+            CraftDistrictBlocks.Hotel.WALL_TV,
+            CraftDistrictBlocks.Hotel.MINI_FRIDGE,
+            CraftDistrictBlocks.Hotel.ROOM_SAFE,
+            CraftDistrictBlocks.Hotel.TELEPHONE,
+            CraftDistrictBlocks.Hotel.KETTLE_SET,
+            CraftDistrictBlocks.Hotel.SERVICE_TRAY,
+            CraftDistrictBlocks.Hotel.AC_UNIT,
+            CraftDistrictBlocks.Hotel.THERMOSTAT,
+            CraftDistrictBlocks.Hotel.CURTAINS,
+            CraftDistrictBlocks.Hotel.MIRROR,
+            CraftDistrictBlocks.Hotel.RUG);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

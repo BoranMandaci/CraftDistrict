@@ -55,6 +55,13 @@ import com.craftdistrict.block.HotelRoomSeatBlock;
 import com.craftdistrict.block.HotelFootBenchBlock;
 import com.craftdistrict.block.HotelWritingDeskBlock;
 import com.craftdistrict.block.HotelWardrobeBlock;
+import com.craftdistrict.block.HotelAccessoryBlock;
+import com.craftdistrict.block.HotelAirConditionerBlock;
+import com.craftdistrict.block.HotelMediaBlock;
+import com.craftdistrict.block.HotelRoomApplianceBlock;
+import com.craftdistrict.block.HotelCurtainsBlock;
+import com.craftdistrict.block.HotelFullLengthMirrorBlock;
+import com.craftdistrict.block.HotelRoomRugBlock;
 import com.craftdistrict.block.PharmacyGlassDisplayBlock;
 import com.craftdistrict.block.PharmacyCabinetBlock;
 import com.craftdistrict.block.PillCountingStationBlock;
@@ -254,6 +261,32 @@ public final class CraftDistrictBlocks {
                 () -> new HotelRoomSeatBlock(false, upholsteryProperties()));
         public static final RegistrySupplier<HotelWardrobeBlock> WARDROBE = register("hotel_wardrobe",
                 () -> new HotelWardrobeBlock(woodProperties()));
+        public static final RegistrySupplier<HotelMediaBlock> WALL_TV = register("hotel_wall_tv",
+                () -> new HotelMediaBlock(HotelMediaBlock.Design.WALL_TV, metalProperties()));
+        public static final RegistrySupplier<HotelMediaBlock> STANDING_TV = register("hotel_standing_tv",
+                () -> new HotelMediaBlock(HotelMediaBlock.Design.STANDING_TV, metalProperties()));
+        public static final RegistrySupplier<HotelMediaBlock> TV_CONSOLE = register("hotel_tv_console",
+                () -> new HotelMediaBlock(HotelMediaBlock.Design.CONSOLE, woodProperties()));
+        public static final RegistrySupplier<HotelRoomApplianceBlock> MINI_FRIDGE = register("hotel_mini_fridge",
+                () -> new HotelRoomApplianceBlock(HotelRoomApplianceBlock.Design.MINI_FRIDGE, metalProperties()));
+        public static final RegistrySupplier<HotelRoomApplianceBlock> ROOM_SAFE = register("hotel_room_safe",
+                () -> new HotelRoomApplianceBlock(HotelRoomApplianceBlock.Design.SAFE, metalProperties()));
+        public static final RegistrySupplier<HotelAccessoryBlock> TELEPHONE = register("hotel_telephone",
+                () -> new HotelAccessoryBlock(HotelAccessoryBlock.Design.TELEPHONE, metalProperties().strength(.75F)));
+        public static final RegistrySupplier<HotelAccessoryBlock> KETTLE_SET = register("hotel_kettle_cups_set",
+                () -> new HotelAccessoryBlock(HotelAccessoryBlock.Design.KETTLE_SET, metalProperties()));
+        public static final RegistrySupplier<HotelAccessoryBlock> SERVICE_TRAY = register("room_service_tray",
+                () -> new HotelAccessoryBlock(HotelAccessoryBlock.Design.SERVICE_TRAY, woodProperties()));
+        public static final RegistrySupplier<HotelAirConditionerBlock> AC_UNIT = register("hotel_wall_ac_unit",
+                () -> new HotelAirConditionerBlock(metalProperties()));
+        public static final RegistrySupplier<HotelAccessoryBlock> THERMOSTAT = register("room_thermostat",
+                () -> new HotelAccessoryBlock(HotelAccessoryBlock.Design.THERMOSTAT, metalProperties().strength(.5F)));
+        public static final RegistrySupplier<HotelCurtainsBlock> CURTAINS = register("hotel_curtains",
+                () -> new HotelCurtainsBlock(upholsteryProperties()));
+        public static final RegistrySupplier<HotelFullLengthMirrorBlock> MIRROR = register("full_length_mirror",
+                () -> new HotelFullLengthMirrorBlock(woodProperties()));
+        public static final RegistrySupplier<HotelRoomRugBlock> RUG = register("hotel_room_rug",
+                () -> new HotelRoomRugBlock(upholsteryProperties().strength(.2F)));
 
         private static BlockBehaviour.Properties woodProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD).noOcclusion();
