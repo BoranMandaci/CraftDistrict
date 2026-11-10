@@ -41,16 +41,17 @@ public final class LightColorScreen extends AbstractContainerScreen<LightColorMe
     private static Component effectName(LightEffect effect) { return text("effect." + effect.getSerializedName()); }
 
     @Override protected void init() {
+        if (menu.colorOnly()) tab = Tab.COLOR;
         int longest = 0;
-        for (LightEffect effect : LightEffect.values()) longest = Math.max(longest, font.width(effectName(effect)));
+        if (!menu.colorOnly()) for (LightEffect effect : LightEffect.values()) longest = Math.max(longest, font.width(effectName(effect)));
         imageWidth = Math.min(width - 12, Math.max(264, longest * 2 + 56));
         imageHeight = Math.min(246, height - 12);
         super.init();
         choices.clear(); powerOn = powerOff = null;
-        int count = menu.allowsColor() ? 3 : 2;
+        int count = menu.colorOnly() ? 1 : menu.allowsColor() ? 3 : 2;
         int tabWidth = (imageWidth - 24) / count;
         for (int i = 0; i < count; i++) {
-            Tab target = Tab.values()[i];
+            Tab target = menu.colorOnly() ? Tab.COLOR : Tab.values()[i];
             choices.add(addRenderableWidget(new PanelButton(leftPos + 12 + i * tabWidth, topPos + 45,
                     tabWidth - 4, 22, text("tab." + target.name().toLowerCase(java.util.Locale.ROOT)),
                     () -> tab == target, () -> { tab = target; rebuildWidgets(); }, false)));
@@ -123,13 +124,13 @@ public final class LightColorScreen extends AbstractContainerScreen<LightColorMe
             case MISSING_DYE -> menu.requiredDyes() > 1
                     ? text("missing_dyes", menu.requiredDyes(), colorNames[Math.max(0, menu.requestedColor())])
                     : paletteText("missing_dye", colorNames[Math.max(0, menu.requestedColor())]);
-            case STALE -> paletteText("stale");
+            case STALE -> menu.colorOnly() ? Component.translatable("screen.craftdistrict.bedding_color.stale") : paletteText("stale");
             case READY -> switch (tab) {
                 case MODE -> text("hint.mode");
                 case EFFECT -> text("hint.effect");
                 case COLOR -> menu.requiredDyes() > 1 && minecraft != null && minecraft.player != null && !minecraft.player.getAbilities().instabuild
-                        ? text("hint.group", menu.requiredDyes()) : paletteText(minecraft != null && minecraft.player != null && minecraft.player.getAbilities().instabuild
-                        ? "hint_creative" : "hint");
+                        ? text("hint.group", menu.requiredDyes()) : minecraft != null && minecraft.player != null && minecraft.player.getAbilities().instabuild
+                        ? menu.colorOnly() ? Component.translatable("screen.craftdistrict.bedding_color.hint_creative") : paletteText("hint_creative") : paletteText("hint");
             };
         };
         if (tab == Tab.MODE && menu.selectedMode() != LightMode.MANUAL) {

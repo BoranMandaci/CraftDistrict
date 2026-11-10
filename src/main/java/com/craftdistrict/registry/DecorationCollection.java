@@ -394,7 +394,18 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hotel.BROCHURE_STAND,
             CraftDistrictBlocks.Hotel.LUGGAGE_CART,
             CraftDistrictBlocks.Hotel.LUGGAGE_CART_LOADED,
-            CraftDistrictBlocks.Hotel.LUGGAGE_STACK);
+            CraftDistrictBlocks.Hotel.LUGGAGE_STACK,
+            CraftDistrictBlocks.Hotel.SINGLE_BED,
+            CraftDistrictBlocks.Hotel.DOUBLE_BED,
+            CraftDistrictBlocks.Hotel.KING_BED,
+            CraftDistrictBlocks.Hotel.HEADBOARD,
+            CraftDistrictBlocks.Hotel.BEDSIDE_CABINET,
+            CraftDistrictBlocks.Hotel.BEDSIDE_LAMP,
+            CraftDistrictBlocks.Hotel.READING_LIGHT,
+            CraftDistrictBlocks.Hotel.FOOT_BENCH,
+            CraftDistrictBlocks.Hotel.WRITING_DESK,
+            CraftDistrictBlocks.Hotel.DESK_CHAIR,
+            CraftDistrictBlocks.Hotel.WARDROBE);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

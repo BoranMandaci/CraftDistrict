@@ -61,6 +61,12 @@ public final class LightDyeData extends SavedData {
         boolean changed = display(pos, color);
         setDirty(); return changed;
     }
+    /** Free Creative fabric colors never create a Survival refund credit. */
+    public void putUnpaid(BlockPos pos, int color) {
+        put(pos, color);
+        credits.put(pos.asLong(), (byte)-1);
+        setDirty();
+    }
     private boolean display(BlockPos pos, int color) {
         if (color < -1 || color > 15) throw new IllegalArgumentException("Invalid light dye");
         if (color(pos) == color) return false;

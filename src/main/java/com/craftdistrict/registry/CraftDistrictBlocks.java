@@ -47,6 +47,14 @@ import com.craftdistrict.block.HotelLobbySofaBlock;
 import com.craftdistrict.block.HotelLobbyArmchairBlock;
 import com.craftdistrict.block.HotelCoffeeTableBlock;
 import com.craftdistrict.block.HotelLuggageCartBlock;
+import com.craftdistrict.block.HotelGuestBedBlock;
+import com.craftdistrict.block.HotelHeadboardBlock;
+import com.craftdistrict.block.HotelBedsideCabinetBlock;
+import com.craftdistrict.block.HotelRoomLightBlock;
+import com.craftdistrict.block.HotelRoomSeatBlock;
+import com.craftdistrict.block.HotelFootBenchBlock;
+import com.craftdistrict.block.HotelWritingDeskBlock;
+import com.craftdistrict.block.HotelWardrobeBlock;
 import com.craftdistrict.block.PharmacyGlassDisplayBlock;
 import com.craftdistrict.block.PharmacyCabinetBlock;
 import com.craftdistrict.block.PillCountingStationBlock;
@@ -224,6 +232,28 @@ public final class CraftDistrictBlocks {
                 () -> new HotelDecorationBlock(HotelDecorationBlock.Design.LOGO_SIGN, metalProperties()));
         public static final RegistrySupplier<HotelTallBlock> BROCHURE_STAND = register("brochure_stand",
                 () -> new HotelTallBlock(HotelTallBlock.Design.BROCHURE_STAND, woodProperties()));
+        public static final RegistrySupplier<HotelGuestBedBlock> SINGLE_BED = register("hotel_single_bed",
+                () -> new HotelGuestBedBlock(1, woodProperties()));
+        public static final RegistrySupplier<HotelGuestBedBlock> DOUBLE_BED = register("hotel_double_bed",
+                () -> new HotelGuestBedBlock(2, woodProperties()));
+        public static final RegistrySupplier<HotelGuestBedBlock> KING_BED = register("hotel_king_bed",
+                () -> new HotelGuestBedBlock(3, upholsteryProperties()));
+        public static final RegistrySupplier<HotelHeadboardBlock> HEADBOARD = register("upholstered_headboard",
+                () -> new HotelHeadboardBlock(upholsteryProperties()));
+        public static final RegistrySupplier<HotelBedsideCabinetBlock> BEDSIDE_CABINET = register("hotel_bedside_cabinet",
+                () -> new HotelBedsideCabinetBlock(woodProperties()));
+        public static final RegistrySupplier<HotelRoomLightBlock> BEDSIDE_LAMP = register("hotel_bedside_lamp",
+                () -> new HotelRoomLightBlock(false, metalProperties().lightLevel(state -> com.craftdistrict.lighting.LightControls.emission(state, 14))));
+        public static final RegistrySupplier<HotelRoomLightBlock> READING_LIGHT = register("hotel_wall_reading_light",
+                () -> new HotelRoomLightBlock(true, metalProperties().lightLevel(state -> com.craftdistrict.lighting.LightControls.emission(state, 14))));
+        public static final RegistrySupplier<HotelFootBenchBlock> FOOT_BENCH = register("upholstered_foot_bench",
+                () -> new HotelFootBenchBlock(upholsteryProperties()));
+        public static final RegistrySupplier<HotelWritingDeskBlock> WRITING_DESK = register("hotel_writing_desk",
+                () -> new HotelWritingDeskBlock(woodProperties()));
+        public static final RegistrySupplier<HotelRoomSeatBlock> DESK_CHAIR = register("hotel_desk_chair",
+                () -> new HotelRoomSeatBlock(false, upholsteryProperties()));
+        public static final RegistrySupplier<HotelWardrobeBlock> WARDROBE = register("hotel_wardrobe",
+                () -> new HotelWardrobeBlock(woodProperties()));
 
         private static BlockBehaviour.Properties woodProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD).noOcclusion();

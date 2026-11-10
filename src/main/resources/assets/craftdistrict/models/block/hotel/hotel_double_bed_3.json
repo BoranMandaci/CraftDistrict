@@ -1,0 +1,937 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "hotel": "craftdistrict:block/hotel/hotel_atlas",
+    "fabric": "minecraft:block/white_wool",
+    "detail": "minecraft:block/light_gray_wool",
+    "particle": "craftdistrict:block/particles/particle_seating_beige"
+  },
+  "elements": [
+    {
+      "name": "recessed_plinth",
+      "from": [
+        0,
+        0.0,
+        0
+      ],
+      "to": [
+        15.5,
+        1.0,
+        15.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            3.0,
+            0.9375,
+            3.875,
+            1.0625
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.9375,
+            3.0,
+            1.0625
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            3.0,
+            1.0,
+            3.875,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            3.0,
+            0.125,
+            3.875,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "upholstered_bed_base",
+      "from": [
+        0,
+        1.0,
+        0
+      ],
+      "to": [
+        16.0,
+        3.75,
+        16.0
+      ],
+      "faces": {
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            3.0,
+            0.828125,
+            3.875,
+            1.171875
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.828125,
+            3.0,
+            1.171875
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            3.0,
+            1.0,
+            3.875,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            3.0,
+            0.125,
+            3.875,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "brass_base_reveal",
+      "from": [
+        0,
+        3.75,
+        0
+      ],
+      "to": [
+        15.875,
+        4.0,
+        15.875
+      ],
+      "faces": {
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            7.0,
+            0.984375,
+            7.875,
+            1.015625
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            6.125,
+            0.984375,
+            7.0,
+            1.015625
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            7.0,
+            1.0,
+            7.875,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            7.0,
+            0.125,
+            7.875,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "deep_mattress",
+      "from": [
+        0,
+        4.0,
+        0
+      ],
+      "to": [
+        15.0,
+        9.5,
+        14.75
+      ],
+      "faces": {
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            13.0,
+            0.65625,
+            13.875,
+            1.34375
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            12.125,
+            0.65625,
+            13.007478632478632,
+            1.34375
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            13.0,
+            0.9925213675213675,
+            13.875,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            13.0,
+            0.125,
+            13.875,
+            1.0074786324786325
+          ]
+        }
+      }
+    },
+    {
+      "name": "mattress_right_roll",
+      "from": [
+        15.0,
+        4.25,
+        0
+      ],
+      "to": [
+        15.5,
+        9.25,
+        14.25
+      ],
+      "faces": {
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            12.96875,
+            0.6875,
+            13.03125,
+            1.3125
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            12.992256637168142,
+            0.6875,
+            13.875,
+            1.3125
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            12.125,
+            0.6875,
+            13.007743362831858,
+            1.3125
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            12.96875,
+            0.9922566371681416,
+            13.03125,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            12.96875,
+            0.125,
+            13.03125,
+            1.0077433628318584
+          ]
+        }
+      }
+    },
+    {
+      "name": "mattress_foot_roll",
+      "from": [
+        0,
+        4.25,
+        14.75
+      ],
+      "to": [
+        14.5,
+        9.25,
+        15.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            12.125,
+            0.6875,
+            13.0,
+            1.3125
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            13.0,
+            0.6875,
+            13.875,
+            1.3125
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            12.984375,
+            0.6875,
+            13.015625,
+            1.3125
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            13.0,
+            0.984375,
+            13.875,
+            1.015625
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            13.0,
+            0.984375,
+            13.875,
+            1.015625
+          ]
+        }
+      }
+    },
+    {
+      "name": "low_foot_frame",
+      "from": [
+        0,
+        4.0,
+        15.25
+      ],
+      "to": [
+        16.0,
+        7.0,
+        16.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.8125,
+            3.0,
+            1.1875
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            3.0,
+            0.8125,
+            3.875,
+            1.1875
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            2.953125,
+            0.8125,
+            3.046875,
+            1.1875
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            3.0,
+            0.953125,
+            3.875,
+            1.046875
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            3.0,
+            0.953125,
+            3.875,
+            1.046875
+          ]
+        }
+      }
+    },
+    {
+      "name": "fitted_cotton_sheet",
+      "from": [
+        0,
+        9.5,
+        0
+      ],
+      "to": [
+        15.25,
+        9.75,
+        14.75
+      ],
+      "faces": {
+        "south": {
+          "texture": "#fabric",
+          "uv": [
+            8.0,
+            0,
+            16.0,
+            0.25
+          ]
+        },
+        "east": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            8.068376068376068,
+            0.25
+          ]
+        },
+        "up": {
+          "texture": "#fabric",
+          "uv": [
+            8.0,
+            7.931623931623932,
+            16.0,
+            16.0
+          ]
+        },
+        "down": {
+          "texture": "#fabric",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            8.068376068376068
+          ]
+        }
+      }
+    },
+    {
+      "name": "lofted_duvet",
+      "from": [
+        0.0,
+        9.75,
+        0
+      ],
+      "to": [
+        15.25,
+        11.0,
+        14.75
+      ],
+      "faces": {
+        "south": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            15.25,
+            1.25
+          ],
+          "tintindex": 31841224
+        },
+        "west": {
+          "texture": "#fabric",
+          "uv": [
+            2.704225352112676,
+            0,
+            16.0,
+            1.25
+          ],
+          "tintindex": 31841224
+        },
+        "east": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            13.295774647887324,
+            1.25
+          ],
+          "tintindex": 31841224
+        },
+        "up": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            2.704225352112676,
+            15.25,
+            16.0
+          ],
+          "tintindex": 31841224
+        },
+        "down": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0.0,
+            15.25,
+            13.295774647887324
+          ],
+          "tintindex": 31841224
+        }
+      }
+    },
+    {
+      "name": "duvet_soft_crown",
+      "from": [
+        0.25,
+        11.0,
+        0.0
+      ],
+      "to": [
+        15.0,
+        11.25,
+        14.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            14.75,
+            0.25
+          ],
+          "tintindex": 31841224
+        },
+        "south": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            14.75,
+            0.25
+          ],
+          "tintindex": 31841224
+        },
+        "west": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            15.0,
+            0.25
+          ],
+          "tintindex": 31841224
+        },
+        "east": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            15.0,
+            0.25
+          ],
+          "tintindex": 31841224
+        },
+        "up": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0.0,
+            14.75,
+            15.0
+          ],
+          "tintindex": 31841224
+        },
+        "down": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0.0,
+            14.75,
+            15.0
+          ],
+          "tintindex": 31841224
+        }
+      }
+    },
+    {
+      "name": "quilted_bedding_seam",
+      "from": [
+        0.25,
+        11.25,
+        3.0
+      ],
+      "to": [
+        15.0,
+        11.3125,
+        3.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0,
+            14.75,
+            0.0625
+          ],
+          "tintindex": 31841224
+        },
+        "south": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0,
+            14.75,
+            0.0625
+          ],
+          "tintindex": 31841224
+        },
+        "west": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0,
+            0.125,
+            0.0625
+          ],
+          "tintindex": 31841224
+        },
+        "east": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0,
+            0.125,
+            0.0625
+          ],
+          "tintindex": 31841224
+        },
+        "up": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0.0,
+            14.75,
+            0.125
+          ],
+          "tintindex": 31841224
+        },
+        "down": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0.0,
+            14.75,
+            0.125
+          ],
+          "tintindex": 31841224
+        }
+      }
+    },
+    {
+      "name": "quilted_bedding_seam",
+      "from": [
+        0.25,
+        11.25,
+        7.0
+      ],
+      "to": [
+        15.0,
+        11.3125,
+        7.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0,
+            14.75,
+            0.0625
+          ],
+          "tintindex": 31841224
+        },
+        "south": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0,
+            14.75,
+            0.0625
+          ],
+          "tintindex": 31841224
+        },
+        "west": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0,
+            0.125,
+            0.0625
+          ],
+          "tintindex": 31841224
+        },
+        "east": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0,
+            0.125,
+            0.0625
+          ],
+          "tintindex": 31841224
+        },
+        "up": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0.0,
+            14.75,
+            0.125
+          ],
+          "tintindex": 31841224
+        },
+        "down": {
+          "texture": "#detail",
+          "uv": [
+            0.0,
+            0.0,
+            14.75,
+            0.125
+          ],
+          "tintindex": 31841224
+        }
+      }
+    },
+    {
+      "name": "right_duvet_drop",
+      "from": [
+        15.25,
+        7.0,
+        0.0
+      ],
+      "to": [
+        15.75,
+        11.0,
+        14.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            0.5,
+            4
+          ],
+          "tintindex": 31841224
+        },
+        "south": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            0.5,
+            4
+          ],
+          "tintindex": 31841224
+        },
+        "west": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            15.5,
+            4
+          ],
+          "tintindex": 31841224
+        },
+        "east": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            15.5,
+            4
+          ],
+          "tintindex": 31841224
+        },
+        "up": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0.0,
+            0.5,
+            15.5
+          ],
+          "tintindex": 31841224
+        },
+        "down": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0.0,
+            0.5,
+            15.5
+          ],
+          "tintindex": 31841224
+        }
+      }
+    },
+    {
+      "name": "foot_duvet_drop",
+      "from": [
+        0,
+        7.5,
+        14.75
+      ],
+      "to": [
+        15.0,
+        11.0,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            8.0,
+            3.5
+          ],
+          "tintindex": 31841224
+        },
+        "south": {
+          "texture": "#fabric",
+          "uv": [
+            8.0,
+            0,
+            16.0,
+            3.5
+          ],
+          "tintindex": 31841224
+        },
+        "east": {
+          "texture": "#fabric",
+          "uv": [
+            0.0,
+            0,
+            0.375,
+            3.5
+          ],
+          "tintindex": 31841224
+        },
+        "up": {
+          "texture": "#fabric",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            0.375
+          ],
+          "tintindex": 31841224
+        },
+        "down": {
+          "texture": "#fabric",
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            0.375
+          ],
+          "tintindex": 31841224
+        }
+      }
+    },
+    {
+      "name": "tailored_foot_runner",
+      "from": [
+        0,
+        11.25,
+        8.5
+      ],
+      "to": [
+        15.25,
+        11.5,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            8.125,
+            0.984375,
+            9.0,
+            1.015625
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            9.0,
+            0.984375,
+            9.875,
+            1.015625
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            8.75,
+            0.984375,
+            9.25,
+            1.015625
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            9.0,
+            0.75,
+            9.875,
+            1.25
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            9.0,
+            0.75,
+            9.875,
+            1.25
+          ]
+        }
+      }
+    }
+  ]
+}

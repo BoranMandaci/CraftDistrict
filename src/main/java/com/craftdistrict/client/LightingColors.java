@@ -44,7 +44,9 @@ public final class LightingColors {
     public static void init() {
         Block[] lights = Stream.concat(DecorationCollection.LIGHTING.items().stream()
                 .map(item -> ((BlockItem)item).getBlock()),
-                Stream.of(CraftDistrictBlocks.Hospital.SURGICAL_LIGHT.get())).toArray(Block[]::new);
+                Stream.of(CraftDistrictBlocks.Hospital.SURGICAL_LIGHT.get(), CraftDistrictBlocks.Hotel.BEDSIDE_LAMP.get(),
+                        CraftDistrictBlocks.Hotel.READING_LIGHT.get(), CraftDistrictBlocks.Hotel.SINGLE_BED.get(),
+                        CraftDistrictBlocks.Hotel.DOUBLE_BED.get())).toArray(Block[]::new);
         ColorHandlerRegistry.registerBlockColors((state, level, pos, tint) -> color(state, tint,
                 level == null || pos == null || tint < 0 || (tint & 0x1000000) == 0
                         || (tint & 0x4000000) != 0 ? -1 : dye(pos)), lights);
