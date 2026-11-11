@@ -428,7 +428,11 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hotel.SHOWER_BASE,
             CraftDistrictBlocks.Hotel.SHOWER_BASE_PLAIN,
             CraftDistrictBlocks.Hotel.BATHTUB,
+            CraftDistrictBlocks.Hotel.JACUZZI,
             CraftDistrictBlocks.Hotel.TOILET,
+            CraftDistrictBlocks.Hotel.URINAL,
+            CraftDistrictBlocks.Hotel.URINAL_DIVIDER,
+            CraftDistrictBlocks.Hotel.HAND_DRYER,
             CraftDistrictBlocks.Hotel.PAPER_HOLDER,
             CraftDistrictBlocks.Hotel.TOWEL_RAIL,
             CraftDistrictBlocks.Hotel.TOWEL_STACK,
@@ -448,7 +452,9 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hotel.LINEN_TROLLEY,
             CraftDistrictBlocks.Hotel.CLEANING_CABINET,
             CraftDistrictBlocks.Hotel.WASHING_MACHINE,
-            CraftDistrictBlocks.Hotel.DRYER);
+            CraftDistrictBlocks.Hotel.DRYER,
+            CraftDistrictBlocks.Hotel.LAUNDRY_BASKET,
+            CraftDistrictBlocks.Hotel.IRONING_BOARD);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

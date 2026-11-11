@@ -76,7 +76,8 @@ public final class CraftDistrictClient {
                     CraftDistrictBlocks.Police.ONE_WAY_GLASS_BLOCK.get(), CraftDistrictBlocks.Hospital.IV_STAND.get(),
                     CraftDistrictBlocks.Hospital.MAMMOGRAPHY_MACHINE.get(), CraftDistrictBlocks.Hospital.INCUBATOR.get(),
                     CraftDistrictBlocks.Hotel.SHOWER_ENCLOSURE.get(), CraftDistrictBlocks.Hotel.FIXED_SHOWER_GLASS.get(),
-                    CraftDistrictBlocks.Hotel.WASHING_MACHINE.get(), CraftDistrictBlocks.Hotel.DRYER.get());
+                    CraftDistrictBlocks.Hotel.WASHING_MACHINE.get(), CraftDistrictBlocks.Hotel.DRYER.get(),
+                    CraftDistrictBlocks.Hotel.JACUZZI.get());
         });
     }
 }

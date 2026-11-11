@@ -80,6 +80,9 @@ import com.craftdistrict.block.HotelCorridorWallBlock;
 import com.craftdistrict.block.HotelElevatorDoorsBlock;
 import com.craftdistrict.block.HotelServiceBlock;
 import com.craftdistrict.block.HotelCleaningCabinetBlock;
+import com.craftdistrict.block.IroningBoardBlock;
+import com.craftdistrict.block.HotelJacuzziBlock;
+import com.craftdistrict.block.HotelRestroomBlock;
 import com.craftdistrict.block.RoomNumberPlaqueBlock;
 import com.craftdistrict.block.PharmacyGlassDisplayBlock;
 import com.craftdistrict.block.PharmacyCabinetBlock;
@@ -372,6 +375,18 @@ public final class CraftDistrictBlocks {
                 () -> new HotelServiceBlock(HotelServiceBlock.Design.WASHING_MACHINE, metalProperties()));
         public static final RegistrySupplier<HotelServiceBlock> DRYER = register("dryer",
                 () -> new HotelServiceBlock(HotelServiceBlock.Design.DRYER, metalProperties()));
+        public static final RegistrySupplier<IroningBoardBlock> IRONING_BOARD = register("ironing_board",
+                () -> new IroningBoardBlock(metalProperties()));
+        public static final RegistrySupplier<HotelRestroomBlock> LAUNDRY_BASKET = register("laundry_basket",
+                () -> new HotelRestroomBlock(HotelRestroomBlock.Design.LAUNDRY_BASKET, woodProperties()));
+        public static final RegistrySupplier<HotelJacuzziBlock> JACUZZI = register("jacuzzi",
+                () -> new HotelJacuzziBlock(metalProperties().sound(SoundType.STONE)));
+        public static final RegistrySupplier<HotelRestroomBlock> URINAL = register("urinal",
+                () -> new HotelRestroomBlock(HotelRestroomBlock.Design.URINAL, metalProperties().sound(SoundType.STONE)));
+        public static final RegistrySupplier<HotelRestroomBlock> URINAL_DIVIDER = register("urinal_divider",
+                () -> new HotelRestroomBlock(HotelRestroomBlock.Design.URINAL_DIVIDER, metalProperties()));
+        public static final RegistrySupplier<HotelRestroomBlock> HAND_DRYER = register("hand_dryer",
+                () -> new HotelRestroomBlock(HotelRestroomBlock.Design.HAND_DRYER, metalProperties()));
 
         private static BlockBehaviour.Properties woodProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD).noOcclusion();

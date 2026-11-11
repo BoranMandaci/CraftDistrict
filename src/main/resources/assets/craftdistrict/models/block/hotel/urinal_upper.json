@@ -1,0 +1,1352 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "hotel": "craftdistrict:block/hotel/hotel_atlas",
+    "ceramic": "minecraft:block/white_concrete",
+    "stone": "minecraft:block/quartz_block_top",
+    "chrome": "minecraft:block/iron_block",
+    "silver": "minecraft:block/light_gray_concrete",
+    "fabric": "minecraft:block/white_wool",
+    "glass": "minecraft:block/light_blue_stained_glass",
+    "restroom": "craftdistrict:block/hotel/hotel_restroom_atlas",
+    "particle": "minecraft:block/quartz_block_top"
+  },
+  "elements": [
+    {
+      "name": "concealed_wall_hanger",
+      "from": [
+        5.5,
+        0,
+        15.5
+      ],
+      "to": [
+        10.5,
+        6,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#silver",
+          "uv": [
+            5.5,
+            2.0,
+            10.5,
+            8.0
+          ]
+        },
+        "south": {
+          "texture": "#silver",
+          "uv": [
+            5.5,
+            2.0,
+            10.5,
+            8.0
+          ]
+        },
+        "west": {
+          "texture": "#silver",
+          "uv": [
+            7.75,
+            2.0,
+            8.25,
+            8.0
+          ]
+        },
+        "east": {
+          "texture": "#silver",
+          "uv": [
+            7.75,
+            2.0,
+            8.25,
+            8.0
+          ]
+        },
+        "up": {
+          "texture": "#silver",
+          "uv": [
+            5.5,
+            7.75,
+            10.5,
+            8.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "back_shell",
+      "from": [
+        4.5,
+        0,
+        15.125
+      ],
+      "to": [
+        11.5,
+        5.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.895
+          ]
+        },
+        "south": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.895
+          ]
+        },
+        "west": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.895
+          ]
+        },
+        "east": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.895
+          ]
+        },
+        "up": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "rising_wing_left",
+      "from": [
+        4,
+        0,
+        10.5
+      ],
+      "to": [
+        5.25,
+        1,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.5138888888888888
+          ]
+        },
+        "south": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.5138888888888888
+          ]
+        },
+        "west": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.5138888888888888
+          ]
+        },
+        "east": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.5138888888888888
+          ]
+        },
+        "up": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "rising_wing_right",
+      "from": [
+        10.75,
+        0,
+        10.5
+      ],
+      "to": [
+        12,
+        1,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.5138888888888888
+          ]
+        },
+        "south": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.5138888888888888
+          ]
+        },
+        "west": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.5138888888888888
+          ]
+        },
+        "east": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            0.5138888888888888
+          ]
+        },
+        "up": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_wing_left",
+      "from": [
+        4.25,
+        1,
+        12.5
+      ],
+      "to": [
+        5.25,
+        5.5,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "south": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "west": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "east": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "up": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_wing_right",
+      "from": [
+        10.75,
+        1,
+        12.5
+      ],
+      "to": [
+        11.75,
+        5.5,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "south": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "west": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "east": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "up": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "glazed_inner_back",
+      "from": [
+        5.25,
+        0,
+        14.875
+      ],
+      "to": [
+        10.75,
+        5.5,
+        15.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#restroom",
+          "uv": [
+            12.125,
+            0.125,
+            13.875,
+            0.895
+          ]
+        },
+        "south": {
+          "texture": "#restroom",
+          "uv": [
+            12.125,
+            0.125,
+            13.875,
+            0.895
+          ]
+        },
+        "west": {
+          "texture": "#restroom",
+          "uv": [
+            12.125,
+            0.125,
+            13.875,
+            0.895
+          ]
+        },
+        "east": {
+          "texture": "#restroom",
+          "uv": [
+            12.125,
+            0.125,
+            13.875,
+            0.895
+          ]
+        },
+        "up": {
+          "texture": "#restroom",
+          "uv": [
+            12.125,
+            0.125,
+            13.875,
+            1.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_bowl_header",
+      "from": [
+        4.75,
+        5.5,
+        13.5
+      ],
+      "to": [
+        11.25,
+        6.75,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "south": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "west": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "east": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "up": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_bowl_crown",
+      "from": [
+        5.5,
+        6.75,
+        14
+      ],
+      "to": [
+        10.5,
+        7.75,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "south": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "west": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "east": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "up": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        },
+        "down": {
+          "texture": "#restroom",
+          "uv": [
+            6.125,
+            0.125,
+            7.875,
+            1.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "flush_spreader",
+      "from": [
+        7.375,
+        4.875,
+        14.5
+      ],
+      "to": [
+        8.625,
+        5.5,
+        14.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "flush_spreader_opening",
+      "from": [
+        7.6875,
+        4.875,
+        14.4375
+      ],
+      "to": [
+        8.3125,
+        5.125,
+        14.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            4.9609375,
+            2.984375,
+            5.0390625,
+            3.015625
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            4.9609375,
+            2.984375,
+            5.0390625,
+            3.015625
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            4.99609375,
+            2.984375,
+            5.00390625,
+            3.015625
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            4.99609375,
+            2.984375,
+            5.00390625,
+            3.015625
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            4.9609375,
+            2.99609375,
+            5.0390625,
+            3.00390625
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            4.9609375,
+            2.99609375,
+            5.0390625,
+            3.00390625
+          ]
+        }
+      }
+    },
+    {
+      "name": "flush_pipe_boot",
+      "from": [
+        7,
+        7.75,
+        13.75
+      ],
+      "to": [
+        9,
+        8.25,
+        15.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "flush_downpipe",
+      "from": [
+        7.625,
+        8.25,
+        14.125
+      ],
+      "to": [
+        8.375,
+        11,
+        14.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "flushometer_lower_collar",
+      "from": [
+        7.25,
+        11,
+        13.75
+      ],
+      "to": [
+        8.75,
+        11.375,
+        15.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.8125,
+            8.75,
+            8.1875
+          ]
+        },
+        "south": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.8125,
+            8.75,
+            8.1875
+          ]
+        },
+        "west": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.8125,
+            8.75,
+            8.1875
+          ]
+        },
+        "east": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.8125,
+            8.75,
+            8.1875
+          ]
+        },
+        "up": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.25,
+            8.75,
+            8.75
+          ]
+        },
+        "down": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.25,
+            8.75,
+            8.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "flushometer_body",
+      "from": [
+        7,
+        11.375,
+        13.5
+      ],
+      "to": [
+        9,
+        13.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "flushometer_top",
+      "from": [
+        7.25,
+        13.5,
+        13.75
+      ],
+      "to": [
+        8.75,
+        14,
+        15.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.75,
+            8.75,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.75,
+            8.75,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.75,
+            8.75,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.75,
+            8.75,
+            8.25
+          ]
+        },
+        "up": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.25,
+            8.75,
+            8.75
+          ]
+        },
+        "down": {
+          "texture": "#silver",
+          "uv": [
+            7.25,
+            7.25,
+            8.75,
+            8.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "wall_feed_pipe",
+      "from": [
+        7.625,
+        12.25,
+        15.5
+      ],
+      "to": [
+        8.375,
+        13,
+        15.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "wall_feed_escutcheon",
+      "from": [
+        6.75,
+        11.75,
+        15.875
+      ],
+      "to": [
+        9.25,
+        13.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#silver",
+          "uv": [
+            6.75,
+            7.125,
+            9.25,
+            8.875
+          ]
+        },
+        "south": {
+          "texture": "#silver",
+          "uv": [
+            6.75,
+            7.125,
+            9.25,
+            8.875
+          ]
+        },
+        "west": {
+          "texture": "#silver",
+          "uv": [
+            7.9375,
+            7.125,
+            8.0625,
+            8.875
+          ]
+        },
+        "east": {
+          "texture": "#silver",
+          "uv": [
+            7.9375,
+            7.125,
+            8.0625,
+            8.875
+          ]
+        },
+        "up": {
+          "texture": "#silver",
+          "uv": [
+            6.75,
+            7.9375,
+            9.25,
+            8.0625
+          ]
+        },
+        "down": {
+          "texture": "#silver",
+          "uv": [
+            6.75,
+            7.9375,
+            9.25,
+            8.0625
+          ]
+        }
+      }
+    },
+    {
+      "name": "flush_lever",
+      "from": [
+        5.5,
+        11.5,
+        14.125
+      ],
+      "to": [
+        7,
+        12.25,
+        14.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "south": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "west": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "east": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5.0,
+            11,
+            11.0
+          ]
+        },
+        "up": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#chrome",
+          "uv": [
+            5,
+            5,
+            11,
+            11
+          ]
+        }
+      }
+    },
+    {
+      "name": "flush_lever_tip",
+      "from": [
+        5.125,
+        11.375,
+        14
+      ],
+      "to": [
+        5.5,
+        12.375,
+        14.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#silver",
+          "uv": [
+            7.8125,
+            7.5,
+            8.1875,
+            8.5
+          ]
+        },
+        "south": {
+          "texture": "#silver",
+          "uv": [
+            7.8125,
+            7.5,
+            8.1875,
+            8.5
+          ]
+        },
+        "west": {
+          "texture": "#silver",
+          "uv": [
+            7.625,
+            7.5,
+            8.375,
+            8.5
+          ]
+        },
+        "east": {
+          "texture": "#silver",
+          "uv": [
+            7.625,
+            7.5,
+            8.375,
+            8.5
+          ]
+        },
+        "up": {
+          "texture": "#silver",
+          "uv": [
+            7.8125,
+            7.625,
+            8.1875,
+            8.375
+          ]
+        },
+        "down": {
+          "texture": "#silver",
+          "uv": [
+            7.8125,
+            7.625,
+            8.1875,
+            8.375
+          ]
+        }
+      }
+    }
+  ]
+}
