@@ -83,6 +83,10 @@ import com.craftdistrict.block.HotelCleaningCabinetBlock;
 import com.craftdistrict.block.IroningBoardBlock;
 import com.craftdistrict.block.HotelJacuzziBlock;
 import com.craftdistrict.block.HotelRestroomBlock;
+import com.craftdistrict.block.RestroomSpaWideBlock;
+import com.craftdistrict.block.RestroomSpaModuleBlock;
+import com.craftdistrict.block.RestroomSpaDecorationBlock;
+import com.craftdistrict.block.SaunaBenchBlock;
 import com.craftdistrict.block.RoomNumberPlaqueBlock;
 import com.craftdistrict.block.PharmacyGlassDisplayBlock;
 import com.craftdistrict.block.PharmacyCabinetBlock;
@@ -387,6 +391,30 @@ public final class CraftDistrictBlocks {
                 () -> new HotelRestroomBlock(HotelRestroomBlock.Design.URINAL_DIVIDER, metalProperties()));
         public static final RegistrySupplier<HotelRestroomBlock> HAND_DRYER = register("hand_dryer",
                 () -> new HotelRestroomBlock(HotelRestroomBlock.Design.HAND_DRYER, metalProperties()));
+        public static final RegistrySupplier<RestroomSpaModuleBlock> PUBLIC_SINK_COUNTER = register("public_sink_counter",
+                () -> new RestroomSpaModuleBlock(RestroomSpaModuleBlock.Design.SINK_COUNTER, metalProperties().sound(SoundType.STONE)));
+        public static final RegistrySupplier<RestroomSpaModuleBlock> RESTROOM_MIRROR = register("restroom_mirror",
+                () -> new RestroomSpaModuleBlock(RestroomSpaModuleBlock.Design.MIRROR, metalProperties().sound(SoundType.GLASS)));
+        public static final RegistrySupplier<RestroomSpaDecorationBlock> WALL_SOAP_DISPENSER = register("wall_soap_dispenser",
+                () -> new RestroomSpaDecorationBlock(RestroomSpaDecorationBlock.Design.SOAP_DISPENSER, metalProperties()));
+        public static final RegistrySupplier<RestroomSpaDecorationBlock> PAPER_TOWEL_DISPENSER = register("paper_towel_dispenser",
+                () -> new RestroomSpaDecorationBlock(RestroomSpaDecorationBlock.Design.PAPER_TOWEL_DISPENSER, metalProperties()));
+        public static final RegistrySupplier<RestroomSpaDecorationBlock> RESTROOM_TRASH_BIN = register("restroom_trash_bin",
+                () -> new RestroomSpaDecorationBlock(RestroomSpaDecorationBlock.Design.TRASH_BIN, metalProperties()));
+        public static final RegistrySupplier<RestroomSpaDecorationBlock> HEATED_TOWEL_RACK = register("heated_towel_rack",
+                () -> new RestroomSpaDecorationBlock(RestroomSpaDecorationBlock.Design.HEATED_TOWEL_RACK, metalProperties()));
+        public static final RegistrySupplier<RestroomSpaDecorationBlock> RESTROOM_SIGN_WOMEN = register("restroom_sign_women",
+                () -> new RestroomSpaDecorationBlock(RestroomSpaDecorationBlock.Design.SIGN_WOMEN, metalProperties().strength(.75F)));
+        public static final RegistrySupplier<RestroomSpaDecorationBlock> RESTROOM_SIGN_MEN = register("restroom_sign_men",
+                () -> new RestroomSpaDecorationBlock(RestroomSpaDecorationBlock.Design.SIGN_MEN, metalProperties().strength(.75F)));
+        public static final RegistrySupplier<RestroomSpaDecorationBlock> RESTROOM_SIGN_ACCESSIBLE = register("restroom_sign_accessible",
+                () -> new RestroomSpaDecorationBlock(RestroomSpaDecorationBlock.Design.SIGN_ACCESSIBLE, metalProperties().strength(.75F)));
+        public static final RegistrySupplier<RestroomSpaWideBlock> MASSAGE_TABLE = register("massage_table",
+                () -> new RestroomSpaWideBlock(RestroomSpaWideBlock.Design.MASSAGE_TABLE, woodProperties()));
+        public static final RegistrySupplier<SaunaBenchBlock> SAUNA_BENCH = register("sauna_bench",
+                () -> new SaunaBenchBlock(woodProperties()));
+        public static final RegistrySupplier<RestroomSpaDecorationBlock> SAUNA_HEATER = register("sauna_heater",
+                () -> new RestroomSpaDecorationBlock(RestroomSpaDecorationBlock.Design.SAUNA_HEATER, metalProperties()));
 
         private static BlockBehaviour.Properties woodProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD).noOcclusion();
