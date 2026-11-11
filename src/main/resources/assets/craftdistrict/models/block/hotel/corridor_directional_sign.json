@@ -1,0 +1,155 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "hotel": "craftdistrict:block/hotel/hotel_atlas",
+    "ceramic": "minecraft:block/white_concrete",
+    "stone": "minecraft:block/quartz_block_top",
+    "chrome": "minecraft:block/iron_block",
+    "silver": "minecraft:block/light_gray_concrete",
+    "fabric": "minecraft:block/white_wool",
+    "glass": "minecraft:block/light_blue_stained_glass",
+    "corridor": "craftdistrict:block/hotel/hotel_corridor_atlas",
+    "particle": "craftdistrict:block/particles/particle_metal"
+  },
+  "elements": [
+    {
+      "name": "finished_wall_frame",
+      "from": [
+        0.5,
+        4,
+        15
+      ],
+      "to": [
+        15.5,
+        12,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            6.125,
+            0.5,
+            7.875,
+            1.5
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            6.125,
+            0.5,
+            7.875,
+            1.5
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            6.9375,
+            0.5,
+            7.0625,
+            1.5
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            6.9375,
+            0.5,
+            7.0625,
+            1.5
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            6.125,
+            0.9375,
+            7.875,
+            1.0625
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            6.125,
+            0.9375,
+            7.875,
+            1.0625
+          ]
+        }
+      }
+    },
+    {
+      "name": "inset_graphic",
+      "from": [
+        0.875,
+        4.375,
+        14.75
+      ],
+      "to": [
+        15.125,
+        11.625,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#corridor",
+          "uv": [
+            0.0,
+            6.0,
+            0.125,
+            6.125
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.546875,
+            3.875,
+            1.453125
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            2.984375,
+            0.546875,
+            3.015625,
+            1.453125
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            2.984375,
+            0.546875,
+            3.015625,
+            1.453125
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.984375,
+            3.875,
+            1.015625
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.984375,
+            3.875,
+            1.015625
+          ]
+        }
+      }
+    }
+  ]
+}

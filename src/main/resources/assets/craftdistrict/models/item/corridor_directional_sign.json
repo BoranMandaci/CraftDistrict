@@ -1,0 +1,276 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "hotel": "craftdistrict:block/hotel/hotel_atlas",
+    "ceramic": "minecraft:block/white_concrete",
+    "stone": "minecraft:block/quartz_block_top",
+    "chrome": "minecraft:block/iron_block",
+    "silver": "minecraft:block/light_gray_concrete",
+    "fabric": "minecraft:block/white_wool",
+    "glass": "minecraft:block/light_blue_stained_glass",
+    "defaults": "craftdistrict:block/hotel/hotel_display_defaults",
+    "particle": "craftdistrict:block/particles/particle_metal"
+  },
+  "elements": [
+    {
+      "name": "finished_wall_frame",
+      "from": [
+        0.5,
+        4.0,
+        7.625
+      ],
+      "to": [
+        15.5,
+        12.0,
+        8.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hotel",
+          "uv": [
+            6.125,
+            0.5,
+            7.875,
+            1.5
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            6.125,
+            0.5,
+            7.875,
+            1.5
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            6.9375,
+            0.5,
+            7.0625,
+            1.5
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            6.9375,
+            0.5,
+            7.0625,
+            1.5
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            6.125,
+            0.9375,
+            7.875,
+            1.0625
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            6.125,
+            0.9375,
+            7.875,
+            1.0625
+          ]
+        }
+      }
+    },
+    {
+      "name": "inset_graphic",
+      "from": [
+        0.875,
+        4.375,
+        7.375
+      ],
+      "to": [
+        15.125,
+        11.625,
+        7.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#defaults",
+          "uv": [
+            0,
+            8,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.546875,
+            3.875,
+            1.453125
+          ]
+        },
+        "west": {
+          "texture": "#hotel",
+          "uv": [
+            2.984375,
+            0.546875,
+            3.015625,
+            1.453125
+          ]
+        },
+        "east": {
+          "texture": "#hotel",
+          "uv": [
+            2.984375,
+            0.546875,
+            3.015625,
+            1.453125
+          ]
+        },
+        "up": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.984375,
+            3.875,
+            1.015625
+          ]
+        },
+        "down": {
+          "texture": "#hotel",
+          "uv": [
+            2.125,
+            0.984375,
+            3.875,
+            1.015625
+          ]
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0.083969,
+        -0.041984,
+        0
+      ],
+      "scale": [
+        0.95,
+        0.95,
+        0.95
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        1
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        -45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        1
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        -90,
+        20
+      ],
+      "translation": [
+        1,
+        2,
+        1
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        90,
+        -20
+      ],
+      "translation": [
+        1,
+        2,
+        1
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    }
+  }
+}

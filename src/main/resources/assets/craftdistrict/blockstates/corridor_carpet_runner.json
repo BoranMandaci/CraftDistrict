@@ -1,0 +1,101 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "craftdistrict:block/hotel/corridor_carpet_runner_core"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/corridor_carpet_runner_north"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/corridor_carpet_runner_east"
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/corridor_carpet_runner_south"
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/corridor_carpet_runner_west"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "false"
+          },
+          {
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/corridor_carpet_runner_north_west"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "false"
+          },
+          {
+            "east": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/corridor_carpet_runner_north_east"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "south": "false"
+          },
+          {
+            "east": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/corridor_carpet_runner_south_east"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "south": "false"
+          },
+          {
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/hotel/corridor_carpet_runner_south_west"
+      }
+    }
+  ]
+}

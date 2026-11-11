@@ -6,6 +6,8 @@ import com.craftdistrict.registry.CraftDistrictCreativeTabs;
 import com.craftdistrict.registry.CraftDistrictEntities;
 import com.craftdistrict.registry.CraftDistrictItems;
 import com.craftdistrict.registry.CraftDistrictAssembly;
+import com.craftdistrict.registry.CraftDistrictRoomNumbers;
+import com.craftdistrict.network.RoomNumberNetworking;
 import com.craftdistrict.network.AssemblyNetworking;
 import com.craftdistrict.network.LightDyeNetworking;
 import com.craftdistrict.network.LightColorNetworking;
@@ -32,6 +34,8 @@ public final class CraftDistrict {
         PoliceOfficeSecurityBlock.registerLegacyCleanup();
         SecurityScannerBlock.registerPassageTracking();
         CraftDistrictAssembly.register();
+        CraftDistrictRoomNumbers.register();
+        RoomNumberNetworking.register();
         AssemblyNetworking.register();
         LightDyeNetworking.register();
         LightColorNetworking.register();

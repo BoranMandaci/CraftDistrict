@@ -3,6 +3,8 @@ package com.craftdistrict.client;
 import com.craftdistrict.registry.CraftDistrictBlocks;
 import com.craftdistrict.registry.CraftDistrictEntities;
 import com.craftdistrict.registry.CraftDistrictAssembly;
+import com.craftdistrict.registry.CraftDistrictRoomNumbers;
+import dev.architectury.registry.client.rendering.BlockEntityRendererRegistry;
 import dev.architectury.registry.menu.MenuRegistry;
 import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
 import net.minecraft.client.renderer.entity.NoopRenderer;
@@ -29,12 +31,15 @@ public final class CraftDistrictClient {
         if (earlyScreens) {
             CraftDistrictAssembly.MENU.listen(type -> MenuRegistry.registerScreenFactory(type, AssemblyStationScreen::new));
             CraftDistrictAssembly.LIGHT_COLOR_MENU.listen(type -> MenuRegistry.registerScreenFactory(type, LightColorScreen::new));
+            CraftDistrictRoomNumbers.MENU.listen(type -> MenuRegistry.registerScreenFactory(type, RoomNumberScreen::new));
         }
         ClientLifecycleEvent.CLIENT_SETUP.register(client -> {
             LightingColors.init();
+            BlockEntityRendererRegistry.register(CraftDistrictRoomNumbers.PLAQUE.get(), RoomNumberRenderer::new);
             if (!earlyScreens) {
                 MenuRegistry.registerScreenFactory(CraftDistrictAssembly.MENU.get(), AssemblyStationScreen::new);
                 MenuRegistry.registerScreenFactory(CraftDistrictAssembly.LIGHT_COLOR_MENU.get(), LightColorScreen::new);
+                MenuRegistry.registerScreenFactory(CraftDistrictRoomNumbers.MENU.get(), RoomNumberScreen::new);
             }
             RenderTypeRegistry.register(
                 RenderType.cutout(), CraftDistrictBlocks.Bakery.DISPLAY_COUNTER.get(),
@@ -70,7 +75,8 @@ public final class CraftDistrictClient {
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Police.ONE_WAY_OBSERVATION_GLASS.get(),
                     CraftDistrictBlocks.Police.ONE_WAY_GLASS_BLOCK.get(), CraftDistrictBlocks.Hospital.IV_STAND.get(),
                     CraftDistrictBlocks.Hospital.MAMMOGRAPHY_MACHINE.get(), CraftDistrictBlocks.Hospital.INCUBATOR.get(),
-                    CraftDistrictBlocks.Hotel.SHOWER_ENCLOSURE.get(), CraftDistrictBlocks.Hotel.FIXED_SHOWER_GLASS.get());
+                    CraftDistrictBlocks.Hotel.SHOWER_ENCLOSURE.get(), CraftDistrictBlocks.Hotel.FIXED_SHOWER_GLASS.get(),
+                    CraftDistrictBlocks.Hotel.WASHING_MACHINE.get(), CraftDistrictBlocks.Hotel.DRYER.get());
         });
     }
 }

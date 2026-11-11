@@ -75,6 +75,12 @@ import com.craftdistrict.block.HotelFixedShowerPanelBlock;
 import com.craftdistrict.block.HotelShowerFixtureBlock;
 import com.craftdistrict.block.HotelShowerFloorBlock;
 import com.craftdistrict.block.HotelToiletBlock;
+import com.craftdistrict.block.HotelRoomDoorBlock;
+import com.craftdistrict.block.HotelCorridorWallBlock;
+import com.craftdistrict.block.HotelElevatorDoorsBlock;
+import com.craftdistrict.block.HotelServiceBlock;
+import com.craftdistrict.block.HotelCleaningCabinetBlock;
+import com.craftdistrict.block.RoomNumberPlaqueBlock;
 import com.craftdistrict.block.PharmacyGlassDisplayBlock;
 import com.craftdistrict.block.PharmacyCabinetBlock;
 import com.craftdistrict.block.PillCountingStationBlock;
@@ -338,6 +344,34 @@ public final class CraftDistrictBlocks {
                 () -> new HotelBathroomAccessoryBlock(HotelBathroomAccessoryBlock.Design.HAIR_DRYER, metalProperties()));
         public static final RegistrySupplier<HotelBathroomBinBlock> TRASH_BIN = register("hotel_bathroom_trash_bin",
                 () -> new HotelBathroomBinBlock(metalProperties()));
+        public static final RegistrySupplier<HotelRoomDoorBlock> ROOM_DOOR = register("hotel_room_door",
+                () -> new HotelRoomDoorBlock(woodProperties()));
+        public static final RegistrySupplier<RoomNumberPlaqueBlock> ROOM_NUMBER_PLAQUE = register("room_number_plaque",
+                () -> new RoomNumberPlaqueBlock(metalProperties().strength(.75F)));
+        public static final RegistrySupplier<HotelElevatorDoorsBlock> ELEVATOR_DOORS = register("elevator_double_doors",
+                () -> new HotelElevatorDoorsBlock(metalProperties()));
+        public static final RegistrySupplier<HotelCorridorWallBlock> ELEVATOR_CALL_PANEL = register("elevator_call_panel",
+                () -> new HotelCorridorWallBlock(HotelCorridorWallBlock.Design.CALL_PANEL, metalProperties().strength(.75F)));
+        public static final RegistrySupplier<RoomNumberPlaqueBlock> ELEVATOR_INDICATOR = register("elevator_floor_indicator",
+                () -> new RoomNumberPlaqueBlock(HotelCorridorWallBlock.Design.INDICATOR, metalProperties().strength(.75F)));
+        public static final RegistrySupplier<RoomNumberPlaqueBlock> DIRECTIONAL_SIGN = register("corridor_directional_sign",
+                () -> new RoomNumberPlaqueBlock(HotelCorridorWallBlock.Design.DIRECTION_SIGN, metalProperties()));
+        public static final RegistrySupplier<HotelCorridorWallBlock> EVACUATION_MAP = register("fire_evacuation_map",
+                () -> new HotelCorridorWallBlock(HotelCorridorWallBlock.Design.EVACUATION_MAP, metalProperties()));
+        public static final RegistrySupplier<HotelServiceBlock> HOUSEKEEPING_CART = register("housekeeping_cart",
+                () -> new HotelServiceBlock(HotelServiceBlock.Design.HOUSEKEEPING_CART, metalProperties()));
+        public static final RegistrySupplier<HotelServiceBlock> LINEN_TROLLEY = register("linen_trolley",
+                () -> new HotelServiceBlock(HotelServiceBlock.Design.LINEN_TROLLEY, metalProperties()));
+        public static final RegistrySupplier<HotelCleaningCabinetBlock> CLEANING_CABINET = register("cleaning_supplies_cabinet",
+                () -> new HotelCleaningCabinetBlock(metalProperties()));
+        public static final RegistrySupplier<HotelCorridorWallBlock> WALL_ART = register("corridor_wall_art",
+                () -> new HotelCorridorWallBlock(HotelCorridorWallBlock.Design.WALL_ART, woodProperties()));
+        public static final RegistrySupplier<HotelRoomRugBlock> CARPET_RUNNER = register("corridor_carpet_runner",
+                () -> new HotelRoomRugBlock(upholsteryProperties().strength(.2F)));
+        public static final RegistrySupplier<HotelServiceBlock> WASHING_MACHINE = register("washing_machine",
+                () -> new HotelServiceBlock(HotelServiceBlock.Design.WASHING_MACHINE, metalProperties()));
+        public static final RegistrySupplier<HotelServiceBlock> DRYER = register("dryer",
+                () -> new HotelServiceBlock(HotelServiceBlock.Design.DRYER, metalProperties()));
 
         private static BlockBehaviour.Properties woodProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD).noOcclusion();
