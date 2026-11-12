@@ -21,7 +21,7 @@ public final class CollectionNavigation {
     private static final int ICON_SIZE = 12;
     private static final int GAP = 2;
     private static final List<DecorationCollection> FIXED_COLLECTIONS = List.of(
-            DecorationCollection.SURVIVAL_CRAFTING, DecorationCollection.LIGHTING);
+            DecorationCollection.SURVIVAL_CRAFTING, DecorationCollection.BATHROOM, DecorationCollection.LIGHTING);
     private static final List<DecorationCollection> COLLECTIONS = orderedCollections();
     private static DecorationCollection selected = DecorationCollection.BAKERY;
 
@@ -91,7 +91,7 @@ public final class CollectionNavigation {
             //?}
             headerRight = Math.min(headerRight, left + paginationLeft - GAP);
         }
-        // Crafting and Lighting stay in the header, independently of the sidebar page.
+        // Crafting, Bathroom and Lighting stay in the header, independently of the sidebar page.
         topCount = FIXED_COLLECTIONS.size();
         int leftCount = Math.max(1, (height - gridTop + GAP) / (BUTTON_HEIGHT + GAP));
         overflow = COLLECTIONS.size() - topCount > leftCount;

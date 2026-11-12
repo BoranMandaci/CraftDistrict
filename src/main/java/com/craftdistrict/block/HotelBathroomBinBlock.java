@@ -23,9 +23,11 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 /** A saved decorative pedal lid reuses the ordinary cabinet/Wrench interaction. */
 public final class HotelBathroomBinBlock extends CashRegisterBlock {
     private static final VoxelShape[][] SHAPES = {
-            RestaurantKitchenBlock.rotations(box(4, 0, 3.5, 12, 11, 12.5)),
-            RestaurantKitchenBlock.rotations(Shapes.or(box(4, 0, 3.5, 12, 9.5, 12.5),
-                    box(4.125, 9.5, 8.5, 11.875, 13, 13), box(4.125, 13, 6, 11.875, 16, 10)).optimize())};
+            RestaurantKitchenBlock.rotations(Shapes.or(box(4.125, 0, 4.25, 11.875, 9.125, 12.25),
+                    box(6.25, .375, 3, 9.75, 1.25, 4.75), box(6.5, 7.625, 11.5, 9.5, 8.875, 12.625)).optimize()),
+            RestaurantKitchenBlock.rotations(Shapes.or(box(4.125, 0, 4.375, 11.875, 8.375, 12.25),
+                    box(4.125, 8.375, 11.875, 11.875, 16, 12.625),
+                    box(6.25, .375, 3, 9.75, 1.25, 4.75), box(6.5, 7.625, 11.5, 9.5, 8.875, 12.625)).optimize())};
     //? if >=1.21 {
     public static final MapCodec<HotelBathroomBinBlock> CODEC = simpleCodec(HotelBathroomBinBlock::new);
     //?}

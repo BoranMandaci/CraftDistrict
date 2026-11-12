@@ -30,7 +30,7 @@ public final class HotelDecorationBlock extends RotatableDecorationBlock {
             RestaurantKitchenBlock.rotations(box(1.5, 0, 1.5, 14.5, 15.5, 14.5)),
             RestaurantKitchenBlock.rotations(Shapes.or(box(3, 0, 5, 13, 1.25, 11),
                     box(5, 1.25, 5, 11, 8, 11), box(1, 8, 2.5, 15, 9.5, 13.5)).optimize()),
-            RestaurantKitchenBlock.rotations(box(0, 5.5, 14.5, 16, 14.5, 16))};
+            RestaurantKitchenBlock.rotations(box(0, 3.5, 14.375, 16, 12.5, 16))};
     //? if >=1.21 {
     public static final MapCodec<HotelDecorationBlock> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
             StringRepresentable.fromEnum(Design::values).fieldOf("design").forGetter((HotelDecorationBlock b) -> b.design),

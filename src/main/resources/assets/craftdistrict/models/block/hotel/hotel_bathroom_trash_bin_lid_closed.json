@@ -2,426 +2,1153 @@
   "parent": "minecraft:block/block",
   "ambientocclusion": true,
   "textures": {
-    "hotel": "craftdistrict:block/hotel/hotel_atlas",
-    "ceramic": "minecraft:block/white_concrete",
-    "stone": "minecraft:block/quartz_block_top",
-    "chrome": "minecraft:block/iron_block",
-    "silver": "minecraft:block/light_gray_concrete",
-    "fabric": "minecraft:block/white_wool",
-    "glass": "minecraft:block/light_blue_stained_glass",
+    "shell": "minecraft:block/white_concrete",
+    "metal": "minecraft:block/iron_block",
+    "liner": "minecraft:block/light_gray_concrete",
+    "pedal": "minecraft:block/gray_concrete",
+    "rubber": "minecraft:block/black_concrete",
     "particle": "craftdistrict:block/particles/particle_metal"
   },
   "elements": [
     {
-      "name": "fitted_bin_lid_middle",
+      "name": "fitted_lid_0",
       "from": [
         4.125,
-        9.5,
-        6.5625
+        8.375,
+        4.875
+      ],
+      "to": [
+        4.75,
+        9,
+        11.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#shell",
+          "uv": [
+            7.6875,
+            7.6875,
+            8.3125,
+            8.3125
+          ]
+        },
+        "south": {
+          "texture": "#shell",
+          "uv": [
+            7.6875,
+            7.6875,
+            8.3125,
+            8.3125
+          ]
+        },
+        "west": {
+          "texture": "#shell",
+          "uv": [
+            4.8125,
+            7.6875,
+            11.1875,
+            8.3125
+          ]
+        },
+        "up": {
+          "texture": "#shell",
+          "uv": [
+            7.6875,
+            4.8125,
+            8.3125,
+            11.1875
+          ]
+        },
+        "down": {
+          "texture": "#liner",
+          "uv": [
+            7.6875,
+            4.8125,
+            8.3125,
+            11.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "fitted_lid_1",
+      "from": [
+        4.75,
+        8.375,
+        4.25
+      ],
+      "to": [
+        11.25,
+        9,
+        11.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#shell",
+          "uv": [
+            4.75,
+            7.6875,
+            11.25,
+            8.3125
+          ]
+        },
+        "south": {
+          "texture": "#shell",
+          "uv": [
+            4.75,
+            7.6875,
+            11.25,
+            8.3125
+          ]
+        },
+        "west": {
+          "texture": "#shell",
+          "uv": [
+            4.1875,
+            7.6875,
+            11.8125,
+            8.3125
+          ]
+        },
+        "east": {
+          "texture": "#shell",
+          "uv": [
+            4.1875,
+            7.6875,
+            11.8125,
+            8.3125
+          ]
+        },
+        "up": {
+          "texture": "#shell",
+          "uv": [
+            4.75,
+            4.1875,
+            11.25,
+            11.8125
+          ]
+        },
+        "down": {
+          "texture": "#liner",
+          "uv": [
+            4.75,
+            4.1875,
+            11.25,
+            11.8125
+          ]
+        }
+      }
+    },
+    {
+      "name": "fitted_lid_2",
+      "from": [
+        11.25,
+        8.375,
+        4.875
       ],
       "to": [
         11.875,
-        10.5,
-        10.4375
-      ],
-      "faces": {
-        "north": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "south": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "west": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "east": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "up": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "down": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        }
-      }
-    },
-    {
-      "name": "fitted_bin_lid_front_shoulder",
-      "from": [
-        5.09375,
-        9.5,
-        5.59375
-      ],
-      "to": [
-        10.90625,
-        10.5,
-        6.5625
-      ],
-      "faces": {
-        "north": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "south": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "west": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "east": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "up": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "down": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        }
-      }
-    },
-    {
-      "name": "fitted_bin_lid_front_cap",
-      "from": [
-        6.0625,
-        9.5,
-        4.625
-      ],
-      "to": [
-        9.9375,
-        10.5,
-        5.59375
-      ],
-      "faces": {
-        "north": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "south": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "west": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "east": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "up": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "down": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        }
-      }
-    },
-    {
-      "name": "fitted_bin_lid_rear_shoulder",
-      "from": [
-        5.09375,
-        9.5,
-        10.4375
-      ],
-      "to": [
-        10.90625,
-        10.5,
-        11.40625
-      ],
-      "faces": {
-        "north": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "south": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "west": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "east": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "up": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "down": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        }
-      }
-    },
-    {
-      "name": "fitted_bin_lid_rear_cap",
-      "from": [
-        6.0625,
-        9.5,
-        11.40625
-      ],
-      "to": [
-        9.9375,
-        10.5,
-        12.375
-      ],
-      "faces": {
-        "north": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "south": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "west": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "east": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "up": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "down": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        }
-      }
-    },
-    {
-      "name": "lid_front_lip",
-      "from": [
-        7,
-        9.5,
-        4.5
-      ],
-      "to": [
         9,
-        10,
-        4.625
+        11.25
       ],
       "faces": {
         "north": {
-          "texture": "#chrome",
+          "texture": "#shell",
           "uv": [
-            5,
-            5,
-            11,
-            11
+            7.6875,
+            7.6875,
+            8.3125,
+            8.3125
           ]
         },
         "south": {
-          "texture": "#chrome",
+          "texture": "#shell",
           "uv": [
-            5,
-            5,
-            11,
-            11
-          ]
-        },
-        "west": {
-          "texture": "#chrome",
-          "uv": [
-            5,
-            5,
-            11,
-            11
+            7.6875,
+            7.6875,
+            8.3125,
+            8.3125
           ]
         },
         "east": {
-          "texture": "#chrome",
+          "texture": "#shell",
           "uv": [
-            5,
-            5,
-            11,
-            11
+            4.8125,
+            7.6875,
+            11.1875,
+            8.3125
           ]
         },
         "up": {
-          "texture": "#chrome",
+          "texture": "#shell",
           "uv": [
-            5,
-            5,
-            11,
-            11
+            7.6875,
+            4.8125,
+            8.3125,
+            11.1875
           ]
         },
         "down": {
-          "texture": "#chrome",
+          "texture": "#liner",
           "uv": [
-            5,
-            5,
-            11,
-            11
+            7.6875,
+            4.8125,
+            8.3125,
+            11.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "soft_lid_crown_0",
+      "from": [
+        4.75,
+        9,
+        5.625
+      ],
+      "to": [
+        5.375,
+        9.125,
+        10.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#shell",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#shell",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#shell",
+          "uv": [
+            5.5,
+            7.75,
+            10.5,
+            8.25
+          ]
+        },
+        "up": {
+          "texture": "#shell",
+          "uv": [
+            7.6875,
+            5.5,
+            8.3125,
+            10.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "soft_lid_crown_1",
+      "from": [
+        5.375,
+        9,
+        5
+      ],
+      "to": [
+        10.625,
+        9.125,
+        11.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#shell",
+          "uv": [
+            5.375,
+            7.75,
+            10.625,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#shell",
+          "uv": [
+            5.375,
+            7.75,
+            10.625,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#shell",
+          "uv": [
+            4.875,
+            7.75,
+            11.125,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#shell",
+          "uv": [
+            4.875,
+            7.75,
+            11.125,
+            8.25
+          ]
+        },
+        "up": {
+          "texture": "#shell",
+          "uv": [
+            5.375,
+            4.875,
+            10.625,
+            11.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "soft_lid_crown_2",
+      "from": [
+        10.625,
+        9,
+        5.625
+      ],
+      "to": [
+        11.25,
+        9.125,
+        10.625
+      ],
+      "faces": {
+        "north": {
+          "texture": "#shell",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#shell",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#shell",
+          "uv": [
+            5.5,
+            7.75,
+            10.5,
+            8.25
+          ]
+        },
+        "up": {
+          "texture": "#shell",
+          "uv": [
+            7.6875,
+            5.5,
+            8.3125,
+            10.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_0",
+      "from": [
+        4.675,
+        8.1875,
+        5.425
+      ],
+      "to": [
+        4.925,
+        8.375,
+        10.825
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#pedal",
+          "uv": [
+            5.300000000000001,
+            7.75,
+            10.7,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#pedal",
+          "uv": [
+            5.300000000000001,
+            7.75,
+            10.7,
+            8.25
+          ]
+        },
+        "up": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            5.300000000000001,
+            8.25,
+            10.7
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            5.300000000000001,
+            8.25,
+            10.7
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_1",
+      "from": [
+        4.925,
+        8.1875,
+        5.425
+      ],
+      "to": [
+        5.175,
+        8.375,
+        5.55
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_2",
+      "from": [
+        4.925,
+        8.1875,
+        10.7
+      ],
+      "to": [
+        5.175,
+        8.375,
+        10.825
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_3",
+      "from": [
+        10.7,
+        8.1875,
+        4.925
+      ],
+      "to": [
+        10.825,
+        8.375,
+        5.55
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#pedal",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#pedal",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.6875,
+            8.25,
+            8.3125
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_4",
+      "from": [
+        10.7,
+        8.1875,
+        10.7
+      ],
+      "to": [
+        10.825,
+        8.375,
+        11.325
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#pedal",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#pedal",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.6875,
+            8.25,
+            8.3125
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_5",
+      "from": [
+        5.3,
+        8.1875,
+        4.925
+      ],
+      "to": [
+        10.7,
+        8.375,
+        5.175
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            5.300000000000001,
+            7.75,
+            10.7,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            5.300000000000001,
+            7.75,
+            10.7,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            5.300000000000001,
+            7.75,
+            10.7,
+            8.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_6",
+      "from": [
+        5.3,
+        8.1875,
+        11.075
+      ],
+      "to": [
+        10.7,
+        8.375,
+        11.325
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            5.300000000000001,
+            7.75,
+            10.7,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            5.300000000000001,
+            7.75,
+            10.7,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            5.300000000000001,
+            7.75,
+            10.7,
+            8.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_7",
+      "from": [
+        5.175,
+        8.1875,
+        4.925
+      ],
+      "to": [
+        5.3,
+        8.375,
+        5.55
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#pedal",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#pedal",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.6875,
+            8.25,
+            8.3125
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_8",
+      "from": [
+        5.175,
+        8.1875,
+        10.7
+      ],
+      "to": [
+        5.3,
+        8.375,
+        11.325
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#pedal",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#pedal",
+          "uv": [
+            7.6875,
+            7.75,
+            8.3125,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.6875,
+            8.25,
+            8.3125
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_9",
+      "from": [
+        11.075,
+        8.1875,
+        5.425
+      ],
+      "to": [
+        11.325,
+        8.375,
+        10.825
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#pedal",
+          "uv": [
+            5.300000000000001,
+            7.75,
+            10.7,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#pedal",
+          "uv": [
+            5.300000000000001,
+            7.75,
+            10.7,
+            8.25
+          ]
+        },
+        "up": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            5.300000000000001,
+            8.25,
+            10.7
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            5.300000000000001,
+            8.25,
+            10.7
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_10",
+      "from": [
+        10.825,
+        8.1875,
+        5.425
+      ],
+      "to": [
+        11.075,
+        8.375,
+        5.55
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "interior_lid_seal_11",
+      "from": [
+        10.825,
+        8.1875,
+        10.7
+      ],
+      "to": [
+        11.075,
+        8.375,
+        10.825
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#pedal",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "light_lid_interior_0",
+      "from": [
+        5,
+        8.25,
+        5.625
+      ],
+      "to": [
+        5.375,
+        8.375,
+        10.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#liner",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#liner",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#liner",
+          "uv": [
+            5.375,
+            7.75,
+            10.625,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#liner",
+          "uv": [
+            7.75,
+            5.375,
+            8.25,
+            10.625
+          ]
+        }
+      }
+    },
+    {
+      "name": "light_lid_interior_1",
+      "from": [
+        5.375,
+        8.25,
+        5.25
+      ],
+      "to": [
+        10.625,
+        8.375,
+        11.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#liner",
+          "uv": [
+            5.375,
+            7.75,
+            10.625,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#liner",
+          "uv": [
+            5.375,
+            7.75,
+            10.625,
+            8.25
+          ]
+        },
+        "west": {
+          "texture": "#liner",
+          "uv": [
+            5.0,
+            7.75,
+            11.0,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#liner",
+          "uv": [
+            5.0,
+            7.75,
+            11.0,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#liner",
+          "uv": [
+            5.375,
+            5.0,
+            10.625,
+            11.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "light_lid_interior_2",
+      "from": [
+        10.625,
+        8.25,
+        5.625
+      ],
+      "to": [
+        11,
+        8.375,
+        10.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#liner",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "south": {
+          "texture": "#liner",
+          "uv": [
+            7.75,
+            7.75,
+            8.25,
+            8.25
+          ]
+        },
+        "east": {
+          "texture": "#liner",
+          "uv": [
+            5.375,
+            7.75,
+            10.625,
+            8.25
+          ]
+        },
+        "down": {
+          "texture": "#liner",
+          "uv": [
+            7.75,
+            5.375,
+            8.25,
+            10.625
           ]
         }
       }

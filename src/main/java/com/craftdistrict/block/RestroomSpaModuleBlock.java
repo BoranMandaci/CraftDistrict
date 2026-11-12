@@ -115,6 +115,7 @@ public final class RestroomSpaModuleBlock extends MultiBlockDecorationBlock {
         int ends = state.getValue(MODULAR)
                 ? (state.getValue(LEFT) ? 0 : 1) | (state.getValue(RIGHT) ? 0 : 2)
                 : state.getValue(PRIMARY) ? 1 : 2;
+        if (state.getValue(MODULAR) && !state.getValue(LEFT) && !state.getValue(RIGHT)) ends = 0;
         return SINK_SHAPES[ends][turn];
     }
     @Override public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {

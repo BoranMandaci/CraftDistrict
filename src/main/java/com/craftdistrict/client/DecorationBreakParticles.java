@@ -47,6 +47,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public final class DecorationBreakParticles {
     private static final int MAX_TARGETED_FRAGMENTS = 12;
     private static final int MAX_OFFICE_CHAIR_FRAGMENTS = 6;
+    private static final int MAX_HOTEL_FRAGMENTS = 6;
     private Level lastLevel;
     private Block lastBlock;
     private long lastOrigin;
@@ -100,6 +101,23 @@ public final class DecorationBreakParticles {
                 || state.is(CraftDistrictBlocks.Restaurant.FOOD_PICKUP_COUNTER.get());
     }
 
+    private static boolean hotelReduction(BlockState state) {
+        return state.is(CraftDistrictBlocks.Hotel.WRITING_DESK.get())
+                || state.is(CraftDistrictBlocks.Hotel.MINI_FRIDGE.get())
+                || state.is(CraftDistrictBlocks.Hotel.MASSAGE_TABLE.get())
+                || state.is(CraftDistrictBlocks.Hotel.SWIMMING_POOL_LADDER.get())
+                || state.is(CraftDistrictBlocks.Hotel.SUN_LOUNGER.get())
+                || state.is(CraftDistrictBlocks.Hotel.LAUNDRY_BASKET.get())
+                || state.is(CraftDistrictBlocks.Hotel.HAND_DRYER.get())
+                || state.is(CraftDistrictBlocks.Hotel.URINAL.get())
+                || state.is(CraftDistrictBlocks.Hotel.RESTROOM_TRASH_BIN.get())
+                || state.is(CraftDistrictBlocks.Hotel.PUBLIC_SINK_COUNTER.get())
+                || state.is(CraftDistrictBlocks.Hotel.HEATED_TOWEL_RACK.get())
+                || state.is(CraftDistrictBlocks.Hotel.SHOWER_BASE.get())
+                || state.is(CraftDistrictBlocks.Hotel.SHOWER_BASE_PLAIN.get())
+                || state.is(CraftDistrictBlocks.Hotel.VANITY_SINK.get());
+    }
+
     /** Partner-removal effects share an origin; repeated breaks at the same position remain valid. */
     public boolean duplicate(Level level, long tick, BlockState state, BlockPos pos) {
         long origin = origin(state, pos).asLong();
@@ -142,7 +160,8 @@ public final class DecorationBreakParticles {
     }
 
     public static void sample(BlockState state, VoxelShape shape, FragmentConsumer output) {
-        if (!strongReduction(state)) {
+        boolean hotel = hotelReduction(state);
+        if (!hotel && !strongReduction(state)) {
             sample(shape, output);
             return;
         }
@@ -153,7 +172,8 @@ public final class DecorationBreakParticles {
         // Assembly Station previously used the full vanilla burst. Other targets
         // already used the one-in-three sampler; reduce that count by about 80%.
         int previous = state.getBlock() instanceof AssemblyStationBlock ? grid.vanillaCandidates : grid.candidates;
-        int maximum = state.getBlock() instanceof OfficeChairBlock ? MAX_OFFICE_CHAIR_FRAGMENTS : MAX_TARGETED_FRAGMENTS;
+        int maximum = hotel ? MAX_HOTEL_FRAGMENTS
+                : state.getBlock() instanceof OfficeChairBlock ? MAX_OFFICE_CHAIR_FRAGMENTS : MAX_TARGETED_FRAGMENTS;
         grid.limit = Math.min(grid.candidates, Math.min(maximum, Math.max(3, (previous + 4) / 5)));
         grid.accumulator = grid.candidates / 2;
         grid.countOnly = false;
