@@ -71,13 +71,13 @@ public final class CraftDistrictClient {
                 CraftDistrictBlocks.Pharmacy.GLASS_DISPLAY.get(),
                 CraftDistrictBlocks.Pharmacy.REFRIGERATOR.get());
             RenderTypeRegistry.register(RenderType.cutout(), CraftDistrictBlocks.Office.GLASS_PARTITION.get(),
-                    CraftDistrictBlocks.Office.GLASS_PARTITION_DOOR.get());
+                    CraftDistrictBlocks.Office.GLASS_PARTITION_DOOR.get(), CraftDistrictBlocks.Hotel.POOL_UMBRELLA.get());
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Police.ONE_WAY_OBSERVATION_GLASS.get(),
                     CraftDistrictBlocks.Police.ONE_WAY_GLASS_BLOCK.get(), CraftDistrictBlocks.Hospital.IV_STAND.get(),
                     CraftDistrictBlocks.Hospital.MAMMOGRAPHY_MACHINE.get(), CraftDistrictBlocks.Hospital.INCUBATOR.get(),
                     CraftDistrictBlocks.Hotel.SHOWER_ENCLOSURE.get(), CraftDistrictBlocks.Hotel.FIXED_SHOWER_GLASS.get(),
                     CraftDistrictBlocks.Hotel.WASHING_MACHINE.get(), CraftDistrictBlocks.Hotel.DRYER.get(),
-                    CraftDistrictBlocks.Hotel.JACUZZI.get());
+                    CraftDistrictBlocks.Hotel.JACUZZI.get(), CraftDistrictBlocks.Hotel.POOL_WATERFALL.get());
         });
     }
 }

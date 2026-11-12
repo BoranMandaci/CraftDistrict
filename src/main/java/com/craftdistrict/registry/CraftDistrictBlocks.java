@@ -83,6 +83,11 @@ import com.craftdistrict.block.HotelCleaningCabinetBlock;
 import com.craftdistrict.block.IroningBoardBlock;
 import com.craftdistrict.block.HotelJacuzziBlock;
 import com.craftdistrict.block.HotelRestroomBlock;
+import com.craftdistrict.block.HotelPoolFixtureBlock;
+import com.craftdistrict.block.PoolsideShowerBlock;
+import com.craftdistrict.block.PoolOverflowDrainBlock;
+import com.craftdistrict.block.SwimmingPoolLadderBlock;
+import com.craftdistrict.block.HotelSunLoungerBlock;
 import com.craftdistrict.block.RestroomSpaWideBlock;
 import com.craftdistrict.block.RestroomSpaModuleBlock;
 import com.craftdistrict.block.RestroomSpaDecorationBlock;
@@ -415,6 +420,19 @@ public final class CraftDistrictBlocks {
                 () -> new SaunaBenchBlock(woodProperties()));
         public static final RegistrySupplier<RestroomSpaDecorationBlock> SAUNA_HEATER = register("sauna_heater",
                 () -> new RestroomSpaDecorationBlock(RestroomSpaDecorationBlock.Design.SAUNA_HEATER, metalProperties()));
+
+        public static final RegistrySupplier<HotelPoolFixtureBlock> POOL_WATERFALL = register("pool_waterfall",
+                () -> new HotelPoolFixtureBlock(HotelPoolFixtureBlock.Design.WATERFALL, metalProperties()));
+        public static final RegistrySupplier<PoolOverflowDrainBlock> POOL_OVERFLOW_DRAIN = register("pool_overflow_drain",
+                () -> new PoolOverflowDrainBlock(metalProperties().strength(1.5F)));
+        public static final RegistrySupplier<SwimmingPoolLadderBlock> SWIMMING_POOL_LADDER = register("swimming_pool_ladder",
+                () -> new SwimmingPoolLadderBlock(metalProperties()));
+        public static final RegistrySupplier<PoolsideShowerBlock> POOLSIDE_SHOWER = register("poolside_shower",
+                () -> new PoolsideShowerBlock(metalProperties()));
+        public static final RegistrySupplier<HotelSunLoungerBlock> SUN_LOUNGER = register("sun_lounger",
+                () -> new HotelSunLoungerBlock(woodProperties()));
+        public static final RegistrySupplier<HotelPoolFixtureBlock> POOL_UMBRELLA = register("pool_umbrella",
+                () -> new HotelPoolFixtureBlock(HotelPoolFixtureBlock.Design.UMBRELLA, upholsteryProperties()));
 
         private static BlockBehaviour.Properties woodProperties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD).noOcclusion();
