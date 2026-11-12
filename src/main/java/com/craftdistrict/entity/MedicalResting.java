@@ -47,11 +47,7 @@ public final class MedicalResting {
         if (!(state.getBlock() instanceof LyingBlock lying)
                 || !(state.getBlock() instanceof MultiBlockDecorationBlock multi)
                 || !lying.lyingHead(state, head).equals(head)) return false;
-        var parts = multi.structureParts(state, head);
-        for (int i = 0; i < parts.size(); i++) {
-            if (!level.hasChunkAt(parts.get(i)) || level.getBlockState(parts.get(i)) != multi.structurePartState(state, i)) return false;
-        }
-        return true;
+        return multi.isStructureComplete(state, level, head);
     }
 
     public static boolean isResting(LivingEntity entity) {

@@ -8,17 +8,26 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.core.Direction;
+import org.joml.Quaternionf;
 
 /** Baked sign bodies share a short, naturally lit text layer; no per-frame data or world updates. */
 public final class RoomNumberRenderer implements BlockEntityRenderer<RoomNumberPlaqueBlockEntity> {
+    private static final Quaternionf[] FACING_ROTATIONS = new Quaternionf[4];
+    private static final Quaternionf FRONT_ROTATION = Axis.YP.rotationDegrees(180);
+    static {
+        for (Direction facing : Direction.Plane.HORIZONTAL) {
+            FACING_ROTATIONS[facing.get2DDataValue()] = Axis.YP.rotationDegrees(180 - facing.toYRot());
+        }
+    }
     private final Font font;
     public RoomNumberRenderer(BlockEntityRendererProvider.Context context) { font = context.getFont(); }
     @Override public void render(RoomNumberPlaqueBlockEntity plaque, float delta, PoseStack pose, MultiBufferSource buffers, int light, int overlay) {
         int kind = plaque.kind();
         pose.pushPose(); pose.translate(.5, .5, .5);
-        pose.mulPose(Axis.YP.rotationDegrees(180 - plaque.getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot()));
+        pose.mulPose(FACING_ROTATIONS[plaque.getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING).get2DDataValue()]);
         pose.translate(0, 0, 6.734375 / 16);
-        pose.mulPose(Axis.YP.rotationDegrees(180));
+        pose.mulPose(FRONT_ROTATION);
         if (kind == 0) draw(pose, buffers, light, plaque.number(), 8, 8, .0175F);
         else if (kind == 1) {
             draw(pose, buffers, light, plaque.number(), 9, 8, .0145F);

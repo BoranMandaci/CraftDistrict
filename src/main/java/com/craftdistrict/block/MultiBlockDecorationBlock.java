@@ -10,6 +10,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -93,6 +94,17 @@ public class MultiBlockDecorationBlock extends RotatableDecorationBlock {
 
     public final BlockState structurePartState(BlockState state, int index) {
         return stateForPart(state, index);
+    }
+
+    /** Tick-time validation without allocating a list and backing array for every occupant. */
+    public final boolean isStructureComplete(BlockState state, LevelReader level, BlockPos pos) {
+        BlockPos origin = structureOrigin(state, pos);
+        int count = partCount(state);
+        for (int index = 0; index < count; index++) {
+            BlockPos part = origin.offset(partOffset(state, index));
+            if (!level.hasChunkAt(part) || level.getBlockState(part) != stateForPart(state, index)) return false;
+        }
+        return true;
     }
 
     @Override
