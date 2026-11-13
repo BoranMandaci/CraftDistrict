@@ -478,7 +478,17 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hotel.SHOWER_ENCLOSURE,
             CraftDistrictBlocks.Hotel.TOILETRIES,
             CraftDistrictBlocks.Hotel.VANITY_MIRROR,
-            CraftDistrictBlocks.Hotel.VANITY_SINK);
+            CraftDistrictBlocks.Hotel.VANITY_SINK),
+    CASINO("casino", CraftDistrictBlocks.Casino.CLASSIC_SLOT_MACHINE,
+            CraftDistrictBlocks.Casino.CLASSIC_SLOT_MACHINE,
+            CraftDistrictBlocks.Casino.MODERN_SLOT_MACHINE,
+            CraftDistrictBlocks.Casino.SLOT_MACHINE_STOOL,
+            CraftDistrictBlocks.Casino.JACKPOT_DISPLAY,
+            CraftDistrictBlocks.Casino.BIG_SIX_WHEEL,
+            CraftDistrictBlocks.Casino.CHIP_STACK,
+            CraftDistrictBlocks.Casino.CARD_SHOE,
+            CraftDistrictBlocks.Casino.CHIP_RACK,
+            CraftDistrictBlocks.Casino.CARDS_AND_DICE);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

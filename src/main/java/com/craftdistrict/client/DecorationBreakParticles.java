@@ -94,6 +94,9 @@ public final class DecorationBreakParticles {
                 || block instanceof com.craftdistrict.block.PharmacyFixtureBlock
                 || block instanceof com.craftdistrict.block.PillCountingStationBlock
                 || block instanceof com.craftdistrict.block.PharmacyAccessoryBlock
+                || block instanceof com.craftdistrict.block.CasinoMachineBlock
+                || block instanceof com.craftdistrict.block.CasinoDecorationBlock
+                || block instanceof com.craftdistrict.block.BigSixWheelBlock
                 || block instanceof FireDispatchDeskBlock || block instanceof SupermarketSelfCheckoutBlock
                 || state.is(CraftDistrictBlocks.Police.BLUE_CHAIR.get())
                 || state.is(CraftDistrictBlocks.Restaurant.STAINLESS_STEEL_PREP_TABLE.get())

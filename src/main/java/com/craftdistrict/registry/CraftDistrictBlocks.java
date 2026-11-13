@@ -2,6 +2,10 @@ package com.craftdistrict.registry;
 
 import com.craftdistrict.CraftDistrict;
 import com.craftdistrict.block.WideDecorationBlock;
+import com.craftdistrict.block.CasinoMachineBlock;
+import com.craftdistrict.block.CasinoDecorationBlock;
+import com.craftdistrict.block.CasinoStoolBlock;
+import com.craftdistrict.block.BigSixWheelBlock;
 import com.craftdistrict.block.TallDecorationBlock;
 import com.craftdistrict.block.WideTallDecorationBlock;
 import com.craftdistrict.block.CashRegisterBlock;
@@ -231,6 +235,7 @@ public final class CraftDistrictBlocks {
         Pharmacy.initialize();
         Hotel.initialize();
         Survival.initialize();
+        Casino.initialize();
         BLOCKS.register();
     }
 
@@ -248,6 +253,32 @@ public final class CraftDistrictBlocks {
                 ? new ShowerFixtureBlockItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
+    }
+
+    public static final class Casino {
+        public static final RegistrySupplier<CasinoMachineBlock> CLASSIC_SLOT_MACHINE = register("classic_slot_machine",
+                () -> new CasinoMachineBlock(CasinoMachineBlock.Design.CLASSIC, properties()));
+        public static final RegistrySupplier<CasinoMachineBlock> MODERN_SLOT_MACHINE = register("modern_slot_machine",
+                () -> new CasinoMachineBlock(CasinoMachineBlock.Design.MODERN, properties()));
+        public static final RegistrySupplier<CasinoStoolBlock> SLOT_MACHINE_STOOL = register("slot_machine_stool",
+                () -> new CasinoStoolBlock(properties().strength(1.0F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<CasinoDecorationBlock> JACKPOT_DISPLAY = register("jackpot_display",
+                () -> new CasinoDecorationBlock(CasinoDecorationBlock.Design.JACKPOT, properties()));
+        public static final RegistrySupplier<BigSixWheelBlock> BIG_SIX_WHEEL = register("big_six_wheel",
+                () -> new BigSixWheelBlock(properties().sound(SoundType.WOOD)));
+        public static final RegistrySupplier<CasinoDecorationBlock> CHIP_STACK = register("casino_chip_stack",
+                () -> new CasinoDecorationBlock(CasinoDecorationBlock.Design.CHIPS, properties().strength(.5F)));
+        public static final RegistrySupplier<CasinoDecorationBlock> CARD_SHOE = register("card_shoe",
+                () -> new CasinoDecorationBlock(CasinoDecorationBlock.Design.SHOE, properties().strength(.5F)));
+        public static final RegistrySupplier<CasinoDecorationBlock> CHIP_RACK = register("casino_chip_rack",
+                () -> new CasinoDecorationBlock(CasinoDecorationBlock.Design.RACK, properties().strength(.5F)));
+        public static final RegistrySupplier<CasinoDecorationBlock> CARDS_AND_DICE = register("playing_cards_and_dice",
+                () -> new CasinoDecorationBlock(CasinoDecorationBlock.Design.CARDS, properties().strength(.5F).sound(SoundType.WOOL)));
+        private static BlockBehaviour.Properties properties() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
+        }
+        private Casino() { }
+        private static void initialize() { }
     }
 
     public static final class Hotel {
