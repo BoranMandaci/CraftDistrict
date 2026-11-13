@@ -28,8 +28,8 @@ public final class LightColorScreen extends AbstractContainerScreen<LightColorMe
 
     public LightColorScreen(LightColorMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
-        for (DyeColor color : DyeColor.values())
-            colorNames[color.getId()] = new ItemStack(DyeItem.byColor(color)).getHoverName();
+        for (int id = 0; id < colorNames.length; id++)
+            colorNames[id] = new ItemStack(DyeItem.byColor(DyeColor.byId(id))).getHoverName();
     }
     private static Component text(String key, Object... args) {
         return Component.translatable("screen.craftdistrict.light_settings." + key, args);
@@ -82,8 +82,7 @@ public final class LightColorScreen extends AbstractContainerScreen<LightColorMe
             int gap = 4, size = Math.min(24, (bodyHeight - gap * 3) / 4);
             int grid = size * 4 + gap * 3;
             int startX = leftPos + (imageWidth - grid) / 2, startY = bodyTop + (bodyHeight - grid) / 2;
-            for (DyeColor color : DyeColor.values()) {
-                int id = color.getId();
+            for (int id = 0; id < colorNames.length; id++) {
                 choices.add(addRenderableWidget(new ColorButton(startX + id % 4 * (size + gap),
                         startY + id / 4 * (size + gap), size, id)));
             }

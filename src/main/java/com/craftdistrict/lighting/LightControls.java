@@ -222,13 +222,14 @@ public final class LightControls {
         if (held.getItem() instanceof WrenchItem && !player.isShiftKeyDown() && settingsEligible(current.getBlock()))
             return LightColorMenu.open(current, level, pos, player, usedHand);
         if (held.getItem() instanceof DyeItem dye) {
-            if (!dyeable(current)) return InteractionResult.PASS;
+            int color = dye.getDyeColor().getId();
+            if (!dyeable(current) || color < 0 || color > 15) return InteractionResult.PASS;
             if (level.isClientSide) return InteractionResult.SUCCESS;
             if (!(level instanceof ServerLevel server)) return InteractionResult.PASS;
             var shared = group(level, current, pos);
             List<BlockPos> parts = shared == null ? parts(current, pos) : LedLightGroups.get(server).allParts(shared);
             if (shared == null && !complete(level, current, parts)) return InteractionResult.PASS;
-            LightDyeData data = LightDyeData.get(server); int color = dye.getDyeColor().getId();
+            LightDyeData data = LightDyeData.get(server);
             int previous = shared == null ? data.color(pos) : shared.color();
             if (color == previous) return InteractionResult.CONSUME;
             LightDyeData.Payment payment = data.payment(player, parts, color, shared != null, false);

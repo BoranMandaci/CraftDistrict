@@ -26,17 +26,19 @@ public final class LightingColors {
     // Render workers only read immutable chunk palettes; packets publish a new copy.
     private static final Map<ResourceLocation, ConcurrentHashMap<Long, Long2ByteOpenHashMap>> COLORS = new ConcurrentHashMap<>();
     private static final int[] DYE_RGB = new int[16];
-    private static final int[] DIMMED_DYE_RGB = new int[16];
+    private static final int[] DIMMED_DYE_RGB = new int[DYE_RGB.length];
     static {
-        for (DyeColor dye : DyeColor.values()) {
+        // Saved/network colors are vanilla IDs 0..15; mods may extend the DyeColor enum.
+        for (int id = 0; id < DYE_RGB.length; id++) {
+            DyeColor dye = DyeColor.byId(id);
             //? if >=1.21 {
             int rgb = dye.getTextureDiffuseColor();
             //?} else {
             /*float[] channels = dye.getTextureDiffuseColors();
             int rgb = Math.round(channels[0]*255) << 16 | Math.round(channels[1]*255) << 8 | Math.round(channels[2]*255);
             *///?}
-            DYE_RGB[dye.getId()] = rgb;
-            DIMMED_DYE_RGB[dye.getId()] = dim(rgb);
+            DYE_RGB[id] = rgb;
+            DIMMED_DYE_RGB[id] = dim(rgb);
         }
     }
     private LightingColors() { }
