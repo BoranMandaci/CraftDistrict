@@ -12,6 +12,11 @@ import com.craftdistrict.block.CasinoInteriorPropBlock;
 import com.craftdistrict.block.CasinoChandelierBlock;
 import com.craftdistrict.block.CasinoVipDividerBlock;
 import com.craftdistrict.block.CasinoVipBoothBlock;
+import com.craftdistrict.block.VaultDoorBlock;
+import com.craftdistrict.block.VaultStorageBlock;
+import com.craftdistrict.block.DepositBoxShelfBlock;
+import com.craftdistrict.block.VaultValuablesBlock;
+import com.craftdistrict.block.VaultLockboxBlock;
 import com.craftdistrict.block.BigSixWheelBlock;
 import com.craftdistrict.block.TallDecorationBlock;
 import com.craftdistrict.block.WideTallDecorationBlock;
@@ -275,6 +280,20 @@ public final class CraftDistrictBlocks {
                 () -> new CasinoVipBoothBlock(properties().sound(SoundType.WOOL)));
         public static final RegistrySupplier<CasinoInteriorPropBlock> CASH_COUNTING_MACHINE = register("casino_cash_counting_machine",
                 () -> new CasinoInteriorPropBlock(CasinoInteriorPropBlock.Design.BILL_COUNTER, properties().strength(1.0F)));
+        public static final RegistrySupplier<VaultDoorBlock> VAULT_DOOR = register("vault_door",
+                () -> new VaultDoorBlock(properties().strength(5.0F)));
+        public static final RegistrySupplier<VaultStorageBlock> VAULT_STORAGE = register("vault_storage",
+                () -> new VaultStorageBlock(properties().strength(4.0F)));
+        public static final RegistrySupplier<DepositBoxShelfBlock> DEPOSIT_BOX_SHELF = register("deposit_box_shelf",
+                () -> new DepositBoxShelfBlock(properties().strength(3.0F)));
+        public static final RegistrySupplier<VaultValuablesBlock> BANKNOTE_STACK = register("banknote_stack",
+                () -> new VaultValuablesBlock(VaultValuablesBlock.Design.BANKNOTES, properties().strength(.3F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<VaultValuablesBlock> MONEY_BAG_STACK = register("money_bag_stack",
+                () -> new VaultValuablesBlock(VaultValuablesBlock.Design.BAGS, properties().strength(.6F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<VaultValuablesBlock> GOLD_BAR_CRATE = register("gold_bar_crate",
+                () -> new VaultValuablesBlock(VaultValuablesBlock.Design.GOLD_CRATE, properties().strength(1.5F).sound(SoundType.WOOD)));
+        public static final RegistrySupplier<VaultLockboxBlock> LOCKBOX_CASE = register("lockbox_case",
+                () -> new VaultLockboxBlock(properties().strength(2.5F)));
         public static final RegistrySupplier<CasinoTableBlock> ROULETTE_TABLE = register("roulette_table",
                 () -> new CasinoTableBlock(CasinoTableBlock.Design.ROULETTE, properties().sound(SoundType.WOOD)));
         public static final RegistrySupplier<CasinoTableBlock> BLACKJACK_TABLE = register("blackjack_table",

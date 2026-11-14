@@ -1,0 +1,519 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/vault_atlas",
+    "particle": "craftdistrict:block/particles/particle_metal"
+  },
+  "elements": [
+    {
+      "name": "right_reinforced_jamb",
+      "from": [
+        0.0,
+        0,
+        10
+      ],
+      "to": [
+        2.5,
+        16.0,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.125,
+            0.9375,
+            0.375
+          ],
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.125,
+            0.9375,
+            0.875
+          ],
+          "cullface": "up"
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.125,
+            0.9375,
+            0.375
+          ],
+          "cullface": "south"
+        }
+      }
+    },
+    {
+      "name": "right_reinforced_jamb_east_joint_0",
+      "from": [
+        0.0,
+        0,
+        10.5
+      ],
+      "to": [
+        2.5,
+        14.5,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.1484375,
+            0.90625,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_reinforced_jamb_north_joint_0",
+      "from": [
+        0.0,
+        0,
+        10
+      ],
+      "to": [
+        0.7,
+        16.0,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.8325,
+            0.125,
+            0.9375,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_reinforced_jamb_north_joint_1",
+      "from": [
+        1.4,
+        0,
+        10
+      ],
+      "to": [
+        1.875,
+        16.0,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.65625,
+            0.125,
+            0.7275,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_reinforced_jamb_north_joint_4",
+      "from": [
+        0.7,
+        0,
+        10
+      ],
+      "to": [
+        1.4,
+        8,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.7275,
+            0.25,
+            0.8325,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_reinforced_jamb_north_joint_5",
+      "from": [
+        0.7,
+        8.7,
+        10
+      ],
+      "to": [
+        1.4,
+        16.0,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.7275,
+            0.125,
+            0.8325,
+            0.2390625
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_reinforced_jamb_north_joint_7",
+      "from": [
+        1.875,
+        14.5,
+        10
+      ],
+      "to": [
+        2.5,
+        16.0,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.125,
+            0.65625,
+            0.1484375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lintel",
+      "from": [
+        2.5,
+        14.5,
+        10
+      ],
+      "to": [
+        16,
+        16.0,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.125,
+            0.6802326,
+            0.875
+          ],
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.8197674,
+            0.125,
+            0.9375,
+            0.875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.125,
+            0.6802326,
+            0.875
+          ],
+          "cullface": "south"
+        }
+      }
+    },
+    {
+      "name": "lintel_down_joint_0",
+      "from": [
+        2.5,
+        14.5,
+        10.5
+      ],
+      "to": [
+        16,
+        16.0,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.125,
+            0.6802326,
+            0.8125
+          ]
+        }
+      }
+    },
+    {
+      "name": "machined_jamb_trim_30",
+      "from": [
+        1.875,
+        0,
+        9.75
+      ],
+      "to": [
+        2.5,
+        14.5,
+        10.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.9375,
+            0.3607724
+          ]
+        }
+      }
+    },
+    {
+      "name": "machined_jamb_trim_30_east_joint_0",
+      "from": [
+        1.875,
+        0,
+        9.75
+      ],
+      "to": [
+        2.5,
+        14.1234694,
+        10.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.1311224,
+            1.9375,
+            0.3607723
+          ]
+        }
+      }
+    },
+    {
+      "name": "machined_jamb_trim_30_west_joint_0",
+      "from": [
+        1.875,
+        0,
+        9.75
+      ],
+      "to": [
+        2.5,
+        14.5,
+        10
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.6875,
+            0.3607724
+          ]
+        }
+      }
+    },
+    {
+      "name": "machined_jamb_trim_30_up_joint_0",
+      "from": [
+        1.875,
+        0,
+        9.75
+      ],
+      "to": [
+        2.5,
+        14.5,
+        10
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.9375,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lintel_trim_down_joint_0",
+      "from": [
+        2.5,
+        14.1234694,
+        9.75
+      ],
+      "to": [
+        16,
+        14.5,
+        10.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.6802326,
+            0.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "lintel_trim_up_joint_0",
+      "from": [
+        2.5,
+        14.1234694,
+        9.75
+      ],
+      "to": [
+        16,
+        14.5,
+        10
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.6802326,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lintel_trim_north_joint_0",
+      "from": [
+        2.5,
+        14.1234694,
+        9.75
+      ],
+      "to": [
+        16,
+        14.5,
+        10.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.8197674,
+            0.125,
+            1.9375,
+            0.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "lintel_trim_south_joint_0",
+      "from": [
+        2.5,
+        14.1234694,
+        9.75
+      ],
+      "to": [
+        16,
+        14.5,
+        10.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.6802326,
+            0.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "jamb_anchor_46.6_40",
+      "from": [
+        0.7,
+        8,
+        9.5
+      ],
+      "to": [
+        1.4,
+        8.7,
+        10
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.9375,
+            0.875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.9375,
+            0.875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.9375,
+            0.875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.9375,
+            0.875
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.125,
+            1.9375,
+            0.875
+          ]
+        }
+      }
+    }
+  ]
+}

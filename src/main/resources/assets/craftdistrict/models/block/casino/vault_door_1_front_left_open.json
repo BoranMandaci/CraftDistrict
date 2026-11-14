@@ -1,0 +1,78 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/vault_atlas",
+    "particle": "craftdistrict:block/particles/particle_metal"
+  },
+  "elements": [
+    {
+      "name": "low_threshold",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        0.375,
+        6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            1.1802326,
+            0.125,
+            1.3197674,
+            0.875
+          ],
+          "cullface": "down"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.1802326,
+            0.125,
+            1.3197674,
+            0.875
+          ],
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            1.1802326,
+            0.125,
+            1.3197674,
+            0.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "low_threshold_up_joint_0",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        0.375,
+        6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.1802325,
+            0.125,
+            1.3197674,
+            0.875
+          ]
+        }
+      }
+    }
+  ]
+}
