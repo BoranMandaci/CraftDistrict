@@ -13,9 +13,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** The existing seat interaction owns occupancy, dismounting and disconnect/removal cleanup. */
 public final class CasinoStoolBlock extends RestaurantSeatBlock {
-    private static final VoxelShape SHAPE = Shapes.or(box(3, 0, 3, 13, 1.5, 13),
-            box(7, 1.5, 7, 9, 11, 9), box(4.25, 6, 4.25, 11.75, 6.5, 11.75),
-            box(2.5, 10.75, 2.5, 13.5, 13, 13.5)).optimize();
+    private static final VoxelShape SHAPE = Shapes.or(box(4, 0, 4, 12, 1.2, 12),
+            box(7.325, 1.2, 7.325, 8.675, 11.3, 8.675), box(5, 6, 5, 11, 6.375, 11),
+            box(3.5, 11.3, 3.5, 12.5, 13, 12.5)).optimize();
     //? if >=1.21 {
     public static final MapCodec<CasinoStoolBlock> CODEC = simpleCodec(CasinoStoolBlock::new);
     //?}

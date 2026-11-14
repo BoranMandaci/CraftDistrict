@@ -26,10 +26,10 @@ public final class CasinoDecorationBlock extends RotatableDecorationBlock {
     private final Design design;
     private static final VoxelShape[][] SHAPES = {
             RestaurantKitchenBlock.rotations(box(.5, 3, 13.75, 15.5, 13, 16)),
-            RestaurantKitchenBlock.rotations(box(1.75, 0, 3.5, 13.5, 3, 12.5)),
-            RestaurantKitchenBlock.rotations(box(3, 0, 3.5, 13, 5, 13)),
+            RestaurantKitchenBlock.rotations(box(2.75, 0, 4.5, 12.5, 4.125, 11.5)),
+            RestaurantKitchenBlock.rotations(box(5, 0, 4, 11, 4.5, 12.5)),
             RestaurantKitchenBlock.rotations(box(1.5, 0, 3.5, 14.5, 3.5, 12.5)),
-            RestaurantKitchenBlock.rotations(box(2, 0, 3, 14, 2.25, 13))};
+            RestaurantKitchenBlock.rotations(box(3.5, 0, 4.25, 12.5, 1.25, 11.75))};
     //? if >=1.21 {
     public static final MapCodec<CasinoDecorationBlock> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
             StringRepresentable.fromEnum(Design::values).fieldOf("design").forGetter((CasinoDecorationBlock b) -> b.design),

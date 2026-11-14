@@ -28,7 +28,7 @@ public final class CasinoMachineBlock extends MultiBlockDecorationBlock {
             {RestaurantKitchenBlock.rotations(Shapes.or(box(1, 0, 1, 15, 2, 15),
                     box(2, 2, 2.5, 14, 14.5, 14.5), box(1.5, 14.5, .75, 14.5, 16, 14.5)).optimize()),
                     RestaurantKitchenBlock.rotations(Shapes.or(box(2, 0, 5.5, 14, 16, 14.5),
-                            box(13, 1, 7, 16, 9, 10)).optimize())},
+                            box(13.75, 1, 7, 16, 9, 11.5)).optimize())},
             {RestaurantKitchenBlock.rotations(Shapes.or(box(1, 0, 1, 15, 2, 15),
                     box(2, 2, 3, 14, 13.5, 14.5), box(1.5, 13.5, 1, 14.5, 16, 14.5)).optimize()),
                     RestaurantKitchenBlock.rotations(box(1.75, 0, 5.25, 14.25, 16, 14.5))}};
