@@ -7,6 +7,11 @@ import com.craftdistrict.block.CasinoDecorationBlock;
 import com.craftdistrict.block.CasinoStoolBlock;
 import com.craftdistrict.block.CasinoTableBlock;
 import com.craftdistrict.block.CasinoSeatBlock;
+import com.craftdistrict.block.CasinoCashierCounterBlock;
+import com.craftdistrict.block.CasinoInteriorPropBlock;
+import com.craftdistrict.block.CasinoChandelierBlock;
+import com.craftdistrict.block.CasinoVipDividerBlock;
+import com.craftdistrict.block.CasinoVipBoothBlock;
 import com.craftdistrict.block.BigSixWheelBlock;
 import com.craftdistrict.block.TallDecorationBlock;
 import com.craftdistrict.block.WideTallDecorationBlock;
@@ -258,6 +263,18 @@ public final class CraftDistrictBlocks {
     }
 
     public static final class Casino {
+        public static final RegistrySupplier<CasinoCashierCounterBlock> CASHIER_COUNTER = register("casino_cashier_counter",
+                () -> new CasinoCashierCounterBlock(properties().sound(SoundType.WOOD)));
+        public static final RegistrySupplier<CasinoInteriorPropBlock> CARPET = register("casino_carpet",
+                () -> new CasinoInteriorPropBlock(CasinoInteriorPropBlock.Design.CARPET, properties().strength(.2F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<CasinoChandelierBlock> CHANDELIER = register("casino_chandelier",
+                () -> new CasinoChandelierBlock(properties().lightLevel(state -> com.craftdistrict.lighting.LightControls.emission(state, 15))));
+        public static final RegistrySupplier<CasinoVipDividerBlock> VIP_DIVIDER = register("casino_vip_divider",
+                () -> new CasinoVipDividerBlock(properties()));
+        public static final RegistrySupplier<CasinoVipBoothBlock> VIP_BOOTH = register("casino_vip_booth",
+                () -> new CasinoVipBoothBlock(properties().sound(SoundType.WOOL)));
+        public static final RegistrySupplier<CasinoInteriorPropBlock> CASH_COUNTING_MACHINE = register("casino_cash_counting_machine",
+                () -> new CasinoInteriorPropBlock(CasinoInteriorPropBlock.Design.BILL_COUNTER, properties().strength(1.0F)));
         public static final RegistrySupplier<CasinoTableBlock> ROULETTE_TABLE = register("roulette_table",
                 () -> new CasinoTableBlock(CasinoTableBlock.Design.ROULETTE, properties().sound(SoundType.WOOD)));
         public static final RegistrySupplier<CasinoTableBlock> BLACKJACK_TABLE = register("blackjack_table",

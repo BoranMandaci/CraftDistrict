@@ -1,0 +1,85 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/casino_atlas",
+    "interior": "craftdistrict:block/casino/casino_interior_atlas",
+    "particle": "craftdistrict:block/particles/particle_red"
+  },
+  "elements": [
+    {
+      "name": "seamless_art_deco_carpet",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        0.125,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ],
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            0.03125,
+            0.03125,
+            3.96875,
+            3.96875
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ],
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ],
+          "cullface": "south"
+        }
+      }
+    }
+  ]
+}

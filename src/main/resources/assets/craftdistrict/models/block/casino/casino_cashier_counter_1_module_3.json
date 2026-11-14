@@ -1,0 +1,1574 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/casino_atlas",
+    "interior": "craftdistrict:block/casino/casino_interior_atlas",
+    "particle": "craftdistrict:block/particles/particle_wood"
+  },
+  "elements": [
+    {
+      "name": "left_security_mullion",
+      "from": [
+        0,
+        0,
+        12.5
+      ],
+      "to": [
+        0.5,
+        13.75,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_security_mullion_east_joint_0",
+      "from": [
+        0,
+        0.75,
+        12.5
+      ],
+      "to": [
+        0.5,
+        13.75,
+        15
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4170455
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_security_mullion",
+      "from": [
+        15.5,
+        0,
+        12.5
+      ],
+      "to": [
+        16,
+        13.75,
+        15
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_security_mullion_west_joint_0",
+      "from": [
+        15.5,
+        0.75,
+        12.5
+      ],
+      "to": [
+        16,
+        13.75,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4170455
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_left_east_joint_0",
+      "from": [
+        0.5,
+        0.15,
+        12.5
+      ],
+      "to": [
+        5.25,
+        0.75,
+        15
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_left_up_joint_0",
+      "from": [
+        0.5,
+        0,
+        12.5
+      ],
+      "to": [
+        4.75,
+        0.75,
+        15
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.8980263,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_left_north_joint_0",
+      "from": [
+        0.5,
+        0,
+        12.5
+      ],
+      "to": [
+        4.75,
+        0.75,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.6019737,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_left_north_joint_1",
+      "from": [
+        5,
+        0.15,
+        12.5
+      ],
+      "to": [
+        5.25,
+        0.75,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.5822368,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_left_north_joint_2",
+      "from": [
+        4.75,
+        0.5,
+        12.5
+      ],
+      "to": [
+        5,
+        0.75,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5822368,
+            0.0625,
+            2.6019737,
+            0.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_left_south_joint_0",
+      "from": [
+        0.5,
+        0,
+        12.5
+      ],
+      "to": [
+        4.75,
+        0.75,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.8980263,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_left_south_joint_1",
+      "from": [
+        5,
+        0.15,
+        12.5
+      ],
+      "to": [
+        5.25,
+        0.75,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.9177632,
+            0.0625,
+            2.9375,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_left_south_joint_2",
+      "from": [
+        4.75,
+        0.5,
+        12.5
+      ],
+      "to": [
+        5,
+        0.75,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.8980263,
+            0.0625,
+            2.9177632,
+            0.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_right_west_joint_0",
+      "from": [
+        10.75,
+        0.15,
+        12.5
+      ],
+      "to": [
+        15.5,
+        0.75,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_right_up_joint_0",
+      "from": [
+        11.25,
+        0,
+        12.5
+      ],
+      "to": [
+        15.5,
+        0.75,
+        15
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.6019737,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_right_north_joint_0",
+      "from": [
+        11.25,
+        0,
+        12.5
+      ],
+      "to": [
+        15.5,
+        0.75,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.8980263,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_right_north_joint_1",
+      "from": [
+        10.75,
+        0.15,
+        12.5
+      ],
+      "to": [
+        11,
+        0.75,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.9177632,
+            0.0625,
+            2.9375,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_right_north_joint_2",
+      "from": [
+        11,
+        0.5,
+        12.5
+      ],
+      "to": [
+        11.25,
+        0.75,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.8980263,
+            0.0625,
+            2.9177632,
+            0.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_right_south_joint_0",
+      "from": [
+        11.25,
+        0,
+        12.5
+      ],
+      "to": [
+        15.5,
+        0.75,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.6019737,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_right_south_joint_1",
+      "from": [
+        10.75,
+        0.15,
+        12.5
+      ],
+      "to": [
+        11,
+        0.75,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.5822368,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_sill_right_south_joint_2",
+      "from": [
+        11,
+        0.5,
+        12.5
+      ],
+      "to": [
+        11.25,
+        0.75,
+        15
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5822368,
+            0.0625,
+            2.6019737,
+            0.1875
+          ]
+        }
+      }
+    },
+    {
+      "name": "opening_jamb_left",
+      "from": [
+        4.75,
+        0.75,
+        12.5
+      ],
+      "to": [
+        5.25,
+        4.5,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "opening_jamb_left_east_joint_0",
+      "from": [
+        4.75,
+        0.75,
+        12.5
+      ],
+      "to": [
+        5.25,
+        4.25,
+        15
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0875,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "opening_jamb_right",
+      "from": [
+        10.75,
+        0.75,
+        12.5
+      ],
+      "to": [
+        11.25,
+        4.5,
+        15
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "opening_jamb_right_west_joint_0",
+      "from": [
+        10.75,
+        0.75,
+        12.5
+      ],
+      "to": [
+        11.25,
+        4.25,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0875,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "opening_lintel",
+      "from": [
+        5.25,
+        4.25,
+        12.5
+      ],
+      "to": [
+        10.75,
+        4.5,
+        15
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_protective_glass",
+      "from": [
+        0.5,
+        4.5,
+        13.1
+      ],
+      "to": [
+        15.5,
+        13.75,
+        13.7
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            12.125,
+            0.125,
+            15.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            12.125,
+            0.125,
+            15.875,
+            3.875
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_glass_left",
+      "from": [
+        0.5,
+        0.75,
+        13.1
+      ],
+      "to": [
+        4.75,
+        4.5,
+        13.7
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            12.125,
+            0.125,
+            15.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            12.125,
+            0.125,
+            15.875,
+            3.875
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_glass_right",
+      "from": [
+        11.25,
+        0.75,
+        13.1
+      ],
+      "to": [
+        15.5,
+        4.5,
+        13.7
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            12.125,
+            0.125,
+            15.875,
+            3.875
+          ]
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            12.125,
+            0.125,
+            15.875,
+            3.875
+          ]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "dark_cashier_header",
+      "from": [
+        0,
+        13.75,
+        12.5
+      ],
+      "to": [
+        16,
+        15.5,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.4375,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.4375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            4.0625,
+            0.0625,
+            11.9375,
+            1.9375
+          ]
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            4.0625,
+            0.0625,
+            11.9375,
+            1.9375
+          ]
+        }
+      }
+    },
+    {
+      "name": "dark_cashier_header_down_joint_0",
+      "from": [
+        0.5,
+        13.75,
+        12.5
+      ],
+      "to": [
+        15.5,
+        15.5,
+        15
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0742188,
+            0.0625,
+            0.4257812,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "header_brass_cap",
+      "from": [
+        0,
+        15.5,
+        12.5
+      ],
+      "to": [
+        16,
+        15.75,
+        15
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction_tray",
+      "from": [
+        4.75,
+        0,
+        8.75
+      ],
+      "to": [
+        11.25,
+        0.15,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.0625,
+            0.0625,
+            1.4375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            1.0625,
+            0.0625,
+            1.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction_tray_west_joint_0",
+      "from": [
+        4.75,
+        0,
+        8.75
+      ],
+      "to": [
+        11.25,
+        0.15,
+        12.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.0625,
+            0.0625,
+            1.2708333,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction_tray_west_joint_1",
+      "from": [
+        4.75,
+        0,
+        15
+      ],
+      "to": [
+        11.25,
+        0.15,
+        15.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.4097222,
+            0.0625,
+            1.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction_tray_east_joint_0",
+      "from": [
+        4.75,
+        0,
+        8.75
+      ],
+      "to": [
+        11.25,
+        0.15,
+        12.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.2291667,
+            0.0625,
+            1.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction_tray_east_joint_1",
+      "from": [
+        4.75,
+        0,
+        15
+      ],
+      "to": [
+        11.25,
+        0.15,
+        15.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.0625,
+            0.0625,
+            1.0902778,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction_tray_up_joint_0",
+      "from": [
+        5.25,
+        0,
+        8.75
+      ],
+      "to": [
+        10.75,
+        0.15,
+        15.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.0913462,
+            0.0625,
+            1.4086538,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction_tray_up_joint_1",
+      "from": [
+        10.75,
+        0,
+        8.75
+      ],
+      "to": [
+        11,
+        0.15,
+        12.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.4086538,
+            0.0625,
+            1.4230769,
+            0.2708333
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction_tray_up_joint_2",
+      "from": [
+        10.75,
+        0,
+        15
+      ],
+      "to": [
+        11,
+        0.15,
+        15.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.4086538,
+            0.4097222,
+            1.4230769,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction_tray_up_joint_3",
+      "from": [
+        5,
+        0,
+        8.75
+      ],
+      "to": [
+        5.25,
+        0.15,
+        12.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.0769231,
+            0.0625,
+            1.0913462,
+            0.2708333
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction_tray_up_joint_4",
+      "from": [
+        5,
+        0,
+        15
+      ],
+      "to": [
+        5.25,
+        0.15,
+        15.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.0769231,
+            0.4097222,
+            1.0913462,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_left_lip",
+      "from": [
+        4.75,
+        0.15,
+        8.75
+      ],
+      "to": [
+        5,
+        0.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.0625,
+            1.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.0625,
+            1.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_left_lip_west_joint_0",
+      "from": [
+        4.75,
+        0.15,
+        8.75
+      ],
+      "to": [
+        5,
+        0.5,
+        12.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.0625,
+            1.7708333,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_left_lip_west_joint_1",
+      "from": [
+        4.75,
+        0.15,
+        15
+      ],
+      "to": [
+        5,
+        0.5,
+        15.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.9097222,
+            0.0625,
+            1.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_left_lip_east_joint_0",
+      "from": [
+        4.75,
+        0.15,
+        8.75
+      ],
+      "to": [
+        5,
+        0.5,
+        12.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.7291667,
+            0.0625,
+            1.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_left_lip_east_joint_1",
+      "from": [
+        4.75,
+        0.15,
+        15
+      ],
+      "to": [
+        5,
+        0.5,
+        15.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.0625,
+            1.5902778,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_left_lip_up_joint_0",
+      "from": [
+        4.75,
+        0.15,
+        8.75
+      ],
+      "to": [
+        5,
+        0.5,
+        12.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.0625,
+            1.9375,
+            0.2708333
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_left_lip_up_joint_1",
+      "from": [
+        4.75,
+        0.15,
+        15
+      ],
+      "to": [
+        5,
+        0.5,
+        15.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.4097222,
+            1.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_right_lip",
+      "from": [
+        11,
+        0.15,
+        8.75
+      ],
+      "to": [
+        11.25,
+        0.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.0625,
+            1.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.0625,
+            1.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_right_lip_west_joint_0",
+      "from": [
+        11,
+        0.15,
+        8.75
+      ],
+      "to": [
+        11.25,
+        0.5,
+        12.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.0625,
+            1.7708333,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_right_lip_west_joint_1",
+      "from": [
+        11,
+        0.15,
+        15
+      ],
+      "to": [
+        11.25,
+        0.5,
+        15.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.9097222,
+            0.0625,
+            1.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_right_lip_east_joint_0",
+      "from": [
+        11,
+        0.15,
+        8.75
+      ],
+      "to": [
+        11.25,
+        0.5,
+        12.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.7291667,
+            0.0625,
+            1.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_right_lip_east_joint_1",
+      "from": [
+        11,
+        0.15,
+        15
+      ],
+      "to": [
+        11.25,
+        0.5,
+        15.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.0625,
+            1.5902778,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_right_lip_up_joint_0",
+      "from": [
+        11,
+        0.15,
+        8.75
+      ],
+      "to": [
+        11.25,
+        0.5,
+        12.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.0625,
+            1.9375,
+            0.2708333
+          ]
+        }
+      }
+    },
+    {
+      "name": "tray_right_lip_up_joint_1",
+      "from": [
+        11,
+        0.15,
+        15
+      ],
+      "to": [
+        11.25,
+        0.5,
+        15.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.5625,
+            0.4097222,
+            1.9375,
+            0.4375
+          ]
+        }
+      }
+    }
+  ]
+}

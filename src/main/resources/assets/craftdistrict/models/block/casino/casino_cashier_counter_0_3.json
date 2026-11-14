@@ -1,0 +1,492 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/casino_atlas",
+    "interior": "craftdistrict:block/casino/casino_interior_atlas",
+    "particle": "craftdistrict:block/particles/particle_wood"
+  },
+  "elements": [
+    {
+      "name": "recessed_plinth",
+      "from": [
+        0,
+        0,
+        0.5
+      ],
+      "to": [
+        16,
+        1.25,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.25,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.0625,
+            0.4375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.25,
+            0.4375,
+            0.4375
+          ],
+          "cullface": "down"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "plinth_brass",
+      "from": [
+        0,
+        1.25,
+        0.5
+      ],
+      "to": [
+        16,
+        1.5,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "walnut_cabinet",
+      "from": [
+        0,
+        1.5,
+        0.5
+      ],
+      "to": [
+        16,
+        14.5,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.75,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.0625,
+            5.9375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            12.0625,
+            15.9375,
+            15.9375
+          ]
+        }
+      }
+    },
+    {
+      "name": "counter_gold_reveal",
+      "from": [
+        0,
+        14.5,
+        0
+      ],
+      "to": [
+        16,
+        14.75,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "north"
+        }
+      }
+    },
+    {
+      "name": "counter_gold_reveal_down_joint_0",
+      "from": [
+        0,
+        14.5,
+        0
+      ],
+      "to": [
+        16,
+        14.75,
+        0.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.4316406,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "dark_transaction_top",
+      "from": [
+        0,
+        14.75,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.0625,
+            0.75,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.75,
+            0.0625,
+            0.9375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.0625,
+            0.9375,
+            0.4375
+          ],
+          "cullface": "north"
+        }
+      }
+    },
+    {
+      "name": "dark_transaction_top_up_joint_0",
+      "from": [
+        0.375,
+        14.75,
+        0
+      ],
+      "to": [
+        4.6,
+        16,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.5712891,
+            0.0625,
+            0.6703125,
+            0.25
+          ],
+          "cullface": "up"
+        }
+      }
+    },
+    {
+      "name": "dark_transaction_top_up_joint_1",
+      "from": [
+        4.6,
+        14.75,
+        6
+      ],
+      "to": [
+        5,
+        16,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.6703125,
+            0.1328125,
+            0.6796875,
+            0.25
+          ],
+          "cullface": "up"
+        }
+      }
+    },
+    {
+      "name": "dark_transaction_top_up_joint_2",
+      "from": [
+        11.4,
+        14.75,
+        0
+      ],
+      "to": [
+        15.625,
+        16,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.8296875,
+            0.0625,
+            0.9287109,
+            0.25
+          ],
+          "cullface": "up"
+        }
+      }
+    },
+    {
+      "name": "dark_transaction_top_up_joint_3",
+      "from": [
+        11,
+        14.75,
+        6
+      ],
+      "to": [
+        11.4,
+        16,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.8203125,
+            0.1328125,
+            0.8296875,
+            0.25
+          ],
+          "cullface": "up"
+        }
+      }
+    },
+    {
+      "name": "dark_transaction_top_up_joint_4",
+      "from": [
+        5,
+        14.75,
+        6
+      ],
+      "to": [
+        11,
+        16,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.6796875,
+            0.1328125,
+            0.8203125,
+            0.25
+          ],
+          "cullface": "up"
+        }
+      }
+    },
+    {
+      "name": "dark_transaction_top_up_joint_5",
+      "from": [
+        15.625,
+        14.75,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        2.75
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.9287109,
+            0.0625,
+            0.9375,
+            0.0947266
+          ],
+          "cullface": "up"
+        }
+      }
+    },
+    {
+      "name": "dark_transaction_top_up_joint_6",
+      "from": [
+        15.625,
+        14.75,
+        4.5
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.9287109,
+            0.1152344,
+            0.9375,
+            0.25
+          ],
+          "cullface": "up"
+        }
+      }
+    },
+    {
+      "name": "dark_transaction_top_up_joint_7",
+      "from": [
+        0,
+        14.75,
+        0
+      ],
+      "to": [
+        0.375,
+        16,
+        2.75
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.0625,
+            0.5712891,
+            0.0947266
+          ],
+          "cullface": "up"
+        }
+      }
+    },
+    {
+      "name": "dark_transaction_top_up_joint_8",
+      "from": [
+        0,
+        14.75,
+        4.5
+      ],
+      "to": [
+        0.375,
+        16,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            0.5625,
+            0.1152344,
+            0.5712891,
+            0.25
+          ],
+          "cullface": "up"
+        }
+      }
+    }
+  ]
+}

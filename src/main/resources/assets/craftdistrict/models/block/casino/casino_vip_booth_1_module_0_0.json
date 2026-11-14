@@ -1,0 +1,673 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/casino_atlas",
+    "interior": "craftdistrict:block/casino/casino_interior_atlas",
+    "particle": "craftdistrict:block/particles/particle_wood"
+  },
+  "elements": [
+    {
+      "name": "tall_walnut_back",
+      "from": [
+        0,
+        0,
+        13.6
+      ],
+      "to": [
+        16,
+        10.25,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.2571203
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.2571203
+          ],
+          "cullface": "east"
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.2571203
+          ],
+          "cullface": "south"
+        }
+      }
+    },
+    {
+      "name": "tall_walnut_back_north_joint_0",
+      "from": [
+        0,
+        9,
+        13.6
+      ],
+      "to": [
+        16,
+        10.25,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.0862342
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_back_gold_edge",
+      "from": [
+        0,
+        10.25,
+        13.6
+      ],
+      "to": [
+        16,
+        10.5,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "south"
+        }
+      }
+    },
+    {
+      "name": "channelled_south_back",
+      "from": [
+        0,
+        0,
+        12.5
+      ],
+      "to": [
+        16,
+        9,
+        13.6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_south_back_west_joint_0",
+      "from": [
+        0,
+        0,
+        12.5
+      ],
+      "to": [
+        16,
+        9,
+        13.6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.2913136
+          ],
+          "cullface": "west"
+        }
+      }
+    },
+    {
+      "name": "channelled_south_back_east_joint_0",
+      "from": [
+        0,
+        0,
+        12.5
+      ],
+      "to": [
+        16,
+        9,
+        13.6
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.2913136
+          ],
+          "cullface": "east"
+        }
+      }
+    },
+    {
+      "name": "channelled_south_back_north_joint_0",
+      "from": [
+        2.5,
+        0,
+        12.5
+      ],
+      "to": [
+        13.5,
+        9,
+        13.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            1.2929688,
+            4.0625,
+            6.7070312,
+            8.8675847
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_south_back_north_joint_1",
+      "from": [
+        13.5,
+        0,
+        12.5
+      ],
+      "to": [
+        13.8,
+        3.5,
+        13.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            1.1453125,
+            6.9989407,
+            1.2929688,
+            8.8675848
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_south_back_north_joint_2",
+      "from": [
+        13.5,
+        4,
+        12.5
+      ],
+      "to": [
+        13.8,
+        9,
+        13.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            1.1453125,
+            4.0625,
+            1.2929688,
+            6.7319915
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_south_back_north_joint_3",
+      "from": [
+        13.8,
+        4,
+        12.5
+      ],
+      "to": [
+        16,
+        9,
+        13.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            0.0625,
+            4.0625,
+            1.1453125,
+            6.7319915
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_south_back_north_joint_4",
+      "from": [
+        2.2,
+        0,
+        12.5
+      ],
+      "to": [
+        2.5,
+        3.5,
+        13.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            6.7070312,
+            6.9989407,
+            6.8546875,
+            8.8675848
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_south_back_north_joint_5",
+      "from": [
+        2.2,
+        4,
+        12.5
+      ],
+      "to": [
+        2.5,
+        9,
+        13.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            6.7070312,
+            4.0625,
+            6.8546875,
+            6.7319915
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_south_back_north_joint_6",
+      "from": [
+        0,
+        4,
+        12.5
+      ],
+      "to": [
+        2.2,
+        9,
+        13.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            6.8546875,
+            4.0625,
+            7.9375,
+            6.7319915
+          ]
+        }
+      }
+    },
+    {
+      "name": "end_arm_0",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        2.2,
+        3.5,
+        12.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.1634615
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.1634615
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.1634615
+          ],
+          "cullface": "north"
+        }
+      }
+    },
+    {
+      "name": "end_arm_0_up_joint_0",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        2.2,
+        3.5,
+        0.2
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.0685
+          ]
+        }
+      }
+    },
+    {
+      "name": "end_arm_pad_0",
+      "from": [
+        0,
+        3.5,
+        0.2
+      ],
+      "to": [
+        2.5,
+        4,
+        12.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "end_arm_pad_0_down_joint_0",
+      "from": [
+        2.2,
+        3.5,
+        0.2
+      ],
+      "to": [
+        2.5,
+        4,
+        12.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.3925,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "end_arm_1",
+      "from": [
+        13.8,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        3.5,
+        12.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.1634615
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.1634615
+          ],
+          "cullface": "east"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.1634615
+          ],
+          "cullface": "north"
+        }
+      }
+    },
+    {
+      "name": "end_arm_1_up_joint_0",
+      "from": [
+        13.8,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        3.5,
+        0.2
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.0685
+          ]
+        }
+      }
+    },
+    {
+      "name": "end_arm_pad_1",
+      "from": [
+        13.5,
+        3.5,
+        0.2
+      ],
+      "to": [
+        16,
+        4,
+        12.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ],
+          "cullface": "east"
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "end_arm_pad_1_down_joint_0",
+      "from": [
+        13.5,
+        3.5,
+        0.2
+      ],
+      "to": [
+        13.8,
+        4,
+        12.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.1075,
+            0.4375
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,4961 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/casino_atlas",
+    "interior": "craftdistrict:block/casino/casino_interior_atlas",
+    "particle": "craftdistrict:block/particles/particle_brass"
+  },
+  "elements": [
+    {
+      "name": "ceiling_canopy",
+      "from": [
+        13,
+        15,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        3
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.25,
+            2.75,
+            0.4375
+          ],
+          "cullface": "up"
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "ceiling_canopy_down_joint_0",
+      "from": [
+        13,
+        15,
+        0
+      ],
+      "to": [
+        13.6,
+        16,
+        3
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.6,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "ceiling_canopy_down_joint_3",
+      "from": [
+        13.6,
+        15,
+        2.4
+      ],
+      "to": [
+        16,
+        16,
+        3
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.6,
+            0.0625,
+            2.75,
+            0.1
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_inset",
+      "from": [
+        13.6,
+        14.5,
+        0
+      ],
+      "to": [
+        16,
+        15,
+        2.4
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.0625,
+            0.4375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.25,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_inset_down_joint_0",
+      "from": [
+        13.6,
+        14.5,
+        0
+      ],
+      "to": [
+        15.5,
+        15,
+        2.4
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.2109375,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_inset_down_joint_3",
+      "from": [
+        15.5,
+        14.5,
+        0.5
+      ],
+      "to": [
+        16,
+        15,
+        2.4
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.2109375,
+            0.0625,
+            0.25,
+            0.2109375
+          ]
+        }
+      }
+    },
+    {
+      "name": "suspension_stem_west_joint_0",
+      "from": [
+        15.5,
+        10,
+        0
+      ],
+      "to": [
+        16,
+        14.5,
+        0.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.3585526
+          ]
+        }
+      }
+    },
+    {
+      "name": "suspension_stem_south_joint_0",
+      "from": [
+        15.5,
+        10,
+        0
+      ],
+      "to": [
+        16,
+        14.5,
+        0.5
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.3585526
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_west_joint_0",
+      "from": [
+        14.75,
+        8.75,
+        0
+      ],
+      "to": [
+        16,
+        9,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.3625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_west_joint_1",
+      "from": [
+        14.75,
+        9.4,
+        0
+      ],
+      "to": [
+        16,
+        10,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.2425
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_west_joint_3",
+      "from": [
+        14.75,
+        9,
+        0.35
+      ],
+      "to": [
+        16,
+        9.4,
+        1.25
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.8025,
+            0.2425,
+            2.9375,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_down_joint_0",
+      "from": [
+        14.75,
+        8.75,
+        0
+      ],
+      "to": [
+        15.65,
+        10,
+        1.25
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.6975,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_down_joint_3",
+      "from": [
+        15.65,
+        8.75,
+        0.35
+      ],
+      "to": [
+        16,
+        10,
+        1.25
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.6975,
+            0.0625,
+            2.75,
+            0.1975
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_up_joint_0",
+      "from": [
+        14.75,
+        8.75,
+        0
+      ],
+      "to": [
+        15.5,
+        10,
+        1.25
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.25,
+            2.675,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_up_joint_3",
+      "from": [
+        15.5,
+        8.75,
+        0.5
+      ],
+      "to": [
+        16,
+        10,
+        1.25
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.675,
+            0.325,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_south_joint_0",
+      "from": [
+        14.75,
+        8.75,
+        0
+      ],
+      "to": [
+        15.65,
+        10,
+        1.25
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.6975,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_south_joint_2",
+      "from": [
+        15.65,
+        8.75,
+        0
+      ],
+      "to": [
+        16,
+        9,
+        1.25
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.6975,
+            0.3625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_south_joint_3",
+      "from": [
+        15.65,
+        9.4,
+        0
+      ],
+      "to": [
+        16,
+        10,
+        1.25
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.6975,
+            0.0625,
+            2.75,
+            0.2425
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_x_down_joint_0",
+      "from": [
+        5.4,
+        9,
+        0
+      ],
+      "to": [
+        14.75,
+        9.4,
+        0.35
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5693182,
+            0.0625,
+            2.7286932,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_x_up_joint_0",
+      "from": [
+        5.4,
+        9,
+        0
+      ],
+      "to": [
+        14.75,
+        9.4,
+        0.35
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5693182,
+            0.25,
+            2.7286932,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_x_south_joint_0",
+      "from": [
+        5.4,
+        9,
+        0
+      ],
+      "to": [
+        14.75,
+        9.4,
+        0.35
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5693182,
+            0.0625,
+            2.7286932,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_z_west_joint_1",
+      "from": [
+        15.65,
+        9,
+        1.25
+      ],
+      "to": [
+        16,
+        9.4,
+        10.6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.7713068,
+            0.0625,
+            2.9306818,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_z_down_joint_1",
+      "from": [
+        15.65,
+        9,
+        1.25
+      ],
+      "to": [
+        16,
+        9.4,
+        10.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0693182,
+            2.75,
+            0.2286932
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_z_up_joint_1",
+      "from": [
+        15.65,
+        9,
+        1.25
+      ],
+      "to": [
+        16,
+        9.4,
+        10.6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.2713068,
+            2.75,
+            0.4306818
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_0",
+      "from": [
+        4.6,
+        7.4,
+        0
+      ],
+      "to": [
+        5.4,
+        9.4,
+        0.4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.25,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_0_west_joint_0",
+      "from": [
+        4.6,
+        7.5,
+        0
+      ],
+      "to": [
+        5.4,
+        9.4,
+        0.4
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.41875
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_0_east_joint_0",
+      "from": [
+        4.6,
+        7.5,
+        0
+      ],
+      "to": [
+        5.4,
+        9,
+        0.4
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.1375,
+            2.75,
+            0.41875
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_0_east_joint_2",
+      "from": [
+        4.6,
+        9,
+        0.35
+      ],
+      "to": [
+        5.4,
+        9.4,
+        0.4
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.5859375,
+            0.1375
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_0_south_joint_0",
+      "from": [
+        5.25,
+        7.5,
+        0
+      ],
+      "to": [
+        5.4,
+        9.4,
+        0.4
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.8671875,
+            0.0625,
+            2.9375,
+            0.41875
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_0_south_joint_1",
+      "from": [
+        4.6,
+        7.5,
+        0
+      ],
+      "to": [
+        5.25,
+        9.4,
+        0.4
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.8671875,
+            0.41875
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_3",
+      "from": [
+        15.6,
+        7.4,
+        10.6
+      ],
+      "to": [
+        16,
+        9.4,
+        11.4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_3_west_joint_0",
+      "from": [
+        15.6,
+        7.5,
+        10.6
+      ],
+      "to": [
+        16,
+        9.4,
+        11.4
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.41875
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_3_north_joint_0",
+      "from": [
+        15.6,
+        7.5,
+        10.6
+      ],
+      "to": [
+        15.65,
+        9.4,
+        11.4
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.9140625,
+            0.0625,
+            2.9375,
+            0.41875
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_3_north_joint_2",
+      "from": [
+        15.65,
+        7.5,
+        10.6
+      ],
+      "to": [
+        16,
+        9,
+        11.4
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.1375,
+            2.9140625,
+            0.41875
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_3_south_joint_0",
+      "from": [
+        15.6,
+        7.5,
+        10.6
+      ],
+      "to": [
+        16,
+        9.4,
+        11.4
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.41875
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_7",
+      "from": [
+        4,
+        6.5,
+        0
+      ],
+      "to": [
+        5.25,
+        7.5,
+        4
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_7_east_joint_1",
+      "from": [
+        4,
+        6.5,
+        0.6
+      ],
+      "to": [
+        5.25,
+        7.4,
+        3.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5859375,
+            0.1,
+            2.721875,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_7_east_joint_3",
+      "from": [
+        4,
+        7.4,
+        0.6
+      ],
+      "to": [
+        5.25,
+        7.5,
+        3.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5859375,
+            0.0625,
+            2.721875,
+            0.1
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_7_down_joint_0",
+      "from": [
+        4,
+        6.5,
+        0
+      ],
+      "to": [
+        4.4,
+        7.5,
+        4
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.6825,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_7_down_joint_2",
+      "from": [
+        4.4,
+        6.5,
+        0.6
+      ],
+      "to": [
+        5.25,
+        7.5,
+        4
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.6825,
+            0.0625,
+            2.9375,
+            0.221875
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_7_up_joint_0",
+      "from": [
+        4,
+        6.5,
+        0
+      ],
+      "to": [
+        4.4,
+        7.5,
+        4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.25,
+            2.6825,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_7_up_joint_2",
+      "from": [
+        4.4,
+        6.5,
+        0.6
+      ],
+      "to": [
+        4.6,
+        7.5,
+        4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.6825,
+            0.278125,
+            2.7425,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_7_up_joint_4",
+      "from": [
+        4.6,
+        6.5,
+        0.6
+      ],
+      "to": [
+        5.25,
+        7.5,
+        4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.7425,
+            0.278125,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_9",
+      "from": [
+        5.25,
+        6.5,
+        3.5
+      ],
+      "to": [
+        7.25,
+        7.5,
+        4
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_9_south_joint_0",
+      "from": [
+        5.25,
+        6.5,
+        3.5
+      ],
+      "to": [
+        6,
+        7.5,
+        4
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.703125,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_13",
+      "from": [
+        6,
+        6.5,
+        4
+      ],
+      "to": [
+        7.25,
+        7.5,
+        8
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_13_east_joint_0",
+      "from": [
+        6,
+        6.5,
+        4
+      ],
+      "to": [
+        7.25,
+        7.5,
+        5.4
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.80625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_13_east_joint_1",
+      "from": [
+        6,
+        6.5,
+        6.6
+      ],
+      "to": [
+        7.25,
+        7.5,
+        7.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.609375,
+            0.0625,
+            2.69375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_13_down_joint_0",
+      "from": [
+        6,
+        6.5,
+        4
+      ],
+      "to": [
+        6.4,
+        7.5,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.6825,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_13_down_joint_1",
+      "from": [
+        6.4,
+        6.5,
+        4
+      ],
+      "to": [
+        7.25,
+        7.5,
+        5.4
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.6825,
+            0.30625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_13_down_joint_2",
+      "from": [
+        6.4,
+        6.5,
+        6.6
+      ],
+      "to": [
+        7.25,
+        7.5,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.6825,
+            0.0625,
+            2.9375,
+            0.19375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_13_up_joint_0",
+      "from": [
+        6,
+        6.5,
+        4
+      ],
+      "to": [
+        6.4,
+        7.5,
+        8
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.6825,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_13_up_joint_1",
+      "from": [
+        6.4,
+        6.5,
+        4
+      ],
+      "to": [
+        7.25,
+        7.5,
+        5.4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.6825,
+            0.0625,
+            2.9375,
+            0.19375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_13_up_joint_2",
+      "from": [
+        6.4,
+        6.5,
+        6.6
+      ],
+      "to": [
+        7.25,
+        7.5,
+        8
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.6825,
+            0.30625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_15",
+      "from": [
+        7.25,
+        6.5,
+        7.5
+      ],
+      "to": [
+        11.25,
+        7.5,
+        8
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_15_south_joint_0",
+      "from": [
+        7.25,
+        6.5,
+        7.5
+      ],
+      "to": [
+        10,
+        7.5,
+        8
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.8203125,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_17",
+      "from": [
+        10,
+        6.5,
+        8
+      ],
+      "to": [
+        11.25,
+        7.5,
+        12
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_17_east_joint_0",
+      "from": [
+        10,
+        6.5,
+        8
+      ],
+      "to": [
+        11.25,
+        7.5,
+        10.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.6796875,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_19",
+      "from": [
+        11.25,
+        6.5,
+        10.75
+      ],
+      "to": [
+        16,
+        7.5,
+        12
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_19_down_joint_0",
+      "from": [
+        11.25,
+        6.5,
+        10.75
+      ],
+      "to": [
+        15.4,
+        7.5,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.7263158,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_19_down_joint_2",
+      "from": [
+        15.4,
+        6.5,
+        11.6
+      ],
+      "to": [
+        16,
+        7.5,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.7263158,
+            0.0625,
+            2.75,
+            0.1825
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_19_up_joint_0",
+      "from": [
+        11.25,
+        6.5,
+        10.75
+      ],
+      "to": [
+        15.4,
+        7.5,
+        12
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.7263158,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_19_up_joint_1",
+      "from": [
+        15.4,
+        6.5,
+        11.6
+      ],
+      "to": [
+        15.6,
+        7.5,
+        12
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.7263158,
+            0.3175,
+            2.7342105,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_19_up_joint_4",
+      "from": [
+        15.6,
+        6.5,
+        11.6
+      ],
+      "to": [
+        16,
+        7.5,
+        12
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.7342105,
+            0.3175,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "art_deco_outer_ring_19_north_joint_0",
+      "from": [
+        11.25,
+        6.5,
+        10.75
+      ],
+      "to": [
+        15.4,
+        7.5,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.7736842,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_0",
+      "from": [
+        4.4,
+        6,
+        0
+      ],
+      "to": [
+        5.6,
+        7.5,
+        0.6
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_0_west_joint_0",
+      "from": [
+        4.4,
+        6,
+        0
+      ],
+      "to": [
+        5.6,
+        6.5,
+        0.6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.3125,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_0_down_joint_0",
+      "from": [
+        4.4,
+        6,
+        0
+      ],
+      "to": [
+        4.49,
+        7.5,
+        0.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.590625,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_0_down_joint_1",
+      "from": [
+        5.51,
+        6,
+        0
+      ],
+      "to": [
+        5.6,
+        7.5,
+        0.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.909375,
+            0.0625,
+            2.9375,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_0_down_joint_3",
+      "from": [
+        4.49,
+        6,
+        0.51
+      ],
+      "to": [
+        5.51,
+        7.5,
+        0.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.590625,
+            0.0625,
+            2.909375,
+            0.090625
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_0_up_joint_0",
+      "from": [
+        4.4,
+        6,
+        0
+      ],
+      "to": [
+        4.6,
+        7.5,
+        0.6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.25,
+            2.625,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_0_up_joint_1",
+      "from": [
+        5.4,
+        6,
+        0
+      ],
+      "to": [
+        5.6,
+        7.5,
+        0.6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.875,
+            0.25,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_0_up_joint_3",
+      "from": [
+        4.6,
+        6,
+        0.4
+      ],
+      "to": [
+        5.4,
+        7.5,
+        0.6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.625,
+            0.375,
+            2.875,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_0_south_joint_0",
+      "from": [
+        5.25,
+        6,
+        0
+      ],
+      "to": [
+        5.6,
+        7.5,
+        0.6
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.828125,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_0_south_joint_1",
+      "from": [
+        4.4,
+        6,
+        0
+      ],
+      "to": [
+        5.25,
+        6.5,
+        0.6
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.3125,
+            2.828125,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_crystal_0_0",
+      "from": [
+        4.49,
+        3.0,
+        0
+      ],
+      "to": [
+        5.51,
+        3.55,
+        0.51
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "east": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_0_down_joint_0",
+      "from": [
+        4.49,
+        3.0,
+        0
+      ],
+      "to": [
+        4.78,
+        3.55,
+        0.51
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.5955882,
+            9.0
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_0_down_joint_1",
+      "from": [
+        5.22,
+        3.0,
+        0
+      ],
+      "to": [
+        5.51,
+        3.55,
+        0.51
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            9.4044118,
+            8.0625,
+            9.9375,
+            9.0
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_0_down_joint_3",
+      "from": [
+        4.78,
+        3.0,
+        0.22
+      ],
+      "to": [
+        5.22,
+        3.55,
+        0.51
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.5955882,
+            8.0625,
+            9.4044118,
+            8.5955882
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_1",
+      "from": [
+        4.15,
+        3.55,
+        0
+      ],
+      "to": [
+        5.85,
+        5.55,
+        0.85
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "east": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_1_down_joint_0",
+      "from": [
+        4.15,
+        3.55,
+        0
+      ],
+      "to": [
+        4.49,
+        5.55,
+        0.85
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.4375,
+            9.0
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_1_down_joint_1",
+      "from": [
+        5.51,
+        3.55,
+        0
+      ],
+      "to": [
+        5.85,
+        5.55,
+        0.85
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            9.5625,
+            8.0625,
+            9.9375,
+            9.0
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_1_down_joint_3",
+      "from": [
+        4.49,
+        3.55,
+        0.51
+      ],
+      "to": [
+        5.51,
+        5.55,
+        0.85
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            8.0625,
+            9.5625,
+            8.4375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_1_up_joint_0",
+      "from": [
+        4.15,
+        3.55,
+        0
+      ],
+      "to": [
+        4.49,
+        5.55,
+        0.85
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            9.0,
+            8.4375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_1_up_joint_1",
+      "from": [
+        5.51,
+        3.55,
+        0
+      ],
+      "to": [
+        5.85,
+        5.55,
+        0.85
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            9.5625,
+            9.0,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_1_up_joint_3",
+      "from": [
+        4.49,
+        3.55,
+        0.51
+      ],
+      "to": [
+        5.51,
+        5.55,
+        0.85
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            9.5625,
+            9.5625,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_0_2",
+      "from": [
+        4.49,
+        5.55,
+        0
+      ],
+      "to": [
+        5.51,
+        6,
+        0.51
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "east": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "crystal_finial_0",
+      "from": [
+        4.78,
+        2.75,
+        0
+      ],
+      "to": [
+        5.22,
+        3,
+        0.22
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.25
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_6",
+      "from": [
+        15.4,
+        6,
+        10.4
+      ],
+      "to": [
+        16,
+        7.5,
+        11.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_6_west_joint_0",
+      "from": [
+        15.4,
+        6,
+        10.4
+      ],
+      "to": [
+        16,
+        6.5,
+        11.6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.3125,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_6_west_joint_1",
+      "from": [
+        15.4,
+        6.5,
+        10.4
+      ],
+      "to": [
+        16,
+        7.5,
+        10.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.671875,
+            0.3125
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_6_down_joint_0",
+      "from": [
+        15.4,
+        6,
+        10.4
+      ],
+      "to": [
+        15.49,
+        7.5,
+        11.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.590625,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_6_down_joint_2",
+      "from": [
+        15.49,
+        6,
+        10.4
+      ],
+      "to": [
+        16,
+        7.5,
+        10.49
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.590625,
+            0.409375,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_6_down_joint_3",
+      "from": [
+        15.49,
+        6,
+        11.51
+      ],
+      "to": [
+        16,
+        7.5,
+        11.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.590625,
+            0.0625,
+            2.75,
+            0.090625
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_6_up_joint_0",
+      "from": [
+        15.4,
+        6,
+        10.4
+      ],
+      "to": [
+        15.6,
+        7.5,
+        11.6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.625,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_6_up_joint_2",
+      "from": [
+        15.6,
+        6,
+        10.4
+      ],
+      "to": [
+        16,
+        7.5,
+        10.6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.625,
+            0.0625,
+            2.75,
+            0.125
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_6_up_joint_3",
+      "from": [
+        15.6,
+        6,
+        11.4
+      ],
+      "to": [
+        16,
+        7.5,
+        11.6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.625,
+            0.375,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_6_south_joint_0",
+      "from": [
+        15.4,
+        6,
+        10.4
+      ],
+      "to": [
+        16,
+        6.5,
+        11.6
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.3125,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_crystal_6_0",
+      "from": [
+        15.49,
+        3.0,
+        10.49
+      ],
+      "to": [
+        16,
+        3.55,
+        11.51
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_0_down_joint_0",
+      "from": [
+        15.49,
+        3.0,
+        10.49
+      ],
+      "to": [
+        15.78,
+        3.55,
+        11.51
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.5955882,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_0_down_joint_2",
+      "from": [
+        15.78,
+        3.0,
+        10.49
+      ],
+      "to": [
+        16,
+        3.55,
+        10.78
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.5955882,
+            9.4044118,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_0_down_joint_3",
+      "from": [
+        15.78,
+        3.0,
+        11.22
+      ],
+      "to": [
+        16,
+        3.55,
+        11.51
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.5955882,
+            8.0625,
+            9.0,
+            8.5955882
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_1",
+      "from": [
+        15.15,
+        3.55,
+        10.15
+      ],
+      "to": [
+        16,
+        5.55,
+        11.85
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_1_down_joint_0",
+      "from": [
+        15.15,
+        3.55,
+        10.15
+      ],
+      "to": [
+        15.49,
+        5.55,
+        11.85
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.4375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_1_down_joint_2",
+      "from": [
+        15.49,
+        3.55,
+        10.15
+      ],
+      "to": [
+        16,
+        5.55,
+        10.49
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            9.5625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_1_down_joint_3",
+      "from": [
+        15.49,
+        3.55,
+        11.51
+      ],
+      "to": [
+        16,
+        5.55,
+        11.85
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            8.0625,
+            9.0,
+            8.4375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_1_up_joint_0",
+      "from": [
+        15.15,
+        3.55,
+        10.15
+      ],
+      "to": [
+        15.49,
+        5.55,
+        11.85
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.4375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_1_up_joint_2",
+      "from": [
+        15.49,
+        3.55,
+        10.15
+      ],
+      "to": [
+        16,
+        5.55,
+        10.49
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            8.0625,
+            9.0,
+            8.4375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_1_up_joint_3",
+      "from": [
+        15.49,
+        3.55,
+        11.51
+      ],
+      "to": [
+        16,
+        5.55,
+        11.85
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            9.5625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_6_2",
+      "from": [
+        15.49,
+        5.55,
+        10.49
+      ],
+      "to": [
+        16,
+        6,
+        11.51
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "crystal_finial_6",
+      "from": [
+        15.78,
+        2.75,
+        10.78
+      ],
+      "to": [
+        16,
+        3,
+        11.22
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_7",
+      "from": [
+        6.4,
+        6,
+        5.4
+      ],
+      "to": [
+        7.6,
+        7.5,
+        6.6
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_7_west_joint_0",
+      "from": [
+        6.4,
+        6,
+        5.4
+      ],
+      "to": [
+        7.6,
+        6.5,
+        6.6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.3125,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_7_down_joint_0",
+      "from": [
+        6.4,
+        6,
+        5.4
+      ],
+      "to": [
+        6.49,
+        7.5,
+        6.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.590625,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_7_down_joint_1",
+      "from": [
+        7.51,
+        6,
+        5.4
+      ],
+      "to": [
+        7.6,
+        7.5,
+        6.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.909375,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_7_down_joint_2",
+      "from": [
+        6.49,
+        6,
+        5.4
+      ],
+      "to": [
+        7.51,
+        7.5,
+        5.49
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.590625,
+            0.409375,
+            2.909375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_7_down_joint_3",
+      "from": [
+        6.49,
+        6,
+        6.51
+      ],
+      "to": [
+        7.51,
+        7.5,
+        6.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.590625,
+            0.0625,
+            2.909375,
+            0.090625
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_7_north_joint_0",
+      "from": [
+        7.25,
+        6,
+        5.4
+      ],
+      "to": [
+        7.6,
+        7.5,
+        6.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.671875,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_7_north_joint_1",
+      "from": [
+        6.4,
+        6,
+        5.4
+      ],
+      "to": [
+        7.25,
+        6.5,
+        6.6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.671875,
+            0.3125,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_7_south_joint_0",
+      "from": [
+        7.25,
+        6,
+        5.4
+      ],
+      "to": [
+        7.6,
+        7.5,
+        6.6
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.828125,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_socket_7_south_joint_1",
+      "from": [
+        6.4,
+        6,
+        5.4
+      ],
+      "to": [
+        7.25,
+        6.5,
+        6.6
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.3125,
+            2.828125,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "outer_crystal_7_0",
+      "from": [
+        6.49,
+        3.0,
+        5.49
+      ],
+      "to": [
+        7.51,
+        3.55,
+        6.51
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "east": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_0_down_joint_0",
+      "from": [
+        6.49,
+        3.0,
+        5.49
+      ],
+      "to": [
+        6.78,
+        3.55,
+        6.51
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.5955882,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_0_down_joint_1",
+      "from": [
+        7.22,
+        3.0,
+        5.49
+      ],
+      "to": [
+        7.51,
+        3.55,
+        6.51
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            9.4044118,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_0_down_joint_2",
+      "from": [
+        6.78,
+        3.0,
+        5.49
+      ],
+      "to": [
+        7.22,
+        3.55,
+        5.78
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.5955882,
+            9.4044118,
+            9.4044118,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_0_down_joint_3",
+      "from": [
+        6.78,
+        3.0,
+        6.22
+      ],
+      "to": [
+        7.22,
+        3.55,
+        6.51
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.5955882,
+            8.0625,
+            9.4044118,
+            8.5955882
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_1",
+      "from": [
+        6.15,
+        3.55,
+        5.15
+      ],
+      "to": [
+        7.85,
+        5.55,
+        6.85
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "east": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_1_down_joint_0",
+      "from": [
+        6.15,
+        3.55,
+        5.15
+      ],
+      "to": [
+        6.49,
+        5.55,
+        6.85
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.4375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_1_down_joint_1",
+      "from": [
+        7.51,
+        3.55,
+        5.15
+      ],
+      "to": [
+        7.85,
+        5.55,
+        6.85
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            9.5625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_1_down_joint_2",
+      "from": [
+        6.49,
+        3.55,
+        5.15
+      ],
+      "to": [
+        7.51,
+        5.55,
+        5.49
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            9.5625,
+            9.5625,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_1_down_joint_3",
+      "from": [
+        6.49,
+        3.55,
+        6.51
+      ],
+      "to": [
+        7.51,
+        5.55,
+        6.85
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            8.0625,
+            9.5625,
+            8.4375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_1_up_joint_0",
+      "from": [
+        6.15,
+        3.55,
+        5.15
+      ],
+      "to": [
+        6.49,
+        5.55,
+        6.85
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.4375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_1_up_joint_1",
+      "from": [
+        7.51,
+        3.55,
+        5.15
+      ],
+      "to": [
+        7.85,
+        5.55,
+        6.85
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            9.5625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_1_up_joint_2",
+      "from": [
+        6.49,
+        3.55,
+        5.15
+      ],
+      "to": [
+        7.51,
+        5.55,
+        5.49
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            8.0625,
+            9.5625,
+            8.4375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_1_up_joint_3",
+      "from": [
+        6.49,
+        3.55,
+        6.51
+      ],
+      "to": [
+        7.51,
+        5.55,
+        6.85
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            9.5625,
+            9.5625,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "outer_crystal_7_2",
+      "from": [
+        6.49,
+        5.55,
+        5.49
+      ],
+      "to": [
+        7.51,
+        6,
+        6.51
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "east": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "crystal_finial_7",
+      "from": [
+        6.78,
+        2.75,
+        5.78
+      ],
+      "to": [
+        7.22,
+        3,
+        6.22
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_suspension_west_joint_0",
+      "from": [
+        15.65,
+        4.2,
+        0
+      ],
+      "to": [
+        16,
+        8.75,
+        0.35
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4003713
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_suspension_south_joint_0",
+      "from": [
+        15.65,
+        4.2,
+        0
+      ],
+      "to": [
+        16,
+        8.75,
+        0.35
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4003713
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_tier_x_down_joint_0",
+      "from": [
+        12.55,
+        3.7,
+        0
+      ],
+      "to": [
+        15.6,
+        4.2,
+        0.4
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.60625,
+            0.0625,
+            2.7333333,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_tier_x_up_joint_0",
+      "from": [
+        12.55,
+        3.7,
+        0
+      ],
+      "to": [
+        15.6,
+        4.2,
+        0.4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.60625,
+            0.25,
+            2.7333333,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_tier_x_south_joint_0",
+      "from": [
+        12.55,
+        3.7,
+        0
+      ],
+      "to": [
+        15.6,
+        4.2,
+        0.4
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.60625,
+            0.0625,
+            2.7333333,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_tier_z_west_joint_1",
+      "from": [
+        15.6,
+        3.7,
+        0.4
+      ],
+      "to": [
+        16,
+        4.2,
+        3.45
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.7666667,
+            0.0625,
+            2.89375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_tier_z_down_joint_0",
+      "from": [
+        15.6,
+        3.7,
+        0
+      ],
+      "to": [
+        16,
+        4.2,
+        3.45
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.10625,
+            2.75,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_tier_z_up_joint_0",
+      "from": [
+        15.6,
+        3.7,
+        0
+      ],
+      "to": [
+        15.65,
+        4.2,
+        3.45
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.25,
+            2.5859375,
+            0.39375
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_tier_z_up_joint_3",
+      "from": [
+        15.65,
+        3.7,
+        0.35
+      ],
+      "to": [
+        16,
+        4.2,
+        3.45
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5859375,
+            0.2645833,
+            2.75,
+            0.39375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_0",
+      "from": [
+        11.45,
+        3.1,
+        0
+      ],
+      "to": [
+        12.55,
+        4.2,
+        0.55
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.25,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_0_east_joint_0",
+      "from": [
+        11.45,
+        3.1,
+        0
+      ],
+      "to": [
+        12.55,
+        3.7,
+        0.55
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.2329545,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_0_east_joint_2",
+      "from": [
+        11.45,
+        3.7,
+        0.4
+      ],
+      "to": [
+        12.55,
+        4.2,
+        0.55
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.6136364,
+            0.2329545
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_0_down_joint_0",
+      "from": [
+        11.45,
+        3.1,
+        0
+      ],
+      "to": [
+        11.58,
+        4.2,
+        0.55
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.6068182,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_0_down_joint_1",
+      "from": [
+        12.42,
+        3.1,
+        0
+      ],
+      "to": [
+        12.55,
+        4.2,
+        0.55
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.8931818,
+            0.0625,
+            2.9375,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_0_down_joint_3",
+      "from": [
+        11.58,
+        3.1,
+        0.42
+      ],
+      "to": [
+        12.42,
+        4.2,
+        0.55
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.6068182,
+            0.0625,
+            2.8931818,
+            0.1068182
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_crystal_0_0",
+      "from": [
+        11.58,
+        0.25,
+        0
+      ],
+      "to": [
+        12.42,
+        0.8,
+        0.42
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "east": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.0
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_0_1",
+      "from": [
+        11.3,
+        0.8,
+        0
+      ],
+      "to": [
+        12.7,
+        2.65,
+        0.7
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "east": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_0_1_down_joint_0",
+      "from": [
+        11.3,
+        0.8,
+        0
+      ],
+      "to": [
+        11.58,
+        2.65,
+        0.7
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.4375,
+            9.0
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_0_1_down_joint_1",
+      "from": [
+        12.42,
+        0.8,
+        0
+      ],
+      "to": [
+        12.7,
+        2.65,
+        0.7
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            9.5625,
+            8.0625,
+            9.9375,
+            9.0
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_0_1_down_joint_3",
+      "from": [
+        11.58,
+        0.8,
+        0.42
+      ],
+      "to": [
+        12.42,
+        2.65,
+        0.7
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            8.0625,
+            9.5625,
+            8.4375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_0_1_up_joint_0",
+      "from": [
+        11.3,
+        0.8,
+        0
+      ],
+      "to": [
+        11.58,
+        2.65,
+        0.7
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            9.0,
+            8.4375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_0_1_up_joint_1",
+      "from": [
+        12.42,
+        0.8,
+        0
+      ],
+      "to": [
+        12.7,
+        2.65,
+        0.7
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            9.5625,
+            9.0,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_0_1_up_joint_3",
+      "from": [
+        11.58,
+        0.8,
+        0.42
+      ],
+      "to": [
+        12.42,
+        2.65,
+        0.7
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            9.5625,
+            9.5625,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_0_2",
+      "from": [
+        11.58,
+        2.65,
+        0
+      ],
+      "to": [
+        12.42,
+        3.1,
+        0.42
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "east": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_socket_3",
+      "from": [
+        15.45,
+        3.1,
+        3.45
+      ],
+      "to": [
+        16,
+        4.2,
+        4.55
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_3_down_joint_0",
+      "from": [
+        15.45,
+        3.1,
+        3.45
+      ],
+      "to": [
+        15.58,
+        4.2,
+        4.55
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.6068182,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_3_down_joint_2",
+      "from": [
+        15.58,
+        3.1,
+        3.45
+      ],
+      "to": [
+        16,
+        4.2,
+        3.58
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.6068182,
+            0.3931818,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_3_down_joint_3",
+      "from": [
+        15.58,
+        3.1,
+        4.42
+      ],
+      "to": [
+        16,
+        4.2,
+        4.55
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.6068182,
+            0.0625,
+            2.75,
+            0.1068182
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_3_north_joint_0",
+      "from": [
+        15.45,
+        3.1,
+        3.45
+      ],
+      "to": [
+        15.6,
+        4.2,
+        4.55
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.8863636,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_socket_3_north_joint_2",
+      "from": [
+        15.6,
+        3.1,
+        3.45
+      ],
+      "to": [
+        16,
+        3.7,
+        4.55
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.2329545,
+            2.8863636,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_crystal_3_0",
+      "from": [
+        15.58,
+        0.25,
+        3.58
+      ],
+      "to": [
+        16,
+        0.8,
+        4.42
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_3_1",
+      "from": [
+        15.3,
+        0.8,
+        3.3
+      ],
+      "to": [
+        16,
+        2.65,
+        4.7
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_3_1_down_joint_0",
+      "from": [
+        15.3,
+        0.8,
+        3.3
+      ],
+      "to": [
+        15.58,
+        2.65,
+        4.7
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.4375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_3_1_down_joint_2",
+      "from": [
+        15.58,
+        0.8,
+        3.3
+      ],
+      "to": [
+        16,
+        2.65,
+        3.58
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            9.5625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_3_1_down_joint_3",
+      "from": [
+        15.58,
+        0.8,
+        4.42
+      ],
+      "to": [
+        16,
+        2.65,
+        4.7
+      ],
+      "faces": {
+        "down": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            8.0625,
+            9.0,
+            8.4375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_3_1_up_joint_0",
+      "from": [
+        15.3,
+        0.8,
+        3.3
+      ],
+      "to": [
+        15.58,
+        2.65,
+        4.7
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            8.4375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_3_1_up_joint_2",
+      "from": [
+        15.58,
+        0.8,
+        3.3
+      ],
+      "to": [
+        16,
+        2.65,
+        3.58
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            8.0625,
+            9.0,
+            8.4375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_3_1_up_joint_3",
+      "from": [
+        15.58,
+        0.8,
+        4.42
+      ],
+      "to": [
+        16,
+        2.65,
+        4.7
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.4375,
+            9.5625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    },
+    {
+      "name": "lower_crystal_3_2",
+      "from": [
+        15.58,
+        2.65,
+        3.58
+      ],
+      "to": [
+        16,
+        3.1,
+        4.42
+      ],
+      "faces": {
+        "west": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            9.0,
+            8.0625,
+            9.9375,
+            9.9375
+          ],
+          "tintindex": 32956339
+        },
+        "south": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            8.0625,
+            9.0,
+            9.9375
+          ],
+          "tintindex": 32956339
+        }
+      },
+      "shade": false
+    }
+  ]
+}

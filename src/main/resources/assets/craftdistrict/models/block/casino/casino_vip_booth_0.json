@@ -1,0 +1,1339 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/casino_atlas",
+    "interior": "craftdistrict:block/casino/casino_interior_atlas",
+    "particle": "craftdistrict:block/particles/particle_wood"
+  },
+  "elements": [
+    {
+      "name": "black_recessed_base",
+      "from": [
+        0.5,
+        0,
+        2
+      ],
+      "to": [
+        16,
+        1.25,
+        15.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.4375,
+            0.4375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.25,
+            0.4375
+          ],
+          "cullface": "down"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.0625,
+            0.4375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.25,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "base_gold_reveal",
+      "from": [
+        0.5,
+        1.25,
+        2
+      ],
+      "to": [
+        16,
+        1.5,
+        15.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "deep_lounge_plinth",
+      "from": [
+        0,
+        1.5,
+        1.5
+      ],
+      "to": [
+        16,
+        6.25,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            12.0,
+            12.0625,
+            15.9375,
+            15.9375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.75,
+            0.4375
+          ],
+          "cullface": "south"
+        }
+      }
+    },
+    {
+      "name": "deep_lounge_plinth_down_joint_0",
+      "from": [
+        0,
+        1.5,
+        1.5
+      ],
+      "to": [
+        0.5,
+        6.25,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.5683594,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "deep_lounge_plinth_down_joint_2",
+      "from": [
+        0.5,
+        1.5,
+        1.5
+      ],
+      "to": [
+        16,
+        6.25,
+        2
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.5683594,
+            0.424569,
+            5.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "deep_lounge_plinth_down_joint_3",
+      "from": [
+        0.5,
+        1.5,
+        15.5
+      ],
+      "to": [
+        16,
+        6.25,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.5683594,
+            0.0625,
+            5.75,
+            0.075431
+          ]
+        }
+      }
+    },
+    {
+      "name": "seat_base_welt",
+      "from": [
+        0,
+        6.25,
+        1.5
+      ],
+      "to": [
+        16,
+        6.5,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ],
+          "cullface": "south"
+        }
+      }
+    },
+    {
+      "name": "seat_base_welt_up_joint_0",
+      "from": [
+        15.6,
+        6.25,
+        1.5
+      ],
+      "to": [
+        16,
+        6.5,
+        13.1
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.7453125,
+            0.0625,
+            2.75,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "seat_base_welt_up_joint_2",
+      "from": [
+        2.75,
+        6.25,
+        12.5
+      ],
+      "to": [
+        15.6,
+        6.5,
+        13.1
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5947266,
+            0.3469828,
+            2.7453125,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "cushion_front_roll_0",
+      "from": [
+        2.75,
+        6.5,
+        1.5
+      ],
+      "to": [
+        15.6,
+        8.75,
+        3.0
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "cushion_front_roll_0_up_joint_0",
+      "from": [
+        2.75,
+        6.5,
+        1.5
+      ],
+      "to": [
+        2.95,
+        8.75,
+        3.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.0683366,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "cushion_front_roll_0_up_joint_1",
+      "from": [
+        15.4,
+        6.5,
+        1.5
+      ],
+      "to": [
+        15.6,
+        8.75,
+        3.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.4316634,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "cushion_front_roll_0_up_joint_2",
+      "from": [
+        2.95,
+        6.5,
+        1.5
+      ],
+      "to": [
+        15.4,
+        8.75,
+        1.8
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0683366,
+            0.0625,
+            4.4316634,
+            0.1375
+          ]
+        }
+      }
+    },
+    {
+      "name": "deep_seat_cushion_0",
+      "from": [
+        2.75,
+        6.5,
+        3
+      ],
+      "to": [
+        15.6,
+        9.25,
+        12.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "deep_seat_cushion_0_up_joint_0",
+      "from": [
+        2.75,
+        6.5,
+        3
+      ],
+      "to": [
+        15.6,
+        9.25,
+        11.75
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            4.0625,
+            11.9375,
+            7.6315789
+          ]
+        }
+      }
+    },
+    {
+      "name": "deep_seat_cushion_0_up_joint_1",
+      "from": [
+        2.75,
+        6.5,
+        12.25
+      ],
+      "to": [
+        15.6,
+        9.25,
+        12.5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            7.8355263,
+            11.9375,
+            7.9375
+          ]
+        }
+      }
+    },
+    {
+      "name": "deep_seat_cushion_0_north_joint_0",
+      "from": [
+        2.75,
+        8.75,
+        3
+      ],
+      "to": [
+        2.95,
+        9.25,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.4316634,
+            0.0625,
+            4.4375,
+            0.1306818
+          ]
+        }
+      }
+    },
+    {
+      "name": "deep_seat_cushion_0_north_joint_1",
+      "from": [
+        15.4,
+        8.75,
+        3
+      ],
+      "to": [
+        15.6,
+        9.25,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.0683366,
+            0.1306818
+          ]
+        }
+      }
+    },
+    {
+      "name": "cushion_front_crown_0",
+      "from": [
+        2.95,
+        8.75,
+        1.8
+      ],
+      "to": [
+        15.4,
+        9.25,
+        3
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#interior",
+          "uv": [
+            8.0625,
+            4.0625,
+            11.9375,
+            4.75
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tall_walnut_back_shell",
+      "from": [
+        0,
+        6.5,
+        13.1
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.2571203,
+            5.9375,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.2571203,
+            5.75,
+            0.4375
+          ],
+          "cullface": "south"
+        }
+      }
+    },
+    {
+      "name": "tall_walnut_back_shell_north_joint_1",
+      "from": [
+        15.85,
+        6.5,
+        13.1
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.2571203,
+            5.7517578,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "tall_walnut_back_shell_north_joint_5",
+      "from": [
+        2.75,
+        6.5,
+        13.1
+      ],
+      "to": [
+        15.85,
+        10.25,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.7517578,
+            0.3662975,
+            5.9052734,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_lounge_back_0_east_joint_0",
+      "from": [
+        2.75,
+        11.5,
+        12
+      ],
+      "to": [
+        15.85,
+        16,
+        13.1
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.2887931,
+            4.4375,
+            0.4051724
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_lounge_back_0_east_joint_1",
+      "from": [
+        2.75,
+        10.25,
+        12.25
+      ],
+      "to": [
+        15.85,
+        11.5,
+        13.1
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.4051724,
+            4.3522727,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_lounge_back_0_down_joint_0",
+      "from": [
+        2.75,
+        10.25,
+        12.25
+      ],
+      "to": [
+        15.85,
+        16,
+        13.1
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.3522727
+          ]
+        }
+      }
+    },
+    {
+      "name": "channelled_lounge_back_0_north_joint_0",
+      "from": [
+        2.75,
+        11.5,
+        12
+      ],
+      "to": [
+        15.85,
+        16,
+        13.1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#interior",
+          "uv": [
+            0.6875,
+            8.8146552,
+            3.9625,
+            11.2586207
+          ]
+        }
+      }
+    },
+    {
+      "name": "back_lower_bolster_0",
+      "from": [
+        2.75,
+        9.25,
+        11.75
+      ],
+      "to": [
+        15.85,
+        11.5,
+        12.25
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "back_lower_bolster_0_down_joint_0",
+      "from": [
+        15.6,
+        9.25,
+        11.75
+      ],
+      "to": [
+        15.85,
+        11.5,
+        12.25
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4.4303435,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "back_lower_bolster_0_up_joint_0",
+      "from": [
+        2.75,
+        9.25,
+        11.75
+      ],
+      "to": [
+        15.85,
+        11.5,
+        12
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "back_lower_bolster_0_south_joint_0",
+      "from": [
+        2.75,
+        9.25,
+        11.75
+      ],
+      "to": [
+        15.85,
+        10.25,
+        12.25
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.2708333,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_0",
+      "from": [
+        0,
+        6.5,
+        1.5
+      ],
+      "to": [
+        2.75,
+        15.5,
+        6
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.4375
+          ],
+          "cullface": "west"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_0_east_joint_0",
+      "from": [
+        0,
+        9.25,
+        1.5
+      ],
+      "to": [
+        2.75,
+        15.5,
+        6
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.9375,
+            0.3229167
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_0_east_joint_1",
+      "from": [
+        0,
+        8.75,
+        1.5
+      ],
+      "to": [
+        2.75,
+        9.25,
+        3
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.8125,
+            0.3229167,
+            5.9375,
+            0.34375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_0_up_joint_0",
+      "from": [
+        0,
+        6.5,
+        1.5
+      ],
+      "to": [
+        0.2,
+        15.5,
+        6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.5897727,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_0_up_joint_1",
+      "from": [
+        2.55,
+        6.5,
+        1.5
+      ],
+      "to": [
+        2.75,
+        15.5,
+        6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.9102273,
+            0.0625,
+            5.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_0_up_joint_2",
+      "from": [
+        0.2,
+        6.5,
+        1.5
+      ],
+      "to": [
+        2.55,
+        15.5,
+        1.6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.5897727,
+            0.0625,
+            5.9102273,
+            0.0708333
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_0_up_joint_3",
+      "from": [
+        0.2,
+        6.5,
+        5.9
+      ],
+      "to": [
+        2.55,
+        15.5,
+        6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.5897727,
+            0.4291667,
+            5.9102273,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "side_upholstery_0_0",
+      "from": [
+        0.2,
+        15.5,
+        1.6
+      ],
+      "to": [
+        2.55,
+        16.0,
+        5.9
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ],
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4.0625,
+            0.0625,
+            4.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_1",
+      "from": [
+        0,
+        6.5,
+        6
+      ],
+      "to": [
+        2.75,
+        16,
+        9
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.1525,
+            5.9375,
+            0.4375
+          ],
+          "cullface": "west"
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_1_east_joint_0",
+      "from": [
+        0,
+        9.25,
+        6
+      ],
+      "to": [
+        2.75,
+        16,
+        9
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.1525,
+            5.9375,
+            0.355
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_1_north_joint_0",
+      "from": [
+        0,
+        15.5,
+        6
+      ],
+      "to": [
+        2.75,
+        16,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.1525,
+            5.9375,
+            0.1675
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_2",
+      "from": [
+        0,
+        6.5,
+        9
+      ],
+      "to": [
+        2.75,
+        16,
+        13.1
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.2215909,
+            5.9375,
+            0.4375
+          ],
+          "cullface": "west"
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_2_east_joint_0",
+      "from": [
+        0,
+        9.25,
+        9
+      ],
+      "to": [
+        2.75,
+        10.25,
+        11.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.6859756,
+            0.3522727,
+            5.9375,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_2_east_joint_1",
+      "from": [
+        0,
+        9.25,
+        12.25
+      ],
+      "to": [
+        2.75,
+        10.25,
+        13.1
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.3522727,
+            5.6402439,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_2_east_joint_2",
+      "from": [
+        0,
+        11.5,
+        9
+      ],
+      "to": [
+        2.75,
+        16,
+        12
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.6631098,
+            0.2215909,
+            5.9375,
+            0.3238636
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_2_east_joint_3",
+      "from": [
+        0,
+        10.25,
+        9
+      ],
+      "to": [
+        2.75,
+        11.5,
+        11.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.6859756,
+            0.3238636,
+            5.9375,
+            0.3522727
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrapped_side_0_2_east_joint_4",
+      "from": [
+        0,
+        6.5,
+        12.5
+      ],
+      "to": [
+        2.75,
+        9.25,
+        13.1
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.375,
+            5.617378,
+            0.4375
+          ]
+        }
+      }
+    }
+  ]
+}

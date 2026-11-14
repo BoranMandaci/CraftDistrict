@@ -1,0 +1,927 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/casino_atlas",
+    "interior": "craftdistrict:block/casino/casino_interior_atlas",
+    "particle": "craftdistrict:block/particles/particle_brass"
+  },
+  "elements": [
+    {
+      "name": "ceiling_canopy",
+      "from": [
+        0,
+        14,
+        12.64
+      ],
+      "to": [
+        3.36,
+        16,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.25
+          ],
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "ceiling_canopy_down_joint_1",
+      "from": [
+        2.688,
+        14,
+        12.64
+      ],
+      "to": [
+        3.36,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.9,
+            0.25,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "ceiling_canopy_down_joint_2",
+      "from": [
+        0,
+        14,
+        12.64
+      ],
+      "to": [
+        2.688,
+        16,
+        13.312
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.4,
+            2.9,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_inset",
+      "from": [
+        0,
+        13.0,
+        13.312
+      ],
+      "to": [
+        2.688,
+        14,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.0625,
+            0.4375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.25,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_inset_down_joint_1",
+      "from": [
+        0.56,
+        13.0,
+        13.312
+      ],
+      "to": [
+        2.688,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.2890625,
+            0.25,
+            0.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "canopy_inset_down_joint_2",
+      "from": [
+        0,
+        13.0,
+        13.312
+      ],
+      "to": [
+        0.56,
+        14,
+        15.44
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.2890625,
+            0.2890625,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "suspension_stem_east_joint_0",
+      "from": [
+        0,
+        4,
+        15.44
+      ],
+      "to": [
+        0.56,
+        13.0,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.3585526
+          ]
+        }
+      }
+    },
+    {
+      "name": "suspension_stem_north_joint_0",
+      "from": [
+        0,
+        4,
+        15.44
+      ],
+      "to": [
+        0.56,
+        13.0,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.3585526
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_east_joint_0",
+      "from": [
+        0,
+        1.5,
+        14.6
+      ],
+      "to": [
+        1.4,
+        2,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.3625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_east_joint_1",
+      "from": [
+        0,
+        2.8,
+        14.6
+      ],
+      "to": [
+        1.4,
+        4,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.2425
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_east_joint_2",
+      "from": [
+        0,
+        2,
+        14.6
+      ],
+      "to": [
+        1.4,
+        2.8,
+        15.608
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.8025,
+            0.2425,
+            2.9375,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_down_joint_1",
+      "from": [
+        0.392,
+        1.5,
+        14.6
+      ],
+      "to": [
+        1.4,
+        4,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.8025,
+            0.25,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_down_joint_2",
+      "from": [
+        0,
+        1.5,
+        14.6
+      ],
+      "to": [
+        0.392,
+        4,
+        15.608
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.3025,
+            2.8025,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_up_joint_1",
+      "from": [
+        0.56,
+        1.5,
+        14.6
+      ],
+      "to": [
+        1.4,
+        4,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.825,
+            0.0625,
+            2.9375,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_up_joint_2",
+      "from": [
+        0,
+        1.5,
+        14.6
+      ],
+      "to": [
+        0.56,
+        4,
+        15.44
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.825,
+            0.175
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_north_joint_1",
+      "from": [
+        0.392,
+        1.5,
+        14.6
+      ],
+      "to": [
+        1.4,
+        4,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.6975,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_north_joint_2",
+      "from": [
+        0,
+        1.5,
+        14.6
+      ],
+      "to": [
+        0.392,
+        2,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.6975,
+            0.3625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "hub_north_joint_3",
+      "from": [
+        0,
+        2.8,
+        14.6
+      ],
+      "to": [
+        0.392,
+        4,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.6975,
+            0.0625,
+            2.75,
+            0.2425
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_x_down_joint_1",
+      "from": [
+        1.4,
+        2,
+        15.608
+      ],
+      "to": [
+        11.872,
+        2.8,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.7713068,
+            0.25,
+            2.9306818,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_x_up_joint_1",
+      "from": [
+        1.4,
+        2,
+        15.608
+      ],
+      "to": [
+        11.872,
+        2.8,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.7713068,
+            0.0625,
+            2.9306818,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_x_north_joint_1",
+      "from": [
+        1.4,
+        2,
+        15.608
+      ],
+      "to": [
+        11.872,
+        2.8,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5693182,
+            0.0625,
+            2.7286932,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_z_east_joint_0",
+      "from": [
+        0,
+        2,
+        4.128
+      ],
+      "to": [
+        0.392,
+        2.8,
+        14.6
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.7713068,
+            0.0625,
+            2.9306818,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_z_down_joint_0",
+      "from": [
+        0,
+        2,
+        4.128
+      ],
+      "to": [
+        0.392,
+        2.8,
+        14.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.2713068,
+            2.9375,
+            0.4306818
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_suspension_z_up_joint_0",
+      "from": [
+        0,
+        2,
+        4.128
+      ],
+      "to": [
+        0.392,
+        2.8,
+        14.6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0693182,
+            2.9375,
+            0.2286932
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_1",
+      "from": [
+        11.872,
+        0,
+        15.552
+      ],
+      "to": [
+        12.768,
+        2.8,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_1_west_joint_0",
+      "from": [
+        11.872,
+        0,
+        15.552
+      ],
+      "to": [
+        12.768,
+        2,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.1375,
+            2.75,
+            0.325
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_1_west_joint_1",
+      "from": [
+        11.872,
+        2,
+        15.552
+      ],
+      "to": [
+        12.768,
+        2.8,
+        15.608
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.5859375,
+            0.1375
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_1_east_joint_0",
+      "from": [
+        11.872,
+        0,
+        15.552
+      ],
+      "to": [
+        12.768,
+        2.8,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.325
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_1_north_joint_0",
+      "from": [
+        11.872,
+        0,
+        15.552
+      ],
+      "to": [
+        12.04,
+        2.8,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.8671875,
+            0.0625,
+            2.9375,
+            0.325
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_1_north_joint_1",
+      "from": [
+        12.04,
+        0,
+        15.552
+      ],
+      "to": [
+        12.768,
+        2.8,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.8671875,
+            0.325
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_2",
+      "from": [
+        0,
+        0,
+        3.232
+      ],
+      "to": [
+        0.448,
+        2.8,
+        4.128
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_2_east_joint_0",
+      "from": [
+        0,
+        0,
+        3.232
+      ],
+      "to": [
+        0.448,
+        2.8,
+        4.128
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.9375,
+            0.325
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_2_north_joint_0",
+      "from": [
+        0,
+        0,
+        3.232
+      ],
+      "to": [
+        0.448,
+        2.8,
+        4.128
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.325
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_2_south_joint_1",
+      "from": [
+        0.392,
+        0,
+        3.232
+      ],
+      "to": [
+        0.448,
+        2.8,
+        4.128
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.9140625,
+            0.0625,
+            2.9375,
+            0.325
+          ]
+        }
+      }
+    },
+    {
+      "name": "ring_hanger_2_south_joint_2",
+      "from": [
+        0,
+        0,
+        3.232
+      ],
+      "to": [
+        0.392,
+        2,
+        4.128
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.1375,
+            2.9140625,
+            0.325
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_suspension_east_joint_0",
+      "from": [
+        0,
+        0,
+        15.608
+      ],
+      "to": [
+        0.392,
+        1.5,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.1181931
+          ]
+        }
+      }
+    },
+    {
+      "name": "inner_suspension_north_joint_0",
+      "from": [
+        0,
+        0,
+        15.608
+      ],
+      "to": [
+        0.392,
+        1.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.1181931
+          ]
+        }
+      }
+    }
+  ]
+}

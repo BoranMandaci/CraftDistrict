@@ -35,6 +35,8 @@ public final class CraftDistrictClient {
         }
         ClientLifecycleEvent.CLIENT_SETUP.register(client -> {
             LightingColors.init();
+            RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Casino.CASHIER_COUNTER.get(),
+                    CraftDistrictBlocks.Casino.VIP_DIVIDER.get());
             BlockEntityRendererRegistry.register(CraftDistrictRoomNumbers.PLAQUE.get(), RoomNumberRenderer::new);
             if (!earlyScreens) {
                 MenuRegistry.registerScreenFactory(CraftDistrictAssembly.MENU.get(), AssemblyStationScreen::new);

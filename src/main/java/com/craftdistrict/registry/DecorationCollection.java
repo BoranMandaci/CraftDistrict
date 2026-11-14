@@ -487,15 +487,21 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Casino.CRAPS_TABLE,
             CraftDistrictBlocks.Casino.GAMING_CHAIR,
             CraftDistrictBlocks.Casino.DEALER_STOOL,
+            CraftDistrictBlocks.Casino.VIP_BOOTH,
             CraftDistrictBlocks.Casino.CLASSIC_SLOT_MACHINE,
             CraftDistrictBlocks.Casino.MODERN_SLOT_MACHINE,
             CraftDistrictBlocks.Casino.SLOT_MACHINE_STOOL,
             CraftDistrictBlocks.Casino.JACKPOT_DISPLAY,
             CraftDistrictBlocks.Casino.BIG_SIX_WHEEL,
+            CraftDistrictBlocks.Casino.CASHIER_COUNTER,
+            CraftDistrictBlocks.Casino.CASH_COUNTING_MACHINE,
             CraftDistrictBlocks.Casino.CHIP_STACK,
             CraftDistrictBlocks.Casino.CARD_SHOE,
             CraftDistrictBlocks.Casino.CHIP_RACK,
-            CraftDistrictBlocks.Casino.CARDS_AND_DICE);
+            CraftDistrictBlocks.Casino.CARDS_AND_DICE,
+            CraftDistrictBlocks.Casino.VIP_DIVIDER,
+            CraftDistrictBlocks.Casino.CARPET,
+            CraftDistrictBlocks.Casino.CHANDELIER);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;
