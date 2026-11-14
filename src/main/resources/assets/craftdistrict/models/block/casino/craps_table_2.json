@@ -1,0 +1,938 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/casino_atlas",
+    "layouts": "craftdistrict:block/casino/gaming_tables_atlas",
+    "particle": "craftdistrict:block/particles/particle_seating_green"
+  },
+  "elements": [
+    {
+      "name": "apron_0",
+      "from": [
+        0,
+        11.75,
+        0.65
+      ],
+      "to": [
+        16,
+        13.25,
+        2.65
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.0625,
+            5.863852,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.636148,
+            0.0625,
+            5.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "apron_1",
+      "from": [
+        0,
+        11.75,
+        2.65
+      ],
+      "to": [
+        16,
+        13.25,
+        4.65
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.0625,
+            5.8522147,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "apron_2_down_joint_1",
+      "from": [
+        0,
+        11.75,
+        4.65
+      ],
+      "to": [
+        15,
+        13.25,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.25,
+            5.8397129,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "apron_2_down_joint_3",
+      "from": [
+        15,
+        11.75,
+        4.65
+      ],
+      "to": [
+        15.88,
+        13.25,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.8397129,
+            0.3160793,
+            5.8449761,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "apron_2_down_joint_7",
+      "from": [
+        15.88,
+        11.75,
+        4.65
+      ],
+      "to": [
+        16,
+        13.25,
+        11.94
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.8449761,
+            0.3170705,
+            5.8456938,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wood_slab_0",
+      "from": [
+        0,
+        13.25,
+        0
+      ],
+      "to": [
+        16,
+        13.5,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.6388889,
+            0.0625,
+            5.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wood_slab_0_down_joint_2",
+      "from": [
+        0,
+        13.25,
+        0
+      ],
+      "to": [
+        16,
+        13.5,
+        0.65
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.315625,
+            5.8611111,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_felt_0",
+      "from": [
+        0,
+        13.5,
+        2
+      ],
+      "to": [
+        16,
+        14,
+        4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            4.0,
+            8.25,
+            6.0,
+            8.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_felt_1",
+      "from": [
+        0,
+        13.5,
+        4
+      ],
+      "to": [
+        16,
+        14,
+        6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            4.0,
+            8.5,
+            6.0,
+            8.75
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_felt_2_up_joint_1",
+      "from": [
+        0,
+        13.5,
+        6
+      ],
+      "to": [
+        2.0,
+        14,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            4.0,
+            8.75,
+            4.25,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_felt_2_up_joint_2",
+      "from": [
+        3.0,
+        13.5,
+        6
+      ],
+      "to": [
+        16,
+        14,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            4.375,
+            8.75,
+            6.0,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_felt_2_up_joint_3",
+      "from": [
+        2.0,
+        13.5,
+        6
+      ],
+      "to": [
+        3.0,
+        14,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            4.25,
+            8.75,
+            4.375,
+            10.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "raised_wall_0",
+      "from": [
+        0,
+        13.5,
+        0
+      ],
+      "to": [
+        16,
+        15.7,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.6388889,
+            0.0625,
+            5.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "raised_wall_0_up_joint_0",
+      "from": [
+        0,
+        13.5,
+        0.4
+      ],
+      "to": [
+        16,
+        15.7,
+        2
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.1375,
+            5.8611111,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "raised_wall_0_south_joint_0",
+      "from": [
+        0,
+        14,
+        0
+      ],
+      "to": [
+        16,
+        15.7,
+        2
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.0625,
+            5.8611111,
+            0.3522727
+          ]
+        }
+      }
+    },
+    {
+      "name": "rail_piping_2",
+      "from": [
+        0,
+        15.7,
+        0
+      ],
+      "to": [
+        16,
+        15.8,
+        0.4
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.637218,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.862782,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "padded_rail_0",
+      "from": [
+        0,
+        15.8,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        2
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            4.0,
+            8.0,
+            6.0,
+            8.25
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.1388889,
+            0.0625,
+            0.25,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "padded_rail_0_down_joint_0",
+      "from": [
+        0,
+        15.8,
+        0.4
+      ],
+      "to": [
+        16,
+        16,
+        2
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.0625,
+            0.3611111,
+            0.3625
+          ]
+        }
+      }
+    },
+    {
+      "name": "padded_rail_0_south_joint_0",
+      "from": [
+        0,
+        15.8,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        2
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.0625,
+            0.3611111,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "base_pad_1",
+      "from": [
+        12,
+        0,
+        8
+      ],
+      "to": [
+        16,
+        0.35,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.25,
+            0.4375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.25,
+            0.1875,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.3125,
+            0.0625,
+            0.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_foot_1",
+      "from": [
+        12,
+        0.35,
+        8
+      ],
+      "to": [
+        16,
+        1.5,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.75,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.8125,
+            0.0625,
+            5.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_foot_1_up_joint_0",
+      "from": [
+        12,
+        0.35,
+        8
+      ],
+      "to": [
+        15,
+        1.5,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.65625,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_foot_1_up_joint_2",
+      "from": [
+        15,
+        0.35,
+        8
+      ],
+      "to": [
+        16,
+        1.5,
+        12
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.65625,
+            0.0625,
+            5.6875,
+            0.15625
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_1_west_joint_0",
+      "from": [
+        15,
+        1.5,
+        12
+      ],
+      "to": [
+        16,
+        2.0,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.4215426,
+            5.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_1_west_joint_1",
+      "from": [
+        15,
+        2.3,
+        12
+      ],
+      "to": [
+        16,
+        4.25,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.349734,
+            5.75,
+            0.4119681
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_1_west_joint_2",
+      "from": [
+        15,
+        5.5,
+        12
+      ],
+      "to": [
+        16,
+        11.75,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.1103723,
+            5.75,
+            0.3098404
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_1_west_joint_3",
+      "from": [
+        15,
+        4.25,
+        12
+      ],
+      "to": [
+        16,
+        5.5,
+        14.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.3098404,
+            5.6914062,
+            0.349734
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_1_north_joint_0",
+      "from": [
+        15,
+        1.5,
+        12
+      ],
+      "to": [
+        16,
+        2.0,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.875,
+            0.4215426,
+            5.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_1_north_joint_1",
+      "from": [
+        15,
+        2.3,
+        12
+      ],
+      "to": [
+        15.88,
+        11.75,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.8825,
+            0.1103723,
+            5.9375,
+            0.4119681
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_chrome_1",
+      "from": [
+        15,
+        2.0,
+        12
+      ],
+      "to": [
+        16,
+        2.3,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.875,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_inlay_1_-2",
+      "from": [
+        15.88,
+        2.3,
+        11.94
+      ],
+      "to": [
+        16,
+        11.75,
+        12.06
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.75,
+            0.0625,
+            2.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_inlay_1_-2_west_joint_0",
+      "from": [
+        15.88,
+        2.3,
+        11.94
+      ],
+      "to": [
+        16,
+        11.75,
+        12
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.0625,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_inlay_1_-2_down_joint_0",
+      "from": [
+        15.88,
+        2.3,
+        11.94
+      ],
+      "to": [
+        16,
+        11.75,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            2.5625,
+            0.25,
+            2.75,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "structural_stretcher_down_joint_0",
+      "from": [
+        0,
+        4.25,
+        14.75
+      ],
+      "to": [
+        15,
+        5.5,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.25,
+            5.90625,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "structural_stretcher_up_joint_0",
+      "from": [
+        0,
+        4.25,
+        14.75
+      ],
+      "to": [
+        15,
+        5.5,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.0625,
+            5.90625,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "structural_stretcher_north_joint_0",
+      "from": [
+        0,
+        4.25,
+        14.75
+      ],
+      "to": [
+        15,
+        5.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.59375,
+            0.0625,
+            5.75,
+            0.4375
+          ]
+        }
+      }
+    }
+  ]
+}

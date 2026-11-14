@@ -5,6 +5,8 @@ import com.craftdistrict.block.WideDecorationBlock;
 import com.craftdistrict.block.CasinoMachineBlock;
 import com.craftdistrict.block.CasinoDecorationBlock;
 import com.craftdistrict.block.CasinoStoolBlock;
+import com.craftdistrict.block.CasinoTableBlock;
+import com.craftdistrict.block.CasinoSeatBlock;
 import com.craftdistrict.block.BigSixWheelBlock;
 import com.craftdistrict.block.TallDecorationBlock;
 import com.craftdistrict.block.WideTallDecorationBlock;
@@ -256,6 +258,20 @@ public final class CraftDistrictBlocks {
     }
 
     public static final class Casino {
+        public static final RegistrySupplier<CasinoTableBlock> ROULETTE_TABLE = register("roulette_table",
+                () -> new CasinoTableBlock(CasinoTableBlock.Design.ROULETTE, properties().sound(SoundType.WOOD)));
+        public static final RegistrySupplier<CasinoTableBlock> BLACKJACK_TABLE = register("blackjack_table",
+                () -> new CasinoTableBlock(CasinoTableBlock.Design.BLACKJACK, properties().sound(SoundType.WOOD)));
+        public static final RegistrySupplier<CasinoTableBlock> POKER_TABLE = register("poker_table",
+                () -> new CasinoTableBlock(CasinoTableBlock.Design.POKER, properties().sound(SoundType.WOOD)));
+        public static final RegistrySupplier<CasinoTableBlock> BACCARAT_TABLE = register("baccarat_table",
+                () -> new CasinoTableBlock(CasinoTableBlock.Design.BACCARAT, properties().sound(SoundType.WOOD)));
+        public static final RegistrySupplier<CasinoTableBlock> CRAPS_TABLE = register("craps_table",
+                () -> new CasinoTableBlock(CasinoTableBlock.Design.CRAPS, properties().sound(SoundType.WOOD)));
+        public static final RegistrySupplier<CasinoSeatBlock> GAMING_CHAIR = register("casino_gaming_chair",
+                () -> new CasinoSeatBlock(CasinoSeatBlock.Style.GAMING_CHAIR, properties().sound(SoundType.WOOL)));
+        public static final RegistrySupplier<CasinoSeatBlock> DEALER_STOOL = register("casino_dealer_stool",
+                () -> new CasinoSeatBlock(CasinoSeatBlock.Style.DEALER_STOOL, properties().sound(SoundType.WOOL)));
         public static final RegistrySupplier<CasinoMachineBlock> CLASSIC_SLOT_MACHINE = register("classic_slot_machine",
                 () -> new CasinoMachineBlock(CasinoMachineBlock.Design.CLASSIC, properties()));
         public static final RegistrySupplier<CasinoMachineBlock> MODERN_SLOT_MACHINE = register("modern_slot_machine",

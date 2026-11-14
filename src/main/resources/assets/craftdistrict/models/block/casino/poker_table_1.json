@@ -1,0 +1,587 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/casino_atlas",
+    "layouts": "craftdistrict:block/casino/gaming_tables_atlas",
+    "particle": "craftdistrict:block/particles/particle_seating_green"
+  },
+  "elements": [
+    {
+      "name": "apron_0",
+      "from": [
+        0,
+        11.75,
+        0.65
+      ],
+      "to": [
+        16,
+        13.25,
+        2.65
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.6178414,
+            0.0625,
+            5.8821586,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.6178414,
+            0.0625,
+            5.8821586,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "apron_1",
+      "from": [
+        0,
+        11.75,
+        2.65
+      ],
+      "to": [
+        16,
+        13.25,
+        5.65
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.6635447,
+            0.0625,
+            5.8364553,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "apron_2",
+      "from": [
+        0,
+        11.75,
+        5.65
+      ],
+      "to": [
+        16,
+        13.25,
+        9.65
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.6797424,
+            0.0625,
+            5.8202576,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "apron_3_down_joint_1",
+      "from": [
+        0,
+        11.75,
+        9.65
+      ],
+      "to": [
+        16,
+        13.25,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.6857602,
+            0.25,
+            5.8142398,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wood_slab_0",
+      "from": [
+        0,
+        13.25,
+        0
+      ],
+      "to": [
+        16,
+        14.5,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.625,
+            0.0625,
+            5.875,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "wood_slab_0_down_joint_2",
+      "from": [
+        0,
+        13.25,
+        0
+      ],
+      "to": [
+        16,
+        14.5,
+        0.65
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.625,
+            0.315625,
+            5.875,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "gold_reveal_0",
+      "from": [
+        0,
+        14.5,
+        0
+      ],
+      "to": [
+        16,
+        14.75,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.625,
+            0.0625,
+            2.875,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "padded_rail_0",
+      "from": [
+        0,
+        14.75,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        2
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            2.6666667,
+            4.0,
+            5.3333333,
+            4.25
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.125,
+            0.0625,
+            0.375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "felt_0",
+      "from": [
+        0,
+        14.75,
+        2
+      ],
+      "to": [
+        16,
+        16,
+        4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            2.6666667,
+            4.25,
+            5.3333333,
+            4.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "felt_1",
+      "from": [
+        0,
+        14.75,
+        4
+      ],
+      "to": [
+        16,
+        16,
+        7
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            2.6666667,
+            4.5,
+            5.3333333,
+            4.875
+          ]
+        }
+      }
+    },
+    {
+      "name": "felt_2",
+      "from": [
+        0,
+        14.75,
+        7
+      ],
+      "to": [
+        16,
+        16,
+        11
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            2.6666667,
+            4.875,
+            5.3333333,
+            5.375
+          ]
+        }
+      }
+    },
+    {
+      "name": "felt_3",
+      "from": [
+        0,
+        14.75,
+        11
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#layouts",
+          "uv": [
+            2.6666667,
+            5.375,
+            5.3333333,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "base_pad_0",
+      "from": [
+        0,
+        0,
+        8
+      ],
+      "to": [
+        1,
+        0.35,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            0.25,
+            0.0625,
+            0.4375,
+            0.4375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.40625,
+            0.25,
+            0.4375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.09375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_foot_0",
+      "from": [
+        0,
+        0.35,
+        8
+      ],
+      "to": [
+        1,
+        1.5,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            5.75,
+            0.0625,
+            5.9375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.59375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_foot_0_up_joint_1",
+      "from": [
+        0,
+        0.35,
+        8
+      ],
+      "to": [
+        1,
+        1.5,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.90625,
+            0.0625,
+            5.9375,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "base_pad_1",
+      "from": [
+        15,
+        0,
+        8
+      ],
+      "to": [
+        16,
+        0.35,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.0625,
+            0.25,
+            0.4375
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.0625,
+            0.25,
+            0.09375,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            0.40625,
+            0.0625,
+            0.4375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_foot_1",
+      "from": [
+        15,
+        0.35,
+        8
+      ],
+      "to": [
+        16,
+        1.5,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.75,
+            0.4375
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.90625,
+            0.0625,
+            5.9375,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "pedestal_foot_1_up_joint_0",
+      "from": [
+        15,
+        0.35,
+        8
+      ],
+      "to": [
+        16,
+        1.5,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.5625,
+            0.0625,
+            5.59375,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "structural_stretcher_down_joint_0",
+      "from": [
+        0,
+        4.25,
+        14.75
+      ],
+      "to": [
+        16,
+        5.5,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            5.6346154,
+            0.25,
+            5.8653846,
+            0.4375
+          ]
+        }
+      }
+    },
+    {
+      "name": "structural_stretcher_up_joint_0",
+      "from": [
+        0,
+        4.25,
+        14.75
+      ],
+      "to": [
+        16,
+        5.5,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            5.6346154,
+            0.0625,
+            5.8653846,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "structural_stretcher_north_joint_0",
+      "from": [
+        0,
+        4.25,
+        14.75
+      ],
+      "to": [
+        16,
+        5.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            5.6346154,
+            0.0625,
+            5.8653846,
+            0.4375
+          ]
+        }
+      }
+    }
+  ]
+}
