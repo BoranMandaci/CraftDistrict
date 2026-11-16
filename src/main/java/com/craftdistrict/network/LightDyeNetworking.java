@@ -103,6 +103,7 @@ public final class LightDyeNetworking {
             });
             return;
         }
+        com.craftdistrict.block.TableclothTableBlock.reconcileChunk(level, x, z);
         var colors = LightDyeData.get(level).snapshot(new ChunkPos(x, z));
         // Empty chunks need no packet: the client discards a chunk's palette when unloading it.
         if (colors.isEmpty()) return;

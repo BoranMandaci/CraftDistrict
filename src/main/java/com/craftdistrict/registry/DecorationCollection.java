@@ -102,6 +102,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.FireStation.RESCUE_TOOLS_RACK,
             CraftDistrictBlocks.FireStation.HYDRAULIC_RESCUE_TOOL,
             CraftDistrictBlocks.FireStation.RESCUE_STRETCHER,
+            CraftDistrictBlocks.FireStation.EMERGENCY_MEDICAL_RACK,
             CraftDistrictBlocks.FireStation.FIRST_AID_CABINET,
             // Dispatch and alarms.
             CraftDistrictBlocks.FireStation.CHIEF_DESK,
@@ -158,6 +159,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Supermarket.FILLED_SHOPPING_CART,
             CraftDistrictBlocks.Supermarket.BASKET_STACK,
             // Stockroom, entrance and safety.
+            CraftDistrictBlocks.Supermarket.STOCK_RACK,
             CraftDistrictBlocks.Supermarket.STOCK_PALLET,
             CraftDistrictBlocks.Supermarket.SECURITY_GATE,
             CraftDistrictBlocks.FireStation.EXTINGUISHER,

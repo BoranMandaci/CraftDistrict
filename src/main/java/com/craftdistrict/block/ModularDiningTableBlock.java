@@ -25,7 +25,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Multipart tables: bounded, event-driven layout checks, never a component/world scan. */
-public final class ModularDiningTableBlock extends Block {
+public class ModularDiningTableBlock extends Block {
     public static final BooleanProperty NORTH = BlockStateProperties.NORTH;
     public static final BooleanProperty EAST = BlockStateProperties.EAST;
     public static final BooleanProperty SOUTH = BlockStateProperties.SOUTH;
@@ -161,10 +161,14 @@ public final class ModularDiningTableBlock extends Block {
     }
 
     public InteractionResult toggleSupport(BlockState state, Level level, BlockPos pos, Player player) {
+        return configureSupport(state, level, pos, player, player != null && player.isShiftKeyDown());
+    }
+
+    protected final InteractionResult configureSupport(BlockState state, Level level, BlockPos pos, Player player, boolean resetAutomatic) {
         if (player == null || !player.mayBuild() || !level.mayInteract(player, pos) || level.getBlockState(pos) != state)
             return InteractionResult.PASS;
         BlockState next;
-        if (player.isShiftKeyDown()) {
+        if (resetAutomatic) {
             next = layout(state.setValue(MANUAL_SUPPORT, false), level, pos, null);
         } else {
             BlockState automatic = automaticLayout(state, level, pos, null);

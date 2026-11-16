@@ -2,6 +2,9 @@ package com.craftdistrict.registry;
 
 import com.craftdistrict.CraftDistrict;
 import com.craftdistrict.block.WideDecorationBlock;
+import com.craftdistrict.block.EmergencyMedicalRackBlock;
+import com.craftdistrict.block.StockRackBlock;
+import com.craftdistrict.block.TableclothTableBlock;
 import com.craftdistrict.block.CasinoMachineBlock;
 import com.craftdistrict.block.CasinoDecorationBlock;
 import com.craftdistrict.block.CasinoStoolBlock;
@@ -763,7 +766,7 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<ModularDiningTableBlock> DINER_MODULAR_TABLE = register("diner_modular_table",
                 () -> new ModularDiningTableBlock(metalProperties()));
         public static final RegistrySupplier<ModularDiningTableBlock> TABLECLOTH_MODULAR_TABLE = register("tablecloth_modular_table",
-                () -> new ModularDiningTableBlock(woodProperties()));
+                () -> new TableclothTableBlock(woodProperties()));
         public static final RegistrySupplier<RestaurantSeatBlock> WOODEN_DINING_CHAIR = register("wooden_dining_chair",
                 () -> new RestaurantSeatBlock(RestaurantSeatBlock.Design.WOODEN, woodProperties()));
         public static final RegistrySupplier<RestaurantSeatBlock> MODERN_DINING_CHAIR = register("modern_dining_chair",
@@ -1116,6 +1119,8 @@ public final class CraftDistrictBlocks {
                 () -> new SupermarketSelfCheckoutBlock(shelfProperties()));
         public static final RegistrySupplier<SupermarketStorePropBlock> STOCK_PALLET = register("supermarket_stock_pallet",
                 () -> new SupermarketStorePropBlock(SupermarketStorePropBlock.Prop.STOCK_PALLET, produceProperties()));
+        public static final RegistrySupplier<StockRackBlock> STOCK_RACK = register("stock_rack",
+                () -> new StockRackBlock(shelfProperties()));
         public static final RegistrySupplier<SupermarketStorePropBlock> SECURITY_GATE = register("supermarket_security_gate",
                 () -> new SupermarketStorePropBlock(SupermarketStorePropBlock.Prop.SECURITY_GATE, shelfProperties()));
         public static final RegistrySupplier<SupermarketStorePropBlock> CHECKOUT_CANDY_RACK = register("supermarket_checkout_candy_rack",
@@ -1215,6 +1220,8 @@ public final class CraftDistrictBlocks {
                 () -> new FireRescueRackBlock(FireRescueRackBlock.Rack.HOSE, equipmentProperties()));
         public static final RegistrySupplier<FireRescueRackBlock> RESCUE_TOOLS_RACK = register("fire_rescue_tools_rack",
                 () -> new FireRescueRackBlock(FireRescueRackBlock.Rack.TOOLS, equipmentProperties()));
+        public static final RegistrySupplier<EmergencyMedicalRackBlock> EMERGENCY_MEDICAL_RACK = register("emergency_medical_rack",
+                () -> new EmergencyMedicalRackBlock(equipmentProperties()));
         public static final RegistrySupplier<FireRescuePropBlock> HYDRAULIC_RESCUE_TOOL = register("hydraulic_rescue_tool",
                 () -> new FireRescuePropBlock(FireRescuePropBlock.Prop.HYDRAULIC, equipmentProperties()));
         public static final RegistrySupplier<RescueStretcherBlock> RESCUE_STRETCHER = register("rescue_stretcher",

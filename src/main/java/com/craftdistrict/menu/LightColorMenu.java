@@ -2,6 +2,7 @@ package com.craftdistrict.menu;
 
 import com.craftdistrict.item.WrenchItem;
 import com.craftdistrict.block.HotelGuestBedBlock;
+import com.craftdistrict.block.TableclothTableBlock;
 import com.craftdistrict.lighting.*;
 import com.craftdistrict.network.LightColorNetworking;
 import com.craftdistrict.network.LightDyeNetworking;
@@ -37,6 +38,7 @@ public final class LightColorMenu extends AbstractContainerMenu {
     private final long session;
     private final boolean allowsColor;
     private final boolean colorOnly;
+    private final boolean tablecloth;
     private final InteractionHand wrenchHand;
     private final ItemStack wrench;
     private final DataSlot color = DataSlot.standalone(), mode = DataSlot.standalone(), effect = DataSlot.standalone();
@@ -58,10 +60,12 @@ public final class LightColorMenu extends AbstractContainerMenu {
         super(CraftDistrictAssembly.LIGHT_COLOR_MENU.get(), id);
         owner = inventory.player; level = owner.level(); this.pos = pos.immutable(); this.session = session;
         BlockState state = level.getBlockState(pos);
-        colorOnly = state.getBlock() instanceof HotelGuestBedBlock bed && bed.dyeable();
+        tablecloth = state.getBlock() instanceof TableclothTableBlock;
+        colorOnly = tablecloth || state.getBlock() instanceof HotelGuestBedBlock bed && bed.dyeable();
         allowsColor = colorOnly || LightControls.dyeable(state);
         group = LightControls.group(level, state, pos);
-        parts = group == null ? List.copyOf(LightControls.parts(state, pos)) : LedLightGroups.get((ServerLevel)level).allParts(group);
+        parts = tablecloth && !level.isClientSide ? ((TableclothTableBlock)state.getBlock()).connected(level, pos).parts()
+                : group == null ? List.copyOf(LightControls.parts(state, pos)) : LedLightGroups.get((ServerLevel)level).allParts(group);
         structure = group == null ? parts.stream().map(part -> LightControls.shape(level.getBlockState(part))).toList() : List.of();
         wrenchHand = usedHand; wrench = wrenchHand == null ? ItemStack.EMPTY : owner.getItemInHand(wrenchHand);
         color.set(group != null ? group.color() : allowsColor && level instanceof ServerLevel server ? LightDyeData.get(server).color(pos) : -1);
@@ -76,7 +80,8 @@ public final class LightColorMenu extends AbstractContainerMenu {
     private static boolean permitted(BlockState state, Level level, BlockPos pos, Player player) {
         if (player == null || !player.isAlive() || player.isSpectator() || !player.mayBuild()
                 || player.level() != level || !WrenchItem.isHeldBy(player)
-                || !(LightControls.settingsEligible(state.getBlock()) || state.getBlock() instanceof HotelGuestBedBlock bed && bed.dyeable())
+                || !(LightControls.settingsEligible(state.getBlock()) || state.getBlock() instanceof TableclothTableBlock
+                    || state.getBlock() instanceof HotelGuestBedBlock bed && bed.dyeable())
                 || player.distanceToSqr(pos.getX()+.5, pos.getY()+.5, pos.getZ()+.5) > 64) return false;
         List<BlockPos> parts = LightControls.parts(state, pos);
         for (BlockPos part : parts) if (!level.hasChunkAt(part) || !level.getWorldBorder().isWithinBounds(part)
@@ -89,7 +94,8 @@ public final class LightColorMenu extends AbstractContainerMenu {
         if (!(player instanceof ServerPlayer server)) return InteractionResult.PASS;
         long session = ThreadLocalRandom.current().nextLong();
         MenuRegistry.openExtendedMenu(server, new ExtendedMenuProvider() {
-            @Override public Component getDisplayName() { return Component.translatable(state.getBlock() instanceof HotelGuestBedBlock
+            @Override public Component getDisplayName() { return Component.translatable(state.getBlock() instanceof TableclothTableBlock
+                    ? "screen.craftdistrict.tablecloth_color.title" : state.getBlock() instanceof HotelGuestBedBlock
                     ? "screen.craftdistrict.bedding_color.title" : "screen.craftdistrict.light_settings.title"); }
             @Override public AbstractContainerMenu createMenu(int id, Inventory inventory, Player ignored) {
                 return new LightColorMenu(id, inventory, pos, session, usedHand);
@@ -103,6 +109,8 @@ public final class LightColorMenu extends AbstractContainerMenu {
                 || owner.getItemInHand(wrenchHand) != wrench || wrench.isEmpty()) return false;
         BlockState state = level.getBlockState(pos);
         if (!permitted(state, level, pos, player)) return false;
+        // Group membership/permissions/colors are checked atomically at confirmation, not walked every menu tick.
+        if (tablecloth) return state.getBlock() instanceof TableclothTableBlock && !parts.isEmpty();
         if (group != null) return LedLightGroups.get((ServerLevel)level).find(pos) == group;
         if (!parts.equals(LightControls.parts(state, pos))) return false;
         for (int i = 0; i < parts.size(); i++) if (LightControls.shape(level.getBlockState(parts.get(i))) != structure.get(i)) return false;
@@ -128,6 +136,10 @@ public final class LightColorMenu extends AbstractContainerMenu {
                 || player.containerMenu != this || !stillValid(player) || suppliedSession != session
                 || sequence < 0 || sequence != nextSequence || nextSequence == Integer.MAX_VALUE) return;
         nextSequence++;
+        if (tablecloth) {
+            confirmTablecloth(player, selected, expectedColor, selectedMode, selectedEffect, expectedMode, expectedEffect, selectedPower, expectedPower);
+            return;
+        }
         if (colorOnly) {
             confirmBedding(player, selected, expectedColor, selectedMode, selectedEffect, expectedMode, expectedEffect, selectedPower, expectedPower);
             return;
@@ -189,10 +201,27 @@ public final class LightColorMenu extends AbstractContainerMenu {
         if (!bed.color(server, pos, player, selected)) { finish(Feedback.MISSING_DYE); return; }
         color.set(selected); WrenchItem.used(player, wrenchHand, wrench); complete(player);
     }
+    private void confirmTablecloth(ServerPlayer player, int selected, int expected, int selectedMode, int selectedEffect,
+                                  int expectedMode, int expectedEffect, boolean selectedPower, boolean expectedPower) {
+        BlockState state = level.getBlockState(pos);
+        if (!(state.getBlock() instanceof TableclothTableBlock table) || expected != color.get()
+                || selectedMode != 0 || selectedEffect != 0 || expectedMode != 0 || expectedEffect != 0
+                || selectedPower || expectedPower) { finish(Feedback.STALE); return; }
+        // An untouched, original-color menu can close without a dye transaction.
+        if (selected == -1 && expected == -1) { complete(player); return; }
+        TableclothTableBlock.ColorResult result = table.color(player.serverLevel(), pos, player, selected, expected, parts);
+        if (result == TableclothTableBlock.ColorResult.STALE) {
+            color.set(LightDyeData.get(player.serverLevel()).color(pos)); finish(Feedback.STALE); return;
+        }
+        if (result == TableclothTableBlock.ColorResult.MISSING_DYE) { finish(Feedback.MISSING_DYE); return; }
+        if (result == TableclothTableBlock.ColorResult.CHANGED) WrenchItem.used(player, wrenchHand, wrench);
+        color.set(selected); complete(player);
+    }
     private void complete(ServerPlayer player) { finish(Feedback.READY); closed = true; player.closeContainer(); }
     private void finish(Feedback result) { feedback.set(result.ordinal()); acknowledgement.set(nextSequence & 0x7fff); broadcastChanges(); }
     public boolean allowsColor() { return allowsColor; }
     public boolean colorOnly() { return colorOnly; }
+    public boolean tablecloth() { return tablecloth; }
     public boolean targets(BlockPos target) { return parts.contains(target); }
     public int color() { return color.get(); }
     public LightMode mode() { return LightMode.byId(mode.get()); }

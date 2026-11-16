@@ -123,11 +123,14 @@ public final class LightColorScreen extends AbstractContainerScreen<LightColorMe
             case MISSING_DYE -> menu.requiredDyes() > 1
                     ? text("missing_dyes", menu.requiredDyes(), colorNames[Math.max(0, menu.requestedColor())])
                     : paletteText("missing_dye", colorNames[Math.max(0, menu.requestedColor())]);
-            case STALE -> menu.colorOnly() ? Component.translatable("screen.craftdistrict.bedding_color.stale") : paletteText("stale");
+            case STALE -> menu.tablecloth() ? Component.translatable("screen.craftdistrict.tablecloth_color.stale")
+                    : menu.colorOnly() ? Component.translatable("screen.craftdistrict.bedding_color.stale") : paletteText("stale");
             case READY -> switch (tab) {
                 case MODE -> text("hint.mode");
                 case EFFECT -> text("hint.effect");
-                case COLOR -> menu.requiredDyes() > 1 && minecraft != null && minecraft.player != null && !minecraft.player.getAbilities().instabuild
+                case COLOR -> menu.tablecloth() ? Component.translatable("screen.craftdistrict.tablecloth_color."
+                        + (minecraft != null && minecraft.player != null && minecraft.player.getAbilities().instabuild ? "hint_creative" : "hint"))
+                        : menu.requiredDyes() > 1 && minecraft != null && minecraft.player != null && !minecraft.player.getAbilities().instabuild
                         ? text("hint.group", menu.requiredDyes()) : minecraft != null && minecraft.player != null && minecraft.player.getAbilities().instabuild
                         ? menu.colorOnly() ? Component.translatable("screen.craftdistrict.bedding_color.hint_creative") : paletteText("hint_creative") : paletteText("hint");
             };

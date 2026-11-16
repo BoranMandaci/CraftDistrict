@@ -71,6 +71,8 @@ public final class WrenchItem extends Item {
         var block = state.getBlock();
         if (block instanceof com.craftdistrict.block.HotelGuestBedBlock bed && bed.dyeable())
             return bed.useColor(state, level, pos, player, context.getHand());
+        if (block instanceof com.craftdistrict.block.TableclothTableBlock table)
+            return action(context, state, () -> table.useColor(state, level, pos, player, context.getHand()));
         if (block instanceof ModularDiningTableBlock table) return action(context, state, () -> table.toggleSupport(state, level, pos, player));
         if (block instanceof ConferenceTableBlock table) return action(context, state, () -> table.toggleSupport(state, level, pos, player));
         if (block instanceof PoliceWaitingBenchBlock bench) return action(context, state, () -> bench.toggleSupport(state, level, pos, player));

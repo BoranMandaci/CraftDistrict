@@ -34,8 +34,8 @@ public final class SupermarketStorePropBlock extends CashRegisterBlock {
     //?}
 
     private static final VoxelShape[][] SHAPES = {
-            rotations(Shapes.or(Block.box(1, 0, 1, 15, 3, 15),
-                    Block.box(1.5, 3, 2, 14.5, 15.5, 14.25)).optimize()),
+            rotations(Shapes.or(Block.box(1, 0, 1, 15, 2.4, 15),
+                    Block.box(1.4, 2.4, 1.4, 14.4, 12.6, 14.2)).optimize()),
             rotations(Block.box(5.75, 0, 2, 10.25, 24, 14)),
             rotations(Shapes.or(Block.box(2.5, 0, 5, 13.5, 1.5, 14),
                     Block.box(3, 1.5, 5, 13, 26, 13.75)).optimize())
