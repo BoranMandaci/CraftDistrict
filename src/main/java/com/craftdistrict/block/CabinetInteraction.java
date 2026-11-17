@@ -40,13 +40,27 @@ final class CabinetInteraction {
         BlockState primary = level.getBlockState(origin);
         if (!primary.is(block)) return InteractionResult.PASS;
         List<BlockPos> parts = block.structureParts(primary, origin);
+        boolean door = block instanceof HotelElevatorDoorsBlock || block instanceof VaultDoorBlock
+                || block instanceof HotelShowerEnclosureBlock;
         BlockState[] before = new BlockState[parts.size()];
         for (int index = 0; index < parts.size(); index++) {
+            if (door && !level.hasChunkAt(parts.get(index))) return InteractionResult.PASS;
             before[index] = level.getBlockState(parts.get(index));
             if (before[index] != block.structurePartState(primary, index)) return InteractionResult.PASS;
         }
-        if (level.isClientSide) return InteractionResult.SUCCESS;
+        if (level.isClientSide && !door) return InteractionResult.SUCCESS;
         boolean open = !primary.getValue(BlockStateProperties.OPEN);
+        if (door) {
+            BlockState[] after = new BlockState[before.length];
+            for (int i = 0; i < before.length; i++) after[i] = before[i].setValue(BlockStateProperties.OPEN, open);
+            if (!DoorStateUpdates.commit(level, parts.toArray(BlockPos[]::new), before, after)) return InteractionResult.PASS;
+            level.playSound(player, origin, open ? openSound : closeSound, SoundSource.BLOCKS, .6F, 1.1F);
+            if (!level.isClientSide) {
+                com.craftdistrict.item.WrenchItem.usedIfHeld(player);
+                level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, origin);
+            }
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
         int flags = Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE;
         int written = 0;
         boolean valid = true;

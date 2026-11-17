@@ -87,7 +87,6 @@ public final class VaultDoorBlock extends WideTallDecorationBlock {
         BlockPos origin = structureOrigin(current, pos);
         BlockState primary = level.getBlockState(origin);
         if (!primary.is(this) || !isStructureComplete(primary, level, origin)) return InteractionResult.PASS;
-        if (level.isClientSide) return InteractionResult.SUCCESS;
         BlockState target = primary.setValue(BlockStateProperties.OPEN, !primary.getValue(BlockStateProperties.OPEN));
         int cells = primary.getValue(FORWARD) ? 18 : 15;
         BlockPos[] positions = new BlockPos[cells];
@@ -104,27 +103,22 @@ public final class VaultDoorBlock extends WideTallDecorationBlock {
         Set<TransitionCell> changing = CHANGING_WINGS.get();
         if (changing == null) { changing = new HashSet<>(); CHANGING_WINGS.set(changing); }
         for (int i = 9; i < cells; i++) changing.add(new TransitionCell(level, positions[i]));
-        int written = 0;
-        boolean valid = true;
+        boolean valid;
         try {
-            for (int i = 0; i < cells; i++) {
-                if (level.getBlockState(positions[i]) != before[i] || !level.setBlock(positions[i], after[i], UPDATE_FLAGS)) {
-                    valid = false; break;
-                }
-                written++;
-                for (int j = 0; j < written; j++) if (level.getBlockState(positions[j]) != after[j]) { valid = false; break; }
-                if (!valid) break;
-            }
-            if (!valid) for (int i = written - 1; i >= 0; i--)
-                if (level.getBlockState(positions[i]) == after[i]) level.setBlock(positions[i], before[i], UPDATE_FLAGS);
+            valid = DoorStateUpdates.commit(level, positions, before, after);
         } finally {
             for (int i = 9; i < cells; i++) changing.remove(new TransitionCell(level, positions[i]));
             if (changing.isEmpty()) CHANGING_WINGS.remove();
         }
         if (!valid) return InteractionResult.PASS;
+        if (level.isClientSide) {
+            level.playSound(player, origin, target.getValue(BlockStateProperties.OPEN) ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE,
+                    SoundSource.BLOCKS, .8F, .7F);
+            return InteractionResult.SUCCESS;
+        }
         com.craftdistrict.item.WrenchItem.usedIfHeld(player);
         boolean open = target.getValue(BlockStateProperties.OPEN);
-        level.playSound(null, origin, open ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE,
+        level.playSound(player, origin, open ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE,
                 SoundSource.BLOCKS, .8F, .7F);
         level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, origin);
         return InteractionResult.CONSUME;

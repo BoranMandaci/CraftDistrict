@@ -1,0 +1,2835 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/doors/doors_atlas",
+    "mesh": "craftdistrict:block/doors/security_mesh",
+    "glass": "craftdistrict:block/doors/observation_glass",
+    "particle": "craftdistrict:block/particles/particle_light_gray"
+  },
+  "elements": [
+    {
+      "name": "hinge_stile_front",
+      "from": [
+        -0.11999999999999922,
+        0,
+        15.45
+      ],
+      "to": [
+        0.0,
+        16,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "hinge_stile_back",
+      "from": [
+        2.5,
+        0,
+        15.45
+      ],
+      "to": [
+        2.620000000000001,
+        16,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "latch_stile_front",
+      "from": [
+        -0.11999999999999922,
+        0,
+        0
+      ],
+      "to": [
+        0.0,
+        16,
+        0.5500000000000007
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "latch_stile_back",
+      "from": [
+        2.5,
+        0,
+        0
+      ],
+      "to": [
+        2.620000000000001,
+        16,
+        0.5500000000000007
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            1.0,
+            8,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "bottom_rail_front",
+      "from": [
+        -0.11999999999999922,
+        0,
+        0.5500000000000007
+      ],
+      "to": [
+        0.0,
+        1,
+        15.45
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "bottom_rail_back",
+      "from": [
+        2.5,
+        0,
+        0.5500000000000007
+      ],
+      "to": [
+        2.620000000000001,
+        1,
+        15.45
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "handle_escutcheon",
+      "from": [
+        -0.25,
+        13,
+        1.5500000000000007
+      ],
+      "to": [
+        0.0,
+        16,
+        2.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6046511627906979,
+            14,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6046511627906979,
+            14,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6046511627906979,
+            14,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "lever_spindle",
+      "from": [
+        -1.0500000000000007,
+        15.65,
+        1.7799999999999994
+      ],
+      "to": [
+        -0.25,
+        16,
+        2.2799999999999994
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.5999999999999964,
+            14,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.5999999999999964,
+            14,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "lever_grip",
+      "from": [
+        -1.1999999999999993,
+        15.6,
+        1.6999999999999993
+      ],
+      "to": [
+        -0.8000000000000007,
+        16,
+        4.449999999999999
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6666666666666647,
+            14,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6666666666666647,
+            14,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6666666666666647,
+            14,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6666666666666647,
+            14,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "keyhole_front",
+      "from": [
+        -0.27999999999999936,
+        13.55,
+        1.9000000000000004
+      ],
+      "to": [
+        0.0,
+        14.05,
+        2.1500000000000004
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "keyhole_back",
+      "from": [
+        2.5,
+        13.55,
+        1.9000000000000004
+      ],
+      "to": [
+        2.780000000000001,
+        14.05,
+        2.1500000000000004
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "handle_escutcheon",
+      "from": [
+        2.5,
+        13,
+        1.5500000000000007
+      ],
+      "to": [
+        2.75,
+        16,
+        2.5
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6046511627906979,
+            14,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6046511627906979,
+            14,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6046511627906979,
+            14,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "lever_spindle",
+      "from": [
+        2.75,
+        15.65,
+        1.7799999999999994
+      ],
+      "to": [
+        3.5500000000000007,
+        16,
+        2.2799999999999994
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.5999999999999964,
+            14,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.5999999999999964,
+            14,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "lever_grip",
+      "from": [
+        3.3000000000000007,
+        15.6,
+        1.6999999999999993
+      ],
+      "to": [
+        3.6999999999999993,
+        16,
+        4.449999999999999
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6666666666666647,
+            14,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6666666666666647,
+            14,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6666666666666647,
+            14,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0.6666666666666647,
+            14,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            12,
+            0,
+            14,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "solid_side_structure",
+      "from": [
+        0.0,
+        0,
+        13.8
+      ],
+      "to": [
+        2.5,
+        16,
+        16
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            1.0,
+            6,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            1.0,
+            6,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            1.0,
+            6,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            1.0,
+            6,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "solid_side_structure",
+      "from": [
+        0.0,
+        0,
+        0
+      ],
+      "to": [
+        2.5,
+        16,
+        2.1999999999999993
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            1.0,
+            6,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            1.0,
+            6,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            1.0,
+            6,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            1.0,
+            6,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "complete_header_crossrail",
+      "from": [
+        0.0,
+        0,
+        2.1999999999999993
+      ],
+      "to": [
+        2.5,
+        2.9,
+        13.8
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "complete_header_crossrail",
+      "from": [
+        0.0,
+        11.6,
+        2.1999999999999993
+      ],
+      "to": [
+        2.5,
+        16,
+        13.8
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0.8717948717948716,
+            6,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0.8717948717948716,
+            6,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            4,
+            0,
+            6,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "vent_cassette_side_channel",
+      "from": [
+        0.05000000000000071,
+        2.9,
+        13.5
+      ],
+      "to": [
+        2.4499999999999993,
+        11.6,
+        13.8
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "vent_cassette_side_channel",
+      "from": [
+        0.05000000000000071,
+        2.9,
+        2.1999999999999993
+      ],
+      "to": [
+        2.4499999999999993,
+        11.6,
+        2.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_vent_shadow_core",
+      "from": [
+        1.1799999999999997,
+        2.9,
+        2.5
+      ],
+      "to": [
+        1.3200000000000003,
+        11.6,
+        13.5
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "vent_outer_left_border_front",
+      "from": [
+        -0.14000000000000057,
+        2.6999999999999997,
+        13.65
+      ],
+      "to": [
+        0.0,
+        11.799999999999999,
+        13.95
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "vent_outer_left_border_back",
+      "from": [
+        2.5,
+        2.6999999999999997,
+        13.65
+      ],
+      "to": [
+        2.6400000000000006,
+        11.799999999999999,
+        13.95
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "vent_outer_right_border_front",
+      "from": [
+        -0.14000000000000057,
+        2.6999999999999997,
+        2.0500000000000007
+      ],
+      "to": [
+        0.0,
+        11.799999999999999,
+        2.3499999999999996
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "vent_outer_right_border_back",
+      "from": [
+        2.5,
+        2.6999999999999997,
+        2.0500000000000007
+      ],
+      "to": [
+        2.6400000000000006,
+        11.799999999999999,
+        2.3499999999999996
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "vent_outer_bottom_border_front",
+      "from": [
+        -0.14000000000000057,
+        2.6999999999999997,
+        2.3499999999999996
+      ],
+      "to": [
+        0.0,
+        2.9,
+        13.65
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "vent_outer_bottom_border_back",
+      "from": [
+        2.5,
+        2.6999999999999997,
+        2.3499999999999996
+      ],
+      "to": [
+        2.6400000000000006,
+        2.9,
+        13.65
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "vent_outer_top_border_front",
+      "from": [
+        -0.14000000000000057,
+        11.6,
+        2.3499999999999996
+      ],
+      "to": [
+        0.0,
+        11.799999999999999,
+        13.65
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "vent_outer_top_border_back",
+      "from": [
+        2.5,
+        11.6,
+        2.3499999999999996
+      ],
+      "to": [
+        2.6400000000000006,
+        11.799999999999999,
+        13.65
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "name": "vent_0_front_louver_0",
+      "from": [
+        0.1999999999999993,
+        3.0700000000000003,
+        2.4499999999999993
+      ],
+      "to": [
+        1.0500000000000007,
+        3.83,
+        13.55
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          0.625,
+          3.45,
+          8
+        ],
+        "axis": "z",
+        "angle": -22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_back_louver_0",
+      "from": [
+        1.4499999999999993,
+        3.0700000000000003,
+        2.4499999999999993
+      ],
+      "to": [
+        2.3000000000000007,
+        3.83,
+        13.55
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          1.875,
+          3.45,
+          8
+        ],
+        "axis": "z",
+        "angle": 22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_front_louver_1",
+      "from": [
+        0.1999999999999993,
+        4.155714285714286,
+        2.4499999999999993
+      ],
+      "to": [
+        1.0500000000000007,
+        4.9157142857142855,
+        13.55
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          0.625,
+          4.535714285714286,
+          8
+        ],
+        "axis": "z",
+        "angle": -22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_back_louver_1",
+      "from": [
+        1.4499999999999993,
+        4.155714285714286,
+        2.4499999999999993
+      ],
+      "to": [
+        2.3000000000000007,
+        4.9157142857142855,
+        13.55
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          1.875,
+          4.535714285714286,
+          8
+        ],
+        "axis": "z",
+        "angle": 22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_front_louver_2",
+      "from": [
+        0.1999999999999993,
+        5.241428571428572,
+        2.4499999999999993
+      ],
+      "to": [
+        1.0500000000000007,
+        6.001428571428572,
+        13.55
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          0.625,
+          5.621428571428572,
+          8
+        ],
+        "axis": "z",
+        "angle": -22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_back_louver_2",
+      "from": [
+        1.4499999999999993,
+        5.241428571428572,
+        2.4499999999999993
+      ],
+      "to": [
+        2.3000000000000007,
+        6.001428571428572,
+        13.55
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          1.875,
+          5.621428571428572,
+          8
+        ],
+        "axis": "z",
+        "angle": 22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_front_louver_3",
+      "from": [
+        0.1999999999999993,
+        6.327142857142857,
+        2.4499999999999993
+      ],
+      "to": [
+        1.0500000000000007,
+        7.087142857142857,
+        13.55
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          0.625,
+          6.707142857142857,
+          8
+        ],
+        "axis": "z",
+        "angle": -22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_back_louver_3",
+      "from": [
+        1.4499999999999993,
+        6.327142857142857,
+        2.4499999999999993
+      ],
+      "to": [
+        2.3000000000000007,
+        7.087142857142857,
+        13.55
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          1.875,
+          6.707142857142857,
+          8
+        ],
+        "axis": "z",
+        "angle": 22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_front_louver_4",
+      "from": [
+        0.1999999999999993,
+        7.412857142857143,
+        2.4499999999999993
+      ],
+      "to": [
+        1.0500000000000007,
+        8.172857142857143,
+        13.55
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          0.625,
+          7.792857142857143,
+          8
+        ],
+        "axis": "z",
+        "angle": -22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_back_louver_4",
+      "from": [
+        1.4499999999999993,
+        7.412857142857143,
+        2.4499999999999993
+      ],
+      "to": [
+        2.3000000000000007,
+        8.172857142857143,
+        13.55
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          1.875,
+          7.792857142857143,
+          8
+        ],
+        "axis": "z",
+        "angle": 22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_front_louver_5",
+      "from": [
+        0.1999999999999993,
+        8.498571428571429,
+        2.4499999999999993
+      ],
+      "to": [
+        1.0500000000000007,
+        9.25857142857143,
+        13.55
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          0.625,
+          8.87857142857143,
+          8
+        ],
+        "axis": "z",
+        "angle": -22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_back_louver_5",
+      "from": [
+        1.4499999999999993,
+        8.498571428571429,
+        2.4499999999999993
+      ],
+      "to": [
+        2.3000000000000007,
+        9.25857142857143,
+        13.55
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          1.875,
+          8.87857142857143,
+          8
+        ],
+        "axis": "z",
+        "angle": 22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_front_louver_6",
+      "from": [
+        0.1999999999999993,
+        9.584285714285713,
+        2.4499999999999993
+      ],
+      "to": [
+        1.0500000000000007,
+        10.344285714285714,
+        13.55
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          0.625,
+          9.964285714285714,
+          8
+        ],
+        "axis": "z",
+        "angle": -22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_back_louver_6",
+      "from": [
+        1.4499999999999993,
+        9.584285714285713,
+        2.4499999999999993
+      ],
+      "to": [
+        2.3000000000000007,
+        10.344285714285714,
+        13.55
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          1.875,
+          9.964285714285714,
+          8
+        ],
+        "axis": "z",
+        "angle": 22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_front_louver_7",
+      "from": [
+        0.1999999999999993,
+        10.67,
+        2.4499999999999993
+      ],
+      "to": [
+        1.0500000000000007,
+        11.430000000000001,
+        13.55
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            0,
+            8,
+            2
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          0.625,
+          11.05,
+          8
+        ],
+        "axis": "z",
+        "angle": -22.5,
+        "rescale": false
+      }
+    },
+    {
+      "name": "vent_0_back_louver_7",
+      "from": [
+        1.4499999999999993,
+        10.67,
+        2.4499999999999993
+      ],
+      "to": [
+        2.3000000000000007,
+        11.430000000000001,
+        13.55
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            6,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 90
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            0
+          ],
+          "rotation": 270
+        }
+      },
+      "rotation": {
+        "origin": [
+          1.875,
+          11.05,
+          8
+        ],
+        "axis": "z",
+        "angle": 22.5,
+        "rescale": false
+      }
+    }
+  ]
+}

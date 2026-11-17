@@ -35,6 +35,8 @@ public final class CraftDistrictClient {
         }
         ClientLifecycleEvent.CLIENT_SETUP.register(client -> {
             LightingColors.init();
+            RenderTypeRegistry.register(RenderType.cutout(), CraftDistrictBlocks.Doors.FIRE_EXIT.get(),
+                    CraftDistrictBlocks.Doors.MESH_SECURITY.get(), CraftDistrictBlocks.Doors.KITCHEN_SERVICE.get());
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Casino.CASHIER_COUNTER.get(),
                     CraftDistrictBlocks.Casino.VIP_DIVIDER.get());
             BlockEntityRendererRegistry.register(CraftDistrictRoomNumbers.PLAQUE.get(), RoomNumberRenderer::new);

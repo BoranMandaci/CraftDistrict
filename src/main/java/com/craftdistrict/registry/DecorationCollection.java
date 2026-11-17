@@ -513,7 +513,22 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Casino.CARDS_AND_DICE,
             CraftDistrictBlocks.Casino.VIP_DIVIDER,
             CraftDistrictBlocks.Casino.CARPET,
-            CraftDistrictBlocks.Casino.CHANDELIER);
+            CraftDistrictBlocks.Casino.CHANDELIER),
+    DOORS("doors", CraftDistrictBlocks.Doors.FIRE_EXIT,
+            CraftDistrictBlocks.Doors.FIRE_EXIT,
+            CraftDistrictBlocks.Doors.VENTILATED_UTILITY,
+            CraftDistrictBlocks.Doors.MESH_SECURITY,
+            CraftDistrictBlocks.Doors.ORNATE_WOODEN,
+            CraftDistrictBlocks.Doors.COLD_STORAGE,
+            CraftDistrictBlocks.Doors.KITCHEN_SERVICE,
+            CraftDistrictBlocks.Doors.INDUSTRIAL_RIVETED,
+            CraftDistrictBlocks.Doors.RUSTIC_WOODEN,
+            CraftDistrictBlocks.Hotel.ROOM_DOOR,
+            CraftDistrictBlocks.Office.GLASS_PARTITION_DOOR,
+            CraftDistrictBlocks.Police.HOLDING_CELL_DOOR,
+            CraftDistrictBlocks.Hotel.SHOWER_ENCLOSURE,
+            CraftDistrictBlocks.Hotel.ELEVATOR_DOORS,
+            CraftDistrictBlocks.Casino.VAULT_DOOR);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

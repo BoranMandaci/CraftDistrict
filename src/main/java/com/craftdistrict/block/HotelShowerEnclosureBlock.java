@@ -300,14 +300,17 @@ public class HotelShowerEnclosureBlock extends MultiBlockDecorationBlock {
         BlockPos otherPos = partnerPos(primary, origin); BlockState other = level.getBlockState(otherPos);
         BlockState upper = level.getBlockState(origin.above()), otherUpper = level.getBlockState(otherPos.above());
         if (upper != structurePartState(primary, 1) || otherUpper != structurePartState(other, 1)) return InteractionResult.PASS;
-        if (level.isClientSide) return InteractionResult.SUCCESS;
         boolean open = !primary.getValue(BlockStateProperties.OPEN);
         BlockState next = primary.setValue(BlockStateProperties.OPEN, open), nextOther = other.setValue(BlockStateProperties.OPEN, open);
-        if (!commit(level, new BlockPos[]{origin, origin.above(), otherPos, otherPos.above()},
+        if (!DoorStateUpdates.commit(level, new BlockPos[]{origin, origin.above(), otherPos, otherPos.above()},
                 new BlockState[]{primary, upper, other, otherUpper},
                 new BlockState[]{next, structurePartState(next, 1), nextOther, structurePartState(nextOther, 1)})) return InteractionResult.PASS;
+        if (level.isClientSide) {
+            level.playSound(player, origin, open ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE, SoundSource.BLOCKS, .6F, 1.1F);
+            return InteractionResult.SUCCESS;
+        }
         com.craftdistrict.item.WrenchItem.usedIfHeld(player);
-        level.playSound(null, origin, open ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE, SoundSource.BLOCKS, .6F, 1.1F);
+        level.playSound(player, origin, open ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE, SoundSource.BLOCKS, .6F, 1.1F);
         level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, origin);
         return InteractionResult.CONSUME;
     }

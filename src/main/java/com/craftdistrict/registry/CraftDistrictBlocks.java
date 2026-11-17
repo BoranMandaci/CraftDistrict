@@ -19,6 +19,7 @@ import com.craftdistrict.block.CasinoChandelierBlock;
 import com.craftdistrict.block.CasinoVipDividerBlock;
 import com.craftdistrict.block.CasinoVipBoothBlock;
 import com.craftdistrict.block.VaultDoorBlock;
+import com.craftdistrict.block.CollectionDoorBlock;
 import com.craftdistrict.block.VaultStorageBlock;
 import com.craftdistrict.block.DepositBoxShelfBlock;
 import com.craftdistrict.block.VaultValuablesBlock;
@@ -255,6 +256,7 @@ public final class CraftDistrictBlocks {
         Hotel.initialize();
         Survival.initialize();
         Casino.initialize();
+        Doors.initialize();
         BLOCKS.register();
     }
 
@@ -274,6 +276,24 @@ public final class CraftDistrictBlocks {
                 ? new ShoppingCartBlockItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
+    }
+
+    public static final class Doors {
+        public static final RegistrySupplier<CollectionDoorBlock> FIRE_EXIT = door("fire_exit_door", CollectionDoorBlock.Design.FIRE_EXIT);
+        public static final RegistrySupplier<CollectionDoorBlock> VENTILATED_UTILITY = door("ventilated_utility_door", CollectionDoorBlock.Design.VENTILATED_UTILITY);
+        public static final RegistrySupplier<CollectionDoorBlock> MESH_SECURITY = door("mesh_security_door", CollectionDoorBlock.Design.MESH_SECURITY);
+        public static final RegistrySupplier<CollectionDoorBlock> ORNATE_WOODEN = door("ornate_wooden_door", CollectionDoorBlock.Design.ORNATE_WOODEN);
+        public static final RegistrySupplier<CollectionDoorBlock> COLD_STORAGE = door("cold_storage_door", CollectionDoorBlock.Design.COLD_STORAGE);
+        public static final RegistrySupplier<CollectionDoorBlock> KITCHEN_SERVICE = door("kitchen_service_door", CollectionDoorBlock.Design.KITCHEN_SERVICE);
+        public static final RegistrySupplier<CollectionDoorBlock> INDUSTRIAL_RIVETED = door("industrial_riveted_door", CollectionDoorBlock.Design.INDUSTRIAL_RIVETED);
+        public static final RegistrySupplier<CollectionDoorBlock> RUSTIC_WOODEN = door("rustic_wooden_door", CollectionDoorBlock.Design.RUSTIC_WOODEN);
+
+        private static RegistrySupplier<CollectionDoorBlock> door(String id, CollectionDoorBlock.Design design) {
+            boolean wood = design == CollectionDoorBlock.Design.ORNATE_WOODEN || design == CollectionDoorBlock.Design.RUSTIC_WOODEN;
+            return register(id, () -> new CollectionDoorBlock(design, BlockBehaviour.Properties.of().strength(wood ? 3 : 5)
+                    .sound(wood ? SoundType.WOOD : SoundType.METAL).noOcclusion()));
+        }
+        private static void initialize() { }
     }
 
     public static final class Casino {

@@ -16,7 +16,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Vanilla two-half door lifecycle, hand opening and metal sounds; no block entity. */
-public final class PoliceHoldingCellDoorBlock extends DoorBlock {
+public final class PoliceHoldingCellDoorBlock extends PairedDoorBlock {
     private static final BlockSetType TYPE = new BlockSetType("craftdistrict:holding_cell", true,
             //? if >=1.21 {
             false, false, BlockSetType.PressurePlateSensitivity.EVERYTHING,
@@ -30,30 +30,10 @@ public final class PoliceHoldingCellDoorBlock extends DoorBlock {
     //?}
 
     public PoliceHoldingCellDoorBlock(Properties properties) {
-        //? if >=1.21 {
-        super(TYPE, properties);
-        //?} else {
-        /*super(properties, TYPE);
-        *///?}
+        super(TYPE, properties, 3);
     }
 
-    //? if >=1.21 {
-    @Override public net.minecraft.world.InteractionResult useWithoutItem(BlockState state, net.minecraft.world.level.Level level,
-            BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.world.phys.BlockHitResult hit) {
-        var result = super.useWithoutItem(state, level, pos, player, hit);
-        if (!level.isClientSide && result.consumesAction() && level.getBlockState(pos) != state)
-            com.craftdistrict.item.WrenchItem.usedIfHeld(player);
-        return result;
-    }
-    //?} else {
-    /*@Override public net.minecraft.world.InteractionResult use(BlockState state, net.minecraft.world.level.Level level,
-            BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.world.InteractionHand hand, net.minecraft.world.phys.BlockHitResult hit) {
-        var result = super.use(state, level, pos, player, hand, hit);
-        if (!level.isClientSide && result.consumesAction() && level.getBlockState(pos) != state)
-            com.craftdistrict.item.WrenchItem.used(player, hand, player.getItemInHand(hand));
-        return result;
-    }
-    *///?}
+
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
@@ -69,7 +49,7 @@ public final class PoliceHoldingCellDoorBlock extends DoorBlock {
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        // Use vanilla's filled edge plane for both closed and swung-open states.
+        // Use the same outer-edge plane as the visible door leaf.
         return super.getShape(state, level, pos, context);
     }
 
