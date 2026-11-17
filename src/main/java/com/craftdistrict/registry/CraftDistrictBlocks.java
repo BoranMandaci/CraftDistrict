@@ -2,6 +2,9 @@ package com.craftdistrict.registry;
 
 import com.craftdistrict.CraftDistrict;
 import com.craftdistrict.block.WideDecorationBlock;
+import com.craftdistrict.block.NestingShoppingCartBlock;
+import com.craftdistrict.block.FastFoodMenuScreenBlock;
+import com.craftdistrict.block.MicroscopeBlock;
 import com.craftdistrict.block.EmergencyMedicalRackBlock;
 import com.craftdistrict.block.StockRackBlock;
 import com.craftdistrict.block.TableclothTableBlock;
@@ -90,6 +93,7 @@ import com.craftdistrict.block.HotelVanityMirrorBlock;
 import com.craftdistrict.block.HotelBathroomBinBlock;
 import com.craftdistrict.item.VanityArrangementBlockItem;
 import com.craftdistrict.item.ShowerFixtureBlockItem;
+import com.craftdistrict.item.ShoppingCartBlockItem;
 import com.craftdistrict.block.HotelFixedShowerPanelBlock;
 import com.craftdistrict.block.HotelShowerFixtureBlock;
 import com.craftdistrict.block.HotelShowerFloorBlock;
@@ -266,6 +270,8 @@ public final class CraftDistrictBlocks {
                 : block.get() instanceof HotelShowerFixtureBlock
                     || block.get() instanceof HotelShowerFloorBlock
                 ? new ShowerFixtureBlockItem(block.get(), new Item.Properties())
+                : block.get() instanceof NestingShoppingCartBlock
+                ? new ShoppingCartBlockItem(block.get(), new Item.Properties())
                 : new BlockItem(block.get(), new Item.Properties()));
         return block;
     }
@@ -576,6 +582,8 @@ public final class CraftDistrictBlocks {
     }
 
     public static final class Hospital {
+        public static final RegistrySupplier<MicroscopeBlock> MICROSCOPE = register("microscope",
+                () -> new MicroscopeBlock(metalProperties()));
         public static final RegistrySupplier<HospitalBedBlock> BED = register("hospital_bed",
                 () -> new HospitalBedBlock(metalProperties()));
         public static final RegistrySupplier<HospitalEquipmentBlock> PATIENT_MONITOR = register("patient_monitor",
@@ -826,6 +834,10 @@ public final class CraftDistrictBlocks {
                 () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.SOFT_DRINK_DISPENSER, metalProperties()));
         public static final RegistrySupplier<RestaurantServicePropBlock> CONDIMENT_STATION = register("condiment_station",
                 () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.CONDIMENT_STATION, woodProperties()));
+        public static final RegistrySupplier<RestaurantServicePropBlock> UTENSIL_CONDIMENT_STATION = register("utensil_condiment_station",
+                () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.UTENSIL_STATION, metalProperties()));
+        public static final RegistrySupplier<FastFoodMenuScreenBlock> FAST_FOOD_MENU_SCREEN = register("fast_food_menu_screen",
+                () -> new FastFoodMenuScreenBlock(metalProperties()));
         public static final RegistrySupplier<RestaurantServicePropBlock> COMMERCIAL_COFFEE_MACHINE = register("commercial_coffee_machine",
                 () -> new RestaurantServicePropBlock(RestaurantServicePropBlock.Design.COFFEE_MACHINE, metalProperties()));
         public static final RegistrySupplier<KitchenOrderDisplayBlock> KITCHEN_ORDER_DISPLAY = register("kitchen_order_display",
@@ -1109,7 +1121,7 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<SupermarketCheckoutBlock> CHECKOUT = register("supermarket_checkout",
                 () -> new SupermarketCheckoutBlock(shelfProperties()));
         public static final RegistrySupplier<SupermarketShoppingCartBlock> SHOPPING_CART = register("supermarket_shopping_cart",
-                () -> new SupermarketShoppingCartBlock(shelfProperties()));
+                () -> new NestingShoppingCartBlock(shelfProperties()));
         public static final RegistrySupplier<SupermarketShoppingCartBlock> FILLED_SHOPPING_CART = register("supermarket_filled_shopping_cart",
                 () -> new SupermarketShoppingCartBlock(shelfProperties()));
         public static final RegistrySupplier<SupermarketShoppingPropBlock> BASKET_STACK = register("supermarket_basket_stack",

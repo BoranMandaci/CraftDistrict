@@ -230,6 +230,8 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Restaurant.RESTAURANT_MENU_BOARD,
             CraftDistrictBlocks.Restaurant.PLATE_CUTLERY_RACK,
             CraftDistrictBlocks.Restaurant.CONDIMENT_STATION,
+            CraftDistrictBlocks.Restaurant.UTENSIL_CONDIMENT_STATION,
+            CraftDistrictBlocks.Restaurant.FAST_FOOD_MENU_SCREEN,
             CraftDistrictBlocks.Restaurant.BEVERAGE_DISPENSER,
             CraftDistrictBlocks.Restaurant.SOFT_DRINK_DISPENSER,
             CraftDistrictBlocks.Restaurant.DISPOSABLE_CUPS,
@@ -332,6 +334,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Hospital.EXAMINATION_TABLE,
             CraftDistrictBlocks.Hospital.DENTAL_CHAIR,
             CraftDistrictBlocks.Hospital.INSTRUMENT_TROLLEY,
+            CraftDistrictBlocks.Hospital.MICROSCOPE,
             CraftDistrictBlocks.Hospital.SUPPLY_CABINET,
             // Monitoring, patient transport and emergency equipment.
             CraftDistrictBlocks.Hospital.PATIENT_MONITOR,

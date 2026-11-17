@@ -18,7 +18,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public final class RestaurantServicePropBlock extends CashRegisterBlock {
     public enum Design implements StringRepresentable {
         PICKUP_COUNTER, POS_TERMINAL, BEVERAGE_DISPENSER, CONDIMENT_STATION, COFFEE_MACHINE, MENU_BOARD,
-        BLENDER, DISPOSABLE_CUPS, SOFT_DRINK_DISPENSER;
+        BLENDER, DISPOSABLE_CUPS, SOFT_DRINK_DISPENSER, UTENSIL_STATION;
         @Override public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
     }
     //? if >=1.21 {
@@ -45,7 +45,9 @@ public final class RestaurantServicePropBlock extends CashRegisterBlock {
             RestaurantKitchenBlock.rotations(Block.box(3, 0, 4, 13, 6.25, 11)),
             RestaurantKitchenBlock.rotations(Shapes.or(Block.box(1, 0, 1.5, 15, 1.25, 14.5),
                     Block.box(1.75, 1.25, 8.5, 14.25, 9.5, 14.5),
-                    Block.box(1, 6, 6.5, 15, 16, 14.5)))
+                    Block.box(1, 6, 6.5, 15, 16, 14.5))),
+            RestaurantKitchenBlock.rotations(Shapes.or(Block.box(1, 0, 1.5, 15, 4.4, 14.5),
+                    Block.box(1, 4.4, 7.75, 15, 10.85, 14.5), Block.box(10, 10.85, 9.5, 14.5, 12.5, 14.1)))
     };
     private final Design design;
 

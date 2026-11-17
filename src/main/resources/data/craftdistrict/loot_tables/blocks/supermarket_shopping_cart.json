@@ -6,7 +6,35 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "craftdistrict:supermarket_shopping_cart"
+          "name": "craftdistrict:supermarket_shopping_cart",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2,
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "craftdistrict:supermarket_shopping_cart",
+                  "properties": {
+                    "carts": "2"
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 3,
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "craftdistrict:supermarket_shopping_cart",
+                  "properties": {
+                    "carts": "3"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ],
       "conditions": [

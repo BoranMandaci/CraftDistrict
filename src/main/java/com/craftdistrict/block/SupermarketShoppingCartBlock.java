@@ -14,7 +14,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 /** Rear/handle cell is primary; the front basket cell extends toward facing.
  * Legacy facing-only states load as primary, without writing into occupied neighbors.
  */
-public final class SupermarketShoppingCartBlock extends MultiBlockDecorationBlock {
+public class SupermarketShoppingCartBlock extends MultiBlockDecorationBlock {
     //? if >=1.21 {
     public static final MapCodec<SupermarketShoppingCartBlock> CODEC = simpleCodec(SupermarketShoppingCartBlock::new);
     //?}
