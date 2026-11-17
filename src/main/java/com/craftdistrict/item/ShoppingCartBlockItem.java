@@ -47,7 +47,10 @@ public final class ShoppingCartBlockItem extends BlockItem {
                             || !level.mayInteract(player, rear)
                             || !player.mayUseItemAt(rear, Direction.UP, context.getItemInHand())) return InteractionResult.FAIL;
                     // Grow the row using vanilla placement, permissions, item use and multiblock checks.
-                    return place(BlockPlaceContext.at(new BlockPlaceContext(context), rear, Direction.UP));
+                    BlockPlaceContext placement = BlockPlaceContext.at(new BlockPlaceContext(context), rear, Direction.UP);
+                    // A blocked target must not redirect vanilla placement onto the block above it.
+                    if (!placement.getClickedPos().equals(rear)) return InteractionResult.FAIL;
+                    return place(placement);
                 }
                 origin = rear;
             }

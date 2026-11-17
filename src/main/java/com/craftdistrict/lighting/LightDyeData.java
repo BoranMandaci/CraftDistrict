@@ -92,6 +92,7 @@ public final class LightDyeData extends SavedData {
     /** Validate the whole per-fixture/per-panel dye cost before any settings are committed. */
     public Payment payment(net.minecraft.world.entity.player.Player player, java.util.List<BlockPos> parts,
                            int selected, boolean perPanel, boolean refund) {
+        if (selected < 0 || selected > 15 || parts.isEmpty()) return null;
         int count = perPanel ? parts.size() : 1;
         net.minecraft.world.item.DyeItem dye = net.minecraft.world.item.DyeItem.byColor(net.minecraft.world.item.DyeColor.byId(selected));
         int available = 0;

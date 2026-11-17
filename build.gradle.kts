@@ -111,6 +111,35 @@ tasks.withType<JavaCompile>().configureEach {
 
 tasks.processResources {
     filteringCharset = "UTF-8"
+    // Legacy authoring models have no item, blockstate or parent references.
+    // Keep the editable source files, but omit them from production bundles.
+    exclude(
+        "assets/craftdistrict/models/block/hotel/corridor_directional_sign_configured.json",
+        "assets/craftdistrict/models/block/hotel/dryer.json",
+        "assets/craftdistrict/models/block/hotel/elevator_floor_indicator_configured.json",
+        "assets/craftdistrict/models/block/hotel/pool_overflow_drain_6.json",
+        "assets/craftdistrict/models/block/hotel/pool_overflow_drain_9.json",
+        "assets/craftdistrict/models/block/hotel/pool_overflow_drain_10.json",
+        "assets/craftdistrict/models/block/hotel/pool_overflow_drain_11.json",
+        "assets/craftdistrict/models/block/hotel/pool_overflow_drain_12.json",
+        "assets/craftdistrict/models/block/hotel/pool_overflow_drain_13.json",
+        "assets/craftdistrict/models/block/hotel/pool_overflow_drain_14.json",
+        "assets/craftdistrict/models/block/hotel/washing_machine.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_join_1_0.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_join_1_1.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_join_2_0.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_join_2_1.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_join_3_0.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_join_3_1.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_lower.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_reverse_1_0.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_reverse_1_1.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_reverse_2_0.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_reverse_2_1.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_reverse_3_0.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_reverse_3_1.json",
+        "assets/craftdistrict/models/block/police/police_evidence_storage_shelf_upper.json"
+    )
     // Carry the unmodified project license into every platform's common bundle.
     from(rootProject.file("LICENSE"))
     inputs.property("resource_pack_format", resourcePackFormat)

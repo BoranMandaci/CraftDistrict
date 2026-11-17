@@ -25,6 +25,15 @@ import java.util.stream.Stream;
 public final class LightingColors {
     // Render workers only read immutable chunk palettes; packets publish a new copy.
     private static final Map<ResourceLocation, ConcurrentHashMap<Long, Long2ByteOpenHashMap>> COLORS = new ConcurrentHashMap<>();
+    private static volatile long paletteRevision;
+    // Mesh workers usually tint many adjacent quads in one chunk. Keep only one
+    // immutable palette per thread, never a level/player or a dimension-wide map.
+    private static final class TintChunk {
+        ResourceLocation dimension;
+        long chunk, revision = -1;
+        Long2ByteOpenHashMap colors;
+    }
+    private static final ThreadLocal<TintChunk> TINT_CHUNK = ThreadLocal.withInitial(TintChunk::new);
     private static final int[] DYE_RGB = new int[16];
     private static final int[] DIMMED_DYE_RGB = new int[DYE_RGB.length];
     static {
@@ -55,17 +64,23 @@ public final class LightingColors {
                         || (tint & 0x4000000) != 0 ? -1 : dye(pos)), lights);
         ColorHandlerRegistry.registerItemColors((stack, tint) -> color(tint, -1), lights);
         LightDyeNetworking.receiveWith(LightingColors::receive);
-        ClientPlayerEvent.CLIENT_PLAYER_QUIT.register(player -> COLORS.clear());
+        ClientPlayerEvent.CLIENT_PLAYER_QUIT.register(player -> clear());
     }
-    public static void clear() { COLORS.clear(); }
+    public static void clear() { COLORS.clear(); paletteRevision++; TINT_CHUNK.remove(); }
 
     private static int dye(BlockPos pos) {
         var level = Minecraft.getInstance().level;
         if (level == null) return -1;
-        var dimension = COLORS.get(level.dimension().location());
-        if (dimension == null) return -1;
-        var chunk = dimension.get(ChunkPos.asLong(pos.getX() >> 4, pos.getZ() >> 4));
-        return chunk == null ? -1 : chunk.get(pos.asLong());
+        ResourceLocation dimension = level.dimension().location();
+        long chunk = ChunkPos.asLong(pos.getX() >> 4, pos.getZ() >> 4);
+        long revision = paletteRevision;
+        TintChunk cached = TINT_CHUNK.get();
+        if (cached.revision != revision || cached.chunk != chunk || !dimension.equals(cached.dimension)) {
+            var palettes = COLORS.get(dimension);
+            cached.colors = palettes == null ? null : palettes.get(chunk);
+            cached.dimension = dimension; cached.chunk = chunk; cached.revision = revision;
+        }
+        return cached.colors == null ? -1 : cached.colors.get(pos.asLong());
     }
 
     /** Use the server-synchronized brightness stage, never an independent client animation clock. */
@@ -106,6 +121,7 @@ public final class LightingColors {
         }
         if (chunk.isEmpty()) dimension.remove(key);else dimension.put(key, chunk);
         if (dimension.isEmpty()) COLORS.remove(packet.dimension());
+        paletteRevision++;
         Minecraft client = Minecraft.getInstance();
         if (client.level == null || !client.level.dimension().location().equals(packet.dimension())) return;
         LongOpenHashSet sections = new LongOpenHashSet();
@@ -132,6 +148,7 @@ public final class LightingColors {
         if (dimension != null) {
             dimension.remove(pos.toLong());
             if (dimension.isEmpty()) COLORS.remove(level.dimension().location());
+            paletteRevision++;
         }
     }
 }
