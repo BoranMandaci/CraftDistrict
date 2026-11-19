@@ -2,6 +2,7 @@ package com.craftdistrict.registry;
 
 import com.craftdistrict.CraftDistrict;
 import com.craftdistrict.block.BarDoorBlockEntity;
+import com.craftdistrict.block.RotaryEntranceBlockEntity;
 import com.craftdistrict.block.SlidingDoorBlockEntity;
 import com.craftdistrict.menu.SlidingDoorMenu;
 import dev.architectury.registry.menu.MenuRegistry;
@@ -19,6 +20,8 @@ public final class CraftDistrictDoors {
     public static final RegistrySupplier<BlockEntityType<SlidingDoorBlockEntity>> SLIDING=ENTITIES.register("sliding_door",
             ()->BlockEntityType.Builder.of(SlidingDoorBlockEntity::new,CraftDistrictBlocks.Doors.AUTOMATIC_GLASS_SLIDING.get(),
                     CraftDistrictBlocks.Doors.HOSPITAL_SLIDING.get()).build(null));
+    public static final RegistrySupplier<BlockEntityType<RotaryEntranceBlockEntity>> ROTARY = ENTITIES.register("rotary_entrance",
+            () -> BlockEntityType.Builder.of(RotaryEntranceBlockEntity::new, CraftDistrictBlocks.Doors.GLASS_REVOLVING.get()).build(null));
     public static final RegistrySupplier<MenuType<SlidingDoorMenu>> SETTINGS=MENUS.register("sliding_door_settings",
             ()->MenuRegistry.ofExtended(SlidingDoorMenu::new));
     private CraftDistrictDoors(){ }

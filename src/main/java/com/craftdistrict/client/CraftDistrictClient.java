@@ -40,12 +40,14 @@ public final class CraftDistrictClient {
                     CraftDistrictBlocks.Doors.MESH_SECURITY.get(), CraftDistrictBlocks.Doors.KITCHEN_SERVICE.get(),
                     CraftDistrictBlocks.Doors.AUTOMATIC_GLASS_SLIDING.get(), CraftDistrictBlocks.Doors.HOSPITAL_SLIDING.get(),
                     CraftDistrictBlocks.Doors.WINDOWED_GARAGE.get(), CraftDistrictBlocks.Doors.CRAFTSMAN_FRONT.get(),
-                    CraftDistrictBlocks.Doors.COTTAGE.get(), CraftDistrictBlocks.Doors.FRENCH_GLASS.get());
+                    CraftDistrictBlocks.Doors.COTTAGE.get(), CraftDistrictBlocks.Doors.FRENCH_GLASS.get(),
+                    CraftDistrictBlocks.Doors.GLASS_REVOLVING.get());
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Casino.CASHIER_COUNTER.get(),
                     CraftDistrictBlocks.Casino.VIP_DIVIDER.get());
             BlockEntityRendererRegistry.register(CraftDistrictRoomNumbers.PLAQUE.get(), RoomNumberRenderer::new);
             BlockEntityRendererRegistry.register(com.craftdistrict.registry.CraftDistrictDoors.BAR.get(),BarDoorRenderer::new);
             BlockEntityRendererRegistry.register(com.craftdistrict.registry.CraftDistrictDoors.SLIDING.get(),SlidingDoorRenderer::new);
+            BlockEntityRendererRegistry.register(com.craftdistrict.registry.CraftDistrictDoors.ROTARY.get(), RotaryEntranceRenderer::new);
             if (!earlyScreens) {
                 MenuRegistry.registerScreenFactory(CraftDistrictAssembly.MENU.get(), AssemblyStationScreen::new);
                 MenuRegistry.registerScreenFactory(CraftDistrictAssembly.LIGHT_COLOR_MENU.get(), LightColorScreen::new);

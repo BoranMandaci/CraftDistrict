@@ -23,6 +23,8 @@ import com.craftdistrict.block.CollectionDoorBlock;
 import com.craftdistrict.block.SlidingEntranceBlock;
 import com.craftdistrict.block.ModularMovingDoorBlock;
 import com.craftdistrict.block.BarDoorBlock;
+import com.craftdistrict.block.RotaryEntranceBlock;
+import com.craftdistrict.block.SecretBookshelfDoorBlock;
 import com.craftdistrict.block.VaultStorageBlock;
 import com.craftdistrict.block.DepositBoxShelfBlock;
 import com.craftdistrict.block.VaultValuablesBlock;
@@ -304,7 +306,12 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<CollectionDoorBlock> CRAFTSMAN_FRONT = door("craftsman_front_door", CollectionDoorBlock.Design.CRAFTSMAN_FRONT);
         public static final RegistrySupplier<CollectionDoorBlock> COTTAGE = door("cottage_door", CollectionDoorBlock.Design.COTTAGE);
         public static final RegistrySupplier<CollectionDoorBlock> FRENCH_GLASS = door("french_glass_door", CollectionDoorBlock.Design.FRENCH_GLASS);
-
+        public static final RegistrySupplier<RotaryEntranceBlock> GLASS_REVOLVING = register("glass_revolving_door",
+                () -> new RotaryEntranceBlock(BlockBehaviour.Properties.of().strength(4).sound(SoundType.METAL)
+                        .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK).noOcclusion()));
+        public static final RegistrySupplier<SecretBookshelfDoorBlock> SECRET_BOOKSHELF = register("secret_bookshelf_door",
+                () -> new SecretBookshelfDoorBlock(BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.WOOD)
+                        .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)));
         private static RegistrySupplier<ModularMovingDoorBlock> moving(String id, ModularMovingDoorBlock.Design design) {
             return register(id, () -> new ModularMovingDoorBlock(design, BlockBehaviour.Properties.of().strength(5).sound(SoundType.METAL)
                     .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK).noOcclusion()));

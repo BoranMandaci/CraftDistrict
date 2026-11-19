@@ -534,6 +534,8 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Doors.CRAFTSMAN_FRONT,
             CraftDistrictBlocks.Doors.COTTAGE,
             CraftDistrictBlocks.Doors.FRENCH_GLASS,
+            CraftDistrictBlocks.Doors.GLASS_REVOLVING,
+            CraftDistrictBlocks.Doors.SECRET_BOOKSHELF,
             CraftDistrictBlocks.Hotel.ROOM_DOOR,
             CraftDistrictBlocks.Office.GLASS_PARTITION_DOOR,
             CraftDistrictBlocks.Police.HOLDING_CELL_DOOR,
