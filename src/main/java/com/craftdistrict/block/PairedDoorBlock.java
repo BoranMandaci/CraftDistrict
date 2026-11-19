@@ -129,6 +129,7 @@ public abstract class PairedDoorBlock extends DoorBlock {
 
     /** Specialized entrances can share configuration without changing ordinary hinged-door behavior. */
     protected BlockState pairedSettings(BlockState own, BlockState other) { return own; }
+    protected boolean canManuallyOpen(BlockState state, BlockPos pos, Player player) { return true; }
     protected boolean redstoneOpen(Level level, BlockPos root, boolean powered) { return powered; }
     protected void doorChanged(Level level, BlockPos root) { }
     protected void playDoorSounds(Entity source, Level level, BlockPos[] positions, BlockState[] before, boolean open) {
@@ -207,8 +208,10 @@ public abstract class PairedDoorBlock extends DoorBlock {
     private InteractionResult toggle(BlockState state, Level level, BlockPos pos, Player player) {
         BlockPos root = bottom(state, pos);
         if (!complete(level, root)) return InteractionResult.PASS;
-        refreshPair(level, root);
         BlockState lower = level.getBlockState(root);
+        if (!lower.getValue(OPEN) && !canManuallyOpen(lower, root, player)) return InteractionResult.FAIL;
+        refreshPair(level, root);
+        lower = level.getBlockState(root);
         if (!change(player, level, root, partner(level, root, lower), !lower.getValue(OPEN), null)) return InteractionResult.PASS;
         return InteractionResult.sidedSuccess(level.isClientSide);
     }

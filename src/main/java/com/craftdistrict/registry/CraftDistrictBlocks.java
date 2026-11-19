@@ -299,6 +299,11 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<ModularMovingDoorBlock> WINDOWED_GARAGE = moving("windowed_garage_door", ModularMovingDoorBlock.Design.WINDOWED_GARAGE);
         public static final RegistrySupplier<BarDoorBlock> BAR = register("bar_door",
                 () -> new BarDoorBlock(BlockBehaviour.Properties.of().strength(2.5F).sound(SoundType.WOOD).noOcclusion().dynamicShape()));
+        public static final RegistrySupplier<CollectionDoorBlock> CLASSIC_WHITE_PANEL = door("classic_white_panel_door", CollectionDoorBlock.Design.CLASSIC_WHITE_PANEL);
+        public static final RegistrySupplier<CollectionDoorBlock> MODERN_INTERIOR = door("modern_interior_door", CollectionDoorBlock.Design.MODERN_INTERIOR);
+        public static final RegistrySupplier<CollectionDoorBlock> CRAFTSMAN_FRONT = door("craftsman_front_door", CollectionDoorBlock.Design.CRAFTSMAN_FRONT);
+        public static final RegistrySupplier<CollectionDoorBlock> COTTAGE = door("cottage_door", CollectionDoorBlock.Design.COTTAGE);
+        public static final RegistrySupplier<CollectionDoorBlock> FRENCH_GLASS = door("french_glass_door", CollectionDoorBlock.Design.FRENCH_GLASS);
 
         private static RegistrySupplier<ModularMovingDoorBlock> moving(String id, ModularMovingDoorBlock.Design design) {
             return register(id, () -> new ModularMovingDoorBlock(design, BlockBehaviour.Properties.of().strength(5).sound(SoundType.METAL)
@@ -306,7 +311,7 @@ public final class CraftDistrictBlocks {
         }
 
         private static RegistrySupplier<CollectionDoorBlock> door(String id, CollectionDoorBlock.Design design) {
-            boolean wood = design == CollectionDoorBlock.Design.ORNATE_WOODEN || design == CollectionDoorBlock.Design.RUSTIC_WOODEN;
+            boolean wood = design.wooden();
             return register(id, () -> new CollectionDoorBlock(design, BlockBehaviour.Properties.of().strength(wood ? 3 : 5)
                     .sound(wood ? SoundType.WOOD : SoundType.METAL).noOcclusion()));
         }

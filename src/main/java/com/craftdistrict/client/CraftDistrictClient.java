@@ -39,7 +39,8 @@ public final class CraftDistrictClient {
             RenderTypeRegistry.register(RenderType.cutout(), CraftDistrictBlocks.Doors.FIRE_EXIT.get(),
                     CraftDistrictBlocks.Doors.MESH_SECURITY.get(), CraftDistrictBlocks.Doors.KITCHEN_SERVICE.get(),
                     CraftDistrictBlocks.Doors.AUTOMATIC_GLASS_SLIDING.get(), CraftDistrictBlocks.Doors.HOSPITAL_SLIDING.get(),
-                    CraftDistrictBlocks.Doors.WINDOWED_GARAGE.get());
+                    CraftDistrictBlocks.Doors.WINDOWED_GARAGE.get(), CraftDistrictBlocks.Doors.CRAFTSMAN_FRONT.get(),
+                    CraftDistrictBlocks.Doors.COTTAGE.get(), CraftDistrictBlocks.Doors.FRENCH_GLASS.get());
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Casino.CASHIER_COUNTER.get(),
                     CraftDistrictBlocks.Casino.VIP_DIVIDER.get());
             BlockEntityRendererRegistry.register(CraftDistrictRoomNumbers.PLAQUE.get(), RoomNumberRenderer::new);
