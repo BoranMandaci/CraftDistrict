@@ -1,0 +1,1725 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/doors/doors_atlas",
+    "glass": "craftdistrict:block/doors/observation_glass",
+    "particle": "craftdistrict:block/particles/particle_white"
+  },
+  "elements": [
+    {
+      "name": "fixed_outer_jamb",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        0.65,
+        14.25,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.942149
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.942149
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.942149
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.942149
+          ]
+        }
+      }
+    },
+    {
+      "name": "fixed_outer_jamb",
+      "from": [
+        15.35,
+        0,
+        0
+      ],
+      "to": [
+        16.0,
+        14.25,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.942149
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.942149
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.942149
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.942149
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_motor_track_lower",
+      "from": [
+        0,
+        14.25,
+        0
+      ],
+      "to": [
+        16,
+        14.8,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            3.371429,
+            10,
+            4
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            3.371429,
+            10,
+            4
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            3.371429,
+            10,
+            4
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            3.371429,
+            10,
+            4
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2,
+            10,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_motor_track_upper",
+      "from": [
+        0,
+        15.8,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2,
+            10,
+            2.228571
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2,
+            10,
+            2.228571
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2,
+            10,
+            2.228571
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2,
+            10,
+            2.228571
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2,
+            10,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_motor_track_left",
+      "from": [
+        0,
+        14.8,
+        0
+      ],
+      "to": [
+        0.3,
+        15.8,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            9.9625,
+            2.228571,
+            10,
+            3.371429
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.228571,
+            8.0375,
+            3.371429
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.228571,
+            10,
+            3.371429
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_motor_track_right",
+      "from": [
+        15.7,
+        14.8,
+        0
+      ],
+      "to": [
+        16,
+        15.8,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.228571,
+            8.0375,
+            3.371429
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            9.9625,
+            2.228571,
+            10,
+            3.371429
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.228571,
+            10,
+            3.371429
+          ]
+        }
+      }
+    },
+    {
+      "name": "stainless_track_cover_lower",
+      "from": [
+        0.3,
+        14.8,
+        0
+      ],
+      "to": [
+        15.7,
+        15.05,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            1.5,
+            16,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            1.5,
+            16,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "stainless_track_cover_upper",
+      "from": [
+        0.3,
+        15.55,
+        0
+      ],
+      "to": [
+        15.7,
+        15.8,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            0.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "stainless_track_cover_left",
+      "from": [
+        0.3,
+        15.05,
+        0
+      ],
+      "to": [
+        6.5,
+        15.55,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            15.194805,
+            0.5,
+            16,
+            1.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.5,
+            14.805195,
+            1.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "stainless_track_cover_right",
+      "from": [
+        9.5,
+        15.05,
+        0
+      ],
+      "to": [
+        15.7,
+        15.55,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.5,
+            14.805195,
+            1.5
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            15.194805,
+            0.5,
+            16,
+            1.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_door_sensor_lower",
+      "from": [
+        6.5,
+        15.05,
+        0
+      ],
+      "to": [
+        9.5,
+        15.19,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            1.44,
+            12,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            1.44,
+            12,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_door_sensor_upper",
+      "from": [
+        6.5,
+        15.41,
+        0
+      ],
+      "to": [
+        9.5,
+        15.55,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            0.56
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0,
+            12,
+            0.56
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_door_sensor_left",
+      "from": [
+        6.5,
+        15.19,
+        0
+      ],
+      "to": [
+        7,
+        15.41,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            11.666667,
+            0.56,
+            12,
+            1.44
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0.56,
+            10.333333,
+            1.44
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_door_sensor_right",
+      "from": [
+        9,
+        15.19,
+        0
+      ],
+      "to": [
+        9.5,
+        15.41,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            0.56,
+            10.333333,
+            1.44
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            11.666667,
+            0.56,
+            12,
+            1.44
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_door_sensor_lens",
+      "from": [
+        7,
+        15.19,
+        0
+      ],
+      "to": [
+        9,
+        15.41,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower_medical_panel",
+      "from": [
+        16.65,
+        0,
+        -1.5
+      ],
+      "to": [
+        31.35,
+        2.3,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            2.259887
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            2.259887
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            2.259887
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            2.259887
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_medical_panel",
+      "from": [
+        16.65,
+        11.4,
+        -1.5
+      ],
+      "to": [
+        31.35,
+        14.25,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2,
+            10,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_left_panel",
+      "from": [
+        16.65,
+        2.3,
+        -1.5
+      ],
+      "to": [
+        20.45,
+        11.4,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_right_panel",
+      "from": [
+        27.55,
+        2.3,
+        -1.5
+      ],
+      "to": [
+        31.35,
+        11.4,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            2.0,
+            10,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "stainless_window_bezel_bottom",
+      "from": [
+        20.45,
+        2.3,
+        -1.5
+      ],
+      "to": [
+        27.55,
+        2.55,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "stainless_window_bezel_top",
+      "from": [
+        20.45,
+        11.15,
+        -1.5
+      ],
+      "to": [
+        27.55,
+        11.4,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            2.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "stainless_window_bezel_left",
+      "from": [
+        20.45,
+        2.55,
+        -1.5
+      ],
+      "to": [
+        20.7,
+        11.15,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "stainless_window_bezel_right",
+      "from": [
+        27.3,
+        2.55,
+        -1.5
+      ],
+      "to": [
+        27.55,
+        11.15,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            2.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            2.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_gasket_bottom",
+      "from": [
+        20.7,
+        2.55,
+        -1.5
+      ],
+      "to": [
+        27.3,
+        2.75,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_gasket_top",
+      "from": [
+        20.7,
+        10.95,
+        -1.5
+      ],
+      "to": [
+        27.3,
+        11.15,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            4.0
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_gasket_left",
+      "from": [
+        20.7,
+        2.75,
+        -1.5
+      ],
+      "to": [
+        20.9,
+        10.95,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            4.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_gasket_right",
+      "from": [
+        27.1,
+        2.75,
+        -1.5
+      ],
+      "to": [
+        27.3,
+        10.95,
+        -0.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            4.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            4.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "inset_observation_glass",
+      "from": [
+        20.9,
+        2.75,
+        -1.1
+      ],
+      "to": [
+        27.1,
+        10.95,
+        -0.65
+      ],
+      "faces": {
+        "north": {
+          "texture": "#glass",
+          "uv": [
+            0,
+            0.0,
+            16,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#glass",
+          "uv": [
+            0,
+            0.0,
+            16,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_handle_plate",
+      "from": [
+        17.6,
+        0,
+        -1.73
+      ],
+      "to": [
+        18.4,
+        0.9,
+        -1.65
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            2.310345
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            2.310345
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            2.310345
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            2.310345
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "vertical_sliding_grip",
+      "from": [
+        17.85,
+        0,
+        -1.98
+      ],
+      "to": [
+        18.15,
+        0.5,
+        -1.73
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_cross",
+      "from": [
+        23.82,
+        12,
+        -1.65
+      ],
+      "to": [
+        24.18,
+        13.5,
+        -1.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_cross",
+      "from": [
+        23.35,
+        12.55,
+        -1.65
+      ],
+      "to": [
+        23.82,
+        12.95,
+        -1.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_cross",
+      "from": [
+        24.18,
+        12.55,
+        -1.65
+      ],
+      "to": [
+        24.65,
+        12.95,
+        -1.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "recessed_handle_plate",
+      "from": [
+        17.6,
+        0,
+        -0.1
+      ],
+      "to": [
+        18.4,
+        0.9,
+        -0.02
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            2.310345
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            2.310345
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            2.310345
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2.0,
+            12,
+            2.310345
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "vertical_sliding_grip",
+      "from": [
+        17.85,
+        0,
+        -0.02
+      ],
+      "to": [
+        18.15,
+        0.5,
+        0.23
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.2
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.2
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0.0,
+            16,
+            0.2
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_cross",
+      "from": [
+        23.82,
+        12,
+        -0.25
+      ],
+      "to": [
+        24.18,
+        13.5,
+        -0.1
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_cross",
+      "from": [
+        23.35,
+        12.55,
+        -0.25
+      ],
+      "to": [
+        23.82,
+        12.95,
+        -0.1
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "medical_cross",
+      "from": [
+        24.18,
+        12.55,
+        -0.25
+      ],
+      "to": [
+        24.65,
+        12.95,
+        -0.1
+      ],
+      "faces": {
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0.0,
+            10,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ]
+        }
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout"
+}

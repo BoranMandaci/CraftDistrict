@@ -6,6 +6,10 @@
   "refmap": "craftdistrict.refmap.json",
   "mixins": [
     "ServerGamePacketListenerMixin",
+    "SlidingDoorCollisionMixin",
+    "SlidingDoorChunkMixin",
+    "SlidingDoorLoadMixin",
+    "BarDoorChunkMixin",
     "LightChunkSyncMixin",
     "MedicalRestingEntityMixin",
     "MedicalRestingPlayerMixin"
@@ -16,7 +20,8 @@
     "client.GuiItemRendererMixin",
     "client.MultipartPredicateMixin",
     "client.LightChunkCacheMixin",
-    "client.SunLoungerPoseMixin"
+    "client.SunLoungerPoseMixin",
+    "client.SlidingDoorPickingMixin"
   ],
   "injectors": {
     "defaultRequire": 1

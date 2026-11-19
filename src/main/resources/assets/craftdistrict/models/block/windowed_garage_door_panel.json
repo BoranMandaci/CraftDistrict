@@ -1,0 +1,429 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/doors/doors_atlas",
+    "glass": "craftdistrict:block/doors/observation_glass",
+    "particle": "craftdistrict:block/particles/particle_metal"
+  },
+  "elements": [
+    {
+      "name": "lower_section",
+      "from": [
+        0,
+        0,
+        14
+      ],
+      "to": [
+        16,
+        5.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            4
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "upper_section",
+      "from": [
+        0,
+        10.5,
+        14
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            4
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "left_window_stile",
+      "from": [
+        0,
+        5.5,
+        14
+      ],
+      "to": [
+        2.6,
+        10.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            4
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "right_window_stile",
+      "from": [
+        13.4,
+        5.5,
+        14
+      ],
+      "to": [
+        16,
+        10.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            4
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            6,
+            2,
+            8,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_gasket_bottom",
+      "from": [
+        2.6,
+        5.5,
+        14
+      ],
+      "to": [
+        13.4,
+        5.8,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_gasket_top",
+      "from": [
+        2.6,
+        10.2,
+        14
+      ],
+      "to": [
+        13.4,
+        10.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_gasket_left",
+      "from": [
+        2.6,
+        5.8,
+        14
+      ],
+      "to": [
+        2.9,
+        10.2,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "window_gasket_right",
+      "from": [
+        13.1,
+        5.8,
+        14
+      ],
+      "to": [
+        13.4,
+        10.2,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "tempered_window",
+      "from": [
+        2.9,
+        5.8,
+        14.85
+      ],
+      "to": [
+        13.1,
+        10.2,
+        15.15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#glass",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#glass",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "section_reveal",
+      "from": [
+        0,
+        3.8,
+        13.8
+      ],
+      "to": [
+        16,
+        4.05,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            2,
+            16,
+            4
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            2,
+            16,
+            4
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            2,
+            16,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "section_reveal",
+      "from": [
+        0,
+        11.8,
+        13.8
+      ],
+      "to": [
+        16,
+        12.05,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            2,
+            16,
+            4
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            2,
+            16,
+            4
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14,
+            2,
+            16,
+            4
+          ]
+        }
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout"
+}

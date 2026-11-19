@@ -20,6 +20,9 @@ import com.craftdistrict.block.CasinoVipDividerBlock;
 import com.craftdistrict.block.CasinoVipBoothBlock;
 import com.craftdistrict.block.VaultDoorBlock;
 import com.craftdistrict.block.CollectionDoorBlock;
+import com.craftdistrict.block.SlidingEntranceBlock;
+import com.craftdistrict.block.ModularMovingDoorBlock;
+import com.craftdistrict.block.BarDoorBlock;
 import com.craftdistrict.block.VaultStorageBlock;
 import com.craftdistrict.block.DepositBoxShelfBlock;
 import com.craftdistrict.block.VaultValuablesBlock;
@@ -287,6 +290,20 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<CollectionDoorBlock> KITCHEN_SERVICE = door("kitchen_service_door", CollectionDoorBlock.Design.KITCHEN_SERVICE);
         public static final RegistrySupplier<CollectionDoorBlock> INDUSTRIAL_RIVETED = door("industrial_riveted_door", CollectionDoorBlock.Design.INDUSTRIAL_RIVETED);
         public static final RegistrySupplier<CollectionDoorBlock> RUSTIC_WOODEN = door("rustic_wooden_door", CollectionDoorBlock.Design.RUSTIC_WOODEN);
+        public static final RegistrySupplier<SlidingEntranceBlock> AUTOMATIC_GLASS_SLIDING = register("automatic_glass_sliding_door",
+                () -> new SlidingEntranceBlock(SlidingEntranceBlock.Design.GLASS, BlockBehaviour.Properties.of().strength(3).sound(SoundType.METAL).noOcclusion().dynamicShape()));
+        public static final RegistrySupplier<SlidingEntranceBlock> HOSPITAL_SLIDING = register("hospital_sliding_door",
+                () -> new SlidingEntranceBlock(SlidingEntranceBlock.Design.HOSPITAL, BlockBehaviour.Properties.of().strength(3).sound(SoundType.METAL).noOcclusion().dynamicShape()));
+        public static final RegistrySupplier<ModularMovingDoorBlock> INDUSTRIAL_SLIDING = moving("industrial_sliding_door", ModularMovingDoorBlock.Design.INDUSTRIAL);
+        public static final RegistrySupplier<ModularMovingDoorBlock> SOLID_GARAGE = moving("solid_garage_door", ModularMovingDoorBlock.Design.SOLID_GARAGE);
+        public static final RegistrySupplier<ModularMovingDoorBlock> WINDOWED_GARAGE = moving("windowed_garage_door", ModularMovingDoorBlock.Design.WINDOWED_GARAGE);
+        public static final RegistrySupplier<BarDoorBlock> BAR = register("bar_door",
+                () -> new BarDoorBlock(BlockBehaviour.Properties.of().strength(2.5F).sound(SoundType.WOOD).noOcclusion().dynamicShape()));
+
+        private static RegistrySupplier<ModularMovingDoorBlock> moving(String id, ModularMovingDoorBlock.Design design) {
+            return register(id, () -> new ModularMovingDoorBlock(design, BlockBehaviour.Properties.of().strength(5).sound(SoundType.METAL)
+                    .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK).noOcclusion()));
+        }
 
         private static RegistrySupplier<CollectionDoorBlock> door(String id, CollectionDoorBlock.Design design) {
             boolean wood = design == CollectionDoorBlock.Design.ORNATE_WOODEN || design == CollectionDoorBlock.Design.RUSTIC_WOODEN;

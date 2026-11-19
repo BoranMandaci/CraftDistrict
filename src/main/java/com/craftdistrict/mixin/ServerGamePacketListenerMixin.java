@@ -1,6 +1,7 @@
 package com.craftdistrict.mixin;
 
 import com.craftdistrict.block.OfficeWallUnitBlock;
+import com.craftdistrict.block.SlidingEntranceBlock;
 import net.minecraft.network.protocol.game.ServerboundUseItemOnPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.network.ServerGamePacketListenerImpl;
@@ -19,6 +20,7 @@ public abstract class ServerGamePacketListenerMixin {
     @ModifyConstant(method = "handleUseItemOn", constant = @Constant(doubleValue = 1.0000001),
             require = 3, allow = 4)
     private double craftdistrict$mountedBlindHitLimit(double original, ServerboundUseItemOnPacket packet) {
-        return OfficeWallUnitBlock.interactionHitLimit(player.level(), packet.getHitResult(), original);
+        double limit = OfficeWallUnitBlock.interactionHitLimit(player.level(), packet.getHitResult(), original);
+        return SlidingEntranceBlock.interactionHitLimit(player.level(), packet.getHitResult(), limit);
     }
 }

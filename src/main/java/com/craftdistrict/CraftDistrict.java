@@ -35,12 +35,15 @@ public final class CraftDistrict {
         SecurityScannerBlock.registerPassageTracking();
         CraftDistrictAssembly.register();
         CraftDistrictRoomNumbers.register();
+        com.craftdistrict.registry.CraftDistrictDoors.register();
+        com.craftdistrict.door.SlidingDoorSensors.register();
         RoomNumberNetworking.register();
         AssemblyNetworking.register();
         LightDyeNetworking.register();
         LightColorNetworking.register();
         LightProximityData.register();
         com.craftdistrict.lighting.LedLightGroups.register();
+        com.craftdistrict.block.MovingDoorGroups.register();
         CraftDistrictEntities.register();
         Seating.init();
         MedicalResting.init();

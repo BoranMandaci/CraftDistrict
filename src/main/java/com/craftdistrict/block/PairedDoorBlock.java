@@ -56,11 +56,11 @@ public abstract class PairedDoorBlock extends DoorBlock {
         builder.add(PAIRED);
     }
 
-    private BlockPos bottom(BlockState state, BlockPos pos) {
+    protected final BlockPos bottom(BlockState state, BlockPos pos) {
         return state.getValue(HALF) == DoubleBlockHalf.UPPER ? pos.below() : pos;
     }
 
-    private boolean complete(Level level, BlockPos pos) {
+    protected final boolean complete(Level level, BlockPos pos) {
         if (!level.hasChunkAt(pos)) return false;
         BlockState lower = level.getBlockState(pos), upper = level.getBlockState(pos.above());
         return lower.is(this) && upper.is(this) && lower.getValue(HALF) == DoubleBlockHalf.LOWER
@@ -72,7 +72,7 @@ public abstract class PairedDoorBlock extends DoorBlock {
         return pos.relative(state.getValue(HINGE) == DoorHingeSide.LEFT ? facing.getClockWise() : facing.getCounterClockWise());
     }
 
-    private BlockPos partner(Level level, BlockPos pos, BlockState state) {
+    protected final BlockPos partner(Level level, BlockPos pos, BlockState state) {
         if (!state.getValue(PAIRED)) return null;
         BlockPos otherPos = partnerPosition(state, pos);
         if (!complete(level, otherPos)) return null;
@@ -116,8 +116,8 @@ public abstract class PairedDoorBlock extends DoorBlock {
                         || other.getValue(PAIRED) && !level.hasChunkAt(partnerPosition(other, otherPos))) continue;
                 DoorHingeSide hinge = side == facing.getCounterClockWise() ? DoorHingeSide.RIGHT : DoorHingeSide.LEFT;
                 boolean open = state.getValue(OPEN) || other.getValue(OPEN);
-                writeDoor(level, pos, state.setValue(PAIRED, true).setValue(HINGE, hinge).setValue(OPEN, open));
-                writeDoor(level, otherPos, other.setValue(PAIRED, true).setValue(HINGE,
+                writeDoor(level, pos, pairedSettings(state, other).setValue(PAIRED, true).setValue(HINGE, hinge).setValue(OPEN, open));
+                writeDoor(level, otherPos, pairedSettings(other, state).setValue(PAIRED, true).setValue(HINGE,
                         hinge == DoorHingeSide.LEFT ? DoorHingeSide.RIGHT : DoorHingeSide.LEFT).setValue(OPEN, open));
                 notifyDoor(level, otherPos);
                 changed = true;
@@ -125,6 +125,17 @@ public abstract class PairedDoorBlock extends DoorBlock {
             }
             if (changed) notifyDoor(level, pos);
         } finally { UPDATING.remove(); }
+    }
+
+    /** Specialized entrances can share configuration without changing ordinary hinged-door behavior. */
+    protected BlockState pairedSettings(BlockState own, BlockState other) { return own; }
+    protected boolean redstoneOpen(Level level, BlockPos root, boolean powered) { return powered; }
+    protected void doorChanged(Level level, BlockPos root) { }
+    protected void playDoorSounds(Entity source, Level level, BlockPos[] positions, BlockState[] before, boolean open) {
+        for (int i = 0; i < positions.length; i += 2) if (before[i].getValue(OPEN) != open)
+            level.playSound(source instanceof Player player ? player : null, positions[i],
+                    open ? type().doorOpen() : type().doorClose(), SoundSource.BLOCKS,
+                    1, level.random.nextFloat() * .1F + .9F);
     }
 
     @Override public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
@@ -170,12 +181,11 @@ public abstract class PairedDoorBlock extends DoorBlock {
             // Preserve vanilla connections only after the complete entrance has committed.
             for (int i = 0; i < positions.length; i++) if (before[i] != after[i])
                 after[i].updateNeighbourShapes(level, positions[i], Block.UPDATE_CLIENTS, 512);
+            playDoorSounds(source, level, positions, before, open);
             for (int i = 0; i < positions.length; i += 2) if (before[i].getValue(OPEN) != open) {
-                level.playSound(source instanceof Player player ? player : null, positions[i],
-                        open ? type().doorOpen() : type().doorClose(), SoundSource.BLOCKS,
-                        1, level.random.nextFloat() * .1F + .9F);
                 if (!level.isClientSide) level.gameEvent(source, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, positions[i]);
             }
+            doorChanged(level, root);
             return true;
         } finally { UPDATING.remove(); }
     }
@@ -191,7 +201,7 @@ public abstract class PairedDoorBlock extends DoorBlock {
         boolean powered = level.hasNeighborSignal(root) || level.hasNeighborSignal(root.above())
                 || other != null && (level.hasNeighborSignal(other) || level.hasNeighborSignal(other.above()));
         if (lower.getValue(POWERED) == powered && (other == null || level.getBlockState(other).getValue(POWERED) == powered)) return;
-        change(null, level, root, other, powered, powered);
+        change(null, level, root, other, redstoneOpen(level, root, powered), powered);
     }
 
     private InteractionResult toggle(BlockState state, Level level, BlockPos pos, Player player) {
