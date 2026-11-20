@@ -306,6 +306,8 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Office.COAT_RACK,
             CraftDistrictBlocks.Office.PLANTER,
             CraftDistrictBlocks.Office.SECURITY_TURNSTILE,
+            CraftDistrictBlocks.Office.SECURITY_TURNSTILE_END_POST,
+            CraftDistrictBlocks.Office.SECURITY_TURNSTILE_SIDE_BARRIER,
             CraftDistrictBlocks.Office.EMPLOYEE_BADGE_READER,
             // Partitions and architectural pieces.
             CraftDistrictBlocks.Office.ACOUSTIC_DIVIDER,

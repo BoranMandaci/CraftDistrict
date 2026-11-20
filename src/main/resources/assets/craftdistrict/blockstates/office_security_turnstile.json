@@ -1,20 +1,12 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "craftdistrict:block/office/office_security_turnstile",
-      "y": 0
-    },
-    "facing=east": {
-      "model": "craftdistrict:block/office/office_security_turnstile",
-      "y": 90
-    },
-    "facing=south": {
-      "model": "craftdistrict:block/office/office_security_turnstile",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "craftdistrict:block/office/office_security_turnstile",
-      "y": 270
-    }
-  }
+  "multipart": [
+    { "when": { "facing": "north" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile" } },
+    { "when": { "facing": "east" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile", "y": 90 } },
+    { "when": { "facing": "south" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile", "y": 180 } },
+    { "when": { "facing": "west" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile", "y": 270 } },
+    { "when": { "facing": "north", "side_barrier": "true" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_rail_mount" } },
+    { "when": { "facing": "east", "side_barrier": "true" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_rail_mount", "y": 90 } },
+    { "when": { "facing": "south", "side_barrier": "true" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_rail_mount", "y": 180 } },
+    { "when": { "facing": "west", "side_barrier": "true" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_rail_mount", "y": 270 } }
+  ]
 }

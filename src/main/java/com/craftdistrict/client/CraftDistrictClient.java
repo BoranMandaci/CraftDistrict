@@ -48,6 +48,7 @@ public final class CraftDistrictClient {
             BlockEntityRendererRegistry.register(com.craftdistrict.registry.CraftDistrictDoors.BAR.get(),BarDoorRenderer::new);
             BlockEntityRendererRegistry.register(com.craftdistrict.registry.CraftDistrictDoors.SLIDING.get(),SlidingDoorRenderer::new);
             BlockEntityRendererRegistry.register(com.craftdistrict.registry.CraftDistrictDoors.ROTARY.get(), RotaryEntranceRenderer::new);
+            BlockEntityRendererRegistry.register(com.craftdistrict.registry.CraftDistrictDoors.OFFICE_TURNSTILE.get(), OfficeTurnstileRenderer::new);
             if (!earlyScreens) {
                 MenuRegistry.registerScreenFactory(CraftDistrictAssembly.MENU.get(), AssemblyStationScreen::new);
                 MenuRegistry.registerScreenFactory(CraftDistrictAssembly.LIGHT_COLOR_MENU.get(), LightColorScreen::new);

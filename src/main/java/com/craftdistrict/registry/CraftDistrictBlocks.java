@@ -216,6 +216,8 @@ import com.craftdistrict.block.OfficeGlassPartitionBlock;
 import com.craftdistrict.block.OfficeGlassDoorBlock;
 import com.craftdistrict.block.OfficeModularFurnitureBlock;
 import com.craftdistrict.block.OfficeTurnstileBlock;
+import com.craftdistrict.block.OfficeTurnstileFixtureBlock;
+import com.craftdistrict.block.OfficeTurnstileSideBarrierBlock;
 import com.craftdistrict.block.OfficeBookshelfBlock;
 import com.craftdistrict.block.OfficeBadgeReaderBlock;
 import com.craftdistrict.block.OfficeCubicleBlock;
@@ -756,7 +758,11 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<OfficeFurnitureBlock> SERVER_RACK = register("server_rack",
                 () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.SERVER_RACK, metalProperties()));
         public static final RegistrySupplier<OfficeTurnstileBlock> SECURITY_TURNSTILE = register("office_security_turnstile",
-                () -> new OfficeTurnstileBlock(metalProperties()));
+                () -> new OfficeTurnstileBlock(metalProperties().dynamicShape()));
+        public static final RegistrySupplier<OfficeTurnstileFixtureBlock.EndPost> SECURITY_TURNSTILE_END_POST = register("office_security_turnstile_end_post",
+                () -> new OfficeTurnstileFixtureBlock.EndPost(metalProperties()));
+        public static final RegistrySupplier<OfficeTurnstileSideBarrierBlock> SECURITY_TURNSTILE_SIDE_BARRIER = register("office_security_turnstile_side_barrier",
+                () -> new OfficeTurnstileSideBarrierBlock(metalProperties()));
         public static final RegistrySupplier<OfficeFurnitureBlock> MAIL_SORTING_CABINET = register("mail_sorting_cabinet",
                 () -> new OfficeModularFurnitureBlock(OfficeFurnitureBlock.Design.MAIL_SORTER, woodProperties()));
         public static final RegistrySupplier<OfficeFurnitureBlock> SNACK_VENDING_MACHINE = register("snack_vending_machine",

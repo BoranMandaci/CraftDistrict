@@ -11,6 +11,7 @@ import com.craftdistrict.network.RoomNumberNetworking;
 import com.craftdistrict.network.AssemblyNetworking;
 import com.craftdistrict.network.LightDyeNetworking;
 import com.craftdistrict.network.LightColorNetworking;
+import com.craftdistrict.network.OfficeTurnstileNetworking;
 import com.craftdistrict.lighting.LightProximityData;
 import com.craftdistrict.entity.Seating;
 import com.craftdistrict.entity.MedicalResting;
@@ -41,6 +42,7 @@ public final class CraftDistrict {
         AssemblyNetworking.register();
         LightDyeNetworking.register();
         LightColorNetworking.register();
+        OfficeTurnstileNetworking.register();
         LightProximityData.register();
         com.craftdistrict.lighting.LedLightGroups.register();
         com.craftdistrict.block.MovingDoorGroups.register();

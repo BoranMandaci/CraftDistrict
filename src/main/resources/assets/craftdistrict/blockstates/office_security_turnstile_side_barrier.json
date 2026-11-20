@@ -1,0 +1,11 @@
+{
+  "multipart": [
+    { "when": { "facing": "north|south", "north": "false", "east": "false", "south": "false", "west": "false" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_side_barrier_standalone" } },
+    { "when": { "facing": "east|west", "north": "false", "east": "false", "south": "false", "west": "false" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_side_barrier_standalone", "y": 90 } },
+    { "when": { "OR": [{ "north": "true" }, { "east": "true" }, { "south": "true" }, { "west": "true" }] }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_side_barrier" } },
+    { "when": { "north": "true" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_side_barrier_rail" } },
+    { "when": { "east": "true" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_side_barrier_rail", "y": 90 } },
+    { "when": { "south": "true" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_side_barrier_rail", "y": 180 } },
+    { "when": { "west": "true" }, "apply": { "model": "craftdistrict:block/office/office_security_turnstile_side_barrier_rail", "y": 270 } }
+  ]
+}
