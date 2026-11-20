@@ -18,7 +18,10 @@ public final class BarDoorBlockEntity extends BlockEntity {
     private float from,to;
     private long started;
     private float clientFrom,clientTo;
-    private double clientStarted;
+    private long clientStarted;
+    private float clientStartPartial;
+    private long lastRenderTick = Long.MIN_VALUE;
+    private float lastRenderPartial;
     private boolean clientInitialized;
     private AABB renderBounds;
     public BarDoorBlockEntity(BlockPos pos,BlockState state) {
@@ -29,15 +32,33 @@ public final class BarDoorBlockEntity extends BlockEntity {
         float t=(float)Mth.clamp(elapsed/DURATION,0,1);
         return Mth.lerp(t*t*(3-2*t),from,to);
     }
-    public float angle(double time) {
-        if(level!=null&&level.isClientSide) {
-            if(!clientInitialized){clientFrom=from;clientTo=to;clientStarted=started;clientInitialized=true;}
-            if(clientFrom==clientTo)return clientTo;
-            if(time-clientStarted>=DURATION)return clientTo;
-            return interpolate(clientFrom,clientTo,time-clientStarted);
+    public float angle(long tick) {
+        return angle(tick, 0, false);
+    }
+    public float renderAngle(long tick, float partialTick) {
+        return angle(tick, partialTick, true);
+    }
+    private float angle(long tick, float partialTick, boolean rendering) {
+        if (level != null && level.isClientSide) {
+            if (!clientInitialized) {
+                clientFrom = from;
+                clientTo = to;
+                clientStarted = started;
+                clientInitialized = true;
+            }
+            if (clientFrom == clientTo) return clientTo;
+            double elapsed = clientElapsed(tick, partialTick);
+            if (rendering && (elapsed < DURATION || lastRenderTick == tick)) {
+                lastRenderTick = tick;
+                lastRenderPartial = partialTick;
+            }
+            return elapsed >= DURATION ? clientTo : interpolate(clientFrom, clientTo, elapsed);
         }
-        if(from==to||time-started>=DURATION)return to;
-        return interpolate(from,to,time-started);
+        long elapsed = tick - started;
+        return from == to || elapsed >= DURATION ? to : interpolate(from, to, elapsed + (double) partialTick);
+    }
+    private double clientElapsed(long tick, float partialTick) {
+        return (tick - clientStarted) + (double) partialTick - clientStartPartial;
     }
     public int remaining(long now){return from==to?0:(int)Math.max(0,Math.min(DURATION,started+DURATION-now));}
     public void begin(float current,float target,long now){from=current;to=target;started=now;setChanged();}
@@ -57,15 +78,30 @@ public final class BarDoorBlockEntity extends BlockEntity {
     private void readAnimation(CompoundTag tag) {
         if(tag.contains("Started")) {
             float a=tag.getFloat("From"),b=tag.getFloat("To");
-            if(Float.isFinite(a)&&Float.isFinite(b)) {
-                long stamp=tag.getLong("Started");
-                if(level!=null&&level.isClientSide&&(stamp!=started||b!=to)) {
-                    double now=level.getGameTime();
-                    // Initial chunk data can arrive mid-swing; retain its authoritative progress.
-                    clientFrom=clientInitialized?interpolate(clientFrom,clientTo,now-clientStarted):Mth.clamp(a,-90,90);
-                    clientTo=Mth.clamp(b,-90,90);clientStarted=clientInitialized?now:stamp;clientInitialized=true;
+            if (Float.isFinite(a) && Float.isFinite(b)) {
+                a = Mth.clamp(a, -90, 90);
+                b = Mth.clamp(b, -90, 90);
+                long stamp = tag.getLong("Started");
+                if (level != null && level.isClientSide && (stamp != started || b != to)) {
+                    if (clientInitialized) {
+                        long tick = level.getGameTime();
+                        // A packet can reverse a swing after this tick's interpolated pose has already been drawn.
+                        float partial = lastRenderTick == tick ? lastRenderPartial : 0;
+                        clientFrom = interpolate(clientFrom, clientTo, clientElapsed(tick, partial));
+                        clientStarted = tick;
+                        clientStartPartial = partial;
+                    } else {
+                        // Initial chunk data retains the server's progress even when it arrives mid-swing.
+                        clientFrom = a;
+                        clientStarted = stamp;
+                        clientStartPartial = 0;
+                    }
+                    clientTo = b;
+                    clientInitialized = true;
                 }
-                from=Mth.clamp(a,-90,90);to=Mth.clamp(b,-90,90);started=stamp;
+                from = a;
+                to = b;
+                started = stamp;
             }
         }
     }

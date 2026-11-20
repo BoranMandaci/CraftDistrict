@@ -27,7 +27,9 @@ public abstract class SlidingDoorPickingMixin {
         //?} else {
         /*double reach=minecraft.gameMode.getPickRange();
         *///?}
-        Vec3 start=camera.getEyePosition(partialTick),end=start.add(camera.getViewVector(partialTick).scale(reach));
+        Vec3 start = camera.getEyePosition(partialTick);
+        Vec3 view = camera.getViewVector(partialTick);
+        Vec3 end = start.add(view.x * reach, view.y * reach, view.z * reach);
         HitResult original=minecraft.hitResult;
         double nearest=reach*reach+1e-8;
         if(original!=null)

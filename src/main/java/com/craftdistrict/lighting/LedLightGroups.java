@@ -52,19 +52,24 @@ public final class LedLightGroups extends SavedData {
         private boolean manual, active;
         private int color;
         private int lastLevel = -1;
-        private final int minY, maxY;
+        private BlockPos poweredMember;
+        private final int minX, minY, minZ, maxX, maxY, maxZ;
         private Group(long[] positions, int mount, long revision, Settings settings) {
             Arrays.sort(positions); this.members = positions; root = positions[0]; this.mount = mount; this.revision = revision;
             mode = settings.mode; effect = settings.effect; manual = settings.manual; active = settings.active;
             color = settings.color; phase = settings.phase;
             Long2ObjectOpenHashMap<LongArrayList> byChunk = new Long2ObjectOpenHashMap<>();
-            int low = Integer.MAX_VALUE, high = Integer.MIN_VALUE;
+            int lowX = Integer.MAX_VALUE, lowY = Integer.MAX_VALUE, lowZ = Integer.MAX_VALUE;
+            int highX = Integer.MIN_VALUE, highY = Integer.MIN_VALUE, highZ = Integer.MIN_VALUE;
             for (long pos : positions) {
-                BlockPos p = BlockPos.of(pos); low = Math.min(low, p.getY()); high = Math.max(high, p.getY());
-                byChunk.computeIfAbsent(chunk(p), ignored -> new LongArrayList()).add(pos);
+                int x = BlockPos.getX(pos), y = BlockPos.getY(pos), z = BlockPos.getZ(pos);
+                lowX = Math.min(lowX, x); lowY = Math.min(lowY, y); lowZ = Math.min(lowZ, z);
+                highX = Math.max(highX, x); highY = Math.max(highY, y); highZ = Math.max(highZ, z);
+                byChunk.computeIfAbsent(ChunkPos.asLong(x >> 4, z >> 4), ignored -> new LongArrayList()).add(pos);
             }
             for (var entry : byChunk.long2ObjectEntrySet()) chunks.put(entry.getLongKey(), entry.getValue().toLongArray());
-            minY = low; maxY = high;
+            minX = lowX; minY = lowY; minZ = lowZ;
+            maxX = highX; maxY = highY; maxZ = highZ;
         }
         public int size() { return members.length; }
         public long[] members() { return members.clone(); }
@@ -111,13 +116,14 @@ public final class LedLightGroups extends SavedData {
     /** Chunk IO can finish before the chunk is installed. Reconcile once it is available, never load it ourselves. */
     public void tickLoads(ServerLevel level) {
         if (pending.isEmpty()) return;
+        long previousRevision = revision, time = level.getGameTime();
         Set<Group> touched = Collections.newSetFromMap(new IdentityHashMap<>());
         var iterator = pending.long2LongEntrySet().fastIterator();
         while (iterator.hasNext()) {
             var entry = iterator.next(); long key = entry.getLongKey();
-            if (!loaded(level, key)) { if (level.getGameTime() > entry.getLongValue()) iterator.remove(); continue; }
-            iterator.remove();
             var chunk = level.getChunkSource().getChunkNow(ChunkPos.getX(key), ChunkPos.getZ(key));
+            if (chunk == null) { if (time > entry.getLongValue()) iterator.remove(); continue; }
+            iterator.remove();
             LongOpenHashSet actual = new LongOpenHashSet();
             chunk.findBlocks(LedLightGroups::panel, (pos, state) -> actual.add(pos.asLong()));
             var known = chunks.get(key);
@@ -128,6 +134,8 @@ public final class LedLightGroups extends SavedData {
         }
         // A component spanning several loaded chunks needs one reconciliation, not one per chunk.
         for (Group group : touched) if (roots.get(group.root) == group) {
+            // refresh() already reconciled any rebuilt group against the currently loaded chunks.
+            if (group.revision > previousRevision && group.lastLevel >= 0) continue;
             sync(level, group); schedule(level, group);
         }
     }
@@ -237,12 +245,23 @@ public final class LedLightGroups extends SavedData {
         } finally { rebuilding = false; }
     }
     public List<BlockPos> loadedParts(ServerLevel level, Group group) {
+        return loadedParts(level, group, null);
+    }
+    private List<BlockPos> loadedParts(ServerLevel level, Group group, List<BlockState> snapshot) {
         List<BlockPos> result = new ArrayList<>();
-        for (var entry : group.chunks.long2ObjectEntrySet()) if (loaded(level, entry.getLongKey()))
+        var chunks = group.chunks.long2ObjectEntrySet().fastIterator();
+        while (chunks.hasNext()) {
+            var entry = chunks.next(); long key = entry.getLongKey();
+            var chunk = level.getChunkSource().getChunkNow(ChunkPos.getX(key), ChunkPos.getZ(key));
+            if (chunk == null) continue;
             for (long packed : entry.getValue()) {
-                BlockPos pos = BlockPos.of(packed); BlockState state = level.getBlockState(pos);
-                if (panel(state) && mounting(state) == group.mount) result.add(pos);
+                BlockPos pos = BlockPos.of(packed); BlockState state = chunk.getBlockState(pos);
+                if (panel(state) && mounting(state) == group.mount) {
+                    result.add(pos);
+                    if (snapshot != null) snapshot.add(state);
+                }
             }
+        }
         return result;
     }
     public List<BlockPos> allParts(Group group) {
@@ -253,49 +272,95 @@ public final class LedLightGroups extends SavedData {
         double limit = radius * radius;
         for (Player player : level.players()) {
             if (!player.isAlive() || player.isSpectator()) continue;
-            for (var entry : group.chunks.long2ObjectEntrySet()) {
-                long key = entry.getLongKey(); if (!loaded(level, key)) continue;
-                double x = player.getX(), y = player.getY(), z = player.getZ();
+            double x = player.getX(), y = player.getY(), z = player.getZ();
+            double dy = distanceToSpan(y, group.minY + .5, group.maxY + .5), vertical = dy * dy;
+            double dx = distanceToSpan(x, group.minX + .5, group.maxX + .5);
+            double dz = distanceToSpan(z, group.minZ + .5, group.maxZ + .5);
+            if (dx * dx + vertical + dz * dz > limit) continue;
+            var chunks = group.chunks.long2ObjectEntrySet().fastIterator();
+            while (chunks.hasNext()) {
+                var entry = chunks.next(); long key = entry.getLongKey();
                 double lowX = (ChunkPos.getX(key) << 4) + .5, lowZ = (ChunkPos.getZ(key) << 4) + .5;
-                double dx = Math.max(Math.max(lowX - x, x - lowX - 15), 0), dz = Math.max(Math.max(lowZ - z, z - lowZ - 15), 0);
-                double dy = Math.max(Math.max(group.minY + .5 - y, y - group.maxY - .5), 0);
-                if (dx * dx + dy * dy + dz * dz > limit) continue;
+                dx = distanceToSpan(x, lowX, lowX + 15);
+                dz = distanceToSpan(z, lowZ, lowZ + 15);
+                if (dx * dx + vertical + dz * dz > limit || !loaded(level, key)) continue;
                 for (long packed : entry.getValue()) {
-                    if (player.distanceToSqr(BlockPos.getX(packed)+.5, BlockPos.getY(packed)+.5, BlockPos.getZ(packed)+.5) <= limit) return true;
+                    if (player.distanceToSqr(BlockPos.getX(packed) + .5, BlockPos.getY(packed) + .5, BlockPos.getZ(packed) + .5) <= limit)
+                        return true;
                 }
             }
         }
         return false;
     }
-    private boolean powered(ServerLevel level, Group group) {
-        for (var entry : group.chunks.long2ObjectEntrySet()) if (loaded(level, entry.getLongKey()))
-            for (long packed : entry.getValue()) if (LightControls.hasPower(level, BlockPos.of(packed))) return true;
+    private static double distanceToSpan(double value, double min, double max) {
+        return Math.max(Math.max(min - value, value - max), 0);
+    }
+    private boolean powered(ServerLevel level, Group group, BlockPos changedMember) {
+        LightControls.PowerCheck power = new LightControls.PowerCheck(level);
+        BlockPos previous = group.poweredMember;
+        long previousPos = previous == null ? 0 : previous.asLong();
+        if (previous != null && loaded(level, chunk(previous)) && power.hasPower(previousPos)) return true;
+
+        long changedPos = changedMember == null ? 0 : changedMember.asLong();
+        if (changedMember != null && !changedMember.equals(previous) && loaded(level, chunk(changedMember))
+                && power.hasPower(changedPos)) {
+            group.poweredMember = changedMember.immutable();
+            return true;
+        }
+        group.poweredMember = null;
+        // A negative result still needs the full loaded set, including indirect signals and changes on chunk boundaries.
+        var chunks = group.chunks.long2ObjectEntrySet().fastIterator();
+        while (chunks.hasNext()) {
+            var entry = chunks.next();
+            if (!loaded(level, entry.getLongKey())) continue;
+            for (long packed : entry.getValue()) {
+                if ((previous != null && packed == previousPos) || (changedMember != null && packed == changedPos)) continue;
+                if (!power.hasPower(packed)) continue;
+                group.poweredMember = BlockPos.of(packed);
+                return true;
+            }
+        }
         return false;
     }
-    private boolean activation(ServerLevel level, Group group, LightMode mode, boolean manual) {
-        return switch (mode) { case MANUAL -> manual; case REDSTONE -> powered(level, group); case PROXIMITY -> nearby(level, group); };
+    private boolean activation(ServerLevel level, Group group, LightMode mode, boolean manual, BlockPos changedMember) {
+        return switch (mode) { case MANUAL -> manual; case REDSTONE -> powered(level, group, changedMember); case PROXIMITY -> nearby(level, group); };
     }
     private boolean render(ServerLevel level, Group group, LightMode mode, LightEffect effect, boolean active) {
-        List<BlockPos> parts = loadedParts(level, group);
-        BlockState[] before = new BlockState[parts.size()], after = new BlockState[parts.size()];
+        List<BlockState> before = new ArrayList<>();
+        List<BlockPos> parts = loadedParts(level, group, before);
+        BlockState[] after = new BlockState[parts.size()];
         int brightness = active ? effect.levelAt(level.getGameTime() + group.phase) : 0;
+        boolean redstone = mode == LightMode.REDSTONE, lit = brightness > 0, changed = false;
+        LightEffect.Stage stage = LightEffect.Stage.of(effect, brightness);
+        BlockState previous = null, target = null;
         for (int i = 0; i < parts.size(); i++) {
-            before[i] = level.getBlockState(parts.get(i));
-            after[i] = before[i].setValue(LightControls.REDSTONE, mode == LightMode.REDSTONE)
-                    .setValue(LightControls.LIT, brightness > 0).setValue(LightControls.EFFECT, LightEffect.Stage.of(effect, brightness));
+            BlockState current = before.get(i);
+            if (current != previous) {
+                previous = current;
+                target = previous.setValue(LightControls.REDSTONE, redstone)
+                        .setValue(LightControls.LIT, lit).setValue(LightControls.EFFECT, stage);
+            }
+            after[i] = target;
+            changed |= current != target;
+        }
+        if (!changed) {
+            group.lastLevel = brightness;
+            return true;
         }
         int written = 0;
         for (int i = 0; i < parts.size(); i++) {
-            if (level.getBlockState(parts.get(i)) != before[i] || after[i] != before[i] && !level.setBlock(parts.get(i), after[i], FLAGS)) {
+            BlockState original = before.get(i);
+            if (level.getBlockState(parts.get(i)) != original || after[i] != original && !level.setBlock(parts.get(i), after[i], FLAGS)) {
                 for (int j = written - 1; j >= 0; j--)
-                    if (level.getBlockState(parts.get(j)) == after[j] && after[j] != before[j]) level.setBlock(parts.get(j), before[j], FLAGS);
+                    if (level.getBlockState(parts.get(j)) == after[j] && after[j] != before.get(j))
+                        level.setBlock(parts.get(j), before.get(j), FLAGS);
                 return false;
             }
             written++;
         }
         for (int i = 0; i < parts.size(); i++) if (level.getBlockState(parts.get(i)) != after[i]) {
-            for (int j = written - 1; j >= 0; j--) if (level.getBlockState(parts.get(j)) == after[j] && before[j] != after[j])
-                level.setBlock(parts.get(j), before[j], FLAGS);
+            for (int j = written - 1; j >= 0; j--) if (level.getBlockState(parts.get(j)) == after[j] && before.get(j) != after[j])
+                level.setBlock(parts.get(j), before.get(j), FLAGS);
             return false;
         }
         group.lastLevel = brightness; return true;
@@ -306,7 +371,7 @@ public final class LedLightGroups extends SavedData {
         data.setAnimation(root, group.active ? group.effect : LightEffect.STEADY, group.phase);
     }
     private void sync(ServerLevel level, Group group) {
-        boolean active = activation(level, group, group.mode, group.manual);
+        boolean active = activation(level, group, group.mode, group.manual, null);
         if (active != group.active) setDirty();
         group.active = active;
         render(level, group, group.mode, group.effect, group.active);
@@ -319,34 +384,44 @@ public final class LedLightGroups extends SavedData {
     }
     public boolean apply(ServerLevel level, Group group, LightMode mode, LightEffect effect, boolean manual) {
         if (roots.get(group.root) != group) return false;
-        boolean active = activation(level, group, mode, manual);
+        boolean active = activation(level, group, mode, manual, null);
         if (!render(level, group, mode, effect, active)) return false;
         group.mode = mode; group.effect = effect; group.manual = manual; group.active = active;
+        if (mode != LightMode.REDSTONE) group.poweredMember = null;
         schedule(level, group); setDirty(); return true;
     }
     public void color(Group group, int color) { group.color = color; setDirty(); }
     public void control(ServerLevel level, Group group) {
-        boolean active = activation(level, group, group.mode, group.manual);
+        control(level, group, null);
+    }
+    public void control(ServerLevel level, Group group, BlockPos changedMember) {
+        boolean active = activation(level, group, group.mode, group.manual, changedMember);
         if (active == group.active) return;
         if (render(level, group, group.mode, group.effect, active)) { group.active = active; schedule(level, group); setDirty(); }
     }
-    public void animate(ServerLevel level, Group group) {
-        int brightness = group.active ? group.effect.levelAt(level.getGameTime() + group.phase) : 0;
+    void animate(ServerLevel level, Group group, int brightness) {
         if (brightness == group.lastLevel) return;
         LightEffect.Stage stage = LightEffect.Stage.of(group.effect, brightness);
+        boolean lit = brightness > 0;
         boolean complete = true;
         // Animation only changes the frame; settings/dye transactions retain the rollback path in render().
         // Stream loaded chunks once, without per-frame part lists or before/after arrays.
         var chunks = group.chunks.long2ObjectEntrySet().fastIterator();
+        BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
+        BlockState previous = null, target = null;
         while (chunks.hasNext()) {
             var entry = chunks.next(); long key = entry.getLongKey();
             var chunk = level.getChunkSource().getChunkNow(ChunkPos.getX(key), ChunkPos.getZ(key));
             if (chunk == null) continue;
             for (long packed : entry.getValue()) {
-                BlockPos pos = BlockPos.of(packed); BlockState before = chunk.getBlockState(pos);
-                if (!panel(before) || mounting(before) != group.mount) continue;
-                BlockState after = before.setValue(LightControls.LIT, brightness > 0).setValue(LightControls.EFFECT, stage);
-                if (after != before && !level.setBlock(pos, after, FLAGS)) complete = false;
+                pos.set(packed);
+                BlockState before = chunk.getBlockState(pos);
+                if (before != previous) {
+                    previous = before;
+                    target = panel(before) && mounting(before) == group.mount
+                            ? before.setValue(LightControls.LIT, lit).setValue(LightControls.EFFECT, stage) : before;
+                }
+                if (target != before && !level.setBlock(pos.immutable(), target, FLAGS)) complete = false;
             }
         }
         group.lastLevel = complete ? brightness : -1;

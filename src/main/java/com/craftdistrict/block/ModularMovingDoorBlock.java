@@ -38,8 +38,12 @@ public final class ModularMovingDoorBlock extends HorizontalDirectionalBlock {
     public static final BooleanProperty OPEN=BlockStateProperties.OPEN, LEFT=BooleanProperty.create("left"),
             RIGHT=BooleanProperty.create("right"), UP=BooleanProperty.create("up"), DOWN=BooleanProperty.create("down");
     public static final EnumProperty<Role> ROLE=EnumProperty.create("role",Role.class);
+    private static final BooleanProperty[] EDGES = {LEFT, RIGHT, UP, DOWN};
+    private static final Direction[][] ADJACENT = new Direction[4][];
     private static final VoxelShape[][][][] SHAPES=new VoxelShape[2][2][48][];
     static {
+        for (Direction facing : Direction.Plane.HORIZONTAL)
+            ADJACENT[facing.get2DDataValue()] = new Direction[]{facing.getCounterClockWise(), facing.getClockWise(), Direction.UP, Direction.DOWN};
         for(int garage=0;garage<2;garage++)for(int open=0;open<2;open++)for(int role=0;role<3;role++)for(int edges=0;edges<16;edges++) {
             boolean shared=open==1&&role==2;
             VoxelShape shape=open==0?box(0,0,13.5,16,16,16):Shapes.empty();
@@ -74,13 +78,13 @@ public final class ModularMovingDoorBlock extends HorizontalDirectionalBlock {
     @Override protected void createBlockStateDefinition(StateDefinition.Builder<Block,BlockState> b){super.createBlockStateDefinition(b);b.add(FACING,OPEN,ROLE,LEFT,RIGHT,UP,DOWN);}
     BlockState layout(BlockState state,LevelAccessor level,BlockPos pos) {
         if(state.getValue(OPEN))return state;
-        Direction right=state.getValue(FACING).getClockWise();
-        Direction[] directions={right.getOpposite(),right,Direction.UP,Direction.DOWN};
-        BooleanProperty[] properties={LEFT,RIGHT,UP,DOWN};
-        for(int i=0;i<4;i++) {
-            BlockPos p=pos.relative(directions[i]);
-            boolean joined=level.hasChunkAt(p)&&compatible(state,level.getBlockState(p))&&!level.getBlockState(p).getValue(OPEN);
-            state=state.setValue(properties[i],joined);
+        Direction[] directions = ADJACENT[state.getValue(FACING).get2DDataValue()];
+        BlockPos.MutableBlockPos neighborPos = new BlockPos.MutableBlockPos();
+        for (int i = 0; i < directions.length; i++) {
+            neighborPos.setWithOffset(pos, directions[i]);
+            BlockState neighbor = level.hasChunkAt(neighborPos) ? level.getBlockState(neighborPos) : null;
+            boolean joined = neighbor != null && compatible(state, neighbor) && !neighbor.getValue(OPEN);
+            state = state.setValue(EDGES[i], joined);
         }
         return state;
     }

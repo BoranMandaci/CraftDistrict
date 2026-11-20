@@ -9,6 +9,7 @@ import com.craftdistrict.network.LightDyeNetworking;
 import com.craftdistrict.item.WrenchItem;
 import com.craftdistrict.menu.LightColorMenu;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
@@ -18,11 +19,17 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ChunkPos;
+import net.minecraft.world.level.SignalGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.chunk.LevelChunk;
+import net.minecraft.world.level.material.FluidState;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -31,7 +38,7 @@ public final class LightControls {
     public static final BooleanProperty REDSTONE = BooleanProperty.create("redstone_controlled");
     public static final EnumProperty<LightEffect.Stage> EFFECT = EnumProperty.create("effect", LightEffect.Stage.class);
     private static final int FLAGS = Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE;
-    private static final net.minecraft.core.Direction[] POWER_SIDES = net.minecraft.core.Direction.values();
+    private static final Direction[] POWER_SIDES = Direction.values();
     private static final Predicate<Entity> ELIGIBLE = player -> player.isAlive() && !player.isSpectator();
     private LightControls() { }
 
@@ -53,9 +60,7 @@ public final class LightControls {
         return state.hasProperty(EFFECT) ? (maximum * state.getValue(EFFECT).level + 7) / 15 : maximum;
     }
 
-    public static void updateEffect(ServerLevel level, BlockPos pos, BlockState state) {
-        LightEffect effect = effect(state);
-        int brightness = effect.levelAt(level.getGameTime() + LightProximityData.phase(pos.asLong()));
+    static void updateEffect(ServerLevel level, BlockPos pos, BlockState state, LightEffect effect, int brightness) {
         LightEffect.Stage next = LightEffect.Stage.of(effect, brightness);
         if (state.getValue(EFFECT) == next && state.getValue(LIT) == (brightness > 0)) return;
         if (!(state.getBlock() instanceof MultiBlockDecorationBlock)) {
@@ -113,15 +118,54 @@ public final class LightControls {
         return true;
     }
 
-    public static boolean hasPower(Level level, BlockPos pos) {
-        for (net.minecraft.core.Direction side : POWER_SIDES) {
-            BlockPos neighbor = pos.relative(side);
-            if (level.hasChunkAt(neighbor) && level.getSignal(neighbor, side) > 0) return true;
+    /** Use the platform's signal rules without loading a chunk through a conductor's extra neighbor reads. */
+    static final class PowerCheck implements SignalGetter {
+        private final Level level;
+        private final BlockPos.MutableBlockPos neighbor = new BlockPos.MutableBlockPos();
+        private long chunkKey = Long.MIN_VALUE;
+        private LevelChunk chunk;
+
+        PowerCheck(Level level) { this.level = level; }
+
+        boolean hasPower(long pos) {
+            int x = BlockPos.getX(pos), y = BlockPos.getY(pos), z = BlockPos.getZ(pos);
+            for (Direction side : POWER_SIDES) {
+                neighbor.set(x + side.getStepX(), y + side.getStepY(), z + side.getStepZ());
+                if (getSignal(neighbor, side) > 0) return true;
+            }
+            return false;
         }
-        return false;
+
+        private LevelChunk chunkAt(BlockPos pos) {
+            int x = pos.getX() >> 4, z = pos.getZ() >> 4;
+            long key = ChunkPos.asLong(x, z);
+            if (key != chunkKey) {
+                chunkKey = key;
+                chunk = level.getChunkSource().getChunkNow(x, z);
+            }
+            return chunk;
+        }
+
+        @Override public BlockState getBlockState(BlockPos pos) {
+            if (isOutsideBuildHeight(pos)) return Blocks.VOID_AIR.defaultBlockState();
+            LevelChunk loaded = chunkAt(pos);
+            return loaded == null ? Blocks.AIR.defaultBlockState() : loaded.getBlockState(pos);
+        }
+
+        @Override public BlockEntity getBlockEntity(BlockPos pos) {
+            if (isOutsideBuildHeight(pos)) return null;
+            LevelChunk loaded = chunkAt(pos);
+            return loaded == null ? null : loaded.getBlockEntity(pos, LevelChunk.EntityCreationType.IMMEDIATE);
+        }
+
+        @Override public FluidState getFluidState(BlockPos pos) { return getBlockState(pos).getFluidState(); }
+        @Override public int getHeight() { return level.getHeight(); }
+        @Override public int getMinBuildHeight() { return level.getMinBuildHeight(); }
     }
+
     private static boolean powered(Level level, List<BlockPos> parts) {
-        for (BlockPos pos : parts) if (hasPower(level, pos)) return true;
+        PowerCheck power = new PowerCheck(level);
+        for (BlockPos pos : parts) if (power.hasPower(pos.asLong())) return true;
         return false;
     }
 
@@ -197,7 +241,7 @@ public final class LightControls {
 
     public static void neighborChanged(BlockState state, Level level, BlockPos pos) {
         if (level instanceof ServerLevel server && LedLightGroups.panel(state)) {
-            var group = group(level, state, pos); if (group != null) LedLightGroups.get(server).control(server, group);
+            var group = group(level, state, pos); if (group != null) LedLightGroups.get(server).control(server, group, pos);
             return;
         }
         if (level.isClientSide || !state.getValue(REDSTONE)) return;

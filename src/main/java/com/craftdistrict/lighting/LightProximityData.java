@@ -22,6 +22,7 @@ import net.minecraft.util.datafix.DataFixTypes;
 public final class LightProximityData extends SavedData {
     private static final String NAME = "craftdistrict_light_proximity";
     private static final int INTERVAL = 20;
+    private static final int[][] EFFECT_TRANSITIONS = effectTransitions();
     public static final double RANGE = 10;
     public static final double RELEASE_RANGE = 10.5;
     //? if >=1.21 {
@@ -38,7 +39,7 @@ public final class LightProximityData extends SavedData {
     public LightProximityData() {
         phases = new Long2ObjectOpenHashMap[INTERVAL];
         for (int i = 0; i < INTERVAL; i++) phases[i] = new Long2ObjectOpenHashMap<>();
-        effects = new Long2ObjectOpenHashMap[6][INTERVAL];
+        effects = new Long2ObjectOpenHashMap[EFFECT_TRANSITIONS.length][INTERVAL];
         animated.defaultReturnValue((byte)-1);
     }
 
@@ -69,6 +70,23 @@ public final class LightProximityData extends SavedData {
     }
 
     static int phase(long pos) { return (int)Long.remainderUnsigned(HashCommon.mix(pos), INTERVAL); }
+
+    private static int[][] effectTransitions() {
+        LightEffect[] values = LightEffect.values();
+        int[][] transitions = new int[values.length][];
+        for (LightEffect effect : values) {
+            if (effect == LightEffect.STEADY) continue;
+            int[] masks = new int[effect.period];
+            for (int tick = 0; tick < masks.length; tick++) {
+                for (int offset = 0; offset < INTERVAL; offset++)
+                    if (effect.levelAt(tick + offset) != effect.levelAt(tick + offset - 1))
+                        masks[tick] |= 1 << offset;
+            }
+            transitions[effect.ordinal()] = masks;
+        }
+        return transitions;
+    }
+
     private static long chunk(BlockPos origin) { return ChunkPos.asLong(origin.getX() >> 4, origin.getZ() >> 4); }
     public boolean contains(BlockPos origin) { return origins.contains(origin.asLong()); }
     public boolean animated(BlockPos origin, LightEffect effect) {
@@ -90,14 +108,15 @@ public final class LightProximityData extends SavedData {
         return true;
     }
 
-    public void setAnimation(BlockPos origin, LightEffect effect) { setAnimation(origin, effect, phase(origin.asLong())); }
+    public void setAnimation(BlockPos origin, LightEffect effect) {
+        setAnimation(origin, effect, effect == LightEffect.STEADY ? 0 : phase(origin.asLong()));
+    }
     public void setAnimation(BlockPos origin, LightEffect effect, int offset) {
         long pos = origin.asLong();
         int previous = animated.get(pos), next = effect == LightEffect.STEADY ? -1 : effect.ordinal();
-        int oldOffset = offsets.containsKey(pos) ? offsets.get(pos) : phase(pos);
-        if (previous == next && (next < 0 || oldOffset == offset)) return;
+        if (previous == next && (next < 0 || offsets.get(pos) == offset)) return;
         int phase = offset; long chunk = chunk(origin);
-        if (previous >= 0) remove(effects[previous][oldOffset], chunk, pos);
+        if (previous >= 0) remove(effects[previous][offsets.get(pos)], chunk, pos);
         if (next < 0) { animated.remove(pos); offsets.remove(pos); }
         else {
             animated.put(pos, (byte)next); offsets.put(pos, (byte)offset);
@@ -112,14 +131,17 @@ public final class LightProximityData extends SavedData {
         LedLightGroups groups = LedLightGroups.get(level);
         groups.tickLoads(level);
         long time = level.getGameTime();
-        if (!origins.isEmpty()) proximity(level, phases[(int)Math.floorMod(time, INTERVAL)]);
+        if (!origins.isEmpty()) proximity(level, groups, phases[Math.floorMod(time, INTERVAL)]);
         if (animated.isEmpty()) return;
-        for (int id = 1; id < 6; id++) {
+        for (int id = 1; id < EFFECT_TRANSITIONS.length; id++) {
             LightEffect effect = LightEffect.byId(id);
-            for (int offset = 0; offset < INTERVAL; offset++) {
+            int[] transitions = EFFECT_TRANSITIONS[id];
+            int due = transitions[Math.floorMod(time, effect.period)];
+            for (; due != 0; due &= due - 1) {
+                int offset = Integer.numberOfTrailingZeros(due);
                 var phaseGroup = effects[id][offset];
-                // Skip entire groups between boundaries; no per-light ticking, reads, allocations or packets.
-                if (phaseGroup == null || phaseGroup.isEmpty() || effect.levelAt(time + offset) == effect.levelAt(time + offset - 1)) continue;
+                if (phaseGroup == null || phaseGroup.isEmpty()) continue;
+                int brightness = effect.levelAt(time + offset);
                 var chunks = phaseGroup.long2ObjectEntrySet().fastIterator();
                 while (chunks.hasNext()) {
                     var entry = chunks.next(); long chunk = entry.getLongKey();
@@ -130,7 +152,8 @@ public final class LightProximityData extends SavedData {
                         long packed = positions.nextLong();
                         var group = groups.root(packed);
                         if (group != null) {
-                            if (group.active() && group.effect() == effect) groups.animate(level, group);
+                            if (group.active() && group.effect() == effect)
+                                groups.animate(level, group, group.phase == offset ? brightness : effect.levelAt(time + group.phase));
                             else { positions.remove(); animated.remove(packed); offsets.remove(packed); setDirty(); }
                             continue;
                         }
@@ -143,7 +166,8 @@ public final class LightProximityData extends SavedData {
                         if (!LightControls.settingsEligible(state.getBlock()) || LightControls.effect(state) != effect || !LightControls.origin(state, pos).equals(pos)) {
                             positions.remove(); animated.remove(packed); offsets.remove(packed); setDirty(); continue;
                         }
-                        LightControls.updateEffect(level, pos, state);
+                        int phase = phase(packed);
+                        LightControls.updateEffect(level, pos, state, effect, phase == offset ? brightness : effect.levelAt(time + phase));
                     }
                     if (entry.getValue().isEmpty()) chunks.remove();
                 }
@@ -151,8 +175,7 @@ public final class LightProximityData extends SavedData {
         }
     }
 
-    private void proximity(ServerLevel level, Long2ObjectOpenHashMap<LongOpenHashSet> group) {
-        var groups = LedLightGroups.get(level);
+    private void proximity(ServerLevel level, LedLightGroups groups, Long2ObjectOpenHashMap<LongOpenHashSet> group) {
         var chunks = group.long2ObjectEntrySet().fastIterator();
         while (chunks.hasNext()) {
             var entry = chunks.next(); long chunk = entry.getLongKey();

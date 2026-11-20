@@ -1,8 +1,10 @@
 package com.craftdistrict.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientboundBlockUpdatePacket;
 import net.minecraft.network.protocol.game.ClientboundBundlePacket;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.ChunkPos;
@@ -23,6 +25,10 @@ final class DoorStateUpdates {
     private DoorStateUpdates() { }
 
     static boolean commit(Level level, BlockPos[] positions, BlockState[] before, BlockState[] after) {
+        return commit(level, positions, before, after, true);
+    }
+
+    static boolean commit(Level level, BlockPos[] positions, BlockState[] before, BlockState[] after, boolean correctPrediction) {
         if (positions.length != before.length || positions.length != after.length)
             throw new IllegalArgumentException("Mismatched door transaction arrays");
         for (int i = 0; i < positions.length; i++)
@@ -44,20 +50,24 @@ final class DoorStateUpdates {
 
         // Vanilla prediction tracks each setBlock above. Invalidate only after all halves
         // contain their final states, so an immediate rebuild cannot capture a half-open door.
+        Map<ChunkPos, List<ClientboundBlockUpdatePacket>> chunks = null;
         for (int i = 0; i < positions.length; i++) {
-            BlockState current = level.getBlockState(positions[i]);
-            if (before[i] != current || !valid && before[i] != after[i])
-                level.sendBlockUpdated(positions[i], before[i], current, NOTIFY);
-        }
-        if (level instanceof ServerLevel server) {
-            Map<ChunkPos, List<ClientboundBlockUpdatePacket>> chunks = new LinkedHashMap<>();
-            for (int i = 0; i < positions.length; i++) {
-                BlockState current = level.getBlockState(positions[i]);
-                if (before[i] != current || !valid && before[i] != after[i])
-                    chunks.computeIfAbsent(new ChunkPos(positions[i]), ignored -> new ArrayList<>())
-                            .add(new ClientboundBlockUpdatePacket(positions[i], current));
+            BlockPos pos = positions[i];
+            BlockState current = level.getBlockState(pos);
+            if (before[i] == current && (valid || before[i] == after[i])) continue;
+            level.sendBlockUpdated(pos, before[i], current, NOTIFY);
+            if (level instanceof ServerLevel && (correctPrediction || before[i] != current)) {
+                if (chunks == null) chunks = new LinkedHashMap<>();
+                chunks.computeIfAbsent(new ChunkPos(pos), ignored -> new ArrayList<>())
+                        .add(new ClientboundBlockUpdatePacket(pos, current));
             }
-            Map<ServerPlayer, List<ClientboundBlockUpdatePacket>> recipients = new LinkedHashMap<>();
+        }
+        if (chunks != null && level instanceof ServerLevel server) {
+            Map<ServerPlayer, List<Packet<
+                    //? if >=1.21 {
+                    ? super
+                    //?}
+                    ClientGamePacketListener>>> recipients = new LinkedHashMap<>();
             chunks.forEach((chunk, packets) -> {
                 for (ServerPlayer player : server.getChunkSource().chunkMap.getPlayers(chunk, false))
                     recipients.computeIfAbsent(player, ignored -> new ArrayList<>()).addAll(packets);
@@ -65,7 +75,7 @@ final class DoorStateUpdates {
             // Confirm every predicted half before the vanilla interaction acknowledgement.
             // Bundling also keeps observers from processing the panels in separate client tasks.
             recipients.forEach((player, packets) ->
-                    player.connection.send(new ClientboundBundlePacket(new ArrayList<>(packets))));
+                    player.connection.send(new ClientboundBundlePacket(packets)));
         }
         return valid;
     }

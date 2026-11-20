@@ -17,6 +17,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.phys.Vec3;
 import org.joml.Quaternionf;
 
 import java.util.ArrayList;
@@ -37,6 +38,12 @@ public final class SlidingDoorRenderer implements BlockEntityRenderer<SlidingDoo
         // The upper half or translated leaf can be visible across a section boundary on Fabric too.
         var pos=door.getBlockPos();int x=pos.getX()&15,z=pos.getZ()&15;
         return (pos.getY()&15)==15||x==0||x==15||z==0||z==15;
+    }
+    @Override public boolean shouldRender(SlidingDoorBlockEntity door, Vec3 cameraPos) {
+        var pos = door.getBlockPos();
+        int distance = getViewDistance();
+        return cameraPos.distanceToSqr(pos.getX() + .5, pos.getY() + .5, pos.getZ() + .5) < (double) distance * distance
+                && DoorRenderSupport.inFrustum(door.getRenderBoundingBox());
     }
     private Mesh mesh(BlockState state) {
         var shaper=Minecraft.getInstance().getBlockRenderer().getBlockModelShaper();
@@ -68,24 +75,22 @@ public final class SlidingDoorRenderer implements BlockEntityRenderer<SlidingDoo
         }
     }
     @Override public void render(SlidingDoorBlockEntity door,float partial,PoseStack pose,MultiBufferSource buffers,int light,int overlay) {
-        if(door.getLevel()==null)return;
+        var level = door.getLevel();
+        if (level == null) return;
         BlockState state=door.getBlockState();Mesh mesh=mesh(state);
-        float progress=door.progress(door.getLevel().getGameTime()+partial);
+        float progress = door.progress(level.getGameTime(), partial);
         pose.pushPose();pose.translate(.5,0,.5);pose.mulPose(FACINGS[state.getValue(SlidingEntranceBlock.FACING).get2DDataValue()]);pose.translate(-.5,0,-.5);
         VertexConsumer consumer=buffers.getBuffer(Sheets.cutoutBlockSheet());
         draw(mesh.lowerFrame,mesh.upperFrame,pose,consumer,light,overlay);
-        pose.translate((state.getValue(SlidingEntranceBlock.HINGE)==DoorHingeSide.RIGHT?1:-1)*progress,0,-1.75/16*progress);
+        if (progress != 0)
+            pose.translate((state.getValue(SlidingEntranceBlock.HINGE)==DoorHingeSide.RIGHT?1:-1)*progress,0,-1.75/16*progress);
         draw(mesh.lowerLeaf,mesh.upperLeaf,pose,consumer,light,overlay);
         pose.popPose();
     }
     private static void draw(List<BakedQuad> lower,List<BakedQuad> upper,PoseStack pose,VertexConsumer consumer,int light,int overlay) {
-        emit(lower,pose,consumer,light,overlay);pose.translate(0,1,0);emit(upper,pose,consumer,light,overlay);pose.translate(0,-1,0);
-    }
-    private static void emit(List<BakedQuad> quads,PoseStack pose,VertexConsumer consumer,int light,int overlay) {
-        for(BakedQuad quad:quads)consumer.putBulkData(pose.last(),quad,1,1,1,
-                //? if >=1.21 {
-                1,
-                //?}
-                light,overlay);
+        DoorRenderSupport.emit(lower, pose.last(), consumer, light, overlay);
+        pose.translate(0, 1, 0);
+        DoorRenderSupport.emit(upper, pose.last(), consumer, light, overlay);
+        pose.translate(0, -1, 0);
     }
 }

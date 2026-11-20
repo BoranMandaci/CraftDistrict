@@ -6,6 +6,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 //?}
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.SectionPos;
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -230,6 +231,9 @@ public final class SlidingEntranceBlock extends PairedDoorBlock implements Entit
     public static BlockHitResult pickMovedPanel(BlockGetter level,Vec3 start,Vec3 end,double nearestSquared) {
         double lengthSquared=start.distanceToSqr(end);
         if(lengthSquared<1e-12||nearestSquared<1e-12)return null;
+        Vec3 scanEnd=nearestSquared<lengthSquared?start.lerp(end,Math.sqrt(nearestSquared/lengthSquared)):end;
+        if (level instanceof Level world && !mayHaveSlidingDoor(world, start, scanEnd)) return null;
+
         final class Ray {
             final LongOpenHashSet visited=new LongOpenHashSet();
             final BlockPos.MutableBlockPos cursor=new BlockPos.MutableBlockPos();
@@ -251,9 +255,40 @@ public final class SlidingEntranceBlock extends PairedDoorBlock implements Entit
             }
         }
         Ray ray=new Ray();
-        Vec3 scanEnd=nearestSquared<lengthSquared?start.lerp(end,Math.sqrt(nearestSquared/lengthSquared)):end;
         return BlockGetter.traverseBlocks(start,scanEnd,ray,(query,pos)->{query.visit(pos);return null;},query->query.hit);
     }
+
+    private static boolean mayHaveSlidingDoor(Level level, Vec3 start, Vec3 end) {
+        // Include the ray traversal's endpoint nudge and the neighboring cells a leaf can slide into.
+        double padding = 1e-5;
+        int minX = SectionPos.posToSectionCoord(Math.min(start.x, end.x) - 1 - padding);
+        int maxX = SectionPos.posToSectionCoord(Math.max(start.x, end.x) + 1 + padding);
+        int minY = SectionPos.posToSectionCoord(Math.min(start.y, end.y) - padding);
+        int maxY = SectionPos.posToSectionCoord(Math.max(start.y, end.y) + padding);
+        int minZ = SectionPos.posToSectionCoord(Math.min(start.z, end.z) - 1 - padding);
+        int maxZ = SectionPos.posToSectionCoord(Math.max(start.z, end.z) + 1 + padding);
+        // Bound the palette check to eight sections even with extended interaction reach.
+        if (maxX - minX > 1 || maxY - minY > 1 || maxZ - minZ > 1) return true;
+
+        int firstSectionIndex = level.getSectionIndexFromSectionY(Math.max(minY, level.getMinSection()));
+        int lastSectionIndex = level.getSectionIndexFromSectionY(Math.min(maxY, level.getMaxSection() - 1));
+        if (firstSectionIndex > lastSectionIndex) return false;
+        var chunks = level.getChunkSource();
+        for (int x = minX; x <= maxX; x++) {
+            for (int z = minZ; z <= maxZ; z++) {
+                var chunk = chunks.getChunkNow(x, z);
+                if (chunk == null) continue;
+                var sections = chunk.getSections();
+                for (int y = firstSectionIndex; y <= lastSectionIndex; y++) {
+                    var section = sections[y];
+                    if (!section.hasOnlyAir()
+                            && section.maybeHas(state -> state.getBlock() instanceof SlidingEntranceBlock)) return true;
+                }
+            }
+        }
+        return false;
+    }
+
     /** Permit hits on the actual moved leaf; vanilla distance and permission checks still apply. */
     public static double interactionHitLimit(BlockGetter level, BlockHitResult hit, double original) {
         BlockPos pos=hit.getBlockPos(); BlockState state=level.getBlockState(pos);

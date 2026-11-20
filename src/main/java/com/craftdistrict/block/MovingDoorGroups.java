@@ -2,6 +2,8 @@ package com.craftdistrict.block;
 
 import com.craftdistrict.item.WrenchItem;
 import dev.architectury.event.events.common.ChunkEvent;
+import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
+import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -25,6 +27,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.saveddata.SavedData;
 
@@ -56,7 +59,7 @@ public final class MovingDoorGroups extends SavedData {
     }
     private final Set<Group> groups=new LinkedHashSet<>();
     private final Map<BlockPos,Group> members=new HashMap<>();
-    private final Map<Long,Set<Group>> chunks=new HashMap<>();
+    private final Long2ObjectOpenHashMap<Set<Group>> chunks=new Long2ObjectOpenHashMap<>();
 
     private static MovingDoorGroups get(ServerLevel level) {
         //? if >=1.21 {
@@ -68,18 +71,21 @@ public final class MovingDoorGroups extends SavedData {
     private static boolean loaded(ServerLevel level,BlockPos pos) {
         return level.getChunkSource().getChunkNow(pos.getX()>>4,pos.getZ()>>4)!=null;
     }
+    private static long chunk(BlockPos pos) {
+        return ChunkPos.asLong(pos.getX() >> 4, pos.getZ() >> 4);
+    }
     private void add(Group group) {
         groups.add(group);
         for(BlockPos pos:group.open.keySet()) {
             members.put(pos,group);
-            chunks.computeIfAbsent(new ChunkPos(pos).toLong(),ignored->new LinkedHashSet<>()).add(group);
+            chunks.computeIfAbsent(chunk(pos),ignored->new LinkedHashSet<>()).add(group);
         }
     }
     private void remove(Group group) {
         groups.remove(group);
         for(BlockPos pos:group.open.keySet()) {
             members.remove(pos,group);
-            long key=new ChunkPos(pos).toLong();Set<Group> entries=chunks.get(key);
+            long key=chunk(pos);Set<Group> entries=chunks.get(key);
             if(entries!=null){entries.remove(group);if(entries.isEmpty())chunks.remove(key);}
         }
         setDirty();
@@ -105,11 +111,13 @@ public final class MovingDoorGroups extends SavedData {
         }
     }
     private static boolean commit(ServerLevel level,Map<BlockPos,BlockState> after) {
+        if (after.isEmpty()) return true;
         BlockPos[] positions=after.keySet().toArray(BlockPos[]::new);
         BlockState[] before=new BlockState[positions.length],next=new BlockState[positions.length];
         for(int i=0;i<positions.length;i++){before[i]=level.getBlockState(positions[i]);next[i]=after.get(positions[i]);}
         boolean previous=MOVING.get();MOVING.set(true);
-        try{return DoorStateUpdates.commit(level,positions,before,next);}
+        // Modular doors have no client-side block prediction to correct on rollback.
+        try{return DoorStateUpdates.commit(level,positions,before,next,false);}
         finally{MOVING.set(previous);}
     }
     private static InteractionResult fail(Player player,String key) {
@@ -143,11 +151,13 @@ public final class MovingDoorGroups extends SavedData {
             if(!(start.getBlock() instanceof ModularMovingDoorBlock door)||start.getValue(ModularMovingDoorBlock.OPEN))
                 return InteractionResult.PASS;
             Map<BlockPos,BlockState> found=new LinkedHashMap<>();ArrayDeque<BlockPos> queue=new ArrayDeque<>();
+            LongOpenHashSet queued = new LongOpenHashSet();
             Direction facing=start.getValue(ModularMovingDoorBlock.FACING),right=facing.getClockWise();
-            Direction[] edges={right,right.getOpposite(),Direction.UP,Direction.DOWN};queue.add(pos);
+            Direction[] edges={right,right.getOpposite(),Direction.UP,Direction.DOWN};
+            queue.add(pos); queued.add(pos.asLong());
             int minY=pos.getY(),maxY=minY,minSide=pos.getX()*right.getStepX()+pos.getZ()*right.getStepZ(),maxSide=minSide;
             while(!queue.isEmpty()) {
-                BlockPos p=queue.removeFirst();if(found.containsKey(p))continue;
+                BlockPos p=queue.removeFirst();
                 if(!loaded(level,p))return fail(player,"door_unloaded");
                 BlockState s=level.getBlockState(p);
                 if(!door.compatible(start,s)||s.getValue(ModularMovingDoorBlock.OPEN))continue;
@@ -156,7 +166,10 @@ public final class MovingDoorGroups extends SavedData {
                 if(found.size()>=LIMIT||maxY-minY>=SPAN||maxSide-minSide>=SPAN)return fail(player,"door_size");
                 if(!level.mayInteract(player,p))return InteractionResult.FAIL;
                 found.put(p,s);
-                for(Direction edge:edges)queue.addLast(p.relative(edge));
+                for (Direction edge : edges) {
+                    BlockPos next = p.relative(edge);
+                    if (queued.add(next.asLong())) queue.addLast(next);
+                }
             }
             int width=maxSide-minSide+1;
             List<Cell> cells=new ArrayList<>();Set<BlockPos> travel=new HashSet<>();
@@ -192,9 +205,18 @@ public final class MovingDoorGroups extends SavedData {
     }
     private void detectMissing(ServerLevel level,Group group) {
         if(group.broken)return; // Already-restored anchors are valid during deferred, cross-chunk cleanup.
-        for(var entry:group.open.entrySet())if(loaded(level,entry.getKey())&&level.getBlockState(entry.getKey())!=entry.getValue()) {
+        LevelChunk loadedChunk = null;
+        long lastChunk = Long.MIN_VALUE;
+        for (var entry : group.open.entrySet()) {
+            BlockPos pos = entry.getKey();
+            long key = chunk(pos);
+            if (key != lastChunk) {
+                lastChunk = key;
+                loadedChunk = level.getChunkSource().getChunkNow(ChunkPos.getX(key), ChunkPos.getZ(key));
+            }
+            if (loadedChunk == null || loadedChunk.getBlockState(pos) == entry.getValue()) continue;
             group.broken=true;
-            for(Cell cell:group.cells)if(cell.anchor.equals(entry.getKey())||cell.parked.equals(entry.getKey()))group.removed.add(cell.anchor);
+            for(Cell cell:group.cells)if(cell.anchor.equals(pos)||cell.parked.equals(pos))group.removed.add(cell.anchor);
             setDirty();
         }
     }
@@ -221,6 +243,7 @@ public final class MovingDoorGroups extends SavedData {
         if(complete)remove(group);
     }
     private static void refresh(ServerLevel level,Collection<BlockPos> positions) {
+        if (positions.isEmpty()) return;
         Set<BlockPos> adjacent=new HashSet<>();
         for(BlockPos pos:positions){adjacent.add(pos);for(Direction side:Direction.values())adjacent.add(pos.relative(side));}
         for(BlockPos p:adjacent)if(loaded(level,p)) {

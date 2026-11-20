@@ -50,8 +50,10 @@ public final class BarDoorRenderer implements BlockEntityRenderer<BarDoorBlockEn
         }
     }
     @Override public void render(BarDoorBlockEntity door,float partial,PoseStack pose,MultiBufferSource buffers,int light,int overlay) {
-        if(door.getLevel()==null)return;
-        refresh();float angle=door.angle(door.getLevel().getGameTime()+partial);
+        var level = door.getLevel();
+        if (level == null) return;
+        refresh();
+        float angle = door.renderAngle(level.getGameTime(), partial);
         pose.pushPose();pose.translate(.5,0,.5);
         pose.mulPose(FACINGS[door.getBlockState().getValue(com.craftdistrict.block.BarDoorBlock.FACING).get2DDataValue()]);pose.translate(-.5,0,-.5);
         VertexConsumer consumer=buffers.getBuffer(Sheets.cutoutBlockSheet());

@@ -15,6 +15,7 @@ import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 import org.joml.Quaternionf;
 
 import java.util.ArrayList;
@@ -34,6 +35,8 @@ public final class RotaryEntranceRenderer implements BlockEntityRenderer<RotaryE
 
     private Mesh mesh;
     private final Quaternionf rotation = new Quaternionf();
+    private long rotationTick;
+    private float rotationPartial = Float.NaN;
 
     public RotaryEntranceRenderer(BlockEntityRendererProvider.Context context) { }
 
@@ -52,10 +55,16 @@ public final class RotaryEntranceRenderer implements BlockEntityRenderer<RotaryE
     }
 
     @Override public boolean shouldRenderOffScreen(RotaryEntranceBlockEntity entrance) {
-        // The controller's own section can be out of view while a blade in the next section is visible.
+        // Keep the controller eligible when a neighboring section can see its wings.
         var bounds = entrance.getRenderBoundingBox();
         return differentSections(bounds.minX, bounds.maxX) || differentSections(bounds.minY, bounds.maxY)
                 || differentSections(bounds.minZ, bounds.maxZ);
+    }
+
+    @Override public boolean shouldRender(RotaryEntranceBlockEntity entrance, Vec3 cameraPos) {
+        var bounds = entrance.getRenderBoundingBox();
+        int distance = getViewDistance();
+        return bounds.distanceToSqr(cameraPos) < (double) distance * distance && DoorRenderSupport.inFrustum(bounds);
     }
 
     private static boolean differentSections(double min, double max) {
@@ -65,34 +74,32 @@ public final class RotaryEntranceRenderer implements BlockEntityRenderer<RotaryE
     @Override
     public void render(RotaryEntranceBlockEntity entrance, float partialTick, PoseStack pose,
                        MultiBufferSource buffers, int light, int overlay) {
-        if (entrance.getLevel() == null) return;
+        var level = entrance.getLevel();
+        if (level == null) return;
         BlockState state = entrance.getBlockState();
         RotaryEntranceBlock block = (RotaryEntranceBlock) state.getBlock();
         List<BakedQuad> wings = quads(block.rotorModelState());
-        float angle = RotaryEntranceBlockEntity.revolvingAngle(entrance.getLevel().getGameTime(), partialTick);
+        long time = level.getGameTime();
+        if (time != rotationTick || partialTick != rotationPartial) {
+            float angle = RotaryEntranceBlockEntity.revolvingAngle(time, partialTick);
+            rotation.rotationY((float) Math.toRadians(angle));
+            rotationTick = time;
+            rotationPartial = partialTick;
+        }
         VertexConsumer buffer = buffers.getBuffer(Sheets.cutoutBlockSheet());
         pose.pushPose();
         pose.translate(.5, 0, .5);
         pose.mulPose(FACINGS[state.getValue(RotaryEntranceBlock.FACING).get2DDataValue()]);
-        pose.mulPose(rotation.rotationY((float) Math.toRadians(angle)));
+        pose.mulPose(rotation);
         pose.translate(-.5, 0, -.5);
-        emit(wings, pose, buffer, light, overlay);
+        DoorRenderSupport.emit(wings, pose.last(), buffer, light, overlay);
         for (int blade = 1; blade < 3; blade++) {
             pose.translate(.5, 0, .5);
             pose.mulPose(BLADE_SPACING);
             pose.translate(-.5, 0, -.5);
-            emit(wings, pose, buffer, light, overlay);
+            DoorRenderSupport.emit(wings, pose.last(), buffer, light, overlay);
         }
         pose.popPose();
     }
 
-    private static void emit(List<BakedQuad> quads, PoseStack pose, VertexConsumer buffer, int light, int overlay) {
-        for (int i = 0; i < quads.size(); i++) {
-            buffer.putBulkData(pose.last(), quads.get(i), 1, 1, 1,
-                    //? if >=1.21 {
-                    1,
-                    //?}
-                    light, overlay);
-        }
-    }
 }

@@ -174,7 +174,8 @@ public final class LightColorMenu extends AbstractContainerMenu {
         LightDyeData.Payment payment = recolor ? data.payment(player, parts, selected, group != null, true) : null;
         if (recolor && payment == null) { finish(Feedback.MISSING_DYE); return; }
         boolean manualChoice = LightMode.byId(selectedMode) == LightMode.MANUAL ? selectedPower : group == null ? manual : group.manual();
-        if (!LightControls.setSettings(server, current, pos, LightMode.byId(selectedMode), LightEffect.byId(selectedEffect), manualChoice)) {
+        if ((changed || group == null)
+                && !LightControls.setSettings(server, current, pos, LightMode.byId(selectedMode), LightEffect.byId(selectedEffect), manualChoice)) {
             finish(Feedback.STALE); return;
         }
         if (recolor) {

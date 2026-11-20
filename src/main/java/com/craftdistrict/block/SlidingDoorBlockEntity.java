@@ -28,6 +28,11 @@ public final class SlidingDoorBlockEntity extends BlockEntity {
         return Mth.lerp(t*t*(3-2*t),from,to);
     }
     public float progress(double time){return from==to||time-started>=DURATION?to:interpolate(from,to,time-started);}
+    public float progress(long time, float partialTick) {
+        if (from == to) return to;
+        long elapsed = time - started;
+        return elapsed >= DURATION ? to : interpolate(from, to, elapsed + (double) partialTick);
+    }
     public boolean moving(long now){return from!=to&&now<started+DURATION;}
     public boolean recent(long now){return from!=to&&now-started>=0&&now-started<=DURATION+10;}
     public boolean transition(boolean open,long now) {
