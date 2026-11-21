@@ -38,6 +38,7 @@ public final class OfficeTurnstileRenderer implements BlockEntityRenderer<Office
     private BakedModel source;
     private final List<BakedQuad> arm = new ArrayList<>(5);
     private final Quaternionf rotation = new Quaternionf();
+    private final DoorRenderSupport quadEmitter = new DoorRenderSupport();
 
     public OfficeTurnstileRenderer(BlockEntityRendererProvider.Context context) { }
 
@@ -90,6 +91,7 @@ public final class OfficeTurnstileRenderer implements BlockEntityRenderer<Office
         refreshArm();
         float angle = gate.angle(level.getGameTime(), partialTick);
         var consumer = buffers.getBuffer(Sheets.solidBlockSheet());
+        quadEmitter.setLight(light);
         pose.pushPose();
         pose.translate(.5, 0, .5);
         pose.mulPose(FACINGS[gate.getBlockState().getValue(OfficeTurnstileBlock.FACING).get2DDataValue()]);
@@ -99,12 +101,12 @@ public final class OfficeTurnstileRenderer implements BlockEntityRenderer<Office
                     : rotation.rotationAxis(angle * Mth.DEG_TO_RAD, OfficeTurnstileBlock.AXLE_X, OfficeTurnstileBlock.AXLE_Y, 0));
         }
         pose.translate(-ITEM_HUB_X, -ITEM_HUB_Y, -ITEM_HUB_Z);
-        DoorRenderSupport.emit(arm, pose.last(), consumer, light, overlay);
+        quadEmitter.emit(arm, pose.last(), consumer, overlay);
         for (int wing = 1; wing < 3; wing++) {
             pose.translate(ITEM_HUB_X, ITEM_HUB_Y, ITEM_HUB_Z);
             pose.mulPose(ARM_SPACING);
             pose.translate(-ITEM_HUB_X, -ITEM_HUB_Y, -ITEM_HUB_Z);
-            DoorRenderSupport.emit(arm, pose.last(), consumer, light, overlay);
+            quadEmitter.emit(arm, pose.last(), consumer, overlay);
         }
         pose.popPose();
     }

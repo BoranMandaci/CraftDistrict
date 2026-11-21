@@ -63,8 +63,9 @@ public final class SlidingDoorSensors {
     }
     public static void watchClosing(ServerLevel level,BlockPos pos) {
         BlockState state=level.getBlockState(pos);
-        if(!(state.getBlock() instanceof SlidingEntranceBlock door)||door.entranceParts(level,pos).isEmpty())return;
-        LEVELS.computeIfAbsent(level,ignored->new Index()).closing.add(door.controller(level,pos).asLong());
+        if (!(state.getBlock() instanceof SlidingEntranceBlock door)) return;
+        BlockPos root = door.completeController(level, pos, state);
+        if (root != null) LEVELS.computeIfAbsent(level, ignored -> new Index()).closing.add(root.asLong());
     }
     private static boolean discover(ServerLevel level,Index data,int x,int z) {
         long key=ChunkPos.asLong(x,z);if(data.loaded.contains(key))return true;
@@ -74,7 +75,8 @@ public final class SlidingDoorSensors {
             changed(level,pos);
             if(state.getValue(SlidingEntranceBlock.OPEN)) {
                 SlidingEntranceBlock door=(SlidingEntranceBlock)state.getBlock();
-                if(!door.entranceParts(level,pos).isEmpty())arm(level,door.controller(level,pos));
+                BlockPos root = door.completeController(level, pos, state);
+                if (root != null) arm(level, root);
             }
         });
         return true;
@@ -97,8 +99,8 @@ public final class SlidingDoorSensors {
         BlockState s=level.getBlockState(pos);
         if(!automatic(s)||!s.getValue(SlidingEntranceBlock.OPEN)||s.getValue(SlidingEntranceBlock.POWERED)
                 ||AccessDoorSecurity.secured(level,pos,s))return;
-        if(door.entranceParts(level,pos).isEmpty())return; // Resume on discovery/neighbor repair, never poll unloaded partners.
-        BlockPos root=door.controller(level,pos);
+        BlockPos root = door.completeController(level, pos, s);
+        if (root == null) return; // Resume on discovery or neighbor repair.
         if(!root.equals(pos)){arm(level,root);return;}
         Index data=LEVELS.computeIfAbsent(level,ignored->new Index());long now=level.getGameTime();
         if(door.occupied(level,root))data.lastSeen.put(root.asLong(),now);
@@ -131,18 +133,21 @@ public final class SlidingDoorSensors {
         try {
             for(ServerPlayer player:level.players()) {
                 if(player.isSpectator()||!player.isAlive())continue;
-                for(int x=Mth.floor(player.getX()-4)>>2;x<=(Mth.floor(player.getX()+4)>>2);x++)
-                    for(int y=Mth.floor(player.getY()-3)>>2;y<=(Mth.floor(player.getY()+2)>>2);y++)
-                        for(int z=Mth.floor(player.getZ()-4)>>2;z<=(Mth.floor(player.getZ()+4)>>2);z++) {
+                int minX = Mth.floor(player.getX() - 4) >> 2, maxX = Mth.floor(player.getX() + 4) >> 2;
+                int minY = Mth.floor(player.getY() - 3) >> 2, maxY = Mth.floor(player.getY() + 2) >> 2;
+                int minZ = Mth.floor(player.getZ() - 4) >> 2, maxZ = Mth.floor(player.getZ() + 4) >> 2;
+                for (int x = minX; x <= maxX; x++)
+                    for (int y = minY; y <= maxY; y++)
+                        for (int z = minZ; z <= maxZ; z++) {
                             LongOpenHashSet nodes=data.cells.get(BlockPos.asLong(x,y,z));if(nodes==null)continue;
                             for(long p:nodes) {
                                 BlockPos pos=BlockPos.of(p);
                                 if(level.getChunkSource().getChunkNow(pos.getX()>>4,pos.getZ()>>4)==null)continue;
                                 BlockState state=level.getBlockState(pos);if(!automatic(state)||AccessDoorSecurity.secured(level,pos,state))continue;
                                 SlidingEntranceBlock door=(SlidingEntranceBlock)state.getBlock();
-                                if(door.entranceParts(level,pos).isEmpty())continue;
-                                BlockPos root=door.controller(level,pos);
-                                if(data.seen.contains(root.asLong())||!door.near(level,root,player,state.getValue(SlidingEntranceBlock.OPEN)?3:2.5))continue;
+                                BlockPos root = door.completeController(level, pos, state);
+                                if (root == null || data.seen.contains(root.asLong())
+                                        || !door.near(level, root, player, state.getValue(SlidingEntranceBlock.OPEN) ? 3 : 2.5)) continue;
                                 data.seen.add(root.asLong());data.lastSeen.put(root.asLong(),level.getGameTime());
                                 if(!state.getValue(SlidingEntranceBlock.OPEN))door.setOpen(null,level,state,root,true);
                                 arm(level,root);

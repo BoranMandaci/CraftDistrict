@@ -28,6 +28,7 @@ public final class SlidingDoorRenderer implements BlockEntityRenderer<SlidingDoo
     private static final Quaternionf[] FACINGS=new Quaternionf[4];
     static {for(Direction f:Direction.Plane.HORIZONTAL)FACINGS[f.get2DDataValue()]=Axis.YP.rotationDegrees(180-f.toYRot());}
     private final Mesh[] meshes=new Mesh[8];
+    private final DoorRenderSupport quadEmitter = new DoorRenderSupport();
     private static final class Mesh {
         final BakedModel lower,upper;
         final List<BakedQuad> lowerFrame=new ArrayList<>(),upperFrame=new ArrayList<>(),lowerLeaf=new ArrayList<>(),upperLeaf=new ArrayList<>();
@@ -81,16 +82,17 @@ public final class SlidingDoorRenderer implements BlockEntityRenderer<SlidingDoo
         float progress = door.progress(level.getGameTime(), partial);
         pose.pushPose();pose.translate(.5,0,.5);pose.mulPose(FACINGS[state.getValue(SlidingEntranceBlock.FACING).get2DDataValue()]);pose.translate(-.5,0,-.5);
         VertexConsumer consumer=buffers.getBuffer(Sheets.cutoutBlockSheet());
-        draw(mesh.lowerFrame,mesh.upperFrame,pose,consumer,light,overlay);
+        quadEmitter.setLight(light);
+        draw(mesh.lowerFrame,mesh.upperFrame,pose,consumer,overlay);
         if (progress != 0)
             pose.translate((state.getValue(SlidingEntranceBlock.HINGE)==DoorHingeSide.RIGHT?1:-1)*progress,0,-1.75/16*progress);
-        draw(mesh.lowerLeaf,mesh.upperLeaf,pose,consumer,light,overlay);
+        draw(mesh.lowerLeaf,mesh.upperLeaf,pose,consumer,overlay);
         pose.popPose();
     }
-    private static void draw(List<BakedQuad> lower,List<BakedQuad> upper,PoseStack pose,VertexConsumer consumer,int light,int overlay) {
-        DoorRenderSupport.emit(lower, pose.last(), consumer, light, overlay);
+    private void draw(List<BakedQuad> lower,List<BakedQuad> upper,PoseStack pose,VertexConsumer consumer,int overlay) {
+        quadEmitter.emit(lower, pose.last(), consumer, overlay);
         pose.translate(0, 1, 0);
-        DoorRenderSupport.emit(upper, pose.last(), consumer, light, overlay);
+        quadEmitter.emit(upper, pose.last(), consumer, overlay);
         pose.translate(0, -1, 0);
     }
 }

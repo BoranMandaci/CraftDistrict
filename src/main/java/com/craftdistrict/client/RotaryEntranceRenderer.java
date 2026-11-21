@@ -35,6 +35,7 @@ public final class RotaryEntranceRenderer implements BlockEntityRenderer<RotaryE
 
     private Mesh mesh;
     private final Quaternionf rotation = new Quaternionf();
+    private final DoorRenderSupport quadEmitter = new DoorRenderSupport();
     private long rotationTick;
     private float rotationPartial = Float.NaN;
 
@@ -87,17 +88,18 @@ public final class RotaryEntranceRenderer implements BlockEntityRenderer<RotaryE
             rotationPartial = partialTick;
         }
         VertexConsumer buffer = buffers.getBuffer(Sheets.cutoutBlockSheet());
+        quadEmitter.setLight(light);
         pose.pushPose();
         pose.translate(.5, 0, .5);
         pose.mulPose(FACINGS[state.getValue(RotaryEntranceBlock.FACING).get2DDataValue()]);
         pose.mulPose(rotation);
         pose.translate(-.5, 0, -.5);
-        DoorRenderSupport.emit(wings, pose.last(), buffer, light, overlay);
+        quadEmitter.emit(wings, pose.last(), buffer, overlay);
         for (int blade = 1; blade < 3; blade++) {
             pose.translate(.5, 0, .5);
             pose.mulPose(BLADE_SPACING);
             pose.translate(-.5, 0, -.5);
-            DoorRenderSupport.emit(wings, pose.last(), buffer, light, overlay);
+            quadEmitter.emit(wings, pose.last(), buffer, overlay);
         }
         pose.popPose();
     }

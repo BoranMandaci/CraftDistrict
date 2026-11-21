@@ -25,6 +25,7 @@ public final class BarDoorRenderer implements BlockEntityRenderer<BarDoorBlockEn
     private static final Quaternionf POSITIVE=Axis.YP.rotationDegrees(90),NEGATIVE=Axis.YP.rotationDegrees(-90);
     static {for(Direction f:Direction.Plane.HORIZONTAL)FACINGS[f.get2DDataValue()]=Axis.YP.rotationDegrees(180-f.toYRot());}
     private final Quaternionf rotation=new Quaternionf();
+    private final DoorRenderSupport quadEmitter = new DoorRenderSupport();
     private final List<BakedQuad> left=new ArrayList<>(),right=new ArrayList<>();
     private BakedModel source;
     public BarDoorRenderer(BlockEntityRendererProvider.Context context){ }
@@ -57,27 +58,22 @@ public final class BarDoorRenderer implements BlockEntityRenderer<BarDoorBlockEn
         pose.pushPose();pose.translate(.5,0,.5);
         pose.mulPose(FACINGS[door.getBlockState().getValue(com.craftdistrict.block.BarDoorBlock.FACING).get2DDataValue()]);pose.translate(-.5,0,-.5);
         VertexConsumer consumer=buffers.getBuffer(Sheets.cutoutBlockSheet());
+        quadEmitter.setLight(light);
         if(angle==0) {
             pose.translate(0,.5,6.25/16);
-            emit(left,pose,consumer,light,overlay);emit(right,pose,consumer,light,overlay);
+            quadEmitter.emit(left,pose.last(),consumer,overlay);
+            quadEmitter.emit(right,pose.last(),consumer,overlay);
         } else {
-            draw(left,1/16D,-angle,pose,consumer,light,overlay);
-            draw(right,15/16D,angle,pose,consumer,light,overlay);
+            draw(left,1/16D,-angle,pose,consumer,overlay);
+            draw(right,15/16D,angle,pose,consumer,overlay);
         }
         pose.popPose();
     }
-    private void draw(List<BakedQuad> quads,double hinge,float angle,PoseStack pose,VertexConsumer consumer,int light,int overlay) {
+    private void draw(List<BakedQuad> quads,double hinge,float angle,PoseStack pose,VertexConsumer consumer,int overlay) {
         pose.pushPose();pose.translate(hinge,0,14.25/16);
         pose.mulPose(angle==90?POSITIVE:angle==-90?NEGATIVE:rotation.rotationY((float)Math.toRadians(angle)));
         pose.translate(-hinge,.5,(-14.25+6.25)/16);
-        emit(quads,pose,consumer,light,overlay);
+        quadEmitter.emit(quads,pose.last(),consumer,overlay);
         pose.popPose();
-    }
-    private void emit(List<BakedQuad> quads,PoseStack pose,VertexConsumer consumer,int light,int overlay) {
-        for(BakedQuad quad:quads)consumer.putBulkData(pose.last(),quad,1,1,1,
-                //? if >=1.21 {
-                1,
-                //?}
-                light,overlay);
     }
 }

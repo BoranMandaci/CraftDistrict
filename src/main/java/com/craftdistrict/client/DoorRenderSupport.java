@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.world.phys.AABB;
 
+import java.util.Arrays;
 import java.util.List;
 
 final class DoorRenderSupport {
@@ -15,7 +16,9 @@ final class DoorRenderSupport {
     /*private static final boolean NATIVE_BLOCK_ENTITY_CULLING = dev.architectury.platform.Platform.isForge();
     *///?}
 
-    private DoorRenderSupport() { }
+    // Each door renderer owns one set of inputs for the vanilla bulk-quad path.
+    private final float[] brightness = {1, 1, 1, 1};
+    private final int[] lightmap = new int[4];
 
     static boolean inFrustum(AABB bounds) {
         //? if <1.21 {
@@ -28,17 +31,16 @@ final class DoorRenderSupport {
         return frustum == null || frustum.isVisible(bounds);
     }
 
-    static void emit(List<BakedQuad> quads, PoseStack.Pose pose, VertexConsumer consumer, int light, int overlay) {
-        //? if >=1.21 {
-        if (quads.isEmpty()) return;
-        // Same full-strength color and packed light as the short overload, supplied once per mesh.
-        float[] brightness = {1, 1, 1, 1};
-        int[] lightmap = {light, light, light, light};
+    void setLight(int light) {
+        Arrays.fill(lightmap, light);
+    }
+
+    void emit(List<BakedQuad> quads, PoseStack.Pose pose, VertexConsumer consumer, int overlay) {
         for (int i = 0; i < quads.size(); i++)
-            consumer.putBulkData(pose, quads.get(i), brightness, 1, 1, 1, 1, lightmap, overlay, false);
-        //?} else {
-        /*for (int i = 0; i < quads.size(); i++)
-            consumer.putBulkData(pose, quads.get(i), 1, 1, 1, light, overlay);
-        *///?}
+            consumer.putBulkData(pose, quads.get(i), brightness, 1, 1, 1,
+                    //? if >=1.21 {
+                    1,
+                    //?}
+                    lightmap, overlay, false);
     }
 }

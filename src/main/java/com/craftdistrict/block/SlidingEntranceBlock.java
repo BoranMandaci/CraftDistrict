@@ -114,10 +114,20 @@ public final class SlidingEntranceBlock extends PairedDoorBlock implements Entit
         return other==null?List.of(root,root.above()):List.of(root,root.above(),other,other.above());
     }
     public BlockPos controller(Level level,BlockPos pos) {
-        BlockState state=level.getBlockState(pos);if(!state.is(this))return pos.immutable();
-        BlockPos root=bottom(state,pos);if(!complete(level,root))return root;
-        BlockState lower=level.getBlockState(root);BlockPos other=partner(level,root,lower);
-        return other!=null&&lower.getValue(HINGE)==DoorHingeSide.RIGHT?other:root;
+        BlockState state = level.getBlockState(pos);
+        if (!state.is(this)) return pos.immutable();
+        BlockPos controller = completeController(level, pos, state);
+        return controller == null ? bottom(state, pos) : controller;
+    }
+    /** The sensor needs a loaded controller, without collecting all parts of the entrance. */
+    public BlockPos completeController(Level level, BlockPos pos, BlockState state) {
+        if (!state.is(this)) return null;
+        BlockPos root = bottom(state, pos);
+        if (!complete(level, root)) return null;
+        BlockState lower = root.equals(pos) ? state : level.getBlockState(root);
+        BlockPos other = partner(level, root, lower);
+        if (other == null) return lower.getValue(PAIRED) ? null : root;
+        return lower.getValue(HINGE) == DoorHingeSide.RIGHT ? other : root;
     }
     public AABB entranceArea(Level level,BlockPos root,double range) {
         BlockState state=level.getBlockState(root);BlockPos other=partner(level,root,state);
@@ -127,13 +137,16 @@ public final class SlidingEntranceBlock extends PairedDoorBlock implements Entit
         return new AABB(x-range,root.getY(),z-range,x+range,root.getY()+2,z+range);
     }
     public boolean near(Level level,BlockPos root,Player player,double range) {
-        AABB area=entranceArea(level,root,range);
+        return near(entranceArea(level, root, range), player, range);
+    }
+    private static boolean near(AABB area, Player player, double range) {
         double dx=player.getX()-(area.minX+area.maxX)*.5,dz=player.getZ()-(area.minZ+area.maxZ)*.5;
         return !player.isSpectator()&&player.isAlive()&&player.getBoundingBox().maxY>area.minY
                 &&player.getBoundingBox().minY<area.maxY&&dx*dx+dz*dz<=range*range;
     }
     public boolean occupied(Level level,BlockPos root) {
-        return !level.getEntitiesOfClass(Player.class,entranceArea(level,root,3),p->near(level,root,p,3)).isEmpty();
+        AABB area = entranceArea(level, root, 3);
+        return !level.getEntitiesOfClass(Player.class, area, player -> near(area, player, 3)).isEmpty();
     }
     public boolean configure(Level level,BlockPos pos,boolean automatic) {
         if(!(level instanceof ServerLevel))return false;
