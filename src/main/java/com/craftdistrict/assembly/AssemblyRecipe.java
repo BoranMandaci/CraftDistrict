@@ -1,6 +1,7 @@
 package com.craftdistrict.assembly;
 
 import com.craftdistrict.registry.CraftDistrictAssembly;
+import com.craftdistrict.registry.CraftDistrictItems;
 import net.minecraft.core.NonNullList;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -35,8 +36,9 @@ public final class AssemblyRecipe implements Recipe<
         if (requirements.isEmpty() || requirements.size() > MAX_INGREDIENTS) {
             throw new IllegalArgumentException("Assembly recipes require 1..8 ingredients");
         }
-        if (output.isEmpty() || output.getCount() > output.getMaxStackSize() || !AssemblyCatalog.isDecoration(output.getItem())) {
-            throw new IllegalArgumentException("Assembly output must be an existing CraftDistrict decoration and fit one stack");
+        if (output.isEmpty() || output.getCount() > output.getMaxStackSize()
+                || (!AssemblyCatalog.isDecoration(output.getItem()) && !output.is(CraftDistrictItems.ACCESS_CARD.get()))) {
+            throw new IllegalArgumentException("Assembly output must be a CraftDistrict decoration or an Access Card and fit one stack");
         }
         this.requirements = List.copyOf(requirements);
         this.output = output.copy();

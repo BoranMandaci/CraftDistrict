@@ -3,14 +3,12 @@ package com.craftdistrict.block;
 //? if >=1.21 {
 import com.mojang.serialization.MapCodec;
 //?}
-import com.craftdistrict.item.WrenchItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -27,7 +25,6 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.EntityCollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -169,16 +166,4 @@ public final class BarDoorBlock extends HorizontalDirectionalBlock implements En
         super.onPlace(state,level,pos,before,moving);
         if(!before.is(this)&&(state.getValue(OPEN)||state.getValue(SWING)!=CLOSED))schedule(level,pos,2);
     }
-    private InteractionResult toggle(BlockState state,Level level,BlockPos pos,Player player) {
-        if(level.isClientSide)return InteractionResult.SUCCESS;
-        // Consume the click while occupied instead of placing a held door item above this one.
-        if(state.getValue(OPEN)&&occupant(level,pos,state)!=null)return InteractionResult.CONSUME;
-        if(request(level,pos,state,!state.getValue(OPEN),player))WrenchItem.usedIfHeld(player);
-        return InteractionResult.CONSUME;
-    }
-    //? if >=1.21 {
-    @Override public InteractionResult useWithoutItem(BlockState s,Level l,BlockPos p,Player u,BlockHitResult h){return toggle(s,l,p,u);}
-    //?} else {
-    /*@Override public InteractionResult use(BlockState s,Level l,BlockPos p,Player u,net.minecraft.world.InteractionHand hand,BlockHitResult h){return toggle(s,l,p,u);}
-    *///?}
 }

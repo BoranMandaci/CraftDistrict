@@ -22,12 +22,14 @@ import com.craftdistrict.block.SurgicalTableBlock;
 import com.craftdistrict.block.SurgicalCeilingLightBlock;
 import com.craftdistrict.block.MedicalImagingDisplayBlock;
 import com.craftdistrict.block.ModularDiningTableBlock;
+import com.craftdistrict.block.ModularMovingDoorBlock;
 import com.craftdistrict.block.MultiBlockDecorationBlock;
 import com.craftdistrict.block.OfficeChairBlock;
 import com.craftdistrict.block.OfficeGlassDoorBlock;
 import com.craftdistrict.block.PoliceHoldingCellDoorBlock;
 import com.craftdistrict.block.RestaurantSeatBlock;
 import com.craftdistrict.block.RestaurantServingCartBlock;
+import com.craftdistrict.block.SlidingEntranceBlock;
 import com.craftdistrict.block.SupermarketSelfCheckoutBlock;
 import com.craftdistrict.registry.CraftDistrictBlocks;
 import net.minecraft.core.BlockPos;
@@ -47,7 +49,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public final class DecorationBreakParticles {
     private static final int MAX_TARGETED_FRAGMENTS = 12;
     private static final int MAX_OFFICE_CHAIR_FRAGMENTS = 6;
-    private static final int MAX_HOTEL_FRAGMENTS = 6;
+    private static final int MAX_COMPACT_FRAGMENTS = 6;
     private Level lastLevel;
     private Block lastBlock;
     private long lastOrigin;
@@ -127,9 +129,9 @@ public final class DecorationBreakParticles {
         long age = tick - lastTick;
         if (lastLevel == level && lastBlock == state.getBlock() && lastOrigin == origin
                 && lastPosition != pos.asLong() && age >= 0 && age <= 2
-                // Partner packets may cross a tick boundary. Suppress them only
-                // after the broken part is gone, preserving newly placed replacements.
-                && !level.getBlockState(BlockPos.of(lastPosition)).is(lastBlock)) return true;
+                // Both halves of a sliding door can emit their effects before the client sees their removal.
+                && (lastBlock instanceof SlidingEntranceBlock
+                    || !level.getBlockState(BlockPos.of(lastPosition)).is(lastBlock))) return true;
         lastLevel = level;
         lastBlock = state.getBlock();
         lastOrigin = origin;
@@ -148,7 +150,8 @@ public final class DecorationBreakParticles {
         }
         if (state.getBlock() instanceof HospitalBedBlock) return state.getValue(BedBlock.PART) == BedPart.HEAD
                 ? pos.relative(state.getValue(BedBlock.FACING).getOpposite()) : pos;
-        if ((state.getBlock() instanceof PoliceHoldingCellDoorBlock || state.getBlock() instanceof OfficeGlassDoorBlock)
+        if ((state.getBlock() instanceof PoliceHoldingCellDoorBlock || state.getBlock() instanceof OfficeGlassDoorBlock
+                || state.getBlock() instanceof SlidingEntranceBlock)
                 && state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER) return pos.below();
         return pos;
     }
@@ -163,8 +166,9 @@ public final class DecorationBreakParticles {
     }
 
     public static void sample(BlockState state, VoxelShape shape, FragmentConsumer output) {
-        boolean hotel = hotelReduction(state);
-        if (!hotel && !strongReduction(state)) {
+        Block block = state.getBlock();
+        boolean compact = block instanceof SlidingEntranceBlock || block instanceof ModularMovingDoorBlock || hotelReduction(state);
+        if (!compact && !strongReduction(state)) {
             sample(shape, output);
             return;
         }
@@ -174,9 +178,9 @@ public final class DecorationBreakParticles {
         if (grid.candidates == 0) return;
         // Assembly Station previously used the full vanilla burst. Other targets
         // already used the one-in-three sampler; reduce that count by about 80%.
-        int previous = state.getBlock() instanceof AssemblyStationBlock ? grid.vanillaCandidates : grid.candidates;
-        int maximum = hotel ? MAX_HOTEL_FRAGMENTS
-                : state.getBlock() instanceof OfficeChairBlock ? MAX_OFFICE_CHAIR_FRAGMENTS : MAX_TARGETED_FRAGMENTS;
+        int previous = block instanceof AssemblyStationBlock ? grid.vanillaCandidates : grid.candidates;
+        int maximum = compact ? MAX_COMPACT_FRAGMENTS
+                : block instanceof OfficeChairBlock ? MAX_OFFICE_CHAIR_FRAGMENTS : MAX_TARGETED_FRAGMENTS;
         grid.limit = Math.min(grid.candidates, Math.min(maximum, Math.max(3, (previous + 4) / 5)));
         grid.accumulator = grid.candidates / 2;
         grid.countOnly = false;

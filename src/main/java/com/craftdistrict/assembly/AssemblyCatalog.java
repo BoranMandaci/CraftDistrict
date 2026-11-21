@@ -14,7 +14,11 @@ public final class AssemblyCatalog {
 
     public static List<DecorationCollection> collections() { return Membership.COLLECTIONS; }
     public static List<DecorationCollection> collectionsFor(Item item) { return Membership.BY_ITEM.getOrDefault(item, List.of()); }
-    public static boolean isDecoration(Item item) { return Membership.BY_ITEM.containsKey(item); }
+    public static boolean isDecoration(Item item) {
+        List<DecorationCollection> collections = collectionsFor(item);
+        return !collections.isEmpty()
+                && (collections.size() > 1 || collections.get(0) != DecorationCollection.SURVIVAL_CRAFTING);
+    }
     public static String normalizeSearch(String value) {
         // Fold German sharp S as well as Turkish dotted/dotless I consistently.
         return value.strip().toUpperCase(Locale.ROOT).toLowerCase(Locale.ROOT).replace("\u00df", "ss").replace("\u0307", "").replace('\u0131', 'i');
@@ -24,8 +28,7 @@ public final class AssemblyCatalog {
     }
 
     private static final class Membership {
-        static final List<DecorationCollection> COLLECTIONS = Arrays.stream(DecorationCollection.values())
-                .filter(collection -> collection != DecorationCollection.SURVIVAL_CRAFTING).toList();
+        static final List<DecorationCollection> COLLECTIONS = List.of(DecorationCollection.values());
         static final Map<Item, List<DecorationCollection>> BY_ITEM = build();
         private static Map<Item, List<DecorationCollection>> build() {
             Map<Item, List<DecorationCollection>> result = new IdentityHashMap<>();
