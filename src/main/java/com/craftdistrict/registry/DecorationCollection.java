@@ -544,7 +544,22 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Police.HOLDING_CELL_DOOR,
             CraftDistrictBlocks.Hotel.SHOWER_ENCLOSURE,
             CraftDistrictBlocks.Hotel.ELEVATOR_DOORS,
-            CraftDistrictBlocks.Casino.VAULT_DOOR);
+            CraftDistrictBlocks.Casino.VAULT_DOOR),
+    BANK("bank", CraftDistrictBlocks.Bank.LOGO_SIGN,
+            CraftDistrictBlocks.Bank.ATM_MACHINE,
+            CraftDistrictBlocks.Bank.LOGO_SIGN,
+            CraftDistrictBlocks.Bank.TELLER_COUNTER,
+            CraftDistrictBlocks.Bank.TELLER_SECURITY_GLASS,
+            CraftDistrictBlocks.Bank.COMPUTER_WORKSTATION,
+            CraftDistrictBlocks.Bank.CASH_DRAWER,
+            CraftDistrictBlocks.Casino.VAULT_DOOR,
+            CraftDistrictBlocks.Casino.VAULT_STORAGE,
+            CraftDistrictBlocks.Casino.DEPOSIT_BOX_SHELF,
+            CraftDistrictBlocks.Casino.CASH_COUNTING_MACHINE,
+            CraftDistrictBlocks.Casino.BANKNOTE_STACK,
+            CraftDistrictBlocks.Casino.MONEY_BAG_STACK,
+            CraftDistrictBlocks.Casino.GOLD_BAR_CRATE,
+            CraftDistrictBlocks.Casino.LOCKBOX_CASE);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

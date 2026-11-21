@@ -1,6 +1,10 @@
 package com.craftdistrict.registry;
 
 import com.craftdistrict.CraftDistrict;
+import com.craftdistrict.block.BankAtmBlock;
+import com.craftdistrict.block.BankDecorationBlock;
+import com.craftdistrict.block.BankLineBlock;
+import com.craftdistrict.block.CashDrawerBlock;
 import com.craftdistrict.block.WideDecorationBlock;
 import com.craftdistrict.block.NestingShoppingCartBlock;
 import com.craftdistrict.block.FastFoodMenuScreenBlock;
@@ -264,6 +268,7 @@ public final class CraftDistrictBlocks {
         Survival.initialize();
         Casino.initialize();
         Doors.initialize();
+        Bank.initialize();
         BLOCKS.register();
     }
 
@@ -324,6 +329,28 @@ public final class CraftDistrictBlocks {
             return register(id, () -> new CollectionDoorBlock(design, BlockBehaviour.Properties.of().strength(wood ? 3 : 5)
                     .sound(wood ? SoundType.WOOD : SoundType.METAL).noOcclusion()));
         }
+        private static void initialize() { }
+    }
+
+    public static final class Bank {
+        public static final RegistrySupplier<BankAtmBlock> ATM_MACHINE = register("atm_machine",
+                () -> new BankAtmBlock(metal().strength(3.0F)));
+        public static final RegistrySupplier<BankDecorationBlock> LOGO_SIGN = register("bank_logo_sign",
+                () -> new BankDecorationBlock(BankDecorationBlock.Design.LOGO_SIGN, metal().strength(1.0F)));
+        public static final RegistrySupplier<BankLineBlock> TELLER_COUNTER = register("bank_teller_counter",
+                () -> new BankLineBlock(BankLineBlock.Design.COUNTER,
+                        BlockBehaviour.Properties.of().strength(2.5F).sound(SoundType.WOOD).noOcclusion()));
+        public static final RegistrySupplier<BankLineBlock> TELLER_SECURITY_GLASS = register("teller_security_glass",
+                () -> new BankLineBlock(BankLineBlock.Design.SECURITY_GLASS, metal().strength(1.1F).sound(SoundType.GLASS)));
+        public static final RegistrySupplier<BankDecorationBlock> COMPUTER_WORKSTATION = register("computer_workstation",
+                () -> new BankDecorationBlock.Workstation(metal().strength(1.0F)));
+        public static final RegistrySupplier<CashDrawerBlock> CASH_DRAWER = register("cash_drawer",
+                () -> new CashDrawerBlock(metal().strength(1.5F)));
+
+        private static BlockBehaviour.Properties metal() {
+            return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
+        }
+        private Bank() { }
         private static void initialize() { }
     }
 

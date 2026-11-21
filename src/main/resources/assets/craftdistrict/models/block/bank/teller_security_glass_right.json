@@ -1,0 +1,111 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/bank/bank_atlas",
+    "particle": "craftdistrict:block/particles/particle_glass",
+    "glass": "craftdistrict:block/bank/teller_glass"
+  },
+  "render_type": "minecraft:translucent",
+  "elements": [
+    {
+      "name": "Top channel",
+      "from": [
+        0,
+        14.9,
+        6.05
+      ],
+      "to": [
+        16,
+        16,
+        7.65
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            2.03125,
+            0.0625,
+            2.96875,
+            1.9375
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "Right sill",
+      "from": [
+        11,
+        0,
+        6.1
+      ],
+      "to": [
+        16,
+        0.65,
+        7.65
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            2.03125,
+            0.0625,
+            2.96875,
+            1.9375
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "Right upright",
+      "from": [
+        15.3,
+        0.65,
+        6.08
+      ],
+      "to": [
+        16,
+        14.9,
+        7.64
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2.03125,
+            0.0625,
+            2.96875,
+            1.9375
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            2.03125,
+            0.0625,
+            2.96875,
+            1.9375
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            2.03125,
+            0.0625,
+            2.96875,
+            1.9375
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            2.03125,
+            0.0625,
+            2.96875,
+            1.9375
+          ],
+          "texture": "#atlas"
+        }
+      }
+    }
+  ]
+}

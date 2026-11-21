@@ -66,7 +66,7 @@ public final class CraftDistrictClient {
                     CraftDistrictBlocks.Doors.COTTAGE.get(), CraftDistrictBlocks.Doors.FRENCH_GLASS.get(),
                     CraftDistrictBlocks.Doors.GLASS_REVOLVING.get());
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Casino.CASHIER_COUNTER.get(),
-                    CraftDistrictBlocks.Casino.VIP_DIVIDER.get());
+                    CraftDistrictBlocks.Casino.VIP_DIVIDER.get(), CraftDistrictBlocks.Bank.TELLER_SECURITY_GLASS.get());
             BlockEntityRendererRegistry.register(CraftDistrictRoomNumbers.PLAQUE.get(), RoomNumberRenderer::new);
             BlockEntityRendererRegistry.register(com.craftdistrict.registry.CraftDistrictDoors.BAR.get(),BarDoorRenderer::new);
             BlockEntityRendererRegistry.register(com.craftdistrict.registry.CraftDistrictDoors.SLIDING.get(),SlidingDoorRenderer::new);
