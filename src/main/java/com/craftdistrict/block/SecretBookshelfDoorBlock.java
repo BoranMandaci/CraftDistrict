@@ -1,5 +1,6 @@
 package com.craftdistrict.block;
 
+import com.craftdistrict.access.AccessDoorSecurity;
 import com.craftdistrict.item.WrenchItem;
 //? if >=1.21 {
 import com.mojang.serialization.MapCodec;
@@ -80,18 +81,24 @@ public final class SecretBookshelfDoorBlock extends MultiBlockDecorationBlock {
     }
 
     private InteractionResult toggle(BlockState state, Level level, BlockPos pos, Player player) {
+        if (AccessDoorSecurity.secured(level, pos, state)) return AccessDoorSecurity.denied(level, player);
         if (level.isClientSide) return InteractionResult.SUCCESS;
-        if (!isStructureComplete(state, level, pos)) return InteractionResult.CONSUME;
+        if (move(state, level, pos, player, !state.getValue(OPEN))) WrenchItem.usedIfHeld(player);
+        return InteractionResult.CONSUME;
+    }
+
+    boolean move(BlockState state, Level level, BlockPos pos, Player player, boolean open) {
+        if (!isStructureComplete(state, level, pos)) return false;
+        if (state.getValue(OPEN) == open) return true;
         BlockPos bottom = structureOrigin(state, pos);
         BlockPos[] parts = {bottom, bottom.above()};
-        if (!level.mayInteract(player, parts[0]) || !level.mayInteract(player, parts[1])) return InteractionResult.CONSUME;
+        if (player != null && (!level.mayInteract(player, parts[0]) || !level.mayInteract(player, parts[1]))) return false;
 
-        boolean open = !state.getValue(OPEN);
         BlockState target = state.setValue(OPEN, open);
         if (!clear(level, parts, target)) {
-            if (!open) return InteractionResult.CONSUME;
+            if (!open) return false;
             target = target.cycle(HINGE);
-            if (!clear(level, parts, target)) return InteractionResult.CONSUME;
+            if (!clear(level, parts, target)) return false;
         }
 
         BlockState[] before = {stateForPart(state, 0), stateForPart(state, 1)};
@@ -100,9 +107,9 @@ public final class SecretBookshelfDoorBlock extends MultiBlockDecorationBlock {
             level.playSound(null, bottom, open ? SoundEvents.WOODEN_DOOR_OPEN : SoundEvents.WOODEN_DOOR_CLOSE,
                     SoundSource.BLOCKS, .8F, .85F);
             level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, bottom);
-            WrenchItem.usedIfHeld(player);
+            return true;
         }
-        return InteractionResult.CONSUME;
+        return false;
     }
 
     private static boolean clear(Level level, BlockPos[] parts, BlockState target) {

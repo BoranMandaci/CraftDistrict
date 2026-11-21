@@ -1,5 +1,6 @@
 package com.craftdistrict.block;
 
+import com.craftdistrict.access.AccessDoorSecurity;
 //? if >=1.21 {
 import com.mojang.serialization.MapCodec;
 //?}
@@ -82,23 +83,39 @@ public final class VaultDoorBlock extends WideTallDecorationBlock {
     private InteractionResult toggle(Level level, BlockPos pos, Player player) {
         BlockState current = level.getBlockState(pos);
         if (!current.is(this)) return InteractionResult.PASS;
+        if (AccessDoorSecurity.secured(level, structureOrigin(current, pos), current)) return AccessDoorSecurity.denied(level, player);
         if (!current.getValue(LARGE))
             return CabinetInteraction.toggleLinked(this, level, pos, player, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_DOOR_CLOSE);
+        return move(level, pos, player, !current.getValue(BlockStateProperties.OPEN), false);
+    }
+
+    boolean accessMove(Level level, BlockPos root, Player player, boolean open) {
+        BlockState state = level.getBlockState(root);
+        if (!state.is(this)) return false;
+        if (!state.getValue(LARGE))
+            return CabinetInteraction.setLinkedDoor(this, level, root, null, open, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_DOOR_CLOSE);
+        return move(level, root, player, open, true).consumesAction();
+    }
+
+    private InteractionResult move(Level level, BlockPos pos, Player player, boolean open, boolean access) {
+        BlockState current = level.getBlockState(pos);
         BlockPos origin = structureOrigin(current, pos);
         BlockState primary = level.getBlockState(origin);
         if (!primary.is(this) || !isStructureComplete(primary, level, origin)) return InteractionResult.PASS;
-        BlockState target = primary.setValue(BlockStateProperties.OPEN, !primary.getValue(BlockStateProperties.OPEN));
+        if (primary.getValue(BlockStateProperties.OPEN) == open) return InteractionResult.CONSUME;
+        BlockState target = primary.setValue(BlockStateProperties.OPEN, open);
         int cells = primary.getValue(FORWARD) ? 18 : 15;
         BlockPos[] positions = new BlockPos[cells];
         BlockState[] before = new BlockState[cells], after = new BlockState[cells];
         for (int i = 0; i < cells; i++) {
             BlockPos p = origin.offset(partOffset(primary, i)).immutable(); positions[i] = p;
             if (level.isOutsideBuildHeight(p) || !level.hasChunkAt(p) || !level.getWorldBorder().isWithinBounds(p)
-                    || !level.mayInteract(player, p)) return InteractionResult.FAIL;
+                    || player != null && !level.mayInteract(player, p)) return InteractionResult.FAIL;
             before[i] = level.getBlockState(p);
             // Never displace water, decorations, or another fixture in the swing space.
             if (i >= partCount(primary) && !before[i].isAir()) return InteractionResult.FAIL;
             after[i] = i < partCount(target) ? stateForPart(target, i) : Blocks.AIR.defaultBlockState();
+            if (access && !after[i].isAir() && !level.isUnobstructed(after[i], p, CollisionContext.empty())) return InteractionResult.FAIL;
         }
         Set<TransitionCell> changing = CHANGING_WINGS.get();
         if (changing == null) { changing = new HashSet<>(); CHANGING_WINGS.set(changing); }
@@ -116,9 +133,8 @@ public final class VaultDoorBlock extends WideTallDecorationBlock {
                     SoundSource.BLOCKS, .8F, .7F);
             return InteractionResult.SUCCESS;
         }
-        com.craftdistrict.item.WrenchItem.usedIfHeld(player);
-        boolean open = target.getValue(BlockStateProperties.OPEN);
-        level.playSound(player, origin, open ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE,
+        if (!access) com.craftdistrict.item.WrenchItem.usedIfHeld(player);
+        level.playSound(access ? null : player, origin, open ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE,
                 SoundSource.BLOCKS, .8F, .7F);
         level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, origin);
         return InteractionResult.CONSUME;

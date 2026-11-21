@@ -1,5 +1,6 @@
 package com.craftdistrict.door;
 
+import com.craftdistrict.access.AccessDoorSecurity;
 import com.craftdistrict.block.SlidingEntranceBlock;
 import dev.architectury.event.events.common.LifecycleEvent;
 import dev.architectury.event.events.common.TickEvent;
@@ -41,10 +42,11 @@ public final class SlidingDoorSensors {
         if(data==null&&!automatic(level.getBlockState(pos)))return;
         if(data==null){data=new Index();LEVELS.put(level,data);}
         if(data.processing){data.dirty.add(pos.asLong());return;}
-        if(automatic(level.getBlockState(pos))) {
+        BlockState state = level.getBlockState(pos);
+        if(automatic(state) && !AccessDoorSecurity.secured(level, pos, state)) {
             data.cells.computeIfAbsent(cell(pos),ignored->new LongOpenHashSet()).add(pos.asLong());
             data.chunks.computeIfAbsent(chunk(pos),ignored->new LongOpenHashSet()).add(pos.asLong());
-            if(!level.getBlockState(pos).getValue(SlidingEntranceBlock.OPEN))data.lastSeen.remove(pos.asLong());
+            if(!state.getValue(SlidingEntranceBlock.OPEN))data.lastSeen.remove(pos.asLong());
         } else remove(data,pos);
     }
     public static void removed(ServerLevel level,BlockPos pos) {
@@ -85,7 +87,7 @@ public final class SlidingDoorSensors {
     }
     public static void arm(ServerLevel level,BlockPos root) {
         BlockState s=level.getBlockState(root);
-        if(!automatic(s)||!s.getValue(SlidingEntranceBlock.OPEN))return;
+        if(!automatic(s)||!s.getValue(SlidingEntranceBlock.OPEN)||AccessDoorSecurity.secured(level,root,s))return;
         Index data=LEVELS.computeIfAbsent(level,ignored->new Index());
         if(s.getValue(SlidingEntranceBlock.POWERED)){data.lastSeen.remove(root.asLong());return;}
         data.lastSeen.putIfAbsent(root.asLong(),level.getGameTime());
@@ -93,7 +95,8 @@ public final class SlidingDoorSensors {
     }
     public static void closeTick(ServerLevel level,SlidingEntranceBlock door,BlockPos pos) {
         BlockState s=level.getBlockState(pos);
-        if(!automatic(s)||!s.getValue(SlidingEntranceBlock.OPEN)||s.getValue(SlidingEntranceBlock.POWERED))return;
+        if(!automatic(s)||!s.getValue(SlidingEntranceBlock.OPEN)||s.getValue(SlidingEntranceBlock.POWERED)
+                ||AccessDoorSecurity.secured(level,pos,s))return;
         if(door.entranceParts(level,pos).isEmpty())return; // Resume on discovery/neighbor repair, never poll unloaded partners.
         BlockPos root=door.controller(level,pos);
         if(!root.equals(pos)){arm(level,root);return;}
@@ -135,7 +138,7 @@ public final class SlidingDoorSensors {
                             for(long p:nodes) {
                                 BlockPos pos=BlockPos.of(p);
                                 if(level.getChunkSource().getChunkNow(pos.getX()>>4,pos.getZ()>>4)==null)continue;
-                                BlockState state=level.getBlockState(pos);if(!automatic(state))continue;
+                                BlockState state=level.getBlockState(pos);if(!automatic(state)||AccessDoorSecurity.secured(level,pos,state))continue;
                                 SlidingEntranceBlock door=(SlidingEntranceBlock)state.getBlock();
                                 if(door.entranceParts(level,pos).isEmpty())continue;
                                 BlockPos root=door.controller(level,pos);

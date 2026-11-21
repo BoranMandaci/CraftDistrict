@@ -1,5 +1,6 @@
 package com.craftdistrict.block;
 
+import com.craftdistrict.access.AccessDoorSecurity;
 //? if >=1.21 {
 import com.mojang.serialization.MapCodec;
 //?}
@@ -46,10 +47,12 @@ public final class HotelElevatorDoorsBlock extends WideTallDecorationBlock {
     }
     //? if >=1.21 {
     @Override public net.minecraft.world.InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (AccessDoorSecurity.secured(level, pos, state)) return AccessDoorSecurity.denied(level, player);
         return CabinetInteraction.toggleLinked(this, level, pos, player, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_DOOR_CLOSE);
     }
     //?} else {
     /*@Override public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (AccessDoorSecurity.secured(level, pos, state)) return AccessDoorSecurity.denied(level, player);
         return hand == InteractionHand.MAIN_HAND ? CabinetInteraction.toggleLinked(this, level, pos, player, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_DOOR_CLOSE) : InteractionResult.PASS;
     }
     *///?}

@@ -1,6 +1,8 @@
 package com.craftdistrict.mixin.client;
 
 import com.craftdistrict.client.LightingColors;
+import com.craftdistrict.access.AccessDoorSecurity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.network.protocol.game.ClientboundForgetLevelChunkPacket;
 import net.minecraft.network.protocol.game.ClientboundLoginPacket;
@@ -15,13 +17,16 @@ public abstract class LightChunkCacheMixin {
     @Inject(method = "handleLogin", at = @At("TAIL"))
     private void craftdistrict$newLightPalette(ClientboundLoginPacket packet, CallbackInfo ci) {
         LightingColors.clear();
+        AccessDoorSecurity.clearClient();
     }
     @Inject(method = "handleForgetLevelChunk", at = @At("TAIL"))
     private void craftdistrict$forgetLightColors(ClientboundForgetLevelChunkPacket packet, CallbackInfo ci) {
         //? if >=1.21 {
-        LightingColors.forget(packet.pos());
+        ChunkPos chunk = packet.pos();
         //?} else {
-        /*LightingColors.forget(new ChunkPos(packet.getX(), packet.getZ()));
+        /*ChunkPos chunk = new ChunkPos(packet.getX(), packet.getZ());
         *///?}
+        LightingColors.forget(chunk);
+        AccessDoorSecurity.forgetChunk(Minecraft.getInstance().level, chunk.toLong());
     }
 }

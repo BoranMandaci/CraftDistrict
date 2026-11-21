@@ -1,5 +1,6 @@
 package com.craftdistrict.block;
 
+import com.craftdistrict.access.AccessDoorSecurity;
 //? if >=1.21 {
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -181,12 +182,16 @@ public final class SlidingEntranceBlock extends PairedDoorBlock implements Entit
         if(!state.is(this)||state.getValue(OPEN))return false;
         List<BlockPos> parts=entranceParts(level,root);if(parts.isEmpty())return false;
         SlidingDoorBlockEntity motion=motion(level,root,state);if(motion==null)return false;
+        boolean secured = AccessDoorSecurity.secured(level, root, state);
+        if (secured && !motion.moving(level.getGameTime())) return false;
         for(BlockPos part:parts)if(level.getBlockState(part).getValue(HALF)==DoubleBlockHalf.LOWER) {
             BlockState lower=level.getBlockState(part);
             AABB swept=leaf(lower,0).bounds().minmax(leaf(lower,step(progress(level,part,lower))).bounds())
                     .move(part).expandTowards(0,1,0).inflate(.08,0,.08);
             if(!level.getEntitiesOfClass(Player.class,swept,p->!p.isSpectator()&&p.isAlive()).isEmpty()) {
-                setOpen(null,level,state,root,true);return false;
+                if (secured) AccessDoorSecurity.reopenForSafety(level, root, state);
+                else setOpen(null,level,state,root,true);
+                return false;
             }
         }
         return motion.moving(level.getGameTime());
@@ -203,6 +208,7 @@ public final class SlidingEntranceBlock extends PairedDoorBlock implements Entit
     @Override public void tick(BlockState state,ServerLevel level,BlockPos pos,RandomSource random){SlidingDoorSensors.closeTick(level,this,bottom(state,pos));}
     private InteractionResult interact(BlockState state,Level level,BlockPos pos,Player player,InteractionHand hand) {
         if(WrenchItem.isHeldBy(player))return SlidingDoorMenu.open(level,pos,player,WrenchItem.hand(player));
+        if (AccessDoorSecurity.secured(level, pos, state)) return AccessDoorSecurity.denied(level, player);
         if(entranceParts(level,pos).isEmpty())return InteractionResult.PASS;
         BlockPos root=bottom(state,pos);
         // Proximity can depend on another player's server position; do not predict a rejected close locally.

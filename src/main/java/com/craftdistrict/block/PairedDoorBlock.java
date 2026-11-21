@@ -1,9 +1,11 @@
 package com.craftdistrict.block;
 
+import com.craftdistrict.access.AccessDoorSecurity;
 import com.craftdistrict.item.WrenchItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -94,7 +96,8 @@ public abstract class PairedDoorBlock extends DoorBlock {
     }
 
     private void refreshPair(Level level, BlockPos pos) {
-        if (level.isClientSide || UPDATING.get() || !complete(level, pos)) return;
+        if (level.isClientSide || UPDATING.get() || !complete(level, pos)
+                || AccessDoorSecurity.secured(level, pos, level.getBlockState(pos))) return;
         UPDATING.set(true);
         try {
             BlockState state = level.getBlockState(pos);
@@ -112,7 +115,7 @@ public abstract class PairedDoorBlock extends DoorBlock {
                 BlockPos otherPos = pos.relative(side);
                 if (!complete(level, otherPos)) continue;
                 BlockState other = level.getBlockState(otherPos);
-                if (other.getValue(FACING) != facing || partner(level, otherPos, other) != null
+                if (other.getValue(FACING) != facing || AccessDoorSecurity.secured(level, otherPos, other) || partner(level, otherPos, other) != null
                         || other.getValue(PAIRED) && !level.hasChunkAt(partnerPosition(other, otherPos))) continue;
                 DoorHingeSide hinge = side == facing.getCounterClockWise() ? DoorHingeSide.RIGHT : DoorHingeSide.LEFT;
                 boolean open = state.getValue(OPEN) || other.getValue(OPEN);
@@ -155,13 +158,37 @@ public abstract class PairedDoorBlock extends DoorBlock {
     }
 
     @Override public void setOpen(Entity source, Level level, BlockState state, BlockPos pos, boolean open) {
-        if (UPDATING.get()) return;
+        if (UPDATING.get() || AccessDoorSecurity.secured(level, pos, state)) return;
         BlockPos root = bottom(state, pos);
         if (!complete(level, root)) return;
         refreshPair(level, root);
         BlockState lower = level.getBlockState(root);
         BlockPos other = partner(level, root, lower);
         change(source, level, root, other, open, null);
+    }
+
+    boolean accessMove(ServerLevel level, BlockPos root, boolean open) {
+        if (UPDATING.get() || !complete(level, root)) return false;
+        BlockState lower = level.getBlockState(root);
+        BlockPos other = partner(level, root, lower);
+        if (lower.getValue(PAIRED) && other == null) return false;
+        if (lower.getValue(OPEN) == open && (other == null || level.getBlockState(other).getValue(OPEN) == open)) return true;
+        return change(null, level, root, other, open, null);
+    }
+
+    boolean restoreAccessPower(ServerLevel level, BlockPos root, boolean occupied) {
+        if (UPDATING.get() || !complete(level, root)) return false;
+        BlockState lower = level.getBlockState(root);
+        BlockPos other = partner(level, root, lower);
+        if (lower.getValue(PAIRED) && other == null) return false;
+        boolean powered = level.hasNeighborSignal(root) || level.hasNeighborSignal(root.above())
+                || other != null && (level.hasNeighborSignal(other) || level.hasNeighborSignal(other.above()));
+        boolean powerEdge = lower.getValue(POWERED) != powered || other != null && level.getBlockState(other).getValue(POWERED) != powered;
+        boolean open = powered || powerEdge ? redstoneOpen(level, root, powered) : lower.getValue(OPEN);
+        if (occupied && !open) return false;
+        if (lower.getValue(OPEN) != open || powerEdge) return change(null, level, root, other, open, powered);
+        doorChanged(level, root);
+        return true;
     }
 
     private boolean change(Entity source, Level level, BlockPos root, BlockPos other, boolean open, Boolean powered) {
@@ -192,7 +219,7 @@ public abstract class PairedDoorBlock extends DoorBlock {
     }
 
     @Override public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos from, boolean moving) {
-        if (level.isClientSide || UPDATING.get()) return;
+        if (level.isClientSide || UPDATING.get() || AccessDoorSecurity.secured(level, pos, state)) return;
         BlockPos root = bottom(state, pos);
         if (!complete(level, root)) return;
         refreshPair(level, root);
@@ -206,6 +233,7 @@ public abstract class PairedDoorBlock extends DoorBlock {
     }
 
     private InteractionResult toggle(BlockState state, Level level, BlockPos pos, Player player) {
+        if (AccessDoorSecurity.secured(level, pos, state)) return AccessDoorSecurity.denied(level, player);
         BlockPos root = bottom(state, pos);
         if (!complete(level, root)) return InteractionResult.PASS;
         BlockState lower = level.getBlockState(root);

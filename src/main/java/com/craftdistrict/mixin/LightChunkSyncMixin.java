@@ -1,6 +1,7 @@
 package com.craftdistrict.mixin;
 
 import com.craftdistrict.network.LightDyeNetworking;
+import com.craftdistrict.access.AccessDoorSecurity;
 import com.craftdistrict.block.MovingDoorGroups;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientboundLevelChunkWithLightPacket;
@@ -25,6 +26,7 @@ public abstract class LightChunkSyncMixin {
                 && (Object)this instanceof ServerGamePacketListenerImpl game) {
             LightDyeNetworking.chunkSent(game.player, chunk.getX(), chunk.getZ());
             MovingDoorGroups.chunkSent(game.player, chunk.getX(), chunk.getZ());
+            AccessDoorSecurity.chunkSent(game.player, chunk.getX(), chunk.getZ());
             com.craftdistrict.door.SlidingDoorSensors.chunkSent(game.player,chunk.getX(),chunk.getZ());
         }
     }

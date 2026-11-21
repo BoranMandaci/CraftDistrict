@@ -1,5 +1,8 @@
 package com.craftdistrict.block;
 
+import com.craftdistrict.access.AccessControlData;
+import com.craftdistrict.access.AccessDoorSecurity;
+import com.craftdistrict.access.AccessDoorTarget;
 import com.craftdistrict.item.WrenchItem;
 import dev.architectury.event.events.common.ChunkEvent;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
@@ -68,6 +71,17 @@ public final class MovingDoorGroups extends SavedData {
         /*return level.getDataStorage().computeIfAbsent(MovingDoorGroups::load,MovingDoorGroups::new,NAME);
         *///?}
     }
+
+    /** Read the fixed doorway cells even when the clicked panel is parked away from the frame. */
+    public static List<BlockPos> entranceAnchors(ServerLevel level, BlockPos pos) {
+        Group group = get(level).members.get(pos);
+        return group == null || group.broken ? List.of() : group.cells.stream().map(Cell::anchor).toList();
+    }
+    static BlockPos unloadedPanel(ServerLevel level, BlockPos root) {
+        Group group = get(level).members.get(root);
+        if (group != null) for (BlockPos pos : group.open.keySet()) if (!loaded(level, pos)) return pos;
+        return null;
+    }
     private static boolean loaded(ServerLevel level,BlockPos pos) {
         return level.getChunkSource().getChunkNow(pos.getX()>>4,pos.getZ()>>4)!=null;
     }
@@ -121,7 +135,7 @@ public final class MovingDoorGroups extends SavedData {
         finally{MOVING.set(previous);}
     }
     private static InteractionResult fail(Player player,String key) {
-        player.displayClientMessage(Component.translatable("message.craftdistrict."+key),true);
+        if (player != null) player.displayClientMessage(Component.translatable("message.craftdistrict."+key),true);
         return InteractionResult.FAIL;
     }
     private static boolean unobstructed(ServerLevel level,Map<BlockPos,BlockState> after) {
@@ -130,16 +144,30 @@ public final class MovingDoorGroups extends SavedData {
         return true;
     }
     public static InteractionResult toggle(Level world,BlockPos pos,Player player) {
+        return move(world, pos, player, null);
+    }
+
+    static boolean accessMove(ServerLevel level, AccessDoorTarget target, Player player, boolean open) {
+        BlockState state = AccessDoorTarget.loadedState(level, target.root());
+        if (state == null || !(state.getBlock() instanceof ModularMovingDoorBlock door) || door.garage()) return false;
+        return state.getValue(ModularMovingDoorBlock.OPEN) == open || move(level, target.root(), player, target).consumesAction();
+    }
+
+    private static InteractionResult move(Level world, BlockPos pos, Player player, AccessDoorTarget access) {
         if(!(world instanceof ServerLevel level))return InteractionResult.SUCCESS;
         MovingDoorGroups data=get(level);Group group=data.members.get(pos);
         boolean opening=group==null;
         if(group!=null) {
+            Cell first = group.cells.get(0);
+            if (access == null && first.closed.getBlock() instanceof ModularMovingDoorBlock door && !door.garage()
+                    && AccessDoorSecurity.secured(level, first.anchor, AccessDoorTarget.loadedState(level, first.anchor)))
+                return AccessDoorSecurity.denied(level, player);
             data.detectMissing(level,group);
             if(group.broken){data.cleanup(level,group);return InteractionResult.SUCCESS;}
             Map<BlockPos,BlockState> after=new LinkedHashMap<>();
             for(var entry:group.open.entrySet()) {
                 if(!loaded(level,entry.getKey()))return fail(player,"door_unloaded");
-                if(!level.mayInteract(player,entry.getKey()))return InteractionResult.FAIL;
+                if(player != null&&!level.mayInteract(player,entry.getKey()))return InteractionResult.FAIL;
                 after.put(entry.getKey(),Blocks.AIR.defaultBlockState());
             }
             for(Cell cell:group.cells)after.put(cell.anchor,cell.closed);
@@ -154,19 +182,24 @@ public final class MovingDoorGroups extends SavedData {
             LongOpenHashSet queued = new LongOpenHashSet();
             Direction facing=start.getValue(ModularMovingDoorBlock.FACING),right=facing.getClockWise();
             Direction[] edges={right,right.getOpposite(),Direction.UP,Direction.DOWN};
-            queue.add(pos); queued.add(pos.asLong());
+            if (access == null) { queue.add(pos); queued.add(pos.asLong()); }
+            else queue.addAll(access.parts());
             int minY=pos.getY(),maxY=minY,minSide=pos.getX()*right.getStepX()+pos.getZ()*right.getStepZ(),maxSide=minSide;
             while(!queue.isEmpty()) {
                 BlockPos p=queue.removeFirst();
                 if(!loaded(level,p))return fail(player,"door_unloaded");
                 BlockState s=level.getBlockState(p);
-                if(!door.compatible(start,s)||s.getValue(ModularMovingDoorBlock.OPEN))continue;
+                if(!door.compatible(start,s)||s.getValue(ModularMovingDoorBlock.OPEN)) {
+                    if (access != null) return InteractionResult.FAIL;
+                    continue;
+                }
+                if (access == null && !door.garage() && AccessDoorSecurity.secured(level, p, s)) return AccessDoorSecurity.denied(level, player);
                 int side=p.getX()*right.getStepX()+p.getZ()*right.getStepZ();
                 minY=Math.min(minY,p.getY());maxY=Math.max(maxY,p.getY());minSide=Math.min(minSide,side);maxSide=Math.max(maxSide,side);
                 if(found.size()>=LIMIT||maxY-minY>=SPAN||maxSide-minSide>=SPAN)return fail(player,"door_size");
-                if(!level.mayInteract(player,p))return InteractionResult.FAIL;
+                if(player != null&&!level.mayInteract(player,p))return InteractionResult.FAIL;
                 found.put(p,s);
-                for (Direction edge : edges) {
+                if (access == null) for (Direction edge : edges) {
                     BlockPos next = p.relative(edge);
                     if (queued.add(next.asLong())) queue.addLast(next);
                 }
@@ -190,7 +223,7 @@ public final class MovingDoorGroups extends SavedData {
             }
             for(BlockPos p:travel) {
                 if(!loaded(level,p))return fail(player,"door_unloaded");
-                if(level.isOutsideBuildHeight(p)||!level.getWorldBorder().isWithinBounds(p)||!level.mayInteract(player,p))return InteractionResult.FAIL;
+                if(level.isOutsideBuildHeight(p)||!level.getWorldBorder().isWithinBounds(p)||player != null&&!level.mayInteract(player,p))return InteractionResult.FAIL;
                 if(!found.containsKey(p)&&(!level.getBlockState(p).isAir()||data.members.containsKey(p)))return fail(player,"door_space");
             }
             group=new Group(cells);
@@ -200,7 +233,7 @@ public final class MovingDoorGroups extends SavedData {
         }
         level.playSound(null,pos,opening?SoundEvents.IRON_TRAPDOOR_OPEN:SoundEvents.IRON_TRAPDOOR_CLOSE,SoundSource.BLOCKS,1,.85F);
         level.gameEvent(player,opening?GameEvent.BLOCK_OPEN:GameEvent.BLOCK_CLOSE,pos);
-        WrenchItem.usedIfHeld(player);
+        if (access == null) WrenchItem.usedIfHeld(player);
         return InteractionResult.CONSUME;
     }
     private void detectMissing(ServerLevel level,Group group) {
@@ -215,6 +248,7 @@ public final class MovingDoorGroups extends SavedData {
                 loadedChunk = level.getChunkSource().getChunkNow(ChunkPos.getX(key), ChunkPos.getZ(key));
             }
             if (loadedChunk == null || loadedChunk.getBlockState(pos) == entry.getValue()) continue;
+            if (!group.broken) invalidateAccess(level, group);
             group.broken=true;
             for(Cell cell:group.cells)if(cell.anchor.equals(pos)||cell.parked.equals(pos))group.removed.add(cell.anchor);
             setDirty();
@@ -223,9 +257,15 @@ public final class MovingDoorGroups extends SavedData {
     public static void removed(Level world,BlockPos pos) {
         if(MOVING.get()||!(world instanceof ServerLevel level))return;
         MovingDoorGroups data=get(level);Group group=data.members.get(pos);if(group==null)return;
+        invalidateAccess(level, group);
         group.broken=true;
         for(Cell cell:group.cells)if(cell.anchor.equals(pos)||cell.parked.equals(pos))group.removed.add(cell.anchor);
         data.setDirty();data.cleanup(level,group);
+    }
+    private static void invalidateAccess(ServerLevel level, Group group) {
+        Cell first = group.cells.get(0);
+        if (first.closed.getBlock() instanceof ModularMovingDoorBlock door && !door.garage())
+            AccessControlData.get(level).doorRemoved(first.anchor);
     }
     /** Restore surviving segments and remove their parking proxies, without spawning extra loot. */
     private void cleanup(ServerLevel level,Group group) {

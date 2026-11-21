@@ -51,13 +51,9 @@ final class CabinetInteraction {
         if (level.isClientSide && !door) return InteractionResult.SUCCESS;
         boolean open = !primary.getValue(BlockStateProperties.OPEN);
         if (door) {
-            BlockState[] after = new BlockState[before.length];
-            for (int i = 0; i < before.length; i++) after[i] = before[i].setValue(BlockStateProperties.OPEN, open);
-            if (!DoorStateUpdates.commit(level, parts.toArray(BlockPos[]::new), before, after)) return InteractionResult.PASS;
-            level.playSound(player, origin, open ? openSound : closeSound, SoundSource.BLOCKS, .6F, 1.1F);
+            if (!commitDoor(level, parts, before, origin, player, open, openSound, closeSound)) return InteractionResult.PASS;
             if (!level.isClientSide) {
                 com.craftdistrict.item.WrenchItem.usedIfHeld(player);
-                level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, origin);
             }
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
@@ -90,5 +86,31 @@ final class CabinetInteraction {
         level.playSound(null, origin, open ? openSound : closeSound, SoundSource.BLOCKS, .6F, 1.1F);
         level.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, origin);
         return InteractionResult.CONSUME;
+    }
+
+    static boolean setLinkedDoor(MultiBlockDecorationBlock block, Level level, BlockPos root, Player source,
+                                 boolean open, SoundEvent openSound, SoundEvent closeSound) {
+        BlockState primary = level.getBlockState(root);
+        if (!primary.is(block)) return false;
+        List<BlockPos> parts = block.structureParts(primary, root);
+        BlockState[] before = new BlockState[parts.size()];
+        for (int i = 0; i < before.length; i++) {
+            BlockPos part = parts.get(i);
+            if (!level.hasChunkAt(part)) return false;
+            before[i] = level.getBlockState(part);
+            if (before[i] != block.structurePartState(primary, i)) return false;
+        }
+        return primary.getValue(BlockStateProperties.OPEN) == open
+                || commitDoor(level, parts, before, root, source, open, openSound, closeSound);
+    }
+
+    private static boolean commitDoor(Level level, List<BlockPos> parts, BlockState[] before, BlockPos root, Player source,
+                                      boolean open, SoundEvent openSound, SoundEvent closeSound) {
+        BlockState[] after = new BlockState[before.length];
+        for (int i = 0; i < before.length; i++) after[i] = before[i].setValue(BlockStateProperties.OPEN, open);
+        if (!DoorStateUpdates.commit(level, parts.toArray(BlockPos[]::new), before, after)) return false;
+        level.playSound(source, root, open ? openSound : closeSound, SoundSource.BLOCKS, .6F, 1.1F);
+        if (!level.isClientSide) level.gameEvent(source, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, root);
+        return true;
     }
 }

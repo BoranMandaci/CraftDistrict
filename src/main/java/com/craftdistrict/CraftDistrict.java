@@ -1,5 +1,7 @@
 package com.craftdistrict;
 
+import com.craftdistrict.access.AccessControl;
+import com.craftdistrict.access.AccessDoorSecurity;
 import com.craftdistrict.client.CraftDistrictClient;
 import com.craftdistrict.registry.CraftDistrictBlocks;
 import com.craftdistrict.registry.CraftDistrictCreativeTabs;
@@ -12,6 +14,8 @@ import com.craftdistrict.network.AssemblyNetworking;
 import com.craftdistrict.network.LightDyeNetworking;
 import com.craftdistrict.network.LightColorNetworking;
 import com.craftdistrict.network.OfficeTurnstileNetworking;
+import com.craftdistrict.network.AccessControlNetworking;
+import com.craftdistrict.registry.CraftDistrictAccessControl;
 import com.craftdistrict.lighting.LightProximityData;
 import com.craftdistrict.entity.Seating;
 import com.craftdistrict.entity.MedicalResting;
@@ -32,6 +36,9 @@ public final class CraftDistrict {
     public static void init() {
         CraftDistrictBlocks.register();
         CraftDistrictItems.register();
+        CraftDistrictAccessControl.register();
+        AccessControl.register();
+        AccessDoorSecurity.register();
         PoliceOfficeSecurityBlock.registerLegacyCleanup();
         SecurityScannerBlock.registerPassageTracking();
         CraftDistrictAssembly.register();
@@ -43,6 +50,7 @@ public final class CraftDistrict {
         LightDyeNetworking.register();
         LightColorNetworking.register();
         OfficeTurnstileNetworking.register();
+        AccessControlNetworking.register();
         LightProximityData.register();
         com.craftdistrict.lighting.LedLightGroups.register();
         com.craftdistrict.block.MovingDoorGroups.register();

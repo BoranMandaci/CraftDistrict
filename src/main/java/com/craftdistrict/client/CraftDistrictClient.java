@@ -1,16 +1,24 @@
 package com.craftdistrict.client;
 
+import com.craftdistrict.item.AccessCardItem;
+import com.craftdistrict.registry.CraftDistrictAccessControl;
 import com.craftdistrict.registry.CraftDistrictBlocks;
 import com.craftdistrict.registry.CraftDistrictEntities;
 import com.craftdistrict.registry.CraftDistrictAssembly;
 import com.craftdistrict.registry.CraftDistrictRoomNumbers;
+import com.craftdistrict.registry.CraftDistrictItems;
 import dev.architectury.registry.client.rendering.BlockEntityRendererRegistry;
+import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import dev.architectury.registry.menu.MenuRegistry;
 import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import dev.architectury.event.events.client.ClientLifecycleEvent;
+import dev.architectury.event.events.client.ClientTooltipEvent;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.network.chat.Component;
 //? if >=1.21 {
 import dev.architectury.platform.Platform;
 //?}
@@ -21,6 +29,17 @@ public final class CraftDistrictClient {
 
     public static void init() {
         EntityRendererRegistry.register(CraftDistrictEntities.SEAT, NoopRenderer::new);
+        //? if >=1.21 {
+        ClientTooltipEvent.ITEM.register((stack, lines, context, flag) -> {
+        //?} else {
+        /*ClientTooltipEvent.ITEM.register((stack, lines, flag) -> {
+        *///?}
+            if (stack.is(CraftDistrictItems.WRENCH.get()) && Screen.hasShiftDown()) {
+                lines.add(Component.translatable("tooltip.craftdistrict.wrench.access_control.title").withStyle(ChatFormatting.AQUA));
+                lines.add(Component.translatable("tooltip.craftdistrict.wrench.access_control.select").withStyle(ChatFormatting.GRAY));
+                lines.add(Component.translatable("tooltip.craftdistrict.wrench.access_control.link").withStyle(ChatFormatting.GRAY));
+            }
+        });
         // NeoForge's RegisterMenuScreensEvent runs before CLIENT_SETUP. Listen as soon as the menu types exist.
         // Fabric/Forge register directly, retaining their existing client-setup timing.
         //? if >=1.21 {
@@ -32,10 +51,14 @@ public final class CraftDistrictClient {
             CraftDistrictAssembly.MENU.listen(type -> MenuRegistry.registerScreenFactory(type, AssemblyStationScreen::new));
             CraftDistrictAssembly.LIGHT_COLOR_MENU.listen(type -> MenuRegistry.registerScreenFactory(type, LightColorScreen::new));
             CraftDistrictRoomNumbers.MENU.listen(type -> MenuRegistry.registerScreenFactory(type, RoomNumberScreen::new));
+            CraftDistrictAccessControl.ACCESS_CARD.listen(type -> MenuRegistry.registerScreenFactory(type, AccessCardScreen::new));
+            CraftDistrictAccessControl.CARD_READER.listen(type -> MenuRegistry.registerScreenFactory(type, CardReaderScreen::new));
             com.craftdistrict.registry.CraftDistrictDoors.SETTINGS.listen(type -> MenuRegistry.registerScreenFactory(type,SlidingDoorScreen::new));
         }
         ClientLifecycleEvent.CLIENT_SETUP.register(client -> {
             LightingColors.init();
+            ColorHandlerRegistry.registerItemColors((stack, tint) -> tint == 0 ? AccessCardScreen.cardColor(AccessCardItem.color(stack)) : -1,
+                    CraftDistrictItems.ACCESS_CARD.get());
             RenderTypeRegistry.register(RenderType.cutout(), CraftDistrictBlocks.Doors.FIRE_EXIT.get(),
                     CraftDistrictBlocks.Doors.MESH_SECURITY.get(), CraftDistrictBlocks.Doors.KITCHEN_SERVICE.get(),
                     CraftDistrictBlocks.Doors.AUTOMATIC_GLASS_SLIDING.get(), CraftDistrictBlocks.Doors.HOSPITAL_SLIDING.get(),
@@ -53,6 +76,8 @@ public final class CraftDistrictClient {
                 MenuRegistry.registerScreenFactory(CraftDistrictAssembly.MENU.get(), AssemblyStationScreen::new);
                 MenuRegistry.registerScreenFactory(CraftDistrictAssembly.LIGHT_COLOR_MENU.get(), LightColorScreen::new);
                 MenuRegistry.registerScreenFactory(CraftDistrictRoomNumbers.MENU.get(), RoomNumberScreen::new);
+                MenuRegistry.registerScreenFactory(CraftDistrictAccessControl.ACCESS_CARD.get(), AccessCardScreen::new);
+                MenuRegistry.registerScreenFactory(CraftDistrictAccessControl.CARD_READER.get(), CardReaderScreen::new);
                 MenuRegistry.registerScreenFactory(com.craftdistrict.registry.CraftDistrictDoors.SETTINGS.get(),SlidingDoorScreen::new);
             }
             RenderTypeRegistry.register(

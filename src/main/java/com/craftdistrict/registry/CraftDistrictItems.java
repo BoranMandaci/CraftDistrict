@@ -1,6 +1,7 @@
 package com.craftdistrict.registry;
 
 import com.craftdistrict.CraftDistrict;
+import com.craftdistrict.item.AccessCardItem;
 import com.craftdistrict.item.WrenchItem;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -17,6 +18,7 @@ public final class CraftDistrictItems {
     public static final RegistrySupplier<Item> METAL_PARTS = ITEMS.register("metal_parts", () -> new Item(new Item.Properties()));
     public static final RegistrySupplier<Item> ELECTRONIC_PARTS = ITEMS.register("electronic_parts", () -> new Item(new Item.Properties()));
     public static final RegistrySupplier<Item> WRENCH = ITEMS.register("wrench", () -> new WrenchItem(new Item.Properties().durability(256)));
+    public static final RegistrySupplier<AccessCardItem> ACCESS_CARD = ITEMS.register("access_card", () -> new AccessCardItem(new Item.Properties()));
 
     private CraftDistrictItems() { }
 

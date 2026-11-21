@@ -2,6 +2,7 @@ package com.craftdistrict.item;
 
 import com.craftdistrict.block.OverbedTableBlock;
 import com.craftdistrict.CraftDistrict;
+import com.craftdistrict.access.AccessControl;
 import com.craftdistrict.block.ControlledLight;
 import com.craftdistrict.block.KitchenExhaustDuctBlock;
 import com.craftdistrict.block.ModularDiningTableBlock;
@@ -69,6 +70,8 @@ public final class WrenchItem extends Item {
         if (!level.mayInteract(player, pos)) return InteractionResult.FAIL;
         var state = level.getBlockState(pos);
         var block = state.getBlock();
+        InteractionResult access = AccessControl.useWrench(context, state);
+        if (access != InteractionResult.PASS) return access;
         if (block instanceof com.craftdistrict.block.HotelGuestBedBlock bed && bed.dyeable())
             return bed.useColor(state, level, pos, player, context.getHand());
         if (block instanceof com.craftdistrict.block.TableclothTableBlock table)
@@ -84,7 +87,7 @@ public final class WrenchItem extends Item {
         var id = BuiltInRegistries.BLOCK.getKey(block);
         if (id == null || !CraftDistrict.MOD_ID.equals(id.getNamespace()) || !state.hasProperty(BlockStateProperties.OPEN)
                 || block instanceof SittableBlock || block instanceof LyingBlock || block instanceof BedBlock)
-            return InteractionResult.PASS;
+            return AccessControl.unsupportedWrenchTarget(player);
         var hit = new BlockHitResult(context.getClickLocation(), context.getClickedFace(), pos, context.isInside());
         //? if >=1.21 {
         return action(context, state, () -> state.useWithoutItem(level, player, hit));

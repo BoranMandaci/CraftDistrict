@@ -315,6 +315,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Office.GLASS_PARTITION_DOOR,
             CraftDistrictBlocks.Office.WINDOW_BLINDS),
     SURVIVAL_CRAFTING("survival_crafting", CraftDistrictBlocks.Survival.ASSEMBLY_STATION,
+            CraftDistrictItems.ACCESS_CARD,
             CraftDistrictItems.FURNITURE_PARTS,
             CraftDistrictItems.METAL_PARTS,
             CraftDistrictItems.ELECTRONIC_PARTS,
