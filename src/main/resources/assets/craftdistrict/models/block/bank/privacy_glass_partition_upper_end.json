@@ -1,0 +1,156 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/bank/bank_service",
+    "particle": "craftdistrict:block/particles/particle_glass",
+    "frost": "craftdistrict:block/bank/privacy_frost"
+  },
+  "elements": [
+    {
+      "name": "Continuous aluminum rail",
+      "from": [
+        7.36,
+        14.72,
+        0.84
+      ],
+      "to": [
+        8.64,
+        16,
+        7.42
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.15625,
+            11.5625,
+            1.84375,
+            12.6875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.15625,
+            11.5625,
+            1.84375,
+            12.6875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.15625,
+            11.5625,
+            2.84375,
+            12.6875
+          ]
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            0.15625,
+            11.5625,
+            0.84375,
+            12.6875
+          ]
+        }
+      }
+    },
+    {
+      "name": "Single frosted pane",
+      "from": [
+        7.98,
+        0,
+        0.84
+      ],
+      "to": [
+        8.02,
+        14.72,
+        7.42
+      ],
+      "faces": {
+        "west": {
+          "texture": "#frost",
+          "uv": [
+            0.84,
+            0.6399999999999997,
+            7.42,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#frost",
+          "uv": [
+            8.58,
+            0.6399999999999997,
+            15.16,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "Continuous slim aluminum post",
+      "from": [
+        7.34,
+        0,
+        0
+      ],
+      "to": [
+        8.66,
+        16,
+        0.84
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            2.15625,
+            11.5625,
+            2.84375,
+            12.6875
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            2.15625,
+            11.5625,
+            2.84375,
+            12.6875
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            1.15625,
+            11.5625,
+            1.84375,
+            12.6875
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            1.15625,
+            11.5625,
+            1.84375,
+            12.6875
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            1.15625,
+            11.5625,
+            1.84375,
+            12.6875
+          ]
+        }
+      }
+    }
+  ],
+  "render_type": "minecraft:translucent"
+}

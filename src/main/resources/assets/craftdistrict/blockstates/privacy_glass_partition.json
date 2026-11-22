@@ -1,0 +1,456 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "primary": "true",
+        "north": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_arm"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "true",
+            "facing": "east|west",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "true",
+            "north": "false",
+            "east": "false",
+            "south": "true",
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_end"
+      }
+    },
+    {
+      "when": {
+        "primary": "true",
+        "east": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_arm",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "true",
+            "facing": "north|south",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "true",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_end",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "primary": "true",
+        "south": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_arm",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "true",
+            "facing": "east|west",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "true",
+            "north": "true",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_end",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "primary": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_arm",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "true",
+            "facing": "north|south",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "true",
+            "north": "false",
+            "east": "true",
+            "south": "false",
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_end",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "true",
+            "facing": "east|west",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "true",
+            "east": "false",
+            "west": "false",
+            "north": "true"
+          },
+          {
+            "primary": "true",
+            "east": "false",
+            "west": "false",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_straight"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "true",
+            "facing": "north|south",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "true",
+            "north": "false",
+            "south": "false",
+            "east": "true"
+          },
+          {
+            "primary": "true",
+            "north": "false",
+            "south": "false",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_straight",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "true",
+            "north": "true",
+            "east": "true"
+          },
+          {
+            "primary": "true",
+            "north": "true",
+            "west": "true"
+          },
+          {
+            "primary": "true",
+            "south": "true",
+            "east": "true"
+          },
+          {
+            "primary": "true",
+            "south": "true",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_lower_corner"
+      }
+    },
+    {
+      "when": {
+        "primary": "false",
+        "north": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_arm"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "false",
+            "facing": "east|west",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "false",
+            "north": "false",
+            "east": "false",
+            "south": "true",
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_end"
+      }
+    },
+    {
+      "when": {
+        "primary": "false",
+        "east": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_arm",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "false",
+            "facing": "north|south",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "false",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_end",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "primary": "false",
+        "south": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_arm",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "false",
+            "facing": "east|west",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "false",
+            "north": "true",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_end",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "primary": "false",
+        "west": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_arm",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "false",
+            "facing": "north|south",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "false",
+            "north": "false",
+            "east": "true",
+            "south": "false",
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_end",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "false",
+            "facing": "east|west",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "false",
+            "east": "false",
+            "west": "false",
+            "north": "true"
+          },
+          {
+            "primary": "false",
+            "east": "false",
+            "west": "false",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_straight"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "false",
+            "facing": "north|south",
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "primary": "false",
+            "north": "false",
+            "south": "false",
+            "east": "true"
+          },
+          {
+            "primary": "false",
+            "north": "false",
+            "south": "false",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_straight",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "primary": "false",
+            "north": "true",
+            "east": "true"
+          },
+          {
+            "primary": "false",
+            "north": "true",
+            "west": "true"
+          },
+          {
+            "primary": "false",
+            "south": "true",
+            "east": "true"
+          },
+          {
+            "primary": "false",
+            "south": "true",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/privacy_glass_partition_upper_corner"
+      }
+    }
+  ]
+}

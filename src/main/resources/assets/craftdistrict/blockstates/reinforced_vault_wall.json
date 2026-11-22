@@ -1,0 +1,62 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "craftdistrict:block/bank/reinforced_vault_wall"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/reinforced_vault_wall_edge"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/reinforced_vault_wall_edge",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/reinforced_vault_wall_edge",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/reinforced_vault_wall_edge",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "up": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/reinforced_vault_wall_edge",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "down": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/bank/reinforced_vault_wall_edge",
+        "x": 90
+      }
+    }
+  ]
+}

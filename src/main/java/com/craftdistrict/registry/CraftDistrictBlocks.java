@@ -3,8 +3,13 @@ package com.craftdistrict.registry;
 import com.craftdistrict.CraftDistrict;
 import com.craftdistrict.block.BankAtmBlock;
 import com.craftdistrict.block.BankDecorationBlock;
+import com.craftdistrict.block.BankFloorFurnitureBlock;
 import com.craftdistrict.block.BankLineBlock;
+import com.craftdistrict.block.BankSmallDecorationBlock;
 import com.craftdistrict.block.CashDrawerBlock;
+import com.craftdistrict.block.DocumentCabinetBlock;
+import com.craftdistrict.block.PrivacyGlassPartitionBlock;
+import com.craftdistrict.block.ReinforcedVaultWallBlock;
 import com.craftdistrict.block.WideDecorationBlock;
 import com.craftdistrict.block.NestingShoppingCartBlock;
 import com.craftdistrict.block.FastFoodMenuScreenBlock;
@@ -245,6 +250,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Supplier;
 
@@ -346,6 +352,21 @@ public final class CraftDistrictBlocks {
                 () -> new BankDecorationBlock.Workstation(metal().strength(1.0F)));
         public static final RegistrySupplier<CashDrawerBlock> CASH_DRAWER = register("cash_drawer",
                 () -> new CashDrawerBlock(metal().strength(1.5F)));
+        public static final RegistrySupplier<ReinforcedVaultWallBlock> REINFORCED_VAULT_WALL = register("reinforced_vault_wall",
+                () -> new ReinforcedVaultWallBlock(BlockBehaviour.Properties.of().strength(4.5F).sound(SoundType.METAL)));
+        public static final RegistrySupplier<BankFloorFurnitureBlock> CASH_TRANSPORT_TROLLEY = register("cash_transport_trolley",
+                () -> new BankFloorFurnitureBlock(BankFloorFurnitureBlock.Design.CASH_TROLLEY, metal().pushReaction(PushReaction.BLOCK)));
+        public static final RegistrySupplier<BankSmallDecorationBlock> COIN_ROLL_TRAY = register("coin_roll_tray",
+                () -> new BankSmallDecorationBlock(BankSmallDecorationBlock.Design.COIN_ROLL_TRAY, metal().strength(.8F)));
+        public static final RegistrySupplier<BankSmallDecorationBlock> KEY_RACK = register("key_rack",
+                () -> new BankSmallDecorationBlock(BankSmallDecorationBlock.Design.KEY_RACK, metal().strength(1F)));
+        public static final RegistrySupplier<BankFloorFurnitureBlock> CONSULTATION_DESK = register("bank_consultation_desk",
+                () -> new BankFloorFurnitureBlock(BankFloorFurnitureBlock.Design.CONSULTATION_DESK,
+                        BlockBehaviour.Properties.of().strength(2.5F).sound(SoundType.WOOD).noOcclusion().pushReaction(PushReaction.BLOCK)));
+        public static final RegistrySupplier<PrivacyGlassPartitionBlock> PRIVACY_GLASS_PARTITION = register("privacy_glass_partition",
+                () -> new PrivacyGlassPartitionBlock(metal().strength(1.1F).sound(SoundType.GLASS).pushReaction(PushReaction.BLOCK)));
+        public static final RegistrySupplier<DocumentCabinetBlock> DOCUMENT_CABINET = register("document_cabinet",
+                () -> new DocumentCabinetBlock(metal().strength(2.5F).pushReaction(PushReaction.BLOCK)));
 
         private static BlockBehaviour.Properties metal() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
