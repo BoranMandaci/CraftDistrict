@@ -6,6 +6,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.culling.Frustum;
+import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.world.phys.AABB;
 
 import java.util.Arrays;
@@ -19,6 +20,15 @@ final class DoorRenderSupport {
     // Each door renderer owns one set of inputs for the vanilla bulk-quad path.
     private final float[] brightness = {1, 1, 1, 1};
     private final int[] lightmap = new int[4];
+    private BakedModel missingModel;
+
+    boolean modelsChanged() {
+        // The model manager replaces its fallback together with the baked model cache on reload.
+        BakedModel current = Minecraft.getInstance().getModelManager().getMissingModel();
+        if (missingModel == current) return false;
+        missingModel = current;
+        return true;
+    }
 
     static boolean inFrustum(AABB bounds) {
         //? if <1.21 {
@@ -32,7 +42,7 @@ final class DoorRenderSupport {
     }
 
     void setLight(int light) {
-        Arrays.fill(lightmap, light);
+        if (lightmap[0] != light) Arrays.fill(lightmap, light);
     }
 
     void emit(List<BakedQuad> quads, PoseStack.Pose pose, VertexConsumer consumer, int overlay) {

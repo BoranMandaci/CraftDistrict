@@ -39,12 +39,11 @@ public final class RevolvingWingContact {
         RotaryEntranceBlock door = (RotaryEntranceBlock) state.getBlock();
         BlockPos controller = door.controllerPos(state, pos);
         int baseY = controller.getY() - 1;
-        if (player.getY() - baseY >= 42.55 / 16 || player.getBoundingBox().maxY - baseY <= 1.55 / 16
-                || !level.hasChunkAt(controller)
-                || !(level.getBlockEntity(controller) instanceof RotaryEntranceBlockEntity entrance)) return movement;
+        if (player.getY() - baseY >= 42.55 / 16 || player.getBoundingBox().maxY - baseY <= 1.55 / 16) return movement;
 
         // Once parked, vanilla resolves the cached wing shapes on both sides.
-        if (entrance.hasParkedCollision(gameTime)) return movement;
+        var entrance = RotaryEntranceBlock.loadedController(level, controller);
+        if (entrance == null || entrance.hasParkedCollision(gameTime)) return movement;
         float step = advance ? Math.max(0, entrance.step(gameTime)) : 0;
         if (step == 0 && movement.horizontalDistanceSqr() < 1e-8) return movement;
 

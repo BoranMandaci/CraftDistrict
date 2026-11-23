@@ -87,14 +87,18 @@ public final class RotaryEntranceBlock extends MultiBlockDecorationBlock impleme
     @Override public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         int part = partIndex(state);
         if (part < PART_COUNT && level instanceof Level world) {
-            BlockPos controller = controllerPos(state, pos);
-            var chunk = world.getChunkSource().getChunkNow(controller.getX() >> 4, controller.getZ() >> 4);
-            if (chunk != null && chunk.getBlockEntity(controller, LevelChunk.EntityCreationType.CHECK) instanceof RotaryEntranceBlockEntity entrance
-                    && entrance.hasParkedCollision(world.getGameTime())) {
+            var entrance = loadedController(world, controllerPos(state, pos));
+            if (entrance != null && entrance.hasParkedCollision(world.getGameTime())) {
                 return entrance.parkedShape(part, state.getValue(FACING));
             }
         }
         return getShape(state, level, pos, context);
+    }
+
+    public static RotaryEntranceBlockEntity loadedController(Level level, BlockPos controller) {
+        var chunk = level.getChunkSource().getChunkNow(controller.getX() >> 4, controller.getZ() >> 4);
+        return chunk != null && chunk.getBlockEntity(controller, LevelChunk.EntityCreationType.CHECK) instanceof RotaryEntranceBlockEntity entrance
+                ? entrance : null;
     }
 
     @Override public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {

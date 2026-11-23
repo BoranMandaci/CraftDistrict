@@ -111,7 +111,16 @@ public final class ModularMovingDoorBlock extends HorizontalDirectionalBlock {
                 || context.getClickedFace().getAxis()!=neighbor.getValue(FACING).getAxis())) facing=neighbor.getValue(FACING);
         return layout(defaultBlockState().setValue(FACING,facing),context.getLevel(),context.getClickedPos());
     }
-    @Override public BlockState updateShape(BlockState state,Direction side,BlockState neighbor,LevelAccessor level,BlockPos pos,BlockPos other){return layout(state,level,pos);}
+    @Override public BlockState updateShape(BlockState state, Direction side, BlockState neighbor,
+                                            LevelAccessor level, BlockPos pos, BlockPos other) {
+        if (state.getValue(OPEN)) return state;
+        Direction[] directions = ADJACENT[state.getValue(FACING).get2DDataValue()];
+        for (int i = 0; i < directions.length; i++) {
+            if (side == directions[i])
+                return state.setValue(EDGES[i], level.hasChunkAt(other) && compatible(state, neighbor) && !neighbor.getValue(OPEN));
+        }
+        return state;
+    }
     @Override public void onRemove(BlockState state,Level level,BlockPos pos,BlockState next,boolean moving) {
         super.onRemove(state,level,pos,next,moving);
         if(!level.isClientSide&&!next.is(this)&&state.getValue(OPEN))MovingDoorGroups.removed(level,pos);

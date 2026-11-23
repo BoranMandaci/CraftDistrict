@@ -27,15 +27,16 @@ public final class BarDoorRenderer implements BlockEntityRenderer<BarDoorBlockEn
     private final Quaternionf rotation=new Quaternionf();
     private final DoorRenderSupport quadEmitter = new DoorRenderSupport();
     private final List<BakedQuad> left=new ArrayList<>(),right=new ArrayList<>();
-    private BakedModel source;
+    private boolean meshReady;
     public BarDoorRenderer(BlockEntityRendererProvider.Context context){ }
     private void refresh() {
+        if (!quadEmitter.modelsChanged() && meshReady) return;
         var item=CraftDistrictBlocks.Doors.BAR.get().asItem();
         BakedModel model=Minecraft.getInstance().getItemRenderer().getItemModelShaper().getItemModel(item);
-        if(source==model)return;
-        source=model;left.clear();right.clear();RandomSource random=RandomSource.create(42);
+        left.clear();right.clear();RandomSource random=RandomSource.create(42);
         collect(model.getQuads(null,null,random));
         for(Direction face:Direction.values()){random.setSeed(42);collect(model.getQuads(null,face,random));}
+        meshReady = true;
     }
     private void collect(List<BakedQuad> quads) {
         for(BakedQuad quad:quads) {

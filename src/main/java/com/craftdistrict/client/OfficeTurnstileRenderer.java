@@ -35,7 +35,7 @@ public final class OfficeTurnstileRenderer implements BlockEntityRenderer<Office
             FACINGS[facing.get2DDataValue()] = Axis.YP.rotationDegrees(180 - facing.toYRot());
     }
 
-    private BakedModel source;
+    private boolean meshReady;
     private final List<BakedQuad> arm = new ArrayList<>(5);
     private final Quaternionf rotation = new Quaternionf();
     private final DoorRenderSupport quadEmitter = new DoorRenderSupport();
@@ -47,10 +47,9 @@ public final class OfficeTurnstileRenderer implements BlockEntityRenderer<Office
     }
 
     private void refreshArm() {
+        if (!quadEmitter.modelsChanged() && meshReady) return;
         var item = CraftDistrictBlocks.Office.SECURITY_TURNSTILE.get().asItem();
         BakedModel model = Minecraft.getInstance().getItemRenderer().getItemModelShaper().getItemModel(item);
-        if (source == model) return;
-        source = model;
         arm.clear();
         RandomSource random = RandomSource.create(42);
         collectArm(model.getQuads(null, null, random));
@@ -58,6 +57,7 @@ public final class OfficeTurnstileRenderer implements BlockEntityRenderer<Office
             random.setSeed(42);
             collectArm(model.getQuads(null, direction, random));
         }
+        meshReady = true;
     }
 
     private void collectArm(List<BakedQuad> quads) {

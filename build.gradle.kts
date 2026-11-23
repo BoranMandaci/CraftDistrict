@@ -114,6 +114,12 @@ tasks.processResources {
     // Legacy authoring models have no item, blockstate or parent references.
     // Keep the editable source files, but omit them from production bundles.
     exclude(
+        // The Bar Door now uses its frame blockstate and animates quads from the item model.
+        "assets/craftdistrict/models/block/bar_door_closed_forward.json",
+        "assets/craftdistrict/models/block/bar_door_closed_reverse.json",
+        "assets/craftdistrict/models/block/bar_door_open_forward.json",
+        "assets/craftdistrict/models/block/bar_door_open_reverse.json",
+        "assets/craftdistrict/models/block/bar_door_swing_*.json",
         "assets/craftdistrict/models/block/hotel/corridor_directional_sign_configured.json",
         "assets/craftdistrict/models/block/hotel/dryer.json",
         "assets/craftdistrict/models/block/hotel/elevator_floor_indicator_configured.json",

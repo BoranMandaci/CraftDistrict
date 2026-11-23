@@ -34,20 +34,23 @@ public final class RotaryEntranceBlockEntity extends BlockEntity {
     private AABB bounds;
 
     /** Integrate a smooth speed ramp directly from the saved endpoints. */
-    private record Motion(long start, float angle, float speed, boolean running) {
+    private record Motion(long start, float angle, float speed, boolean running, float endAngle) {
+        private Motion(long start, float angle, float speed, boolean running) {
+            this(start, angle, speed, running,
+                    angle + RAMP_TICKS * (speed + (running ? DEGREES_PER_TICK : 0)) * .5F);
+        }
+
         private float targetSpeed() { return running ? DEGREES_PER_TICK : 0; }
 
         private boolean settled(long time) { return time - start >= RAMP_TICKS; }
 
         private float angleAt(long time, float partialTick) {
             long elapsed = time - start;
-            float target = targetSpeed();
             if (elapsed >= RAMP_TICKS) {
-                float endAngle = angle + RAMP_TICKS * (speed + target) * .5F;
                 return running ? endAngle + revolvingAngle(elapsed - RAMP_TICKS, partialTick) : endAngle;
             }
             float t = Mth.clamp((elapsed + partialTick) / RAMP_TICKS, 0F, 1F);
-            return angle + RAMP_TICKS * t * (speed + (target - speed) * t * t * (1F - .5F * t));
+            return angle + RAMP_TICKS * t * (speed + (targetSpeed() - speed) * t * t * (1F - .5F * t));
         }
 
         private float speedAt(long time) {
@@ -98,7 +101,7 @@ public final class RotaryEntranceBlockEntity extends BlockEntity {
 
     VoxelShape parkedShape(int part, Direction facing) {
         if (parkedShapes == null || parkedFacing != facing) {
-            parkedShapes = RotaryEntranceShapes.parked(motion.angleAt(motion.start() + RAMP_TICKS, 0), facing);
+            parkedShapes = RotaryEntranceShapes.parked(motion.endAngle(), facing);
             parkedFacing = facing;
         }
         return parkedShapes[part];

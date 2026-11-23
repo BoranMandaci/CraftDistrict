@@ -31,34 +31,32 @@ public final class RotaryEntranceRenderer implements BlockEntityRenderer<RotaryE
             FACINGS[facing.get2DDataValue()] = Axis.YP.rotationDegrees(180 - facing.toYRot());
     }
 
-    private record Mesh(BakedModel source, List<BakedQuad> quads) { }
-
-    private Mesh mesh;
+    private List<BakedQuad> wings;
     private final Quaternionf rotation = new Quaternionf();
     private final DoorRenderSupport quadEmitter = new DoorRenderSupport();
     private float cachedAngle = Float.NaN;
+    private int cachedFacing = -1;
 
     public RotaryEntranceRenderer(BlockEntityRendererProvider.Context context) { }
 
     private List<BakedQuad> quads(BlockState state) {
-        BakedModel model = Minecraft.getInstance().getBlockRenderer().getBlockModelShaper().getBlockModel(state);
-        if (mesh == null || mesh.source() != model) {
+        if (quadEmitter.modelsChanged() || wings == null) {
+            BakedModel model = Minecraft.getInstance().getBlockRenderer().getBlockModelShaper().getBlockModel(state);
             RandomSource random = RandomSource.create(42);
             List<BakedQuad> quads = new ArrayList<>(model.getQuads(state, null, random));
             for (Direction face : Direction.values()) {
                 random.setSeed(42);
                 quads.addAll(model.getQuads(state, face, random));
             }
-            mesh = new Mesh(model, quads);
+            wings = quads;
         }
-        return mesh.quads();
+        return wings;
     }
 
     @Override public boolean shouldRenderOffScreen(RotaryEntranceBlockEntity entrance) {
         // Keep the controller eligible when a neighboring section can see its wings.
-        var bounds = entrance.getRenderBoundingBox();
-        return differentSections(bounds.minX, bounds.maxX) || differentSections(bounds.minY, bounds.maxY)
-                || differentSections(bounds.minZ, bounds.maxZ);
+        var pos = entrance.getBlockPos();
+        return atSectionEdge(pos.getX()) || atSectionEdge(pos.getY()) || atSectionEdge(pos.getZ());
     }
 
     @Override public boolean shouldRender(RotaryEntranceBlockEntity entrance, Vec3 cameraPos) {
@@ -67,8 +65,9 @@ public final class RotaryEntranceRenderer implements BlockEntityRenderer<RotaryE
         return bounds.distanceToSqr(cameraPos) < (double) distance * distance && DoorRenderSupport.inFrustum(bounds);
     }
 
-    private static boolean differentSections(double min, double max) {
-        return (int) Math.floor(min / 16) != (int) Math.floor(Math.nextDown(max) / 16);
+    private static boolean atSectionEdge(int coordinate) {
+        int local = coordinate & 15;
+        return local == 0 || local == 15;
     }
 
     @Override
@@ -80,22 +79,19 @@ public final class RotaryEntranceRenderer implements BlockEntityRenderer<RotaryE
         RotaryEntranceBlock block = (RotaryEntranceBlock) state.getBlock();
         List<BakedQuad> wings = quads(block.rotorModelState());
         float angle = entrance.renderAngle(level.getGameTime(), partialTick);
-        if (angle != cachedAngle) {
-            rotation.rotationY((float) Math.toRadians(angle));
+        int facing = state.getValue(RotaryEntranceBlock.FACING).get2DDataValue();
+        if (angle != cachedAngle || facing != cachedFacing) {
+            rotation.rotationY((float) Math.toRadians(angle)).premul(FACINGS[facing]);
             cachedAngle = angle;
+            cachedFacing = facing;
         }
         VertexConsumer buffer = buffers.getBuffer(Sheets.cutoutBlockSheet());
         quadEmitter.setLight(light);
         pose.pushPose();
-        pose.translate(.5, 0, .5);
-        pose.mulPose(FACINGS[state.getValue(RotaryEntranceBlock.FACING).get2DDataValue()]);
-        pose.mulPose(rotation);
-        pose.translate(-.5, 0, -.5);
+        pose.rotateAround(rotation, .5F, 0, .5F);
         quadEmitter.emit(wings, pose.last(), buffer, overlay);
         for (int blade = 1; blade < 3; blade++) {
-            pose.translate(.5, 0, .5);
-            pose.mulPose(BLADE_SPACING);
-            pose.translate(-.5, 0, -.5);
+            pose.rotateAround(BLADE_SPACING, .5F, 0, .5F);
             quadEmitter.emit(wings, pose.last(), buffer, overlay);
         }
         pose.popPose();

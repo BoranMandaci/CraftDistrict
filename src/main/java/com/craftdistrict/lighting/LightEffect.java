@@ -8,12 +8,13 @@ public enum LightEffect implements StringRepresentable {
 
     private static final LightEffect[] EFFECTS = values();
     final int period;
+    private final String serializedName = name().toLowerCase(java.util.Locale.ROOT);
 
     LightEffect(int period) { this.period = period; }
 
     public static boolean valid(int id) { return id >= 0 && id < EFFECTS.length; }
     public static LightEffect byId(int id) { return valid(id) ? EFFECTS[id] : STEADY; }
-    @Override public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
+    @Override public String getSerializedName() { return serializedName; }
 
     public int levelAt(long time) {
         return switch (this) {
@@ -43,6 +44,7 @@ public enum LightEffect implements StringRepresentable {
 
         public final LightEffect effect;
         public final int level;
+        private final String serializedName = name().toLowerCase(java.util.Locale.ROOT);
         Stage(LightEffect effect, int level) { this.effect = effect; this.level = level; }
         public static Stage of(LightEffect effect, int level) {
             return switch (effect) {
@@ -51,6 +53,6 @@ public enum LightEffect implements StringRepresentable {
                 case DOUBLE_FLASH -> DOUBLE_FLASH; case FLICKER -> FLICKER;
             };
         }
-        @Override public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
+        @Override public String getSerializedName() { return serializedName; }
     }
 }

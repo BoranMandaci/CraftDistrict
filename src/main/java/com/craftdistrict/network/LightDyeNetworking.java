@@ -107,7 +107,7 @@ public final class LightDyeNetworking {
         var colors = LightDyeData.get(level).snapshot(new ChunkPos(x, z));
         // Empty chunks need no packet: the client discards a chunk's palette when unloading it.
         if (colors.isEmpty()) return;
-        List<Color> batch = new ArrayList<>(LIMIT);boolean reset = true;
+        List<Color> batch = new ArrayList<>(Math.min(LIMIT, colors.size()));boolean reset = true;
         for (var entry : colors.long2ByteEntrySet()) {
             batch.add(new Color(entry.getLongKey(), entry.getByteValue()));
             if (batch.size() == LIMIT) {
@@ -123,7 +123,9 @@ public final class LightDyeNetworking {
         if (positions.size() == 1) {
             BlockPos pos = positions.get(0);
             ChunkPos chunk = new ChunkPos(pos);
-            send(level.getChunkSource().chunkMap.getPlayers(chunk, false), new Palette(level.dimension().location(),
+            var players = level.getChunkSource().chunkMap.getPlayers(chunk, false);
+            if (players.isEmpty()) return;
+            send(players, new Palette(level.dimension().location(),
                     chunk.x, chunk.z, false, List.of(new Color(pos.asLong(), data.color(pos)))));
             return;
         }
@@ -134,6 +136,7 @@ public final class LightDyeNetworking {
         }
         updates.forEach((chunk, colors) -> {
             var players = level.getChunkSource().chunkMap.getPlayers(chunk, false);
+            if (players.isEmpty()) return;
             for (int start = 0; start < colors.size(); start += LIMIT)
                 send(players, new Palette(level.dimension().location(), chunk.x, chunk.z, false,
                         List.copyOf(colors.subList(start, Math.min(start + LIMIT, colors.size())))));

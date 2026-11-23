@@ -21,16 +21,18 @@ import net.minecraft.world.phys.Vec3;
 import org.joml.Quaternionf;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /** Cache the existing baked models: fixed frames stay still and only the leaves translate. No ticker or frame packets. */
 public final class SlidingDoorRenderer implements BlockEntityRenderer<SlidingDoorBlockEntity> {
     private static final Quaternionf[] FACINGS=new Quaternionf[4];
     static {for(Direction f:Direction.Plane.HORIZONTAL)FACINGS[f.get2DDataValue()]=Axis.YP.rotationDegrees(180-f.toYRot());}
-    private final Mesh[] meshes=new Mesh[8];
+    // Four mode/power combinations for each design, pairing and hinge.
+    private final Mesh[] meshes = new Mesh[32];
     private final DoorRenderSupport quadEmitter = new DoorRenderSupport();
     private static final class Mesh {
-        final BakedModel lower,upper;
+        final BakedModel lower, upper;
         final List<BakedQuad> lowerFrame=new ArrayList<>(),upperFrame=new ArrayList<>(),lowerLeaf=new ArrayList<>(),upperLeaf=new ArrayList<>();
         Mesh(BakedModel lower,BakedModel upper){this.lower=lower;this.upper=upper;collect(lower,false,lowerFrame,lowerLeaf);collect(upper,true,upperFrame,upperLeaf);}
     }
@@ -47,14 +49,25 @@ public final class SlidingDoorRenderer implements BlockEntityRenderer<SlidingDoo
                 && DoorRenderSupport.inFrustum(door.getRenderBoundingBox());
     }
     private Mesh mesh(BlockState state) {
-        var shaper=Minecraft.getInstance().getBlockRenderer().getBlockModelShaper();
-        BlockState closed=state.setValue(SlidingEntranceBlock.FACING,Direction.NORTH).setValue(SlidingEntranceBlock.OPEN,false);
-        BakedModel lower=shaper.getBlockModel(closed.setValue(SlidingEntranceBlock.HALF,DoubleBlockHalf.LOWER));
-        BakedModel upper=shaper.getBlockModel(closed.setValue(SlidingEntranceBlock.HALF,DoubleBlockHalf.UPPER));
-        int index=((SlidingEntranceBlock)state.getBlock()).design().ordinal()*4+(state.getValue(SlidingEntranceBlock.PAIRED)?2:0)
-                +(state.getValue(SlidingEntranceBlock.HINGE)==DoorHingeSide.RIGHT?1:0);
-        Mesh mesh=meshes[index];
-        if(mesh==null||mesh.lower!=lower||mesh.upper!=upper)meshes[index]=mesh=new Mesh(lower,upper);
+        if (quadEmitter.modelsChanged()) Arrays.fill(meshes, null);
+        int group = ((SlidingEntranceBlock) state.getBlock()).design().ordinal() * 16
+                + (state.getValue(SlidingEntranceBlock.PAIRED) ? 8 : 0)
+                + (state.getValue(SlidingEntranceBlock.HINGE) == DoorHingeSide.RIGHT ? 4 : 0);
+        int index = group + (state.getValue(SlidingEntranceBlock.AUTOMATIC) ? 2 : 0)
+                + (state.getValue(SlidingEntranceBlock.POWERED) ? 1 : 0);
+        Mesh mesh = meshes[index];
+        if (mesh == null) {
+            var shaper = Minecraft.getInstance().getBlockRenderer().getBlockModelShaper();
+            BlockState closed = state.setValue(SlidingEntranceBlock.FACING, Direction.NORTH).setValue(SlidingEntranceBlock.OPEN, false);
+            BakedModel lower = shaper.getBlockModel(closed.setValue(SlidingEntranceBlock.HALF, DoubleBlockHalf.LOWER));
+            BakedModel upper = shaper.getBlockModel(closed.setValue(SlidingEntranceBlock.HALF, DoubleBlockHalf.UPPER));
+            // Built-in doors share geometry across modes. Keep distinct meshes for resource packs that override them.
+            for (int i = group; i < group + 4; i++) {
+                Mesh other = meshes[i];
+                if (other != null && other.lower == lower && other.upper == upper) return meshes[index] = other;
+            }
+            meshes[index] = mesh = new Mesh(lower, upper);
+        }
         return mesh;
     }
     private static void collect(BakedModel model,boolean upper,List<BakedQuad> frame,List<BakedQuad> leaf) {

@@ -69,7 +69,8 @@ public final class LightControls {
             return;
         }
         List<BlockPos> parts = parts(state, pos);
-        if (complete(level, state, parts)) apply(level, parts, state.getValue(REDSTONE), true, effect);
+        // Scheduled animation already knows the frame and does not change the fixture's schedule.
+        if (complete(level, state, parts)) applyFrame(level, parts, state.getValue(REDSTONE), brightness > 0, next);
     }
 
     /** An OFF animation frame is still activated. Keep that intent in the sparse scheduler, not another state property. */
@@ -171,13 +172,21 @@ public final class LightControls {
 
     /** Change only when necessary; a rejected linked write cannot consume a dye or partially change the fixture. */
     private static boolean apply(Level level, List<BlockPos> parts, boolean redstone, boolean lit, LightEffect effect) {
-        BlockPos origin = origin(level.getBlockState(parts.get(0)), parts.get(0));
+        BlockState first = level.getBlockState(parts.get(0));
+        BlockPos origin = origin(first, parts.get(0));
         int brightness = lit ? effect.levelAt(level.getGameTime() + LightProximityData.phase(origin.asLong())) : 0;
         LightEffect.Stage stage = LightEffect.Stage.of(effect, brightness);
+        if (!applyFrame(level, parts, redstone, brightness > 0, stage)) return false;
+        if (settingsEligible(first.getBlock()) && level instanceof ServerLevel server)
+            LightProximityData.get(server).setAnimation(origin, lit ? effect : LightEffect.STEADY);
+        return true;
+    }
+
+    private static boolean applyFrame(Level level, List<BlockPos> parts, boolean redstone, boolean lit, LightEffect.Stage stage) {
         BlockState[] before = new BlockState[parts.size()], after = new BlockState[parts.size()];
         for (int i = 0; i < parts.size(); i++) {
             before[i] = level.getBlockState(parts.get(i));
-            after[i] = before[i].setValue(REDSTONE, redstone).setValue(LIT, brightness > 0);
+            after[i] = before[i].setValue(REDSTONE, redstone).setValue(LIT, lit);
             if (after[i].hasProperty(EFFECT)) after[i] = after[i].setValue(EFFECT, stage);
         }
         int written = 0;
@@ -190,21 +199,25 @@ public final class LightControls {
                 if (level.getBlockState(parts.get(j)) != after[j]) { valid = false; break; }
             if (!valid) break;
         }
-        if (valid) {
-            if (settingsEligible(before[0].getBlock()) && level instanceof ServerLevel server)
-                LightProximityData.get(server).setAnimation(origin, lit ? effect : LightEffect.STEADY);
-            return true;
-        }
+        if (valid) return true;
         for (int i = written - 1; i >= 0; i--)
             if (level.getBlockState(parts.get(i)) == after[i] && before[i] != after[i]) level.setBlock(parts.get(i), before[i], FLAGS);
         return false;
     }
 
     public static boolean nearby(ServerLevel level, List<BlockPos> parts, boolean wasActive) {
-        double range = wasActive ? LightProximityData.RELEASE_RANGE : LightProximityData.RANGE;
+        double range = proximityRange(wasActive);
         for (BlockPos pos : parts)
-            if (level.getNearestPlayer(pos.getX()+.5, pos.getY()+.5, pos.getZ()+.5, Math.nextUp(range), ELIGIBLE) != null) return true;
+            if (nearby(level, pos, range)) return true;
         return false;
+    }
+
+    private static double proximityRange(boolean wasActive) {
+        return Math.nextUp(wasActive ? LightProximityData.RELEASE_RANGE : LightProximityData.RANGE);
+    }
+
+    private static boolean nearby(ServerLevel level, BlockPos pos, double range) {
+        return level.getNearestPlayer(pos.getX() + .5, pos.getY() + .5, pos.getZ() + .5, range, ELIGIBLE) != null;
     }
 
     public static boolean setSettings(Level level, BlockState state, BlockPos pos, LightMode mode, LightEffect effect) {
@@ -229,9 +242,15 @@ public final class LightControls {
     }
 
     public static void updateProximity(ServerLevel level, BlockPos pos, BlockState state) {
-        // Current linked lights span at most three cells. This coarse rejection avoids layout allocations for distant, off fixtures.
-        boolean possible = level.getNearestPlayer(pos.getX()+.5, pos.getY()+.5, pos.getZ()+.5, 13, ELIGIBLE) != null;
         boolean enabled = active(level, state, pos);
+        if (!(state.getBlock() instanceof MultiBlockDecorationBlock)) {
+            // One exact test for an individual fixture, with no layout unless power changes.
+            boolean active = nearby(level, pos, proximityRange(enabled));
+            if (active != enabled) apply(level, List.of(pos), false, active, effect(state));
+            return;
+        }
+        // Current linked lights span at most three cells. This coarse rejection avoids layout allocations for distant, off fixtures.
+        boolean possible = nearby(level, pos, 13);
         if (!possible && !enabled) return;
         List<BlockPos> parts = parts(state, pos);
         if (!complete(level, state, parts)) return;

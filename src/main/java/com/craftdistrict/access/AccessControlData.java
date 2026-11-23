@@ -6,6 +6,7 @@ import com.craftdistrict.block.OfficeBadgeReaderBlock;
 import com.craftdistrict.block.SlidingEntranceBlock;
 import com.craftdistrict.door.SlidingDoorSensors;
 import com.craftdistrict.network.AccessControlNetworking;
+import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 //? if >=1.21 {
@@ -34,6 +35,7 @@ import java.util.UUID;
 /** Per-dimension reader settings. Unconfigured world blocks do not need a block entity. */
 public final class AccessControlData extends SavedData {
     private static final String NAME = "craftdistrict_access_control";
+    private static final Direction[] SIDES = Direction.values();
     public static final int DEFAULT_SECONDS = 5, MAX_SECONDS = 30, ENROLLMENT_TICKS = 60 * 20;
     //? if >=1.21 {
     private static final Factory<AccessControlData> FACTORY = new Factory<>(AccessControlData::new,
@@ -42,7 +44,7 @@ public final class AccessControlData extends SavedData {
     private final Map<BlockPos, Reader> readers = new HashMap<>();
     private final Map<Long, Set<BlockPos>> readersByChunk = new HashMap<>();
     private final Map<AccessDoorTarget, Door> doors = new HashMap<>();
-    private final Map<BlockPos, Set<Door>> linksByPart = new HashMap<>();
+    private final Long2ObjectOpenHashMap<Set<Door>> linksByPart = new Long2ObjectOpenHashMap<>();
     private final Map<Long, Set<Door>> linksByChunk = new HashMap<>(), waiting = new HashMap<>();
     private final Set<Door> changedFrames = new HashSet<>();
     private final Set<Long> readyChunks = new HashSet<>(), changedChunks = new HashSet<>();
@@ -102,7 +104,7 @@ public final class AccessControlData extends SavedData {
     }
 
     public void doorRemoved(BlockPos pos) {
-        Set<Door> linked = linksByPart.get(pos);
+        Set<Door> linked = linksByPart.get(pos.asLong());
         if (linked != null) for (Door door : List.copyOf(linked)) invalidate(door);
     }
 
@@ -126,7 +128,7 @@ public final class AccessControlData extends SavedData {
     private Door door(AccessDoorTarget target) {
         return doors.computeIfAbsent(target, key -> {
             Door door = new Door(key, nextOrder++);
-            for (BlockPos part : key.parts()) linksByPart.computeIfAbsent(part, ignored -> new HashSet<>()).add(door);
+            for (BlockPos part : key.parts()) linksByPart.computeIfAbsent(part.asLong(), ignored -> new HashSet<>()).add(door);
             for (long chunk : door.chunks) linksByChunk.computeIfAbsent(chunk, ignored -> new HashSet<>()).add(door);
             return door;
         });
@@ -139,7 +141,11 @@ public final class AccessControlData extends SavedData {
 
     private void discard(Door door) {
         doors.remove(door.target, door);
-        for (BlockPos part : door.target.parts()) removeFrom(linksByPart, part, door);
+        for (BlockPos part : door.target.parts()) {
+            long packed = part.asLong();
+            Set<Door> linked = linksByPart.get(packed);
+            if (linked != null && linked.remove(door) && linked.isEmpty()) linksByPart.remove(packed);
+        }
         for (long chunk : door.chunks) removeFrom(linksByChunk, chunk, door);
         changedFrames.remove(door);
         cancel(door);
@@ -186,7 +192,7 @@ public final class AccessControlData extends SavedData {
     static long chunk(BlockPos pos) { return ChunkPos.asLong(pos.getX() >> 4, pos.getZ() >> 4); }
 
     Door securedAt(BlockPos pos, BlockState state) {
-        Set<Door> indexed = linksByPart.get(pos);
+        Set<Door> indexed = linksByPart.get(pos.asLong());
         if (indexed != null) for (Door door : indexed) {
             if (door.secured && door.target.matches(state)) return door;
         }
@@ -204,11 +210,14 @@ public final class AccessControlData extends SavedData {
     }
 
     public void topologyChanged(BlockPos pos) {
-        markFrame(pos);
-        for (var direction : Direction.values()) markFrame(pos.relative(direction));
+        if (linksByPart.isEmpty()) return;
+        markFrame(pos.asLong());
+        for (Direction side : SIDES) {
+            markFrame(BlockPos.asLong(pos.getX() + side.getStepX(), pos.getY() + side.getStepY(), pos.getZ() + side.getStepZ()));
+        }
     }
 
-    private void markFrame(BlockPos pos) {
+    private void markFrame(long pos) {
         Set<Door> linked = linksByPart.get(pos);
         if (linked != null) for (Door door : linked) if (door.work != Work.REPAIR) {
             door.verified = false;
