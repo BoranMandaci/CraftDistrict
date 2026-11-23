@@ -97,6 +97,7 @@ public enum DecorationCollection {
             CraftDistrictBlocks.FireStation.HOSE_STORAGE_RACK,
             CraftDistrictBlocks.FireStation.HOSE_REEL,
             CraftDistrictBlocks.FireStation.EXTINGUISHER,
+            CraftDistrictBlocks.FireStation.HYDRANT,
             CraftDistrictBlocks.Lighting.PULL_DOWN_FIRE_ALARM,
             // Rescue tools and first aid.
             CraftDistrictBlocks.FireStation.RESCUE_TOOLS_RACK,
@@ -232,6 +233,8 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Restaurant.CONDIMENT_STATION,
             CraftDistrictBlocks.Restaurant.UTENSIL_CONDIMENT_STATION,
             CraftDistrictBlocks.Restaurant.FAST_FOOD_MENU_SCREEN,
+            CraftDistrictBlocks.Restaurant.DRIVE_THRU_MENU_BOARD,
+            CraftDistrictBlocks.Restaurant.DRIVE_THRU_SPEAKER,
             CraftDistrictBlocks.Restaurant.BEVERAGE_DISPENSER,
             CraftDistrictBlocks.Restaurant.SOFT_DRINK_DISPENSER,
             CraftDistrictBlocks.Restaurant.DISPOSABLE_CUPS,
@@ -264,6 +267,8 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Restaurant.KITCHEN_ORDER_DISPLAY,
             CraftDistrictBlocks.FireStation.WALL_CLOCK),
     OFFICE("office", CraftDistrictBlocks.Office.WORKSTATION,
+            CraftDistrictBlocks.Office.NOTICE_BOARD,
+            CraftDistrictBlocks.Office.POST_IT_NOTES,
             // Desks and meeting tables.
             CraftDistrictBlocks.Office.WORKSTATION,
             CraftDistrictBlocks.Office.CUBICLE,

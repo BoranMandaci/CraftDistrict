@@ -1,6 +1,9 @@
 package com.craftdistrict.registry;
 
 import com.craftdistrict.CraftDistrict;
+import com.craftdistrict.block.CollectionAccentBlock;
+import com.craftdistrict.block.DriveThruMenuBoardBlock;
+import com.craftdistrict.block.DriveThruSpeakerBlock;
 import com.craftdistrict.block.BankAtmBlock;
 import com.craftdistrict.block.BankDecorationBlock;
 import com.craftdistrict.block.BankFloorFurnitureBlock;
@@ -771,6 +774,12 @@ public final class CraftDistrictBlocks {
     }
 
     public static final class Office {
+        public static final RegistrySupplier<CollectionAccentBlock> NOTICE_BOARD = register("notice_board",
+                () -> new CollectionAccentBlock(CollectionAccentBlock.Design.NOTICE_BOARD,
+                        BlockBehaviour.Properties.of().strength(.7F).sound(SoundType.WOOD).noOcclusion()));
+        public static final RegistrySupplier<CollectionAccentBlock> POST_IT_NOTES = register("post_it_notes",
+                () -> new CollectionAccentBlock(CollectionAccentBlock.Design.POST_IT_NOTES,
+                        BlockBehaviour.Properties.of().instabreak().sound(SoundType.WOOL).noOcclusion()));
         public static final RegistrySupplier<OfficeFurnitureBlock> WORKSTATION = register("office_workstation",
                 () -> new OfficeFurnitureBlock(OfficeFurnitureBlock.Design.WORKSTATION, metalProperties()));
         public static final RegistrySupplier<OfficeCubicleBlock> CUBICLE = register("office_cubicle",
@@ -864,6 +873,12 @@ public final class CraftDistrictBlocks {
     }
 
     public static final class Restaurant {
+        public static final RegistrySupplier<DriveThruMenuBoardBlock> DRIVE_THRU_MENU_BOARD = register("drive_thru_menu_board",
+                () -> new DriveThruMenuBoardBlock(BlockBehaviour.Properties.of().strength(2F).sound(SoundType.METAL)
+                        .noOcclusion().pushReaction(PushReaction.BLOCK)));
+        public static final RegistrySupplier<DriveThruSpeakerBlock> DRIVE_THRU_SPEAKER = register("drive_thru_speaker",
+                () -> new DriveThruSpeakerBlock(BlockBehaviour.Properties.of().strength(1.6F).sound(SoundType.METAL)
+                        .noOcclusion().pushReaction(PushReaction.BLOCK)));
         public static final RegistrySupplier<DiningTableBlock> SQUARE_DINING_TABLE = register("square_dining_table",
                 () -> new DiningTableBlock(DiningTableBlock.Design.SQUARE, woodProperties()));
         public static final RegistrySupplier<DiningTableBlock> ROUND_CAFE_TABLE = register("round_cafe_table",
@@ -1319,6 +1334,9 @@ public final class CraftDistrictBlocks {
     }
 
     public static final class FireStation {
+        public static final RegistrySupplier<CollectionAccentBlock> HYDRANT = register("fire_hydrant",
+                () -> new CollectionAccentBlock(CollectionAccentBlock.Design.FIRE_HYDRANT,
+                        BlockBehaviour.Properties.of().strength(2.5F).sound(SoundType.METAL).noOcclusion()));
         public static final RegistrySupplier<AdministrativeDeskBlock> CHIEF_DESK = register("fire_chief_desk",
                 () -> new AdministrativeDeskBlock(AdministrativeDeskBlock.Style.CHIEF, equipmentProperties()));
         public static final RegistrySupplier<AdministrativeDeskBlock> INVESTIGATOR_DESK = register("fire_investigator_desk",
