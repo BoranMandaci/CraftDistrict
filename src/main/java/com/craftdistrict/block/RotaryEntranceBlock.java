@@ -5,7 +5,10 @@ import com.mojang.serialization.MapCodec;
 //?}
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
@@ -14,6 +17,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -41,6 +45,17 @@ public final class RotaryEntranceBlock extends MultiBlockDecorationBlock impleme
 
     /** Loads a single canonical wing through the normal model bakery, including resource reloads. */
     public BlockState rotorModelState() { return rotorModel; }
+
+    public BlockPos controllerPos(BlockState state, BlockPos pos) {
+        int part = partIndex(state);
+        if (part == CONTROLLER_PART) return pos;
+        Direction facing = state.getValue(FACING);
+        Direction right = facing.getClockWise();
+        int across = 1 - part % WIDTH;
+        int depth = 1 - part / WIDTH % WIDTH;
+        return pos.offset(across * right.getStepX() - depth * facing.getStepX(), 1 - part / LAYER_SIZE,
+                across * right.getStepZ() - depth * facing.getStepZ());
+    }
 
     @Override protected void addPartProperties(StateDefinition.Builder<Block, BlockState> builder) { builder.add(PART); }
     @Override protected int partCount() { return PART_COUNT; }
@@ -70,7 +85,20 @@ public final class RotaryEntranceBlock extends MultiBlockDecorationBlock impleme
     }
 
     @Override public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        // Only the stationary frame participates in world collision.
+        int part = partIndex(state);
+        if (part < PART_COUNT && level instanceof Level world) {
+            BlockPos controller = controllerPos(state, pos);
+            var chunk = world.getChunkSource().getChunkNow(controller.getX() >> 4, controller.getZ() >> 4);
+            if (chunk != null && chunk.getBlockEntity(controller, LevelChunk.EntityCreationType.CHECK) instanceof RotaryEntranceBlockEntity entrance
+                    && entrance.hasParkedCollision(world.getGameTime())) {
+                return entrance.parkedShape(part, state.getValue(FACING));
+            }
+        }
         return getShape(state, level, pos, context);
+    }
+
+    @Override public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        if (partIndex(state) == CONTROLLER_PART && level.getBlockEntity(pos) instanceof RotaryEntranceBlockEntity entrance)
+            entrance.finishParking(level);
     }
 }

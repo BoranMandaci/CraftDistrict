@@ -328,7 +328,7 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<CollectionDoorBlock> FRENCH_GLASS = door("french_glass_door", CollectionDoorBlock.Design.FRENCH_GLASS);
         public static final RegistrySupplier<RotaryEntranceBlock> GLASS_REVOLVING = register("glass_revolving_door",
                 () -> new RotaryEntranceBlock(BlockBehaviour.Properties.of().strength(4).sound(SoundType.METAL)
-                        .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK).noOcclusion()));
+                        .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK).noOcclusion().dynamicShape()));
         public static final RegistrySupplier<SecretBookshelfDoorBlock> SECRET_BOOKSHELF = register("secret_bookshelf_door",
                 () -> new SecretBookshelfDoorBlock(BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.WOOD)
                         .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)));

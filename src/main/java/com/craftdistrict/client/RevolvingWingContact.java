@@ -14,10 +14,9 @@ import net.minecraft.world.phys.Vec3;
 public final class RevolvingWingContact {
     private static final double WING_RADIUS = 20.35 / 16;
     private static final double HALF_THICKNESS = .45 / 16;
-    private static final double TICK_ANGLE = Math.toRadians(RotaryEntranceBlockEntity.revolvingAngle(0, 1));
+    private static final double TICK_ANGLE = Math.toRadians(RotaryEntranceBlockEntity.DEGREES_PER_TICK);
     private static final double TICK_SIN = Math.sin(TICK_ANGLE);
     private static final double TICK_COS = Math.cos(TICK_ANGLE);
-    private static final double MAX_PUSH_ANGLE = TICK_ANGLE * 1.4;
 
     private RevolvingWingContact() { }
 
@@ -38,23 +37,29 @@ public final class RevolvingWingContact {
         }
 
         RotaryEntranceBlock door = (RotaryEntranceBlock) state.getBlock();
-        BlockPos origin = door.structureOrigin(state, pos);
-        if (player.getY() - origin.getY() >= 42.55 / 16
-                || player.getBoundingBox().maxY - origin.getY() <= 1.55 / 16) return movement;
+        BlockPos controller = door.controllerPos(state, pos);
+        int baseY = controller.getY() - 1;
+        if (player.getY() - baseY >= 42.55 / 16 || player.getBoundingBox().maxY - baseY <= 1.55 / 16
+                || !level.hasChunkAt(controller)
+                || !(level.getBlockEntity(controller) instanceof RotaryEntranceBlockEntity entrance)) return movement;
+
+        // Once parked, vanilla resolves the cached wing shapes on both sides.
+        if (entrance.hasParkedCollision(gameTime)) return movement;
+        float step = advance ? Math.max(0, entrance.step(gameTime)) : 0;
+        if (step == 0 && movement.horizontalDistanceSqr() < 1e-8) return movement;
 
         Direction facing = state.getValue(RotaryEntranceBlock.FACING);
-        Direction right = facing.getClockWise();
-        double x = player.getX() - (origin.getX() + .5 + right.getStepX() - facing.getStepX());
-        double z = player.getZ() - (origin.getZ() + .5 + right.getStepZ() - facing.getStepZ());
-        float angle = RotaryEntranceBlockEntity.revolvingAngle(gameTime, 0) + 180 - facing.toYRot();
-        return adjustAtAngle(x, z, player.getBbWidth() * .5, angle, movement, advance);
+        double x = player.getX() - (controller.getX() + .5);
+        double z = player.getZ() - (controller.getZ() + .5);
+        float angle = entrance.angle(gameTime, 0) + 180 - facing.toYRot();
+        return adjustAtAngle(x, z, player.getBbWidth() * .5, angle, movement, step);
     }
 
     private static boolean isRevolvingDoor(BlockState state) {
         return state.getBlock() instanceof RotaryEntranceBlock;
     }
 
-    private static Vec3 adjustAtAngle(double x, double z, double bodyRadius, float angle, Vec3 movement, boolean advance) {
+    private static Vec3 adjustAtAngle(double x, double z, double bodyRadius, float angle, Vec3 movement, float step) {
         double moveX = movement.x, moveZ = movement.z;
         for (int blade = 0; blade < 3; blade++) {
             float radians = (angle + blade * 120) * Mth.DEG_TO_RAD;
@@ -80,9 +85,9 @@ public final class RevolvingWingContact {
             moveX += correction * normalX;
             moveZ += correction * normalZ;
         }
-        if (advance) {
+        if (step > 0) {
             double endX = x + moveX, endZ = z + moveZ;
-            double turn = sweptPush(x, z, endX, endZ, bodyRadius, angle);
+            double turn = sweptPush(x, z, endX, endZ, bodyRadius, angle, step);
             if (turn > 0) {
                 // Follow the player's own radius to avoid pushing them outward against the enclosure.
                 double cos = Math.cos(turn), sin = Math.sin(turn);
@@ -93,7 +98,11 @@ public final class RevolvingWingContact {
         return moveX == movement.x && moveZ == movement.z ? movement : new Vec3(moveX, movement.y, moveZ);
     }
 
-    private static double sweptPush(double x, double z, double endX, double endZ, double bodyRadius, float angle) {
+    private static double sweptPush(double x, double z, double endX, double endZ, double bodyRadius, float angle, float step) {
+        double radiansPerTick = Math.toRadians(step);
+        boolean steady = step == RotaryEntranceBlockEntity.DEGREES_PER_TICK;
+        double sweepSin = steady ? TICK_SIN : Math.sin(radiansPerTick);
+        double sweepCos = steady ? TICK_COS : Math.cos(radiansPerTick);
         double turn = 0;
         for (int blade = 0; blade < 3; blade++) {
             float radians = (angle + blade * 120) * Mth.DEG_TO_RAD;
@@ -101,10 +110,10 @@ public final class RevolvingWingContact {
             double along = x * axisX + z * axisZ;
             double leading = x * axisZ - z * axisX;
             // Only the advancing face carries the player. Leave an escape off the trailing face.
-            if (leading < -Math.max(0, along) * TICK_SIN) continue;
+            if (leading < -Math.max(0, along) * sweepSin) continue;
 
-            double nextX = axisX * TICK_COS + axisZ * TICK_SIN;
-            double nextZ = axisZ * TICK_COS - axisX * TICK_SIN;
+            double nextX = axisX * sweepCos + axisZ * sweepSin;
+            double nextZ = axisZ * sweepCos - axisX * sweepSin;
             double nextAlong = endX * nextX + endZ * nextZ;
             if (nextAlong < 0 || nextAlong >= WING_RADIUS + bodyRadius) continue;
             double pastTip = Math.max(0, nextAlong - WING_RADIUS);
@@ -112,6 +121,6 @@ public final class RevolvingWingContact {
             double overlap = clearance - (endX * nextZ - endZ * nextX);
             turn = Math.max(turn, overlap / Math.max(.2, nextAlong));
         }
-        return Math.min(turn, MAX_PUSH_ANGLE);
+        return Math.min(turn, radiansPerTick * 1.4);
     }
 }

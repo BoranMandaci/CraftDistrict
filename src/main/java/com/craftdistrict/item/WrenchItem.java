@@ -8,10 +8,13 @@ import com.craftdistrict.block.KitchenExhaustDuctBlock;
 import com.craftdistrict.block.ModularDiningTableBlock;
 import com.craftdistrict.block.ConferenceTableBlock;
 import com.craftdistrict.block.PoliceWaitingBenchBlock;
+import com.craftdistrict.block.RotaryEntranceBlock;
+import com.craftdistrict.block.RotaryEntranceBlockEntity;
 import com.craftdistrict.block.SittableBlock;
 import com.craftdistrict.block.LyingBlock;
 import com.craftdistrict.lighting.LightControls;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
@@ -72,6 +75,17 @@ public final class WrenchItem extends Item {
         var block = state.getBlock();
         InteractionResult access = AccessControl.useWrench(context, state);
         if (access != InteractionResult.PASS) return access;
+        if (block instanceof RotaryEntranceBlock rotary) {
+            var controller = rotary.controllerPos(state, pos);
+            if (!player.mayBuild() || player.isSpectator() || !level.hasChunkAt(controller)
+                    || !level.mayInteract(player, controller)
+                    || !(level.getBlockEntity(controller) instanceof RotaryEntranceBlockEntity entrance)) return InteractionResult.PASS;
+            if (level instanceof ServerLevel server) {
+                entrance.toggle(server);
+                used(player, context.getHand(), context.getItemInHand());
+            }
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
         if (block instanceof com.craftdistrict.block.HotelGuestBedBlock bed && bed.dyeable())
             return bed.useColor(state, level, pos, player, context.getHand());
         if (block instanceof com.craftdistrict.block.TableclothTableBlock table)

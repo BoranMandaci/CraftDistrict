@@ -12,7 +12,6 @@ import com.craftdistrict.menu.CardReaderMenu;
 import com.craftdistrict.network.AccessControlNetworking;
 import dev.architectury.event.events.common.PlayerEvent;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
@@ -29,8 +28,6 @@ import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import org.joml.Vector3f;
 
 import java.lang.ref.WeakReference;
 import java.util.Collections;
@@ -42,8 +39,6 @@ import java.util.WeakHashMap;
 public final class AccessControl {
     private static final int LINK_TICKS = 30 * 20, MANAGEMENT_TICKS = 60 * 20;
     private static final double DISTANCE_SQUARED = 8 * 8;
-    private static final DustParticleOptions GRANTED = new DustParticleOptions(new Vector3f(.18F, 1, .42F), .65F);
-    private static final DustParticleOptions REJECTED = new DustParticleOptions(new Vector3f(1, .17F, .21F), .65F);
     private static final Map<ServerPlayer, PlayerAccess> SESSIONS = Collections.synchronizedMap(new WeakHashMap<>());
     private static ClientSelection clientSelection;
 
@@ -85,7 +80,6 @@ public final class AccessControl {
         ServerLevel level = player.serverLevel();
         if (player.isShiftKeyDown() || player.getItemInHand(hand) != stack || !(stack.getItem() instanceof AccessCardItem)
                 || !readerAvailable(player, level, pos, true)) return;
-        var facing = level.getBlockState(pos).getValue(BlockStateProperties.HORIZONTAL_FACING);
         Reader reader = AccessControlData.get(level).reader(pos);
         UUID card = AccessCardItem.initialize(stack);
         String result;
@@ -96,12 +90,8 @@ public final class AccessControl {
             result = AccessDoorSecurity.authorize(player, reader) ? "access_granted" : "door_not_ready";
         }
         if (!reader.feedbackReady(level.getGameTime())) return;
-        var right = facing.getClockWise();
         boolean granted = result.equals("access_granted");
-        double lens = granted ? -.0703125 : .0703125;
-        double x = pos.getX() + .5 - facing.getStepX() * .34 + right.getStepX() * lens;
-        double z = pos.getZ() + .5 - facing.getStepZ() * .34 + right.getStepZ() * lens;
-        level.sendParticles(granted ? GRANTED : REJECTED, x, pos.getY() + .5625, z, 3, .012, .012, .012, 0);
+        OfficeBadgeReaderBlock.showResult(level, pos, granted);
         level.playSound(null, pos, (granted ? SoundEvents.NOTE_BLOCK_BIT : SoundEvents.NOTE_BLOCK_BASS).value(),
                 SoundSource.BLOCKS, .55F, granted ? 1.5F : .65F);
         message(player, result);

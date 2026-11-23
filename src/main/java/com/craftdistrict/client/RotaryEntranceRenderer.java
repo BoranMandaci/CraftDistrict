@@ -36,8 +36,7 @@ public final class RotaryEntranceRenderer implements BlockEntityRenderer<RotaryE
     private Mesh mesh;
     private final Quaternionf rotation = new Quaternionf();
     private final DoorRenderSupport quadEmitter = new DoorRenderSupport();
-    private long rotationTick;
-    private float rotationPartial = Float.NaN;
+    private float cachedAngle = Float.NaN;
 
     public RotaryEntranceRenderer(BlockEntityRendererProvider.Context context) { }
 
@@ -80,12 +79,10 @@ public final class RotaryEntranceRenderer implements BlockEntityRenderer<RotaryE
         BlockState state = entrance.getBlockState();
         RotaryEntranceBlock block = (RotaryEntranceBlock) state.getBlock();
         List<BakedQuad> wings = quads(block.rotorModelState());
-        long time = level.getGameTime();
-        if (time != rotationTick || partialTick != rotationPartial) {
-            float angle = RotaryEntranceBlockEntity.revolvingAngle(time, partialTick);
+        float angle = entrance.renderAngle(level.getGameTime(), partialTick);
+        if (angle != cachedAngle) {
             rotation.rotationY((float) Math.toRadians(angle));
-            rotationTick = time;
-            rotationPartial = partialTick;
+            cachedAngle = angle;
         }
         VertexConsumer buffer = buffers.getBuffer(Sheets.cutoutBlockSheet());
         quadEmitter.setLight(light);
