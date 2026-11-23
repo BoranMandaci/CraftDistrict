@@ -1,6 +1,10 @@
 package com.craftdistrict.registry;
 
 import com.craftdistrict.CraftDistrict;
+import com.craftdistrict.block.CasinoHangingFixtureBlock;
+import com.craftdistrict.block.CasinoTabletopBlock;
+import com.craftdistrict.block.HotelSingleElevatorDoorBlock;
+import com.craftdistrict.block.SmallCasinoChandelierBlock;
 import com.craftdistrict.block.CollectionAccentBlock;
 import com.craftdistrict.block.DriveThruMenuBoardBlock;
 import com.craftdistrict.block.DriveThruSpeakerBlock;
@@ -384,7 +388,13 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<CasinoInteriorPropBlock> CARPET = register("casino_carpet",
                 () -> new CasinoInteriorPropBlock(CasinoInteriorPropBlock.Design.CARPET, properties().strength(.2F).sound(SoundType.WOOL)));
         public static final RegistrySupplier<CasinoChandelierBlock> CHANDELIER = register("casino_chandelier",
-                () -> new CasinoChandelierBlock(properties().lightLevel(state -> com.craftdistrict.lighting.LightControls.emission(state, 15))));
+                () -> new CasinoChandelierBlock(chandelierProperties()));
+        public static final RegistrySupplier<SmallCasinoChandelierBlock> SMALL_CHANDELIER = register("small_casino_chandelier",
+                () -> new SmallCasinoChandelierBlock(chandelierProperties()));
+        public static final RegistrySupplier<CasinoHangingFixtureBlock.Ring> RING_CHANDELIER = register("ring_chandelier",
+                () -> new CasinoHangingFixtureBlock.Ring(chandelierProperties().pushReaction(PushReaction.BLOCK)));
+        public static final RegistrySupplier<CasinoHangingFixtureBlock.Grand> GRAND_CHANDELIER = register("grand_casino_chandelier",
+                () -> new CasinoHangingFixtureBlock.Grand(chandelierProperties().pushReaction(PushReaction.BLOCK)));
         public static final RegistrySupplier<CasinoVipDividerBlock> VIP_DIVIDER = register("casino_vip_divider",
                 () -> new CasinoVipDividerBlock(properties()));
         public static final RegistrySupplier<CasinoVipBoothBlock> VIP_BOOTH = register("casino_vip_booth",
@@ -437,6 +447,28 @@ public final class CraftDistrictBlocks {
                 () -> new CasinoDecorationBlock(CasinoDecorationBlock.Design.RACK, properties().strength(.5F)));
         public static final RegistrySupplier<CasinoDecorationBlock> CARDS_AND_DICE = register("playing_cards_and_dice",
                 () -> new CasinoDecorationBlock(CasinoDecorationBlock.Design.CARDS, properties().strength(.5F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<CasinoTabletopBlock> SCATTERED_CHIPS =
+                tabletop("scattered_casino_chips", CasinoTabletopBlock.Design.SCATTERED_CHIPS, SoundType.STONE);
+        public static final RegistrySupplier<CasinoTabletopBlock> CHIP_PILE =
+                tabletop("casino_chip_pile", CasinoTabletopBlock.Design.CHIP_PILE, SoundType.STONE);
+        public static final RegistrySupplier<CasinoTabletopBlock> CHIP_PLAQUES =
+                tabletop("high_value_chip_plaques", CasinoTabletopBlock.Design.PLAQUES, SoundType.STONE);
+        public static final RegistrySupplier<CasinoTabletopBlock> CARD_DECK =
+                tabletop("playing_card_deck", CasinoTabletopBlock.Design.CARD_DECK, SoundType.WOOL);
+        public static final RegistrySupplier<CasinoTabletopBlock> FANNED_CARDS =
+                tabletop("fanned_playing_cards", CasinoTabletopBlock.Design.FANNED_CARDS, SoundType.WOOL);
+        public static final RegistrySupplier<CasinoTabletopBlock> FACE_UP_SPREAD =
+                tabletop("face_up_card_spread", CasinoTabletopBlock.Design.FACE_UP_SPREAD, SoundType.WOOL);
+        public static final RegistrySupplier<CasinoTabletopBlock> ROYAL_FLUSH =
+                tabletop("royal_flush_display", CasinoTabletopBlock.Design.ROYAL_FLUSH, SoundType.WOOL);
+        public static final RegistrySupplier<CasinoTabletopBlock> DISCARD_PILE =
+                tabletop("card_discard_pile", CasinoTabletopBlock.Design.DISCARD_PILE, SoundType.WOOL);
+        private static RegistrySupplier<CasinoTabletopBlock> tabletop(String id, CasinoTabletopBlock.Design design, SoundType sound) {
+            return register(id, () -> new CasinoTabletopBlock(design, properties().strength(.35F).sound(sound)));
+        }
+        private static BlockBehaviour.Properties chandelierProperties() {
+            return properties().lightLevel(state -> com.craftdistrict.lighting.LightControls.emission(state, 15));
+        }
         private static BlockBehaviour.Properties properties() {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
         }
@@ -556,6 +588,8 @@ public final class CraftDistrictBlocks {
                 () -> new RoomNumberPlaqueBlock(metalProperties().strength(.75F)));
         public static final RegistrySupplier<HotelElevatorDoorsBlock> ELEVATOR_DOORS = register("elevator_double_doors",
                 () -> new HotelElevatorDoorsBlock(metalProperties()));
+        public static final RegistrySupplier<HotelSingleElevatorDoorBlock> ELEVATOR_DOOR = register("elevator_door",
+                () -> new HotelSingleElevatorDoorBlock(metalProperties().pushReaction(PushReaction.BLOCK)));
         public static final RegistrySupplier<HotelCorridorWallBlock> ELEVATOR_CALL_PANEL = register("elevator_call_panel",
                 () -> new HotelCorridorWallBlock(HotelCorridorWallBlock.Design.CALL_PANEL, metalProperties().strength(.75F)));
         public static final RegistrySupplier<RoomNumberPlaqueBlock> ELEVATOR_INDICATOR = register("elevator_floor_indicator",

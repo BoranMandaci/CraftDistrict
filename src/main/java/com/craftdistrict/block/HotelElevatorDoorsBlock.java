@@ -26,8 +26,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/** Four saved parts change together through the existing atomic cabinet interaction. */
-public final class HotelElevatorDoorsBlock extends WideTallDecorationBlock {
+/** Elevator door parts change together through the existing atomic cabinet interaction. */
+public class HotelElevatorDoorsBlock extends WideTallDecorationBlock {
     private static final VoxelShape[] SHAPES = RestaurantKitchenBlock.rotations(box(0, 0, 13.5, 16, 16, 16));
     private static final VoxelShape[][] OPEN_SHAPES = new VoxelShape[4][];
     static {
@@ -61,7 +61,7 @@ public final class HotelElevatorDoorsBlock extends WideTallDecorationBlock {
     }
     @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos wall = pos.relative(state.getValue(FACING).getOpposite());
-        BlockPos floor = pos.below(state.getValue(PART) / 2 + 1);
+        BlockPos floor = pos.below(1 + partOffset(state, partIndex(state)).getY());
         return DecorationSupport.isPlaced(state, level, pos)
                 || level.hasChunkAt(wall) && level.getBlockState(wall).isFaceSturdy(level, wall, state.getValue(FACING))
                 || level.hasChunkAt(floor) && level.getBlockState(floor).isFaceSturdy(level, floor, Direction.UP);
@@ -69,14 +69,15 @@ public final class HotelElevatorDoorsBlock extends WideTallDecorationBlock {
     @Override public BlockState updateShape(BlockState state, Direction side, BlockState neighbor, LevelAccessor level, BlockPos pos, BlockPos other) {
         if (isRemovingLinkedStructure(state, level, pos)) return state;
         BlockPos origin = structureOrigin(state, pos);
-        for (int i = 0; i < 4; i++) if (origin.offset(partOffset(state, i)).equals(other) && neighbor != stateForPart(state, i))
+        for (int i = 0; i < partCount(state); i++) if (origin.offset(partOffset(state, i)).equals(other) && neighbor != stateForPart(state, i))
             return Blocks.AIR.defaultBlockState();
         return canSurvive(state, level, pos) ? state : Blocks.AIR.defaultBlockState();
     }
     @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         int turn = RestaurantKitchenBlock.turn(state);
-        return state.getValue(BlockStateProperties.OPEN) ? OPEN_SHAPES[state.getValue(PART)][turn] : SHAPES[turn];
+        return state.getValue(BlockStateProperties.OPEN) ? openShapes(state)[turn] : SHAPES[turn];
     }
+    protected VoxelShape[] openShapes(BlockState state) { return OPEN_SHAPES[partIndex(state)]; }
     @Override public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) { return getShape(state, level, pos, context); }
     //? if >=1.21 {
     @Override protected MapCodec<? extends HorizontalDirectionalBlock> codec() { return CODEC; }

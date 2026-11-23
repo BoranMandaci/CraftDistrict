@@ -1,0 +1,833 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "atlas": "craftdistrict:block/casino/casino_followup_atlas",
+    "particle": "craftdistrict:block/particles/particle_metal",
+    "caps": "craftdistrict:block/casino/casino_chandelier_caps"
+  },
+  "elements": [
+    {
+      "name": "continuous crown",
+      "from": [
+        4.972973,
+        11.5,
+        4.972973
+      ],
+      "to": [
+        16.0,
+        11.52,
+        16.0
+      ],
+      "faces": {
+        "up": {
+          "texture": "#caps",
+          "uv": [
+            6.625,
+            6.625,
+            9.8125,
+            9.8125
+          ]
+        }
+      }
+    },
+    {
+      "name": "lower metal edge",
+      "from": [
+        4.972973,
+        10.24,
+        4.972973
+      ],
+      "to": [
+        16.0,
+        10.26,
+        16.0
+      ],
+      "faces": {
+        "down": {
+          "texture": "#caps",
+          "uv": [
+            6.625,
+            9.8125,
+            9.8125,
+            6.625
+          ]
+        }
+      }
+    },
+    {
+      "name": "inset opal lens",
+      "from": [
+        5.189189,
+        9.96,
+        5.189189
+      ],
+      "to": [
+        16.0,
+        9.98,
+        16.0
+      ],
+      "faces": {
+        "down": {
+          "texture": "#caps",
+          "uv": [
+            11.6875,
+            9.8125,
+            14.8125,
+            6.6875
+          ],
+          "tintindex": 33554431
+        }
+      }
+    },
+    {
+      "name": "outer mitered band",
+      "from": [
+        10.529616,
+        10.24,
+        2.793325
+      ],
+      "to": [
+        10.569616,
+        11.52,
+        18.265908
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            8.21875,
+            0.3125,
+            9.03125,
+            2.1875
+          ]
+        }
+      },
+      "rotation": {
+        "origin": [
+          10.529616,
+          10.24,
+          10.529616
+        ],
+        "axis": "y",
+        "angle": -45.0,
+        "rescale": false
+      }
+    },
+    {
+      "name": "outer mitered band",
+      "from": [
+        10.62154,
+        9.96,
+        3.015248
+      ],
+      "to": [
+        10.66154,
+        10.24,
+        18.227831
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            6.15625,
+            13.0625,
+            6.84375,
+            14.4375
+          ],
+          "tintindex": 33554431
+        }
+      },
+      "rotation": {
+        "origin": [
+          10.62154,
+          9.96,
+          10.62154
+        ],
+        "axis": "y",
+        "angle": -45.0,
+        "rescale": false
+      }
+    },
+    {
+      "name": "inner mitered band",
+      "from": [
+        11.345215,
+        10.24,
+        4.858923
+      ],
+      "to": [
+        11.385215,
+        11.52,
+        17.911506
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            8.21875,
+            0.3125,
+            9.03125,
+            2.1875
+          ]
+        }
+      },
+      "rotation": {
+        "origin": [
+          11.385215,
+          10.24,
+          11.385215
+        ],
+        "axis": "y",
+        "angle": -45.0,
+        "rescale": false
+      }
+    },
+    {
+      "name": "inner mitered band",
+      "from": [
+        11.253291,
+        9.96,
+        4.636999
+      ],
+      "to": [
+        11.293291,
+        10.24,
+        17.949582
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            6.15625,
+            13.0625,
+            6.84375,
+            14.4375
+          ],
+          "tintindex": 33554431
+        }
+      },
+      "rotation": {
+        "origin": [
+          11.293291,
+          9.96,
+          11.293291
+        ],
+        "axis": "y",
+        "angle": -45.0,
+        "rescale": false
+      }
+    },
+    {
+      "name": "corner tier mount",
+      "from": [
+        7.45,
+        9.6,
+        13.11
+      ],
+      "to": [
+        8.77,
+        9.96,
+        14.43
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            3.15625,
+            13.0625,
+            3.84375,
+            14.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            3.15625,
+            13.0625,
+            3.84375,
+            14.4375
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            3.15625,
+            13.0625,
+            3.84375,
+            14.4375
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            3.15625,
+            13.0625,
+            3.84375,
+            14.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.15625,
+            13.0625,
+            2.84375,
+            14.4375
+          ]
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.11,
+          9.6,
+          13.77
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      }
+    },
+    {
+      "name": "corner tier bevel",
+      "from": [
+        7.285,
+        9.14,
+        12.945
+      ],
+      "to": [
+        8.935,
+        9.6,
+        14.595
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            9.34375,
+            0.3125,
+            10.15625,
+            2.1875
+          ],
+          "tintindex": 33554431
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.11,
+          9.14,
+          13.77
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      }
+    },
+    {
+      "name": "corner tier faceted drop",
+      "from": [
+        7.417,
+        5.43,
+        13.077
+      ],
+      "to": [
+        8.803,
+        9.14,
+        14.463
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            9.34375,
+            0.3125,
+            10.15625,
+            2.1875
+          ],
+          "tintindex": 33554431
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            9.34375,
+            0.3125,
+            10.15625,
+            2.1875
+          ],
+          "tintindex": 33554431
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            9.34375,
+            0.3125,
+            10.15625,
+            2.1875
+          ],
+          "tintindex": 33554431
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            9.34375,
+            0.3125,
+            10.15625,
+            2.1875
+          ],
+          "tintindex": 33554431
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.11,
+          5.43,
+          13.77
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      }
+    },
+    {
+      "name": "corner tier point",
+      "from": [
+        7.714,
+        4.86,
+        13.374
+      ],
+      "to": [
+        8.506,
+        5.43,
+        14.166
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            7.15625,
+            13.0625,
+            7.84375,
+            14.4375
+          ],
+          "tintindex": 33554431
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.11,
+          4.86,
+          13.77
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      }
+    },
+    {
+      "name": "corner tier mount",
+      "from": [
+        13.11,
+        9.6,
+        7.45
+      ],
+      "to": [
+        14.43,
+        9.96,
+        8.77
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            3.15625,
+            13.0625,
+            3.84375,
+            14.4375
+          ]
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            3.15625,
+            13.0625,
+            3.84375,
+            14.4375
+          ]
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            3.15625,
+            13.0625,
+            3.84375,
+            14.4375
+          ]
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            3.15625,
+            13.0625,
+            3.84375,
+            14.4375
+          ]
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            2.15625,
+            13.0625,
+            2.84375,
+            14.4375
+          ]
+        }
+      },
+      "rotation": {
+        "origin": [
+          13.77,
+          9.6,
+          8.11
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      }
+    },
+    {
+      "name": "corner tier bevel",
+      "from": [
+        12.945,
+        9.14,
+        7.285
+      ],
+      "to": [
+        14.595,
+        9.6,
+        8.935
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            9.34375,
+            0.3125,
+            10.15625,
+            2.1875
+          ],
+          "tintindex": 33554431
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        }
+      },
+      "rotation": {
+        "origin": [
+          13.77,
+          9.14,
+          8.11
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      }
+    },
+    {
+      "name": "corner tier faceted drop",
+      "from": [
+        13.077,
+        5.43,
+        7.417
+      ],
+      "to": [
+        14.463,
+        9.14,
+        8.803
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            9.34375,
+            0.3125,
+            10.15625,
+            2.1875
+          ],
+          "tintindex": 33554431
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            9.34375,
+            0.3125,
+            10.15625,
+            2.1875
+          ],
+          "tintindex": 33554431
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            9.34375,
+            0.3125,
+            10.15625,
+            2.1875
+          ],
+          "tintindex": 33554431
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            9.34375,
+            0.3125,
+            10.15625,
+            2.1875
+          ],
+          "tintindex": 33554431
+        }
+      },
+      "rotation": {
+        "origin": [
+          13.77,
+          5.43,
+          8.11
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      }
+    },
+    {
+      "name": "corner tier point",
+      "from": [
+        13.374,
+        4.86,
+        7.714
+      ],
+      "to": [
+        14.166,
+        5.43,
+        8.506
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            11.65625,
+            8.3125,
+            12.96875,
+            10.6875
+          ],
+          "tintindex": 33554431
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            7.15625,
+            13.0625,
+            7.84375,
+            14.4375
+          ],
+          "tintindex": 33554431
+        }
+      },
+      "rotation": {
+        "origin": [
+          13.77,
+          4.86,
+          8.11
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout"
+}

@@ -2,109 +2,31 @@
   "parent": "minecraft:block/block",
   "ambientocclusion": true,
   "textures": {
-    "atlas": "craftdistrict:block/bank/bank_service",
+    "plate": "craftdistrict:block/bank/vault_wall_faces",
     "particle": "craftdistrict:block/particles/particle_metal"
   },
   "elements": [
     {
-      "name": "Exposed reinforced edge",
       "from": [
-        0.0,
-        0.72,
-        0.0
+        0,
+        0,
+        0
       ],
       "to": [
-        16.0,
-        15.28,
-        0.72
+        16,
+        16,
+        16
       ],
       "faces": {
-        "west": {
-          "texture": "#atlas",
+        "north": {
           "uv": [
-            2.28125,
-            0.3125,
-            3.84375,
-            1.6875
+            13.0,
+            13.0,
+            15.0,
+            15.0
           ],
-          "cullface": "west",
-          "rotation": 90
-        }
-      }
-    },
-    {
-      "name": "Exposed reinforced edge",
-      "from": [
-        0.0,
-        0.72,
-        0.0
-      ],
-      "to": [
-        16.0,
-        15.28,
-        0.72
-      ],
-      "faces": {
-        "east": {
-          "texture": "#atlas",
-          "uv": [
-            2.28125,
-            0.3125,
-            3.84375,
-            1.6875
-          ],
-          "cullface": "east",
-          "rotation": 90
-        }
-      }
-    },
-    {
-      "name": "Exposed reinforced edge",
-      "from": [
-        0.72,
-        0.0,
-        0.0
-      ],
-      "to": [
-        15.28,
-        16.0,
-        0.72
-      ],
-      "faces": {
-        "up": {
-          "texture": "#atlas",
-          "uv": [
-            2.28125,
-            0.3125,
-            3.84375,
-            1.6875
-          ],
-          "cullface": "up"
-        }
-      }
-    },
-    {
-      "name": "Exposed reinforced edge",
-      "from": [
-        0.72,
-        0.0,
-        0.0
-      ],
-      "to": [
-        15.28,
-        16.0,
-        0.72
-      ],
-      "faces": {
-        "down": {
-          "texture": "#atlas",
-          "uv": [
-            2.28125,
-            0.3125,
-            3.84375,
-            1.6875
-          ],
-          "cullface": "down"
+          "texture": "#plate",
+          "cullface": "north"
         }
       }
     }

@@ -64,7 +64,9 @@ public final class CraftDistrictClient {
                     CraftDistrictBlocks.Doors.AUTOMATIC_GLASS_SLIDING.get(), CraftDistrictBlocks.Doors.HOSPITAL_SLIDING.get(),
                     CraftDistrictBlocks.Doors.WINDOWED_GARAGE.get(), CraftDistrictBlocks.Doors.CRAFTSMAN_FRONT.get(),
                     CraftDistrictBlocks.Doors.COTTAGE.get(), CraftDistrictBlocks.Doors.FRENCH_GLASS.get(),
-                    CraftDistrictBlocks.Doors.GLASS_REVOLVING.get(), CraftDistrictBlocks.Bank.COIN_ROLL_TRAY.get());
+                    CraftDistrictBlocks.Doors.GLASS_REVOLVING.get(), CraftDistrictBlocks.Bank.COIN_ROLL_TRAY.get(),
+                    CraftDistrictBlocks.Casino.SCATTERED_CHIPS.get(), CraftDistrictBlocks.Casino.CHIP_PILE.get(),
+                    CraftDistrictBlocks.Casino.RING_CHANDELIER.get(), CraftDistrictBlocks.Casino.GRAND_CHANDELIER.get());
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Casino.CASHIER_COUNTER.get(),
                     CraftDistrictBlocks.Casino.VIP_DIVIDER.get(), CraftDistrictBlocks.Bank.TELLER_SECURITY_GLASS.get(),
                     CraftDistrictBlocks.Bank.PRIVACY_GLASS_PARTITION.get());

@@ -3,8 +3,8 @@
   "ambientocclusion": true,
   "textures": {
     "atlas": "craftdistrict:block/casino/casino_atlas",
-    "interior": "craftdistrict:block/casino/casino_interior_atlas",
-    "particle": "craftdistrict:block/particles/particle_red"
+    "particle": "craftdistrict:block/particles/particle_red",
+    "pattern": "craftdistrict:block/casino/casino_carpet_pattern"
   },
   "elements": [
     {
@@ -51,12 +51,12 @@
           "cullface": "down"
         },
         "up": {
-          "texture": "#interior",
+          "texture": "#pattern",
           "uv": [
-            0.03125,
-            0.03125,
-            3.96875,
-            3.96875
+            0,
+            0,
+            16,
+            16
           ]
         },
         "north": {
