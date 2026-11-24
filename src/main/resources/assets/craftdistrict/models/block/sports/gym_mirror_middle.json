@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/sports/gym",
+    "particle": "craftdistrict:block/particles/particle_white",
+    "reflection": "craftdistrict:block/sports/gym_mirror_surface"
+  },
+  "elements": [
+    {
+      "name": "black_backing",
+      "from": [0, 0, 15.38],
+      "to": [16, 16, 16],
+      "faces": {
+        "south": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75], "cullface": "south"},
+        "west": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75], "cullface": "west"},
+        "east": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75], "cullface": "east"},
+        "down": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75], "cullface": "down"},
+        "up": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75], "cullface": "up"}
+      }
+    },
+    {
+      "name": "polished_mirror_glass",
+      "from": [0, 0, 15.25],
+      "to": [16, 16, 15.38],
+      "shade": false,
+      "faces": {
+        "north": {"texture": "#reflection", "uv": [0, 0, 16, 16]},
+        "west": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75], "cullface": "west"},
+        "east": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75], "cullface": "east"},
+        "down": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75], "cullface": "down"},
+        "up": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75], "cullface": "up"}
+      }
+    }
+  ]
+}

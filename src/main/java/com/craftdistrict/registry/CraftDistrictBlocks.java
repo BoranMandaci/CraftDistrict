@@ -83,6 +83,9 @@ import com.craftdistrict.block.HoldingCellBedBlock;
 import com.craftdistrict.block.HospitalBedBlock;
 import com.craftdistrict.block.HospitalWideBlock;
 import com.craftdistrict.block.PharmacyFixtureBlock;
+import com.craftdistrict.block.DumbbellRackBlock;
+import com.craftdistrict.block.GymEquipmentBlock;
+import com.craftdistrict.block.GymMirrorBlock;
 import com.craftdistrict.block.HotelReceptionCounterBlock;
 import com.craftdistrict.block.HotelBackCabinetBlock;
 import com.craftdistrict.block.HotelDecorationBlock;
@@ -282,6 +285,7 @@ public final class CraftDistrictBlocks {
         Casino.initialize();
         Doors.initialize();
         Bank.initialize();
+        Sports.initialize();
         BLOCKS.register();
     }
 
@@ -379,6 +383,42 @@ public final class CraftDistrictBlocks {
             return BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.METAL).noOcclusion();
         }
         private Bank() { }
+        private static void initialize() { }
+    }
+
+    public static final class Sports {
+        public static final RegistrySupplier<GymEquipmentBlock.Treadmill> TREADMILL =
+                register("treadmill", () -> new GymEquipmentBlock.Treadmill(properties().sound(SoundType.METAL)));
+        public static final RegistrySupplier<GymEquipmentBlock.ResizedPair> EXERCISE_BIKE =
+                register("exercise_bike", () -> new GymEquipmentBlock.ResizedPair(GymEquipmentBlock.ResizedPair.Design.EXERCISE_BIKE, properties()));
+        public static final RegistrySupplier<GymEquipmentBlock> ROWING_MACHINE =
+                paired("rowing_machine", GymEquipmentBlock.Design.ROWING_MACHINE, SoundType.METAL);
+        public static final RegistrySupplier<GymEquipmentBlock> BENCH_PRESS =
+                paired("bench_press", GymEquipmentBlock.Design.BENCH_PRESS, SoundType.METAL);
+        public static final RegistrySupplier<GymEquipmentBlock.SquatRack> SQUAT_RACK =
+                register("squat_rack", () -> new GymEquipmentBlock.SquatRack(properties()));
+        public static final RegistrySupplier<GymEquipmentBlock.CableMachine> CABLE_MACHINE =
+                register("cable_machine", () -> new GymEquipmentBlock.CableMachine(properties().strength(2.5F)));
+        public static final RegistrySupplier<DumbbellRackBlock> DUMBBELL_RACK =
+                register("dumbbell_rack", () -> new DumbbellRackBlock(properties()));
+        public static final RegistrySupplier<GymEquipmentBlock.ResizedPair> WEIGHT_PLATE_RACK =
+                register("weight_plate_rack", () -> new GymEquipmentBlock.ResizedPair(GymEquipmentBlock.ResizedPair.Design.WEIGHT_PLATE_RACK, properties()));
+        public static final RegistrySupplier<GymEquipmentBlock> PUNCHING_BAG =
+                paired("punching_bag", GymEquipmentBlock.Design.PUNCHING_BAG, SoundType.WOOL);
+        public static final RegistrySupplier<GymEquipmentBlock> STANDING_PUNCHING_BAG =
+                paired("standing_punching_bag", GymEquipmentBlock.Design.STANDING_PUNCHING_BAG, SoundType.WOOL);
+        public static final RegistrySupplier<GymMirrorBlock> GYM_MIRROR =
+                register("gym_mirror", () -> new GymMirrorBlock(properties().strength(.6F).sound(SoundType.GLASS)));
+
+        private static RegistrySupplier<GymEquipmentBlock> paired(String id, GymEquipmentBlock.Design design, SoundType sound) {
+            return register(id, () -> new GymEquipmentBlock(design, properties().sound(sound)));
+        }
+
+        private static BlockBehaviour.Properties properties() {
+            return BlockBehaviour.Properties.of().strength(1.8F).sound(SoundType.METAL).noOcclusion().pushReaction(PushReaction.BLOCK);
+        }
+
+        private Sports() { }
         private static void initialize() { }
     }
 

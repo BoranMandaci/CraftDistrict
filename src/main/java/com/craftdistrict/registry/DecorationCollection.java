@@ -589,7 +589,19 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Casino.BANKNOTE_STACK,
             CraftDistrictBlocks.Casino.MONEY_BAG_STACK,
             CraftDistrictBlocks.Casino.GOLD_BAR_CRATE,
-            CraftDistrictBlocks.Casino.LOCKBOX_CASE);
+            CraftDistrictBlocks.Casino.LOCKBOX_CASE),
+    SPORTS("sports", CraftDistrictBlocks.Sports.DUMBBELL_RACK,
+            CraftDistrictBlocks.Sports.TREADMILL,
+            CraftDistrictBlocks.Sports.EXERCISE_BIKE,
+            CraftDistrictBlocks.Sports.ROWING_MACHINE,
+            CraftDistrictBlocks.Sports.BENCH_PRESS,
+            CraftDistrictBlocks.Sports.SQUAT_RACK,
+            CraftDistrictBlocks.Sports.CABLE_MACHINE,
+            CraftDistrictBlocks.Sports.DUMBBELL_RACK,
+            CraftDistrictBlocks.Sports.WEIGHT_PLATE_RACK,
+            CraftDistrictBlocks.Sports.PUNCHING_BAG,
+            CraftDistrictBlocks.Sports.STANDING_PUNCHING_BAG,
+            CraftDistrictBlocks.Sports.GYM_MIRROR);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

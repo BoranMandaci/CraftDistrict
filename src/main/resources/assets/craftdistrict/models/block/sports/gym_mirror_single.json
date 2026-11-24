@@ -1,0 +1,116 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "craftdistrict:block/sports/gym",
+    "particle": "craftdistrict:block/particles/particle_white",
+    "reflection": "craftdistrict:block/sports/gym_mirror_surface"
+  },
+  "elements": [
+    {
+      "name": "black_backing",
+      "from": [0, 0, 15.38],
+      "to": [16, 16, 16],
+      "faces": {
+        "south": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]}
+      }
+    },
+    {
+      "name": "polished_mirror_glass",
+      "from": [0, 0, 15.25],
+      "to": [16, 16, 15.38],
+      "shade": false,
+      "faces": {
+        "north": {"texture": "#reflection", "uv": [0, 0, 16, 16]},
+        "west": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]}
+      }
+    },
+    {
+      "name": "left_aluminum_channel",
+      "from": [0, 0.58, 14.96],
+      "to": [0.58, 15.42, 15.25],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [12.125, 12.25, 13.875, 15.75]},
+        "west": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]}
+      }
+    },
+    {
+      "name": "right_aluminum_channel",
+      "from": [15.42, 0.58, 14.96],
+      "to": [16, 15.42, 15.25],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [12.125, 12.25, 13.875, 15.75]},
+        "west": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]}
+      }
+    },
+    {
+      "name": "bottom_aluminum_channel",
+      "from": [0.58, 0, 14.96],
+      "to": [15.42, 0.58, 15.25],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [12.125, 12.25, 13.875, 15.75]},
+        "down": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]}
+      }
+    },
+    {
+      "name": "top_aluminum_channel",
+      "from": [0.58, 15.42, 14.96],
+      "to": [15.42, 16, 15.25],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [12.125, 12.25, 13.875, 15.75]},
+        "down": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]}
+      }
+    },
+    {
+      "name": "left_bottom_miter",
+      "from": [0, 0, 14.96],
+      "to": [0.58, 0.58, 15.25],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [12.125, 12.25, 13.875, 15.75]},
+        "west": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]}
+      }
+    },
+    {
+      "name": "left_top_miter",
+      "from": [0, 15.42, 14.96],
+      "to": [0.58, 16, 15.25],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [12.125, 12.25, 13.875, 15.75]},
+        "west": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]}
+      }
+    },
+    {
+      "name": "right_bottom_miter",
+      "from": [15.42, 0, 14.96],
+      "to": [16, 0.58, 15.25],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [12.125, 12.25, 13.875, 15.75]},
+        "east": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]}
+      }
+    },
+    {
+      "name": "right_top_miter",
+      "from": [15.42, 15.42, 14.96],
+      "to": [16, 16, 15.25],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [12.125, 12.25, 13.875, 15.75]},
+        "east": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [4.125, 0.25, 5.875, 3.75]}
+      }
+    }
+  ]
+}
