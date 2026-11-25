@@ -85,6 +85,8 @@ import com.craftdistrict.block.HospitalWideBlock;
 import com.craftdistrict.block.PharmacyFixtureBlock;
 import com.craftdistrict.block.DumbbellRackBlock;
 import com.craftdistrict.block.GymEquipmentBlock;
+import com.craftdistrict.block.GymFloorPropBlock;
+import com.craftdistrict.block.GymLockersBlock;
 import com.craftdistrict.block.GymMachineBlock;
 import com.craftdistrict.block.GymMirrorBlock;
 import com.craftdistrict.block.KettlebellRackBlock;
@@ -423,6 +425,18 @@ public final class CraftDistrictBlocks {
                 machine("lat_pulldown_machine", GymMachineBlock.Design.LAT_PULLDOWN_MACHINE);
         public static final RegistrySupplier<KettlebellRackBlock> KETTLEBELL_RACK =
                 register("kettlebell_rack", () -> new KettlebellRackBlock(properties()));
+        public static final RegistrySupplier<GymEquipmentBlock> YOGA_MAT = register("yoga_mat",
+                () -> new GymEquipmentBlock(GymEquipmentBlock.Design.YOGA_MAT, properties().strength(.3F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<GymFloorPropBlock> FLOOR_DUMBBELLS = register("floor_dumbbells",
+                () -> new GymFloorPropBlock(GymFloorPropBlock.Design.FLOOR_DUMBBELLS, properties()));
+        public static final RegistrySupplier<GymEquipmentBlock> BARBELL_ON_FLOOR =
+                paired("barbell_on_floor", GymEquipmentBlock.Design.BARBELL_ON_FLOOR, SoundType.METAL);
+        public static final RegistrySupplier<GymFloorPropBlock> ROLLED_YOGA_MAT_STACK = register("rolled_yoga_mat_stack",
+                () -> new GymFloorPropBlock(GymFloorPropBlock.Design.ROLLED_YOGA_MAT_STACK, properties().strength(.4F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<GymFloorPropBlock> EXERCISE_BALL = register("exercise_ball",
+                () -> new GymFloorPropBlock(GymFloorPropBlock.Design.EXERCISE_BALL, properties().strength(.4F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<GymLockersBlock> GYM_LOCKERS =
+                register("gym_lockers", () -> new GymLockersBlock(properties()));
 
         private static RegistrySupplier<GymEquipmentBlock> paired(String id, GymEquipmentBlock.Design design, SoundType sound) {
             return register(id, () -> new GymEquipmentBlock(design, properties().sound(sound)));

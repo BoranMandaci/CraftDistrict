@@ -607,7 +607,14 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Sports.PULL_UP_RACK,
             CraftDistrictBlocks.Sports.LEG_PRESS_MACHINE,
             CraftDistrictBlocks.Sports.LAT_PULLDOWN_MACHINE,
-            CraftDistrictBlocks.Sports.KETTLEBELL_RACK);
+            CraftDistrictBlocks.Sports.KETTLEBELL_RACK,
+            CraftDistrictBlocks.Sports.YOGA_MAT,
+            CraftDistrictBlocks.Sports.FLOOR_DUMBBELLS,
+            CraftDistrictBlocks.Sports.BARBELL_ON_FLOOR,
+            CraftDistrictBlocks.Sports.ROLLED_YOGA_MAT_STACK,
+            CraftDistrictBlocks.Sports.EXERCISE_BALL,
+            CraftDistrictBlocks.Sports.GYM_LOCKERS,
+            CraftDistrictBlocks.FireStation.LOCKER_BENCH);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

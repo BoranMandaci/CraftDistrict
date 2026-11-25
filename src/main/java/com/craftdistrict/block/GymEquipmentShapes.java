@@ -211,6 +211,45 @@ final class GymEquipmentShapes {
             box(1.98, 21.9, 12.64, 5.54, 24.25, 13.74), box(10.46, 21.9, 12.64, 14.02, 24.25, 13.74),
             box(5.1, 23.36, 12.67, 10.9, 24.42, 13.69), box(7.42, 24.04, 12.58, 8.58, 24.69, 13.78));
 
+    static final VoxelShape[][] YOGA_MAT = cells(1, 1, 2,
+            box(2.8, 0, 1.45, 13.2, .46, 30.55));
+
+    static final VoxelShape[] FLOOR_DUMBBELLS = cells(1, 1, 1,
+            box(2.39, 0, 1.49, 5.33, 2.98, 5.01), box(7.51, 0, 3.61, 10.45, 2.98, 7.13),
+            box(4.34, 1.03, 3.18, 8.50, 1.95, 5.45),
+            box(5.55, 0, 10.95, 8.49, 2.98, 14.47), box(10.67, 0, 8.83, 13.61, 2.98, 12.35),
+            box(7.50, 1.03, 10.51, 11.66, 1.95, 12.79))[0];
+
+    static final VoxelShape[][] BARBELL_ON_FLOOR = cells(2, 1, 1,
+            box(1.36, 2.78, 7.56, 30.64, 3.66, 8.44),
+            box(2.24, 2.46, 7.24, 2.81, 3.98, 8.76), box(29.19, 2.46, 7.24, 29.76, 3.98, 8.76),
+            box(2.80, .52, 6.38, 4.13, 5.92, 9.62), box(27.87, .52, 6.38, 29.20, 5.92, 9.62),
+            box(2.80, 1.6, 5.30, 4.13, 4.84, 10.70), box(27.87, 1.6, 5.30, 29.20, 4.84, 10.70),
+            box(4.17, 0, 6.34, 5.70, 6.44, 9.66), box(26.30, 0, 6.34, 27.83, 6.44, 9.66),
+            box(4.17, .92, 5.35, 5.70, 5.52, 10.65), box(26.30, .92, 5.35, 27.83, 5.52, 10.65),
+            box(4.17, 1.84, 4.78, 5.70, 4.60, 11.22), box(26.30, 1.84, 4.78, 27.83, 4.60, 11.22));
+
+    static final VoxelShape[] ROLLED_YOGA_MAT_STACK = cells(1, 1, 1,
+            box(3.97, 0, 2.62, 6.89, 4.84, 13), box(3.01, .96, 2.62, 7.85, 3.88, 13),
+            box(9.12, 0, 3.08, 12.02, 4.8, 13.35), box(8.17, .96, 3.08, 12.97, 3.84, 13.35),
+            box(6.60, 4.17, 2.84, 9.44, 8.87, 13.15), box(5.67, 5.11, 2.84, 10.37, 7.93, 13.15))[0];
+
+    static final VoxelShape[] EXERCISE_BALL = cells(1, 1, 1,
+            box(6.14, 0, 6.14, 9.86, .50, 9.86), box(4.42, .50, 4.42, 11.58, 1.52, 11.58),
+            box(3.14, 1.52, 3.14, 12.86, 2.98, 12.86), box(2.10, 2.98, 3.05, 13.90, 4.72, 12.95),
+            box(1.35, 4.72, 4.01, 14.65, 8.48, 11.99), box(2.68, 4.72, 1.35, 13.32, 8.48, 14.65),
+            box(2.10, 8.48, 3.05, 13.90, 10.22, 12.95), box(3.14, 10.22, 3.14, 12.86, 11.68, 12.86),
+            box(4.42, 11.68, 4.42, 11.58, 12.70, 11.58), box(6.20, 12.70, 6.20, 9.80, 13.20, 9.80))[0];
+
+    static final VoxelShape[][] GYM_LOCKERS = gymLockers(
+            box(1.4, 2.52, .92, 7.73, 30.4, 1.6), box(8.27, 2.52, .92, 14.6, 30.4, 1.6),
+            box(6.06, 12.55, .08, 6.98, 17.12, .92), box(9.02, 12.55, .08, 9.94, 17.12, .92));
+
+    static final VoxelShape[][] GYM_LOCKERS_OPEN = gymLockers(
+            box(1.47, 2.52, -5.48, 2.15, 30.4, .85), box(13.85, 2.52, -5.48, 14.53, 30.4, .85),
+            box(2.15, 3.13, -5.13, 2.33, 29.78, .53), box(13.67, 3.13, -5.13, 13.85, 29.78, .53),
+            box(.63, 12.55, -4.73, 1.47, 17.12, -3.81), box(14.53, 12.55, -4.73, 15.37, 17.12, -3.81));
+
     static final VoxelShape[][] OLD_EXERCISE_BIKE = cells(1, 1, 1,
             box(2, 0, 2, 14, 1.25, 4.25), box(2, 0, 12, 14, 1.25, 14.25),
             box(5.35, 1.25, 3.5, 10.65, 7.9, 9), box(6.85, 1.25, 8.9, 9.15, 4.45, 13),
@@ -255,6 +294,34 @@ final class GymEquipmentShapes {
 
     private static double[] box(double x, double y, double z, double X, double Y, double Z) {
         return new double[]{x, y, z, X, Y, Z};
+    }
+
+    private static VoxelShape[][] gymLockers(double[]... doors) {
+        double[][] cabinet = {
+                box(0, 0, 0, 16, 2.52, 16), box(0, 2.52, 0, .90, 30.5, 16), box(15.1, 2.52, 0, 16, 30.5, 16),
+                box(.90, 2.52, 14.82, 15.1, 30.5, 16), box(0, 30.5, .23, 16, 31.9, 16),
+                box(.78, 30.63, 0, 15.22, 31.16, .23), box(7.78, 2.52, .88, 8.22, 30.5, 15.06),
+                box(.90, 2.52, .33, 1.31, 30.5, 1.12), box(14.69, 2.52, .33, 15.1, 30.5, 1.12),
+                box(.90, 23.3, 4.24, 15.1, 24.25, 4.65), box(.90, 23.62, 4.65, 15.1, 24.25, 14.82),
+                box(.90, 21.42, 7.92, 15.1, 21.82, 8.34)
+        };
+        double[][] boxes = Arrays.copyOf(cabinet, cabinet.length + doors.length);
+        System.arraycopy(doors, 0, boxes, cabinet.length, doors.length);
+
+        // Split at the two block heights while retaining the open doors in front of each block.
+        VoxelShape[][] parts = new VoxelShape[2][];
+        for (int part = 0; part < parts.length; part++) {
+            int bottom = part * 16;
+            VoxelShape shape = Shapes.empty();
+            for (double[] b : boxes) {
+                double minY = Math.max(0, b[1] - bottom), maxY = Math.min(16, b[4] - bottom);
+                if (minY < maxY) {
+                    shape = Shapes.joinUnoptimized(shape, Block.box(b[0], minY, b[2], b[3], maxY, b[5]), BooleanOp.OR);
+                }
+            }
+            parts[part] = RestaurantKitchenBlock.rotations(shape);
+        }
+        return parts;
     }
 
     private static VoxelShape[][] stairClimber(double[]... railing) {

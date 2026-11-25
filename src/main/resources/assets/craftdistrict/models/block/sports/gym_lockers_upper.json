@@ -1,0 +1,475 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "props": "craftdistrict:block/sports/gym_floor_props",
+    "particle": "craftdistrict:block/particles/particle_blue_gray"
+  },
+  "elements": [
+    {
+      "name": "left_side_panel",
+      "from": [0, 0, 0],
+      "to": [0.9, 14.5, 16],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 3.99363]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 3.99363]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 3.99363]},
+        "east": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 3.99363]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "right_side_panel",
+      "from": [15.1, 0, 0],
+      "to": [16, 14.5, 16],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 3.99363]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 3.99363]},
+        "west": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 3.99363]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 3.99363]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "powder_coated_back",
+      "from": [0.9, 0, 15.06],
+      "to": [15.1, 14.5, 16],
+      "faces": {
+        "north": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 3.99363]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 3.99363]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 3.99363]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 3.99363]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "top_crown",
+      "from": [0, 14.5, 0.23],
+      "to": [16, 15.9, 16],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "down": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "crown_front_edge",
+      "from": [0.78, 14.63, 0],
+      "to": [15.22, 15.16, 0.23],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "center_divider",
+      "from": [7.78, 0, 0.88],
+      "to": [8.22, 14.5, 15.06],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "south": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 4.13488]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "up": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]}
+      }
+    },
+    {
+      "name": "left_outer_jamb",
+      "from": [0.9, 0, 0.33],
+      "to": [1.31, 14.5, 1.12],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "right_outer_jamb",
+      "from": [14.69, 0, 0.33],
+      "to": [15.1, 14.5, 1.12],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13488]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "left_back_liner",
+      "from": [1.14, 0, 14.82],
+      "to": [7.54, 14.17, 15.06],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13533]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13533]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13533]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "left_upper_shelf",
+      "from": [0.9, 7.62, 4.65],
+      "to": [7.78, 8.25, 14.82],
+      "faces": {
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "down": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "left_folded_shelf_lip",
+      "from": [0.9, 7.3, 4.24],
+      "to": [7.78, 8.25, 4.65],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "left_hanging_rail",
+      "from": [1.16, 5.42, 7.92],
+      "to": [7.53, 5.82, 8.34],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "left_outer_rail_socket",
+      "from": [0.9, 5.24, 7.74],
+      "to": [1.16, 6, 8.52],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "down": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "left_inner_rail_socket",
+      "from": [7.53, 5.24, 7.74],
+      "to": [7.78, 6, 8.52],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "down": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "left_hinge_plate_24",
+      "from": [0.97, 8.25, 0.21],
+      "to": [1.34, 9.54, 0.63],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "down": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "left_hinge_pin_24",
+      "from": [1.23, 8.15, 0.63],
+      "to": [1.47, 9.64, 0.92],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "right_back_liner",
+      "from": [8.46, 0, 14.82],
+      "to": [14.86, 14.17, 15.06],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13533]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13533]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.13533]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "right_upper_shelf",
+      "from": [8.22, 7.62, 4.65],
+      "to": [15.1, 8.25, 14.82],
+      "faces": {
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "down": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "right_folded_shelf_lip",
+      "from": [8.22, 7.3, 4.24],
+      "to": [15.1, 8.25, 4.65],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "right_hanging_rail",
+      "from": [8.47, 5.42, 7.92],
+      "to": [14.84, 5.82, 8.34],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "right_outer_rail_socket",
+      "from": [14.84, 5.24, 7.74],
+      "to": [15.1, 6, 8.52],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "down": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "right_inner_rail_socket",
+      "from": [8.22, 5.24, 7.74],
+      "to": [8.47, 6, 8.52],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "down": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "right_hinge_plate_24",
+      "from": [14.66, 8.25, 0.21],
+      "to": [15.03, 9.54, 0.63],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "down": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "right_hinge_pin_24",
+      "from": [14.53, 8.15, 0.63],
+      "to": [14.77, 9.64, 0.92],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "left_ventilated_door",
+      "from": [1.4, 0, 0.92],
+      "to": [7.73, 14.4, 1.6],
+      "faces": {
+        "north": {"texture": "#props", "uv": [12.075, 0.3, 13.925, 8.25409]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.12209]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.12209]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "south": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 4.12209]}
+      }
+    },
+    {
+      "name": "left_handle_recess",
+      "from": [6.061, 0, 0.66],
+      "to": [6.97691, 1.12, 0.92],
+      "faces": {
+        "north": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 2.11357]},
+        "west": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 2.11357]},
+        "east": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 2.11357]},
+        "up": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]}
+      }
+    },
+    {
+      "name": "left_upper_pull_mount",
+      "from": [6.26453, 0.42, 0.17],
+      "to": [6.77338, 0.87, 0.75],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "left_latch_pull",
+      "from": [6.32559, 0, 0.08],
+      "to": [6.71232, 0.5, 0.41],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 9.42462]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 9.42462]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 9.42462]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 9.42462]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "left_label_slot",
+      "from": [3.54732, 4.09, 0.77],
+      "to": [5.58268, 5.44, 0.92],
+      "faces": {
+        "north": {"texture": "#props", "uv": [14.075, 8.3, 15.925, 15.7]},
+        "west": {"texture": "#props", "uv": [14.075, 8.3, 15.925, 15.7]},
+        "east": {"texture": "#props", "uv": [14.075, 8.3, 15.925, 15.7]},
+        "down": {"texture": "#props", "uv": [14.075, 8.3, 15.925, 15.7]},
+        "up": {"texture": "#props", "uv": [14.075, 8.3, 15.925, 15.7]}
+      }
+    },
+    {
+      "name": "right_ventilated_door",
+      "from": [8.27, 0, 0.92],
+      "to": [14.6, 14.4, 1.6],
+      "faces": {
+        "north": {"texture": "#props", "uv": [12.075, 0.3, 13.925, 8.25409]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.12209]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.12209]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]},
+        "south": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 4.12209]}
+      }
+    },
+    {
+      "name": "right_handle_recess",
+      "from": [9.02309, 0, 0.66],
+      "to": [9.939, 1.12, 0.92],
+      "faces": {
+        "north": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 2.11357]},
+        "west": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 2.11357]},
+        "east": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 2.11357]},
+        "up": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]}
+      }
+    },
+    {
+      "name": "right_upper_pull_mount",
+      "from": [9.22662, 0.42, 0.17],
+      "to": [9.73547, 0.87, 0.75],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "right_latch_pull",
+      "from": [9.28768, 0, 0.08],
+      "to": [9.67441, 0.5, 0.41],
+      "faces": {
+        "north": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 9.42462]},
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 9.42462]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 9.42462]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 9.42462]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "right_label_slot",
+      "from": [10.41732, 4.09, 0.77],
+      "to": [12.45268, 5.44, 0.92],
+      "faces": {
+        "north": {"texture": "#props", "uv": [14.075, 8.3, 15.925, 15.7]},
+        "west": {"texture": "#props", "uv": [14.075, 8.3, 15.925, 15.7]},
+        "east": {"texture": "#props", "uv": [14.075, 8.3, 15.925, 15.7]},
+        "down": {"texture": "#props", "uv": [14.075, 8.3, 15.925, 15.7]},
+        "up": {"texture": "#props", "uv": [14.075, 8.3, 15.925, 15.7]}
+      }
+    },
+    {
+      "name": "left_inner_door_liner",
+      "from": [1.72, 0, 1.6],
+      "to": [7.38, 13.78, 1.78],
+      "faces": {
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.12634]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.12634]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.12634]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "left_upper_door_stiffener",
+      "from": [1.94, 6.3, 1.78],
+      "to": [7.16, 6.65, 1.96],
+      "faces": {
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    },
+    {
+      "name": "right_inner_door_liner",
+      "from": [8.62, 0, 1.6],
+      "to": [14.28, 13.78, 1.78],
+      "faces": {
+        "south": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.12634]},
+        "west": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.12634]},
+        "east": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 4.12634]},
+        "up": {"texture": "#props", "uv": [10.075, 0.3, 11.925, 7.7]}
+      }
+    },
+    {
+      "name": "right_upper_door_stiffener",
+      "from": [8.84, 6.3, 1.78],
+      "to": [14.06, 6.65, 1.96],
+      "faces": {
+        "south": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "west": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "east": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]},
+        "down": {"texture": "#props", "uv": [14.075, 0.3, 15.925, 7.7]},
+        "up": {"texture": "#props", "uv": [10.075, 8.3, 11.925, 15.7]}
+      }
+    }
+  ]
+}

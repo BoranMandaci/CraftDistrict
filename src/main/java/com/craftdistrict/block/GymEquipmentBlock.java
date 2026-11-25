@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -26,7 +27,7 @@ import java.util.Locale;
 
 /** Gym fixtures with shared placement and removal. */
 public class GymEquipmentBlock extends MultiBlockDecorationBlock {
-    private enum Layout { LONG, TALL, HANGING }
+    private enum Layout { LONG, WIDE, TALL, HANGING }
 
     public enum Design implements StringRepresentable {
         TREADMILL(Layout.LONG, GymEquipmentShapes.TREADMILL),
@@ -35,7 +36,10 @@ public class GymEquipmentBlock extends MultiBlockDecorationBlock {
         PUNCHING_BAG(Layout.HANGING, GymEquipmentShapes.PUNCHING_BAG),
         STANDING_PUNCHING_BAG(Layout.TALL, GymEquipmentShapes.STANDING_PUNCHING_BAG),
         EXERCISE_BIKE(Layout.LONG, GymEquipmentShapes.EXERCISE_BIKE),
-        WEIGHT_PLATE_RACK(Layout.TALL, GymEquipmentShapes.WEIGHT_PLATE_RACK);
+        WEIGHT_PLATE_RACK(Layout.TALL, GymEquipmentShapes.WEIGHT_PLATE_RACK),
+        YOGA_MAT(Layout.LONG, GymEquipmentShapes.YOGA_MAT),
+        BARBELL_ON_FLOOR(Layout.WIDE, GymEquipmentShapes.BARBELL_ON_FLOOR),
+        GYM_LOCKERS(Layout.TALL, GymEquipmentShapes.GYM_LOCKERS);
 
         private final Layout layout;
         private final VoxelShape[][] parts;
@@ -75,6 +79,7 @@ public class GymEquipmentBlock extends MultiBlockDecorationBlock {
     @Override protected Direction getExtensionDirection(BlockState state) {
         return switch (design.layout) {
             case LONG -> state.getValue(FACING).getOpposite();
+            case WIDE -> state.getValue(FACING).getClockWise();
             case TALL -> Direction.UP;
             case HANGING -> Direction.DOWN;
         };
@@ -85,8 +90,14 @@ public class GymEquipmentBlock extends MultiBlockDecorationBlock {
         return switch (design.layout) {
             case HANGING -> supported(level, structureOrigin(state, pos).above(), Direction.DOWN);
             case TALL -> supported(level, structureOrigin(state, pos).below(), Direction.UP);
-            case LONG -> supported(level, pos.below(), Direction.UP);
+            case LONG, WIDE -> supported(level, pos.below(), Direction.UP);
         };
+    }
+
+    @Override public BlockState mirror(BlockState state, Mirror mirror) {
+        BlockState mirrored = super.mirror(state, mirror);
+        return design.layout == Layout.WIDE && mirror != Mirror.NONE
+                ? stateForPart(mirrored, 1 - partIndex(state)) : mirrored;
     }
 
     @Override public BlockState updateShape(BlockState state, Direction side, BlockState neighbor,
