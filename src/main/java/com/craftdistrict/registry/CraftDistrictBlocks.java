@@ -85,7 +85,9 @@ import com.craftdistrict.block.HospitalWideBlock;
 import com.craftdistrict.block.PharmacyFixtureBlock;
 import com.craftdistrict.block.DumbbellRackBlock;
 import com.craftdistrict.block.GymEquipmentBlock;
+import com.craftdistrict.block.GymMachineBlock;
 import com.craftdistrict.block.GymMirrorBlock;
+import com.craftdistrict.block.KettlebellRackBlock;
 import com.craftdistrict.block.HotelReceptionCounterBlock;
 import com.craftdistrict.block.HotelBackCabinetBlock;
 import com.craftdistrict.block.HotelDecorationBlock;
@@ -409,9 +411,25 @@ public final class CraftDistrictBlocks {
                 paired("standing_punching_bag", GymEquipmentBlock.Design.STANDING_PUNCHING_BAG, SoundType.WOOL);
         public static final RegistrySupplier<GymMirrorBlock> GYM_MIRROR =
                 register("gym_mirror", () -> new GymMirrorBlock(properties().strength(.6F).sound(SoundType.GLASS)));
+        public static final RegistrySupplier<GymMachineBlock> STAIR_CLIMBER =
+                register("stair_climber", () -> new GymMachineBlock.StairClimber(properties()));
+        public static final RegistrySupplier<GymMachineBlock> ELLIPTICAL_TRAINER =
+                machine("elliptical_trainer", GymMachineBlock.Design.ELLIPTICAL_TRAINER);
+        public static final RegistrySupplier<GymMachineBlock> PULL_UP_RACK =
+                machine("pull_up_rack", GymMachineBlock.Design.PULL_UP_RACK);
+        public static final RegistrySupplier<GymMachineBlock> LEG_PRESS_MACHINE =
+                machine("leg_press_machine", GymMachineBlock.Design.LEG_PRESS_MACHINE);
+        public static final RegistrySupplier<GymMachineBlock> LAT_PULLDOWN_MACHINE =
+                machine("lat_pulldown_machine", GymMachineBlock.Design.LAT_PULLDOWN_MACHINE);
+        public static final RegistrySupplier<KettlebellRackBlock> KETTLEBELL_RACK =
+                register("kettlebell_rack", () -> new KettlebellRackBlock(properties()));
 
         private static RegistrySupplier<GymEquipmentBlock> paired(String id, GymEquipmentBlock.Design design, SoundType sound) {
             return register(id, () -> new GymEquipmentBlock(design, properties().sound(sound)));
+        }
+
+        private static RegistrySupplier<GymMachineBlock> machine(String id, GymMachineBlock.Design design) {
+            return register(id, () -> new GymMachineBlock(design, properties()));
         }
 
         private static BlockBehaviour.Properties properties() {

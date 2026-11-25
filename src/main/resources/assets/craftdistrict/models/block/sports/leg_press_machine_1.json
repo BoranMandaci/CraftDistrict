@@ -1,0 +1,394 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "atlas": "craftdistrict:block/sports/gym",
+    "particle": "craftdistrict:block/particles/particle_black"
+  },
+  "elements": [
+    {
+      "name": "seat_floor_crossmember",
+      "from": [3.34, 0.64, 5.36],
+      "to": [12.66, 1.53, 6.89],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "south": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]}
+      }
+    },
+    {
+      "name": "seat_rear_ground_pad",
+      "from": [5.13, 0, 12.25],
+      "to": [10.87, 0.71, 14.6],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "south": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]}
+      }
+    },
+    {
+      "name": "seat_red_foundation",
+      "from": [6.69, 0.59, 4.32],
+      "to": [9.31, 1.7, 13.98],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "south": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "west": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "east": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "down": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "up": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]}
+      }
+    },
+    {
+      "name": "seat_front_pedestal",
+      "from": [6.38, 1.48, 4.37],
+      "to": [9.62, 4.38, 7.22],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "south": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "west": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "east": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "down": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "up": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]}
+      }
+    },
+    {
+      "name": "backrest_diagonal_brace",
+      "from": [7.27, 1.55, 10.16],
+      "to": [8.73, 8.05, 11.53],
+      "rotation": {
+        "axis": "x",
+        "angle": 22.5,
+        "origin": [8, 1.55, 10.84]
+      },
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "south": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]}
+      }
+    },
+    {
+      "name": "backrest_brace_socket",
+      "from": [7.08, 1.27, 10.05],
+      "to": [8.92, 1.94, 11.62],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "south": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]}
+      }
+    },
+    {
+      "name": "seat_red_pan",
+      "from": [4.29, 4.15, 3.4],
+      "to": [11.71, 4.97, 9.53],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "south": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "west": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "east": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "down": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "up": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]}
+      }
+    },
+    {
+      "name": "seat_cushion",
+      "from": [4.16, 4.97, 3.66],
+      "to": [11.84, 6.04, 8.97],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "south": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [12.125, 0.25, 13.875, 3.75]}
+      }
+    },
+    {
+      "name": "backrest_red_spine",
+      "from": [4.44, 4.18, 9.42],
+      "to": [11.56, 11.96, 10.24],
+      "rotation": {
+        "axis": "x",
+        "angle": 45,
+        "origin": [8, 4.37, 9.5]
+      },
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "south": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "west": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "east": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "down": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]},
+        "up": {"texture": "#atlas", "uv": [0.125, 12.25, 1.875, 15.75]}
+      }
+    },
+    {
+      "name": "backrest_padded_panel",
+      "from": [4.23, 4.43, 8.28],
+      "to": [11.77, 9.83, 9.42],
+      "rotation": {
+        "axis": "x",
+        "angle": 45,
+        "origin": [8, 4.37, 9.5]
+      },
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [12.125, 0.25, 13.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]}
+      }
+    },
+    {
+      "name": "backrest_head_cushion",
+      "from": [4.75, 9.83, 8.13],
+      "to": [11.25, 12.24, 9.42],
+      "rotation": {
+        "axis": "x",
+        "angle": 45,
+        "origin": [8, 4.37, 9.5]
+      },
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [12.125, 0.25, 13.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [14.125, 0.25, 15.875, 3.75]}
+      }
+    },
+    {
+      "name": "left_chassis",
+      "from": [1.89, 0.47, 0],
+      "to": [3.55, 1.57, 7.78],
+      "faces": {
+        "south": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [3.21247, 0.25, 3.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [2.125, 0.25, 2.78753, 3.75]},
+        "down": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 1.57506]},
+        "up": {"texture": "#atlas", "uv": [2.125, 2.42494, 3.875, 3.75]}
+      }
+    },
+    {
+      "name": "right_chassis",
+      "from": [12.45, 0.47, 0],
+      "to": [14.11, 1.57, 7.78],
+      "faces": {
+        "south": {"texture": "#atlas", "uv": [3.875, 0.25, 2.125, 3.75]},
+        "west": {"texture": "#atlas", "uv": [3.21247, 0.25, 3.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [2.125, 0.25, 2.78753, 3.75]},
+        "down": {"texture": "#atlas", "uv": [3.875, 0.25, 2.125, 1.57506]},
+        "up": {"texture": "#atlas", "uv": [3.875, 2.42494, 2.125, 3.75]}
+      }
+    },
+    {
+      "name": "left_frame_back_foot",
+      "from": [1.46, 0, 5.28],
+      "to": [3.98, 0.72, 8.08],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "south": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]}
+      }
+    },
+    {
+      "name": "right_frame_back_foot",
+      "from": [12.02, 0, 5.28],
+      "to": [14.54, 0.72, 8.08],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [9.875, 0.25, 8.125, 3.75]},
+        "south": {"texture": "#atlas", "uv": [9.875, 0.25, 8.125, 3.75]},
+        "west": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [9.875, 0.25, 8.125, 3.75]},
+        "up": {"texture": "#atlas", "uv": [9.875, 0.25, 8.125, 3.75]}
+      }
+    },
+    {
+      "name": "left_lower_rail_anchor",
+      "from": [1.72, 1.42, 5.67],
+      "to": [3.73, 3.4, 7.13],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "south": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]}
+      }
+    },
+    {
+      "name": "right_lower_rail_anchor",
+      "from": [12.27, 1.42, 5.67],
+      "to": [14.28, 3.4, 7.13],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [1.875, 0.25, 0.125, 3.75]},
+        "south": {"texture": "#atlas", "uv": [1.875, 0.25, 0.125, 3.75]},
+        "west": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [1.875, 0.25, 0.125, 3.75]},
+        "up": {"texture": "#atlas", "uv": [1.875, 0.25, 0.125, 3.75]}
+      }
+    },
+    {
+      "name": "left_lower_guide_joint",
+      "from": [1.8, 8.05, 0],
+      "to": [3.63, 10.16, 1.21],
+      "faces": {
+        "south": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [2.92969, 0.25, 3.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [2.125, 0.25, 3.07031, 3.75]},
+        "down": {"texture": "#atlas", "uv": [2.125, 0.25, 3.875, 2.14063]},
+        "up": {"texture": "#atlas", "uv": [2.125, 1.85937, 3.875, 3.75]}
+      }
+    },
+    {
+      "name": "right_lower_guide_joint",
+      "from": [12.37, 8.05, 0],
+      "to": [14.2, 10.16, 1.21],
+      "faces": {
+        "south": {"texture": "#atlas", "uv": [3.875, 0.25, 2.125, 3.75]},
+        "west": {"texture": "#atlas", "uv": [2.92969, 0.25, 3.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [2.125, 0.25, 3.07031, 3.75]},
+        "down": {"texture": "#atlas", "uv": [3.875, 0.25, 2.125, 2.14063]},
+        "up": {"texture": "#atlas", "uv": [3.875, 1.85937, 2.125, 3.75]}
+      }
+    },
+    {
+      "name": "left_seat_grab_post",
+      "from": [3.53, 4.26, 4.76],
+      "to": [4.45, 5.85, 5.6],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "south": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "west": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "east": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "down": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "up": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]}
+      }
+    },
+    {
+      "name": "right_seat_grab_post",
+      "from": [11.55, 4.26, 4.76],
+      "to": [12.47, 5.85, 5.6],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [3.875, 12.25, 2.125, 15.75]},
+        "south": {"texture": "#atlas", "uv": [3.875, 12.25, 2.125, 15.75]},
+        "west": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "east": {"texture": "#atlas", "uv": [2.125, 12.25, 3.875, 15.75]},
+        "down": {"texture": "#atlas", "uv": [3.875, 12.25, 2.125, 15.75]},
+        "up": {"texture": "#atlas", "uv": [3.875, 12.25, 2.125, 15.75]}
+      }
+    },
+    {
+      "name": "left_seat_grip",
+      "from": [3.44, 5.66, 3.5],
+      "to": [4.33, 6.33, 6.66],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "south": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]}
+      }
+    },
+    {
+      "name": "right_seat_grip",
+      "from": [11.67, 5.66, 3.5],
+      "to": [12.56, 6.33, 6.66],
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [9.875, 0.25, 8.125, 3.75]},
+        "south": {"texture": "#atlas", "uv": [9.875, 0.25, 8.125, 3.75]},
+        "west": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [8.125, 0.25, 9.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [9.875, 0.25, 8.125, 3.75]},
+        "up": {"texture": "#atlas", "uv": [9.875, 0.25, 8.125, 3.75]}
+      }
+    },
+    {
+      "name": "left_sled_beam_1",
+      "from": [1.95, 2.61, 5.93],
+      "to": [3.49, 11.05285, 7.25],
+      "rotation": {
+        "axis": "x",
+        "angle": -45,
+        "origin": [2.72, 2.61, 6.59]
+      },
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "south": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]}
+      }
+    },
+    {
+      "name": "right_sled_beam_1",
+      "from": [12.51, 2.61, 5.93],
+      "to": [14.05, 11.05285, 7.25],
+      "rotation": {
+        "axis": "x",
+        "angle": -45,
+        "origin": [13.28, 2.61, 6.59]
+      },
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [1.875, 0.25, 0.125, 3.75]},
+        "south": {"texture": "#atlas", "uv": [1.875, 0.25, 0.125, 3.75]},
+        "west": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [0.125, 0.25, 1.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [1.875, 0.25, 0.125, 3.75]},
+        "up": {"texture": "#atlas", "uv": [1.875, 0.25, 0.125, 3.75]}
+      }
+    },
+    {
+      "name": "left_sled_runner_1",
+      "from": [2.445, 2.83, 6.83],
+      "to": [2.995, 10.82031, 7.2],
+      "rotation": {
+        "axis": "x",
+        "angle": -45,
+        "origin": [2.72, 2.83, 6.37]
+      },
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [6.125, 0.25, 7.875, 3.75]},
+        "south": {"texture": "#atlas", "uv": [6.125, 0.25, 7.875, 3.75]},
+        "west": {"texture": "#atlas", "uv": [6.125, 0.25, 7.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [6.125, 0.25, 7.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [6.125, 0.25, 7.875, 3.75]},
+        "up": {"texture": "#atlas", "uv": [6.125, 0.25, 7.875, 3.75]}
+      }
+    },
+    {
+      "name": "right_sled_runner_1",
+      "from": [13.005, 2.83, 6.83],
+      "to": [13.555, 10.82031, 7.2],
+      "rotation": {
+        "axis": "x",
+        "angle": -45,
+        "origin": [13.28, 2.83, 6.37]
+      },
+      "faces": {
+        "north": {"texture": "#atlas", "uv": [7.875, 0.25, 6.125, 3.75]},
+        "south": {"texture": "#atlas", "uv": [7.875, 0.25, 6.125, 3.75]},
+        "west": {"texture": "#atlas", "uv": [6.125, 0.25, 7.875, 3.75]},
+        "east": {"texture": "#atlas", "uv": [6.125, 0.25, 7.875, 3.75]},
+        "down": {"texture": "#atlas", "uv": [7.875, 0.25, 6.125, 3.75]},
+        "up": {"texture": "#atlas", "uv": [7.875, 0.25, 6.125, 3.75]}
+      }
+    }
+  ]
+}

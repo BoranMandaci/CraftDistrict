@@ -3,35 +3,15 @@ package com.craftdistrict.block;
 //? if >=1.21 {
 import com.mojang.serialization.MapCodec;
 //?}
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public final class DumbbellRackBlock extends RotatableDecorationBlock {
-    private static final BooleanProperty LEFT = BooleanProperty.create("left");
-    private static final BooleanProperty RIGHT = BooleanProperty.create("right");
+public final class DumbbellRackBlock extends GymRackBlock {
     private static final VoxelShape[][] SHAPES = createShapes();
 
     public DumbbellRackBlock(Properties properties) {
-        super(properties);
-        registerDefaultState(defaultBlockState().setValue(LEFT, false).setValue(RIGHT, false));
-    }
-
-    @Override protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        super.createBlockStateDefinition(builder);
-        builder.add(LEFT, RIGHT);
+        super(properties, SHAPES);
     }
 
     private static VoxelShape[][] createShapes() {
@@ -61,54 +41,6 @@ public final class DumbbellRackBlock extends RotatableDecorationBlock {
                 box(min, 3.45, 10.04, max, 7.15, 12.59), box(min, 7.15, 8.3, max, 11.49, 11.02),
                 box(min, 2.98, 3.91, max, 3.45, 12.19), box(min, 6.49, 5.15, max, 7.15, 10.93),
                 box(min, 10.11, 6.63, max, 10.76, 9.56));
-    }
-
-    private boolean connects(BlockState neighbor, Direction facing) {
-        return neighbor.is(this) && neighbor.getValue(FACING) == facing;
-    }
-
-    @Override public BlockState getStateForPlacement(BlockPlaceContext context) {
-        BlockState state = super.getStateForPlacement(context);
-        Direction facing = state.getValue(FACING);
-        var level = context.getLevel();
-        BlockPos pos = context.getClickedPos();
-        if (!canSurvive(state, level, pos)) return null;
-        BlockPos left = pos.relative(facing.getCounterClockWise());
-        BlockPos right = pos.relative(facing.getClockWise());
-        return state.setValue(LEFT, level.hasChunkAt(left) && connects(level.getBlockState(left), facing))
-                .setValue(RIGHT, level.hasChunkAt(right) && connects(level.getBlockState(right), facing));
-    }
-
-    @Override public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        return DecorationSupport.isPlaced(state, level, pos) || GymEquipmentBlock.supported(level, pos.below(), Direction.UP);
-    }
-
-    @Override public BlockState updateShape(BlockState state, Direction side, BlockState neighbor,
-                                            LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
-        Direction facing = state.getValue(FACING);
-        if (side == facing.getCounterClockWise()) return state.setValue(LEFT, connects(neighbor, facing));
-        if (side == facing.getClockWise()) return state.setValue(RIGHT, connects(neighbor, facing));
-        return super.updateShape(state, side, neighbor, level, pos, neighborPos);
-    }
-
-    @Override public boolean skipRendering(BlockState state, BlockState neighbor, Direction side) {
-        Direction facing = state.getValue(FACING);
-        return side.getAxis().isHorizontal() && side.getAxis() != facing.getAxis() && connects(neighbor, facing)
-                || super.skipRendering(state, neighbor, side);
-    }
-
-    @Override public BlockState mirror(BlockState state, Mirror mirror) {
-        BlockState mirrored = super.mirror(state, mirror);
-        return mirror == Mirror.NONE ? mirrored : mirrored.setValue(LEFT, state.getValue(RIGHT)).setValue(RIGHT, state.getValue(LEFT));
-    }
-
-    @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        int joins = (state.getValue(LEFT) ? 1 : 0) | (state.getValue(RIGHT) ? 2 : 0);
-        return SHAPES[joins][RestaurantKitchenBlock.turn(state)];
-    }
-
-    @Override public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return getShape(state, level, pos, context);
     }
 
     //? if >=1.21 {
