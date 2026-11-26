@@ -90,6 +90,8 @@ import com.craftdistrict.block.BasketballHoopBlock;
 import com.craftdistrict.block.SportsNetBlock;
 import com.craftdistrict.block.SportsPostBlock;
 import com.craftdistrict.block.GymEquipmentBlock;
+import com.craftdistrict.block.GameTableBlock;
+import com.craftdistrict.block.BilliardCueRackBlock;
 import com.craftdistrict.block.GymFloorPropBlock;
 import com.craftdistrict.block.GymLockersBlock;
 import com.craftdistrict.block.GymMachineBlock;
@@ -296,6 +298,7 @@ public final class CraftDistrictBlocks {
         Doors.initialize();
         Bank.initialize();
         Sports.initialize();
+        Game.initialize();
         BLOCKS.register();
     }
 
@@ -503,6 +506,28 @@ public final class CraftDistrictBlocks {
         }
 
         private Sports() { }
+        private static void initialize() { }
+    }
+
+    public static final class Game {
+        public static final RegistrySupplier<GameTableBlock.Narrow> FOOSBALL_TABLE = register("foosball_table",
+                () -> new GameTableBlock.Foosball(properties()));
+        public static final RegistrySupplier<GameTableBlock.Wide> BILLIARD_TABLE = register("billiard_table",
+                () -> new GameTableBlock.Wide(GameTableBlock.Wide.Design.BILLIARD, properties()));
+        public static final RegistrySupplier<BilliardCueRackBlock> BILLIARD_CUE_RACK = register("billiard_cue_rack",
+                () -> new BilliardCueRackBlock(properties().strength(.85F)));
+        public static final RegistrySupplier<GameTableBlock.Wide> TABLE_TENNIS_TABLE = register("table_tennis_table",
+                () -> new GameTableBlock.Wide(GameTableBlock.Wide.Design.TABLE_TENNIS, properties()));
+        public static final RegistrySupplier<GameTableBlock.Narrow> AIR_HOCKEY_TABLE = register("air_hockey_table",
+                () -> new GameTableBlock.AirHockey(properties().sound(SoundType.METAL)));
+        public static final RegistrySupplier<CollectionAccentBlock> DART_BOARD = register("dart_board",
+                () -> new CollectionAccentBlock(CollectionAccentBlock.Design.DART_BOARD, properties().strength(.65F)));
+
+        private static BlockBehaviour.Properties properties() {
+            return BlockBehaviour.Properties.of().strength(1.9F).sound(SoundType.WOOD).noOcclusion().pushReaction(PushReaction.BLOCK);
+        }
+
+        private Game() { }
         private static void initialize() { }
     }
 

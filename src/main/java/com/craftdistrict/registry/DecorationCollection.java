@@ -633,7 +633,14 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Sports.GOLF_BAG_CLUBS,
             CraftDistrictBlocks.Sports.SKATEBOARD,
             CraftDistrictBlocks.Sports.BICYCLE,
-            CraftDistrictBlocks.FireStation.LOCKER_BENCH);
+            CraftDistrictBlocks.FireStation.LOCKER_BENCH),
+    GAME("game", CraftDistrictBlocks.Game.BILLIARD_TABLE,
+            CraftDistrictBlocks.Game.FOOSBALL_TABLE,
+            CraftDistrictBlocks.Game.BILLIARD_TABLE,
+            CraftDistrictBlocks.Game.BILLIARD_CUE_RACK,
+            CraftDistrictBlocks.Game.TABLE_TENNIS_TABLE,
+            CraftDistrictBlocks.Game.AIR_HOCKEY_TABLE,
+            CraftDistrictBlocks.Game.DART_BOARD);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;
