@@ -86,6 +86,9 @@ import com.craftdistrict.block.PharmacyFixtureBlock;
 import com.craftdistrict.block.DumbbellRackBlock;
 import com.craftdistrict.block.FootballGoalNetBlock;
 import com.craftdistrict.block.FootballGoalPostBlock;
+import com.craftdistrict.block.BasketballHoopBlock;
+import com.craftdistrict.block.SportsNetBlock;
+import com.craftdistrict.block.SportsPostBlock;
 import com.craftdistrict.block.GymEquipmentBlock;
 import com.craftdistrict.block.GymFloorPropBlock;
 import com.craftdistrict.block.GymLockersBlock;
@@ -451,6 +454,22 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<Block> GYM_RUBBER_FLOORING =
                 register("gym_rubber_flooring", () -> new Block(BlockBehaviour.Properties.of()
                         .mapColor(MapColor.COLOR_BLACK).strength(.8F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<BasketballHoopBlock> BASKETBALL_HOOP =
+                register("basketball_hoop", () -> new BasketballHoopBlock(properties()));
+        public static final RegistrySupplier<SportsPostBlock> BASKETBALL_POLE =
+                register("basketball_pole", () -> new SportsPostBlock(SportsPostBlock.Design.BASKETBALL, properties()));
+        public static final RegistrySupplier<SportsPostBlock> SPORTS_NET_POST =
+                register("sports_net_post", () -> new SportsPostBlock(SportsPostBlock.Design.NET, properties()));
+        public static final RegistrySupplier<SportsNetBlock> SPORTS_NET =
+                register("sports_net", () -> new SportsNetBlock(properties().strength(.3F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<GymFloorPropBlock> VOLLEYBALL =
+                register("volleyball", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.VOLLEYBALL,
+                        properties().strength(.4F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<GymFloorPropBlock> TENNIS_RACKET =
+                register("tennis_racket", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.TENNIS_RACKET, properties().strength(.6F)));
+        public static final RegistrySupplier<GymFloorPropBlock> TENNIS_BALL =
+                register("tennis_ball", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.TENNIS_BALL,
+                        properties().strength(.3F).sound(SoundType.WOOL)));
 
         private static RegistrySupplier<GymEquipmentBlock> paired(String id, GymEquipmentBlock.Design design, SoundType sound) {
             return register(id, () -> new GymEquipmentBlock(design, properties().sound(sound)));

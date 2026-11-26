@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "craftdistrict:block/particles/particle_white",
+    "court": "craftdistrict:block/sports/court_equipment",
+    "mesh": "craftdistrict:block/sports/sports_net_mesh"
+  },
+  "elements": [
+    {
+      "name": "Suspended mesh",
+      "from": [-6.9, 3.31, 7.96],
+      "to": [0.0, 16, 8.04],
+      "faces": {
+        "north": {"texture": "#mesh", "uv": [0.0, 0, 6.9, 12.69]},
+        "south": {"texture": "#mesh", "uv": [9.1, 0, 16.0, 12.69]}
+      }
+    },
+    {
+      "name": "Foot cord",
+      "from": [-6.9, 3.1, 7.82],
+      "to": [0.0, 3.36, 8.18],
+      "faces": {
+        "north": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "south": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "down": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "up": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "ambientocclusion": false
+}

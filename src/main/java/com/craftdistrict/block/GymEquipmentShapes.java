@@ -243,6 +243,17 @@ final class GymEquipmentShapes {
 
     static final VoxelShape[] FOOTBALL = sportsBall(3.40);
     static final VoxelShape[] BASKETBALL = sportsBall(3.78);
+    static final VoxelShape[] VOLLEYBALL = sportsBall(3.46);
+
+    static final VoxelShape[] TENNIS_RACKET = cells(1, 1, 1,
+            box(5.90, 0, .49, 8.38, .58, 1.67), box(3.27, 0, 1.67, 9.95, .58, 3.41),
+            box(2.69, 0, 3.41, 10.81, .58, 5.50), box(3.12, 0, 5.50, 11.19, .58, 7.45),
+            box(3.93, 0, 7.45, 10.67, .58, 9.25), box(5.53, 0, 9.25, 10.01, .80, 11.37),
+            box(8.79, 0, 11.37, 10.77, .80, 13.20), box(9.54, 0, 13.20, 11.33, .85, 14.82))[0];
+
+    static final VoxelShape[] TENNIS_BALL = cells(1, 1, 1,
+            box(6.95, 0, 6.95, 9.05, .54, 9.05), box(6.5, .54, 6.5, 9.5, 2.46, 9.5),
+            box(6.95, 2.46, 6.95, 9.05, 3, 9.05))[0];
 
     static final VoxelShape[][] GYM_LOCKERS = gymLockers(
             box(1.4, 2.52, .92, 7.73, 30.4, 1.6), box(8.27, 2.52, .92, 14.6, 30.4, 1.6),

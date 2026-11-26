@@ -24,7 +24,10 @@ public final class GymFloorPropBlock extends RotatableDecorationBlock {
         ROLLED_YOGA_MAT_STACK(GymEquipmentShapes.ROLLED_YOGA_MAT_STACK),
         EXERCISE_BALL(GymEquipmentShapes.EXERCISE_BALL),
         FOOTBALL(GymEquipmentShapes.FOOTBALL),
-        BASKETBALL(GymEquipmentShapes.BASKETBALL);
+        BASKETBALL(GymEquipmentShapes.BASKETBALL),
+        VOLLEYBALL(GymEquipmentShapes.VOLLEYBALL),
+        TENNIS_RACKET(GymEquipmentShapes.TENNIS_RACKET),
+        TENNIS_BALL(GymEquipmentShapes.TENNIS_BALL);
 
         private final VoxelShape[] shapes;
 

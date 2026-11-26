@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "craftdistrict:block/particles/particle_white",
+    "court": "craftdistrict:block/sports/court_equipment",
+    "mesh": "craftdistrict:block/sports/sports_net_mesh"
+  },
+  "elements": [
+    {
+      "name": "Suspended mesh",
+      "from": [0.0, 0, 7.96],
+      "to": [16.0, 16, 8.04],
+      "faces": {
+        "north": {"texture": "#mesh", "uv": [0.0, 0, 16.0, 16]},
+        "south": {"texture": "#mesh", "uv": [0.0, 0, 16.0, 16]}
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "ambientocclusion": false
+}

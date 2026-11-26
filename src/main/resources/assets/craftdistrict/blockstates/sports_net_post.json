@@ -1,0 +1,25 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "craftdistrict:block/sports/sports_net_post"
+      }
+    },
+    {
+      "when": {
+        "up": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/sports/sports_net_post_cap"
+      }
+    },
+    {
+      "when": {
+        "down": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/sports/sports_net_post_foot"
+      }
+    }
+  ]
+}

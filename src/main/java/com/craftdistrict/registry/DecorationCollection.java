@@ -619,6 +619,13 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Sports.FOOTBALL,
             CraftDistrictBlocks.Sports.BASKETBALL,
             CraftDistrictBlocks.Sports.GYM_RUBBER_FLOORING,
+            CraftDistrictBlocks.Sports.BASKETBALL_HOOP,
+            CraftDistrictBlocks.Sports.BASKETBALL_POLE,
+            CraftDistrictBlocks.Sports.SPORTS_NET_POST,
+            CraftDistrictBlocks.Sports.SPORTS_NET,
+            CraftDistrictBlocks.Sports.VOLLEYBALL,
+            CraftDistrictBlocks.Sports.TENNIS_RACKET,
+            CraftDistrictBlocks.Sports.TENNIS_BALL,
             CraftDistrictBlocks.FireStation.LOCKER_BENCH);
 
     private final String id;

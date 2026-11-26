@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "craftdistrict:block/particles/particle_white",
+    "court": "craftdistrict:block/sports/court_equipment",
+    "mesh": "craftdistrict:block/sports/sports_net_mesh"
+  },
+  "elements": [
+    {
+      "name": "Finished exposed edge",
+      "from": [0.0, 0, 7.78],
+      "to": [0.18, 16, 8.22],
+      "faces": {
+        "north": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "south": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "west": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "east": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "ambientocclusion": false
+}

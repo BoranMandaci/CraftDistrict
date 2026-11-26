@@ -1,0 +1,108 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "craftdistrict:block/particles/particle_white",
+    "court": "craftdistrict:block/sports/court_equipment",
+    "mesh": "craftdistrict:block/sports/sports_net_mesh"
+  },
+  "elements": [
+    {
+      "name": "Suspended mesh",
+      "from": [0.0, 3.31, 7.96],
+      "to": [16.0, 14.1, 8.04],
+      "faces": {
+        "north": {"texture": "#mesh", "uv": [0.0, 1.9, 16.0, 12.69]},
+        "south": {"texture": "#mesh", "uv": [0.0, 1.9, 16.0, 12.69]}
+      }
+    },
+    {
+      "name": "White woven top tape",
+      "from": [0.0, 14.05, 7.58],
+      "to": [16.0, 15.14, 8.42],
+      "faces": {
+        "north": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "south": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "down": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "up": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    },
+    {
+      "name": "Foot cord",
+      "from": [0.0, 3.1, 7.82],
+      "to": [16.0, 3.36, 8.18],
+      "faces": {
+        "north": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "south": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "down": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "up": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    },
+    {
+      "name": "Finished exposed edge",
+      "from": [0.0, 3.36, 7.78],
+      "to": [0.18, 14.05, 8.22],
+      "faces": {
+        "north": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "south": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "west": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "east": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "down": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "up": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    },
+    {
+      "name": "Header end cover",
+      "from": [0.0, 14.05, 7.58],
+      "to": [0.02, 15.14, 8.42],
+      "faces": {
+        "west": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    },
+    {
+      "name": "Foot cord end cover",
+      "from": [0.0, 3.1, 7.82],
+      "to": [0.02, 3.36, 8.18],
+      "faces": {
+        "west": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    },
+    {
+      "name": "Finished exposed edge",
+      "from": [15.82, 3.36, 7.78],
+      "to": [16.0, 14.05, 8.22],
+      "faces": {
+        "north": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "south": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "east": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "west": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "down": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "up": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    },
+    {
+      "name": "Header end cover",
+      "from": [15.98, 14.05, 7.58],
+      "to": [16.0, 15.14, 8.42],
+      "faces": {
+        "east": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    },
+    {
+      "name": "Foot cord end cover",
+      "from": [15.98, 3.1, 7.82],
+      "to": [16.0, 3.36, 8.18],
+      "faces": {
+        "east": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "ambientocclusion": false,
+  "display": {
+    "gui": {
+      "rotation": [12, 146, 0],
+      "translation": [-0.0, -1.0723, 0.0],
+      "scale": [0.96066, 0.96066, 0.96066]
+    }
+  }
+}

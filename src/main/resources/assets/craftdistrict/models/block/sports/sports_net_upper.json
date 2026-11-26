@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "craftdistrict:block/particles/particle_white",
+    "court": "craftdistrict:block/sports/court_equipment",
+    "mesh": "craftdistrict:block/sports/sports_net_mesh"
+  },
+  "elements": [
+    {
+      "name": "Suspended mesh",
+      "from": [0.0, 0, 7.96],
+      "to": [16.0, 14.1, 8.04],
+      "faces": {
+        "north": {"texture": "#mesh", "uv": [0.0, 1.9, 16.0, 16]},
+        "south": {"texture": "#mesh", "uv": [0.0, 1.9, 16.0, 16]}
+      }
+    },
+    {
+      "name": "White woven top tape",
+      "from": [0.0, 14.05, 7.58],
+      "to": [16.0, 15.14, 8.42],
+      "faces": {
+        "north": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "south": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "down": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]},
+        "up": {"texture": "#court", "uv": [12.15, 0.15, 15.85, 3.85]}
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "ambientocclusion": false
+}
