@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "base": "craftdistrict:block/sports/football_goal_net",
+    "particle": "#base"
+  },
+  "elements": [
+    {
+      "name": "Woven mesh",
+      "from": [8, 16, 7.97],
+      "to": [16, 24, 8.03],
+      "faces": {
+        "north": {"texture": "#base", "uv": [0, 8, 8, 16]},
+        "south": {"texture": "#base", "uv": [8, 8, 16, 16]}
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "ambientocclusion": false
+}

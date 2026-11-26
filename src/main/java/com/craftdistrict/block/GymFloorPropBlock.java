@@ -22,7 +22,9 @@ public final class GymFloorPropBlock extends RotatableDecorationBlock {
     public enum Design implements StringRepresentable {
         FLOOR_DUMBBELLS(GymEquipmentShapes.FLOOR_DUMBBELLS),
         ROLLED_YOGA_MAT_STACK(GymEquipmentShapes.ROLLED_YOGA_MAT_STACK),
-        EXERCISE_BALL(GymEquipmentShapes.EXERCISE_BALL);
+        EXERCISE_BALL(GymEquipmentShapes.EXERCISE_BALL),
+        FOOTBALL(GymEquipmentShapes.FOOTBALL),
+        BASKETBALL(GymEquipmentShapes.BASKETBALL);
 
         private final VoxelShape[] shapes;
 

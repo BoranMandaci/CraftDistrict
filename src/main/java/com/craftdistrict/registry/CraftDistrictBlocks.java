@@ -84,6 +84,8 @@ import com.craftdistrict.block.HospitalBedBlock;
 import com.craftdistrict.block.HospitalWideBlock;
 import com.craftdistrict.block.PharmacyFixtureBlock;
 import com.craftdistrict.block.DumbbellRackBlock;
+import com.craftdistrict.block.FootballGoalNetBlock;
+import com.craftdistrict.block.FootballGoalPostBlock;
 import com.craftdistrict.block.GymEquipmentBlock;
 import com.craftdistrict.block.GymFloorPropBlock;
 import com.craftdistrict.block.GymLockersBlock;
@@ -264,6 +266,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Supplier;
@@ -437,6 +440,17 @@ public final class CraftDistrictBlocks {
                 () -> new GymFloorPropBlock(GymFloorPropBlock.Design.EXERCISE_BALL, properties().strength(.4F).sound(SoundType.WOOL)));
         public static final RegistrySupplier<GymLockersBlock> GYM_LOCKERS =
                 register("gym_lockers", () -> new GymLockersBlock(properties()));
+        public static final RegistrySupplier<FootballGoalPostBlock> FOOTBALL_GOAL_POST =
+                register("football_goal_post", () -> new FootballGoalPostBlock(properties().strength(1.5F)));
+        public static final RegistrySupplier<FootballGoalNetBlock> FOOTBALL_GOAL_NET =
+                register("football_goal_net", () -> new FootballGoalNetBlock(properties().strength(.3F).sound(SoundType.WOOL).noCollission()));
+        public static final RegistrySupplier<GymFloorPropBlock> FOOTBALL =
+                register("football", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.FOOTBALL, properties().strength(.4F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<GymFloorPropBlock> BASKETBALL =
+                register("basketball", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.BASKETBALL, properties().strength(.4F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<Block> GYM_RUBBER_FLOORING =
+                register("gym_rubber_flooring", () -> new Block(BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.COLOR_BLACK).strength(.8F).sound(SoundType.WOOL)));
 
         private static RegistrySupplier<GymEquipmentBlock> paired(String id, GymEquipmentBlock.Design design, SoundType sound) {
             return register(id, () -> new GymEquipmentBlock(design, properties().sound(sound)));

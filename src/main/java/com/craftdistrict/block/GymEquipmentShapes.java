@@ -241,6 +241,9 @@ final class GymEquipmentShapes {
             box(2.10, 8.48, 3.05, 13.90, 10.22, 12.95), box(3.14, 10.22, 3.14, 12.86, 11.68, 12.86),
             box(4.42, 11.68, 4.42, 11.58, 12.70, 11.58), box(6.20, 12.70, 6.20, 9.80, 13.20, 9.80))[0];
 
+    static final VoxelShape[] FOOTBALL = sportsBall(3.40);
+    static final VoxelShape[] BASKETBALL = sportsBall(3.78);
+
     static final VoxelShape[][] GYM_LOCKERS = gymLockers(
             box(1.4, 2.52, .92, 7.73, 30.4, 1.6), box(8.27, 2.52, .92, 14.6, 30.4, 1.6),
             box(6.06, 12.55, .08, 6.98, 17.12, .92), box(9.02, 12.55, .08, 9.94, 17.12, .92));
@@ -294,6 +297,17 @@ final class GymEquipmentShapes {
 
     private static double[] box(double x, double y, double z, double X, double Y, double Z) {
         return new double[]{x, y, z, X, Y, Z};
+    }
+
+    private static VoxelShape[] sportsBall(double radius) {
+        double height = radius * 2;
+        double cap = radius * .50, shoulder = radius * .85;
+        return cells(1, 1, 1,
+                box(8 - cap, 0, 8 - cap, 8 + cap, height * .1, 8 + cap),
+                box(8 - shoulder, height * .1, 8 - shoulder, 8 + shoulder, height * .27, 8 + shoulder),
+                box(8 - radius, height * .27, 8 - radius, 8 + radius, height * .73, 8 + radius),
+                box(8 - shoulder, height * .73, 8 - shoulder, 8 + shoulder, height * .9, 8 + shoulder),
+                box(8 - cap, height * .9, 8 - cap, 8 + cap, height, 8 + cap))[0];
     }
 
     private static VoxelShape[][] gymLockers(double[]... doors) {

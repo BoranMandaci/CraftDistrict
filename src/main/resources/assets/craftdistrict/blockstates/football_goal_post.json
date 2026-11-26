@@ -1,0 +1,116 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "north": "false",
+        "east": "false",
+        "south": "false",
+        "west": "false",
+        "up": "false"
+      },
+      "apply": {
+        "model": "craftdistrict:block/sports/football_goal_post_standalone"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "true"
+          },
+          {
+            "east": "true"
+          },
+          {
+            "south": "true"
+          },
+          {
+            "west": "true"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/sports/football_goal_post_joint"
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/sports/football_goal_post_arm"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/sports/football_goal_post_arm",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/sports/football_goal_post_arm",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/sports/football_goal_post_arm",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "down": "true"
+          },
+          {
+            "OR": [
+              {
+                "north": "true"
+              },
+              {
+                "east": "true"
+              },
+              {
+                "south": "true"
+              },
+              {
+                "west": "true"
+              },
+              {
+                "up": "true"
+              }
+            ]
+          }
+        ]
+      },
+      "apply": {
+        "model": "craftdistrict:block/sports/football_goal_post_arm",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "craftdistrict:block/sports/football_goal_post_arm",
+        "x": 270
+      }
+    }
+  ]
+}

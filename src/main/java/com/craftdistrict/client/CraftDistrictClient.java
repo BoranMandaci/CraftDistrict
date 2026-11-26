@@ -116,7 +116,7 @@ public final class CraftDistrictClient {
                 CraftDistrictBlocks.Pharmacy.REFRIGERATOR.get());
             RenderTypeRegistry.register(RenderType.cutout(), CraftDistrictBlocks.Office.GLASS_PARTITION.get(),
                     CraftDistrictBlocks.Office.GLASS_PARTITION_DOOR.get(), CraftDistrictBlocks.Hotel.POOL_UMBRELLA.get(),
-                    CraftDistrictBlocks.Casino.BIG_SIX_WHEEL.get());
+                    CraftDistrictBlocks.Casino.BIG_SIX_WHEEL.get(), CraftDistrictBlocks.Sports.FOOTBALL_GOAL_NET.get());
             RenderTypeRegistry.register(RenderType.translucent(), CraftDistrictBlocks.Police.ONE_WAY_OBSERVATION_GLASS.get(),
                     CraftDistrictBlocks.Police.ONE_WAY_GLASS_BLOCK.get(), CraftDistrictBlocks.Hospital.IV_STAND.get(),
                     CraftDistrictBlocks.Hospital.MAMMOGRAPHY_MACHINE.get(), CraftDistrictBlocks.Hospital.INCUBATOR.get(),
