@@ -470,6 +470,25 @@ public final class CraftDistrictBlocks {
         public static final RegistrySupplier<GymFloorPropBlock> TENNIS_BALL =
                 register("tennis_ball", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.TENNIS_BALL,
                         properties().strength(.3F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<GymEquipmentBlock> ARCHERY_TARGET =
+                paired("archery_target", GymEquipmentBlock.Design.ARCHERY_TARGET, SoundType.WOOD);
+        public static final RegistrySupplier<GymFloorPropBlock> BOW_STAND =
+                register("bow_stand", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.BOW_STAND,
+                        properties().strength(1F).sound(SoundType.WOOD)));
+        public static final RegistrySupplier<GymFloorPropBlock> ARROW_RACK =
+                register("arrow_rack", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.ARROW_RACK,
+                        properties().strength(1F).sound(SoundType.WOOD)));
+        public static final RegistrySupplier<GymFloorPropBlock> GOLF_HOLE_FLAG =
+                register("golf_hole_flag", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.GOLF_HOLE_FLAG,
+                        properties().strength(.35F).sound(SoundType.WOOL).noCollission()));
+        public static final RegistrySupplier<GymFloorPropBlock> GOLF_BAG_CLUBS =
+                register("golf_bag_clubs", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.GOLF_BAG_CLUBS,
+                        properties().strength(.6F).sound(SoundType.WOOL)));
+        public static final RegistrySupplier<GymFloorPropBlock> SKATEBOARD =
+                register("skateboard", () -> new GymFloorPropBlock(GymFloorPropBlock.Design.SKATEBOARD,
+                        properties().strength(.7F).sound(SoundType.WOOD)));
+        public static final RegistrySupplier<GymEquipmentBlock> BICYCLE =
+                paired("bicycle", GymEquipmentBlock.Design.BICYCLE, SoundType.METAL);
 
         private static RegistrySupplier<GymEquipmentBlock> paired(String id, GymEquipmentBlock.Design design, SoundType sound) {
             return register(id, () -> new GymEquipmentBlock(design, properties().sound(sound)));

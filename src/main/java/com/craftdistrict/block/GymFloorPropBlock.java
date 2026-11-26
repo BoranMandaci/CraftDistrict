@@ -17,7 +17,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Locale;
 
-/** Static, single-block gym props with collision cached for each facing. */
+/** Static, single-block sports props with shapes cached for each facing. */
 public final class GymFloorPropBlock extends RotatableDecorationBlock {
     public enum Design implements StringRepresentable {
         FLOOR_DUMBBELLS(GymEquipmentShapes.FLOOR_DUMBBELLS),
@@ -27,7 +27,12 @@ public final class GymFloorPropBlock extends RotatableDecorationBlock {
         BASKETBALL(GymEquipmentShapes.BASKETBALL),
         VOLLEYBALL(GymEquipmentShapes.VOLLEYBALL),
         TENNIS_RACKET(GymEquipmentShapes.TENNIS_RACKET),
-        TENNIS_BALL(GymEquipmentShapes.TENNIS_BALL);
+        TENNIS_BALL(GymEquipmentShapes.TENNIS_BALL),
+        BOW_STAND(OutdoorSportsShapes.BOW_STAND),
+        ARROW_RACK(OutdoorSportsShapes.ARROW_RACK),
+        GOLF_HOLE_FLAG(OutdoorSportsShapes.GOLF_HOLE_FLAG),
+        GOLF_BAG_CLUBS(OutdoorSportsShapes.GOLF_BAG_CLUBS),
+        SKATEBOARD(OutdoorSportsShapes.SKATEBOARD);
 
         private final VoxelShape[] shapes;
 

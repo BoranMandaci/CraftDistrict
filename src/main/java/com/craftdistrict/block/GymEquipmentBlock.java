@@ -39,7 +39,9 @@ public class GymEquipmentBlock extends MultiBlockDecorationBlock {
         WEIGHT_PLATE_RACK(Layout.TALL, GymEquipmentShapes.WEIGHT_PLATE_RACK),
         YOGA_MAT(Layout.LONG, GymEquipmentShapes.YOGA_MAT),
         BARBELL_ON_FLOOR(Layout.WIDE, GymEquipmentShapes.BARBELL_ON_FLOOR),
-        GYM_LOCKERS(Layout.TALL, GymEquipmentShapes.GYM_LOCKERS);
+        GYM_LOCKERS(Layout.TALL, GymEquipmentShapes.GYM_LOCKERS),
+        ARCHERY_TARGET(Layout.TALL, OutdoorSportsShapes.ARCHERY_TARGET),
+        BICYCLE(Layout.LONG, OutdoorSportsShapes.BICYCLE);
 
         private final Layout layout;
         private final VoxelShape[][] parts;
