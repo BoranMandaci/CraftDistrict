@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Cached selection/collision envelopes for the sign and small tabletop accessories. */
@@ -29,7 +30,9 @@ public final class CasinoDecorationBlock extends RotatableDecorationBlock {
             RestaurantKitchenBlock.rotations(box(2.75, 0, 4.5, 12.5, 4.125, 11.5)),
             RestaurantKitchenBlock.rotations(box(5, 0, 4, 11, 4.5, 12.5)),
             RestaurantKitchenBlock.rotations(box(1.5, 0, 3.5, 14.5, 3.5, 12.5)),
-            RestaurantKitchenBlock.rotations(box(3.5, 0, 4.25, 12.5, 1.25, 11.75))};
+            RestaurantKitchenBlock.rotations(Shapes.or(
+                    box(3.5, 0, 4.25, 12.5, .315, 11.75),
+                    box(4.655, 0, 9.83, 5.495, .84, 10.67), box(10.376, 0, 4.938, 11.474, .84, 6.037)))};
     //? if >=1.21 {
     public static final MapCodec<CasinoDecorationBlock> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
             StringRepresentable.fromEnum(Design::values).fieldOf("design").forGetter((CasinoDecorationBlock b) -> b.design),

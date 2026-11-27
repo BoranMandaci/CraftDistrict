@@ -640,7 +640,14 @@ public enum DecorationCollection {
             CraftDistrictBlocks.Game.BILLIARD_CUE_RACK,
             CraftDistrictBlocks.Game.TABLE_TENNIS_TABLE,
             CraftDistrictBlocks.Game.AIR_HOCKEY_TABLE,
-            CraftDistrictBlocks.Game.DART_BOARD);
+            CraftDistrictBlocks.Game.DART_BOARD,
+            CraftDistrictBlocks.Game.CHESS_BOARD,
+            CraftDistrictBlocks.Game.CHECKERS_BOARD,
+            CraftDistrictBlocks.Game.BACKGAMMON_BOARD,
+            CraftDistrictBlocks.Game.JENGA_TOWER,
+            CraftDistrictBlocks.Game.BOARD_GAME_SHELF,
+            CraftDistrictBlocks.Game.FOUR_IN_A_ROW,
+            CraftDistrictBlocks.Game.DOMINO_SET);
 
     private final String id;
     private final Supplier<? extends ItemLike> icon;

@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_furniture_parts": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["craftdistrict:furniture_parts"]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "craftdistrict:chess_board"
+      }
+    }
+  },
+  "requirements": [["has_furniture_parts", "has_the_recipe"]],
+  "rewards": {
+    "recipes": ["craftdistrict:chess_board"]
+  }
+}

@@ -92,6 +92,7 @@ import com.craftdistrict.block.SportsPostBlock;
 import com.craftdistrict.block.GymEquipmentBlock;
 import com.craftdistrict.block.GameTableBlock;
 import com.craftdistrict.block.BilliardCueRackBlock;
+import com.craftdistrict.block.BoardGameShelfBlock;
 import com.craftdistrict.block.GymFloorPropBlock;
 import com.craftdistrict.block.GymLockersBlock;
 import com.craftdistrict.block.GymMachineBlock;
@@ -522,6 +523,20 @@ public final class CraftDistrictBlocks {
                 () -> new GameTableBlock.AirHockey(properties().sound(SoundType.METAL)));
         public static final RegistrySupplier<CollectionAccentBlock> DART_BOARD = register("dart_board",
                 () -> new CollectionAccentBlock(CollectionAccentBlock.Design.DART_BOARD, properties().strength(.65F)));
+        public static final RegistrySupplier<CollectionAccentBlock> CHESS_BOARD = register("chess_board",
+                () -> new CollectionAccentBlock(CollectionAccentBlock.Design.CHESS_BOARD, properties().strength(.65F)));
+        public static final RegistrySupplier<CollectionAccentBlock> CHECKERS_BOARD = register("checkers_board",
+                () -> new CollectionAccentBlock(CollectionAccentBlock.Design.CHECKERS_BOARD, properties().strength(.65F)));
+        public static final RegistrySupplier<CollectionAccentBlock> BACKGAMMON_BOARD = register("backgammon_board",
+                () -> new CollectionAccentBlock(CollectionAccentBlock.Design.BACKGAMMON_BOARD, properties().strength(.65F)));
+        public static final RegistrySupplier<CollectionAccentBlock> JENGA_TOWER = register("jenga_tower",
+                () -> new CollectionAccentBlock(CollectionAccentBlock.Design.JENGA_TOWER, properties().strength(.55F)));
+        public static final RegistrySupplier<BoardGameShelfBlock> BOARD_GAME_SHELF = register("board_game_shelf",
+                () -> new BoardGameShelfBlock(properties()));
+        public static final RegistrySupplier<CollectionAccentBlock> FOUR_IN_A_ROW = register("four_in_a_row",
+                () -> new CollectionAccentBlock(CollectionAccentBlock.Design.FOUR_IN_A_ROW, properties().strength(.95F)));
+        public static final RegistrySupplier<CollectionAccentBlock> DOMINO_SET = register("domino_set",
+                () -> new CollectionAccentBlock(CollectionAccentBlock.Design.DOMINO_SET, properties().strength(.55F).sound(SoundType.STONE)));
 
         private static BlockBehaviour.Properties properties() {
             return BlockBehaviour.Properties.of().strength(1.9F).sound(SoundType.WOOD).noOcclusion().pushReaction(PushReaction.BLOCK);
